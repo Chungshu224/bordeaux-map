@@ -28,7 +28,9 @@ export const lessonContent = [
       { id: 1, icon: "🍑", title: "Vidiano", content: "白；杏、青檸、梨，帶洋甘菊與茉莉香，礦物感鮮明" },
       { id: 2, icon: "🍋", title: "Vilana", content: "白；中等酒體，熱帶水果、百里香與柑橘" },
       { id: 3, icon: "🍒", title: "Kotsifali", content: "紅；肉感，李子與酸櫻桃，常作為調配用" },
-      { id: 4, icon: "🍷", title: "Mandilari 與 Liatiko", content: "Mandilari 酒體飽滿、酸度高、帶泥土與無花果；Liatiko 可乾可甜，帶皮革與無花果" }
+      { id: 4, icon: "🍷", title: "Mandilari 與 Liatiko", content: "Mandilari 酒體飽滿、酸度高、帶泥土與無花果；Liatiko 可乾可甜，帶皮革與無花果" },
+      { id: 5, icon: "🍈", title: "Thrapsathiri", content: "白；主要在東克里特（Heraklion、Lasithi）；可單一品種或調配，在 Sitia 與 Chandakas–Candia PDO 為輔助角色；哈密瓜、桃與夏季水果，帶礦物與香料感；桶或陶罐發酵增加深度，陳年潛力約 3–5 年以上（Wines of Greece）" },
+      { id: 6, icon: "🍒", title: "Liatiko：風格細節", content: "乾型酒色淺、呈磚紅，單寧柔和至中等、酒精偏高；乾櫻桃、無花果與葡萄乾，後帶泥土、香料與草本；PDO Dafnes 與 Sitia 有乾、甜兩型；許多為根瘤蚜前老藤、gobelet 整枝、產量極低；高海拔可釀出保留酸度的粉紅酒（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Sitia PDO 的法規：紅酒至少 80% Liatiko，白酒至少 70% Vilana。</p></div>"
   },

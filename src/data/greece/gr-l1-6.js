@@ -16,7 +16,7 @@ export const lessonContent = [
     title: "Level 1 重點回顧",
     highlights: [
       { id: 1, icon: "🏺", title: "歷史", content: "古希臘 → 中世紀 Malvasia → 鄂圖曼衰落 → 1970 年代制度 → 現代復興" },
-      { id: 2, icon: "🗺️", title: "地理氣候", content: "四個氣候區；約八成葡萄園在山地；高海拔保留酸度；Santorini 的 kouloura、旱作與無根瘤蚜" },
+      { id: 2, icon: "🗺️", title: "地理氣候", content: "四個氣候區；約八成國土為山地；高海拔保留酸度；Santorini 的 kouloura、旱作與無根瘤蚜" },
       { id: 3, icon: "🍇", title: "品種", content: "白：Assyrtiko、Moschofilero、Malagousia、Savatiano、Robola、Vidiano；紅：Xinomavro、Agiorgitiko、Mavrodaphne、Mandilaria、Limnio、Mavrotragano" },
       { id: 4, icon: "📍", title: "產區", content: "33 PDO 的地理區分布；中希臘與色雷斯無 PDO" }
     ],

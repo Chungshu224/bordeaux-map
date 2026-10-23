@@ -13,7 +13,7 @@
   "slides.1.content": "<div class=\"content-overview\"><p class=\"lead-text\">Greece is often taught as four climate zones, though altitude and sea breezes cause large differences within a zone.</p></div>",
   "slides.2.title": "Mountains and altitude",
   "slides.2.highlights.0.title": "A mountainous country",
-  "slides.2.highlights.0.content": "Around 80% of vineyards are mountainous or semi-mountainous",
+  "slides.2.highlights.0.content": "Almost 80% of the land area is covered by high mountains (Wines of Greece)",
   "slides.2.highlights.1.title": "From sea level to over 1,000 m",
   "slides.2.highlights.1.content": "Vineyards span a huge altitude range",
   "slides.2.highlights.2.title": "Altitude preserves acidity",
@@ -57,5 +57,9 @@
   "slides.5.componentProps.slide.questions.2.options.1": "B. Its volcanic pumice and ash soils are phylloxera-free",
   "slides.5.componentProps.slide.questions.2.options.2": "C. It is banned by law",
   "slides.5.componentProps.slide.questions.2.options.3": "D. Everything is irrigated",
-  "slides.5.componentProps.slide.questions.2.explanation": "This is a much-cited Santorini feature, which together with old vines and dry farming underpins its style."
+  "slides.5.componentProps.slide.questions.2.explanation": "This is a much-cited Santorini feature, which together with old vines and dry farming underpins its style.",
+  "slides.2.highlights.3.title": "About 0.6°C cooler per 100 m",
+  "slides.2.highlights.3.content": "Altitude lowers average temperature, slowing ripening, keeping acidity and moderating potential alcohol (Wines of Greece)",
+  "slides.2.highlights.4.title": "Altitude often outweighs latitude",
+  "slides.2.highlights.4.content": "Mountains and a long coastline create varied altitudes, aspects and slopes; one region can hold several terroirs (Wines of Greece)"
 }

@@ -35,7 +35,7 @@
   "slides.4.highlights.1.title": "White-led",
   "slides.4.highlights.1.content": "White wine is about 70% of output",
   "slides.4.highlights.2.title": "Mountain vineyards",
-  "slides.4.highlights.2.content": "Around 80% of vineyards are mountainous or semi-mountainous",
+  "slides.4.highlights.2.content": "Around 80% of the country's land is covered by high mountains; many vineyards sit in the hills",
   "slides.4.content": "<div class=\"content-overview\"><p class=\"lead-text\">Figures are recent approximations; check the latest official statistics before quoting.</p></div>",
   "slides.5.componentProps.slide.title": "🧠 Knowledge Check",
   "slides.5.componentProps.slide.questions.0.question": "Which best describes Greece's varietal diversity?",
@@ -55,5 +55,7 @@
   "slides.5.componentProps.slide.questions.2.options.1": "B. 1971",
   "slides.5.componentProps.slide.questions.2.options.2": "C. 2011",
   "slides.5.componentProps.slide.questions.2.options.3": "D. In ancient Greece",
-  "slides.5.componentProps.slide.questions.2.explanation": "OPAP and related rules began in 1971 and were later absorbed into the EU PDO/PGI framework."
+  "slides.5.componentProps.slide.questions.2.explanation": "OPAP and related rules began in 1971 and were later absorbed into the EU PDO/PGI framework.",
+  "slides.4.highlights.3.title": "Producers' scale",
+  "slides.4.highlights.3.content": "About 180,000 growers and more than 1,200 wineries (Wines of Greece)"
 }

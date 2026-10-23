@@ -25,9 +25,11 @@ export const lessonContent = [
   {
     title: "山地與海拔",
     highlights: [
-      { id: 1, icon: "⛰️", title: "多山的國家", content: "約八成葡萄園位於山地或半山地" },
+      { id: 1, icon: "⛰️", title: "多山的國家", content: "約八成國土為高山覆蓋（Wines of Greece）" },
       { id: 2, icon: "📈", title: "從海平面到 1,000 公尺以上", content: "葡萄園分布海拔範圍極大" },
-      { id: 3, icon: "🌡️", title: "高海拔保留酸度", content: "在炎熱氣候中刻意選高海拔，以保留酸度與香氣" }
+      { id: 3, icon: "🌡️", title: "高海拔保留酸度", content: "在炎熱氣候中刻意選高海拔，以保留酸度與香氣" },
+      { id: 4, icon: "🌡️", title: "每升高 100 公尺約降 0.6°C", content: "海拔使平均氣溫下降，減緩成熟、保留酸度，並讓潛在酒精度維持中等（Wines of Greece）" },
+      { id: 5, icon: "🧭", title: "海拔常比緯度重要", content: "山地與長海岸線造成多樣的海拔、方位與坡向；同一產區可有數種風土（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">例：Moschofilero 種於 Mantinia 約 660 公尺高原，常到十月中旬才採收。</p></div>"
   },
