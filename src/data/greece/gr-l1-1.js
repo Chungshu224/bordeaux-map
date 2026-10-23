@@ -46,7 +46,8 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "📐", title: "規模", content: "釀酒葡萄園約 6.4 萬公頃（2022 年 7 月，希臘農業部資料）、2022 年產量約 210 萬百升" },
       { id: 2, icon: "⚪", title: "白酒為主", content: "白酒約占產量七成" },
-      { id: 3, icon: "⛰️", title: "山地葡萄園", content: "約八成葡萄園位於山地或半山地" }
+      { id: 3, icon: "⛰️", title: "山地葡萄園", content: "約八成國土為高山覆蓋，許多葡萄園位於山區" },
+      { id: 4, icon: "👥", title: "生產者規模", content: "約 18 萬位葡萄農、逾 1,200 家酒廠（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">數字為近年的概略值，出題或引用前請對照最新官方統計。</p></div>"
   },

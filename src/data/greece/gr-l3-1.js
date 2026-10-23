@@ -28,7 +28,8 @@ export const lessonContent = [
       { id: 1, icon: "🍷", title: "Naoussa：150–400 公尺", content: "朝南與東南坡面；至少 25 種土壤類型，分屬石灰岩、黏土、壤土、片岩與砂土" },
       { id: 2, icon: "🌹", title: "Mantineia：650–800 公尺", content: "希臘最冷涼的產區之一，Moschofilero 常在十月採收" },
       { id: 3, icon: "🍒", title: "Nemea：200–850 公尺", content: "日夜溫差大，高處保留香氣與酸度" },
-      { id: 4, icon: "❄️", title: "Amyndeo 與 Zitsa", content: "以涼爽氣候釀出氣泡與粉紅等輕盈風格" }
+      { id: 4, icon: "❄️", title: "Amyndeo 與 Zitsa", content: "以涼爽氣候釀出氣泡與粉紅等輕盈風格" },
+      { id: 5, icon: "⛰️", title: "其他 PDO／PGI 的海拔", content: "Amyndeo 520–720 公尺；Peza 最高園約 800 公尺；Sitia 的 Ziros 高原 600–750 公尺；PGI Metsovo 達 1,000 公尺、Siatista 逾 600 公尺、Slopes of Aigialia 部分逾 1,000 公尺、Slopes of Ainos 達 800 公尺、Rethymno 逾 900 公尺（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">論述連結：高海拔 → 日夜溫差 → 酸度與香氣保留 → 氣泡、粉紅與清爽白酒。</p></div>"
   },
@@ -38,7 +39,9 @@ export const lessonContent = [
       { id: 1, icon: "🔥", title: "2023–2025 年的高溫乾旱", content: "希臘大學教授指出 2023 與 2024 年為 60 年來最熱；一株壽命 90 年的 kouloura 藤蔓因熱與乾旱死亡" },
       { id: 2, icon: "📉", title: "產量崩跌", content: "Santorini 的 Assyrtiko 產量由 2022 年約 2,500 公噸降到去年（2025）約 500 公噸（Reuters, 2026 年 6 月）" },
       { id: 3, icon: "💶", title: "葡萄價格", content: "Santorini 每公斤約 10 歐元，北希臘約 0.8 歐元" },
-      { id: 4, icon: "💧", title: "適應策略", content: "處理後汙水灌溉試驗、行列式種植、地下滴灌與棚架，以及空氣取水等實驗" }
+      { id: 4, icon: "💧", title: "適應策略", content: "處理後汙水灌溉試驗、行列式種植、地下滴灌與棚架，以及空氣取水等實驗" },
+      { id: 5, icon: "🌦️", title: "其他氣候風險", content: "晚春霜害、冰雹、乾旱、熱浪與洪水；提早成熟加上春霜縮短生長週期，並可能帶來更高酒精度與清新度流失（Wines of Greece）" },
+      { id: 6, icon: "🧬", title: "適應：多樣性與更高海拔", content: "本土品種的多樣性（vinodiversity）被視為最大優勢；暖區把新園往更高海拔移，例如 PGI Drama；Naoussa 的 Xinomavro 長期是否仍適合，仍是開放問題（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">這是 Diploma「氣候變遷與永續」題的現成案例：問題（熱、旱）→ 後果（產量、價格、品質）→ 對策（灌溉、種植方式）→ 傳統與適應的張力。</p></div>"
   },
@@ -47,7 +50,9 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "🌳", title: "灌叢老藤", content: "許多老藤為灌叢式整枝且旱作，低產量、抗旱；Naoussa 單一園有超過 85 年的藤株" },
       { id: 2, icon: "📏", title: "法定與實際產量", content: "Naoussa 法定上限為 70 hl/ha，注重品質的生產者常控制在 35 hl/ha 以下" },
-      { id: 3, icon: "🧬", title: "300 多種本土品種", content: "多樣性是資產也是挑戰：品種辨識度與市場溝通" }
+      { id: 3, icon: "🧬", title: "300 多種本土品種", content: "多樣性是資產也是挑戰：品種辨識度與市場溝通" },
+      { id: 4, icon: "🏷️", title: "老藤標示規定", content: "PDO／PGI 標籤上的 old vines（vieilles vignes）只能用於未嫁接、至少 40 年的藤株（Wines of Greece）" },
+      { id: 5, icon: "🛡️", title: "根瘤蚜未到之處", content: "Santorini 的砂質火山土與 Amyndeo 的砂質土讓根瘤蚜無法存活；偏遠地區因根瘤蚜未到而保留自根老藤；Slopes of Aigialia 保存古老品種；PGI Attiki 有 50 年以上的 Savatiano 灌叢老藤（Wines of Greece）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">寫「風險管理」時，列出風、乾旱、霜害／高溫、病害四類，再各配一個希臘實例。</p></div>"
   },

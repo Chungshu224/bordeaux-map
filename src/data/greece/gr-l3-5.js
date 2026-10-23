@@ -38,7 +38,8 @@ export const lessonContent = [
       { id: 1, icon: "🏝️", title: "島嶼稀少性", content: "Santorini 的葡萄價格約為北希臘的十倍以上，反映稀少與產量崩跌" },
       { id: 2, icon: "🌱", title: "新一代生產者", content: "精品酒莊使用本土品種與更好的基酒（如現代 Retsina）" },
       { id: 3, icon: "🏖️", title: "旅遊的雙面性", content: "旅遊帶來品牌與銷量，也造成土地與勞力壓力（如 Paros）" },
-      { id: 4, icon: "🔭", title: "主要挑戰", content: "氣候變遷、品牌辨識度、PDO／PGI 占比偏低與散裝酒比重" }
+      { id: 4, icon: "🔭", title: "主要挑戰", content: "氣候變遷、品牌辨識度、PDO／PGI 占比偏低與散裝酒比重" },
+      { id: 5, icon: "🍃", title: "風格轉向：清新與細緻", content: "品質觀從強調成熟、濃郁與橡木，轉向清新、活力與真實（Wines of Greece, 2025）；例：PDO Robola of Kefalonia、Vilana（PDO Peza／PGI Crete）、PDO Mantinia 的 Moschofilero、PGI Thessalia 的 Limniona 粉紅、PDO Amyndeon 粉紅、PDO Goumenissa 的 Xinomavro" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">論述模板：結構（散裝比重高）→ 轉型（精品、本土品種）→ 市場（歐盟依賴）→ 風險（氣候、產量）。</p></div>"
   },

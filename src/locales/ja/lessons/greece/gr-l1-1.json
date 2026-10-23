@@ -35,7 +35,7 @@
   "slides.4.highlights.1.title": "白ワイン中心",
   "slides.4.highlights.1.content": "白ワインが生産量の約7割",
   "slides.4.highlights.2.title": "山地の畑",
-  "slides.4.highlights.2.content": "畑の約8割が山地・準山地にある",
+  "slides.4.highlights.2.content": "国土の約8割が高山に覆われ、多くの畑が山間部にある",
   "slides.4.content": "<div class=\"content-overview\"><p class=\"lead-text\">数値は近年のおおよその値。引用前に最新の公式統計を確認すること。</p></div>",
   "slides.5.componentProps.slide.title": "🧠 知識チェック",
   "slides.5.componentProps.slide.questions.0.question": "ギリシャの品種多様性を最もよく表すのは？",
@@ -55,5 +55,7 @@
   "slides.5.componentProps.slide.questions.2.options.1": "B. 1971年",
   "slides.5.componentProps.slide.questions.2.options.2": "C. 2011年",
   "slides.5.componentProps.slide.questions.2.options.3": "D. 古代ギリシャ",
-  "slides.5.componentProps.slide.questions.2.explanation": "1971年からOPAPなどが始まり、のちにEUのPDO／PGI枠組みに統合された。"
+  "slides.5.componentProps.slide.questions.2.explanation": "1971年からOPAPなどが始まり、のちにEUのPDO／PGI枠組みに統合された。",
+  "slides.4.highlights.3.title": "生産者の規模",
+  "slides.4.highlights.3.content": "約18万の栽培農家と1,200超のワイナリー（Wines of Greece）"
 }

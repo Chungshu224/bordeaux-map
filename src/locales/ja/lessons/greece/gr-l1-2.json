@@ -13,7 +13,7 @@
   "slides.1.content": "<div class=\"content-overview\"><p class=\"lead-text\">ギリシャは4つの気候区で説明されることが多いが、実際は標高と海風が同じ区内でも大きな差を生む。</p></div>",
   "slides.2.title": "山地と標高",
   "slides.2.highlights.0.title": "山がちの国",
-  "slides.2.highlights.0.content": "畑の約8割が山地・準山地",
+  "slides.2.highlights.0.content": "国土の約8割が高山に覆われている（Wines of Greece）",
   "slides.2.highlights.1.title": "海抜0mから1,000m超まで",
   "slides.2.highlights.1.content": "畑の標高範囲は非常に広い",
   "slides.2.highlights.2.title": "標高が酸を保つ",
@@ -57,5 +57,9 @@
   "slides.5.componentProps.slide.questions.2.options.1": "B. 火山性の軽石・火山灰土壌はフィロキセラの被害がない",
   "slides.5.componentProps.slide.questions.2.options.2": "C. 法律で禁止",
   "slides.5.componentProps.slide.questions.2.options.3": "D. すべて灌漑",
-  "slides.5.componentProps.slide.questions.2.explanation": "サントリーニの特徴としてよく挙げられ、古木・乾燥農法とともにスタイルの基盤となる。"
+  "slides.5.componentProps.slide.questions.2.explanation": "サントリーニの特徴としてよく挙げられ、古木・乾燥農法とともにスタイルの基盤となる。",
+  "slides.2.highlights.3.title": "100 mごとに約0.6°C低下",
+  "slides.2.highlights.3.content": "標高が上がると平均気温が下がり、成熟が遅れ、酸が保たれ、潜在アルコールも穏やかになる（Wines of Greece）",
+  "slides.2.highlights.4.title": "標高は緯度より重要なことが多い",
+  "slides.2.highlights.4.content": "山地と長い海岸線が多様な標高・方位・傾斜を生み、一つの産地に複数のテロワールが存在する（Wines of Greece）"
 }
