@@ -1,6 +1,6 @@
 # 🇬🇷 希臘葡萄酒課程框架（Diploma 備考導向）
 
-> 狀態：頁面、路由、進度、21 課大綱已就緒。**Level 1（6 課）、Level 2（8 課）已完成正式內容**（含測驗與 en/ja）；Level 3 仍為「封面＋本課重點」框架。
+> 狀態：頁面、路由、進度、21 課大綱已就緒。**Level 1（6 課）、Level 2（8 課）已完成正式內容**（含測驗與 en/ja）；Level 3（7 課）亦已完成正式內容**（含測驗與 en/ja）。
 > 分支：`feat/greece-course-framework`（未合併）
 
 ## 結構
@@ -57,7 +57,7 @@
 
 ## Level 1 內容說明
 - 每課 4 張內容投影片＋知識檢測，gr-l1-6 為 8 題綜合評量（及格 60）
-- 事實來源：Wines of Greece（33 PDO／114 PGI）、WineWithSeth（約 9.6 萬公頃、300+ 本土品種、品種與土壤細節）、Drive 筆記；PDO 分區以官方地圖為準（4＋4＋7＋3＋8＋7＝33）
+- 事實來源：Wines of Greece（33 PDO／114 PGI）、WineWithSeth（300+ 本土品種、品種與土壤細節）、Drive 筆記；PDO 分區以官方地圖為準（4＋4＋7＋3＋8＋7＝33）
 - 刻意未寫入：PDO 100%／PGI 比例、Reserve 陳年月數（留待 Level 2 查證；來源間 PGI 比例有 80%／85% 之別，EU 條文為 85%，仍須對官方文件確認）
 - 「六大地理區」為教學分法，非官方行政區
 
@@ -65,14 +65,19 @@
 - 每課 3–4 張內容投影片＋知識檢測；gr-l2-8 為重點回顧＋10 題綜合評量
 - PGI 來源比例採 **85%**（WineWithSeth、CMS 一致；Vinepair 寫 80%，視為少數說法）
 - ⚠ 來源有出入、**課程內已標明且未納入測驗**：
-  - Santorini 乾白 Assyrtiko 最低比例（WineWithSeth／產品標示為 85%，CMS 為 75%）→ 官方產品規格待核對
+  - ✅ 已解決：Santorini 乾白 Assyrtiko 最低比例採 **85%**（Wines of Greece 官方 PDO 頁面；CMS 2018 的 75% 視為舊資料），Athiri／Aidani 合計最多 15%
   - Reserve／Grand Reserve 陳年：WineWithSeth 與 CMS 的累計年數一致（白 2／3 年，紅 3／4 年），CMS 另列桶／瓶月數；你 2022 年筆記（白 1 年／紅 2 年等）與上述不同，可能為舊制或不同口徑 → 須以官方法規定稿
-  - Naoussa 分級陳年（WineWithSeth 的 12／24／48 個月）與前述通則不易對齊，未納入
+  - Naoussa 分級陳年已在 Level 3 寫入（標準 ≥1 年橡木；Reserve 紅 ≥3 年且橡木 ≥6 個月；Grand Reserve ≥48 個月＝24 橡木＋24 瓶陳），與 CMS 紅酒通則一致；仍建議對照官方產品規格
 - 其他取自 Wines of Greece／WineWithSeth／CMS：Mantineia ≥85% Moschofilero、Goumenissa Negoska ≥20%、Anchialos ≥80% Roditis、Messenikola ≥70% Mavro Messenikola、Sitia 紅 ≥80% Liatiko／白 ≥70% Vilana、Mavrodaphne of Patras ≥51%、Vinsanto ≥51% Assyrtiko 與 ≥24 個月橡木、Nykteri ≥13.5% 與 ≥3 個月橡木
 - Paros 的 Malvasia Paros 依官方 PDO 地圖列入；Wines of Greece 的 Paros 頁只列乾白與乾紅
 
+## Level 3 內容說明與查證註記
+- 7 課：栽培深度、釀造與風格、風土比較、法規與標籤判讀、產業與貿易、Diploma 品飲與論述、綜合評量（12 題，及格 60）
+- 數字來源：葡萄園面積 64,020 公頃（希臘農業部，2022 年 7 月；取代舊來源的約 9.6 萬公頃）、2022 年產量約 210 萬百升、2023 年出口約 9,970 萬歐元／28,853 公噸／歐盟占 86.6%（Hellenic Statistical Authority 經 To Vima）、散裝約 50%、PDO＋PGI 約三成（KEOSOE，2023）、Santorini Assyrtiko 2,500 → 500 公噸（Reuters，2026 年 6 月）
+- D3 考試形式取自 Napa Valley Wine Academy，課內已提醒以 WSET 官方最新規格為準
+- 綜合評量刻意避開仍有出入的數字（如 Reserve 月數）
+
 ## 尚未做（下一階段）
-- Level 3 正式內容（投影片、測驗、Diploma 論述題）
 - 互動地圖＋PDO 邊界資料（33 PDO，需另找公開 GeoJSON）、遊戲、品飲筆記（首頁已顯示「即將推出」）
 - 成就系統、詞彙辭典（`WineGlossary`／`AdminGlossary` 尚未加入 greece）
 - Supabase `courses` 資料表需新增 `greece` 一列才能在首頁上架

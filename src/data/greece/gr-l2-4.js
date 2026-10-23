@@ -15,9 +15,9 @@ export const lessonContent = [
   {
     title: "Santorini PDO",
     highlights: [
-      { id: 1, icon: "⚪", title: "乾白以 Assyrtiko 為主", content: "可搭配 Athiri、Aidani。最低 Assyrtiko 比例各資料記載不同（約 75% 至 85%），請以官方產品規格為準" },
+      { id: 1, icon: "⚪", title: "乾白以 Assyrtiko 為主", content: "Assyrtiko 至少 85%（Wines of Greece 官方 PDO 頁面），其餘 Athiri、Aidani 合計最多 15%，許多酒款為 100% Assyrtiko" },
       { id: 2, icon: "🌙", title: "Nykteri", content: "乾型風格；酒精至少 13.5%，並至少 3 個月橡木桶陳年" },
-      { id: 3, icon: "☀️", title: "Vinsanto", content: "日曬風乾葡萄（約 8–14 天）、至少 51% Assyrtiko、至少 24 個月氧化型橡木陳年，可標示年數（如 4、8、12、20 年）" },
+      { id: 3, icon: "☀️", title: "Vinsanto", content: "日曬風乾的過熟葡萄（糖度至少 370 g/L）、至少 51% Assyrtiko、至少 24 個月氧化型陳年，可標示年數（如 4、8、12 年以上）" },
       { id: 4, icon: "🌱", title: "老藤與自根苗", content: "許多藤株為自根苗，有些根系估計超過 300 年" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">出題重點：Santorini 的風格光譜——乾白、Nykteri、Vinsanto——全都建立在 Assyrtiko 上。</p></div>"
