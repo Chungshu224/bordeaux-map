@@ -20,7 +20,7 @@
 
       <div ref="mapContainer" class="map"></div>
 
-      <div v-if="mapReady && !activeFeature && !activePgi" class="gr-legend">
+      <div v-if="mapReady && !activeFeature && !activePgi && !climateEnabled" class="gr-legend">
         <div v-for="g in GROUPS" :key="g.key" class="gr-legend-item">
           <span class="gr-legend-dot" :style="{ background: g.color }"></span>
           {{ g.label }}（{{ countByGroup[g.key] || 0 }}）
@@ -37,10 +37,11 @@
         <RegionMapLayerPanel
           :is3D="is3D"
           :show-contours="contoursEnabled"
-          :hide-climate="true"
+          :climate-enabled="climateEnabled"
           :hide-soil="true"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"
+          @toggle-climate="toggleClimate"
           @close="showLayerPanel = false"
         />
       </div>
@@ -53,6 +54,43 @@
         :info-open="!!(activeFeature || activePgi) && !infoBarCollapsed"
         @action="handleMobileAction"
       />
+
+      <transition name="gr-climate-slide">
+        <div v-if="climateEnabled && climateData" class="gr-climate">
+          <div class="grc-tabs">
+            <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+              :class="['grc-tab', { active: climateIndicator === ind.id }]"
+              @click="setClimateIndicator(ind.id)">{{ ind.icon }} {{ ind.label }}</button>
+          </div>
+          <div class="grc-head">
+            <span class="grc-year">{{ climateYear }}</span>
+            <div class="grc-stats">
+              <div v-if="climateActiveLabel" class="grc-name">{{ climateActiveLabel }}</div>
+              <span v-if="currentValue !== null" class="grc-val">{{ currentValue }}{{ cfg.unit }}</span>
+              <span v-if="currentDelta !== null" :class="['grc-delta', currentDelta >= 0 ? 'warm' : 'cool']">
+                {{ currentDelta >= 0 ? '+' : '' }}{{ currentDelta }}{{ cfg.unit }} vs 基準
+              </span>
+            </div>
+            <button class="grc-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+          </div>
+          <input class="grc-slider" type="range" v-model.number="climateYear"
+            :min="climateYears[0]" :max="climateYears[climateYears.length - 1]" step="1"
+            @input="applyClimateColor" />
+          <div class="grc-axis">
+            <span>{{ climateYears[0] }}</span>
+            <span>{{ climateYears[Math.floor(climateYears.length / 2)] }}</span>
+            <span>{{ climateYears[climateYears.length - 1] }}</span>
+          </div>
+          <div class="grc-legend">
+            <div :class="['grc-grad', `grc-grad-${climateIndicator}`]"></div>
+            <div class="grc-labels">
+              <span>{{ currentStats ? currentStats.min.toFixed(0) : '' }}{{ cfg.unit }} {{ cfg.lowLabel }}</span>
+              <span>{{ cfg.highLabel }} {{ currentStats ? currentStats.max.toFixed(0) : '' }}{{ cfg.unit }}</span>
+            </div>
+          </div>
+          <div class="grc-foot">📊 {{ cfg.footnote }}</div>
+        </div>
+      </transition>
 
       <div v-if="mapError" class="map-error">{{ mapError }}</div>
     </section>
@@ -107,6 +145,12 @@ const search = ref('')
 const features = ref([])
 const activeFeature = ref(null)
 const activePgi = ref(null)
+const climateEnabled = ref(false)
+const climateData = ref(null)
+const climateYears = ref([])
+const climateYear = ref(2024)
+const climateIndicator = ref('temp')
+const climateStats = ref({})
 const showPgi = ref(true)
 let map = null
 let contoursInitialized = false
@@ -116,6 +160,105 @@ const countByGroup = computed(() => {
   for (const f of features.value) m[f.properties.group] = (m[f.properties.group] || 0) + 1
   return m
 })
+
+const CLIMATE_INDICATORS = [
+  { id: 'temp', icon: '🌡', label: '夏季均溫', unit: '°C', lowLabel: '涼', highLabel: '熱', dataKey: 'temps', baselineKey: 'baseline', statsKey: 'global', digits: 1,
+    footnote: '6–8 月日均溫平均｜基準 1981–2010｜Open-Meteo（以產區範圍的代表點取值，約 10 公里網格，僅供區域比較）' },
+  { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多', dataKey: 'sun', baselineKey: 'baselineSun', statsKey: 'globalSun', digits: 0,
+    footnote: '6–8 月日照時數總和｜基準 1981–2010｜Open-Meteo（代表點取值，僅供區域比較）' },
+  { id: 'rain', icon: '🌧', label: '降雨量', unit: 'mm', lowLabel: '乾', highLabel: '濕', dataKey: 'rain', baselineKey: 'baselineRain', statsKey: 'globalRain', digits: 0,
+    footnote: '6–8 月降雨量總和｜基準 1981–2010｜Open-Meteo（代表點取值，僅供區域比較）' }
+]
+const cfg = computed(() => CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value))
+const currentStats = computed(() => climateStats.value[cfg.value.statsKey] || null)
+const yearIdx = computed(() => climateYears.value.indexOf(climateYear.value))
+
+function climateOf(id) {
+  const arr = climateData.value?.[id]?.[cfg.value.dataKey]
+  const v = Array.isArray(arr) && yearIdx.value >= 0 ? arr[yearIdx.value] : null
+  return v == null ? null : Number(v)
+}
+const currentValue = computed(() => {
+  const id = activeFeature.value?.id
+  if (id) { const v = climateOf(id); return v == null ? null : Number(v.toFixed(cfg.value.digits)) }
+  const vals = Object.keys(climateData.value || {}).map(climateOf).filter(v => v != null)
+  return vals.length ? Number((vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(cfg.value.digits)) : null
+})
+const currentDelta = computed(() => {
+  const id = activeFeature.value?.id
+  if (!id) return null
+  const v = climateOf(id)
+  const base = climateData.value?.[id]?.[cfg.value.baselineKey]
+  if (v == null || base == null) return null
+  return Number((v - base).toFixed(cfg.value.id === 'temp' ? 2 : 0))
+})
+const climateActiveLabel = computed(() => activeFeature.value ? activeFeature.value.name : '全希臘 33 PDO 平均')
+
+function valueToColor(v) {
+  const st = currentStats.value
+  if (!st) return '#ffffbf'
+  const { min, max, mean } = st
+  const id = climateIndicator.value
+  const stops = id === 'sun'
+    ? [[min, [120, 81, 169]], [mean, [171, 217, 233]], [mean + 20, [254, 224, 72]], [max, [253, 141, 60]]]
+    : id === 'rain'
+      ? [[min, [253, 141, 60]], [mean, [255, 255, 191]], [mean + 15, [74, 144, 226]], [max, [44, 62, 160]]]
+      : [[min, [69, 117, 180]], [mean - 1, [171, 217, 233]], [mean, [255, 255, 191]], [mean + 1.5, [252, 141, 89]], [max, [215, 48, 39]]]
+  const t = Math.max(min, Math.min(max, v))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i], [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / Math.max(t1 - t0, 0.0001)
+      return `rgb(${[0, 1, 2].map(k => Math.round(c0[k] + f * (c1[k] - c0[k]))).join(',')})`
+    }
+  }
+  const l = stops[stops.length - 1][1]
+  return `rgb(${l.join(',')})`
+}
+
+async function loadClimateData() {
+  if (climateData.value) return
+  try {
+    const res = await fetch('/data/greece-climate.json')
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const p = await res.json()
+    climateData.value = p.aocs || {}
+    climateYears.value = p.meta?.years || []
+    climateStats.value = { global: p.global, globalSun: p.globalSun, globalRain: p.globalRain }
+    if (climateYears.value.length && !climateYears.value.includes(climateYear.value)) climateYear.value = climateYears.value[climateYears.value.length - 1]
+  } catch (err) {
+    mapError.value = `氣候資料載入失敗: ${err.message}`
+    climateEnabled.value = false
+  }
+}
+
+function applyClimateColor() {
+  if (!map || !map.getLayer('gr-fill')) return
+  if (!climateEnabled.value || !climateData.value) {
+    map.setPaintProperty('gr-fill', 'fill-color', ['match', ['get', 'group'], ...GROUPS.flatMap(g => [g.key, g.color]), '#888'])
+    applyHighlight()
+    return
+  }
+  const expr = ['match', ['get', 'id']]
+  for (const f of features.value) {
+    const v = climateOf(f.properties.id)
+    expr.push(f.properties.id, v == null ? '#cccccc' : valueToColor(v))
+  }
+  expr.push('#cccccc')
+  map.setPaintProperty('gr-fill', 'fill-color', expr)
+  applyHighlight()
+}
+
+async function toggleClimate() {
+  climateEnabled.value = !climateEnabled.value
+  if (climateEnabled.value) await loadClimateData()
+  applyClimateColor()
+}
+
+function setClimateIndicator(id) {
+  climateIndicator.value = id
+  applyClimateColor()
+}
 
 const activeColor = computed(() =>
   activePgi.value ? '#E07B00' :
@@ -227,9 +370,10 @@ function onDrawerSelect(item) {
 function applyHighlight() {
   if (!map || !map.getLayer('gr-fill')) return
   const id = activeFeature.value?.id
+  const base = climateEnabled.value ? 0.78 : 0.42
   map.setPaintProperty('gr-fill', 'fill-opacity', id
-    ? ['case', ['==', ['get', 'id'], id], 0.6, 0.12]
-    : 0.42)
+    ? ['case', ['==', ['get', 'id'], id], climateEnabled.value ? 0.9 : 0.6, climateEnabled.value ? 0.45 : 0.12]
+    : base)
   map.setPaintProperty('gr-outline', 'line-width', id
     ? ['case', ['==', ['get', 'id'], id], 3, 1]
     : 1.5)
@@ -435,4 +579,32 @@ onUnmounted(() => {
   position: absolute; top: 70px; left: 50%; transform: translateX(-50%); z-index: 20;
   background: #b3261e; color: #fff; padding: 8px 14px; border-radius: 10px; font-size: 0.85rem;
 }
+
+.gr-climate {
+  position: absolute; left: 12px; right: 12px; bottom: 72px; z-index: 6; margin: 0 auto;
+  max-width: 460px; background: rgba(255, 255, 255, 0.95); border-radius: 14px; padding: 10px 12px 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28); color: #1b2b3a;
+}
+.grc-tabs { display: flex; gap: 6px; margin-bottom: 8px; }
+.grc-tab { flex: 1; border: 1px solid #c9d6e2; background: #f3f7fb; border-radius: 8px; padding: 5px 4px; font-size: 0.78rem; cursor: pointer; color: #1b2b3a; }
+.grc-tab.active { background: #0D5EAF; border-color: #0D5EAF; color: #fff; }
+.grc-head { display: flex; align-items: center; gap: 10px; }
+.grc-year { font-size: 1.5rem; font-weight: 800; color: #0D5EAF; }
+.grc-stats { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.grc-name { width: 100%; font-size: 0.78rem; font-weight: 700; }
+.grc-val { font-size: 1.05rem; font-weight: 700; }
+.grc-delta { font-size: 0.75rem; font-weight: 600; }
+.grc-delta.warm { color: #c0392b; }
+.grc-delta.cool { color: #2a6fb0; }
+.grc-close { border: 0; background: none; font-size: 1rem; cursor: pointer; color: #667; }
+.grc-slider { width: 100%; margin: 6px 0 0; accent-color: #0D5EAF; }
+.grc-axis { display: flex; justify-content: space-between; font-size: 0.68rem; color: #667; }
+.grc-grad { height: 8px; border-radius: 4px; margin-top: 6px; }
+.grc-grad-temp { background: linear-gradient(90deg, #4575b4, #abd9e9, #ffffbf, #fc8d59, #d73027); }
+.grc-grad-sun { background: linear-gradient(90deg, #7851a9, #abd9e9, #fee048, #fd8d3c); }
+.grc-grad-rain { background: linear-gradient(90deg, #fd8d3c, #ffffbf, #4a90e2, #2c3ea0); }
+.grc-labels { display: flex; justify-content: space-between; font-size: 0.68rem; color: #445; margin-top: 2px; }
+.grc-foot { margin-top: 5px; font-size: 0.64rem; color: #667; line-height: 1.35; }
+.gr-climate-slide-enter-active, .gr-climate-slide-leave-active { transition: all 0.25s ease; }
+.gr-climate-slide-enter-from, .gr-climate-slide-leave-to { opacity: 0; transform: translateY(12px); }
 </style>
