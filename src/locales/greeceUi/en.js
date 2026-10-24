@@ -688,5 +688,21 @@ export default {
   "Diploma 品飲與論述": "Diploma tasting & essays",
   "把希臘酒知識轉成可應考的盲品與論述技巧": "Turn Greek wine knowledge into exam-ready blind tasting and essay skills",
   "Level 3 綜合評量": "Level 3 Final Assessment",
-  "以模擬題整合全部內容，完成 Level 3": "Combine all content with mock questions to complete Level 3"
+  "以模擬題整合全部內容，完成 Level 3": "Combine all content with mock questions to complete Level 3",
+  "夏季均溫": "Summer mean temp",
+  "涼": "Cool",
+  "熱": "Hot",
+  "日照時數": "Sunshine hours",
+  "少": "Low",
+  "多": "High",
+  "降雨量": "Rainfall",
+  "乾": "Dry",
+  "濕": "Wet",
+  "6–8 月日均溫平均｜基準 1981–2010｜Open-Meteo（以產區範圍的代表點取值，約 10 公里網格，僅供區域比較）": "Mean daily temperature, Jun–Aug | Baseline 1981–2010 | Open-Meteo (sampled at a representative point per region, ~10 km grid; for regional comparison only)",
+  "6–8 月日照時數總和｜基準 1981–2010｜Open-Meteo（代表點取值，僅供區域比較）": "Total sunshine hours, Jun–Aug | Baseline 1981–2010 | Open-Meteo (representative point; for regional comparison only)",
+  "6–8 月降雨量總和｜基準 1981–2010｜Open-Meteo（代表點取值，僅供區域比較）": "Total rainfall, Jun–Aug | Baseline 1981–2010 | Open-Meteo (representative point; for regional comparison only)",
+  "vs 基準": "vs baseline",
+  "關閉氣候圖層": "Close climate layer",
+  "全希臘 33 PDO 平均": "Greece-wide average of 33 PDOs",
+  "氣候資料載入失敗: {m}": "Failed to load climate data: {m}"
 }
