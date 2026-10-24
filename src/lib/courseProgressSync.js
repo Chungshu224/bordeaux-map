@@ -218,6 +218,24 @@ export async function loadAndMergeGreeceProgress(userId) {
   return true
 }
 
+// ─── Rhone ──────────────────────────────────────────────────────
+// Rhone 使用 store state + localStorage，加 Supabase 同步（與 Hungary 同模式）
+export const saveRhoneLesson = (userId, lessonId) => upsertLesson(userId, 'rhone', lessonId)
+
+export async function loadAndMergeRhoneProgress(userId) {
+  const rows = await fetchRows(userId, 'rhone')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `rhone-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[rhoneSync] ✅ synced')
+  return true
+}
+
 // ─── Loire ───────────────────────────────────────────────────────
 // Loire 使用 store state；localStorage 由 store 負責（已補上）
 export const saveLoireLesson = (userId, lessonId) => upsertLesson(userId, 'loire', lessonId)

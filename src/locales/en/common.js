@@ -83,6 +83,7 @@ export default {
     germany:    'Germany',
     hungary:    'Hungary',
     greece:     'Greece',
+    rhone:      'Rhône Valley',
     loire:      'Loire Valley',
     california: 'California',
     australia:  'Australia',

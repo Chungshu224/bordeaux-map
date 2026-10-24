@@ -101,6 +101,7 @@ export default {
     germany:    '德國',
     hungary:    '匈牙利',
     greece:     '希臘',
+    rhone:      '隆河谷',
     loire:      '羅亞爾河谷',
     california: '加州',
     australia:  '澳洲',

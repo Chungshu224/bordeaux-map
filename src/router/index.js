@@ -146,6 +146,18 @@ const routes = [
     redirect: '/greece'
   },
 
+  // ─── 法國隆河葡萄酒課程（框架版，僅管理員可見）──────────────────────────────────
+  {
+    path: '/rhone',
+    name: 'Rhone',
+    component: () => import('../components/rhone/RhonePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🇫🇷 隆河 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/rhone/course',
+    redirect: '/rhone'
+  },
+
   // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────
   {
     path: '/california',
@@ -302,6 +314,7 @@ const COURSE_ACCESS_RULES = {
   LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
   Greece: { courseId: 'greece', minimumTier: 'free' },
+  Rhone: { courseId: 'rhone', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
   Learning: { courseId: 'bordeaux', minimumTier: 'free' },

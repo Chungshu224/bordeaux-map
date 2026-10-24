@@ -1,8 +1,21 @@
 # 🇫🇷 法國隆河（Vallée du Rhône）課程設計（Diploma／MW 備考導向）
 
-> 狀態：**設計稿**（尚未建立程式、路由或內容）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段，供確認後開工。
-> 分支：`feat/rhone-course-design`（未合併）
-> 課程代號建議：`rhone`；課程 ID 前綴 `rh-l{階段}-{序號}`（與 `gr-l1-1` 同格式）
+> 本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 課程代號：`rhone`；課程 ID 前綴 `rh-l{階段}-{序號}`（與 `gr-l1-1` 同格式）
+
+## 狀態
+
+| 階段 | 內容 | 分支 | 狀態 |
+|---|---|---|---|
+| 設計 | 本文件 | `feat/rhone-course-design` | ✅ 完成（未合併） |
+| A | 框架：頁面、路由、進度、21 課空殼、en/ja 標題；僅管理員可見 | `feat/rhone-course-framework`（從 master 切出並合併設計分支） | ✅ 完成（2026-10-24，未合併；見〈已完成的框架項目〉） |
+| B | Level 1 內容（6 課）＋測驗＋en/ja | `feat/rhone-l1`（從 A 切出） | ⏳ 未開始 |
+| C | Level 2 內容（8 課） | `feat/rhone-l2` | ⏳ |
+| D | Level 3 內容（7 課） | `feat/rhone-l3` | ⏳ |
+| E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive` | ⏳ |
+| F | 全面英日文、migration、價格、公開 | — | ⏳ |
+
+**階段 A 備註**：地圖／遊戲／筆記入口在首頁顯示「製作中」（停用）；成就系統與詞彙辭典尚未建立，首頁不顯示成就數；`courses` migration 只準備檔案、**尚未套用**（`supabase/migrations/20261025000000_add_rhone_course.sql`，active=false、show_on_home=false）。
 
 ## 1. 定位與設計原則
 
@@ -155,11 +168,12 @@
   - `29 Southern Rhone CDR And CDR Village`（Côtes du Rhône 與 Villages 問答筆記，2021）
   - `Rhone_香色 2022-08-09.pdf`（進口商資料：Duvernay、Gerin、Roger Perrin 等酒莊說明）
   - `產區省份`、`france` 試算表中的 Rhône 欄位
-- **已知出入（需定案）**：
-  1. Côtes du Rhône 的 Syrah＋Mourvèdre 最低比例（筆記 15%、WineWithSeth 20%）
-  2. 各 cru 升格年份與最新 cru 總數（本稿暫用 18＝北 8＋南 10，含 2024 年 Laudun）
-  3. 各 AOC 面積與單產（來源年份不一，建議一律標註年份）
-  4. Costières de Nîmes 是否納入「隆河」課程範圍
+- **已知出入與查證結論（階段 A，2026-10-24）**：
+  1. **Côtes du Rhône 的 Syrah＋Mourvèdre 最低比例**：INAO 現行產品規格（Cahier des charges CDR，2018 年 9 月版，`extranet.inao.gouv.fr`）規定 Syrah＋Mourvèdre **合計至少 20%**，主要品種（Grenache、Syrah、Mourvèdre）合計至少 70%，**Grenache 至少 30%**（蒙特利馬爾 Montélimar 緯線以北的酒莊例外），Caladoc／Couston／Marselan 合計至多 10%，白品種紅酒至多 5%、粉紅至多 20%；**比例以「酒莊整體種植（encépagement）」計算，而非單一酒款**。20% 為分階段導入：2016 年前種植 10%，之後逐步提高，**已投產葡萄樹自 2022 年採收起適用 20%**；至 2023 年採收前國家委員會可個案調降。→ Drive 筆記的 15%、Wikipedia 的 15%／Grenache 40% 是**較早的過渡版本**，WineWithSeth 的 20% 是最終版；三者差異來自年份，不是矛盾。**處理**：課內以 20%／30%、「酒莊整體種植」、「2022 年起」呈現並標註 INAO 2018 版；2021 年有暫時性修改（`modificationstemporaires…`），Stage C 寫 rh-l2-1 前須再對照最新版後才能進測驗。
+  2. **cru 總數與升格年份**：**18 個定案**。Inter Rhône《Chiffres clés 2025》（vins-rhone.com）地圖標示 18 個 Côtes du Rhône crus、21 個可加註地名的 Villages、2 個天然甜酒（VDN）；Decanter 報導 **Laudun 於 2024 年 9 月 11 日由 INAO 全國委員會升格，為第 18 個 cru**（2023 年 591 公頃，2024 年為首個 cru 年份）。北隆河 8 個（Côte-Rôtie、Condrieu、Château-Grillet、Saint-Joseph、Hermitage、Crozes-Hermitage、Cornas、Saint-Péray）＋南隆河 10 個（Châteauneuf-du-Pape、Gigondas、Vacqueyras、Lirac、Tavel、Vinsobres、Rasteau、Beaumes-de-Venise、Cairanne、Laudun）＝18。升格年份（WineWithSeth，Decanter 交叉）：Gigondas 1971、Vacqueyras 1990、Beaumes-de-Venise 2005、Vinsobres 2006、Rasteau 2010、**Cairanne 2016**（Decanter 2016 年 2 月報導 INAO 核准、第 17 個 cru；WineWithSeth 記 2016/6/29 公告；2024 年 Decanter 文中寫 2015 為口誤，採 2016）、Laudun 2024。Châteauneuf-du-Pape 與 Tavel 為 1936、Lirac 1947。⚠ Gigondas 1971、Vacqueyras 1990 等舊年份僅單一來源（WineWithSeth），Stage C 逐一對照 INAO 後才進測驗。
+  3. **各 AOC 面積與單產**：改以 Inter Rhône《Chiffres clés 2025》（2024 年數據）為準，一律標註年份：河谷總面積 63,307 公頃（不含教皇新堡之各項庫存統計）、2024 年產量 2,165,446 百升（2023 年 2,426,290）、紅 75%／粉紅 13%／白 12%；Côtes du Rhône 28,462 公頃／974,144 百升、Villages 8,007 公頃／247,998 百升；北隆河 crus 合計 4,472 公頃／164,624 百升：Crozes-Hermitage 2,073、**Saint-Joseph 1,415（與 Drive《Bourgogne Aujourd'hui》相符）**、**Hermitage 136（與 WineWithSeth 相符）**、Côte-Rôtie 343、Condrieu 221、Cornas 164、**Château-Grillet 4 公頃（96 百升）**。Wikipedia 的 Côte-Rôtie 224／202 公頃為舊數字，不採用。Viognier 在 Côte-Rôtie 最高 20%（Syrah 至少 80%）、AOC 1940：Wikipedia 與設計稿一致，⚠ INAO 產品規格尚未逐條核對。教皇新堡：2011 年規格列 18 個品種（含顏色變種；一般說「13 個品種」）、單產上限 35 hl/ha、最低天然酒精 12.5%（WineWithSeth，單一來源，⚠ 待 INAO 核對）；面積未取得，Stage C 補。**不進測驗**直到 Stage C 對照 INAO。
+  4. **Costières de Nîmes**：地理上位於 Gard 省、鄰近 Languedoc，歷史上隸屬 Languedoc-Roussillon 委員會；INAO 清單自 **2004 年 7 月 19 日版**起改歸 Rhône 委員會（公會 1998 年申請，理由是風格較近隆河），Inter Rhône 統計**已納入**（2024 年 2,540 公頃、110,510 百升）。**決定**：維持原決議，僅在 rh-l1-5／rh-l2-7 作簡介，課內說明「行政上屬 Rhône、地理與風格介於兩者」，不計入 cru 或北／南 cru 名單。
+  - 另：**Inter Rhône 教學包（Kit pédagogique 2025）PDF 本次未取用**，依已確認決定改用 vins-rhone.com 網頁版與其公開的《Chiffres clés 2025》PDF（vins-rhone.com 站內文件）。vins-rhone.com 的 crus 頁（`/en/cotes-du-rhone-crus-aoc`）只列顏色與品種（20 筆結果含 2 個 VDN），無面積與年份，面積以 Chiffres clés 為準。
 
 ## 8. 已確認的決定（2026-10-25）
 
@@ -169,3 +183,16 @@
 4. 公開：先只給管理員（`ADMIN_ONLY_COURSES` 加入 `rhone`）。
 5. 資料：Inter Rhône 2025 數據改用其網頁版（vins-rhone.com），不用教學包 PDF。
 6. 排程：各階段以排程任務依序啟動（見使用者端的排程清單）。
+
+## 9. 已完成的框架項目（階段 A，分支 `feat/rhone-course-framework`）
+
+照 `feat(greece): 希臘課程框架` 的結構建立，並沿用其後希臘加入的 `gt()` 字典機制：
+
+- **元件** `src/components/rhone/`：`RhonePage`（課程首頁↔課程模式）、`RhoneLevelSelector`（3 階段課程首頁；QuickNav 的地圖／遊戲／筆記顯示「製作中」並停用，不導向任何頁面）、`RhoneLearningSystem`（課程播放，含進度同步）、`RhoneCourseLayout`（章節總覽）。
+- **UI 字典** `src/locales/rhoneUi/`（`index.js`、`en.js`、`ja.js`）：機制同 `greeceUi`（以繁中原文為鍵、`gt()` 查字典、查無退回中文）；通用字串直接疊在 `greeceUi` 字典之上，只在 rhoneUi 補隆河專屬字串，**未改動希臘任何檔案**。
+- **Store** `src/stores/rhoneLearningStore.js`：3 階段 21 課大綱（依第 2 節：標題、模組 RH1M1…RH3M3、分鐘數），進度存 `rhone-wine-academy-progress:{userId}`（localStorage）；`src/lib/courseProgressSync.js` 新增 `saveRhoneLesson`／`loadAndMergeRhoneProgress`（課程代號 `rhone`）。
+- **課程空殼** `src/data/rhone/rh-l1-1.js … rh-l3-7.js`（21 檔）：一張封面＋一張「本課重點」（3 點，只寫概念、不含未定案數字），並標示「🚧 內容製作中」；已於 `lessonContentLoader.js` 註冊；`src/locales/{en,ja}/lessons/rhone/*.json` 已放標題、重點與製作中提示（鍵值已逐檔驗證與 JS 結構吻合）。
+- **接點**：路由 `/rhone`（`/rhone/course` 導回）與 `COURSE_ACCESS_RULES.Rhone`（`courseId: 'rhone'`, `free`）；`PlatformHome` 加入 `rhone`（課程清單、`courseStatuses`／`courseShowHome` 預設 false、`ADMIN_ONLY_COURSES = ['greece','rhone']`、僅 `isAdmin` 可見的卡片與樣式）；`regionThemes.js` 的 `rhone` 主題（Syrah 紫 `#7A2E5C`／金 `#D08C2F`）；`PresentationLesson` 的 `rh-` 封面色與圖示；en／ja／zh-TW 的 `common.js`（地區名）與 `home.js`（課程標籤與卡片文案）。
+- **Migration（僅準備、未套用）**：`supabase/migrations/20261025000000_add_rhone_course.sql`，`courses` 新增 `rhone`，`active=false`、`show_on_home=false`，價格暫沿用希臘，並附上公開用的 UPDATE（註解）。
+- **尚未做（留給後續階段）**：成就系統（`rhoneAchievementSystem.js`）、詞彙辭典（`WineGlossary`／`AdminGlossary` 加 `rhone`，第三語為法文）、`tasting_notes` 酒款類型 migration、互動地圖、遊戲、品飲筆記，以及 21 課正式內容與測驗。
+- **驗證**：`@vue/compiler-sfc` 編譯 `rhone/*.vue`、`PlatformHome.vue`、`PresentationLesson.vue` 通過；`npx vite build` 成功（希臘與其他課程檔案未修改，共用檔案皆為新增而非改動既有邏輯）。
