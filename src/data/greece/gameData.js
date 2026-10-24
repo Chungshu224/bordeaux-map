@@ -4,6 +4,8 @@
  * 數字細節仍可能隨官方規格更新；不放有出入的數字（如 Reserve 月數）。
  */
 
+import { gt } from '../../locales/greeceUi/index.js'
+
 export function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -70,12 +72,12 @@ export function buildRegionQuestions(diff) {
     const others = shuffle(REGION_GROUPS.filter(g => g.key !== p.group))
     const groups = diff === 'easy' ? shuffle([correctGroup, ...others.slice(0, 3)]) : REGION_GROUPS
     return {
-      tag: 'PDO → 地理區',
+      tag: gt('PDO → 地理區'),
       stem: p.name,
-      hint: p.hint,
-      options: groups.map(g => g.label),
+      hint: gt(p.hint),
+      options: groups.map(g => gt(g.label)),
       correct: groups.findIndex(g => g.key === p.group),
-      explain: `${p.name} 位於「${GROUP_LABEL[p.group]}」。`
+      explain: gt('{name} 位於「{g}」。', { name: p.name, g: gt(GROUP_LABEL[p.group]) })
     }
   })
 }
@@ -122,27 +124,27 @@ const GRAPE_BY_NAME = Object.fromEntries(GRAPES.map(g => [g.name, g]))
 function pick4(correct, poolItems, key) {
   const wrong = shuffle(poolItems.filter(x => x !== correct)).slice(0, 3)
   const opts = shuffle([correct, ...wrong])
-  return { options: opts.map(o => o[key]), correct: opts.indexOf(correct) }
+  return { options: opts.map(o => gt(o[key])), correct: opts.indexOf(correct) }
 }
 
 function g2d(g) {
   const same = GRAPES.filter(x => x.color === g.color)
   const { options, correct } = pick4(g, same, 'desc')
-  return { tag: '品種 → 特徵', stem: `${g.name}（${g.color}）最符合哪一項描述？`, options, correct,
-    explain: `${g.name}：${g.desc}。` }
+  return { tag: gt('品種 → 特徵'), stem: gt('{name}（{color}）最符合哪一項描述？', { name: g.name, color: gt(g.color) }), options, correct,
+    explain: gt('{name}：{desc}。', { name: g.name, desc: gt(g.desc) }) }
 }
 function d2g(g) {
   const same = GRAPES.filter(x => x.color === g.color)
   const { options, correct } = pick4(g, same, 'name')
-  return { tag: '特徵 → 品種', stem: g.desc, hint: `這是哪個${g.color}品種？`, options, correct,
-    explain: `答案是 ${g.name}。` }
+  return { tag: gt('特徵 → 品種'), stem: gt(g.desc), hint: gt('這是哪個{color}品種？', { color: gt(g.color) }), options, correct,
+    explain: gt('答案是 {name}。', { name: g.name }) }
 }
 function p2g(item) {
   const g = GRAPE_BY_NAME[item.grape]
   const same = GRAPES.filter(x => x.color === g.color)
   const { options, correct } = pick4(g, same, 'name')
-  return { tag: 'PDO → 核心品種', stem: `${item.pdo} 的核心品種是？`, options, correct,
-    explain: `${item.pdo} 以 ${g.name} 為核心：${g.desc}。` }
+  return { tag: gt('PDO → 核心品種'), stem: gt('{pdo} 的核心品種是？', { pdo: gt(item.pdo) }), options, correct,
+    explain: gt('{pdo} 以 {name} 為核心：{desc}。', { pdo: gt(item.pdo), name: g.name, desc: gt(g.desc) }) }
 }
 
 export function buildGrapeQuestions(diff) {
@@ -205,7 +207,7 @@ const FACT_ITEMS = [
 export function buildClassificationQuestions(diff) {
   const mk = (stem, tag, ans, wrong, explain) => {
     const opts = shuffle([ans, ...wrong])
-    return { tag, stem, options: opts, correct: opts.indexOf(ans), explain }
+    return { tag: gt(tag), stem: gt(stem), options: opts.map(o => gt(o)), correct: opts.indexOf(ans), explain: gt(explain) }
   }
   const terms = TERM_ITEMS.map(t => mk(t.stem, '辨識術語／制度', t.ans, t.wrong, t.explain))
   if (diff === 'easy') return shuffle(terms)

@@ -15,7 +15,7 @@
             class="level-tab"
             :class="{ active: props.currentLevel === n, locked: !props.unlockedLevels.includes(n) }"
             :disabled="!props.unlockedLevels.includes(n)"
-            :title="!props.unlockedLevels.includes(n) ? `需完成 Level ${n - 1} 綜合評量才能解鎖` : `Level ${n}`"
+            :title="!props.unlockedLevels.includes(n) ? gt('需完成 Level {n} 綜合評量才能解鎖', { n: n - 1 }) : `Level ${n}`"
             @click="props.unlockedLevels.includes(n) && emit('changeLevel', n)"
           >
             <span v-if="!props.unlockedLevels.includes(n)" class="tab-lock">🔒</span>L{{ n }}
@@ -24,7 +24,7 @@
       </div>
 
       <div class="header-right">
-        <button class="progress-btn" title="整體進度">
+        <button class="progress-btn" :title="gt('整體進度')">
           <svg class="progress-ring" width="34" height="34" viewBox="0 0 34 34">
             <circle cx="17" cy="17" r="14" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
             <circle
@@ -36,7 +36,7 @@
           </svg>
           <span class="progress-pct">{{ overallProgress }}%</span>
         </button>
-        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">≡ 章節</button>
+        <button class="drawer-toggle" @click="drawerOpen = !drawerOpen">{{ gt('≡ 章節') }}</button>
       </div>
     </header>
 
@@ -44,7 +44,7 @@
     <div class="layout-body">
       <!-- 左側章節導航（桌面） -->
       <aside class="chapter-sidebar">
-        <div class="sidebar-title">章節總覽</div>
+        <div class="sidebar-title">{{ gt('章節總覽') }}</div>
         <nav>
           <button
             v-for="module in resolvedModules"
@@ -55,7 +55,7 @@
           >
             <span class="sidebar-icon">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
             <div class="sidebar-info">
-              <div class="sidebar-name">{{ module.title }}</div>
+              <div class="sidebar-name">{{ gt(module.title) }}</div>
               <div class="sidebar-dots">
                 <span
                   v-for="lesson in module.lessons"
@@ -75,15 +75,15 @@
         <div class="level-header-card">
           <div class="level-header-top">
             <div class="level-badge">Level {{ props.currentLevel }}</div>
-            <h2 class="level-title">{{ props.currentLevelData?.title }}</h2>
+            <h2 class="level-title">{{ gt(props.currentLevelData?.title) }}</h2>
           </div>
-          <p class="level-desc">{{ props.currentLevelData?.description }}</p>
+          <p class="level-desc">{{ gt(props.currentLevelData?.description) }}</p>
           <div class="progress-bar-wrapper">
             <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
           </div>
-          <p class="progress-label">{{ completedCount }}/{{ totalCount }} 課程完成</p>
+          <p class="progress-label">{{ gt('{done}/{total} 課程完成', { done: completedCount, total: totalCount }) }}</p>
           <div v-if="overallProgress > 0 && overallProgress < 100" class="motivation-text">
-            🎯 再完成 {{ totalCount - completedCount }} 課即可完成此階段！
+            {{ gt('🎯 再完成 {n} 課即可完成此階段！', { n: totalCount - completedCount }) }}
           </div>
         </div>
 
@@ -100,9 +100,9 @@
                 {{ isModuleCompleted(module) ? '✓' : '📖' }}
               </div>
               <div class="module-section-info">
-                <h3 class="module-section-title">{{ module.title }}</h3>
+                <h3 class="module-section-title">{{ gt(module.title) }}</h3>
                 <span class="module-count-chip">
-                  {{ moduleDoneCount(module) }}/{{ module.lessons.length }} 完成
+                  {{ gt('{done}/{total} 完成', { done: moduleDoneCount(module), total: module.lessons.length }) }}
                 </span>
               </div>
             </div>
@@ -119,12 +119,12 @@
                   <span v-else>{{ idx + 1 }}</span>
                 </div>
                 <div class="lesson-meta">
-                  <div class="lesson-title">{{ lesson.title }}</div>
-                  <div v-if="lesson.duration" class="lesson-duration">{{ lesson.duration }} 分鐘</div>
+                  <div class="lesson-title">{{ gt(lesson.title) }}</div>
+                  <div v-if="lesson.duration" class="lesson-duration">{{ gt('{n} 分鐘', { n: lesson.duration }) }}</div>
                 </div>
                 <div class="lesson-action">
-                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">完成</span>
-                  <span v-else class="tag-start">開始 ▶</span>
+                  <span v-if="completedLessons.includes(lesson.id)" class="tag-done">{{ gt('完成') }}</span>
+                  <span v-else class="tag-start">{{ gt('開始 ▶') }}</span>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
       <Transition name="hu-slide-up">
         <div v-if="drawerOpen" class="hu-chapter-drawer">
           <div class="drawer-header">
-            <span>章節導航</span>
+            <span>{{ gt('章節導航') }}</span>
             <button class="drawer-close" @click="drawerOpen = false">×</button>
           </div>
           <div class="drawer-body">
@@ -152,7 +152,7 @@
             >
               <span class="drawer-status">{{ isModuleCompleted(module) ? '✓' : '○' }}</span>
               <div class="drawer-item-info">
-                <div class="drawer-chapter-name">{{ module.title }}</div>
+                <div class="drawer-chapter-name">{{ gt(module.title) }}</div>
                 <div class="drawer-progress">{{ moduleDoneCount(module) }}/{{ module.lessons.length }}</div>
               </div>
             </button>
@@ -164,6 +164,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../locales/greeceUi/index.js'
 import { ref, computed } from 'vue'
 
 const props = defineProps({

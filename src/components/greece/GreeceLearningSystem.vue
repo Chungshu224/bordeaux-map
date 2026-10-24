@@ -22,9 +22,9 @@
           </div>
         </div>
         <div class="lh-row lh-row-2">
-          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">◀ 上一頁</button>
+          <button class="lh-btn lh-nav-btn" @click="handlePreviousSlide" :disabled="!canGoPrevious">{{ gt('◀ 上一頁') }}</button>
           <span class="lh-nav-label">{{ currentSlideTitle }}</span>
-          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">下一頁 ▶</button>
+          <button class="lh-btn lh-nav-btn" @click="handleNextSlide" :disabled="!canGoNext">{{ gt('下一頁 ▶') }}</button>
         </div>
       </header>
 
@@ -45,6 +45,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../locales/greeceUi/index.js'
 import { ref, computed, watch, onMounted } from 'vue'
 import {
   greeceLearningState,
@@ -97,8 +98,8 @@ const canGoNext = computed(() => {
 })
 
 const currentSlideTitle = computed(() => {
-  if (!presentationLessonRef.value) return '投影片導航'
-  return presentationLessonRef.value.currentSlideTitle || '投影片導航'
+  if (!presentationLessonRef.value) return gt('投影片導航')
+  return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
 function isLevelUnlocked(level) {

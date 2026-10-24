@@ -1,5 +1,5 @@
 <template>
-  <div class="greece-page" :class="{ 'is-selector': view === 'selector' }">
+  <div class="greece-page" :key="i18n.global.locale.value" :class="{ 'is-selector': view === 'selector' }">
     <!-- 課程首頁 -->
     <GreeceLevelSelector
       v-if="view === 'selector'"
@@ -39,6 +39,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { i18n } from '../../locales/index.js'
 import GreeceLevelSelector from './GreeceLevelSelector.vue'
 import GreeceLearningSystem from './GreeceLearningSystem.vue'
 import GreeceMapPage from './GreeceMapPage.vue'

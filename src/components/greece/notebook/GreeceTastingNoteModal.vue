@@ -3,7 +3,7 @@
     <div class="gr-modal-panel">
       <div class="gr-modal-header" :style="{ borderBottomColor: typeColor }">
         <div class="gr-modal-title-block">
-          <h2>{{ form.producer || '新增品飲筆記' }}</h2>
+          <h2>{{ form.producer || gt('新增品飲筆記') }}</h2>
           <p v-if="form.appellation" class="gr-modal-sub">{{ form.appellation }}</p>
         </div>
         <button class="gr-modal-close" @click="emit('close')">✕</button>
@@ -11,27 +11,27 @@
 
       <div class="gr-modal-body">
         <section class="gr-sec">
-          <h3>🇬🇷 酒款類型</h3>
+          <h3>{{ gt('🇬🇷 酒款類型') }}</h3>
           <div class="gr-type-grid">
             <button v-for="t in WINE_TYPES" :key="t.id" class="gr-type-btn"
               :class="{ selected: form.wine_type === t.id }"
               :style="form.wine_type === t.id ? { background: t.color, borderColor: t.color, color: '#fff' } : {}"
               @click="selectWineType(t.id)">
-              <span>{{ t.emoji }}</span><span>{{ t.short }}</span>
+              <span>{{ t.emoji }}</span><span>{{ gt(t.short) }}</span>
             </button>
           </div>
         </section>
 
         <section class="gr-sec">
-          <h3>📍 基本資訊</h3>
-          <label class="gr-label">生產者</label>
+          <h3>{{ gt('📍 基本資訊') }}</h3>
+          <label class="gr-label">{{ gt('生產者') }}</label>
           <input v-model="form.producer" class="gr-input" placeholder="e.g. Gaia, Domaine Sigalas, Kir-Yianni…" />
-          <label class="gr-label">主要品種</label>
+          <label class="gr-label">{{ gt('主要品種') }}</label>
           <input v-model="form.grape_variety" class="gr-input" list="gr-grape-list" placeholder="e.g. Assyrtiko, Xinomavro…" />
           <datalist id="gr-grape-list">
             <option v-for="g in GRAPES_BY_TYPE[form.wine_type] || []" :key="g" :value="g" />
           </datalist>
-          <label class="gr-label">產區（PDO／PGI）</label>
+          <label class="gr-label">{{ gt('產區（PDO／PGI）') }}</label>
           <input v-model="form.appellation" class="gr-input" list="gr-app-list" placeholder="e.g. Santorini、Naoussa、PGI Crete…" />
           <datalist id="gr-app-list">
             <option v-for="a in APPELLATIONS" :key="a" :value="a" />
@@ -39,21 +39,21 @@
         </section>
 
         <section class="gr-sec">
-          <h3>🍷 品飲記錄</h3>
+          <h3>{{ gt('🍷 品飲記錄') }}</h3>
           <div class="gr-triple">
             <div>
-              <label class="gr-label">狀態</label>
+              <label class="gr-label">{{ gt('狀態') }}</label>
               <div class="gr-status">
-                <button :class="{ on: form.status === 'tried' }" @click="form.status = 'tried'">✓ 已品飲</button>
-                <button :class="{ on: form.status === 'wishlist' }" @click="form.status = 'wishlist'">♡ 想喝</button>
+                <button :class="{ on: form.status === 'tried' }" @click="form.status = 'tried'">{{ gt('✓ 已品飲') }}</button>
+                <button :class="{ on: form.status === 'wishlist' }" @click="form.status = 'wishlist'">{{ gt('♡ 想喝') }}</button>
               </div>
             </div>
             <div>
-              <label class="gr-label">年份</label>
+              <label class="gr-label">{{ gt('年份') }}</label>
               <input type="number" v-model.number="form.vintage" min="1950" max="2035" placeholder="e.g. 2022" class="gr-input" />
             </div>
             <div>
-              <label class="gr-label">評分</label>
+              <label class="gr-label">{{ gt('評分') }}</label>
               <div class="gr-stars">
                 <span v-for="i in 5" :key="i" :class="{ filled: form.rating >= i }"
                   @click="form.rating = form.rating === i ? null : i">★</span>
@@ -64,7 +64,7 @@
 
         <template v-if="form.status === 'tried'">
           <section v-if="colors.length" class="gr-sec">
-            <h3>🎨 外觀顏色</h3>
+            <h3>{{ gt('🎨 外觀顏色') }}</h3>
             <div class="gr-colors">
               <button v-for="c in colors" :key="c.id" :title="c.label" class="gr-color-dot"
                 :class="{ selected: form.color_desc === c.id }" :style="{ background: c.color }"
@@ -72,54 +72,54 @@
                 <span v-if="form.color_desc === c.id">✓</span>
               </button>
             </div>
-            <p v-if="form.color_desc" class="gr-color-hint">{{ colors.find(c => c.id === form.color_desc)?.label }}</p>
+            <p v-if="form.color_desc" class="gr-color-hint">{{ gt(colors.find(c => c.id === form.color_desc)?.label) }}</p>
           </section>
 
           <section class="gr-sec">
-            <h3>👃 香氣</h3>
+            <h3>{{ gt('👃 香氣') }}</h3>
             <div class="gr-tags">
               <button v-for="tag in aromas" :key="tag" class="gr-tag" :class="{ active: form.aroma_tags.includes(tag) }"
                 :style="form.aroma_tags.includes(tag) ? { background: typeColor, borderColor: typeColor } : {}"
-                @click="toggleTag(form.aroma_tags, tag)">{{ tag }}</button>
+                @click="toggleTag(form.aroma_tags, tag)">{{ gt(tag) }}</button>
             </div>
           </section>
 
           <section class="gr-sec">
-            <h3>👅 口感</h3>
+            <h3>{{ gt('👅 口感') }}</h3>
             <div class="gr-tags">
               <button v-for="tag in tasteTags" :key="tag" class="gr-tag" :class="{ active: form.taste_tags.includes(tag) }"
                 :style="form.taste_tags.includes(tag) ? { background: typeColor, borderColor: typeColor } : {}"
-                @click="toggleTag(form.taste_tags, tag)">{{ tag }}</button>
+                @click="toggleTag(form.taste_tags, tag)">{{ gt(tag) }}</button>
             </div>
           </section>
 
           <section class="gr-sec">
-            <h3>📐 結構感</h3>
+            <h3>{{ gt('📐 結構感') }}</h3>
             <div v-for="item in structure" :key="item.key" class="gr-struct-row">
-              <span class="gr-struct-label">{{ item.label }}</span>
+              <span class="gr-struct-label">{{ gt(item.label) }}</span>
               <div class="gr-dots">
                 <button v-for="i in 5" :key="i" :class="{ filled: form[item.key] >= i }"
                   :style="form[item.key] >= i ? { color: typeColor } : {}"
                   @click="form[item.key] = form[item.key] === i ? null : i">●</button>
               </div>
-              <span class="gr-struct-hint">{{ item.hints[(form[item.key] || 0) - 1] || '' }}</span>
+              <span class="gr-struct-hint">{{ gt(item.hints[(form[item.key] || 0) - 1] || '') }}</span>
             </div>
           </section>
         </template>
 
         <section class="gr-sec">
-          <h3>📝 心得筆記</h3>
+          <h3>{{ gt('📝 心得筆記') }}</h3>
           <textarea v-model="form.notes" class="gr-textarea" rows="4"
-            placeholder="記錄品飲心得、風土與風格連結、與其他產區的比較、適飲期評估…"></textarea>
+            :placeholder="gt('記錄品飲心得、風土與風格連結、與其他產區的比較、適飲期評估…')"></textarea>
         </section>
       </div>
 
       <div class="gr-modal-footer">
         <button v-if="props.note?.id" class="gr-btn-delete" :disabled="deleting" @click="confirmDelete">
-          {{ deleting ? '刪除中…' : '🗑 刪除' }}
+          {{ deleting ? gt('刪除中…') : gt('🗑 刪除') }}
         </button>
         <button class="gr-btn-save" :disabled="saving || !form.producer.trim()" :style="{ background: typeColor }" @click="save">
-          {{ saving ? '儲存中…' : '💾 儲存筆記' }}
+          {{ saving ? gt('儲存中…') : gt('💾 儲存筆記') }}
         </button>
       </div>
     </div>
@@ -127,6 +127,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../../locales/greeceUi/index.js'
 import { ref, computed, onMounted } from 'vue'
 import { supabase } from '@/lib/supabaseClient.js'
 import { authState } from '@/stores/authStore.js'
@@ -211,12 +212,12 @@ async function save() {
     ;({ error } = await supabase.from('tasting_notes').insert(payload))
   }
   saving.value = false
-  if (error) { alert('儲存失敗：' + error.message); return }
+  if (error) { alert(gt('儲存失敗：') + error.message); return }
   emit('save')
 }
 
 async function confirmDelete() {
-  if (!confirm(`確定刪除「${form.value.producer}」的筆記？`)) return
+  if (!confirm(gt('確定刪除「{p}」的筆記？', { p: form.value.producer }))) return
   deleting.value = true
   await supabase.from('tasting_notes').delete().eq('id', props.note.id)
   deleting.value = false

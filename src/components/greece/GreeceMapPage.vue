@@ -2,8 +2,8 @@
   <div class="main-layout">
     <section class="map-section">
       <RegionMapHeader
-        regionName="希臘"
-        title="🇬🇷 希臘葡萄酒產區地圖（33 PDO＋PGI 參考點）"
+        :regionName="gt('希臘')"
+        :title="gt('🇬🇷 希臘葡萄酒產區地圖（33 PDO＋PGI 參考點）')"
         icon="🇬🇷"
         @back="emits('back-to-course')"
       />
@@ -23,14 +23,14 @@
       <div v-if="mapReady && !activeFeature && !activePgi" class="gr-legend">
         <div v-for="g in GROUPS" :key="g.key" class="gr-legend-item">
           <span class="gr-legend-dot" :style="{ background: g.color }"></span>
-          {{ g.label }}（{{ countByGroup[g.key] || 0 }}）
+          {{ gt(g.label) }}（{{ countByGroup[g.key] || 0 }}）
         </div>
         <label class="gr-legend-toggle">
           <input type="checkbox" v-model="showPgi" @change="togglePgi" />
-          <span class="gr-pgi-dot"></span> PGI 參考點（{{ PGI_REF.length }}）
+          <span class="gr-pgi-dot"></span> {{ gt('PGI 參考點（{n}）', { n: PGI_REF.length }) }}
         </label>
-        <div class="gr-legend-hint">點擊產區查看資訊；PDO 邊界為歐盟官方資料（CC0）。PGI 僅為示意位置，非官方邊界；完整 114 個 PGI 請查 eAmbrosia。</div>
-        <div class="gr-legend-hint">{{ PGI_RULES }}</div>
+        <div class="gr-legend-hint">{{ gt('點擊產區查看資訊；PDO 邊界為歐盟官方資料（CC0）。PGI 僅為示意位置，非官方邊界；完整 114 個 PGI 請查 eAmbrosia。') }}</div>
+        <div class="gr-legend-hint">{{ gt(PGI_RULES) }}</div>
       </div>
 
       <div v-if="showLayerPanel" class="layer-panel-wrapper">
@@ -59,7 +59,7 @@
 
     <RegionMapAppellationDrawer
       v-model:open="drawerOpen"
-      region-name="希臘"
+      :region-name="gt('希臘')"
       :grouped="groupedDrawer"
       :search="search"
       :active-id="activePgi ? activePgi.id : (activeFeature ? activeFeature.id : '')"
@@ -70,6 +70,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../locales/greeceUi/index.js'
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -85,12 +86,12 @@ const emits = defineEmits(['back-to-course'])
 
 // 教學用六大地理區（非官方行政區）；顏色與 PDO 數量與 Level 1 一致
 const GROUPS = [
-  { key: 'macedonia',       label: '馬其頓',           color: '#B23A48' },
-  { key: 'epirus_thessaly', label: '伊庇魯斯與色薩利', color: '#6A4C93' },
-  { key: 'peloponnese',     label: '伯羅奔尼撒',       color: '#2E7D32' },
-  { key: 'ionian',          label: '愛奧尼亞群島',     color: '#0097A7' },
-  { key: 'aegean',          label: '愛琴海島嶼',       color: '#0D5EAF' },
-  { key: 'crete',           label: '克里特',           color: '#B8902A' }
+  { key: 'macedonia',       label: gt('馬其頓'),           color: '#B23A48' },
+  { key: 'epirus_thessaly', label: gt('伊庇魯斯與色薩利'), color: '#6A4C93' },
+  { key: 'peloponnese',     label: gt('伯羅奔尼撒'),       color: '#2E7D32' },
+  { key: 'ionian',          label: gt('愛奧尼亞群島'),     color: '#0097A7' },
+  { key: 'aegean',          label: gt('愛琴海島嶼'),       color: '#0D5EAF' },
+  { key: 'crete',           label: gt('克里特'),           color: '#B8902A' }
 ]
 const GROUP_BY_KEY = Object.fromEntries(GROUPS.map(g => [g.key, g]))
 const HOME_BOUNDS = [[19.3, 34.7], [28.4, 41.2]]
@@ -134,30 +135,30 @@ const unifiedInfo = computed(() => {
     return {
       name: `PGI ${g.name}`,
       originalName: `ΠΓΕ ${g.name_el}`,
-      badges: [{ label: 'PGI' }, ...(g.level ? [{ label: g.level }] : [])],
+      badges: [{ label: 'PGI' }, ...(g.level ? [{ label: gt(g.level) }] : [])],
       meta: [
-        { label: '地區', value: g.region },
-        { label: '位置', value: '示意點，非官方邊界' }
+        { label: gt('地區'), value: gt(g.region) },
+        { label: gt('位置'), value: gt('示意點，非官方邊界') }
       ],
-      grapes: g.grapes || [],
-      description: `${g.notes} ${PGI_RULES}`
+      grapes: (g.grapes || []).map(x => gt(x)),
+      description: `${gt(g.notes)} ${gt(PGI_RULES)}`
     }
   }
   const f = activeFeature.value
   if (!f) return null
   const others = coLocated(f)
-  let description = f.notes || ''
-  if (others.length) description += ` 同一範圍另有：${others.map(o => o.name).join('、')}。`
+  let description = gt(f.notes || '')
+  if (others.length) description += gt(' 同一範圍另有：{list}。', { list: others.map(o => o.name).join(gt('、')) })
   return {
     name: f.name,
     originalName: f.name_el,
-    badges: [{ label: 'PDO' }, ...(f.styles || []).map(s => ({ label: s }))],
+    badges: [{ label: 'PDO' }, ...(f.styles || []).map(s => ({ label: gt(s) }))],
     meta: [
-      { label: '地理區', value: GROUP_BY_KEY[f.group]?.label || '' },
-      { label: '登記', value: f.registered },
-      { label: '範圍面積', value: `約 ${f.area_km2.toLocaleString()} km²` }
+      { label: gt('地理區'), value: gt(GROUP_BY_KEY[f.group]?.label || '') },
+      { label: gt('登記'), value: f.registered },
+      { label: gt('範圍面積'), value: gt('約 {n} km²', { n: f.area_km2.toLocaleString() }) }
     ],
-    grapes: f.grapes || [],
+    grapes: (f.grapes || []).map(x => gt(x)),
     description
   }
 })
@@ -170,7 +171,7 @@ const groupedDrawer = computed(() => {
     .map(p => ({ id: p.id, name: `PGI ${p.name}`, type: 'PGI', styles: [] }))
   const pdoGroups = GROUPS.map(g => ({
     key: g.key,
-    label: g.label,
+    label: gt(g.label),
     items: features.value
       .map(x => x.properties)
       .filter(p => p.group === g.key)
@@ -179,7 +180,7 @@ const groupedDrawer = computed(() => {
       .map(p => ({ id: p.id, name: p.name, type: g.key, styles: p.styles || [] }))
   })).filter(g => g.items.length)
   return pgiItems.length
-    ? [...pdoGroups, { key: 'pgi', label: 'PGI 參考點（示意位置）', items: pgiItems }]
+    ? [...pdoGroups, { key: 'pgi', label: gt('PGI 參考點（示意位置）'), items: pgiItems }]
     : pdoGroups
 })
 
@@ -356,12 +357,12 @@ function addPdoLayers(geojson) {
 async function initMap(retry = 0) {
   try {
     if (!mapboxgl.supported()) {
-      mapError.value = '您的瀏覽器不支援 WebGL，請更新瀏覽器或開啟硬體加速後重試'
+      mapError.value = gt('您的瀏覽器不支援 WebGL，請更新瀏覽器或開啟硬體加速後重試')
       return
     }
     if (!mapContainer.value) {
       if (retry < 5) { setTimeout(() => initMap(retry + 1), 200); return }
-      mapError.value = '無法獲取地圖容器'
+      mapError.value = gt('無法獲取地圖容器')
       return
     }
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
@@ -383,14 +384,14 @@ async function initMap(retry = 0) {
         features.value = geojson.features
         addPdoLayers(geojson)
       } catch (err) {
-        mapError.value = `產區邊界載入失敗: ${err.message}`
+        mapError.value = gt('產區邊界載入失敗: {m}', { m: err.message })
       }
       mapReady.value = true
       if (props.initialRegion?.id) selectById(props.initialRegion.id)
     })
-    map.on('error', e => { if (!mapReady.value) mapError.value = `地圖錯誤: ${e.error?.message || ''}` })
+    map.on('error', e => { if (!mapReady.value) mapError.value = gt('地圖錯誤: {m}', { m: e.error?.message || '' }) })
   } catch (err) {
-    mapError.value = `初始化失敗: ${err.message}`
+    mapError.value = gt('初始化失敗: {m}', { m: err.message })
   }
 }
 

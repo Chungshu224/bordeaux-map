@@ -2,47 +2,47 @@
   <div class="gr-nb-page">
     <div class="gr-nb-header">
       <button class="gr-nb-back" @click="emit('back')">← {{ $t('common.actions.back') }}</button>
-      <h1 class="gr-nb-title">📔 希臘品飲筆記</h1>
-      <button class="gr-nb-add" @click="openNew" :disabled="!authUser">+ 新增</button>
+      <h1 class="gr-nb-title">{{ gt('📔 希臘品飲筆記') }}</h1>
+      <button class="gr-nb-add" @click="openNew" :disabled="!authUser">{{ gt('+ 新增') }}</button>
     </div>
 
     <div v-if="!authUser" class="gr-nb-login">
-      🔑 請先<a @click="router.push('/login')">登入</a>以使用希臘品飲筆記功能
+      {{ gt('🔑 請先') }}<a @click="router.push('/login')">{{ gt('登入') }}</a>{{ gt('以使用希臘品飲筆記功能') }}
     </div>
 
     <div class="gr-nb-stats">
-      <div class="gr-stat"><b>{{ stats.tried }}</b><span>已品飲</span></div>
-      <div class="gr-stat"><b>{{ stats.wishlist }}</b><span>想喝清單</span></div>
-      <div class="gr-stat"><b>{{ stats.appellations }}</b><span>產區涵蓋</span></div>
-      <div class="gr-stat"><b>{{ stats.grapes }}</b><span>品種記錄</span></div>
+      <div class="gr-stat"><b>{{ stats.tried }}</b><span>{{ gt('已品飲') }}</span></div>
+      <div class="gr-stat"><b>{{ stats.wishlist }}</b><span>{{ gt('想喝清單') }}</span></div>
+      <div class="gr-stat"><b>{{ stats.appellations }}</b><span>{{ gt('產區涵蓋') }}</span></div>
+      <div class="gr-stat"><b>{{ stats.grapes }}</b><span>{{ gt('品種記錄') }}</span></div>
     </div>
 
     <div class="gr-nb-tabs">
-      <button v-for="mt in MAIN_TABS" :key="mt.key" :class="{ active: mainTab === mt.key }" @click="mainTab = mt.key">{{ mt.label }}</button>
+      <button v-for="mt in MAIN_TABS" :key="mt.key" :class="{ active: mainTab === mt.key }" @click="mainTab = mt.key">{{ gt(mt.label) }}</button>
     </div>
 
     <template v-if="mainTab === 'notes'">
       <div class="gr-filters">
         <div class="gr-row">
-          <button v-for="tab in STATUS_TABS" :key="tab.key" :class="{ active: filterStatus === tab.key }" @click="filterStatus = tab.key">{{ tab.label }}</button>
+          <button v-for="tab in STATUS_TABS" :key="tab.key" :class="{ active: filterStatus === tab.key }" @click="filterStatus = tab.key">{{ gt(tab.label) }}</button>
         </div>
         <div class="gr-row">
-          <button :class="{ active: filterType === 'all' }" @click="filterType = 'all'">全部</button>
+          <button :class="{ active: filterType === 'all' }" @click="filterType = 'all'">{{ gt('全部') }}</button>
           <button v-for="t in WINE_TYPES" :key="t.id" :class="{ active: filterType === t.id }"
             :style="filterType === t.id ? { background: t.color, borderColor: t.color } : {}"
-            @click="filterType = filterType === t.id ? 'all' : t.id">{{ t.emoji }} {{ t.short }}</button>
+            @click="filterType = filterType === t.id ? 'all' : t.id">{{ t.emoji }} {{ gt(t.short) }}</button>
         </div>
-        <input v-model="searchQuery" class="gr-search" placeholder="搜尋生產者、品種、產區…" />
+        <input v-model="searchQuery" class="gr-search" :placeholder="gt('搜尋生產者、品種、產區…')" />
       </div>
 
-      <div v-if="loading" class="gr-empty">載入中…</div>
+      <div v-if="loading" class="gr-empty">{{ gt('載入中…') }}</div>
       <div v-else-if="filteredNotes.length === 0" class="gr-empty">
-        {{ !authUser ? '請登入以查看筆記' : searchQuery ? '找不到符合的筆記' : '尚無任何筆記，點擊右上角「+ 新增」' }}
+        {{ !authUser ? gt('請登入以查看筆記') : searchQuery ? gt('找不到符合的筆記') : gt('尚無任何筆記，點擊右上角「+ 新增」') }}
       </div>
       <div v-else class="gr-grid">
         <div v-for="note in filteredNotes" :key="note.id" class="gr-card" @click="openNote(note)">
           <div class="gr-card-top">
-            <span :class="['gr-badge', note.status]">{{ note.status === 'tried' ? '✓ 已品飲' : '♡ 想喝' }}</span>
+            <span :class="['gr-badge', note.status]">{{ note.status === 'tried' ? gt('✓ 已品飲') : gt('♡ 想喝') }}</span>
             <span v-if="note.wine_type" class="gr-type-badge" :style="{ background: typeColor(note.wine_type) }">{{ typeEmoji(note.wine_type) }}</span>
             <span v-if="note.vintage" class="gr-vintage">{{ note.vintage }}</span>
           </div>
@@ -51,7 +51,7 @@
           <p class="gr-app">{{ note.aoc_id }}</p>
           <div v-if="note.rating" class="gr-card-stars"><span v-for="i in 5" :key="i" :class="{ filled: i <= note.rating }">★</span></div>
           <div v-if="note.aroma_tags?.length" class="gr-card-tags">
-            <span v-for="tag in note.aroma_tags.slice(0, 3)" :key="tag">{{ tag }}</span>
+            <span v-for="tag in note.aroma_tags.slice(0, 3)" :key="tag">{{ gt(tag) }}</span>
             <span v-if="note.aroma_tags.length > 3">+{{ note.aroma_tags.length - 3 }}</span>
           </div>
           <p v-if="note.notes" class="gr-card-notes">{{ note.notes.slice(0, 55) }}{{ note.notes.length > 55 ? '…' : '' }}</p>
@@ -60,24 +60,24 @@
     </template>
 
     <div v-else class="gr-profile">
-      <p v-if="notes.length === 0" class="gr-empty">📊 新增品飲記錄後即可生成希臘酒款品味輪廓</p>
+      <p v-if="notes.length === 0" class="gr-empty">{{ gt('📊 新增品飲記錄後即可生成希臘酒款品味輪廓') }}</p>
       <template v-else>
         <section>
-          <h4>🍷 酒款類型分佈</h4>
+          <h4>{{ gt('🍷 酒款類型分佈') }}</h4>
           <div v-for="t in WINE_TYPES" :key="t.id" class="gr-bar-row">
-            <span class="gr-bar-label">{{ t.emoji }} {{ t.short }}</span>
+            <span class="gr-bar-label">{{ t.emoji }} {{ gt(t.short) }}</span>
             <div class="gr-bar-track"><div class="gr-bar-fill" :style="{ width: typePct(t.id) + '%', background: t.color }"></div></div>
             <span class="gr-bar-cnt">{{ typeCount(t.id) }}</span>
           </div>
         </section>
         <section>
-          <h4>👃 常見香氣</h4>
+          <h4>{{ gt('👃 常見香氣') }}</h4>
           <div class="gr-cloud">
-            <span v-for="[tag, count] in topAromas" :key="tag" :style="{ fontSize: `${0.75 + count * 0.1}rem` }">{{ tag }} <small>×{{ count }}</small></span>
+            <span v-for="[tag, count] in topAromas" :key="tag" :style="{ fontSize: `${0.75 + count * 0.1}rem` }">{{ gt(tag) }} <small>×{{ count }}</small></span>
           </div>
         </section>
         <section>
-          <h4>🍇 常用品種</h4>
+          <h4>{{ gt('🍇 常用品種') }}</h4>
           <div v-for="[grape, cnt] in topGrapes" :key="grape" class="gr-bar-row">
             <span class="gr-bar-label">{{ grape }}</span>
             <div class="gr-bar-track"><div class="gr-bar-fill" :style="{ width: `${(cnt / maxGrape) * 100}%`, background: '#e0b64a' }"></div></div>
@@ -85,7 +85,7 @@
           </div>
         </section>
         <section>
-          <h4>📅 年份分佈</h4>
+          <h4>{{ gt('📅 年份分佈') }}</h4>
           <div v-for="[v, cnt] in vintageDist" :key="v" class="gr-bar-row">
             <span class="gr-bar-label">{{ v }}</span>
             <div class="gr-bar-track"><div class="gr-bar-fill" :style="{ width: `${(cnt / maxVintage) * 100}%`, background: '#3b8bd6' }"></div></div>
@@ -100,6 +100,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../../locales/greeceUi/index.js'
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { supabase } from '@/lib/supabaseClient.js'
@@ -121,8 +122,8 @@ const searchQuery = ref('')
 const showModal = ref(false)
 const selectedNote = ref(null)
 
-const MAIN_TABS = [{ key: 'notes', label: '📝 筆記' }, { key: 'profile', label: '📊 品味' }]
-const STATUS_TABS = [{ key: 'all', label: '全部' }, { key: 'tried', label: '已品飲' }, { key: 'wishlist', label: '想喝清單' }]
+const MAIN_TABS = [{ key: 'notes', label: gt('📝 筆記') }, { key: 'profile', label: gt('📊 品味') }]
+const STATUS_TABS = [{ key: 'all', label: gt('全部') }, { key: 'tried', label: gt('已品飲') }, { key: 'wishlist', label: gt('想喝清單') }]
 
 const filteredNotes = computed(() => {
   let r = notes.value
@@ -165,7 +166,7 @@ async function loadNotes() {
   const { data, error } = await supabase.from('tasting_notes').select('*')
     .eq('user_id', authUser.value.id).eq('source', 'greece')
     .order('updated_at', { ascending: false })
-  if (error) console.warn('載入希臘筆記失敗:', error.message)
+  if (error) console.warn(gt('載入希臘筆記失敗:'), error.message)
   notes.value = data || []
   loading.value = false
   globalGreeceAchievementManager.init()
