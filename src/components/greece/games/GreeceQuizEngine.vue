@@ -5,34 +5,34 @@
     <!-- LOBBY -->
     <div v-if="phase === 'lobby'" class="lobby">
       <div class="lobby-inner">
-        <h1 class="title">{{ icon }} {{ title }}</h1>
-        <p class="subtitle">{{ subtitle }}</p>
+        <h1 class="title">{{ icon }} {{ gt(title) }}</h1>
+        <p class="subtitle">{{ gt(subtitle) }}</p>
 
         <div class="diff-cards">
           <div v-for="d in diffKeys" :key="d" class="diff-card" :class="d" @click="startGame(d)">
             <div class="diff-icon">{{ difficulties[d].icon }}</div>
-            <div class="diff-name">{{ difficulties[d].name }}</div>
-            <div class="diff-desc">{{ difficulties[d].desc }}</div>
+            <div class="diff-name">{{ gt(difficulties[d].name) }}</div>
+            <div class="diff-desc">{{ gt(difficulties[d].desc) }}</div>
             <ul class="diff-list">
-              <li v-for="(l, i) in difficulties[d].list" :key="i">{{ l }}</li>
-              <li>⏱ 每題 {{ difficulties[d].seconds }} 秒</li>
-              <li>共 {{ difficulties[d].count }} 題</li>
+              <li v-for="(l, i) in difficulties[d].list" :key="i">{{ gt(l) }}</li>
+              <li>{{ gt('⏱ 每題 {n} 秒', { n: difficulties[d].seconds }) }}</li>
+              <li>{{ gt('共 {n} 題', { n: difficulties[d].count }) }}</li>
             </ul>
           </div>
         </div>
 
         <div class="lb-box">
           <div class="lb-head">
-            <span class="lb-title">🏅 排行榜</span>
+            <span class="lb-title">{{ gt('🏅 排行榜') }}</span>
             <div class="lb-tabs">
               <button v-for="d in diffKeys" :key="d" :class="{ active: lbTab === d }" @click="setLbTab(d)">
-                {{ difficulties[d].name }}
+                {{ gt(difficulties[d].name) }}
               </button>
             </div>
           </div>
-          <div v-if="lbLoading" class="lb-empty">載入中…</div>
+          <div v-if="lbLoading" class="lb-empty">{{ gt('載入中…') }}</div>
           <table v-else class="lb-table">
-            <thead><tr><th>#</th><th>選手</th><th>分數</th><th>正確率</th><th>日期</th></tr></thead>
+            <thead><tr><th>#</th><th>{{ gt('選手') }}</th><th>{{ gt('分數') }}</th><th>{{ gt('正確率') }}</th><th>{{ gt('日期') }}</th></tr></thead>
             <tbody>
               <tr v-for="(r, i) in lbData" :key="r.id" :class="{ mine: r.user_id === myUid }">
                 <td>{{ i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : i + 1 }}</td>
@@ -41,7 +41,7 @@
                 <td>{{ r.correct_count }}/{{ r.total_questions }}</td>
                 <td class="muted">{{ fmtDate(r.created_at) }}</td>
               </tr>
-              <tr v-if="!lbData.length"><td colspan="5" class="lb-empty">尚無紀錄</td></tr>
+              <tr v-if="!lbData.length"><td colspan="5" class="lb-empty">{{ gt('尚無紀錄') }}</td></tr>
             </tbody>
           </table>
         </div>
@@ -53,7 +53,7 @@
       <div class="top-bar">
         <div class="progress-row">
           <span class="q-num">{{ currentIdx + 1 }} / {{ questions.length }}</span>
-          <span class="score-live">{{ score }} 分</span>
+          <span class="score-live">{{ gt('{n} 分', { n: score }) }}</span>
         </div>
         <div class="timer-track">
           <div class="timer-fill" :style="{ width: timerPct + '%', background: timerColor }"
@@ -63,21 +63,21 @@
 
       <div class="streak-row">
         <transition name="streak-pop">
-          <div v-if="streak >= 3" class="streak-badge" :key="streak">🔥 {{ streak }} 連勝！× {{ comboMult }}</div>
+          <div v-if="streak >= 3" class="streak-badge" :key="streak">{{ gt('🔥 {s} 連勝！× {c}', { s: streak, c: comboMult }) }}</div>
         </transition>
       </div>
 
       <div class="card-area">
         <transition name="slide-in" mode="out-in">
           <div class="question-card" :key="currentIdx" :class="feedbackClass">
-            <div v-if="currentQ?.tag" class="q-type-tag">{{ currentQ.tag }}</div>
-            <div class="q-stem">{{ currentQ?.stem }}</div>
-            <div v-if="currentQ?.hint" class="q-hint">{{ currentQ.hint }}</div>
+            <div v-if="currentQ?.tag" class="q-type-tag">{{ gt(currentQ.tag) }}</div>
+            <div class="q-stem">{{ gt(currentQ?.stem) }}</div>
+            <div v-if="currentQ?.hint" class="q-hint">{{ gt(currentQ.hint) }}</div>
             <div v-if="phase === 'feedback'" class="feedback-row">
-              <span v-if="lastCorrect" class="fb-correct">✓ 正確！</span>
-              <span v-else-if="lastTimeout" class="fb-timeout">⏰ 時間到</span>
-              <span v-else class="fb-wrong">✗ 答錯</span>
-              <span class="fb-explain">{{ currentQ?.explain }}</span>
+              <span v-if="lastCorrect" class="fb-correct">{{ gt('✓ 正確！') }}</span>
+              <span v-else-if="lastTimeout" class="fb-timeout">{{ gt('⏰ 時間到') }}</span>
+              <span v-else class="fb-wrong">{{ gt('✗ 答錯') }}</span>
+              <span class="fb-explain">{{ gt(currentQ?.explain) }}</span>
             </div>
           </div>
         </transition>
@@ -92,39 +92,39 @@
           ]"
           @click="answer(oi)">
           <span class="opt-key">{{ oi + 1 }}</span>
-          <span class="opt-text">{{ opt }}</span>
+          <span class="opt-text">{{ gt(opt) }}</span>
         </button>
       </div>
-      <div class="key-hints">鍵盤 1–{{ currentQ?.options?.length || 4 }} 可快速作答</div>
+      <div class="key-hints">{{ gt('鍵盤 1–{n} 可快速作答', { n: currentQ?.options?.length || 4 }) }}</div>
     </div>
 
     <!-- FINAL -->
     <div v-else-if="phase === 'final'" class="final-area">
       <div class="final-card">
         <div class="result-icon">{{ resultEmoji }}</div>
-        <h2>遊戲結束</h2>
+        <h2>{{ gt('遊戲結束') }}</h2>
         <div class="final-score">{{ score }}</div>
-        <div class="final-score-label">總分</div>
+        <div class="final-score-label">{{ gt('總分') }}</div>
         <div class="final-stats">
-          <div class="chip">{{ correctCount }}/{{ questions.length }} 答對</div>
-          <div class="chip">正確率 {{ Math.round(correctCount / questions.length * 100) }}%</div>
-          <div class="chip">最高連勝 {{ maxStreak }}</div>
-          <div class="chip">{{ difficulties[difficulty].icon }} {{ difficulties[difficulty].name }}</div>
+          <div class="chip">{{ gt('{a}/{b} 答對', { a: correctCount, b: questions.length }) }}</div>
+          <div class="chip">{{ gt('正確率 {n}%', { n: Math.round(correctCount / questions.length * 100) }) }}</div>
+          <div class="chip">{{ gt('最高連勝 {n}', { n: maxStreak }) }}</div>
+          <div class="chip">{{ difficulties[difficulty].icon }} {{ gt(difficulties[difficulty].name) }}</div>
         </div>
         <div v-if="wrongItems.length" class="review-box">
-          <div class="review-title">📝 錯題回顧</div>
+          <div class="review-title">{{ gt('📝 錯題回顧') }}</div>
           <div v-for="(w, i) in wrongItems" :key="i" class="review-row">
-            <div class="review-q">{{ w.stem }}</div>
-            <div class="review-a">✓ {{ w.options[w.correct] }}</div>
-            <div v-if="w.explain" class="review-e">{{ w.explain }}</div>
+            <div class="review-q">{{ gt(w.stem) }}</div>
+            <div class="review-a">✓ {{ gt(w.options[w.correct]) }}</div>
+            <div v-if="w.explain" class="review-e">{{ gt(w.explain) }}</div>
           </div>
         </div>
         <button class="btn-upload" :disabled="uploading || uploaded" @click="submitScore">
-          {{ uploading ? '上傳中…' : uploaded ? '✓ 已登錄' : '📤 上傳成績' }}
+          {{ uploading ? gt('上傳中…') : uploaded ? gt('✓ 已登錄') : gt('📤 上傳成績') }}
         </button>
         <div v-if="uploadErr" class="err-msg">{{ uploadErr }}</div>
         <div class="final-actions">
-          <button class="btn-retry" @click="backToLobby">再玩一次</button>
+          <button class="btn-retry" @click="backToLobby">{{ gt('再玩一次') }}</button>
         </div>
       </div>
     </div>
@@ -132,6 +132,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../../locales/greeceUi/index.js'
 /**
  * 希臘遊戲共用答題引擎：計時、連勝加成、錯題回顧、排行榜（game_scores）。
  * 題目格式：{ stem, tag?, hint?, options: string[], correct: number, explain? }
@@ -315,7 +316,7 @@ async function loadLeaderboard(diff) {
 }
 
 async function submitScore() {
-  if (!authState.user) { uploadErr.value = '請先登入'; return }
+  if (!authState.user) { uploadErr.value = gt('請先登入'); return }
   uploading.value = true
   uploadErr.value = ''
   try {
@@ -323,12 +324,12 @@ async function submitScore() {
       game_type: props.gameType, difficulty: difficulty.value,
       score: score.value, correct_count: correctCount.value, total_questions: questions.value.length,
       user_id: authState.user.id,
-      username: authState.user.user_metadata?.display_name || authState.user.email?.split('@')[0] || '玩家'
+      username: authState.user.user_metadata?.display_name || authState.user.email?.split('@')[0] || gt('玩家')
     })
     if (error) throw error
     uploaded.value = true
     loadLeaderboard(difficulty.value)
-  } catch (e) { uploadErr.value = e.message || '上傳失敗' }
+  } catch (e) { uploadErr.value = e.message || gt('上傳失敗') }
   uploading.value = false
 }
 

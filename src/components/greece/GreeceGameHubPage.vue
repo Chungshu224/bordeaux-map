@@ -2,8 +2,8 @@
   <div class="gr-game-hub">
     <template v-if="!currentGame">
       <SharedGameHub
-        title="希臘互動練習"
-        subtitle="希臘葡萄酒知識挑戰——選擇遊戲開始！"
+        :title="gt('希臘互動練習')"
+        :subtitle="gt('希臘葡萄酒知識挑戰——選擇遊戲開始！')"
         :games="GAMES"
         @back="$emit('back')"
         @select="currentGame = $event"
@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+import { gt } from '../../locales/greeceUi/index.js'
 import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
 import GreeceRegionQuizPage from './games/GreeceRegionQuizPage.vue'
@@ -41,27 +42,27 @@ const currentGame = ref(null)
 
 const GAMES = [
   {
-    id: 'region', icon: '🗺️', name: '產區速答',
-    desc: '看到 33 個 PDO 的名稱與線索，判斷它屬於六大地理區中的哪一區',
-    tags: ['快答', '簡單 / 困難', 'Combo 系統'],
+    id: 'region', icon: '🗺️', name: gt('產區速答'),
+    desc: gt('看到 33 個 PDO 的名稱與線索，判斷它屬於六大地理區中的哪一區'),
+    tags: [gt('快答'), gt('簡單 / 困難'), gt('Combo 系統')],
     accent: '#0D5EAF', accent2: '#3b8bd6'
   },
   {
-    id: 'grape', icon: '🍇', name: '品種配對',
-    desc: '從描述判斷品種，或從 PDO 找出核心品種：Assyrtiko、Xinomavro、Agiorgitiko 等',
-    tags: ['配對', '多種題型', '錯題回顧'],
+    id: 'grape', icon: '🍇', name: gt('品種配對'),
+    desc: gt('從描述判斷品種，或從 PDO 找出核心品種：Assyrtiko、Xinomavro、Agiorgitiko 等'),
+    tags: [gt('配對'), gt('多種題型'), gt('錯題回顧')],
     accent: '#B8902A', accent2: '#d9b24a'
   },
   {
-    id: 'classification', icon: '🏷️', name: '分級辨識快答',
-    desc: 'PDO／PGI、OPAP／OPE、Retsina 與 Verdea，以及 PGI 的三個層級',
-    tags: ['分級', '簡單 / 困難', '制度與術語'],
+    id: 'classification', icon: '🏷️', name: gt('分級辨識快答'),
+    desc: gt('PDO／PGI、OPAP／OPE、Retsina 與 Verdea，以及 PGI 的三個層級'),
+    tags: [gt('分級'), gt('簡單 / 困難'), gt('制度與術語')],
     accent: '#6A4C93', accent2: '#8d6bb8'
   },
   {
-    id: 'flash', icon: '⚡', name: '希臘知識閃問',
-    desc: '從歷史、風土到法規與產業——直接取自 Level 1–3 課程題庫',
-    tags: ['問答', '簡單 / 困難', '85+ 題'],
+    id: 'flash', icon: '⚡', name: gt('希臘知識閃問'),
+    desc: gt('從歷史、風土到法規與產業——直接取自 Level 1–3 課程題庫'),
+    tags: [gt('問答'), gt('簡單 / 困難'), gt('85+ 題')],
     accent: '#2E7D32', accent2: '#4caf50'
   }
 ]
@@ -76,9 +77,9 @@ const stats = computed(() => {
     if (v > 0) { played++; totalBest += v }
   }
   return [
-    { icon: '🎮', value: played, label: '已挑戰遊戲' },
-    { icon: '📊', value: BEST_KEYS.length, label: '全部遊戲' },
-    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: '累計最高分' }
+    { icon: '🎮', value: played, label: gt('已挑戰遊戲') },
+    { icon: '📊', value: BEST_KEYS.length, label: gt('全部遊戲') },
+    { icon: '🏅', value: totalBest > 0 ? totalBest : '—', label: gt('累計最高分') }
   ]
 })
 </script>
