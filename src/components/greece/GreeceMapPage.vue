@@ -60,7 +60,7 @@
           <div class="grc-tabs">
             <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
               :class="['grc-tab', { active: climateIndicator === ind.id }]"
-              @click="setClimateIndicator(ind.id)">{{ ind.icon }} {{ ind.label }}</button>
+              @click="setClimateIndicator(ind.id)">{{ ind.icon }} {{ gt(ind.label) }}</button>
           </div>
           <div class="grc-head">
             <span class="grc-year">{{ climateYear }}</span>
@@ -68,10 +68,10 @@
               <div v-if="climateActiveLabel" class="grc-name">{{ climateActiveLabel }}</div>
               <span v-if="currentValue !== null" class="grc-val">{{ currentValue }}{{ cfg.unit }}</span>
               <span v-if="currentDelta !== null" :class="['grc-delta', currentDelta >= 0 ? 'warm' : 'cool']">
-                {{ currentDelta >= 0 ? '+' : '' }}{{ currentDelta }}{{ cfg.unit }} vs 基準
+                {{ currentDelta >= 0 ? '+' : '' }}{{ currentDelta }}{{ cfg.unit }} {{ gt('vs 基準') }}
               </span>
             </div>
-            <button class="grc-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+            <button class="grc-close" @click="toggleClimate" :title="gt('關閉氣候圖層')">✕</button>
           </div>
           <input class="grc-slider" type="range" v-model.number="climateYear"
             :min="climateYears[0]" :max="climateYears[climateYears.length - 1]" step="1"
@@ -84,11 +84,11 @@
           <div class="grc-legend">
             <div :class="['grc-grad', `grc-grad-${climateIndicator}`]"></div>
             <div class="grc-labels">
-              <span>{{ currentStats ? currentStats.min.toFixed(0) : '' }}{{ cfg.unit }} {{ cfg.lowLabel }}</span>
-              <span>{{ cfg.highLabel }} {{ currentStats ? currentStats.max.toFixed(0) : '' }}{{ cfg.unit }}</span>
+              <span>{{ currentStats ? currentStats.min.toFixed(0) : '' }}{{ cfg.unit }} {{ gt(cfg.lowLabel) }}</span>
+              <span>{{ gt(cfg.highLabel) }} {{ currentStats ? currentStats.max.toFixed(0) : '' }}{{ cfg.unit }}</span>
             </div>
           </div>
-          <div class="grc-foot">📊 {{ cfg.footnote }}</div>
+          <div class="grc-foot">📊 {{ gt(cfg.footnote) }}</div>
         </div>
       </transition>
 
@@ -193,7 +193,7 @@ const currentDelta = computed(() => {
   if (v == null || base == null) return null
   return Number((v - base).toFixed(cfg.value.id === 'temp' ? 2 : 0))
 })
-const climateActiveLabel = computed(() => activeFeature.value ? activeFeature.value.name : '全希臘 33 PDO 平均')
+const climateActiveLabel = computed(() => activeFeature.value ? activeFeature.value.name : gt('全希臘 33 PDO 平均'))
 
 function valueToColor(v) {
   const st = currentStats.value
@@ -228,7 +228,7 @@ async function loadClimateData() {
     climateStats.value = { global: p.global, globalSun: p.globalSun, globalRain: p.globalRain }
     if (climateYears.value.length && !climateYears.value.includes(climateYear.value)) climateYear.value = climateYears.value[climateYears.value.length - 1]
   } catch (err) {
-    mapError.value = `氣候資料載入失敗: ${err.message}`
+    mapError.value = gt('氣候資料載入失敗: {m}', { m: err.message })
     climateEnabled.value = false
   }
 }
