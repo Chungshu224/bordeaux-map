@@ -1,7 +1,8 @@
 // 統一成就系統組合式函數
-// 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy' | 'spain'
+// 支援 courseKey: 'bordeaux' | 'bourgogne' | 'italy' | 'spain' | 'greece' | 'rhone' 等
 import { computed } from 'vue'
-import { gt } from '../locales/greeceUi/index.js'
+import { gt as greeceGt } from '../locales/greeceUi/index.js'
+import { gt as rhoneGt } from '../locales/rhoneUi/index.js'
 import {
   achievementState,
   achievementDefinitions,
@@ -58,6 +59,11 @@ import {
   globalGreeceAchievementManager
 } from '../stores/greeceAchievementSystem.js'
 import {
+  rhoneAchievementState,
+  rhoneAchievementDefinitions,
+  globalRhoneAchievementManager
+} from '../stores/rhoneAchievementSystem.js'
+import {
   alsaceAchievementState,
   alsaceAchievementDefinitions,
   globalAlsaceAchievementManager
@@ -73,7 +79,8 @@ const COURSE_LABELS = {
   newzealand:  '侍酒師的筆記本',
   california:  '侍酒師的筆記本',
   alsace:      '侍酒師的筆記本',
-  greece:      '侍酒師的筆記本'
+  greece:      '侍酒師的筆記本',
+  rhone:       '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -173,6 +180,14 @@ const COURSE_CATEGORIES = {
     { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  rhone: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
   ]
 }
 
@@ -200,6 +215,7 @@ function calcProgress(achievement, stats) {
 
 // ── 主要 composable ───────────────────────────────────────────
 export function useAchievements(courseKey) {
+  const gt = courseKey === 'rhone' ? rhoneGt : greeceGt
   let state, definitions, manager
 
   if (courseKey === 'bourgogne') {
@@ -242,6 +258,10 @@ export function useAchievements(courseKey) {
     state       = greeceAchievementState
     definitions = greeceAchievementDefinitions
     manager     = globalGreeceAchievementManager
+  } else if (courseKey === 'rhone') {
+    state       = rhoneAchievementState
+    definitions = rhoneAchievementDefinitions
+    manager     = globalRhoneAchievementManager
   } else if (courseKey === 'alsace') {
     state       = alsaceAchievementState
     definitions = alsaceAchievementDefinitions
@@ -258,7 +278,7 @@ export function useAchievements(courseKey) {
     Object.values(definitions).map(a => ({
       ...a,
       // 希臘課程的成就文字經翻譯字典（其他課程查無對應時原樣回傳）
-      ...(courseKey === 'greece' ? { title: gt(a.title), description: gt(a.description) } : {}),
+      ...((courseKey === 'greece' || courseKey === 'rhone') ? { title: gt(a.title), description: gt(a.description) } : {}),
       unlocked: state.unlockedAchievements.includes(a.id)
     }))
   )
@@ -282,7 +302,7 @@ export function useAchievements(courseKey) {
 
   const userLevel = computed(() => {
     const raw = manager.getUserLevel()
-    if (courseKey === 'greece') return { ...raw, title: gt(raw.title) }
+    if (courseKey === 'greece' || courseKey === 'rhone') return { ...raw, title: gt(raw.title) }
     // Bordeaux manager 的等級物件缺少 icon — 補充
     if (courseKey === 'bordeaux' && !raw.icon) {
       return { ...raw, icon: BORDEAUX_LEVEL_ICONS[raw.level] || '🎓' }
@@ -317,7 +337,7 @@ export function useAchievements(courseKey) {
         .filter(Boolean)
     }
     const list = state.newUnlocks || []
-    return courseKey === 'greece' ? list.map(a => ({ ...a, title: gt(a.title), description: gt(a.description) })) : list
+    return (courseKey === 'greece' || courseKey === 'rhone') ? list.map(a => ({ ...a, title: gt(a.title), description: gt(a.description) })) : list
   })
 
   const clearNewUnlocks = () => {
@@ -333,8 +353,8 @@ export function useAchievements(courseKey) {
     definitions,
     manager,
     courseLabel:  COURSE_LABELS[courseKey] || '侍酒師的筆記本',
-    categories:   courseKey === 'greece'
-      ? COURSE_CATEGORIES.greece.map(c => ({ ...c, name: gt(c.name) }))
+    categories:   (courseKey === 'greece' || courseKey === 'rhone')
+      ? COURSE_CATEGORIES[courseKey].map(c => ({ ...c, name: gt(c.name) }))
       : (COURSE_CATEGORIES[courseKey] || COURSE_CATEGORIES.bordeaux),
     achievements,
     unlockedCount,

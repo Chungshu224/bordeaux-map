@@ -22,12 +22,14 @@
       :completed-count="completedLessons.length"
       :total-count="totalLessonCount"
       :streak="0"
+      :achievement-count="achievementCount"
       :cta-text="heroButtonText"
       @cta="startJourney"
       @open-progress="showProgressModal = true"
+      @open-achievements="showAchievementModal = true"
     />
 
-    <!-- 3. Quick Nav（地圖／練習／筆記製作中，階段 E 加入） -->
+    <!-- 3. Quick Nav -->
     <QuickNavGrid :items="quickNavItems" @select="onQuickNav" />
 
     <!-- 4. Level Track -->
@@ -44,6 +46,8 @@
       :title="gt('為什麼學習隆河葡萄酒？')"
       :items="overviewItems"
     />
+
+    <AchievementModal :open="showAchievementModal" course-key="rhone" @close="showAchievementModal = false" />
 
     <ProgressModal
       :open="showProgressModal"
@@ -68,15 +72,21 @@ import {
   LevelTrack,
   RegionStoryGrid,
   ProgressModal,
+  AchievementModal,
   getTheme
 } from '../shared/courseHome/index.js'
 import { rhoneLearningState, rhoneLearningLevels } from '../../stores/rhoneLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
+import { globalRhoneAchievementManager, rhoneAchievementState } from '../../stores/rhoneAchievementSystem.js'
 
-const emit = defineEmits(['enterLevel'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
 const theme = getTheme('rhone')
 const showProgressModal = ref(false)
+const showAchievementModal = ref(false)
+
+globalRhoneAchievementManager.init()
+const achievementCount = computed(() => rhoneAchievementState.unlockedAchievements.length)
 
 
 const LEVELS = [1, 2, 3]
@@ -146,14 +156,19 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
-  { key: 'map',      desc: gt('互動地圖'),   enabled: false },
-  { key: 'games',    desc: gt('品種配對・產區速答'), enabled: false },
-  { key: 'notebook', desc: gt('隆河酒款品飲筆記'), enabled: false },
+  { key: 'map',      desc: gt('26 個 AOC 互動地圖') },
+  { key: 'games',    desc: gt('品種配對・產區速答') },
+  { key: 'notebook', desc: gt('隆河酒款品飲筆記') },
+  { key: 'achievements', desc: gt('{n} 個已解鎖徽章', { n: achievementCount.value }) },
   { key: 'progress', desc: gt('{pct}% 完成・{n} 課', { pct: totalProgressPct.value, n: completedLessons.value.length }) }
 ])
 
 function onQuickNav(key) {
-  if (key === 'progress') showProgressModal.value = true
+  if (key === 'map') emit('openMap')
+  else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
+  else if (key === 'achievements') showAchievementModal.value = true
+  else if (key === 'progress') showProgressModal.value = true
 }
 
 const levelData = computed(() => [

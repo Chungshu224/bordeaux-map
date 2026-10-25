@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="rhone" />
   </div>
 </template>
 
@@ -55,8 +56,10 @@ import {
 } from '../../stores/rhoneLearningStore.js'
 import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
 import { saveRhoneLesson, loadAndMergeRhoneProgress } from '../../lib/courseProgressSync.js'
+import { globalRhoneAchievementManager } from '../../stores/rhoneAchievementSystem.js'
 import RhoneCourseLayout from './RhoneCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalRhoneAchievementManager.init()
 
 const currentLevel = computed(() => rhoneLearningState.currentLevel)
 const currentLesson = computed(() => rhoneLearningState.currentLesson)
@@ -129,9 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = rhoneLearningState.completedLessons.includes(lessonId)
     rhoneLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveRhoneLesson(userId, lessonId)
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => rhoneLearningState.completedLessons.includes(l.id))
+      globalRhoneAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: rhoneLearningProgress.value
+      })
+    }
   }
   rhoneLearningActions.exitLesson()
 }

@@ -12,7 +12,7 @@
 | B | Level 1 內容（6 課）＋測驗＋en/ja | `feat/rhone-l1`（從 A 切出） | ✅ 完成（2026-10-25，未合併；見第 10 節） |
 | C | Level 2 內容（8 課） | `feat/rhone-l2`（從 B 切出） | ✅ 完成（2026-10-25，未合併；見第 11 節） |
 | D | Level 3 內容（7 課） | `feat/rhone-l3`（從 C 切出） | ✅ 完成（2026-10-25，未合併；見第 12 節） |
-| E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive` | ⏳ |
+| E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive`（從 D 切出） | ✅ 完成（2026-10-25，未合併；氣候資料檔尚未產生；見第 13 節） |
 | F | 全面英日文、migration、價格、公開 | — | ⏳ |
 
 **階段 A 備註**：地圖／遊戲／筆記入口在首頁顯示「製作中」（停用）；成就系統與詞彙辭典尚未建立，首頁不顯示成就數；`courses` migration 只準備檔案、**尚未套用**（`supabase/migrations/20261025000000_add_rhone_course.sql`，active=false、show_on_home=false）。
@@ -277,3 +277,34 @@
 10. **Côtes du Rhône 草案數字**（單產 51／上限 60、最低酒精度 11%／北部 10.5%；Villages 44／41、12%／12.5%）：沿用階段 C 的處理，標為草案、不考。
 - 未取用：Wine Folly、Jancis Robinson 本階段未查到可補足的條目（風格描述標為一般說法）；Google Drive 資料本階段未使用（Level 3 內容所需事實已由網頁來源涵蓋）。
 - 階段 E 前待辦：le râpé 百分比、Seyssuel／IGP 規格、INAO 草案轉正式版後再核對 Cairanne／Vinsobres／Beaumes-de-Venise 等比例（均與階段 C 清單相同，本階段未再處理）。
+
+## 13. 互動功能說明與查證註記（階段 E，分支 `feat/rhone-interactive`）
+
+### 互動地圖（`RhoneMapPage`）
+- **資料來源**：Bianchi 2022（CC0，歐盟 PDO 資料集，figshare collection 5877659），以 `scripts/build-rhone-geojson.py` 轉為 `public/rhone/rhone_pdo.geojson`（26 個 AOC：北隆 8 cru、南隆 9 cru、Villages、Côtes du Rhône、其他 7 個）。資料為 2021 年前版本。
+- **圖層模型**：北／南分色；分級層（Cru、Villages、Côtes du Rhône）可疊加開關；點擊取可見圖層中面積最小者。搜尋抽屜依區域與分級分組。
+- **示意點**（非官方邊界）：Laudun（2024 升格第 18 個 cru，資料集尚無獨立邊界）、Côte Blonde／Côte Brune、Hermitage 的 Les Bessards／L'Hermite／Le Méal。位置為概略，地圖與資訊面板皆標明「非官方」。
+- **限制**：範圍面積為法定劃界範圍，**不是種植面積**；Villages 的 21 個地名範圍未另繪；Laudun 在邊界資料中仍包含於 Villages 範圍內；共用的圖層面板文字未翻譯（沿用共用元件）。
+- 認定年份僅採框架已查證的 INAO 年份；Grignan-les-Adhémar、Costières de Nîmes 年份未核對 → 不顯示。
+
+### 氣候圖層
+- `scripts/build-rhone-climate.mjs` → `public/data/rhone-climate.json`（Open-Meteo archive：溫度用 ERA5-Land，日照與雨量用 ERA5；基準 1981–2010、近年至 2025；Côtes du Rhône 橫跨南北，不取氣候值）。UI 與 en/ja 文字已完成。
+- **未完成**：執行時 Open-Meteo 回報每日額度用完，**資料檔尚未產生**；請稍後執行 `NODE_USE_ENV_PROXY=1 node scripts/build-rhone-climate.mjs`（可加 `--merge` 接續）並提交 JSON。檔案不存在時，氣候圖層顯示無資料。
+
+### 遊戲（`rh_region_quiz`、`rh_grape_match`、`rh_classification_quiz`、`rh_flash`）
+- 產區速答（cru → 北／南、線索 → cru）、品種配對、分級辨識快答、課程閃問（Level 1–3 測驗題，去重後 24／38／36 題，含 en/ja 覆蓋翻譯）。排行榜沿用 `game_scores`（無 game_type CHECK，不需 migration）。
+- **刻意排除**：Cairanne 升格年與比例（來源不一致）、草案數字（Côtes du Rhône 單產／酒精度）、面積數字。線索文字避免洩漏南北與 cru 名稱。
+
+### 品飲筆記、成就、詞彙
+- `tasting_notes` 以 `source='rhone'`，酒款類型 `rh_*` 七種（北隆紅、南隆紅、白、粉紅、甜酒／VDN、氣泡、其他）。
+- `rhoneAchievementSystem.js`：33 個成就、8 級；已註冊於 `useAchievements.js`，含 en/ja。
+- 詞彙：`wine_glossary` 新增 region `rhone`，第三語言用既有 `fr` 欄（不新增欄位）；種子 17 筆，中文音譯待使用者確認。
+
+### 需手動套用的 migration（皆**尚未套用**）
+1. `20261025000000_add_rhone_course.sql`（階段 A，courses；active=false）
+2. `20261026000000_add_rhone_tasting_types.sql`（tasting_notes.wine_type CHECK 加入 `rh_*`）
+3. `20261026000100_add_rhone_glossary.sql`（glossary region CHECK＋17 筆種子）
+
+### 驗證結果
+- en/ja 字典缺漏檢查 0 筆；`@vue/compiler-sfc` 編譯檢查（rhone/*.vue、WineGlossary、AdminGlossary）無錯；`vite build` 通過。
+- **未做即時畫面檢查**（沒有 `VITE_MAPBOX_TOKEN`，地圖與互動僅經建置驗證）。

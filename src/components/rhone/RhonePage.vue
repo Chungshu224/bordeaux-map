@@ -1,10 +1,31 @@
 <template>
   <div class="rhone-page" :key="i18n.global.locale.value" :class="{ 'is-selector': view === 'selector' }">
-    <!-- 課程首頁（地圖／遊戲／筆記入口在階段 E 前顯示「製作中」，不導向任何頁面） -->
+    <!-- 課程首頁 -->
     <RhoneLevelSelector
       v-if="view === 'selector'"
       style="min-height: 100vh;"
       @enterLevel="goToLevel"
+      @openMap="view = 'map'"
+      @openGames="view = 'game'"
+      @openNotebook="view = 'notebook'"
+    />
+
+    <!-- 地圖模式 -->
+    <RhoneMapPage
+      v-else-if="view === 'map'"
+      @back-to-course="view = 'selector'"
+    />
+
+    <!-- 品飲筆記 -->
+    <RhoneTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'selector'"
+    />
+
+    <!-- 互動練習 -->
+    <RhoneGameHubPage
+      v-else-if="view === 'game'"
+      @back="view = 'selector'"
     />
 
     <!-- 課程模式 -->
@@ -21,8 +42,11 @@ import { ref } from 'vue'
 import { i18n } from '../../locales/index.js'
 import RhoneLevelSelector from './RhoneLevelSelector.vue'
 import RhoneLearningSystem from './RhoneLearningSystem.vue'
+import RhoneMapPage from './RhoneMapPage.vue'
+import RhoneGameHubPage from './RhoneGameHubPage.vue'
+import RhoneTastingNotebookPage from './notebook/RhoneTastingNotebookPage.vue'
 
-const view = ref('selector') // 'selector' | 'course'（地圖／遊戲／筆記於階段 E 加入）
+const view = ref('selector') // 'selector' | 'map' | 'game' | 'notebook' | 'course'
 const selectedLevel = ref(1)
 
 function goToLevel(n) {
