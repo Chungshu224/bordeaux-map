@@ -9,7 +9,7 @@
 |---|---|---|---|
 | 設計 | 本文件 | `feat/rhone-course-design` | ✅ 完成（未合併） |
 | A | 框架：頁面、路由、進度、21 課空殼、en/ja 標題；僅管理員可見 | `feat/rhone-course-framework`（從 master 切出並合併設計分支） | ✅ 完成（2026-10-24，未合併；見〈已完成的框架項目〉） |
-| B | Level 1 內容（6 課）＋測驗＋en/ja | `feat/rhone-l1`（從 A 切出） | ⏳ 未開始 |
+| B | Level 1 內容（6 課）＋測驗＋en/ja | `feat/rhone-l1`（從 A 切出） | ✅ 完成（2026-10-25，未合併；見第 10 節） |
 | C | Level 2 內容（8 課） | `feat/rhone-l2` | ⏳ |
 | D | Level 3 內容（7 課） | `feat/rhone-l3` | ⏳ |
 | E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive` | ⏳ |
@@ -196,3 +196,23 @@
 - **Migration（僅準備、未套用）**：`supabase/migrations/20261025000000_add_rhone_course.sql`，`courses` 新增 `rhone`，`active=false`、`show_on_home=false`，價格暫沿用希臘，並附上公開用的 UPDATE（註解）。
 - **尚未做（留給後續階段）**：成就系統（`rhoneAchievementSystem.js`）、詞彙辭典（`WineGlossary`／`AdminGlossary` 加 `rhone`，第三語為法文）、`tasting_notes` 酒款類型 migration、互動地圖、遊戲、品飲筆記，以及 21 課正式內容與測驗。
 - **驗證**：`@vue/compiler-sfc` 編譯 `rhone/*.vue`、`PlatformHome.vue`、`PresentationLesson.vue` 通過；`npx vite build` 成功（希臘與其他課程檔案未修改，共用檔案皆為新增而非改動既有邏輯）。
+
+## 10. Level 1 內容說明與查證註記（階段 B，分支 `feat/rhone-l1`）
+
+**結構**：`rh-l1-1 … rh-l1-6` 比照 `gr-l1-*`：封面＋4 張內容投影片＋知識檢測（l1-1～l1-5 各 3～4 題，及格 60）；`rh-l1-6` 為封面＋重點回顧＋8 題綜合評量（及格 60）。en／ja 為 flat-key overlay（`src/locales/{en,ja}/lessons/rhone/*.json`），已逐鍵比對 JS 結構：無缺漏、無多餘鍵、en 無 CJK 殘留。未新增 UI 字串（沿用階段 A 的 rhoneUi）。
+
+**數據來源與年份**（一律標註）：Inter Rhône《Chiffres clés 2025》EN（vins-rhone.com，2026-05 版，2025 年採收；庫存與銷售為 2024–25 年度／2025 日曆年）。2025 年數字：葡萄園約 60,223 公頃、產量 2,012,313 百升（紅 73%／粉紅 14%／白 13%）；Grenache noir 32,379、Syrah 22,189、Carignan 3,563、Mourvèdre 2,749、Cinsault 2,003、Grenache blanc 2,066、Viognier 1,600、Muscat à petits grains 1,360、Clairette 1,336、Roussanne 1,209 公頃；有機／生物動力約 24% 產量、26% 面積；HVE3 約 37% 產量、34% 面積；6,371 個生產單位、366 家貿易商；出口 743,015 百升（33%），比利時、英國、美國居前三；Villages 8,019 公頃、21 個可加註地名；crus 18 個。
+
+**本階段發現的出入（均不進測驗，課內以「概略值」呈現）**
+1. **總面積與產量**：同一份 2025 報告內文為 60,223 公頃／2,012,313 百升，封面為 63,931 公頃／2,353,260 百升（範圍口徑未說明）；階段 A 記錄的 2024 年版為 63,307 公頃／2,165,446 百升。→ 課內只說「約 6 萬公頃、約 200 萬百升（2025）」；紅白粉紅比例每年略變（2024 為 75/13/12，2025 為 73/14/13），測驗只考「南隆河占絕大多數」這類大方向。
+2. **有機比例**：2025 報告內文 24% 產量／26% 面積，封面寫 25%。→ 課內標「約」，不考。
+3. **河谷長度**：常見說法約 200 公里（Vienne–Avignon）；WineWithSeth 為「Lyon 至河口三角洲約 150 英里（約 241 公里）」。→ 課內寫「約 200 公里（概略，起訖點算法不同）」，不考。
+4. **南北產量比**：WineWithSeth「南部逾 95%」為單一來源概數 → 課內標「一般說法」，測驗不引用百分比。
+5. **Viognier 瀕危時的面積**：WineWithSeth 為 1950 年代 Condrieu 約 12 公頃；坊間另有 8～14 公頃等說法 → 課內寫「約十來公頃（各說法不一）」，不考。
+6. **Baron Le Roy 年份**：IWFS 寫 1923 年編纂教皇新堡規範；WineWithSeth 僅說 1930s 推動 AOC，教皇新堡於 1936-05-15 法令認定 → 課內寫「1920 年代（常見說法 1923）」，測驗不考年份。教廷駐 Avignon：1309–1376（IWFS）。
+7. **Côtes du Rhône 規模**：172 個村莊／6 個省／2025 年 26,777 公頃、Villages 95 個村莊（限南部四省）為 WineWithSeth 單一來源 → 標註來源、不考；WineWithSeth 頁面另列 3 個 Isère 村莊，省數待 Stage C 對照 INAO。
+8. **cru 數量**：Inter Rhône 地圖與文字為 18 個；其產量表列出 19 項（把 Muscat de Beaumes-de-Venise 與 Rasteau VDN 另列），課內說明「18 個 cru＋2 個 VDN」，18 可進測驗。
+9. **氣候數字**（Châteauneuf-du-Pape 雨量 <650 mm、日照約 2,800 小時）為 WineWithSeth 單一來源 → 標註、不考。
+10. **Syrah 親本**（Dureza × Mondeuse Blanche，1998 年 DNA 研究）、Grenache 可能起源於西班牙：寫作時註明「一般認為／研究顯示」；測驗未考。
+- 未取用：Inter Rhône 教學包（Kit pédagogique 2025）網址本次抓取失敗（符合既定決定，改用網頁／Chiffres clés）。Drive 資料本次未使用（Level 1 不需要）。
+- Level 2 前待辦：Gigondas 1971、Vacqueyras 1990 等舊升格年份（單一來源）；Côtes du Rhône 的 Syrah＋Mourvèdre 比例（見第 7 節第 1 項）；Villages 地名清單 21 個逐一列出。
