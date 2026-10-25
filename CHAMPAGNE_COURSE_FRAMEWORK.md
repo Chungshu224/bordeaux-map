@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**階段 A（框架）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A（框架）、階段 B（Level 1 內容）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -200,8 +200,26 @@
 | 階段 | 狀態 | 分支 |
 |---|---|---|
 | A 框架 | ✅ 完成（建置驗證通過） | `feat/champagne-course-framework` |
-| B Level 1 | ⏳ 待做 | `feat/champagne-l1` |
+| B Level 1 | ✅ 完成（6 課，建置驗證通過） | `feat/champagne-l1`（從 `feat/champagne-course-framework` 切出） |
 | C Level 2 | ⏳ 待做 | `feat/champagne-l2` |
 | D Level 3 | ⏳ 待做 | `feat/champagne-l3` |
 | E 互動（地圖、遊戲、筆記、成就、詞彙） | ⏳ 待做 | `feat/champagne-interactive` |
 | F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |
+
+## 12. Level 1 內容說明與查證註記（階段 B，2026-10-25）
+
+**內容**：`ch-l1-1` … `ch-l1-6` 各 4 張內容投影片＋知識檢測（3 題）；`ch-l1-6` 為 8 題綜合評量（及格 60）。en／ja 為 flat-key overlay，已做逐鍵覆蓋率檢查（每課中文原文 vs en／ja：缺漏 0、多餘 0）。測驗正解位置已平均分配。未新增 `champagneUi` 字串（Level 1 內容皆在課程 JSON 內）。
+
+**官方來源（本階段實查）**：Comité Champagne 的 Key Figures（2023、2024、2025 三版 PDF）、champagne.fr「Champagne at a glance」與 FAQ（含甜度級別、最低陳年、5–6 bar、UNESCO 2015-07-04、1927 法律、1936 AOC）。INAO 產品規格全文與官方 PDF 的村莊清單留待階段 C。
+
+**查證結論（更新第 10 節）**
+1. **Key Figures 三個版本**：2023 版——種植者 16,200／酒廠 370／合作社 130；2024 版——16,300／390／125，出貨 2.717 億瓶、營收 58 億歐元、出口占 25%；2025 版——16,460／410／120，出貨 2.661 億瓶（2025 採收 2.64 億瓶）。34,200 公頃、319 cru、5 個 département、3 個大區在三版一致。課內標年份，生產者家數與出貨量**不進測驗**。2025 全年營收官方頁面本次未取得，未寫入。
+2. **品種比例**：官方 2025 版為 Pinot Noir 38／Chardonnay 32／Meunier 30；較早資料為 38／31／31。四個古老品種：官方 FAQ 寫「不到 0.4%」，較早資料寫約 0.3%——課內寫「不到 0.4%」並註明，不進測驗。
+3. **Chardonnay Rosé**：來源日期不一——有寫 2025 年 7 月產區核准，也有寫歐盟 2026 年 6 月確認；另 Wine Spectator 稱它是約 1900 年起在香檳區有紀錄的 Chardonnay 粉紅變異，因行政疏失一度從規格消失、2025 年重新核准；許可品種「共 8 種」。課內不寫確切日期、不進測驗。**Voltis**（抗病品種，2022 年底核准試種，園區上限 5%、單一調配上限 10%）屬「新品種」，與傳統八品種分開，留待 Level 3。
+4. **各 département 比例**：官方 Key Figures 未列分項。常見說法 Marne 約 66%／Aube 約 23%／Aisne 約 10%，但 Difford's Guide 寫 Marne 約 75%。課內只教大小順序（Marne 最大），比例不進測驗。
+5. **歷史年代**：Comité Champagne FAQ 把 **1911** 寫為村莊價格量表（80–100%）首次官方設立，與 Wikipedia 對「1911 暴動後才有量表」的敘述順序略有出入；暴動（1911 年 1 月，Damery／Hautvillers／Aÿ，逾 4 萬軍隊，Aube 隨後納入）、**1927** 法律定界與品種、**1936** AOC 確認、1952 年起 Grand／Premier Cru 稱呼、**2010** 量表廢除，均在課內標出處。Level 2 法規課需再以 INAO 文件核對「2004 年起價格量表停用」。
+6. **Dom Pérignon**：Merret 論文 1662 早於他 1668 到任 Hautvillers；Comité Champagne 明言「香檳不是任何人發明的」。「我在喝星星」被廣泛認為是後世廣告，課內寫「普遍被認為」。
+7. **甜度**：Brut Nature 0–3（不加糖）、Extra Brut 0–6、Brut <12、Extra Dry 12–17、Sec 17–32、Demi-Sec 32–50、Doux >50 g/L，±3 g/L 容許；只考順序。
+8. **其他仍屬「常見教科書值」而未進測驗**：tirage 糖量約 24 g/L（約 4 g/L 產生 1 bar）、二次發酵增加約 1.2–1.3% 酒精、NV 約占七至八成產量、Rosé 調配紅酒約 5–20%、年均溫約 11°C、海拔 90–300 公尺、巴黎東北約 150 公里。Level 2 對照 INAO 規格後可升級為正式數字。
+
+**與既有課程的盤點**：`l3-5.js`（僅標題提及 Champagne 為挑戰酒款）、`l4-6.js`（Champagne 名稱保護案例：「3,000+ 起仿冒」「市場萎縮 80%」為該課自有數字，本課未引用）、`l4-11.js`（Champagne 50 指數）、`l1-5.js`／`climateAndEnvironmentLessons.js`（Crémant de Bordeaux 傳統法、至少 12 個月酒渣）、`loire/lo-l1-7.js`／`lo-l3-5.js`（Crémant de Loire 對照：NV 15 個月其中 12 個月酒渣、Vintage 3 年）——與本階段內容一致，無矛盾；`ch-l1-4`、`ch-l1-5` 內以文字指引羅亞爾課程，未做超連結。
