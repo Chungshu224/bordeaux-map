@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**階段 A（框架）、階段 B（Level 1 內容）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -71,7 +71,7 @@
 ### Level 2
 | 課 | 重點 | 備註與 ⚠ |
 |---|---|---|
-| ch-l2-1 | AOC 法規：允許品種、每年由 Comité Champagne 提案與 INAO 核定的產量上限、最低酒精、壓榨規定（4,000 公斤一壓、cuvée 與 taille 的限額）、陳年最低規定（NV 自裝瓶起 ≥15 個月；Vintage ≥36 個月）；Échelle des Crus（80–100%；100% ＝ Grand Cru，90–99% ＝ Premier Cru）、2010 年廢除量表 | ⚠ 壓榨與 cuvée／taille 的數字（歷史上 2,050 公升＋500 公升）；陳年規定「自裝瓶」與「酒渣上」的定義；Premier Cru 村莊數（42） |
+| ch-l2-1 | AOC 法規：允許品種、每年由 Comité Champagne 提案與 INAO 核定的產量上限、最低酒精、壓榨規定（4,000 公斤一壓、cuvée 與 taille 的限額）、陳年最低規定（NV 自裝瓶起 ≥15 個月；Vintage ≥36 個月）；Échelle des Crus（100% ＝ Grand Cru，90–99% ＝ Premier Cru，其餘 80–89%；價格量表 2004 年停用、2010 年 INAO 廢除，來源年份不同，見第 7 節階段 C 結論） | ⚠ 壓榨與 cuvée／taille 的數字（歷史上 2,050 公升＋500 公升）；陳年規定「自裝瓶」與「酒渣上」的定義；Premier Cru 村莊數（42） |
 | ch-l2-2 | 漢斯山：Pinot Noir 為主；9 個 Grand Cru 村莊（Ambonnay、Beaumont-sur-Vesle、Bouzy、Louvois、Mailly-Champagne、Puisieulx、Sillery、Verzenay、Verzy）；Premier Cru 例；Chardonnay 在北坡（Montagne 的 Villers-Marmery、Trépail 等）；Coteaux Champenois 的 Bouzy 紅酒 | ⚠ Grand Cru 村莊名單逐一核對；各村主要品種 |
 | ch-l2-3 | 馬恩河谷：Meunier 為主；Grand Cru 僅 Aÿ（含 Aÿ-Champagne）與 Tours-sur-Marne（Pinot Noir）；Mareuil-sur-Aÿ 等 Premier Cru。白丘：Chardonnay 為主；6 個 Grand Cru（Avize、Chouilly、Cramant、Le Mesnil-sur-Oger、Oger、Oiry）；Chouilly 與 Tours-sur-Marne 的「僅限單一顏色品種」說法 | ⚠ 17 個 Grand Cru 總數（9＋2＋6）與各村限制須對照官方資料 |
 | ch-l2-4 | 巴爾丘（Aube）：Pinot Noir 約 83%（約 7,900 公頃、64 村，2022 數據）、基末里階（Kimmeridgian）泥灰岩土壤、與 Chablis 相連；Côte de Sézanne、Vitry-le-François 等外圍；Aisne 與 Haute-Marne、Seine-et-Marne；Rosé des Riceys（靜態粉紅 AOC） | ⚠ 巴爾丘面積／村莊數用最新資料；Rosé des Riceys 規格 |
@@ -96,6 +96,11 @@
 ### 4.1 互動地圖（香檳的特色：以村莊為單位）
 - 香檳的分級單位是**村莊（commune）**，與希臘（PDO 多邊形）、隆河（AOC 多邊形）不同。建議做法：
   1. 取得 319 個 cru 村莊清單（Comité Champagne／INAO 公開資料，含 Échelle 百分比或 Grand Cru／Premier Cru 標記）。⚠ 須確認清單來源與授權。
+     - **階段 C 調查結果（2026-10-25）**：
+       - ✅ **INAO 產品規格**（2024-01-25 令核定；Comité Champagne 網站有 PDF）第 I 章 II-b／c 列出 17 個 Grand Cru 與 42 個僅 Premier Cru 村莊（名稱，無 INSEE 代碼、無百分比）。已整理為 `data/champagne/crus.json`（**partial**，59 筆，`insee` 為 null）。官方文件，可引用。
+       - ❌ **319 個 cru 全名單＋Échelle 百分比**：官方已不公布（價格量表已廢）；第三方（vignobletiquette、champagneclub、bullesdechamp 等）只有分級彙整或 HTML 列表，數字互有出入（294／298／319、44／258／237），且無明確授權。未找到機器可讀、授權明確的版本。
+       - ⏳ **INSEE 代碼與邊界**：INAO「Aires géographiques des AOC/AOP」（data.gouv.fr，**Licence Ouverte**，每村列出所屬 AOC 與 INSEE 代碼，2025-10-09 更新）可用來取得**屬於 Champagne AOC 的村莊清單**（約 319 個）與 INSEE；邊界用 IGN Admin Express／Etalab 行政區（開放授權）。本次排程的代理環境封鎖 data.gouv.fr 與 extranet.inao.gouv.fr（連線被重置），**未能下載**；階段 E 若有網路請由此處理，並以 INSEE 代碼與 `crus.json` 的 59 村對應分級；其餘村莊標「cru」。
+       - 結論：階段 E 的三色圖層可行（Grand Cru／Premier Cru／其餘 cru），Échelle 百分比不上圖（只標分級）。
   2. 村莊邊界使用法國公開行政區資料（IGN Admin Express／data.gouv.fr，開放授權）依 INSEE 代碼合併，產生 `public/champagne/champagne_crus.geojson`。
   3. 圖層：以 Grand Cru（17）／Premier Cru（42）／其餘 cru 三色；可依四大產區（漢斯山／馬恩河谷／白丘／巴爾丘）篩選；點選村莊顯示主要品種、所屬產區、分級、特色。
 - 備選：若村莊清單無法取得，退而求其次用 Bianchi et al.（2022，CC0）的 `PDO-FR-*` Champagne 單一多邊形加「示意點」（比照希臘 PGI），明確標示非官方邊界。
@@ -154,6 +159,18 @@
   5. 甜度等級邊界值與 EU 允許誤差
   6. Premier Cru 村莊數（42）與 Échelle 退場後的現行用法
 
+**階段 C 查證結論（2026-10-25，以 INAO 規格＞Comité Champagne＞第三方）**
+- 第 4 項 Grand Cru 品種限制：INAO 2024 規格將 17 村放在同一條款，**無品種限制**；舊價格量表曾依顏色計價（Chouilly 黑葡萄 95%、Tours-sur-Marne 白葡萄 90%，champagneclub 彙整），所謂「Chouilly 限 Chardonnay、Tours-sur-Marne 限 Pinot Noir」是舊量表痕跡與慣例，**不寫成法規**、不進測驗。
+- 第 6 項 Premier Cru 村莊數：INAO 規格列 **42** 個僅 Premier Cru（外加 17 個 Grand Cru 也可標 Premier Cru）；舊資料的 44（17／44／258＝319）多出的 2 個，很可能是舊表把 Chouilly（黑）與 Tours-sur-Marne（白）另列為 Premier Cru（vignobletiquette 的 44 名單含此二項）——此為推測。課內寫 42＋說明差異，**不進測驗**。
+- 價格量表退場年份：Taittinger、WineWithSeth 寫 2004（歐盟競爭法，固定葡萄價格停止）；Comité Champagne FAQ 寫 INAO 於 2010 年廢除量表（1952 年命令引入）；現行 Grand／Premier Cru 稱呼依 INAO 規格「在地、誠信、持續的慣例」。課內並列，**不進測驗**。
+- 設計稿第 3 節 ch-l2-1「Échelle 80–100%、2010 年廢除」→ 改為「100%＝GC、90–99%＝PC、其餘 80–89%；價格量表 2004 年停用、2010 年 INAO 廢除」。
+- 設計稿「壓榨 2,050＋500 公升」：INAO 規格只寫「每 160 公斤 ≤ 102 公升」（＝4,000 公斤 2,550 公升）；2,050＋500 的 cuvée／taille 分法來自 Comité Champagne 釀造說明（factsheet）。
+- 陳年：INAO 規格「自裝瓶（tirage）起 NV ≥ 15 個月、Vintage ≥ 36 個月」才可上市，另規定除渣不得早於裝瓶後 12 個月；Comité Champagne 說明文件把 15／36 個月寫成「在酒渣上」。課內以規格措辭為準，兩者措辭差異不進測驗，15／36 數字一致可進測驗。
+- 儲備：INAO 規格每位業者上限 **10,000 公斤葡萄/公頃**（舊文章曾寫 8,000）；儲備酒不得標年份；Vintage ≤ 當年酒量 80%、不含儲備酒。產量：基準 12,400、butoir 15,500 公斤/公頃；年度「商業產量」由 Comité Champagne 夏季決定（2022：12,000；2023：11,400；2024：10,000；2025：9,000；2026：8,800，媒體報導，僅示例）。
+- 巴爾丘：約 7,900 公頃／64 村（WineWithSeth 引 2022；他處 8,000 公頃／63 村）、Pinot Noir 83%（另有 86%）——出入，不進測驗。
+- Rosé des Riceys：僅 Pinot Noir；INAO 規格（2026 年草案 PNO）整串半碳酸浸漬、天然酒精 ≥ 10%；AOC 1947 年 12 月 8 日（WineWithSeth）。Coteaux Champenois：靜態白／粉紅／紅，天然酒精 ≥ 9%，較新版草案品種清單含 Chardonnay Rosé。此二規格取自 INAO 的 PNO 草案，定案前可能微調。
+- 香檳 AOC 規格 2024 年 1 月版品種清單為 7 種主要品種＋Voltis（不含 Chardonnay Rosé；後續版本加入），與 Level 1 註記一致。
+
 ## 8. 已確認的決定（2026-10-25）
 
 1. 範圍：只做 Champagne（Crémant／Cava／Franciacorta 僅在 Level 3 作比較課內容）。
@@ -201,7 +218,7 @@
 |---|---|---|
 | A 框架 | ✅ 完成（建置驗證通過） | `feat/champagne-course-framework` |
 | B Level 1 | ✅ 完成（6 課，建置驗證通過） | `feat/champagne-l1`（從 `feat/champagne-course-framework` 切出） |
-| C Level 2 | ⏳ 待做 | `feat/champagne-l2` |
+| C Level 2 | ✅ 完成（8 課，建置驗證通過） | `feat/champagne-l2`（從 `feat/champagne-l1` 切出） |
 | D Level 3 | ⏳ 待做 | `feat/champagne-l3` |
 | E 互動（地圖、遊戲、筆記、成就、詞彙） | ⏳ 待做 | `feat/champagne-interactive` |
 | F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |
@@ -223,3 +240,15 @@
 8. **其他仍屬「常見教科書值」而未進測驗**：tirage 糖量約 24 g/L（約 4 g/L 產生 1 bar）、二次發酵增加約 1.2–1.3% 酒精、NV 約占七至八成產量、Rosé 調配紅酒約 5–20%、年均溫約 11°C、海拔 90–300 公尺、巴黎東北約 150 公里。Level 2 對照 INAO 規格後可升級為正式數字。
 
 **與既有課程的盤點**：`l3-5.js`（僅標題提及 Champagne 為挑戰酒款）、`l4-6.js`（Champagne 名稱保護案例：「3,000+ 起仿冒」「市場萎縮 80%」為該課自有數字，本課未引用）、`l4-11.js`（Champagne 50 指數）、`l1-5.js`／`climateAndEnvironmentLessons.js`（Crémant de Bordeaux 傳統法、至少 12 個月酒渣）、`loire/lo-l1-7.js`／`lo-l3-5.js`（Crémant de Loire 對照：NV 15 個月其中 12 個月酒渣、Vintage 3 年）——與本階段內容一致，無矛盾；`ch-l1-4`、`ch-l1-5` 內以文字指引羅亞爾課程，未做超連結。
+
+## 13. Level 2 內容說明與查證註記（階段 C，2026-10-25）
+
+**內容**：`ch-l2-1` … `ch-l2-7` 各 4 張內容投影片＋知識檢測（3 題）；`ch-l2-8` 為 3 張重點回顧＋10 題綜合評量（及格 60）。en／ja 為 flat-key overlay，新增 `scripts/check-champagne-i18n.mjs` 逐鍵覆蓋率檢查（`node scripts/check-champagne-i18n.mjs ch-l2`）：Level 2 共 1,052 個中文鍵，en／ja 缺漏 0、多餘 0、空值 0。（ch-l1-4 ja 的一個「同原文」警告是「約 20 bar」誤報。）測驗正解位置已分散（Level 2 共 31 題）。未新增 `champagneUi` 字串。
+
+**主要來源（本階段實查）**：INAO《Champagne》AOC 產品規格 PDF（champagne.fr 2024-03 上架版，2024-01-25 令；全文逐條對照：品種、密度與修剪、整串採收、143 g/L、9%、12,400／15,500／10,000 公斤/公頃、102 公升／160 公斤、tirage 自 1 月 1 日、除渣 ≥ 12 個月、15／36 個月、Vintage ≤ 80%、17 ＋ 42 村名單、瓶型倒瓶規則、標示規則）；Comité Champagne champagne.education「Champagne Making Process」說明（4,000 公斤 marc、cuvée 2,050＋taille 500、6 bar）與 champagne.fr FAQ（甜度級別、Rosé 5–20%、1952 命令、2010）；Taittinger、WineWithSeth、champagneclub、Academie du Vin、The Drinks Business 作交叉比對。INAO 的 Rosé des Riceys／Coteaux Champenois 規格為 PNO 草案（經 WebFetch 讀取）。
+
+**課內標明、不進測驗的項目**：Premier Cru 42／44；價格量表終止年份 2004／2010；Aube 面積、村數、Pinot Noir 83／86%；各 département 比例；生產者家數（2023／2024／2025 三版）；年度商業產量；Grand Cru 品種限制說法；「在酒渣上」與「自裝瓶起」措辭；儲備上限舊值 8,000；Rosé des Riceys 與 Coteaux Champenois 的草案條文；風格描述（Cramant、Le Mesnil、Bouzy 等）與 Fine de la Marne／Marc de Champagne（未逐項查證）。
+
+**共用檔案改動**：僅新增 `scripts/check-champagne-i18n.mjs` 與 `data/champagne/crus.json`；無共用檔案（router、PlatformHome 等）改動，與隆河分支無衝突。
+
+**後續建議**：階段 D（Level 3）可直接引用上列查證結論（尤其 80% Vintage、儲備 10,000、標示規則 CDC 第 X 章）；階段 E 地圖請見第 4.1 節的資料取得計畫（需能連到 data.gouv.fr）。
