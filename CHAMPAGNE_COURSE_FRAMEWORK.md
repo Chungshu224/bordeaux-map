@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）、D（Level 3 內容）已完成**，最新分支 `feat/champagne-l3`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -219,7 +219,7 @@
 | A 框架 | ✅ 完成（建置驗證通過） | `feat/champagne-course-framework` |
 | B Level 1 | ✅ 完成（6 課，建置驗證通過） | `feat/champagne-l1`（從 `feat/champagne-course-framework` 切出） |
 | C Level 2 | ✅ 完成（8 課，建置驗證通過） | `feat/champagne-l2`（從 `feat/champagne-l1` 切出） |
-| D Level 3 | ⏳ 待做 | `feat/champagne-l3` |
+| D Level 3 | ✅ 完成（7 課，建置驗證通過） | `feat/champagne-l3`（從 `feat/champagne-l2` 切出） |
 | E 互動（地圖、遊戲、筆記、成就、詞彙） | ⏳ 待做 | `feat/champagne-interactive` |
 | F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |
 
@@ -252,3 +252,33 @@
 **共用檔案改動**：僅新增 `scripts/check-champagne-i18n.mjs` 與 `data/champagne/crus.json`；無共用檔案（router、PlatformHome 等）改動，與隆河分支無衝突。
 
 **後續建議**：階段 D（Level 3）可直接引用上列查證結論（尤其 80% Vintage、儲備 10,000、標示規則 CDC 第 X 章）；階段 E 地圖請見第 4.1 節的資料取得計畫（需能連到 data.gouv.fr）。
+
+## 14. Level 3 內容說明與查證註記（階段 D，2026-10-25）
+
+**內容**：`ch-l3-1` … `ch-l3-6` 各 4 張內容投影片（`ch-l3-3` 為 5 張）＋知識檢測（3 題）；`ch-l3-7` 為 3 張重點回顧＋12 題綜合評量（及格 60，正解位置 A–D 各 3 題）。en／ja 為 flat-key overlay，以 `node scripts/check-champagne-i18n.mjs ch-l3` 逐鍵檢查：共 962 個中文鍵，en／ja 缺漏 0、多餘 0、空值 0、同原文 0。內容由「三語同源規格」產生（同一份來源同時輸出中文課檔與 en／ja JSON，避免鍵值錯位）。未新增 `champagneUi` 字串；無共用檔案改動，與隆河分支無衝突。
+
+**各課重點**
+- `ch-l3-1` 栽培與氣候：INAO 修剪／間距／整串採收、春霜／黴病／熱浪／冰雹、採收提早與酸度下降（IWC Insight 2019 引 CIVC）、適應策略（Philipponnat 的做法標為單一酒莊主張）、Voltis（5%／10%，2022 年底核准試種）、永續認證與除草劑目標、LVMH 研究人員主張規則需彈性。
+- `ch-l3-2` 風格：還原式 vs 氧化式（光譜）、MLF、容器、儲備酒與永續儲備、酒渣陳年與除渣後陳年、dosage 與零 dosage 趨勢、單一地塊／單一年份趨勢（行銷與風格趨勢，非 AOC 分級）。
+- `ch-l3-3` 風土與比較：四大產區、白堊（白堊紀）vs Kimmeridgian（侏羅紀）並連到勃艮地課程（不複製段落）、BdB／BdN／調配／Rosé、Cava／Franciacorta／英國／Tasmania／Crémant／Prosecco、盲品第一刀與比較表寫法。
+- `ch-l3-4` 法規與標籤：DGCCRF 必要標示、NM／RM／CM／RC／SR／ND／MA 全表、Millésime 與單一品種的 100%（一般規定 85%）及與 80% 年度配額的區別、Grand／Premier Cru 與村名規則、Prestige 無定義、名稱保護與「méthode champenoise」、Comité Champagne 角色、虛構標籤解讀練習。
+- `ch-l3-5` 產業：出貨 2023 約 2.99 億瓶（由 −9.2% 反推）、2024 年 2.714 億（法國 1.182 億、出口 1.532 億、出口 56.4%）、2025 年約 2.66 億（法國約 1.14 億、出口約 1.52 億，出口約 57% 為本課計算）；營收 2022 約 63 億、2023 約 62 億、2024 約 58 億、2025 暫定約 57 億歐元（Vinetur 引述）；庫存、儲備、商業產量（2023 11,400／2024 10,000／2025 9,000）；集團與併購（LVMH、Pernod Ricard、EPI、Lanson-BCC）；市占結構；MW 論述素材。
+- `ch-l3-6` 品飲與論述：D5 風格 SAT 通用示範（非特定酒款）、NV 比較盲品線索、MW 論述 1（氣候變遷下 dosage）、論述 2（儲備酒制度與 NV 風格）、論述 3（種植者 vs Grandes Marques）、結構與自我檢查清單；全程提醒「以 WSET／IMW 官方最新規格為準」，未引用任何考試形式、字數或時限。
+- `ch-l3-7` 綜合評量：3 張回顧（並列「不在評量範圍」）＋12 題。
+
+**主要來源（本階段實查）**：Comité Champagne 新聞稿（2024 年出貨 2.714 億瓶；2025 年出貨回顧 2026-01-17：約 2.66 億瓶、法國約 1.14 億、出口約 1.52 億，未載營收與庫存）、Vinetur（2026-02，2025 全年量值）、The Real Review（2025-08，庫存、儲備、結構）、Journal du Luxe（商業產量）、IWC Insight（2019 氣候數據）、Polytechnique Insights（LVMH 研究人員）、Decanter（Curtis MW 永續文章、EPI 交易）、Wine Spectator（Voltis、Chardonnay Rosé）、The Drinks Business（Heidsieck & Co. Monopole 2025-10）、DGCCRF 標籤指南、Glass of Bubbly（Cava 分級、標籤代碼 SR）、WineWithSeth（Franciacorta、英國 PDO、Tasmania、Crémant）、Cellars（「méthode champenoise」）。
+
+**課內標明、不進測驗的項目（來源有出入或屬單一來源）**
+1. **庫存年數**：The Real Review 寫 2024 年 7 月底酒廠庫存約 15.23 億瓶（不含儲備）、超過五年銷量，酒廠目標約 3.5 年、CIVC 3.8 年；設計稿與他處常寫「約四年」。口徑不同，標註不進測驗。
+2. **LVMH／Moët Hennessy 市占**：The Real Review 為量約 18%、值約 22%，Decanter（2023）為全球香檳金額約 30%。出入，不進測驗。
+3. **儲備上限**：The Real Review「通常 8,000 公斤/公頃」vs INAO 規格 10,000（Level 2 已定案以規格為準）。
+4. **營收**：官方頁面本次未取得 2025 全年營收，採 Vinetur 引述的暫定數字並明示；2023 出貨為反推值。
+5. **出口占比**：2024 年 56.4%（Comité 新聞稿）；2025 年約 57% 為本課計算。Level 1 備註曾寫「2024 版 Key Figures 出口占 25%」，與此處不一致，推測是不同口徑（例如非歐盟出口），未查證，已不採用。
+6. **「méthode champenoise」禁用年份 1994**：僅 Cellars 一個來源，評量只考「歐盟內該詞專屬 Champagne」。
+7. **氣候變遷數據**（採收提早約 18 天、潛在酒精 +0.7% vol、總酸 −1.3 g/L、升溫 1.1°C、花期到採收 100→約 92 天）：2019 年文章引 CIVC 與業者說法，非 CIVC 統一最新統計，只教方向。
+8. **永續認證**：「六成以上葡萄園有認證」出自 2023 年 Decanter 文章（未標日期）；CIVC 曾提 2025 年零除草劑目標，據 Curtis MW 於 2022 年秋撤下——皆為單一來源說法，不進測驗。
+9. **其他氣泡酒數字**：Cava 9／18／30／36 個月（Glass of Bubbly）、Franciacorta 18／24／24／30／60 個月自裝瓶起（WineWithSeth）、英國 PDO 9 個月與 Sussex 15 個月、2023 英國 2,160 萬瓶、Tasmania 一月均溫 15.6°C、Crémant 最短陳年（來源說 9 或 12 個月）皆為單一來源比較素材，不進測驗；陳年月數各 DO／DOCG 規則會修訂，考前以官方規格為準。
+10. **Pernod Ricard 評估出售 Mumm**（2025 年 2 月起媒體報導）與 Heidsieck & Co. Monopole 交易細節（5,000 萬歐元、2026-01-01 生效；賣方該來源未指名，故不寫）：報導與交易屬時效資訊，不進測驗。
+11. **無法查證而未寫**：每公斤葡萄價格（本次未取得可靠最新數字）、各集團持股比例與人事、Lanson-BCC 持股結構、Laurent-Perrier 近況、各酒莊的個別釀造做法、WSET D5／IMW 的實際題型與評分細節。
+
+**後續建議**：階段 E（地圖、遊戲、筆記、成就、詞彙）可直接引用 Level 3 的比較表與標籤代碼作為遊戲題庫（排序題：傳統法步驟；配對題：NM／RM／CM…；甜度級別順序）。階段 F 請再檢查本課所有「單一來源」數字是否有更新（尤其出貨、營收、庫存與集團交易，每年都會變動）。
