@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**設計稿**（尚未建立程式、路由或內容）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A（框架）已完成**，分支 `feat/champagne-course-framework`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -161,3 +161,47 @@
 3. 地圖：採村莊層級（319 村清單＋行政區邊界）；清單取得失敗時自動退回簡易版（單一多邊形＋示意點）。
 4. 排程：A→F 六個排程任務，與隆河同一組時段並行（A 對應隆河 B 的時段，F 之後多一個時段）。
 5. 公開：先只給管理員（`ADMIN_ONLY_COURSES` 加入 `champagne`）。
+
+## 9. 已完成的框架項目（階段 A，2026-10-25）
+
+- `src/components/champagne/`：`ChampagnePage`、`ChampagneLevelSelector`（3 階段）、`ChampagneLearningSystem`、`ChampagneCourseLayout`（複製自希臘並改寫；地圖／遊戲／筆記／成就／詞彙尚未接上）。
+- `src/locales/champagneUi/`（`index.js`、`en.js`、`ja.js`）：獨立的 `gt()` 字典（未動 greeceUi，避免與隆河分支衝突）。
+- `src/stores/champagneLearningStore.js`：21 課大綱（依第 2 節）、localStorage 進度（key `champagne-wine-academy-progress:{userId}`）、同步課程代號 `champagne`。
+- `src/data/champagne/ch-l1-1.js … ch-l3-7.js`：21 個空殼（封面＋「內容製作中」），`src/locales/{en,ja}/lessons/champagne/*.json` 先放標題與簡介。
+- 課程首頁的地圖／遊戲／筆記入口顯示「製作中」（停用）；成就入口暫不顯示。
+- `supabase/migrations/20261025000000_add_champagne_course.sql`：courses 新增 champagne（active=false、show_on_home=false），**未套用**。
+
+### 共用檔案改動（解衝突用，皆為純新增條目）
+
+| 檔案 | 改動 |
+|---|---|
+| `src/router/index.js` | 在 `/greece/course` redirect 之後新增 `/champagne`、`/champagne/course` 路由；`COURSE_ACCESS_RULES` 在 `Greece` 後新增 `Champagne` 一行 |
+| `src/components/PlatformHome.vue` | 舊世界卡片區尾端（Greece 卡片之後）新增 champagne 卡片；`courseConfig` 在 greece 後新增一行；`courseStatuses`／`courseShowHome` 各加 `champagne: false`；`ADMIN_ONLY_COURSES = ['greece', 'champagne']`；樣式區在 `/* Greece card */` 前新增 champagne 樣式 |
+| `src/components/shared/courseHome/regionThemes.js` | 新增 `champagne` 主題（香檳金 #A8801C） |
+| `src/components/PresentationLesson.vue` | `getCourseGradient`／`getCourseIcon` 各新增 `ch-` 一行 |
+| `src/data/lessonContentLoader.js` | 在 `gr-l3-7` 後新增 21 行 `ch-l*` 註冊 |
+| `src/lib/courseProgressSync.js` | 在 Loire 區塊前新增 `saveChampagneLesson`、`loadAndMergeChampagneProgress` |
+| `src/locales/{en,ja,zh-TW}/home.js` | `labels` 新增 `champagne`；`courses` 新增 `champagne` 區塊（australia 之前） |
+| `src/locales/{en,ja,zh-TW}/common.js` | 課程名稱表新增 `champagne` |
+
+尚未改動（留待階段 E）：`useAchievements.js`、詞彙元件（`WineGlossary`／`AdminGlossary`）、詞彙與 tasting wine_type migration。
+
+## 10. 第 7 節「已知出入」查證結論（階段 A，來源以 WineWithSeth 彙整 Comité Champagne 資料、champagne.education；官方 PDF 尚待階段 B 補強）
+
+1. **品種比例**：Pinot Noir 38%；Chardonnay 31%（2025 關鍵數字為 32%）、Meunier 31%（2025 為 30%）；Arbane、Petit Meslier、Chardonnay Rosé、Pinot Blanc、Pinot Gris 合計約 0.3%。結論：課內以「約 38／31／31，2025 版 32／30」標年份，**不進測驗**。
+2. **生產者家數**：2025 版為種植者 16,460、酒廠 410、合作社 120（與設計稿 2025 版數字一致）；2023 版 16,200／370／130 為較舊年度。結論：以 2025 為準並標年份，不進測驗。
+3. **出貨量**：2025 約 2.661 億瓶（酒廠 1.919 億、合作社與種植者 0.742 億），營收約 57 億歐元；2023 約 2.99 億瓶。屬年度差異而非衝突，標註年份。
+4. **Grand Cru 品種限制**（Chouilly、Tours-sur-Marne、Aÿ）：查無任何形式的法規限制，僅有「慣例／風格」描述（白丘幾乎全為 Chardonnay；Aÿ 以 Pinot Noir 著稱）。結論：**不在課內寫成法規**，僅寫風格傾向；Grand Cru 總數 17、白丘 6 村、馬恩河谷 2 村（Aÿ、Tours-sur-Marne）與設計稿一致。
+5. **甜度邊界**：Brut Nature 0–3、Extra Brut 0–6、Brut <12（至 12）、Extra Dry 12–17、Sec 17–32、Demi-Sec 32–50、Doux >50 g/L；法規容許每級 ±3 g/L，相鄰級別重疊。champagne.education 的 Brut 為「<12」。結論：課內寫邊界值並註明 ±3 g/L 容許誤差與 Brut Nature 無添加糖的差別；邊界數值不進測驗，只考級別順序。
+6. **Premier Cru 村莊數**：設計稿為 42，WineWithSeth 寫「約 44」。結論：**來源有出入，課內寫「約 42–44（依來源）」，不進測驗**；階段 C 以 Comité Champagne／INAO 官方清單核對。另：Échelle des Crus 於 2004 起因歐盟競爭法停止作為固定葡萄價格量表，INAO 於 2010 廢除量表，但原有 Grand Cru／Premier Cru 村莊保留稱呼（1952 年 7 月 1 日法令引入）；設計稿「2010 年廢除量表」需註明「價格量表 2004 起停用」。
+
+## 11. 狀態區塊
+
+| 階段 | 狀態 | 分支 |
+|---|---|---|
+| A 框架 | ✅ 完成（建置驗證通過） | `feat/champagne-course-framework` |
+| B Level 1 | ⏳ 待做 | `feat/champagne-l1` |
+| C Level 2 | ⏳ 待做 | `feat/champagne-l2` |
+| D Level 3 | ⏳ 待做 | `feat/champagne-l3` |
+| E 互動（地圖、遊戲、筆記、成就、詞彙） | ⏳ 待做 | `feat/champagne-interactive` |
+| F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |

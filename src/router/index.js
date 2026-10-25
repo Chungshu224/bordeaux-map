@@ -146,6 +146,18 @@ const routes = [
     redirect: '/greece'
   },
 
+  // ─── 香檳課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/champagne',
+    name: 'Champagne',
+    component: () => import('../components/champagne/ChampagnePage.vue'),
+    meta: { requiresAuth: true, minimumTier: 'free', title: '🥂 香檳 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/champagne/course',
+    redirect: '/champagne'
+  },
+
   // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────
   {
     path: '/california',
@@ -302,6 +314,7 @@ const COURSE_ACCESS_RULES = {
   LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
   Greece: { courseId: 'greece', minimumTier: 'free' },
+  Champagne: { courseId: 'champagne', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
   Learning: { courseId: 'bordeaux', minimumTier: 'free' },
