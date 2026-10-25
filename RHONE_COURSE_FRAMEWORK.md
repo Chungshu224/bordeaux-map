@@ -11,7 +11,7 @@
 | A | 框架：頁面、路由、進度、21 課空殼、en/ja 標題；僅管理員可見 | `feat/rhone-course-framework`（從 master 切出並合併設計分支） | ✅ 完成（2026-10-24，未合併；見〈已完成的框架項目〉） |
 | B | Level 1 內容（6 課）＋測驗＋en/ja | `feat/rhone-l1`（從 A 切出） | ✅ 完成（2026-10-25，未合併；見第 10 節） |
 | C | Level 2 內容（8 課） | `feat/rhone-l2`（從 B 切出） | ✅ 完成（2026-10-25，未合併；見第 11 節） |
-| D | Level 3 內容（7 課） | `feat/rhone-l3` | ⏳ |
+| D | Level 3 內容（7 課） | `feat/rhone-l3`（從 C 切出） | ✅ 完成（2026-10-25，未合併；見第 12 節） |
 | E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive` | ⏳ |
 | F | 全面英日文、migration、價格、公開 | — | ⏳ |
 
@@ -245,3 +245,35 @@
 11. **Château-Grillet 所有權**：INAO 文件稱同一家族自 1830 年壟斷，Decanter 報導 2011 年 François Pinault 買下 → 課內並列；不考。
 - 未取用：Inter Rhône 教學包（依既定決定）；Wine Folly／Jancis Robinson 本階段未查到可補足的條目，風格描述（共發酵目的、Cornas 避風、arzelle／gore 土壤詞彙）標為「一般說法」、不進測驗。
 - Level 3 前待辦：INAO 草案轉為正式版後（Cairanne、Vinsobres、Beaumes-de-Venise 白酒等）再核對比例；le râpé 百分比；Seyssuel／IGP 規格。
+
+## 12. Level 3 內容說明與查證註記（階段 D，分支 `feat/rhone-l3`）
+
+**結構**：`rh-l3-1 … rh-l3-6` 比照 `gr-l3-*`：封面＋4 張內容投影片（每張 4～5 個重點）＋知識檢測 4 題（及格 60）；`rh-l3-7` 為封面＋重點回顧＋12 題綜合評量（`isFinalExam`，及格 60）。en／ja 為 flat-key overlay（`src/locales/{en,ja}/lessons/rhone/rh-l3-*.json`，含測驗題目、選項、解析），已逐鍵驗證：與中文結構零缺漏／零多餘鍵／無空值、en 無 CJK 殘留。未新增 UI 字串。
+
+**各課主題與來源**
+1. `rh-l3-1` 栽培與氣候變遷：北隆河陡坡／手工／坡地經濟（INAO、WineWithSeth）；南隆河 Grenache 老藤、Mistral、霜與冰雹；氣候證據取自 BKWine Magazine 2022 轉述的 Institut rhodanien 研究（物候提前 10–15 天、採收約提早 20 天、潛在酒精 12.5%→>14%、總酸 -1.95 g/L）；VIFA（Inter Rhône 詞彙表 2025-04、Côtes du Rhône 公會頁面）。
+2. `rh-l3-2` 釀造與風格：Côte-Rôtie 全串／去梗、共發酵、橡木片禁用（WineWithSeth／INAO）；Grenache 氧化性與 GSM 分工（標為一般說法）；白酒與粉紅作法；VDN、vin de paille、Clairette de Die（沿用 rh-l2 已查證數字）。
+3. `rh-l3-3` 風土比較：北部 Syrah 三 cru、北 vs 南 vs 澳洲、教皇新堡／Gigondas／Vacqueyras、與勃艮地 Pinot Noir 的對照（只給比較軸線，並指向既有勃艮地課程，不複製內容）。風格描述一律標為一般說法，測驗只考規格與概念。
+4. `rh-l3-4` 法規與標籤：金字塔與標籤字串、比例的「酒莊整體種植」計算單位、IGP（Inter Rhône 詞彙表名單）與 Vin de France、五個標籤判讀範例。
+5. `rh-l3-5` 產業與市場：Inter Rhône《Chiffres clés 2025》（經營者數量、出貨型態、銷售與出口、超市價格階梯、庫存）、Réussir 2025-05-02 的散裝價、Vinetur 2026-10-13 的 2026–27 價格參考、wein.plus 的白酒與粉紅目標；酒莊事實只寫 Guigal（Wikipedia）與 Jaboulet（官方歷史頁）。
+6. `rh-l3-6` 品飲與論述：SAT 結構、兩份「虛構示範酒款」的筆記（北隆河 Syrah、南隆河 Grenache 混釀）與三個 MW 風格論述題骨架（氣候變遷下 Grenache 的角色、單一品種 vs 混釀、cru 數量擴張利弊）；課內與投影片均提醒「考試形式以 WSET／IMW 官方最新規格為準」，不引用題數與時間。
+7. `rh-l3-7` 綜合評量：12 題，只取各課已定案、來源一致的項目。
+
+**查證結論（可進測驗者）**
+- VIFA：Côtes du Rhône／Villages 試驗品種為白 Carignan blanc、Floréal、Rolle，紅 Vidoc（Inter Rhône 詞彙表，2025 年 4 月）；每個酒莊至多占面積 5%、調配 10%，觀察期 10 年。**框架第 3 節寫的「上限 10%」其實是調配上限，另有面積 5% 的上限**——WineWithSeth 兩種寫法並列，是兩個不同的限制。INAO 核准日期未取得（公會頁面只說 2024 年秋已列入規格），課內只寫「2024 年起」不寫日期。
+- Côte-Rôtie 手工採收、≥6,000 株／公頃（階段 C 已查）；Viognier 與 Syrah 混合後一起釀造（WineWithSeth／INAO）。
+- Inter Rhône 2025：出口量前三為比利時 18%、英國 17%、美國 13%（量），金額美國 8,200 萬歐元居首；2024/25 酒窖出貨散裝 64%／瓶裝 31%／鮮葡萄 5%；366 家貿易商、1,418 家獨立酒莊、87 家合作社酒窖。
+
+**本階段發現的出入或未能取得的資料（均不進測驗，課內標明）**
+1. **Côte-Rôtie 坡度**：ODG 規格為 60% 傾斜，Inter Rhône 為「局部超過 60°」——單位不同；課內只寫「極陡」。
+2. **氣候研究數字**：僅 BKWine 對 Institut rhodanien 研究的二手轉述（原始報告未取得），課內標明來源、不考數字，只考方向。
+3. **Mistral 天數（約 120 天）、日照（逾 2,500 小時）**：WineWithSeth 單一來源（階段 B 已列同類）。
+4. **有機比例**：2025 報告內文 24% 產量／26% 面積，封面圖表 25%（階段 B 已列）；HVE3 37%／34%。
+5. **各通路占比與出貨比例（獨立酒莊 19%／合作社 18%／貿易商 63%）**：取自報告圖表，圖表配置有歧義 → 標「概略」、不考；「約三分之二在法國」亦為概略。
+6. **價格資料**：Réussir（2025-05-02，數據到 2025 年 2 月）的散裝價與 Vinetur（2026-10-13）轉述 Journal FR 的 2026–27 價格參考（一般與 HVE 紅酒 132／171，有機 148／193 歐元／百升）均為媒體報導，Inter Rhône 一手公告未取得；白酒與粉紅 1/3 目標的 wein.plus 報導**未載日期**（文中提到 2021 年數據，推測為 2022 年前後）。超市貨架價（Inter Rhône 2025，不含折扣店）可考相對關係，不考金額。
+7. **Guigal 收購年份**：Wikipedia 寫 Vidal-Fleury 1984、Château d'Ampuis 1995；Guigal 與 Jaboulet 的後續關係、Chapoutier／Delas 的創立年份與所有權本次**未查到可靠一手來源 → 不寫**（課內僅列名）。
+8. **cru 升格的批評論點**（稀釋名聲、消費者混淆）屬論述角度，非查證事實；課內以「論述骨架」呈現。
+9. **IGP**：Inter Rhône 詞彙表列出的名單含 Hautes-Alpes 與 Alpes de Haute-Provence 等隆河谷之外的 IGP，課內只列與河谷相關者；各 IGP 的品種與單產規定未核對；`Collines Rhodaniennes` 與 Seyssuel 的關係仍未核對（第 11 節遺留項目，維持不考）。
+10. **Côtes du Rhône 草案數字**（單產 51／上限 60、最低酒精度 11%／北部 10.5%；Villages 44／41、12%／12.5%）：沿用階段 C 的處理，標為草案、不考。
+- 未取用：Wine Folly、Jancis Robinson 本階段未查到可補足的條目（風格描述標為一般說法）；Google Drive 資料本階段未使用（Level 3 內容所需事實已由網頁來源涵蓋）。
+- 階段 E 前待辦：le râpé 百分比、Seyssuel／IGP 規格、INAO 草案轉正式版後再核對 Cairanne／Vinsobres／Beaumes-de-Venise 等比例（均與階段 C 清單相同，本階段未再處理）。
