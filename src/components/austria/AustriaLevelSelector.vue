@@ -140,7 +140,7 @@ function startJourney() {
 }
 
 const heroStats = [
-  { value: '17', label: gt('DAC 產區（待核對）') },
+  { value: '18', label: gt('DAC 產區（以 ÖWM 為準）') },
   { value: '21', label: gt('系統課程') },
   { value: '3',  label: gt('學習階段') }
 ]

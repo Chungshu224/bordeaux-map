@@ -9,7 +9,7 @@
 - **對象**：準備 WSET Diploma（D3）並延伸至 MW 的學習者。奧地利是 D3 常考的「小而精」產區：白酒（Grüner Veltliner、Riesling）、紅酒（Zweigelt、Blaufränkisch、St. Laurent）、貴腐甜酒（Neusiedlersee）、氣泡酒（Sekt Austria）都會出題。
 - **教學主軸**：
   1. **分級制度的獨特性**：不是 AOC 式的村莊／園區分級，而是 **DAC（以產區風格為單位）＋ Ried（單一園）＋ ÖTW Erste／Große Lage** 三層；與德國 Prädikat 制度的相似與差異（Kabinett 在奧地利為糖度下限而非德國的風格）。
-  2. **Wachau 的自訂制度**：Vinea Wachau 的 Steinfeder／Federspiel／Smaragd 三級（以酒精／採收糖度分級），不屬 DAC。
+  2. **Wachau 的自訂制度**：Vinea Wachau 的 Steinfeder／Federspiel／Smaragd 三級（以酒精／採收糖度分級）；Wachau 另自 2020 年份起成為 DAC（Wikipedia、wein.plus 彙整，階段 C 再以官方規章確認兩套制度如何並存）。
   3. **風土多樣**：Danube 氣候（冷夜、暖日）、Pannonian 氣候（Burgenland，Neusiedler See 影響）、東南部火山與石灰岩（Steiermark）。
   4. **歷史與品質革命**：1985 乙二醇醜聞 → 1985 年酒法大幅收緊 → 今日的高品質與低產量。
 - **與既有課程的關係**：連結德國（Prädikat、Riesling）、匈牙利（Tokaj／Neusiedler See 兩岸的貴腐）、香檳（Sekt 傳統法）；不複製大段文字。
@@ -52,7 +52,7 @@
 | at-l1-3/4 | 品種比例（白約 2/3）、各品種特徵、雜交種（Zweigelt＝Blaufränkisch×St. Laurent） | 最新品種面積比例（Grüner Veltliner 約三成？） |
 | at-l2-1 | DAC 區域數與各區許可品種、Klassik／Reserve 差異、Ried 標示規定 | **DAC 總數（2023 年後可能為 17 或更多）**、各 DAC 年份 |
 | at-l2-2 | Wachau 三級的酒精／葡萄汁重量門檻、Vinea Wachau 會員制、梯田與 Riede | Federspiel／Smaragd 門檻（Oechsle 或 KMW） |
-| at-l2-3/4 | 各區 DAC 規格、Kamptal／Kremstal 的 Ried 名單、Wagram 2022 與 Thermenregion 2023 DAC | 新 DAC 時間、許可品種 |
+| at-l2-3/4 | 各區 DAC 規格、Kamptal／Kremstal 的 Ried 名單、Wagram（2021 年份）與 Thermenregion（2023 年份）DAC | 新 DAC 年份（Wikipedia：Wagram 2021、Thermenregion 2023、Wachau 2020）、許可品種 |
 | at-l2-5 | Wiener Gemischter Satz DAC（2013）：必須同園混植混釀、至少 3 個品種、單一品種不超過 50% | 規格數字 |
 | at-l2-6 | Neusiedlersee DAC（Zweigelt 紅酒與甜酒）、Leithaberg（石灰岩、Blaufränkisch、Chardonnay 等）、Ruster Ausbruch | Neusiedlersee 甜酒是否為 DAC；Ausbruch 規定 |
 | at-l2-7 | Steiermark 三個 DAC（Südsteiermark、Vulkanland、Weststeiermark）、Schilcher（Blauer Wildbacher 玫瑰酒） | DAC 年份（約 2018） |
@@ -114,3 +114,15 @@
 - migration 已準備未套用：`20261027000000_add_austria_course.sql`（`active=false`、`show_on_home=false`）
 - 地圖／遊戲／筆記入口顯示「製作中」（階段 E 製作）
 - 驗證：SFC 編譯、字典覆蓋、`vite build` 通過
+
+## 10. Level 1 內容說明與查證註記（階段 B，2026-10-27）
+
+- 分支 `feat/austria-l1`（從 `feat/austria-course-framework` 切出）；6 課正式內容（`at-l1-1`…`at-l1-6`），每課 3–4 張內容投影片＋知識檢測（L1-6 為 8 題綜合評量，及格 60），en/ja overlay 逐鍵檢查通過
+- **第 2 課由「四大區域」改為「產區結構」**：資料來源對區域的分法不同（wein.plus 與 Wikipedia 為 Weinland／Steirerland／Bergland 三區，Wien 隸屬 Weinland；部分資料把 Wien 單列），因此課內不把「幾個區域」放進測驗
+- **查證結論**
+  - DAC 共 18 個（Burgenland 6、Niederösterreich 8、Wien 1、Steiermark 3；wein.plus 與 Wikipedia 一致），Wachau DAC 自 2020 年份起——**修正設計稿原先「Wachau 不屬 DAC」的說法**；Wagram DAC 為 2021 年份（原稿寫 2022）
+  - Grüner Veltliner 32.3%、Zweigelt 13.4%、Welschriesling 6.3%、Blaufränkisch 5.8%（2025 年，農林部／ÖWM 經 Advantage Austria）；葡萄園約 44,210 公頃（2024／2025）；紅葡萄約 32%（2022，wein.plus）與「約 30%」（Wikipedia）略有差異，課內只用「約三分之一」
+  - KMW 門檻：Qualitätswein 15、Kabinett 17、Spätlese 19、Auslese 21、BA／Eiswein／Strohwein 25、TBA 30（Wikipedia 彙整）；**Ausbruch 下限各來源不同，不放進課內**（階段 C 以酒法為準）；Kabinett 屬 Qualitätswein 而非 Prädikat，且不可加糖
+  - 1985 事件的日期與數字（6 月 27 日分析、7 月 9 日警告、8 月 29 日新酒法、出口 4,500 萬公升 → 440 萬公升、2001 年恢復）取自 Wikipedia 彙整，課內標明為彙整數字、不進測驗
+- **仍需官方來源確認（階段 C／D）**：Ausbruch 與 Ruster Ausbruch DAC 規格、Wachau DAC 與 Vinea Wachau 三級並存關係、Sekt Austria 各級陳年月數、官方封條與檢驗編號細節（課內為一般性描述）
+- 既有程式中的奧地利內容：德國課程曾提及 Prädikat，Kabinett 的定義在奧地利與德國不同，課內已明確標示

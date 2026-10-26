@@ -57,8 +57,8 @@ export const austriaLearningLevels = {
       },
       {
         "id": "at-l1-2",
-        "title": "地理、氣候與四大葡萄酒區域",
-        "description": "位置、Danube 與 Pannonian 氣候、Weinland／Bergland／Steiermark／Wien",
+        "title": "地理、氣候與葡萄酒產區",
+        "description": "位置、Danube 與 Pannonian 氣候、產區結構與 DAC 概覽",
         "duration": 16
       },
       {
