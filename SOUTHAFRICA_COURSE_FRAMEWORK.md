@@ -135,3 +135,14 @@
 - 已用日期：IPW 1998；BWI 2004；永續封條 2010 年份起；合併 WO／IPW 封條 2024 年 88%；2018 乾旱（1 月預測，為 2005 年以來最小）；KWV 1918／配額廢除 1992／私有化 1997-12-01；轉型憲章 2007；New Beginnings 1997；Mont Rochelle 2001；Kaapse Vonkel 1971（1973 上市）；CCPA 與名稱 1992；Vin de Constance 現代版 1986（1990 上市）、復興 1980；Cape Port 命名 2012。
 - 甜酒門檻（Natural Sweet >20、Straw >30、NLH >50 g/L）取自業界媒體 Cheers；**法規原文未能取得（需訂閱）**，課內註明請查 Liquor Products Act 規章。
 - 不進測驗或僅註記：2018 減產數字（預測）、BEE 現況、Cape Blend 最低比例、Pinotage 雜交年份、dosage（常見範圍非法定）。
+
+## 13. 階段 E：互動功能已製作（2026-10-27）
+
+- 地圖：`SouthAfricaMapPage.vue`——**純示意點版**（23 點，五大 Region 分色）。沒有取得可公開使用的 Wine of Origin 邊界（Ward／District 多邊形），因此不畫範圍，圓點為主要城鎮或谷地的概略座標，頁面與資訊卡皆註明「非官方邊界」。若日後取得 WCA／SAWIS 授權或開放邊界資料，再加範圍圖層。
+- 氣候圖層：`scripts/build-southafrica-climate.mjs`（南半球夏季 12–2 月，年份以夏季結束那年計；era5_land 溫度、era5 日照與降雨）。**資料檔 `public/data/southafrica-climate.json` 尚未產生**（Open-Meteo 每日額度用完，額度重置後執行 `NODE_USE_ENV_PROXY=1 node scripts/build-southafrica-climate.mjs`）；在此之前開啟氣候圖層會顯示載入失敗訊息，其餘地圖功能不受影響。
+- 遊戲：產區速答（18 個 District／Ward → 五大 Region）、品種配對、制度辨識快答、知識閃問（直接取自 Level 1–3 測驗）。題庫只用已查證數字；Stellenbosch 面積、District／Ward 總數、Geographical Unit 數量、Swellendam 歸屬、甜酒糖度門檻、Pinotage 雜交年份一律不入題。
+- 品飲筆記：11 個 `za_*` 酒款類型；migration `20261029000100` 的 CHECK 保留既有所有值（含 `at_*`）。
+- 成就：31 個定義，探索類以 `ZA-PT-*` 示意點 id 計。
+- 詞彙：`20261029000200_add_southafrica_glossary.sql`（18 條，region CHECK 含 `austria` 與 `southafrica`）。
+- 字典：`southafricaUi` en／ja 各 627 條，缺漏 0；SFC／overlay／`vite build` 皆通過。
+- Migration 順序：course `20261029000000` → tasting `…0100` → glossary `…0200`（全部**未套用**）。

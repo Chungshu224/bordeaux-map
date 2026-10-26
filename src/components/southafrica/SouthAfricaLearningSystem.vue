@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="southafrica" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveSouthAfricaLesson, loadAndMergeSouthAfricaProgress } from '../../lib/courseProgressSync.js'
 import SouthAfricaCourseLayout from './SouthAfricaCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalSouthAfricaAchievementManager } from '../../stores/southafricaAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalSouthAfricaAchievementManager.init()
 
 const currentLevel = computed(() => southafricaLearningState.currentLevel)
 const currentLesson = computed(() => southafricaLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = southafricaLearningState.completedLessons.includes(lessonId)
     southafricaLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveSouthAfricaLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => southafricaLearningState.completedLessons.includes(l.id))
+      globalSouthAfricaAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: southafricaLearningProgress.value
+      })
+    }
   }
   southafricaLearningActions.exitLesson()
 }

@@ -1,0 +1,37 @@
+-- 品飲筆記支援南非課程
+-- 擴充 wine_type CHECK，加入南非酒款類型（其餘欄位沿用，source = 'southafrica'，產區存 aoc_id）。
+-- ⚠ 尚未套用：需在正式環境手動套用後，南非品飲筆記才能儲存（未套用時儲存會被 CHECK 拒絕）。
+-- 清單 = 希臘版 + 隆河（rh_*）+ 香檳（ch_*）+ 奧地利（at_*）+ 南非（za_*）。
+-- ⚠ 每一支「重寫 CHECK」的 migration 都會覆蓋前一支：後套用者必須包含所有值，否則既有筆記會違反約束。
+
+ALTER TABLE public.tasting_notes
+  DROP CONSTRAINT IF EXISTS tasting_notes_wine_type_check;
+
+ALTER TABLE public.tasting_notes
+  ADD CONSTRAINT tasting_notes_wine_type_check
+    CHECK (wine_type IS NULL OR wine_type IN (
+      -- 義大利
+      'rosso', 'bianco', 'rosato', 'spumante', 'dolce', 'passito', 'altro',
+      -- 西班牙
+      'tinto', 'blanco', 'rosado', 'cava', 'vino_generoso', 'dulce', 'otro',
+      -- 匈牙利
+      'aszu', 'furmint', 'feher', 'voros', 'bikaver', 'rozsa', 'egyeb',
+      -- 阿爾薩斯
+      'blanc', 'cremant', 'vt', 'sgn', 'rouge', 'eaudevie', 'autre',
+      -- 希臘
+      'gr_white', 'gr_red', 'gr_rose', 'gr_sparkling', 'gr_sweet', 'gr_fortified', 'gr_retsina', 'gr_other',
+      -- 隆河
+      'rh_north_red', 'rh_south_red', 'rh_white', 'rh_rose', 'rh_sweet', 'rh_sparkling', 'rh_other',
+      -- 香檳
+      'ch_nv', 'ch_vintage', 'ch_bdb', 'ch_bdn', 'ch_rose', 'ch_prestige', 'ch_sweet', 'ch_still', 'ch_other',
+      -- 奧地利
+      'at_gv', 'at_riesling', 'at_white', 'at_red_light', 'at_red_full', 'at_rose', 'at_sweet', 'at_sparkling', 'at_other',
+      -- 南非
+      'za_chenin', 'za_sauvignon', 'za_white', 'za_pinotage', 'za_bordeaux', 'za_rhone', 'za_pinot', 'za_sparkling', 'za_sweet', 'za_fortified', 'za_other'
+    ));
+
+COMMENT ON COLUMN public.tasting_notes.wine_type IS
+  '酒款類型 — 義大利: rosso/bianco/rosato/spumante/dolce/passito/altro；西班牙: tinto/blanco/rosado/cava/vino_generoso/dulce/otro；匈牙利: aszu/furmint/feher/voros/bikaver/rozsa/egyeb；阿爾薩斯: blanc/cremant/vt/sgn/rouge/eaudevie/autre；希臘: gr_white/gr_red/gr_rose/gr_sparkling/gr_sweet/gr_fortified/gr_retsina/gr_other；隆河: rh_north_red/rh_south_red/rh_white/rh_rose/rh_sweet/rh_sparkling/rh_other；香檳: ch_nv/ch_vintage/ch_bdb/ch_bdn/ch_rose/ch_prestige/ch_sweet/ch_still/ch_other；奧地利: at_gv/at_riesling/at_white/at_red_light/at_red_full/at_rose/at_sweet/at_sparkling/at_other；南非: za_chenin/za_sauvignon/za_white/za_pinotage/za_bordeaux/za_rhone/za_pinot/za_sparkling/za_sweet/za_fortified/za_other';
+COMMENT ON COLUMN public.tasting_notes.source IS '筆記來源: bordeaux / italy / spain / hungary / alsace / greece / rhone / champagne / austria / southafrica（可繼續擴充）';
+
+SELECT pg_notify('pgrst', 'reload schema');
