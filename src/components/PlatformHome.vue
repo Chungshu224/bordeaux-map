@@ -585,6 +585,48 @@
             </div>
           </div>
 
+
+          <!-- ── Rhône（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card rhone">
+            <div :class="['card-status', courseStatuses.rhone ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇫🇷</div>
+              <div class="card-region">Rhône · Vallée du Rhône</div>
+              <h3 class="card-title">{{ $t('home.courses.rhone.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.rhone.desc') }}</p>
+            </div>
+            <div class="course-preview-strip rhone-strip">
+              <div class="cp-stat">
+                <span class="cp-num">2</span>
+                <span class="cp-label" v-html="$t('home.courses.rhone.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Syrah</span>
+                <span class="cp-label" v-html="$t('home.courses.rhone.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.rhone.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Grenache</span>
+                <span class="cp-label" v-html="$t('home.courses.rhone.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features rhone-features">
+              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f1') }}</span>
+              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f2') }}</span>
+              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/rhone')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
         </div><!-- /courses-grid 舊世界 -->
       </div><!-- /region-group 舊世界 -->
 
@@ -1176,6 +1218,7 @@ const courseConfig = computed(() => [
   { id: 'portugal',   label: t('home.courses.labels.portugal'), route: '/portugal',         group: 'europe'   },
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
   { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
+  { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
   { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
   { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
@@ -1188,12 +1231,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone']
 
 async function loadCourseData() {
   try {
@@ -1893,6 +1936,7 @@ onMounted(async () => {
 .course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
 .course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
 .course-card.greece { border-color: rgba(13,94,175,0.4); background: rgba(13,94,175,0.05); }
+.course-card.rhone { border-color: rgba(122,46,92,0.4); background: rgba(122,46,92,0.05); }
 /* 課程深度預覽 strip */
 .course-preview-strip {
   display: flex; align-items: center; justify-content: space-between;
@@ -1997,6 +2041,12 @@ onMounted(async () => {
 .greece-strip .cp-label { color: #073a73; }
 .greece-strip .cp-divider { background: rgba(13,94,175,0.25); }
 .greece-features .greece-tag { color: #0D5EAF; background: rgba(13,94,175,0.06); border-color: rgba(13,94,175,0.18); }
+/* Rhône card */
+.rhone-strip { background: rgba(122,46,92,0.07); border-color: rgba(122,46,92,0.22); }
+.rhone-strip .cp-num { color: #7A2E5C; font-size: 0.9rem; }
+.rhone-strip .cp-label { color: #4A1738; }
+.rhone-strip .cp-divider { background: rgba(122,46,92,0.25); }
+.rhone-features .rhone-tag { color: #7A2E5C; background: rgba(122,46,92,0.06); border-color: rgba(122,46,92,0.18); }
 
 /* Hungary card */
 .hungary-strip { background: rgba(206,41,57,0.07); border-color: rgba(206,41,57,0.22); }
