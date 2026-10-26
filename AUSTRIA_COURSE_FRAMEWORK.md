@@ -146,3 +146,12 @@
 - **永續**：Sustainable Austria 2015 年推出，約 11,925 公頃（27%）、655 酒莊（2025 年 1 月報導）；有機約 25%（2024 年 11 月初步數）
 - **出口（2024）**：6,420 萬公升、2.333 億歐元；德國量 60.2%、值 42.3%；美國 8.5%（金額）升為第二（Statistik Austria 暫定數，ÖWM 新聞）。2025 年數字見 Level 1
 - **刻意不寫**：生產者類型、合作社與價格帶（無可靠官方統計）；Wachau Codex 與 DAC 並存的細節；盲品線索與論述範本屬一般性指引，已標明、不進法規測驗
+
+## 13. 階段 E：互動功能（地圖、遊戲、品飲筆記、成就、詞彙）
+
+- 地圖：`public/austria/austria_pdo.geojson` 由 `scripts/build-austria-geojson.py` 從歐盟 PDO 資料集（CC0，2021 年前版本）產生，共 16 個 DAC 範圍；Rosalia（2017）與 Ruster Ausbruch（2020）為示意點（`pointRef.js`），尚不在歐盟資料集內。
+- 氣候資料 `public/data/austria-climate.json`：Open-Meteo 當日額度用完，**尚未產生**；以 `scripts/build-austria-climate.mjs` 補跑（已排程提醒）。未產生前地圖氣候圖層無資料。
+- 遊戲：產區（DAC→邦／線索→DAC）、品種配對、分級制度、閃問；題庫內不放有出入的資料（Kremstal DAC 年份 2006/2007、Eisenberg 年份）。
+- 品飲筆記：9 種酒款類型 `at_*`；資料庫 CHECK 約束由 `20261028000100_add_austria_tasting_types.sql` 擴充（僅準備，未套用）。
+- 成就：20 項（課程、探索 DAC、品飲、法規）；詞彙：`20261028000200_add_austria_glossary.sql`（20 條，含德文）。
+- 翻譯：`austriaUi` 字典 685 條（en／ja），檢查腳本回報缺漏 0；建置通過。

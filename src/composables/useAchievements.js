@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import { gt as greeceGt } from '../locales/greeceUi/index.js'
 import { gt as rhoneGt } from '../locales/rhoneUi/index.js'
 import { gt as gtChampagne } from '../locales/champagneUi/index.js'
+import { gt as gtAustria } from '../locales/austriaUi/index.js'
 import {
   achievementState,
   achievementDefinitions,
@@ -74,6 +75,11 @@ import {
   champagneAchievementDefinitions,
   globalChampagneAchievementManager
 } from '../stores/champagneAchievementSystem.js'
+import {
+  austriaAchievementState,
+  austriaAchievementDefinitions,
+  globalAustriaAchievementManager
+} from '../stores/austriaAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
@@ -87,7 +93,8 @@ const COURSE_LABELS = {
   alsace:      '侍酒師的筆記本',
   greece:      '侍酒師的筆記本',
   rhone:       '侍酒師的筆記本',
-  champagne:   '侍酒師的筆記本'
+  champagne:   '侍酒師的筆記本',
+  austria:     '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -203,6 +210,14 @@ const COURSE_CATEGORIES = {
     { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
+  austria: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
   ]
 }
 
@@ -231,6 +246,9 @@ function calcProgress(achievement, stats) {
 // ── 主要 composable ───────────────────────────────────────────
 export function useAchievements(courseKey) {
   const gt = courseKey === 'rhone' ? rhoneGt : greeceGt
+  // 香檳與奧地利共用「字典函式」判斷
+  const isLocal = courseKey === 'champagne' || courseKey === 'austria'
+  const gtX = courseKey === 'austria' ? gtAustria : gtChampagne
   let state, definitions, manager
 
   if (courseKey === 'bourgogne') {
@@ -281,6 +299,10 @@ export function useAchievements(courseKey) {
     state       = champagneAchievementState
     definitions = champagneAchievementDefinitions
     manager     = globalChampagneAchievementManager
+  } else if (courseKey === 'austria') {
+    state       = austriaAchievementState
+    definitions = austriaAchievementDefinitions
+    manager     = globalAustriaAchievementManager
   } else if (courseKey === 'alsace') {
     state       = alsaceAchievementState
     definitions = alsaceAchievementDefinitions
@@ -298,7 +320,7 @@ export function useAchievements(courseKey) {
       ...a,
       // 希臘課程的成就文字經翻譯字典（其他課程查無對應時原樣回傳）
       ...((courseKey === 'greece' || courseKey === 'rhone') ? { title: gt(a.title), description: gt(a.description) } : {}),
-      ...(courseKey === 'champagne' ? { title: gtChampagne(a.title), description: gtChampagne(a.description) } : {}),
+      ...(isLocal ? { title: gtX(a.title), description: gtX(a.description) } : {}),
       unlocked: state.unlockedAchievements.includes(a.id)
     }))
   )
@@ -323,7 +345,7 @@ export function useAchievements(courseKey) {
   const userLevel = computed(() => {
     const raw = manager.getUserLevel()
     if (courseKey === 'greece' || courseKey === 'rhone') return { ...raw, title: gt(raw.title) }
-    if (courseKey === 'champagne') return { ...raw, title: gtChampagne(raw.title) }
+    if (isLocal) return { ...raw, title: gtX(raw.title) }
     // Bordeaux manager 的等級物件缺少 icon — 補充
     if (courseKey === 'bordeaux' && !raw.icon) {
       return { ...raw, icon: BORDEAUX_LEVEL_ICONS[raw.level] || '🎓' }
@@ -358,7 +380,7 @@ export function useAchievements(courseKey) {
         .filter(Boolean)
     }
     const list = state.newUnlocks || []
-    if (courseKey === 'champagne') return list.map(a => ({ ...a, title: gtChampagne(a.title), description: gtChampagne(a.description) }))
+    if (isLocal) return list.map(a => ({ ...a, title: gtX(a.title), description: gtX(a.description) }))
     return (courseKey === 'greece' || courseKey === 'rhone') ? list.map(a => ({ ...a, title: gt(a.title), description: gt(a.description) })) : list
   })
 
@@ -375,8 +397,8 @@ export function useAchievements(courseKey) {
     definitions,
     manager,
     courseLabel:  COURSE_LABELS[courseKey] || '侍酒師的筆記本',
-    categories:   courseKey === 'champagne'
-      ? COURSE_CATEGORIES.champagne.map(c => ({ ...c, name: gtChampagne(c.name) }))
+    categories:   isLocal
+      ? COURSE_CATEGORIES[courseKey].map(c => ({ ...c, name: gtX(c.name) }))
       : (courseKey === 'greece' || courseKey === 'rhone')
         ? COURSE_CATEGORIES[courseKey].map(c => ({ ...c, name: gt(c.name) }))
         : (COURSE_CATEGORIES[courseKey] || COURSE_CATEGORIES.bordeaux),

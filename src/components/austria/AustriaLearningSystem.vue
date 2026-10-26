@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="austria" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveAustriaLesson, loadAndMergeAustriaProgress } from '../../lib/courseProgressSync.js'
 import AustriaCourseLayout from './AustriaCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalAustriaAchievementManager } from '../../stores/austriaAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalAustriaAchievementManager.init()
 
 const currentLevel = computed(() => austriaLearningState.currentLevel)
 const currentLesson = computed(() => austriaLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = austriaLearningState.completedLessons.includes(lessonId)
     austriaLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveAustriaLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => austriaLearningState.completedLessons.includes(l.id))
+      globalAustriaAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: austriaLearningProgress.value
+      })
+    }
   }
   austriaLearningActions.exitLesson()
 }

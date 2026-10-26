@@ -97,7 +97,7 @@ const { t } = useI18n()
 
 const SUPPORTED_REGIONS = [
   'bordeaux', 'bourgogne', 'italy',
-  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne',
+  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'austria', 'champagne',
   'loire', 'california', 'australia', 'newzealand'
 ]
 
@@ -105,7 +105,7 @@ const props = defineProps({
   region: {
     type: String,
     default: 'bordeaux',
-    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne', 'loire', 'california', 'australia', 'newzealand'].includes(v)
+    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne', 'austria', 'loire', 'california', 'australia', 'newzealand'].includes(v)
   }
 })
 
@@ -120,6 +120,7 @@ const REGION_META = {
   hungary:    { icon: '🇭🇺', lang3Key: 'hu', lang3Label: 'Magyar' },
   greece:     { icon: '🇬🇷', lang3Key: 'el', lang3Label: 'Ελληνικά' },
   rhone:      { icon: '🇫🇷', lang3Key: 'fr', lang3Label: 'Français' },
+  austria:    { icon: '🇦🇹', lang3Key: 'de', lang3Label: 'Deutsch' },
   loire:      { icon: '🏰', lang3Key: 'fr', lang3Label: 'Français' },
   california: { icon: '🌉', lang3Key: '',   lang3Label: '' },
   australia:  { icon: '🦘', lang3Key: '',   lang3Label: '' },
