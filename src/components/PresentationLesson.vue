@@ -2123,6 +2123,7 @@ function getCourseGradient(id) {
   if (id?.startsWith('hu-')) return 'linear-gradient(135deg, #5b1fa0 0%, #3a0d7a 100%)'
   if (id?.startsWith('gr-')) return 'linear-gradient(135deg, #0D5EAF 0%, #073a73 100%)'
   if (id?.startsWith('rh-')) return 'linear-gradient(135deg, #7A2E5C 0%, #4A1738 100%)'
+  if (id?.startsWith('ch-')) return 'linear-gradient(135deg, #A8801C 0%, #6B500F 100%)'
   if (id?.startsWith('lo-')) return 'linear-gradient(135deg, #1a6e40 0%, #0d4a28 100%)'
   return 'linear-gradient(135deg, #722f37 0%, #4a0e15 100%)' // Bordeaux
 }
@@ -2131,6 +2132,7 @@ function getCourseIcon(id) {
   if (id?.startsWith('hu-')) return '🍾'
   if (id?.startsWith('gr-')) return '🏺'
   if (id?.startsWith('rh-')) return '🍷'
+  if (id?.startsWith('ch-')) return '🥂'
   if (id?.startsWith('lo-')) return '🌊'
   return '🍇'
 }

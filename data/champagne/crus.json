@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "status": "partial",
+    "description": "INAO《Champagne》AOC 產品規格（2024-01-25 令核定）第 I 章 II-b／c 列出的 17 個 Grand Cru 與 42 個僅 Premier Cru 村莊（共 59 個）。非完整的 319 個 cru 清單。",
+    "source": "https://www.champagne.fr/system/files/2024-03/Cahier_des_charges_appellation.pdf",
+    "source_published": "BO MASA 2024-02-22",
+    "missing": [
+      "INSEE 代碼（insee）未填：機器可讀來源 data.gouv.fr 的 INAO『Aires géographiques des AOC/AOP』（Licence Ouverte）在本次排程環境被代理阻擋，無法下載",
+      "其餘約 260 個 cru（80–89%）的名單與每村 Échelle 百分比：官方已不公布；第三方網頁多為 HTML、無明確授權",
+      "Premier Cru 的子產區與逐村百分比未填（sub_region／echelle_pct 為 null）"
+    ],
+    "notes": [
+      "Aÿ 在 INAO 文字寫作 Ay；Coligny 寫作 Coligny (Val-des-Marais)",
+      "Grand Cru 村莊也可標 Premier Cru；17 個 Grand Cru 的子產區為本課依 Comité Champagne／WineWithSeth 整理"
+    ],
+    "insee_status": "filled for graded villages by name match (Admin Express via france-geojson); see scripts/build-champagne-crus.py"
+  },
+  "communes": [
+    {
+      "name": "Ambonnay",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51007",
+      "department": "Marne"
+    },
+    {
+      "name": "Beaumont-sur-Vesle",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51044",
+      "department": "Marne"
+    },
+    {
+      "name": "Bouzy",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51079",
+      "department": "Marne"
+    },
+    {
+      "name": "Louvois",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51564",
+      "department": "Marne"
+    },
+    {
+      "name": "Mailly-Champagne",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51338",
+      "department": "Marne"
+    },
+    {
+      "name": "Puisieulx",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51450",
+      "department": "Marne"
+    },
+    {
+      "name": "Sillery",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51536",
+      "department": "Marne"
+    },
+    {
+      "name": "Verzenay",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51613",
+      "department": "Marne"
+    },
+    {
+      "name": "Verzy",
+      "grade": "grand_cru",
+      "sub_region": "Montagne de Reims",
+      "echelle_pct": 100,
+      "insee": "51614",
+      "department": "Marne"
+    },
+    {
+      "name": "Avize",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51029",
+      "department": "Marne"
+    },
+    {
+      "name": "Chouilly",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51153",
+      "department": "Marne"
+    },
+    {
+      "name": "Cramant",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51196",
+      "department": "Marne"
+    },
+    {
+      "name": "Le Mesnil-sur-Oger",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51367",
+      "department": "Marne"
+    },
+    {
+      "name": "Oger",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51612",
+      "department": "Marne"
+    },
+    {
+      "name": "Oiry",
+      "grade": "grand_cru",
+      "sub_region": "Côte des Blancs",
+      "echelle_pct": 100,
+      "insee": "51413",
+      "department": "Marne"
+    },
+    {
+      "name": "Aÿ",
+      "grade": "grand_cru",
+      "sub_region": "Vallée de la Marne",
+      "echelle_pct": 100,
+      "insee": "51030",
+      "department": "Marne"
+    },
+    {
+      "name": "Tours-sur-Marne",
+      "grade": "grand_cru",
+      "sub_region": "Vallée de la Marne",
+      "echelle_pct": 100,
+      "insee": "51576",
+      "department": "Marne"
+    },
+    {
+      "name": "Avenay-Val-d'Or",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51028",
+      "department": "Marne"
+    },
+    {
+      "name": "Bergères-lès-Vertus",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51049",
+      "department": "Marne"
+    },
+    {
+      "name": "Bezannes",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51058",
+      "department": "Marne"
+    },
+    {
+      "name": "Billy-le-Grand",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51061",
+      "department": "Marne"
+    },
+    {
+      "name": "Bisseuil",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51030",
+      "department": "Marne"
+    },
+    {
+      "name": "Chamery",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51112",
+      "department": "Marne"
+    },
+    {
+      "name": "Champillon",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51119",
+      "department": "Marne"
+    },
+    {
+      "name": "Chigny-lès-Roses",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51152",
+      "department": "Marne"
+    },
+    {
+      "name": "Coligny (Val-des-Marais)",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51158",
+      "department": "Marne"
+    },
+    {
+      "name": "Cormontreuil",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51172",
+      "department": "Marne"
+    },
+    {
+      "name": "Coulommes-la-Montagne",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51177",
+      "department": "Marne"
+    },
+    {
+      "name": "Cuis",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51200",
+      "department": "Marne"
+    },
+    {
+      "name": "Cumières",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51202",
+      "department": "Marne"
+    },
+    {
+      "name": "Dizy",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51210",
+      "department": "Marne"
+    },
+    {
+      "name": "Ecueil",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51225",
+      "department": "Marne"
+    },
+    {
+      "name": "Etrechy",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51239",
+      "department": "Marne"
+    },
+    {
+      "name": "Grauves",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51281",
+      "department": "Marne"
+    },
+    {
+      "name": "Hautvillers",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51287",
+      "department": "Marne"
+    },
+    {
+      "name": "Jouy-lès-Reims",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51310",
+      "department": "Marne"
+    },
+    {
+      "name": "Ludes",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51333",
+      "department": "Marne"
+    },
+    {
+      "name": "Mareuil-sur-Ay",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51030",
+      "department": "Marne"
+    },
+    {
+      "name": "Les Mesneux",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51365",
+      "department": "Marne"
+    },
+    {
+      "name": "Montbré",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51375",
+      "department": "Marne"
+    },
+    {
+      "name": "Mutigny",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51392",
+      "department": "Marne"
+    },
+    {
+      "name": "Pargny-lès-Reims",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51422",
+      "department": "Marne"
+    },
+    {
+      "name": "Pierry",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51431",
+      "department": "Marne"
+    },
+    {
+      "name": "Rilly-la-Montagne",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51461",
+      "department": "Marne"
+    },
+    {
+      "name": "Sacy",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51471",
+      "department": "Marne"
+    },
+    {
+      "name": "Sermiers",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51532",
+      "department": "Marne"
+    },
+    {
+      "name": "Taissy",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51562",
+      "department": "Marne"
+    },
+    {
+      "name": "Tauxières",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51564",
+      "department": "Marne"
+    },
+    {
+      "name": "Trépail",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51580",
+      "department": "Marne"
+    },
+    {
+      "name": "Trois-Puits",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51584",
+      "department": "Marne"
+    },
+    {
+      "name": "Vaudemanges",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51599",
+      "department": "Marne"
+    },
+    {
+      "name": "Vertus",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51612",
+      "department": "Marne"
+    },
+    {
+      "name": "Villedommange",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51622",
+      "department": "Marne"
+    },
+    {
+      "name": "Villeneuve-Renneville",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51627",
+      "department": "Marne"
+    },
+    {
+      "name": "Villers-Allerand",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51629",
+      "department": "Marne"
+    },
+    {
+      "name": "Villers-aux-Nœuds",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51631",
+      "department": "Marne"
+    },
+    {
+      "name": "Villers-Marmery",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51636",
+      "department": "Marne"
+    },
+    {
+      "name": "Voipreux",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51612",
+      "department": "Marne"
+    },
+    {
+      "name": "Vrigny",
+      "grade": "premier_cru",
+      "sub_region": null,
+      "echelle_pct": null,
+      "insee": "51657",
+      "department": "Marne"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+# 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
+
+> 狀態：**階段 A–F 全部完成**，最新分支 `feat/champagne-final`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 分支：`feat/champagne-course-design`（未合併，從 master 切出）
+> 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
+
+## 1. 定位與設計原則
+
+- **對象**：準備 WSET Diploma 並延伸至 MW 的學習者。香檳在 Diploma 中出現兩次：**D3（Wines of the World，法國香檳產區）**與 **D5（Sparkling Wines，氣泡酒釀造與全球氣泡酒）**，所以本課同時涵蓋「產區」與「傳統法釀造」，並在 Level 3 與其他氣泡酒做比較。
+- **與既有課程的關係**：沿用 3 階段 × 21 課的骨架與共用元件（`courseHome`、`regionMap`、遊戲引擎、品飲筆記、成就、詞彙、`gt()` 字典）。既有程式中已有零星香檳內容（`src/data/lessons/l3-5.js`、`l4-6.js`、`l4-11.js`、各國 Cava／Crémant 對照投影片），開工前要先盤點，避免重複或互相矛盾；可連結但不複製。
+- **香檳的教學主軸**（與希臘、隆河不同之處）：
+  1. **釀造即風土之外的第二主角**：同一個產區，風格差異大半來自調配（assemblage）、儲備酒、二次發酵後的陳年與 dosage——必須把「產區」與「釀造」並重。
+  2. **以村莊為單位的分級**：319 個 cru（村莊）、17 個 Grand Cru、42 個 Premier Cru 的 Échelle des Crus 歷史與現況（2010 年廢除量表，但既有村莊可保留稱呼）。
+  3. **產業結構與價格機制**：Comité Champagne（CIVC）的年度產量上限、儲備酒制度、葡萄價格、Grandes Marques／種植者（RM）／合作社（CM）的分工與出貨量下滑，是 MW 論述題素材。
+  4. **氣候變遷**：採收提早、酸度下降、新准品種（含 2025 年加入的 Chardonnay Rosé），與北方邊緣氣候的本質。
+- **事實原則**（沿用）：數字一律標註年份，優先 Comité Champagne／CIVC 官方資料，其次 INAO 產品規格；來源有出入者課內標明、不進測驗。
+
+## 2. 課程結構（3 階段 21 課）
+
+### Level 1 - 香檳入門（6 課）
+- **CH1M1 歷史、地理與風土**
+  - `ch-l1-1` 認識香檳（15 分）
+  - `ch-l1-2` 地理、氣候與白堊土壤（16 分）
+- **CH1M2 葡萄與釀造**
+  - `ch-l1-3` 葡萄品種（16 分）
+  - `ch-l1-4` 香檳如何釀成：傳統法概論（18 分）
+- **CH1M3 風格與評量**
+  - `ch-l1-5` 酒款風格、甜度與標籤（18 分）
+  - `ch-l1-6` Level 1 綜合評量（25 分）
+
+### Level 2 - 香檳產區與法規（8 課）
+- **CH2M1 法規與分級**
+  - `ch-l2-1` AOC 法規與 Échelle des Crus（20 分）
+- **CH2M2 四大產區**
+  - `ch-l2-2` 漢斯山（Montagne de Reims）（20 分）
+  - `ch-l2-3` 馬恩河谷與白丘（Vallée de la Marne、Côte des Blancs）（22 分）
+  - `ch-l2-4` 巴爾丘（Côte des Bar）與外圍產區（20 分）
+- **CH2M3 釀造與生產者**
+  - `ch-l2-5` 釀造 I：壓榨、一次發酵與調配（22 分）
+  - `ch-l2-6` 釀造 II：二次發酵、陳年與除渣（22 分）
+  - `ch-l2-7` 酒款類型、生產者結構與靜態酒（20 分）
+- **CH2M4 評量**
+  - `ch-l2-8` Level 2 綜合評量（30 分）
+
+### Level 3 - 香檳 Diploma／MW 精修（7 課）
+- **CH3M1 栽培與釀造**
+  - `ch-l3-1` 葡萄栽培深度與氣候變遷（22 分）
+  - `ch-l3-2` 釀造風格深度：氧化 vs 還原、陳年與 dosage（24 分）
+- **CH3M2 風土、比較與法規**
+  - `ch-l3-3` 風土與風格比較，含其他氣泡酒（24 分）
+  - `ch-l3-4` 法規深度與標籤判讀（22 分）
+- **CH3M3 產業、應考與評量**
+  - `ch-l3-5` 產業、市場與貿易（20 分）
+  - `ch-l3-6` Diploma 氣泡酒品飲與論述（25 分）
+  - `ch-l3-7` Level 3 綜合評量（35 分）
+
+## 3. 各課重點與查證清單
+
+> ⚠＝數字或規定須先對照 Comité Champagne／INAO 產品規格再寫入；**未定案前不進測驗**。
+
+### Level 1
+| 課 | 重點 | 備註與 ⚠ |
+|---|---|---|
+| ch-l1-1 | 羅馬與中世紀的酒、Reims 加冕與酒；Dom Pérignon 迷思（「發明香檳」是後世神話）；氣泡的科學（英國 Merret 1662 的二次發酵紀錄）；19 世紀大廠崛起（Veuve Clicquot 轉瓶等）；1911 暴動；1927 年產區劃界；2015 年 UNESCO「香檳山坡、酒廠與酒窖」；一戰與二戰；出貨量與地位 | ⚠ 歷史年代與人物逐項查證，神話與事實分開寫 |
+| ch-l1-2 | 位置（巴黎東北約 150 公里）、北方邊緣氣候（年均溫約 11°C，海拔 90–300 公尺）、白堊（Belemnita 與 Micraster 兩種白堊層）、Marne 66%／Aube 23%／Aisne 10%（Haute-Marne、Seine-et-Marne 其餘）、四大產區概述、白堊窖（crayères）與 UNESCO | ⚠ 比例與面積以 CIVC 最新關鍵數字為準（2023 資料 34,200 公頃，319 個 cru） |
+| ch-l1-3 | Pinot Noir、Meunier、Chardonnay 三大品種（比例約 38／31／31，不同年度資料略有出入）；四個「被遺忘」品種 Arbane、Petit Meslier、Pinot Blanc、Pinot Gris 合計約 0.3%；2025 年新增 Chardonnay Rosé；各品種在酒中的角色 | ⚠ 品種比例兩個來源出入（Chardonnay 31%／32%，Meunier 31%／30%），課內標註年份，不進測驗 |
+| ch-l1-4 | 傳統法七步：壓榨→一次發酵→調配→裝瓶（tirage）→二次發酵→酒渣陳年→轉瓶／除渣（dégorgement）→ dosage→封瓶；二次發酵產生約 5–6 大氣壓；與 Charmat／轉移法概念對照 | ⚠ 壓力數字、tirage 糖量（約 24 g/L）寫入前核對 |
+| ch-l1-5 | 風格：NV、Vintage、Blanc de Blancs、Blanc de Noirs、Rosé、Prestige Cuvée；甜度由 Brut Nature（0–3）到 Doux（>50 g/L）；標籤上的 NM／RM／CM／MA／RC 等代碼；NV 約占八成以上產量 | ⚠ 甜度級別的 g/L 邊界值，以 EU／INAO 規格為準（此處 Brut ≤12、Extra Dry 12–17、Sec 17–32、Demi-Sec 32–50、Doux >50 需核對允許誤差） |
+| ch-l1-6 | 8 題綜合評量（及格 60） | 避開有出入的數字 |
+
+### Level 2
+| 課 | 重點 | 備註與 ⚠ |
+|---|---|---|
+| ch-l2-1 | AOC 法規：允許品種、每年由 Comité Champagne 提案與 INAO 核定的產量上限、最低酒精、壓榨規定（4,000 公斤一壓、cuvée 與 taille 的限額）、陳年最低規定（NV 自裝瓶起 ≥15 個月；Vintage ≥36 個月）；Échelle des Crus（100% ＝ Grand Cru，90–99% ＝ Premier Cru，其餘 80–89%；價格量表 2004 年停用、2010 年 INAO 廢除，來源年份不同，見第 7 節階段 C 結論） | ⚠ 壓榨與 cuvée／taille 的數字（歷史上 2,050 公升＋500 公升）；陳年規定「自裝瓶」與「酒渣上」的定義；Premier Cru 村莊數（42） |
+| ch-l2-2 | 漢斯山：Pinot Noir 為主；9 個 Grand Cru 村莊（Ambonnay、Beaumont-sur-Vesle、Bouzy、Louvois、Mailly-Champagne、Puisieulx、Sillery、Verzenay、Verzy）；Premier Cru 例；Chardonnay 在北坡（Montagne 的 Villers-Marmery、Trépail 等）；Coteaux Champenois 的 Bouzy 紅酒 | ⚠ Grand Cru 村莊名單逐一核對；各村主要品種 |
+| ch-l2-3 | 馬恩河谷：Meunier 為主；Grand Cru 僅 Aÿ（含 Aÿ-Champagne）與 Tours-sur-Marne（Pinot Noir）；Mareuil-sur-Aÿ 等 Premier Cru。白丘：Chardonnay 為主；6 個 Grand Cru（Avize、Chouilly、Cramant、Le Mesnil-sur-Oger、Oger、Oiry）；Chouilly 與 Tours-sur-Marne 的「僅限單一顏色品種」說法 | ⚠ 17 個 Grand Cru 總數（9＋2＋6）與各村限制須對照官方資料 |
+| ch-l2-4 | 巴爾丘（Aube）：Pinot Noir 約 83%（約 7,900 公頃、64 村，2022 數據）、基末里階（Kimmeridgian）泥灰岩土壤、與 Chablis 相連；Côte de Sézanne、Vitry-le-François 等外圍；Aisne 與 Haute-Marne、Seine-et-Marne；Rosé des Riceys（靜態粉紅 AOC） | ⚠ 巴爾丘面積／村莊數用最新資料；Rosé des Riceys 規格 |
+| ch-l2-5 | 採收（手採規定）；壓榨（Coquard 垂直壓榨機）；一次發酵（不鏽鋼、橡木桶）；MLF 取捨；調配（assemblage）：多品種、多區塊、多年份；儲備酒（réserve）與永續儲備酒（solera／perpetual reserve）；Comité Champagne 的 réserve qualitative | ⚠ 儲備酒制度的上限與使用規則 |
+| ch-l2-6 | tirage（酒、糖、酵母、澄清劑）；皇冠蓋 vs 軟木塞；酒渣陳年與自溶（autolysis）風味；轉瓶（remuage、gyropalette）；冷凍頸部除渣；dosage（liqueur d'expédition）；除渣日期標示；上市後的陳年 | ⚠ 自溶時間與風味關係寫「趨勢」，避免硬數字 |
+| ch-l2-7 | 酒款類型細節（Prestige、Vintage、Rosé 兩種作法：調配約 5–20% 紅酒，或浸皮）；生產者結構（Grandes Marques／négociant、種植者酒莊 RM、合作社 CM、MA 買家品牌）；代表酒款不列價格；Coteaux Champenois、Ratafia、Fine de la Marne | ⚠ 生產者家數與比例（2023：16,200 種植者、370 酒廠、130 合作社；2025 版：16,460／410／120），標註年份與來源 |
+| ch-l2-8 | 重點回顧＋10 題綜合評量（及格 60） | 避開有出入的數字 |
+
+### Level 3
+| 課 | 重點（對應 Diploma／MW） | 備註與 ⚠ |
+|---|---|---|
+| ch-l3-1 | 修剪制度（Taille Chablis、Cordon de Royat、Guyot、Vallée de la Marne）；高密度種植（約 8,000 株／公頃）；霜害、黴病、冰雹；採收期提早與酸度下降；可持續認證（Viticulture Durable en Champagne、HVE）、除草劑與覆蓋作物；新品種／砧木研究 | ⚠ 認證面積比例、除草劑禁令時程須對照現況 |
+| ch-l3-2 | 還原式 vs 氧化式風格；桶發酵與桶陳；是否做 MLF；儲備酒比例與 NV 風格穩定；dosage 與 zero dosage 趨勢；除渣日期；酒渣陳年長短與風味；單一葡萄園／單一年份（lieu-dit、clos）新風潮 | 概念層可寫；具體比例以酒莊為準，不寫未經查證的酒莊細節 |
+| ch-l3-3 | 風土比較：漢斯山 vs 馬恩河谷 vs 白丘 vs 巴爾丘；Aÿ vs Cramant vs Bouzy；Blanc de Blancs vs Blanc de Noirs 的風格；對照 Cava、Franciacorta／Trentodoc、英國氣泡酒、Crémant、Tasmania；連結 Chablis（同為白堊／石灰質）與勃艮地課程 | 建立盲品／論述用比較表 |
+| ch-l3-4 | 標籤判讀：NM／RM／CM／RC／SR／ND／MA；dosage 用語；Vintage／Millésimé 與 Prestige 用語；產區保護範圍（「Champagne」名稱在全球的保護、與「méthode champenoise」用語的禁用）；Comité Champagne 的角色 | ⚠ 標籤代碼全表須對照官方 |
+| ch-l3-5 | 年度出貨量（2023：約 2.99 億瓶；2025：約 2.66 億瓶，營收約 57 億歐元，2025 資料，標註來源與年份）；庫存約相當於四年出貨；出口占比；各大集團（LVMH、Vranken-Pommery、Lanson-BCC、Pernod Ricard 等）；葡萄價格與供需；關稅、通膨與市場下滑；MW 題：產量上限政策與品牌 | ⚠ 最新年度數字須重查（2026 年第一季是否已有 2025 全年更新）；公司結構事實逐項核對 |
+| ch-l3-6 | Diploma D5 風格的氣泡酒品飲筆記（SAT）示範；NV 比較盲品線索；MW 風格論述範例：「氣候變遷下香檳是否仍需 dosage？」「儲備酒制度對 NV 風格的影響」「種植者酒莊 vs Grandes Marques 的品質與價值」 | 考試形式提醒「以 WSET／IMW 官方最新規格為準」 |
+| ch-l3-7 | 12 題綜合評量（及格 60） | 避開有出入的數字 |
+
+## 4. 互動功能設計
+
+### 4.1 互動地圖（香檳的特色：以村莊為單位）
+- 香檳的分級單位是**村莊（commune）**，與希臘（PDO 多邊形）、隆河（AOC 多邊形）不同。建議做法：
+  1. 取得 319 個 cru 村莊清單（Comité Champagne／INAO 公開資料，含 Échelle 百分比或 Grand Cru／Premier Cru 標記）。⚠ 須確認清單來源與授權。
+     - **階段 C 調查結果（2026-10-25）**：
+       - ✅ **INAO 產品規格**（2024-01-25 令核定；Comité Champagne 網站有 PDF）第 I 章 II-b／c 列出 17 個 Grand Cru 與 42 個僅 Premier Cru 村莊（名稱，無 INSEE 代碼、無百分比）。已整理為 `data/champagne/crus.json`（**partial**，59 筆，`insee` 為 null）。官方文件，可引用。
+       - ❌ **319 個 cru 全名單＋Échelle 百分比**：官方已不公布（價格量表已廢）；第三方（vignobletiquette、champagneclub、bullesdechamp 等）只有分級彙整或 HTML 列表，數字互有出入（294／298／319、44／258／237），且無明確授權。未找到機器可讀、授權明確的版本。
+       - ⏳ **INSEE 代碼與邊界**：INAO「Aires géographiques des AOC/AOP」（data.gouv.fr，**Licence Ouverte**，每村列出所屬 AOC 與 INSEE 代碼，2025-10-09 更新）可用來取得**屬於 Champagne AOC 的村莊清單**（約 319 個）與 INSEE；邊界用 IGN Admin Express／Etalab 行政區（開放授權）。本次排程的代理環境封鎖 data.gouv.fr 與 extranet.inao.gouv.fr（連線被重置），**未能下載**；階段 E 若有網路請由此處理，並以 INSEE 代碼與 `crus.json` 的 59 村對應分級；其餘村莊標「cru」。
+       - 結論：階段 E 的三色圖層可行（Grand Cru／Premier Cru／其餘 cru），Échelle 百分比不上圖（只標分級）。
+  2. 村莊邊界使用法國公開行政區資料（IGN Admin Express／data.gouv.fr，開放授權）依 INSEE 代碼合併，產生 `public/champagne/champagne_crus.geojson`。
+  3. 圖層：以 Grand Cru（17）／Premier Cru（42）／其餘 cru 三色；可依四大產區（漢斯山／馬恩河谷／白丘／巴爾丘）篩選；點選村莊顯示主要品種、所屬產區、分級、特色。
+- 備選：若村莊清單無法取得，退而求其次用 Bianchi et al.（2022，CC0）的 `PDO-FR-*` Champagne 單一多邊形加「示意點」（比照希臘 PGI），明確標示非官方邊界。
+- **氣候圖層**：重用 `build-greece-climate.mjs` 的流程（Open-Meteo ERA5：夏季均溫、日照、雨量），以四大產區代表點為主；再加「葡萄生長季均溫趨勢」線，對應氣候變遷教學。
+- 白堊土壤層：視資料取得性（BRGM 公開地質圖）作為選配，不阻擋上線。
+
+### 4.2 遊戲（沿用 QuizEngine）
+- **產區速答**：村莊 → 四大產區／分級（簡單：17 個 Grand Cru 村莊；困難：加入 Premier Cru）。
+- **品種配對**：品種 → 角色與風格；產區 → 主要品種。
+- **釀造順序排序**（香檳特有的新題型，若引擎支援排序題；否則改多選）：傳統法步驟排序、dosage 級別對應 g/L。
+- **分級辨識**：標籤代碼（NM／RM／CM…）、甜度用語、陳年規定、Échelle 規則。
+- **知識閃問**：取自 Level 1–3 課程測驗，套用 lesson overlay 翻譯。
+
+### 4.3 品飲筆記
+- 沿用 `tasting_notes`（`source = 'champagne'`，產區存 `aoc_id`），需 migration 擴充 `wine_type`：NV、Vintage、Blanc de Blancs、Blanc de Noirs、Rosé、Prestige、Demi-Sec／Doux、Coteaux Champenois／靜態、其他。
+- 詞彙：氣泡（mousse：細緻度、持久度）、自溶（餅乾、brioche、烤麵包、杏仁）、一級香氣（青蘋果、檸檬、白花）、氧化（堅果、焦糖）；SAT 風格結構（甜度、酸度、酒體、氣泡、尾韻）。
+
+### 4.4 成就、詞彙、其他
+- 成就：仿 `greeceAchievementSystem.js`（課程完成、探索 17 個 Grand Cru、遊戲滿分、筆記）；專屬成就如「十七座聖殿」（探索全部 Grand Cru 村莊）。
+- 詞彙辭典：加入 `champagne`，第三語為法文（與隆河共用 `fr` 欄位方案，兩個課程需協調同一個 migration，避免衝突）。
+- 英日文：全部 UI 與課程內容與既有流程相同。
+
+## 5. 技術落點（比照希臘／隆河）
+
+- `src/components/champagne/`：`ChampagnePage`、`ChampagneLevelSelector`、`ChampagneLearningSystem`、`ChampagneCourseLayout`、`ChampagneMapPage`、`games/*`、`notebook/*`
+- `src/data/champagne/ch-l*.js`（21 課）、`gameData.js`、`tastingData.js`
+- `src/stores/champagneLearningStore.js`、`champagneAchievementSystem.js`
+- 共用接點：`courseProgressSync.js`、`lessonContentLoader.js`、`router/index.js`（`/champagne`）、`PlatformHome.vue`（`ADMIN_ONLY_COURSES`）、`regionThemes.js`、`useAchievements.js`、詞彙元件
+- ⚠ **與隆河分支的合併衝突**：兩個課程都會修改上述共用檔案（router、PlatformHome、useAchievements、courseProgressSync、詞彙 migration）。建議兩邊各自完成後，一前一後合併，第二個合併時再解衝突，或先抽出共用的「新課程註冊」工具。
+- `public/champagne/champagne_crus.geojson`、`public/data/champagne-climate.json`、`scripts/build-champagne-*.mjs`
+- `supabase/migrations/…`：wine_type 擴充、courses 新增 `champagne`（`active=false`）、詞彙欄位
+
+## 6. 實作階段（建議，與隆河同步）
+
+| 階段 | 內容 | 分支 |
+|---|---|---|
+| A | 框架：頁面、路由、進度、21 課空殼、en/ja 標題；僅管理員可見 | `feat/champagne-course-framework` |
+| B | Level 1（6 課）＋測驗＋en/ja | `feat/champagne-l1` |
+| C | Level 2（8 課）＋查證 | `feat/champagne-l2` |
+| D | Level 3（7 課）＋論述題範本 | `feat/champagne-l3` |
+| E | 村莊地圖、氣候圖層、遊戲、品飲筆記、成就、詞彙 | `feat/champagne-interactive` |
+| F | 全面檢查、migration 準備 | `feat/champagne-final` |
+
+每階段維持：新分支開發 → 推送 → 使用者說「合併」才合併；階段之間因未合併，後一階段從前一階段分支切出。
+
+## 7. 資料來源與待查證
+
+- **官方**：Comité Champagne（champagne.fr、champagne.education 的 Key Figures 與教學資源）、INAO Champagne 產品規格（Cahier des charges）、DGCCRF 標籤指南。
+- **第三方**：WineWithSeth（Champagne AOC）、Wikipedia（僅交叉比對）、Difford's Guide（甜度等級）、CMS 教材。
+- **使用者 Drive 既有資料**：`Champagne Region Introduction`（簡報）、`06La Vinification du Champagne香檳釀造`（簡報，兩個版本）、`Champagne grand cru`（試算表）、`15 Champagne Prestige Cuvee`（文件）、`CMS Champagne.pdf`、`葡萄酒賞析 香檳釀造&不同類型的氣泡酒`（講義）、`法國乳酪 Bourgogne/Champagne`（餐酒搭配素材）。
+- **已知出入（需定案）**：
+  1. 品種比例：Chardonnay 31%／32%、Meunier 31%／30%（不同年份資料）
+  2. 生產者家數：2023 版（16,200／370／130）與 2025 版（16,460／410／120）
+  3. 出貨量：2023 約 2.99 億瓶、2025 約 2.66 億瓶（年度不同，非衝突，但須標註年份）
+  4. Grand Cru 每村的品種限制（Chouilly、Tours-sur-Marne、Aÿ 的說法）
+  5. 甜度等級邊界值與 EU 允許誤差
+  6. Premier Cru 村莊數（42）與 Échelle 退場後的現行用法
+
+**階段 C 查證結論（2026-10-25，以 INAO 規格＞Comité Champagne＞第三方）**
+- 第 4 項 Grand Cru 品種限制：INAO 2024 規格將 17 村放在同一條款，**無品種限制**；舊價格量表曾依顏色計價（Chouilly 黑葡萄 95%、Tours-sur-Marne 白葡萄 90%，champagneclub 彙整），所謂「Chouilly 限 Chardonnay、Tours-sur-Marne 限 Pinot Noir」是舊量表痕跡與慣例，**不寫成法規**、不進測驗。
+- 第 6 項 Premier Cru 村莊數：INAO 規格列 **42** 個僅 Premier Cru（外加 17 個 Grand Cru 也可標 Premier Cru）；舊資料的 44（17／44／258＝319）多出的 2 個，很可能是舊表把 Chouilly（黑）與 Tours-sur-Marne（白）另列為 Premier Cru（vignobletiquette 的 44 名單含此二項）——此為推測。課內寫 42＋說明差異，**不進測驗**。
+- 價格量表退場年份：Taittinger、WineWithSeth 寫 2004（歐盟競爭法，固定葡萄價格停止）；Comité Champagne FAQ 寫 INAO 於 2010 年廢除量表（1952 年命令引入）；現行 Grand／Premier Cru 稱呼依 INAO 規格「在地、誠信、持續的慣例」。課內並列，**不進測驗**。
+- 設計稿第 3 節 ch-l2-1「Échelle 80–100%、2010 年廢除」→ 改為「100%＝GC、90–99%＝PC、其餘 80–89%；價格量表 2004 年停用、2010 年 INAO 廢除」。
+- 設計稿「壓榨 2,050＋500 公升」：INAO 規格只寫「每 160 公斤 ≤ 102 公升」（＝4,000 公斤 2,550 公升）；2,050＋500 的 cuvée／taille 分法來自 Comité Champagne 釀造說明（factsheet）。
+- 陳年：INAO 規格「自裝瓶（tirage）起 NV ≥ 15 個月、Vintage ≥ 36 個月」才可上市，另規定除渣不得早於裝瓶後 12 個月；Comité Champagne 說明文件把 15／36 個月寫成「在酒渣上」。課內以規格措辭為準，兩者措辭差異不進測驗，15／36 數字一致可進測驗。
+- 儲備：INAO 規格每位業者上限 **10,000 公斤葡萄/公頃**（舊文章曾寫 8,000）；儲備酒不得標年份；Vintage ≤ 當年酒量 80%、不含儲備酒。產量：基準 12,400、butoir 15,500 公斤/公頃；年度「商業產量」由 Comité Champagne 夏季決定（2022：12,000；2023：11,400；2024：10,000；2025：9,000；2026：8,800，媒體報導，僅示例）。
+- 巴爾丘：約 7,900 公頃／64 村（WineWithSeth 引 2022；他處 8,000 公頃／63 村）、Pinot Noir 83%（另有 86%）——出入，不進測驗。
+- Rosé des Riceys：僅 Pinot Noir；INAO 規格（2026 年草案 PNO）整串半碳酸浸漬、天然酒精 ≥ 10%；AOC 1947 年 12 月 8 日（WineWithSeth）。Coteaux Champenois：靜態白／粉紅／紅，天然酒精 ≥ 9%，較新版草案品種清單含 Chardonnay Rosé。此二規格取自 INAO 的 PNO 草案，定案前可能微調。
+- 香檳 AOC 規格 2024 年 1 月版品種清單為 7 種主要品種＋Voltis（不含 Chardonnay Rosé；後續版本加入），與 Level 1 註記一致。
+
+## 8. 已確認的決定（2026-10-25）
+
+1. 範圍：只做 Champagne（Crémant／Cava／Franciacorta 僅在 Level 3 作比較課內容）。
+2. 結構：沿用 3 階段 21 課，Level 2 以四大產區加釀造分開教。
+3. 地圖：採村莊層級（319 村清單＋行政區邊界）；清單取得失敗時自動退回簡易版（單一多邊形＋示意點）。
+4. 排程：A→F 六個排程任務，與隆河同一組時段並行（A 對應隆河 B 的時段，F 之後多一個時段）。
+5. 公開：先只給管理員（`ADMIN_ONLY_COURSES` 加入 `champagne`）。
+
+## 9. 已完成的框架項目（階段 A，2026-10-25）
+
+- `src/components/champagne/`：`ChampagnePage`、`ChampagneLevelSelector`（3 階段）、`ChampagneLearningSystem`、`ChampagneCourseLayout`（複製自希臘並改寫；地圖／遊戲／筆記／成就／詞彙尚未接上）。
+- `src/locales/champagneUi/`（`index.js`、`en.js`、`ja.js`）：獨立的 `gt()` 字典（未動 greeceUi，避免與隆河分支衝突）。
+- `src/stores/champagneLearningStore.js`：21 課大綱（依第 2 節）、localStorage 進度（key `champagne-wine-academy-progress:{userId}`）、同步課程代號 `champagne`。
+- `src/data/champagne/ch-l1-1.js … ch-l3-7.js`：21 個空殼（封面＋「內容製作中」），`src/locales/{en,ja}/lessons/champagne/*.json` 先放標題與簡介。
+- 課程首頁的地圖／遊戲／筆記入口顯示「製作中」（停用）；成就入口暫不顯示。
+- `supabase/migrations/20261026000200_add_champagne_course.sql`：courses 新增 champagne（active=false、show_on_home=false），**未套用**。
+
+### 共用檔案改動（解衝突用，皆為純新增條目）
+
+| 檔案 | 改動 |
+|---|---|
+| `src/router/index.js` | 在 `/greece/course` redirect 之後新增 `/champagne`、`/champagne/course` 路由；`COURSE_ACCESS_RULES` 在 `Greece` 後新增 `Champagne` 一行 |
+| `src/components/PlatformHome.vue` | 舊世界卡片區尾端（Greece 卡片之後）新增 champagne 卡片；`courseConfig` 在 greece 後新增一行；`courseStatuses`／`courseShowHome` 各加 `champagne: false`；`ADMIN_ONLY_COURSES = ['greece', 'champagne']`；樣式區在 `/* Greece card */` 前新增 champagne 樣式 |
+| `src/components/shared/courseHome/regionThemes.js` | 新增 `champagne` 主題（香檳金 #A8801C） |
+| `src/components/PresentationLesson.vue` | `getCourseGradient`／`getCourseIcon` 各新增 `ch-` 一行 |
+| `src/data/lessonContentLoader.js` | 在 `gr-l3-7` 後新增 21 行 `ch-l*` 註冊 |
+| `src/lib/courseProgressSync.js` | 在 Loire 區塊前新增 `saveChampagneLesson`、`loadAndMergeChampagneProgress` |
+| `src/locales/{en,ja,zh-TW}/home.js` | `labels` 新增 `champagne`；`courses` 新增 `champagne` 區塊（australia 之前） |
+| `src/locales/{en,ja,zh-TW}/common.js` | 課程名稱表新增 `champagne` |
+
+尚未改動（留待階段 E）：`useAchievements.js`、詞彙元件（`WineGlossary`／`AdminGlossary`）、詞彙與 tasting wine_type migration。
+
+## 10. 第 7 節「已知出入」查證結論（階段 A，來源以 WineWithSeth 彙整 Comité Champagne 資料、champagne.education；官方 PDF 尚待階段 B 補強）
+
+1. **品種比例**：Pinot Noir 38%；Chardonnay 31%（2025 關鍵數字為 32%）、Meunier 31%（2025 為 30%）；Arbane、Petit Meslier、Chardonnay Rosé、Pinot Blanc、Pinot Gris 合計約 0.3%。結論：課內以「約 38／31／31，2025 版 32／30」標年份，**不進測驗**。
+2. **生產者家數**：2025 版為種植者 16,460、酒廠 410、合作社 120（與設計稿 2025 版數字一致）；2023 版 16,200／370／130 為較舊年度。結論：以 2025 為準並標年份，不進測驗。
+3. **出貨量**：2025 約 2.661 億瓶（酒廠 1.919 億、合作社與種植者 0.742 億），營收約 57 億歐元；2023 約 2.99 億瓶。屬年度差異而非衝突，標註年份。
+4. **Grand Cru 品種限制**（Chouilly、Tours-sur-Marne、Aÿ）：查無任何形式的法規限制，僅有「慣例／風格」描述（白丘幾乎全為 Chardonnay；Aÿ 以 Pinot Noir 著稱）。結論：**不在課內寫成法規**，僅寫風格傾向；Grand Cru 總數 17、白丘 6 村、馬恩河谷 2 村（Aÿ、Tours-sur-Marne）與設計稿一致。
+5. **甜度邊界**：Brut Nature 0–3、Extra Brut 0–6、Brut <12（至 12）、Extra Dry 12–17、Sec 17–32、Demi-Sec 32–50、Doux >50 g/L；法規容許每級 ±3 g/L，相鄰級別重疊。champagne.education 的 Brut 為「<12」。結論：課內寫邊界值並註明 ±3 g/L 容許誤差與 Brut Nature 無添加糖的差別；邊界數值不進測驗，只考級別順序。
+6. **Premier Cru 村莊數**：設計稿為 42，WineWithSeth 寫「約 44」。結論：**來源有出入，課內寫「約 42–44（依來源）」，不進測驗**；階段 C 以 Comité Champagne／INAO 官方清單核對。另：Échelle des Crus 於 2004 起因歐盟競爭法停止作為固定葡萄價格量表，INAO 於 2010 廢除量表，但原有 Grand Cru／Premier Cru 村莊保留稱呼（1952 年 7 月 1 日法令引入）；設計稿「2010 年廢除量表」需註明「價格量表 2004 起停用」。
+
+## 11. 狀態區塊
+
+| 階段 | 狀態 | 分支 |
+|---|---|---|
+| A 框架 | ✅ 完成（建置驗證通過） | `feat/champagne-course-framework` |
+| B Level 1 | ✅ 完成（6 課，建置驗證通過） | `feat/champagne-l1`（從 `feat/champagne-course-framework` 切出） |
+| C Level 2 | ✅ 完成（8 課，建置驗證通過） | `feat/champagne-l2`（從 `feat/champagne-l1` 切出） |
+| D Level 3 | ✅ 完成（7 課，建置驗證通過） | `feat/champagne-l3`（從 `feat/champagne-l2` 切出） |
+| E 互動（地圖、遊戲、筆記、成就、詞彙） | ✅ 完成（建置與資料驗證通過；**未做實機地圖畫面檢查**；migration 已備妥未套用） | `feat/champagne-interactive`（從 `feat/champagne-l3` 切出） |
+| F 全面檢查、migration | ✅ 完成（見第 16 節、`docs/CHAMPAGNE_LAUNCH_CHECKLIST.md`） | `feat/champagne-final`（從 `feat/champagne-interactive` 切出） |
+
+## 12. Level 1 內容說明與查證註記（階段 B，2026-10-25）
+
+**內容**：`ch-l1-1` … `ch-l1-6` 各 4 張內容投影片＋知識檢測（3 題）；`ch-l1-6` 為 8 題綜合評量（及格 60）。en／ja 為 flat-key overlay，已做逐鍵覆蓋率檢查（每課中文原文 vs en／ja：缺漏 0、多餘 0）。測驗正解位置已平均分配。未新增 `champagneUi` 字串（Level 1 內容皆在課程 JSON 內）。
+
+**官方來源（本階段實查）**：Comité Champagne 的 Key Figures（2023、2024、2025 三版 PDF）、champagne.fr「Champagne at a glance」與 FAQ（含甜度級別、最低陳年、5–6 bar、UNESCO 2015-07-04、1927 法律、1936 AOC）。INAO 產品規格全文與官方 PDF 的村莊清單留待階段 C。
+
+**查證結論（更新第 10 節）**
+1. **Key Figures 三個版本**：2023 版——種植者 16,200／酒廠 370／合作社 130；2024 版——16,300／390／125，出貨 2.717 億瓶、營收 58 億歐元、出口占 25%；2025 版——16,460／410／120，出貨 2.661 億瓶（2025 採收 2.64 億瓶）。34,200 公頃、319 cru、5 個 département、3 個大區在三版一致。課內標年份，生產者家數與出貨量**不進測驗**。2025 全年營收官方頁面本次未取得，未寫入。
+2. **品種比例**：官方 2025 版為 Pinot Noir 38／Chardonnay 32／Meunier 30；較早資料為 38／31／31。四個古老品種：官方 FAQ 寫「不到 0.4%」，較早資料寫約 0.3%——課內寫「不到 0.4%」並註明，不進測驗。
+3. **Chardonnay Rosé**：來源日期不一——有寫 2025 年 7 月產區核准，也有寫歐盟 2026 年 6 月確認；另 Wine Spectator 稱它是約 1900 年起在香檳區有紀錄的 Chardonnay 粉紅變異，因行政疏失一度從規格消失、2025 年重新核准；許可品種「共 8 種」。課內不寫確切日期、不進測驗。**Voltis**（抗病品種，2022 年底核准試種，園區上限 5%、單一調配上限 10%）屬「新品種」，與傳統八品種分開，留待 Level 3。
+4. **各 département 比例**：官方 Key Figures 未列分項。常見說法 Marne 約 66%／Aube 約 23%／Aisne 約 10%，但 Difford's Guide 寫 Marne 約 75%。課內只教大小順序（Marne 最大），比例不進測驗。
+5. **歷史年代**：Comité Champagne FAQ 把 **1911** 寫為村莊價格量表（80–100%）首次官方設立，與 Wikipedia 對「1911 暴動後才有量表」的敘述順序略有出入；暴動（1911 年 1 月，Damery／Hautvillers／Aÿ，逾 4 萬軍隊，Aube 隨後納入）、**1927** 法律定界與品種、**1936** AOC 確認、1952 年起 Grand／Premier Cru 稱呼、**2010** 量表廢除，均在課內標出處。Level 2 法規課需再以 INAO 文件核對「2004 年起價格量表停用」。
+6. **Dom Pérignon**：Merret 論文 1662 早於他 1668 到任 Hautvillers；Comité Champagne 明言「香檳不是任何人發明的」。「我在喝星星」被廣泛認為是後世廣告，課內寫「普遍被認為」。
+7. **甜度**：Brut Nature 0–3（不加糖）、Extra Brut 0–6、Brut <12、Extra Dry 12–17、Sec 17–32、Demi-Sec 32–50、Doux >50 g/L，±3 g/L 容許；只考順序。
+8. **其他仍屬「常見教科書值」而未進測驗**：tirage 糖量約 24 g/L（約 4 g/L 產生 1 bar）、二次發酵增加約 1.2–1.3% 酒精、NV 約占七至八成產量、Rosé 調配紅酒約 5–20%、年均溫約 11°C、海拔 90–300 公尺、巴黎東北約 150 公里。Level 2 對照 INAO 規格後可升級為正式數字。
+
+**與既有課程的盤點**：`l3-5.js`（僅標題提及 Champagne 為挑戰酒款）、`l4-6.js`（Champagne 名稱保護案例：「3,000+ 起仿冒」「市場萎縮 80%」為該課自有數字，本課未引用）、`l4-11.js`（Champagne 50 指數）、`l1-5.js`／`climateAndEnvironmentLessons.js`（Crémant de Bordeaux 傳統法、至少 12 個月酒渣）、`loire/lo-l1-7.js`／`lo-l3-5.js`（Crémant de Loire 對照：NV 15 個月其中 12 個月酒渣、Vintage 3 年）——與本階段內容一致，無矛盾；`ch-l1-4`、`ch-l1-5` 內以文字指引羅亞爾課程，未做超連結。
+
+## 13. Level 2 內容說明與查證註記（階段 C，2026-10-25）
+
+**內容**：`ch-l2-1` … `ch-l2-7` 各 4 張內容投影片＋知識檢測（3 題）；`ch-l2-8` 為 3 張重點回顧＋10 題綜合評量（及格 60）。en／ja 為 flat-key overlay，新增 `scripts/check-champagne-i18n.mjs` 逐鍵覆蓋率檢查（`node scripts/check-champagne-i18n.mjs ch-l2`）：Level 2 共 1,052 個中文鍵，en／ja 缺漏 0、多餘 0、空值 0。（ch-l1-4 ja 的一個「同原文」警告是「約 20 bar」誤報。）測驗正解位置已分散（Level 2 共 31 題）。未新增 `champagneUi` 字串。
+
+**主要來源（本階段實查）**：INAO《Champagne》AOC 產品規格 PDF（champagne.fr 2024-03 上架版，2024-01-25 令；全文逐條對照：品種、密度與修剪、整串採收、143 g/L、9%、12,400／15,500／10,000 公斤/公頃、102 公升／160 公斤、tirage 自 1 月 1 日、除渣 ≥ 12 個月、15／36 個月、Vintage ≤ 80%、17 ＋ 42 村名單、瓶型倒瓶規則、標示規則）；Comité Champagne champagne.education「Champagne Making Process」說明（4,000 公斤 marc、cuvée 2,050＋taille 500、6 bar）與 champagne.fr FAQ（甜度級別、Rosé 5–20%、1952 命令、2010）；Taittinger、WineWithSeth、champagneclub、Academie du Vin、The Drinks Business 作交叉比對。INAO 的 Rosé des Riceys／Coteaux Champenois 規格為 PNO 草案（經 WebFetch 讀取）。
+
+**課內標明、不進測驗的項目**：Premier Cru 42／44；價格量表終止年份 2004／2010；Aube 面積、村數、Pinot Noir 83／86%；各 département 比例；生產者家數（2023／2024／2025 三版）；年度商業產量；Grand Cru 品種限制說法；「在酒渣上」與「自裝瓶起」措辭；儲備上限舊值 8,000；Rosé des Riceys 與 Coteaux Champenois 的草案條文；風格描述（Cramant、Le Mesnil、Bouzy 等）與 Fine de la Marne／Marc de Champagne（未逐項查證）。
+
+**共用檔案改動**：僅新增 `scripts/check-champagne-i18n.mjs` 與 `data/champagne/crus.json`；無共用檔案（router、PlatformHome 等）改動，與隆河分支無衝突。
+
+**後續建議**：階段 D（Level 3）可直接引用上列查證結論（尤其 80% Vintage、儲備 10,000、標示規則 CDC 第 X 章）；階段 E 地圖請見第 4.1 節的資料取得計畫（需能連到 data.gouv.fr）。
+
+## 14. Level 3 內容說明與查證註記（階段 D，2026-10-25）
+
+**內容**：`ch-l3-1` … `ch-l3-6` 各 4 張內容投影片（`ch-l3-3` 為 5 張）＋知識檢測（3 題）；`ch-l3-7` 為 3 張重點回顧＋12 題綜合評量（及格 60，正解位置 A–D 各 3 題）。en／ja 為 flat-key overlay，以 `node scripts/check-champagne-i18n.mjs ch-l3` 逐鍵檢查：共 962 個中文鍵，en／ja 缺漏 0、多餘 0、空值 0、同原文 0。內容由「三語同源規格」產生（同一份來源同時輸出中文課檔與 en／ja JSON，避免鍵值錯位）。未新增 `champagneUi` 字串；無共用檔案改動，與隆河分支無衝突。
+
+**各課重點**
+- `ch-l3-1` 栽培與氣候：INAO 修剪／間距／整串採收、春霜／黴病／熱浪／冰雹、採收提早與酸度下降（IWC Insight 2019 引 CIVC）、適應策略（Philipponnat 的做法標為單一酒莊主張）、Voltis（5%／10%，2022 年底核准試種）、永續認證與除草劑目標、LVMH 研究人員主張規則需彈性。
+- `ch-l3-2` 風格：還原式 vs 氧化式（光譜）、MLF、容器、儲備酒與永續儲備、酒渣陳年與除渣後陳年、dosage 與零 dosage 趨勢、單一地塊／單一年份趨勢（行銷與風格趨勢，非 AOC 分級）。
+- `ch-l3-3` 風土與比較：四大產區、白堊（白堊紀）vs Kimmeridgian（侏羅紀）並連到勃艮地課程（不複製段落）、BdB／BdN／調配／Rosé、Cava／Franciacorta／英國／Tasmania／Crémant／Prosecco、盲品第一刀與比較表寫法。
+- `ch-l3-4` 法規與標籤：DGCCRF 必要標示、NM／RM／CM／RC／SR／ND／MA 全表、Millésime 與單一品種的 100%（一般規定 85%）及與 80% 年度配額的區別、Grand／Premier Cru 與村名規則、Prestige 無定義、名稱保護與「méthode champenoise」、Comité Champagne 角色、虛構標籤解讀練習。
+- `ch-l3-5` 產業：出貨 2023 約 2.99 億瓶（由 −9.2% 反推）、2024 年 2.714 億（法國 1.182 億、出口 1.532 億、出口 56.4%）、2025 年約 2.66 億（法國約 1.14 億、出口約 1.52 億，出口約 57% 為本課計算）；營收 2022 約 63 億、2023 約 62 億、2024 約 58 億、2025 暫定約 57 億歐元（Vinetur 引述）；庫存、儲備、商業產量（2023 11,400／2024 10,000／2025 9,000）；集團與併購（LVMH、Pernod Ricard、EPI、Lanson-BCC）；市占結構；MW 論述素材。
+- `ch-l3-6` 品飲與論述：D5 風格 SAT 通用示範（非特定酒款）、NV 比較盲品線索、MW 論述 1（氣候變遷下 dosage）、論述 2（儲備酒制度與 NV 風格）、論述 3（種植者 vs Grandes Marques）、結構與自我檢查清單；全程提醒「以 WSET／IMW 官方最新規格為準」，未引用任何考試形式、字數或時限。
+- `ch-l3-7` 綜合評量：3 張回顧（並列「不在評量範圍」）＋12 題。
+
+**主要來源（本階段實查）**：Comité Champagne 新聞稿（2024 年出貨 2.714 億瓶；2025 年出貨回顧 2026-01-17：約 2.66 億瓶、法國約 1.14 億、出口約 1.52 億，未載營收與庫存）、Vinetur（2026-02，2025 全年量值）、The Real Review（2025-08，庫存、儲備、結構）、Journal du Luxe（商業產量）、IWC Insight（2019 氣候數據）、Polytechnique Insights（LVMH 研究人員）、Decanter（Curtis MW 永續文章、EPI 交易）、Wine Spectator（Voltis、Chardonnay Rosé）、The Drinks Business（Heidsieck & Co. Monopole 2025-10）、DGCCRF 標籤指南、Glass of Bubbly（Cava 分級、標籤代碼 SR）、WineWithSeth（Franciacorta、英國 PDO、Tasmania、Crémant）、Cellars（「méthode champenoise」）。
+
+**課內標明、不進測驗的項目（來源有出入或屬單一來源）**
+1. **庫存年數**：The Real Review 寫 2024 年 7 月底酒廠庫存約 15.23 億瓶（不含儲備）、超過五年銷量，酒廠目標約 3.5 年、CIVC 3.8 年；設計稿與他處常寫「約四年」。口徑不同，標註不進測驗。
+2. **LVMH／Moët Hennessy 市占**：The Real Review 為量約 18%、值約 22%，Decanter（2023）為全球香檳金額約 30%。出入，不進測驗。
+3. **儲備上限**：The Real Review「通常 8,000 公斤/公頃」vs INAO 規格 10,000（Level 2 已定案以規格為準）。
+4. **營收**：官方頁面本次未取得 2025 全年營收，採 Vinetur 引述的暫定數字並明示；2023 出貨為反推值。
+5. **出口占比**：2024 年 56.4%（Comité 新聞稿）；2025 年約 57% 為本課計算。Level 1 備註曾寫「2024 版 Key Figures 出口占 25%」，與此處不一致，推測是不同口徑（例如非歐盟出口），未查證，已不採用。
+6. **「méthode champenoise」禁用年份 1994**：僅 Cellars 一個來源，評量只考「歐盟內該詞專屬 Champagne」。
+7. **氣候變遷數據**（採收提早約 18 天、潛在酒精 +0.7% vol、總酸 −1.3 g/L、升溫 1.1°C、花期到採收 100→約 92 天）：2019 年文章引 CIVC 與業者說法，非 CIVC 統一最新統計，只教方向。
+8. **永續認證**：「六成以上葡萄園有認證」出自 2023 年 Decanter 文章（未標日期）；CIVC 曾提 2025 年零除草劑目標，據 Curtis MW 於 2022 年秋撤下——皆為單一來源說法，不進測驗。
+9. **其他氣泡酒數字**：Cava 9／18／30／36 個月（Glass of Bubbly）、Franciacorta 18／24／24／30／60 個月自裝瓶起（WineWithSeth）、英國 PDO 9 個月與 Sussex 15 個月、2023 英國 2,160 萬瓶、Tasmania 一月均溫 15.6°C、Crémant 最短陳年（來源說 9 或 12 個月）皆為單一來源比較素材，不進測驗；陳年月數各 DO／DOCG 規則會修訂，考前以官方規格為準。
+10. **Pernod Ricard 評估出售 Mumm**（2025 年 2 月起媒體報導）與 Heidsieck & Co. Monopole 交易細節（5,000 萬歐元、2026-01-01 生效；賣方該來源未指名，故不寫）：報導與交易屬時效資訊，不進測驗。
+11. **無法查證而未寫**：每公斤葡萄價格（本次未取得可靠最新數字）、各集團持股比例與人事、Lanson-BCC 持股結構、Laurent-Perrier 近況、各酒莊的個別釀造做法、WSET D5／IMW 的實際題型與評分細節。
+
+**後續建議**：階段 E（地圖、遊戲、筆記、成就、詞彙）可直接引用 Level 3 的比較表與標籤代碼作為遊戲題庫（排序題：傳統法步驟；配對題：NM／RM／CM…；甜度級別順序）。階段 F 請再檢查本課所有「單一來源」數字是否有更新（尤其出貨、營收、庫存與集團交易，每年都會變動）。
+
+
+## 15. 階段 E 互動功能說明（2026-10-26）
+
+### 15.1 互動地圖（`ChampagneMapPage`，村莊層級）
+- **資料**：`public/champagne/champagne_crus.geojson`，312 個行政區（17 Grand Cru、37 個含 Premier Cru 的行政區、258 個未分級），建置腳本 `scripts/build-champagne-crus.py`。欄位：名稱、INSEE、省份、教學用產區 `sub`、分級、`echelle`（僅 Grand Cru 填 100）、`members`（合併新鎮內的分級村莊）、品種傾向、面積。
+- **來源**：村莊清單與 PDO 多邊形來自 Bianchi et al. 2022（CC0）；邊界為 IGN Admin Express 衍生（gregoiredavid/france-geojson），以標準化名稱對應 INSEE；分級取自 INAO 規格（2024-01-25）的 17 個 Grand Cru＋42 個 Premier Cru。
+- **與設計稿「約 319 村」的差異**：data.gouv.fr 的 INAO 清單仍無法取得，改用 CC0 資料的 312 個行政區；因此未分級村莊只標「cru 村莊（未分級）」，**不顯示 Échelle 百分比**（官方未公布）。312 與 319 的差異未能解釋，不進測驗。
+- **合併新鎮**：Aÿ-Champagne、Val de Livre（含 Louvois）、Blancs-Coteaux（含 Oger、Vertus）、Val-des-Marais 等以 `members[]` 記錄內部分級村莊，資訊面板會說明，成就「十七座聖殿」也依此計算。42 個 Premier Cru 因合併而對應 37 個多邊形。
+- **產區歸類為近似**：漢斯山／馬恩河谷／白丘為 Premier Cru 手動指派，未分級村莊依 6 公里內最近的 Grand Cru；Aube 全部歸巴爾丘；其餘為「外圍」。**非 AOC 法定分區**，僅供篩選與氣候著色。
+- **UI**：三色（Grand Cru／Premier Cru／未分級）、四大產區篩選（抽屜分頁，同步過濾地圖並縮放）、搜尋抽屜（含合併新鎮內的村名）、資訊面板。
+- **退回簡易版**：若村莊 geojson 載入失敗，改用 `champagne_pdo_outline.geojson`（PDO 示意範圍＋17 個 Grand Cru 示意點，`scripts/build-champagne-outline.py`），畫面明確標示「非官方邊界」。
+
+### 15.2 氣候圖層
+`scripts/build-champagne-climate.mjs` → `public/data/champagne-climate.json`：Open-Meteo 4–10 月，溫度 `era5_land`、日照／降雨 `era5`，1981–2024，基準 1981–2010，四個代表點（漢斯山 Verzenay、馬恩河谷 Aÿ、白丘 Avize、巴爾丘 Les Riceys）。**限制**：ERA5-Land 約 9 公里、ERA5 約 25 公里，馬恩河谷與白丘的日照／降雨落在同一格；只著色四大產區，外圍灰色；僅供區域比較。UI 為地圖頁的圖層（en/ja）。
+
+### 15.3 遊戲（`game_scores`，`game_type` 前綴 `ch_`）
+共用 `ChampagneQuizEngine`（單選）：產區速答（53 題）、品種配對（12）、分級辨識（36）、釀造順序（16，引擎不支援排序，改為「下一步／上一步」單選）、知識閃問（取自 Level 1–3 測驗，共 85 題，en/ja 套用課程 overlay）。最佳成績 key：`ch_region_best`、`ch_grape_best`、`ch_class_best`、`ch_process_best`、`ch_flash_best`。題目僅用課程已查證的事實；有出入的數字（Premier Cru 42／44、Échelle 終止年、面積與村莊數、生產者數、品種比例、甜度邊界值）不入題庫。
+
+### 15.4 品飲筆記、成就、詞彙
+- 品飲筆記：`source='champagne'`，`wine_type` 為 `ch_nv/ch_vintage/ch_bdb/ch_bdn/ch_rose/ch_prestige/ch_sweet/ch_still/ch_other`。
+- 成就：`src/stores/champagneAchievementSystem.js`（30 項，含「十七座聖殿」），已登錄 `useAchievements.js`，課程首頁 `AchievementModal course-key="champagne"`。
+- 詞彙：region `champagne`，第三語法文（沿用 `fr` 欄位）；`WineGlossary`／`AdminGlossary` 已加入。
+
+### 15.5 待手動套用的 migration（本階段**未套用**）
+1. `20261026000200_add_champagne_course.sql`（階段 A）
+2. `20261027000000_add_champagne_tasting_types.sql`（wine_type CHECK）
+3. `20261027000100_add_champagne_glossary.sql`（region CHECK＋詞條）
+
+**與隆河分支的協調**：兩個 CHECK 約束（`tasting_notes_wine_type_check`、`wine_glossary_region_check`）是整份清單覆蓋，香檳版已包含希臘＋隆河（`rh_*`、`rhone`）＋香檳；隆河版目前不含 `ch_*`／`champagne`。**後套用者必須包含兩邊的值**，合併時請以聯集為準。`WineGlossary.vue`、`AdminGlossary.vue`、`useAchievements.js` 為共用檔，兩分支都會改動，合併時預期有簡單衝突，取兩邊的聯集即可。
+
+### 15.6 限制
+- 本次沒有 `VITE_MAPBOX_TOKEN`，只做 SFC 編譯、`vite build` 與資料／題庫驗證，**沒有實機地圖畫面檢查**（圖層、點擊、篩選、氣候著色）。
+- 成就解鎖通知標題尚未走 `gt()`（仍為中文）。
+- `ch-l1-4` ja 有 1 個選項與原文相同（階段 B 既有，疑為專有名詞）。
+
+## 16. 階段 F 全面檢查結果（2026-10-26）
+
+**完整性**：21 課皆為正式內容（無空殼；`ch-l3-4` 內「製作中」是 RC 定義用語，非佔位）。lesson en／ja 逐鍵：L1 1 個既有誤報（`ch-l1-4` ja「約 20 bar」選項）、L2 1,052 鍵與 L3 962 鍵缺漏 0、多餘 0；en overlay 無殘留中日文。`scripts/check-champagne-final.mjs` 新增，涵蓋課程完整性、`champagneUi` 字典對所有 `gt()` 字面量與 `gameData`／`flashData`／`tastingData`／成就字串的覆蓋、en 字典殘留中文、測驗有出入數字掃描。發現並補上 **12 個 gt() 缺漏**（遊戲中心、地圖標題、各遊戲副標、搜尋提示等；原本在 en／ja 會退回中文）。字典 en／ja 各 705 條，兩邊鍵一致。地圖 geojson 屬性無中文。
+
+**事實複查**（本階段重新對照：INAO／EU PDO 單一文件、Comité Champagne Key Figures 與 AOC 說明、champagne.education UNESCO 說明、Winerist 壓榨說明、bkwine 甜度表、envie de champ 對 Échelle 的說明；其餘條目沿用 B／C 階段對 INAO 規格全文與 Comité Champagne 文件的逐條核對）。
+
+| # | 項目 | 結果 |
+|---|---|---|
+| 1 | NV ≥15 個月、Vintage ≥36 個月（自 tirage 起） | ✔ 說明書與 EU 文件一致 |
+| 2 | 7 種主要品種（2024 規格）；EU 舊文件列 Arbane、Chardonnay、Meunier、Pinot Noir、Pinot Gris、Pinot Blanc、Petit Meslier | ✔ |
+| 3 | AOC 1936 年法令、Comité Champagne 1941、名稱保護 1843 | ✔ |
+| 4 | 最低天然酒精 9% vol | ✔ EU 文件 |
+| 5 | 基準 12,400、butoir 15,500 公斤/公頃 | ✔ EU 文件 |
+| 6 | 一壓 4,000 公斤 ≤2,550 公升（cuvée 2,050＋taille 500） | ✔ Winerist／Comité 說明 |
+| 7 | 34,200 公頃、319 cru | ✔ Key Figures |
+| 8 | UNESCO 2015-07-04；3 個核心區＋緩衝；窖/地道逾 100 公里 | ✔ champagne.education |
+| 9 | 甜度：BN 0–3、EB 0–6、Brut ≤12、ED 12–17、Sec 17–32、DS 32–50、Doux >50 g/L | ✔ 邊界值一致（bkwine 未提 ±3 g/L 容許，課內仍標註，只考順序） |
+| 10 | 17 Grand Cru（9／2／6） | ✔ |
+| 11 | 2022 版生產者數 16,200／370／130、庫存逾 10 億瓶約 4 年出貨 | ✔ 為 2022 版數字；課內標年份、不進測驗 |
+| 12 | 酒精上限：EU 文件另有「加糖與 tirage 後總酒精 ≤13%」 | 新發現，課內未寫，不影響 |
+
+另有 ≥18 項沿用 B／C 階段已實查者（5–6 bar、除渣 ≥12 個月、Vintage ≤80%、143 g/L 等）。合計抽查 ≥30 項，無新增矛盾，**唯一例外是儲備上限**：
+
+**第 7 節已知出入的最終結論**
+1. 品種比例：Pinot Noir 38；Chardonnay 31（2025 版 32）；Meunier 31（2025 版 30）。課內標年份，不進測驗。
+2. 生產者家數：2022／2023 版 16,200／370／130；2024 版 16,300／390／125；2025 版 16,460／410／120。以 2025 為準並標年份，不進測驗。
+3. 出貨量：2023 約 2.99 億、2024 約 2.71 億、2025 約 2.66 億瓶，年度差異，標年份。
+4. Grand Cru 品種限制：無法規限制，僅風格傾向，不進測驗。
+5. 甜度邊界：見上表，只考級別順序。
+6. Premier Cru 村莊數：INAO 規格 42（另 17 Grand Cru 也可標）；舊資料／envie de champ 等寫 44（本階段再次看到）。**仍有出入，不進測驗**。
+7. Échelle 退場年份 2004／2010 **仍有出入**，不進測驗；envie de champ 的「300 個村、237 未分級」與官方 319 不符，不採用。
+8. **儲備上限 10,000（INAO 2024 規格）vs 8,000（EU 較舊單一文件、The Real Review 2025「通常」）仍有出入**。階段 C／D 雖在課內聲明「不進測驗」，卻有 3 題（`ch-l2-5` Q3、`ch-l3-7` Q11、遊戲題庫 1 題）以 10,000 為正解。本階段已改為不含數字的題目（中／英／日同步），並由 `check-champagne-final.mjs` 掃描防回歸。課文仍寫 10,000＋8,000 說明。
+
+**功能**：`vite build` 通過（含全部 SFC 編譯）；`/champagne` 現加 `requiresAdmin: true`（與隆河一致）；首頁卡片 `v-if="isAdmin"`、`ADMIN_ONLY_COURSES` 排除；相對 stage A 之前的 master，共用檔案只有新增條目，希臘與其他課程程式碼未動（`PlatformHome`、`WineGlossary`、`useAchievements` 為擴充清單）。**限制**：沒有 `VITE_MAPBOX_TOKEN`，未做實機地圖畫面檢查；也未做瀏覽器 E2E（以靜態分析與建置代替）。
+
+**migration**：見 `docs/CHAMPAGNE_LAUNCH_CHECKLIST.md`。階段 F 把 `20261025000000_add_champagne_course.sql` 改為 `20261026000200_…`，因與隆河 `20261025000000_add_rhone_course.sql` 版本號撞號。
+
+### 16.1 與隆河（已合併進 master）的預期合併衝突
+隆河 `feat/rhone-final`（17fdf5d）已由 `4d689aa` 合併進 master，故以下以 master 為準。在拋棄式 worktree 試合併 master：15 個檔案有衝突，**全部為「兩邊各新增條目」，解法皆為保留雙方**（未實際合併）：
+
+| 檔案 | 衝突處 | 解法 |
+|---|---|---|
+| `src/router/index.js`（2 處） | `/rhone` 與 `/champagne` 路由；`COURSE_ACCESS_RULES` | 兩邊都留，順序無關 |
+| `src/components/PlatformHome.vue`（5 處） | 卡片區、`courseConfig`、`courseStatuses`／`courseShowHome`、`ADMIN_ONLY_COURSES`、樣式區 | 兩邊都留；`ADMIN_ONLY_COURSES = ['greece','rhone','champagne']`（隆河若已公開則照 master） |
+| `src/composables/useAchievements.js`（8 處） | import、課程名稱表、成就清單、分支判斷 | 兩邊都留；`gt` import 別名不得重名（香檳為 `gtChampagne`） |
+| `src/components/WineGlossary.vue`（2 處）、`AdminGlossary.vue`（1 處） | region 清單、validator、樣式 | 清單取聯集：`…'greece','rhone','champagne'` |
+| `src/data/lessonContentLoader.js`、`src/lib/courseProgressSync.js`、`regionThemes.js`、`PresentationLesson.vue`（`ch-` 與 `rh-` 前綴） | 相鄰新增 | 兩邊都留 |
+| `src/locales/{en,ja,zh-TW}/{common,home}.js` | `labels`、`courses` 區塊相鄰新增 | 兩邊都留 |
+
+Migration 無檔名衝突（已改號）；兩個 CHECK 檔香檳版已含隆河，**後套用者須包含全部值**。
+

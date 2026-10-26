@@ -97,7 +97,7 @@ const { t } = useI18n()
 
 const SUPPORTED_REGIONS = [
   'bordeaux', 'bourgogne', 'italy',
-  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone',
+  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne',
   'loire', 'california', 'australia', 'newzealand'
 ]
 
@@ -105,7 +105,7 @@ const props = defineProps({
   region: {
     type: String,
     default: 'bordeaux',
-    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'loire', 'california', 'australia', 'newzealand'].includes(v)
+    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne', 'loire', 'california', 'australia', 'newzealand'].includes(v)
   }
 })
 
@@ -124,6 +124,7 @@ const REGION_META = {
   california: { icon: '🌉', lang3Key: '',   lang3Label: '' },
   australia:  { icon: '🦘', lang3Key: '',   lang3Label: '' },
   newzealand: { icon: '🥝', lang3Key: '',   lang3Label: '' },
+  champagne:  { icon: '🥂', lang3Key: 'fr', lang3Label: 'Français' },
 }
 
 const regionConfig = computed(() => REGION_META[props.region] || REGION_META.bordeaux)

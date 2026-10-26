@@ -627,6 +627,49 @@
               <button class="btn-enter-course" @click="router.push('/rhone')">{{ $t('home.courses.common.enterAdmin') }} →</button>
             </div>
           </div>
+
+          <!-- ── Champagne（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card champagne">
+            <div :class="['card-status', courseStatuses.champagne ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🥂</div>
+              <div class="card-region">Champagne · France</div>
+              <h3 class="card-title">{{ $t('home.courses.champagne.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.champagne.desc') }}</p>
+            </div>
+            <div class="course-preview-strip champagne-strip">
+              <div class="cp-stat">
+                <span class="cp-num">17</span>
+                <span class="cp-label" v-html="$t('home.courses.champagne.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Grand Cru</span>
+                <span class="cp-label" v-html="$t('home.courses.champagne.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.champagne.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Chardonnay</span>
+                <span class="cp-label" v-html="$t('home.courses.champagne.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features champagne-features">
+              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f1') }}</span>
+              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f2') }}</span>
+              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/champagne')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
         </div><!-- /courses-grid 舊世界 -->
       </div><!-- /region-group 舊世界 -->
 
@@ -1219,6 +1262,7 @@ const courseConfig = computed(() => [
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
   { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
+  { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
   { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
   { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
@@ -1231,12 +1275,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne']
 
 async function loadCourseData() {
   try {
@@ -1937,6 +1981,7 @@ onMounted(async () => {
 .course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
 .course-card.greece { border-color: rgba(13,94,175,0.4); background: rgba(13,94,175,0.05); }
 .course-card.rhone { border-color: rgba(122,46,92,0.4); background: rgba(122,46,92,0.05); }
+.course-card.champagne { border-color: rgba(168,128,28,0.4); background: rgba(168,128,28,0.05); }
 /* 課程深度預覽 strip */
 .course-preview-strip {
   display: flex; align-items: center; justify-content: space-between;
@@ -2035,6 +2080,13 @@ onMounted(async () => {
   box-shadow: 0 4px 16px rgba(30,90,50,0.4);
 }
 .loire-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,90,50,0.6); }
+/* Champagne card */
+.champagne-strip { background: rgba(168,128,28,0.07); border-color: rgba(168,128,28,0.22); }
+.champagne-strip .cp-num { color: #A8801C; font-size: 0.9rem; }
+.champagne-strip .cp-label { color: #6B500F; }
+.champagne-strip .cp-divider { background: rgba(168,128,28,0.25); }
+.champagne-features .champagne-tag { color: #A8801C; background: rgba(168,128,28,0.06); border-color: rgba(168,128,28,0.18); }
+
 /* Greece card */
 .greece-strip { background: rgba(13,94,175,0.07); border-color: rgba(13,94,175,0.22); }
 .greece-strip .cp-num { color: #0D5EAF; font-size: 0.9rem; }
