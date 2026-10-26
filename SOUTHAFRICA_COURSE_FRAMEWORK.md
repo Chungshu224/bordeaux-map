@@ -127,3 +127,11 @@
 - 已用且已查證的日期：WO 基礎規章 1972／正式實施 1973；Geographical Units 1993-04-02；Liquor Products Act 1989；WCA 2023-08-01；Stellenbosch 1679；Franschhoek 升 District 2010；Wellington 2012-09-21；Cape Town District 與 Constantia／Durbanville 併入 2017；Walker Bay District 2004-05；Elgin Ward 1990／District 2011；Elim 首支 WO 酒 1999；Tulbagh 1971／地震 1969-09-29；Swartland Revolution 2010–2015；OVP 2002 起、2016 正式成立、門檻 35 年。
 - 有出入、不進測驗：Stellenbosch 面積（約 11,500–17,500 公頃）；District／Ward 總數（約 32／102，範圍不明）；Geographical Unit 數量（來源說 6，初稿說 5）；Cape South Coast District 數（文字 7／資訊框 6）；SIP 細則（酵母營養、酵素）。
 - Orange River 與北開普產區：來源未涵蓋，**本課未收**，待查證後補入。
+
+## 12. 階段 D：Level 3 已製作（2026-10-27）
+
+- `za-l3-1…7` 與 en/ja overlay；來源：Wine With Seth（Cap Classique 等）、Wine Anorak（Cap Classique 2023）、Cheers／WineMag（甜酒）、Wine Wisdom（IPW／BWI）、The Drinks Business（2018 乾旱預測、2024 出口）、Farmers Weekly（2007 轉型憲章）。
+- **更正（已回補 L1）**：Cap Classique 酒渣陳年現行為至少 12 個月（自 2023 年份起，舊規 9 個月），基酒須整串壓榨（僅 cuvée）、瓶內壓力至少 3 bar；資料有「2021 公告／2023 實施」兩種說法，課程寫「2023 年份起」。
+- 已用日期：IPW 1998；BWI 2004；永續封條 2010 年份起；合併 WO／IPW 封條 2024 年 88%；2018 乾旱（1 月預測，為 2005 年以來最小）；KWV 1918／配額廢除 1992／私有化 1997-12-01；轉型憲章 2007；New Beginnings 1997；Mont Rochelle 2001；Kaapse Vonkel 1971（1973 上市）；CCPA 與名稱 1992；Vin de Constance 現代版 1986（1990 上市）、復興 1980；Cape Port 命名 2012。
+- 甜酒門檻（Natural Sweet >20、Straw >30、NLH >50 g/L）取自業界媒體 Cheers；**法規原文未能取得（需訂閱）**，課內註明請查 Liquor Products Act 規章。
+- 不進測驗或僅註記：2018 減產數字（預測）、BEE 現況、Cape Blend 最低比例、Pinotage 雜交年份、dosage（常見範圍非法定）。
