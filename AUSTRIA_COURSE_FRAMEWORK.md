@@ -136,3 +136,13 @@
 - **ÖTW**：1992 年由多瑙河酒莊成立；Erste Lage 針對乾型 Grüner Veltliner 與 Riesling（Kamptal、Kremstal、Traisental、Wagram，後加入 Wien 與 Carnuntum）；Große Lage 的數量與細節未查到，課內不論述；ÖTW 屬民間協會、非法定分級
 - **未逐項查證的描述性內容**：Kamptal／Kremstal 著名 Ried（Heiligenstein、Gaisberg、Steiner Hund、Pfaffenberg）、Roter Veltliner 為 Wagram 特色、Südsteiermark／Vulkanland 品種描述；課內已標註、不進測驗，階段 F 前建議以 ÖWM 或 ÖTW 官方網站補查
 - **Wachau**：Vinea Wachau（1983 成立，商標自 1984）Steinfeder ≤11.5%、Federspiel 11.5–12.5% 且殘糖 ≤4 g/L、Smaragd ≥12.5% 且 ≥18.5 °KMW、不早於次年 5 月 1 日上市；DAC 三層（Gebietswein 17 品種、Ortswein 9 白品種、Riedenwein 僅 GV／Riesling、157 個 Ried）
+
+## 12. Level 3 內容說明與查證註記（階段 D，2026-10-27）
+
+- 分支 `feat/austria-l3`（從 `feat/austria-l2` 切出）；7 課（`at-l3-1`…`at-l3-7`），L3-7 為 12 題綜合評量（及格 60）；en/ja overlay 與 vite build 通過
+- **重大查證結果：Ausbruch**——依 § 11 Weingesetz（jusline.at），Ausbruch 不是獨立類別；符合 Trockenbeerenauslese 條件且產自 Rust 的酒才可標示 Ruster Ausbruch，其他酒不得使用該詞。這解釋了 Level 2 中各來源門檻不一的原因（已在 L3-3 說明）
+- **Prädikat 法條（§ 11）**：Spätlese 19、Auslese 21、BA 25、TBA 30（揮發酸 ≤2.4 g/L）、Eiswein 25、Strohwein／Schilfwein 25（至少 3 個月風乾；2 個月且達 30 KMW 可提早）；不得加糖或增糖；須 Mostwäger 證明；Spätlese／Auslese 次年 1 月 1 日、其他次年 4 月 1 日前不得申請檢驗號碼
+- **Sekt Austria**：Klassik 9 個月、Reserve 18 個月（傳統法、單一邦）、Grosse Reserve 30 個月（單一酒村、採收三年後上市）；2015 里程碑、2016 年以條例立法、Sekt 委員會 2013 年成立（Starwinelist、WineAlign）。**設計稿原先「15 個月」的猜測已捨棄**
+- **永續**：Sustainable Austria 2015 年推出，約 11,925 公頃（27%）、655 酒莊（2025 年 1 月報導）；有機約 25%（2024 年 11 月初步數）
+- **出口（2024）**：6,420 萬公升、2.333 億歐元；德國量 60.2%、值 42.3%；美國 8.5%（金額）升為第二（Statistik Austria 暫定數，ÖWM 新聞）。2025 年數字見 Level 1
+- **刻意不寫**：生產者類型、合作社與價格帶（無可靠官方統計）；Wachau Codex 與 DAC 並存的細節；盲品線索與論述範本屬一般性指引，已標明、不進法規測驗
