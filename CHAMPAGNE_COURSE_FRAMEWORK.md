@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）、D（Level 3 內容）、E（互動功能）已完成**，最新分支 `feat/champagne-interactive`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A–F 全部完成**，最新分支 `feat/champagne-final`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -221,7 +221,7 @@
 | C Level 2 | ✅ 完成（8 課，建置驗證通過） | `feat/champagne-l2`（從 `feat/champagne-l1` 切出） |
 | D Level 3 | ✅ 完成（7 課，建置驗證通過） | `feat/champagne-l3`（從 `feat/champagne-l2` 切出） |
 | E 互動（地圖、遊戲、筆記、成就、詞彙） | ✅ 完成（建置與資料驗證通過；**未做實機地圖畫面檢查**；migration 已備妥未套用） | `feat/champagne-interactive`（從 `feat/champagne-l3` 切出） |
-| F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |
+| F 全面檢查、migration | ✅ 完成（見第 16 節、`docs/CHAMPAGNE_LAUNCH_CHECKLIST.md`） | `feat/champagne-final`（從 `feat/champagne-interactive` 切出） |
 
 ## 12. Level 1 內容說明與查證註記（階段 B，2026-10-25）
 
@@ -317,3 +317,55 @@
 - 本次沒有 `VITE_MAPBOX_TOKEN`，只做 SFC 編譯、`vite build` 與資料／題庫驗證，**沒有實機地圖畫面檢查**（圖層、點擊、篩選、氣候著色）。
 - 成就解鎖通知標題尚未走 `gt()`（仍為中文）。
 - `ch-l1-4` ja 有 1 個選項與原文相同（階段 B 既有，疑為專有名詞）。
+
+## 16. 階段 F 全面檢查結果（2026-10-26）
+
+**完整性**：21 課皆為正式內容（無空殼；`ch-l3-4` 內「製作中」是 RC 定義用語，非佔位）。lesson en／ja 逐鍵：L1 1 個既有誤報（`ch-l1-4` ja「約 20 bar」選項）、L2 1,052 鍵與 L3 962 鍵缺漏 0、多餘 0；en overlay 無殘留中日文。`scripts/check-champagne-final.mjs` 新增，涵蓋課程完整性、`champagneUi` 字典對所有 `gt()` 字面量與 `gameData`／`flashData`／`tastingData`／成就字串的覆蓋、en 字典殘留中文、測驗有出入數字掃描。發現並補上 **12 個 gt() 缺漏**（遊戲中心、地圖標題、各遊戲副標、搜尋提示等；原本在 en／ja 會退回中文）。字典 en／ja 各 705 條，兩邊鍵一致。地圖 geojson 屬性無中文。
+
+**事實複查**（本階段重新對照：INAO／EU PDO 單一文件、Comité Champagne Key Figures 與 AOC 說明、champagne.education UNESCO 說明、Winerist 壓榨說明、bkwine 甜度表、envie de champ 對 Échelle 的說明；其餘條目沿用 B／C 階段對 INAO 規格全文與 Comité Champagne 文件的逐條核對）。
+
+| # | 項目 | 結果 |
+|---|---|---|
+| 1 | NV ≥15 個月、Vintage ≥36 個月（自 tirage 起） | ✔ 說明書與 EU 文件一致 |
+| 2 | 7 種主要品種（2024 規格）；EU 舊文件列 Arbane、Chardonnay、Meunier、Pinot Noir、Pinot Gris、Pinot Blanc、Petit Meslier | ✔ |
+| 3 | AOC 1936 年法令、Comité Champagne 1941、名稱保護 1843 | ✔ |
+| 4 | 最低天然酒精 9% vol | ✔ EU 文件 |
+| 5 | 基準 12,400、butoir 15,500 公斤/公頃 | ✔ EU 文件 |
+| 6 | 一壓 4,000 公斤 ≤2,550 公升（cuvée 2,050＋taille 500） | ✔ Winerist／Comité 說明 |
+| 7 | 34,200 公頃、319 cru | ✔ Key Figures |
+| 8 | UNESCO 2015-07-04；3 個核心區＋緩衝；窖/地道逾 100 公里 | ✔ champagne.education |
+| 9 | 甜度：BN 0–3、EB 0–6、Brut ≤12、ED 12–17、Sec 17–32、DS 32–50、Doux >50 g/L | ✔ 邊界值一致（bkwine 未提 ±3 g/L 容許，課內仍標註，只考順序） |
+| 10 | 17 Grand Cru（9／2／6） | ✔ |
+| 11 | 2022 版生產者數 16,200／370／130、庫存逾 10 億瓶約 4 年出貨 | ✔ 為 2022 版數字；課內標年份、不進測驗 |
+| 12 | 酒精上限：EU 文件另有「加糖與 tirage 後總酒精 ≤13%」 | 新發現，課內未寫，不影響 |
+
+另有 ≥18 項沿用 B／C 階段已實查者（5–6 bar、除渣 ≥12 個月、Vintage ≤80%、143 g/L 等）。合計抽查 ≥30 項，無新增矛盾，**唯一例外是儲備上限**：
+
+**第 7 節已知出入的最終結論**
+1. 品種比例：Pinot Noir 38；Chardonnay 31（2025 版 32）；Meunier 31（2025 版 30）。課內標年份，不進測驗。
+2. 生產者家數：2022／2023 版 16,200／370／130；2024 版 16,300／390／125；2025 版 16,460／410／120。以 2025 為準並標年份，不進測驗。
+3. 出貨量：2023 約 2.99 億、2024 約 2.71 億、2025 約 2.66 億瓶，年度差異，標年份。
+4. Grand Cru 品種限制：無法規限制，僅風格傾向，不進測驗。
+5. 甜度邊界：見上表，只考級別順序。
+6. Premier Cru 村莊數：INAO 規格 42（另 17 Grand Cru 也可標）；舊資料／envie de champ 等寫 44（本階段再次看到）。**仍有出入，不進測驗**。
+7. Échelle 退場年份 2004／2010 **仍有出入**，不進測驗；envie de champ 的「300 個村、237 未分級」與官方 319 不符，不採用。
+8. **儲備上限 10,000（INAO 2024 規格）vs 8,000（EU 較舊單一文件、The Real Review 2025「通常」）仍有出入**。階段 C／D 雖在課內聲明「不進測驗」，卻有 3 題（`ch-l2-5` Q3、`ch-l3-7` Q11、遊戲題庫 1 題）以 10,000 為正解。本階段已改為不含數字的題目（中／英／日同步），並由 `check-champagne-final.mjs` 掃描防回歸。課文仍寫 10,000＋8,000 說明。
+
+**功能**：`vite build` 通過（含全部 SFC 編譯）；`/champagne` 現加 `requiresAdmin: true`（與隆河一致）；首頁卡片 `v-if="isAdmin"`、`ADMIN_ONLY_COURSES` 排除；相對 stage A 之前的 master，共用檔案只有新增條目，希臘與其他課程程式碼未動（`PlatformHome`、`WineGlossary`、`useAchievements` 為擴充清單）。**限制**：沒有 `VITE_MAPBOX_TOKEN`，未做實機地圖畫面檢查；也未做瀏覽器 E2E（以靜態分析與建置代替）。
+
+**migration**：見 `docs/CHAMPAGNE_LAUNCH_CHECKLIST.md`。階段 F 把 `20261025000000_add_champagne_course.sql` 改為 `20261026000200_…`，因與隆河 `20261025000000_add_rhone_course.sql` 版本號撞號。
+
+### 16.1 與隆河（已合併進 master）的預期合併衝突
+隆河 `feat/rhone-final`（17fdf5d）已由 `4d689aa` 合併進 master，故以下以 master 為準。在拋棄式 worktree 試合併 master：15 個檔案有衝突，**全部為「兩邊各新增條目」，解法皆為保留雙方**（未實際合併）：
+
+| 檔案 | 衝突處 | 解法 |
+|---|---|---|
+| `src/router/index.js`（2 處） | `/rhone` 與 `/champagne` 路由；`COURSE_ACCESS_RULES` | 兩邊都留，順序無關 |
+| `src/components/PlatformHome.vue`（5 處） | 卡片區、`courseConfig`、`courseStatuses`／`courseShowHome`、`ADMIN_ONLY_COURSES`、樣式區 | 兩邊都留；`ADMIN_ONLY_COURSES = ['greece','rhone','champagne']`（隆河若已公開則照 master） |
+| `src/composables/useAchievements.js`（8 處） | import、課程名稱表、成就清單、分支判斷 | 兩邊都留；`gt` import 別名不得重名（香檳為 `gtChampagne`） |
+| `src/components/WineGlossary.vue`（2 處）、`AdminGlossary.vue`（1 處） | region 清單、validator、樣式 | 清單取聯集：`…'greece','rhone','champagne'` |
+| `src/data/lessonContentLoader.js`、`src/lib/courseProgressSync.js`、`regionThemes.js`、`PresentationLesson.vue`（`ch-` 與 `rh-` 前綴） | 相鄰新增 | 兩邊都留 |
+| `src/locales/{en,ja,zh-TW}/{common,home}.js` | `labels`、`courses` 區塊相鄰新增 | 兩邊都留 |
+
+Migration 無檔名衝突（已改號）；兩個 CHECK 檔香檳版已含隆河，**後套用者須包含全部值**。
+
