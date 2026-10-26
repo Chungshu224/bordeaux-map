@@ -58,6 +58,6 @@
   "slides.5.componentProps.slide.questions.2.options.0": "A. 2,550 L",
   "slides.5.componentProps.slide.questions.2.options.1": "B. 12,400 kg of grapes per hectare",
   "slides.5.componentProps.slide.questions.2.options.2": "C. No ceiling",
-  "slides.5.componentProps.slide.questions.2.options.3": "D. 10,000 kg of grapes per hectare in production",
-  "slides.5.componentProps.slide.questions.2.explanation": "12,400 is the base yield and 2,550 L is the juice per pressing; the reserve ceiling is 10,000 kg/ha."
+  "slides.5.componentProps.slide.questions.2.options.3": "D. Each producer has a reserve ceiling (in kg of grapes per hectare)",
+  "slides.5.componentProps.slide.questions.2.explanation": "12,400 is the base yield and 2,550 L is the juice per pressing; each producer also has a reserve ceiling in kg/ha (sources differ on the figure, so it is not tested)."
 }

@@ -167,7 +167,7 @@ const FACT_ITEMS = [
   { stem: '哪個子產區沒有任何 Grand Cru 或 Premier Cru 村莊？', ans: '巴爾丘（Côte des Bar，Aube）', wrong: ['漢斯山', '馬恩河谷', '白丘'], explain: '規格列出的 Grand／Premier Cru 村莊全部在 Marne 省。' },
   { stem: '依規格，Vintage 香檳最多可占一位業者當年酒量的？', ans: '80%', wrong: ['50%', '65%', '100%'], explain: 'Vintage 不得超過該年度酒量的 80%，且不含儲備酒。' },
   { stem: '依規格，除渣最早可在裝瓶後多久進行？', ans: '12 個月', wrong: ['3 個月', '6 個月', '15 個月'], explain: '除渣不得早於裝瓶後 12 個月；上市的最短陳年另有 15／36 個月規定。' },
-  { stem: '儲備酒的規格上限（每位業者）是？', ans: '10,000 公斤葡萄/公頃', wrong: ['5,000 公斤/公頃', '8,000 公斤/公頃', '15,500 公斤/公頃'], explain: '儲備酒每位業者上限 10,000 公斤/公頃，且不可標示年份。' },
+  { stem: '關於儲備酒，下列何者正確？', ans: '儲備酒不可標示年份', wrong: ['儲備酒可標示為年份酒', '儲備酒完全禁止', '儲備酒必須全數用於 Vintage'], explain: '儲備酒不可標示年份；每位業者另有儲備上限（數值各來源有出入，不進測驗）。' },
   { stem: '每年的「商業產量」（可上市產量）由誰決定？', ans: 'Comité Champagne', wrong: ['INAO 單獨決定', '各酒莊自行決定', '歐盟執委會'], explain: 'Comité Champagne 每年夏季決定商業產量。' },
   { stem: '瓶中二次發酵完成後，瓶內壓力大約是？', ans: '約 5–6 bar', wrong: ['約 1–2 bar', '約 10 bar', '約 20 bar'], explain: 'Comité Champagne：5–6 bar，約為汽車輪胎的三倍。' }
 ]

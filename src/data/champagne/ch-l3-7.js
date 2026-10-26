@@ -237,10 +237,10 @@ export const lessonContent = [
               "A. 上限 12,400 公斤/公頃，可標示年份",
               "B. 完全禁止儲備酒",
               "C. 必須 100% 用於 Vintage",
-              "D. 每位業者上限 10,000 公斤/公頃，儲備酒不可標示年份"
+              "D. 每位業者有儲備上限，且儲備酒不可標示年份"
             ],
             correct: 3,
-            explanation: "這是 INAO 規格的規定（Level 2）；舊文章曾寫 8,000，以規格為準。"
+            explanation: "這是 INAO 規格的規定（Level 2）；儲備上限的具體數值各來源有出入（8,000／10,000），不進測驗。"
           },
           {
             type: "single",

@@ -151,7 +151,8 @@ const routes = [
     path: '/champagne',
     name: 'Champagne',
     component: () => import('../components/champagne/ChampagnePage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🥂 香檳 · 侍酒師的筆記本' }
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'champagne'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 香檳 · 侍酒師的筆記本' }
   },
   {
     path: '/champagne/course',

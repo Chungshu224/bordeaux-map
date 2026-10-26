@@ -186,7 +186,7 @@
 - `src/stores/champagneLearningStore.js`：21 課大綱（依第 2 節）、localStorage 進度（key `champagne-wine-academy-progress:{userId}`）、同步課程代號 `champagne`。
 - `src/data/champagne/ch-l1-1.js … ch-l3-7.js`：21 個空殼（封面＋「內容製作中」），`src/locales/{en,ja}/lessons/champagne/*.json` 先放標題與簡介。
 - 課程首頁的地圖／遊戲／筆記入口顯示「製作中」（停用）；成就入口暫不顯示。
-- `supabase/migrations/20261025000000_add_champagne_course.sql`：courses 新增 champagne（active=false、show_on_home=false），**未套用**。
+- `supabase/migrations/20261026000200_add_champagne_course.sql`：courses 新增 champagne（active=false、show_on_home=false），**未套用**。
 
 ### 共用檔案改動（解衝突用，皆為純新增條目）
 
@@ -307,7 +307,7 @@
 - 詞彙：region `champagne`，第三語法文（沿用 `fr` 欄位）；`WineGlossary`／`AdminGlossary` 已加入。
 
 ### 15.5 待手動套用的 migration（本階段**未套用**）
-1. `20261025000000_add_champagne_course.sql`（階段 A）
+1. `20261026000200_add_champagne_course.sql`（階段 A）
 2. `20261027000000_add_champagne_tasting_types.sql`（wine_type CHECK）
 3. `20261027000100_add_champagne_glossary.sql`（region CHECK＋詞條）
 
