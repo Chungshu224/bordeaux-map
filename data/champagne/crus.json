@@ -12,7 +12,8 @@
     "notes": [
       "Aÿ 在 INAO 文字寫作 Ay；Coligny 寫作 Coligny (Val-des-Marais)",
       "Grand Cru 村莊也可標 Premier Cru；17 個 Grand Cru 的子產區為本課依 Comité Champagne／WineWithSeth 整理"
-    ]
+    ],
+    "insee_status": "filled for graded villages by name match (Admin Express via france-geojson); see scripts/build-champagne-crus.py"
   },
   "communes": [
     {
@@ -20,7 +21,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51007",
       "department": "Marne"
     },
     {
@@ -28,7 +29,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51044",
       "department": "Marne"
     },
     {
@@ -36,7 +37,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51079",
       "department": "Marne"
     },
     {
@@ -44,7 +45,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51564",
       "department": "Marne"
     },
     {
@@ -52,7 +53,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51338",
       "department": "Marne"
     },
     {
@@ -60,7 +61,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51450",
       "department": "Marne"
     },
     {
@@ -68,7 +69,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51536",
       "department": "Marne"
     },
     {
@@ -76,7 +77,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51613",
       "department": "Marne"
     },
     {
@@ -84,7 +85,7 @@
       "grade": "grand_cru",
       "sub_region": "Montagne de Reims",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51614",
       "department": "Marne"
     },
     {
@@ -92,7 +93,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51029",
       "department": "Marne"
     },
     {
@@ -100,7 +101,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51153",
       "department": "Marne"
     },
     {
@@ -108,7 +109,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51196",
       "department": "Marne"
     },
     {
@@ -116,7 +117,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51367",
       "department": "Marne"
     },
     {
@@ -124,7 +125,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51612",
       "department": "Marne"
     },
     {
@@ -132,7 +133,7 @@
       "grade": "grand_cru",
       "sub_region": "Côte des Blancs",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51413",
       "department": "Marne"
     },
     {
@@ -140,7 +141,7 @@
       "grade": "grand_cru",
       "sub_region": "Vallée de la Marne",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51030",
       "department": "Marne"
     },
     {
@@ -148,7 +149,7 @@
       "grade": "grand_cru",
       "sub_region": "Vallée de la Marne",
       "echelle_pct": 100,
-      "insee": null,
+      "insee": "51576",
       "department": "Marne"
     },
     {
@@ -156,7 +157,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51028",
       "department": "Marne"
     },
     {
@@ -164,7 +165,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51049",
       "department": "Marne"
     },
     {
@@ -172,7 +173,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51058",
       "department": "Marne"
     },
     {
@@ -180,7 +181,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51061",
       "department": "Marne"
     },
     {
@@ -188,7 +189,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51030",
       "department": "Marne"
     },
     {
@@ -196,7 +197,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51112",
       "department": "Marne"
     },
     {
@@ -204,7 +205,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51119",
       "department": "Marne"
     },
     {
@@ -212,7 +213,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51152",
       "department": "Marne"
     },
     {
@@ -220,7 +221,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51158",
       "department": "Marne"
     },
     {
@@ -228,7 +229,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51172",
       "department": "Marne"
     },
     {
@@ -236,7 +237,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51177",
       "department": "Marne"
     },
     {
@@ -244,7 +245,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51200",
       "department": "Marne"
     },
     {
@@ -252,7 +253,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51202",
       "department": "Marne"
     },
     {
@@ -260,7 +261,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51210",
       "department": "Marne"
     },
     {
@@ -268,7 +269,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51225",
       "department": "Marne"
     },
     {
@@ -276,7 +277,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51239",
       "department": "Marne"
     },
     {
@@ -284,7 +285,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51281",
       "department": "Marne"
     },
     {
@@ -292,7 +293,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51287",
       "department": "Marne"
     },
     {
@@ -300,7 +301,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51310",
       "department": "Marne"
     },
     {
@@ -308,7 +309,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51333",
       "department": "Marne"
     },
     {
@@ -316,7 +317,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51030",
       "department": "Marne"
     },
     {
@@ -324,7 +325,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51365",
       "department": "Marne"
     },
     {
@@ -332,7 +333,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51375",
       "department": "Marne"
     },
     {
@@ -340,7 +341,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51392",
       "department": "Marne"
     },
     {
@@ -348,7 +349,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51422",
       "department": "Marne"
     },
     {
@@ -356,7 +357,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51431",
       "department": "Marne"
     },
     {
@@ -364,7 +365,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51461",
       "department": "Marne"
     },
     {
@@ -372,7 +373,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51471",
       "department": "Marne"
     },
     {
@@ -380,7 +381,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51532",
       "department": "Marne"
     },
     {
@@ -388,7 +389,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51562",
       "department": "Marne"
     },
     {
@@ -396,7 +397,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51564",
       "department": "Marne"
     },
     {
@@ -404,7 +405,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51580",
       "department": "Marne"
     },
     {
@@ -412,7 +413,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51584",
       "department": "Marne"
     },
     {
@@ -420,7 +421,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51599",
       "department": "Marne"
     },
     {
@@ -428,7 +429,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51612",
       "department": "Marne"
     },
     {
@@ -436,7 +437,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51622",
       "department": "Marne"
     },
     {
@@ -444,7 +445,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51627",
       "department": "Marne"
     },
     {
@@ -452,7 +453,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51629",
       "department": "Marne"
     },
     {
@@ -460,7 +461,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51631",
       "department": "Marne"
     },
     {
@@ -468,7 +469,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51636",
       "department": "Marne"
     },
     {
@@ -476,7 +477,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51612",
       "department": "Marne"
     },
     {
@@ -484,7 +485,7 @@
       "grade": "premier_cru",
       "sub_region": null,
       "echelle_pct": null,
-      "insee": null,
+      "insee": "51657",
       "department": "Marne"
     }
   ]

@@ -1,6 +1,6 @@
 # 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
 
-> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）、D（Level 3 內容）已完成**，最新分支 `feat/champagne-l3`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
+> 狀態：**階段 A（框架）、B（Level 1）、C（Level 2 內容）、D（Level 3 內容）、E（互動功能）已完成**，最新分支 `feat/champagne-interactive`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
 > 課程代號建議：`champagne`；課程 ID 前綴 `ch-l{階段}-{序號}`（如 `ch-l1-1`），沿用 Greece／Rhône 的骨架
 
@@ -220,7 +220,7 @@
 | B Level 1 | ✅ 完成（6 課，建置驗證通過） | `feat/champagne-l1`（從 `feat/champagne-course-framework` 切出） |
 | C Level 2 | ✅ 完成（8 課，建置驗證通過） | `feat/champagne-l2`（從 `feat/champagne-l1` 切出） |
 | D Level 3 | ✅ 完成（7 課，建置驗證通過） | `feat/champagne-l3`（從 `feat/champagne-l2` 切出） |
-| E 互動（地圖、遊戲、筆記、成就、詞彙） | ⏳ 待做 | `feat/champagne-interactive` |
+| E 互動（地圖、遊戲、筆記、成就、詞彙） | ✅ 完成（建置與資料驗證通過；**未做實機地圖畫面檢查**；migration 已備妥未套用） | `feat/champagne-interactive`（從 `feat/champagne-l3` 切出） |
 | F 全面檢查、migration | ⏳ 待做 | `feat/champagne-final` |
 
 ## 12. Level 1 內容說明與查證註記（階段 B，2026-10-25）
@@ -282,3 +282,38 @@
 11. **無法查證而未寫**：每公斤葡萄價格（本次未取得可靠最新數字）、各集團持股比例與人事、Lanson-BCC 持股結構、Laurent-Perrier 近況、各酒莊的個別釀造做法、WSET D5／IMW 的實際題型與評分細節。
 
 **後續建議**：階段 E（地圖、遊戲、筆記、成就、詞彙）可直接引用 Level 3 的比較表與標籤代碼作為遊戲題庫（排序題：傳統法步驟；配對題：NM／RM／CM…；甜度級別順序）。階段 F 請再檢查本課所有「單一來源」數字是否有更新（尤其出貨、營收、庫存與集團交易，每年都會變動）。
+
+
+## 15. 階段 E 互動功能說明（2026-10-26）
+
+### 15.1 互動地圖（`ChampagneMapPage`，村莊層級）
+- **資料**：`public/champagne/champagne_crus.geojson`，312 個行政區（17 Grand Cru、37 個含 Premier Cru 的行政區、258 個未分級），建置腳本 `scripts/build-champagne-crus.py`。欄位：名稱、INSEE、省份、教學用產區 `sub`、分級、`echelle`（僅 Grand Cru 填 100）、`members`（合併新鎮內的分級村莊）、品種傾向、面積。
+- **來源**：村莊清單與 PDO 多邊形來自 Bianchi et al. 2022（CC0）；邊界為 IGN Admin Express 衍生（gregoiredavid/france-geojson），以標準化名稱對應 INSEE；分級取自 INAO 規格（2024-01-25）的 17 個 Grand Cru＋42 個 Premier Cru。
+- **與設計稿「約 319 村」的差異**：data.gouv.fr 的 INAO 清單仍無法取得，改用 CC0 資料的 312 個行政區；因此未分級村莊只標「cru 村莊（未分級）」，**不顯示 Échelle 百分比**（官方未公布）。312 與 319 的差異未能解釋，不進測驗。
+- **合併新鎮**：Aÿ-Champagne、Val de Livre（含 Louvois）、Blancs-Coteaux（含 Oger、Vertus）、Val-des-Marais 等以 `members[]` 記錄內部分級村莊，資訊面板會說明，成就「十七座聖殿」也依此計算。42 個 Premier Cru 因合併而對應 37 個多邊形。
+- **產區歸類為近似**：漢斯山／馬恩河谷／白丘為 Premier Cru 手動指派，未分級村莊依 6 公里內最近的 Grand Cru；Aube 全部歸巴爾丘；其餘為「外圍」。**非 AOC 法定分區**，僅供篩選與氣候著色。
+- **UI**：三色（Grand Cru／Premier Cru／未分級）、四大產區篩選（抽屜分頁，同步過濾地圖並縮放）、搜尋抽屜（含合併新鎮內的村名）、資訊面板。
+- **退回簡易版**：若村莊 geojson 載入失敗，改用 `champagne_pdo_outline.geojson`（PDO 示意範圍＋17 個 Grand Cru 示意點，`scripts/build-champagne-outline.py`），畫面明確標示「非官方邊界」。
+
+### 15.2 氣候圖層
+`scripts/build-champagne-climate.mjs` → `public/data/champagne-climate.json`：Open-Meteo 4–10 月，溫度 `era5_land`、日照／降雨 `era5`，1981–2024，基準 1981–2010，四個代表點（漢斯山 Verzenay、馬恩河谷 Aÿ、白丘 Avize、巴爾丘 Les Riceys）。**限制**：ERA5-Land 約 9 公里、ERA5 約 25 公里，馬恩河谷與白丘的日照／降雨落在同一格；只著色四大產區，外圍灰色；僅供區域比較。UI 為地圖頁的圖層（en/ja）。
+
+### 15.3 遊戲（`game_scores`，`game_type` 前綴 `ch_`）
+共用 `ChampagneQuizEngine`（單選）：產區速答（53 題）、品種配對（12）、分級辨識（36）、釀造順序（16，引擎不支援排序，改為「下一步／上一步」單選）、知識閃問（取自 Level 1–3 測驗，共 85 題，en/ja 套用課程 overlay）。最佳成績 key：`ch_region_best`、`ch_grape_best`、`ch_class_best`、`ch_process_best`、`ch_flash_best`。題目僅用課程已查證的事實；有出入的數字（Premier Cru 42／44、Échelle 終止年、面積與村莊數、生產者數、品種比例、甜度邊界值）不入題庫。
+
+### 15.4 品飲筆記、成就、詞彙
+- 品飲筆記：`source='champagne'`，`wine_type` 為 `ch_nv/ch_vintage/ch_bdb/ch_bdn/ch_rose/ch_prestige/ch_sweet/ch_still/ch_other`。
+- 成就：`src/stores/champagneAchievementSystem.js`（30 項，含「十七座聖殿」），已登錄 `useAchievements.js`，課程首頁 `AchievementModal course-key="champagne"`。
+- 詞彙：region `champagne`，第三語法文（沿用 `fr` 欄位）；`WineGlossary`／`AdminGlossary` 已加入。
+
+### 15.5 待手動套用的 migration（本階段**未套用**）
+1. `20261025000000_add_champagne_course.sql`（階段 A）
+2. `20261027000000_add_champagne_tasting_types.sql`（wine_type CHECK）
+3. `20261027000100_add_champagne_glossary.sql`（region CHECK＋詞條）
+
+**與隆河分支的協調**：兩個 CHECK 約束（`tasting_notes_wine_type_check`、`wine_glossary_region_check`）是整份清單覆蓋，香檳版已包含希臘＋隆河（`rh_*`、`rhone`）＋香檳；隆河版目前不含 `ch_*`／`champagne`。**後套用者必須包含兩邊的值**，合併時請以聯集為準。`WineGlossary.vue`、`AdminGlossary.vue`、`useAchievements.js` 為共用檔，兩分支都會改動，合併時預期有簡單衝突，取兩邊的聯集即可。
+
+### 15.6 限制
+- 本次沒有 `VITE_MAPBOX_TOKEN`，只做 SFC 編譯、`vite build` 與資料／題庫驗證，**沒有實機地圖畫面檢查**（圖層、點擊、篩選、氣候著色）。
+- 成就解鎖通知標題尚未走 `gt()`（仍為中文）。
+- `ch-l1-4` ja 有 1 個選項與原文相同（階段 B 既有，疑為專有名詞）。

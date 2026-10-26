@@ -5,7 +5,14 @@
       v-if="view === 'selector'"
       style="min-height: 100vh;"
       @enterLevel="goToLevel"
+      @openMap="view = 'map'"
+      @openGames="view = 'game'"
+      @openNotebook="view = 'notebook'"
     />
+
+    <ChampagneMapPage v-else-if="view === 'map'" @back-to-course="view = 'selector'" />
+    <ChampagneTastingNotebookPage v-else-if="view === 'notebook'" @back="view = 'selector'" />
+    <ChampagneGameHubPage v-else-if="view === 'game'" @back="view = 'selector'" />
 
     <!-- 課程模式 -->
     <ChampagneLearningSystem
@@ -13,7 +20,6 @@
       :selectedLevel="selectedLevel"
       @exitLearning="view = 'selector'"
     />
-    <!-- 互動地圖／遊戲／品飲筆記：階段 E 製作，目前於課程首頁以「製作中」顯示 -->
   </div>
 </template>
 
@@ -22,8 +28,11 @@ import { ref } from 'vue'
 import { i18n } from '../../locales/index.js'
 import ChampagneLevelSelector from './ChampagneLevelSelector.vue'
 import ChampagneLearningSystem from './ChampagneLearningSystem.vue'
+import ChampagneMapPage from './ChampagneMapPage.vue'
+import ChampagneGameHubPage from './ChampagneGameHubPage.vue'
+import ChampagneTastingNotebookPage from './notebook/ChampagneTastingNotebookPage.vue'
 
-const view = ref('selector') // 'selector' | 'course'
+const view = ref('selector') // 'selector' | 'map' | 'game' | 'notebook' | 'course'
 const selectedLevel = ref(1)
 
 function goToLevel(n) {

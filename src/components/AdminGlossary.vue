@@ -302,6 +302,7 @@ const regionOptions = [
   { key: 'california', label: '加州',       icon: '🌉', lang3: '',   lang3Label: '' },
   { key: 'australia',  label: '澳洲',       icon: '🦘', lang3: '',   lang3Label: '' },
   { key: 'newzealand', label: '紐西蘭',   icon: '🥝', lang3: '',   lang3Label: '' },
+  { key: 'champagne',  label: '香檳',       icon: '🥂', lang3: 'fr', lang3Label: 'Français' },
 ]
 
 const categoryOptions = [
@@ -810,6 +811,7 @@ async function runBatchTranslate() {
 .region-germany    { background: #ede7f6; color: #4527a0; }
 .region-hungary    { background: #fffde7; color: #ef6c00; }
 .region-greece     { background: #e3f2fd; color: #0d5eaf; }
+.region-champagne  { background: #fdf3d8; color: #8a6a14; }
 .region-loire      { background: #e0f7fa; color: #006064; }
 .region-california { background: #fff8e1; color: #ef6c00; }
 .region-australia  { background: #ffebee; color: #c62828; }

@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="champagne" />
   </div>
 </template>
 
@@ -55,6 +56,8 @@ import {
 } from '../../stores/champagneLearningStore.js'
 import { authActions, authState, authInitPromise } from '../../stores/authStore.js'
 import { saveChampagneLesson, loadAndMergeChampagneProgress } from '../../lib/courseProgressSync.js'
+import { globalChampagneAchievementManager } from '../../stores/champagneAchievementSystem.js'
+import WineGlossary from '../WineGlossary.vue'
 import ChampagneCourseLayout from './ChampagneCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalChampagneAchievementManager.init()
 
 const currentLevel = computed(() => champagneLearningState.currentLevel)
 const currentLesson = computed(() => champagneLearningState.currentLesson)
@@ -129,10 +134,19 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = champagneLearningState.completedLessons.includes(lessonId)
     champagneLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveChampagneLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => champagneLearningState.completedLessons.includes(l.id))
+      globalChampagneAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: champagneLearningProgress.value
+      })
+    }
   }
   champagneLearningActions.exitLesson()
 }
