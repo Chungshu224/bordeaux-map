@@ -21,14 +21,15 @@
       :percent="totalProgressPct"
       :completed-count="completedLessons.length"
       :total-count="totalLessonCount"
-      :achievement-count="0"
+      :achievement-count="achievementCount"
       :streak="0"
       :cta-text="heroButtonText"
       @cta="startJourney"
       @open-progress="showProgressModal = true"
+      @open-achievements="showAchievementModal = true"
     />
 
-    <!-- 3. Quick Nav（地圖／練習／筆記製作中） -->
+    <!-- 3. Quick Nav -->
     <QuickNavGrid :items="quickNavItems" @select="onQuickNav" />
 
     <!-- 4. Level Track -->
@@ -45,6 +46,8 @@
       :title="gt('為什麼學習奧地利？')"
       :items="overviewItems"
     />
+
+    <AchievementModal :open="showAchievementModal" course-key="austria" @close="showAchievementModal = false" />
 
     <ProgressModal
       :open="showProgressModal"
@@ -69,12 +72,18 @@ import {
   LevelTrack,
   RegionStoryGrid,
   ProgressModal,
+  AchievementModal,
   getTheme
 } from '../shared/courseHome/index.js'
 import { austriaLearningState, austriaLearningLevels } from '../../stores/austriaLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
+import { globalAustriaAchievementManager, austriaAchievementState } from '../../stores/austriaAchievementSystem.js'
 
-const emit = defineEmits(['enterLevel'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
+const showAchievementModal = ref(false)
+
+globalAustriaAchievementManager.init()
+const achievementCount = computed(() => austriaAchievementState.unlockedAchievements.length)
 
 const theme = getTheme('austria')
 const showProgressModal = ref(false)
@@ -140,21 +149,25 @@ function startJourney() {
 }
 
 const heroStats = [
-  { value: '17', label: gt('DAC 產區（待核對）') },
+  { value: '18', label: gt('DAC 產區（以 ÖWM 為準）') },
   { value: '21', label: gt('系統課程') },
   { value: '3',  label: gt('學習階段') }
 ]
 
-// 地圖／遊戲／筆記／成就於階段 E 製作；目前顯示「製作中」並停用
 const quickNavItems = computed(() => [
-  { key: 'map',      desc: gt('互動地圖（製作中）'), enabled: false },
-  { key: 'games',    desc: gt('練習遊戲（製作中）'), enabled: false },
-  { key: 'notebook', desc: gt('品飲筆記（製作中）'), enabled: false },
+  { key: 'map',      desc: gt('18 個 DAC 互動地圖') },
+  { key: 'games',    desc: gt('品種配對・產區速答') },
+  { key: 'notebook', desc: gt('奧地利酒款品飲筆記') },
+  { key: 'achievements', desc: gt('{n} 個已解鎖徽章', { n: achievementCount.value }) },
   { key: 'progress', desc: gt('{pct}% 完成・{n} 課', { pct: totalProgressPct.value, n: completedLessons.value.length }) }
 ])
 
 function onQuickNav(key) {
-  if (key === 'progress') showProgressModal.value = true
+  if (key === 'map') emit('openMap')
+  else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
+  else if (key === 'achievements') showAchievementModal.value = true
+  else if (key === 'progress') showProgressModal.value = true
 }
 
 const levelData = computed(() => [

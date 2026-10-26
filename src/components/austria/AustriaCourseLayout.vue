@@ -4,7 +4,7 @@
     <header class="course-header">
       <div class="header-left">
         <button class="back-btn" @click="emit('backToLevelSelector')">← {{ $t('common.actions.back') }}</button>
-        <div class="logo">🏔️</div>
+        <div class="logo">🇦🇹</div>
       </div>
 
       <div class="header-center">
