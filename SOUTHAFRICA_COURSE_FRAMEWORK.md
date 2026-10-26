@@ -118,7 +118,7 @@
 
 - `za-l1-1…6` 與 en/ja overlay；事實來源：Wikipedia（History of South African wine）、Wine With Seth（South Africa、Coastal Region、WO Label Declarations）、Pinotage Association、Wineland（Cap Classique）、The Drinks Business／WOSA（2024 出口）。
 - 已用數字（2025 年面積 86,525 公頃）：Chenin 18.4%、Sauvignon Blanc 12.1%、Colombard 10.6%、Cabernet 9.9%、Syrah 9.4%、Pinotage 7.6%、Chardonnay 7.6%、Merlot 5.7%；白 55.8%／紅 44.2%（皆為說明用，不進測驗）。
-- WO 規則：產地 100%、品種 85%、年份 85%；Single Vineyard ≤6 公頃；WCA 自 2023-08-01 取代 Wine and Spirit Board；Cap Classique 至少 9 個月酒渣。
+- WO 規則：產地 100%、品種 85%、年份 85%；Single Vineyard ≤6 公頃；WCA 自 2023-08-01 取代 Wine and Spirit Board；Cap Classique 酒渣陳年：現行規定自 2023 年份起至少 12 個月（舊規定 9 個月；資料有 2021 公告／2023 實施的說法，課程寫「2023 年份起」），基酒須整串壓榨、瓶內壓力至少 3 bar。
 - 來源有出入、不進測驗：Pinotage 雜交年份（1924 紀錄／1925 通說）；Constantia 購入年與總督任期；Geographical Units 數量（來源說 6，框架初稿說 5）— Level 2 須查證後再用。
 
 ## 11. 階段 C：Level 2 已製作（2026-10-27）

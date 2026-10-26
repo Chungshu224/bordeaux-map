@@ -17,7 +17,7 @@ export const lessonContent = [
       { id: 1, icon: "📜", title: "歷史", content: "1652 殖民、1659 第一瓶酒、1688 Huguenot、1866 根瘤芽蟲、1918 KWV" },
       { id: 2, icon: "🌊", title: "氣候", content: "地中海氣候、冬雨、Benguela 寒流與 Cape Doctor（9 至 3 月東南風）" },
       { id: 3, icon: "🍇", title: "品種", content: "Chenin Blanc 最多；Pinotage＝Pinot Noir × Cinsaut" },
-      { id: 4, icon: "🏷️", title: "標籤", content: "產地 100、品種 85、年份 85；Cap Classique 至少 9 個月" }
+      { id: 4, icon: "🏷️", title: "標籤", content: "產地 100、品種 85、年份 85；Cap Classique 至少 12 個月（2023 年份起）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">品種面積與出口數字每年更新，因此測驗只考規則與觀念，不考當年數字。</p></div>"
   },
@@ -87,10 +87,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Cap Classique 的酒渣陳年至少多久？",
-            options: ["A. 3 個月","B. 9 個月","C. 24 個月","D. 36 個月"],
-            correct: 1,
-            explanation: "至少 9 個月。"
+            question: "Cap Classique 現行規定（自 2023 年份起）的酒渣陳年至少多久？",
+            options: ["A. 3 個月","B. 9 個月","C. 12 個月","D. 36 個月"],
+            correct: 2,
+            explanation: "自 2023 年份起至少 12 個月。"
           }
         ]
       }
