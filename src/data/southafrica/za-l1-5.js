@@ -33,10 +33,10 @@ export const lessonContent = [
     title: "Cap Classique",
     highlights: [
       { id: 1, icon: "🫧", title: "定義", content: "南非的瓶內二次發酵（傳統法）氣泡酒；只有符合規定的酒才可標示 Cap Classique" },
-      { id: 2, icon: "⏳", title: "最短陳年", content: "至少 9 個月（酒渣陳年）" },
+      { id: 2, icon: "⏳", title: "最短陳年", content: "現行規定自 2023 年份起至少 12 個月（先前為 9 個月）；基酒須整串壓榨、瓶內壓力至少 3 bar" },
       { id: 3, icon: "📈", title: "成長", content: "2024 年出口中，Cap Classique 的出口值成長 19%，氣泡酒整體成長 34%" }
     ],
-    content: "<div class=\"content-overview\"><p class=\"lead-text\">Cap Classique 的陳年門檻（9 個月）與香檳不同；更細的類別仍在業界討論。</p></div>"
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Cap Classique 的陳年門檻（現行 12 個月）與香檳不同，且規定曾調整（舊為 9 個月），讀舊資料時要留意年份；更細的類別仍在業界討論。</p></div>"
   },
   {
     component: 'QuizSlide',
@@ -69,10 +69,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Cap Classique 的酒渣陳年至少多久？",
-            options: ["A. 3 個月","B. 9 個月","C. 15 個月","D. 36 個月"],
-            correct: 1,
-            explanation: "至少 9 個月。"
+            question: "Cap Classique 現行規定（自 2023 年份起）的酒渣陳年至少多久？",
+            options: ["A. 3 個月","B. 9 個月","C. 12 個月","D. 36 個月"],
+            correct: 2,
+            explanation: "自 2023 年份起至少 12 個月；舊規定為 9 個月。"
           }
         ]
       }

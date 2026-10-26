@@ -9,7 +9,7 @@
   "slides.1.highlights.2.title": "品種",
   "slides.1.highlights.2.content": "シュナン・ブランが最多。ピノタージュ＝ピノ・ノワール×サンソー",
   "slides.1.highlights.3.title": "ラベル",
-  "slides.1.highlights.3.content": "産地100、品種85、年85。キャップ・クラシックは最低9か月",
+  "slides.1.highlights.3.content": "産地100、品種85、年85。キャップ・クラシックは最低12か月（2023年〜）",
   "slides.1.content": "<div class=\"content-overview\"><p class=\"lead-text\">品種面積や輸出の数字は毎年更新されるため、テストでは年ごとの数字ではなく規則と概念を問います。</p></div>",
   "slides.2.componentProps.slide.questions.0.question": "ケープのぶどうから最初のワインが造られたのは？",
   "slides.2.componentProps.slide.questions.0.options.0": "A. 1652年",
@@ -59,11 +59,11 @@
   "slides.2.componentProps.slide.questions.7.options.2": "C. 法的な意味はない",
   "slides.2.componentProps.slide.questions.7.options.3": "D. オーク樽熟成が必須",
   "slides.2.componentProps.slide.questions.7.explanation": "リザーブは規制されていません。",
-  "slides.2.componentProps.slide.questions.8.question": "キャップ・クラシックの最低澱熟成期間は？",
+  "slides.2.componentProps.slide.questions.8.question": "キャップ・クラシックの現行規定（2023年ヴィンテージから）の最低澱熟成期間は？",
   "slides.2.componentProps.slide.questions.8.options.0": "A. 3か月",
   "slides.2.componentProps.slide.questions.8.options.1": "B. 9か月",
-  "slides.2.componentProps.slide.questions.8.options.2": "C. 24か月",
+  "slides.2.componentProps.slide.questions.8.options.2": "C. 12か月",
   "slides.2.componentProps.slide.questions.8.options.3": "D. 36か月",
-  "slides.2.componentProps.slide.questions.8.explanation": "最低9か月です。",
+  "slides.2.componentProps.slide.questions.8.explanation": "2023年ヴィンテージから最低12か月です。",
   "slides.2.componentProps.slide.title": "📋 レベル1 総合評価"
 }

@@ -9,7 +9,7 @@
   "slides.1.highlights.2.title": "Varieties",
   "slides.1.highlights.2.content": "Chenin Blanc is the most planted; Pinotage = Pinot Noir × Cinsaut",
   "slides.1.highlights.3.title": "Labels",
-  "slides.1.highlights.3.content": "Origin 100, cultivar 85, vintage 85; Cap Classique at least nine months",
+  "slides.1.highlights.3.content": "Origin 100, cultivar 85, vintage 85; Cap Classique at least 12 months (from 2023)",
   "slides.1.content": "<div class=\"content-overview\"><p class=\"lead-text\">Area and export figures update every year, so the test covers rules and concepts, not the figures of any one year.</p></div>",
   "slides.2.componentProps.slide.questions.0.question": "When was the first wine made from Cape grapes?",
   "slides.2.componentProps.slide.questions.0.options.0": "A. 1652",
@@ -59,11 +59,11 @@
   "slides.2.componentProps.slide.questions.7.options.2": "C. It has no legal meaning",
   "slides.2.componentProps.slide.questions.7.options.3": "D. Must be oak-aged",
   "slides.2.componentProps.slide.questions.7.explanation": "Reserve is unregulated.",
-  "slides.2.componentProps.slide.questions.8.question": "What is the minimum lees ageing for Cap Classique?",
+  "slides.2.componentProps.slide.questions.8.question": "What is the current minimum lees ageing for Cap Classique (from the 2023 vintage)?",
   "slides.2.componentProps.slide.questions.8.options.0": "A. 3 months",
   "slides.2.componentProps.slide.questions.8.options.1": "B. 9 months",
-  "slides.2.componentProps.slide.questions.8.options.2": "C. 24 months",
+  "slides.2.componentProps.slide.questions.8.options.2": "C. 12 months",
   "slides.2.componentProps.slide.questions.8.options.3": "D. 36 months",
-  "slides.2.componentProps.slide.questions.8.explanation": "At least nine months.",
+  "slides.2.componentProps.slide.questions.8.explanation": "At least 12 months from the 2023 vintage.",
   "slides.2.componentProps.slide.title": "📋 Level 1 Final Assessment"
 }
