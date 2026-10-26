@@ -16,7 +16,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "📊", title: "2025 年總面積", content: "2025 年葡萄園總面積約 86,525 公頃；白品種約 55.8%、紅品種約 44.2%" },
       { id: 2, icon: "🥇", title: "Chenin Blanc", content: "最多種植的品種：2025 年約 15,949 公頃（約 18.4%）；當地傳統名稱為 Steen" },
-      { id: 3, icon: "🌿", title: "Sauvignon Blanc 與 Colombard", content: "Sauvignon Blanc 約 12.1%（10,442 公頃）；Colombard 約 10.6%（9,155 公頃，多用於基酒與蒸餾）" },
+      { id: 3, icon: "🌿", title: "Sauvignon Blanc 與 Colombard", content: "Sauvignon Blanc 約 12.1%（10,442 公頃）；Colombard 約 10.6%（9,155 公頃）" },
       { id: 4, icon: "🥂", title: "Chardonnay", content: "約 7.6%（6,574 公頃）；也是 Cap Classique 的主力品種之一" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">數字皆為 2025 年；之後各年會變動，考試時請以最新官方數字為準。</p></div>"
