@@ -141,7 +141,7 @@ export default {
   "2006 年 2 月法令升格，紅酒 Grenache 至少 50%、Syrah＋Mourvèdre 至少 25%": "Promoted by decree in February 2006; reds at least 50% Grenache, at least 25% Syrah + Mourvèdre",
   "乾紅酒 2005 年升格，4 個村莊；同名的 Muscat 天然甜酒是另一個 AOC": "Dry red promoted in 2005; 4 communes; the Muscat vin doux naturel of the same name is a separate AOC",
   "先以 1944 年天然甜酒（VDN）認定，乾紅酒 2010 年才升格為 cru": "First recognised in 1944 for vin doux naturel (VDN); dry red promoted to cru only in 2010",
-  "2016 年升格的 cru（追溯適用 2015 年採收），產紅酒與白酒": "Cru promoted in 2016 (retroactive to the 2015 harvest); red and white",
+  "Vaucluse 省的村莊，原為 Côtes du Rhône Villages 的可加註地名，後升格為 cru": "Village in Vaucluse, formerly a named Côtes du Rhône Villages commune, later promoted to cru",
   "Gard 省右岸，4 個村莊，隔河與 Châteauneuf-du-Pape 相望，產紅、粉紅、白酒": "Right bank in Gard; 4 communes facing Châteauneuf-du-Pape across the river; red, rosé and white",
   "隆河唯一只產粉紅酒的 cru，只允許靜態粉紅酒": "The only Rhône cru producing rosé alone; only still rosé allowed",
   "2024 年 9 月升格為第 18 個 cru，Gard 省三個村莊": "Promoted in September 2024 as the 18th cru; three communes in Gard",

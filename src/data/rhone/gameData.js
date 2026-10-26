@@ -40,7 +40,7 @@ export const CRU_ITEMS = [
   { name: 'Vinsobres',           zone: 'south', easy: false, hint: '2006 年 2 月法令升格，紅酒 Grenache 至少 50%、Syrah＋Mourvèdre 至少 25%' },
   { name: 'Beaumes-de-Venise',   zone: 'south', easy: false, hint: '乾紅酒 2005 年升格，4 個村莊；同名的 Muscat 天然甜酒是另一個 AOC' },
   { name: 'Rasteau',             zone: 'south', easy: true,  hint: '先以 1944 年天然甜酒（VDN）認定，乾紅酒 2010 年才升格為 cru' },
-  { name: 'Cairanne',            zone: 'south', easy: false, hint: '2016 年升格的 cru（追溯適用 2015 年採收），產紅酒與白酒' },
+  { name: 'Cairanne',            zone: 'south', easy: false, hint: 'Vaucluse 省的村莊，原為 Côtes du Rhône Villages 的可加註地名，後升格為 cru' },
   { name: 'Lirac',               zone: 'south', easy: true,  hint: 'Gard 省右岸，4 個村莊，隔河與 Châteauneuf-du-Pape 相望，產紅、粉紅、白酒' },
   { name: 'Tavel',               zone: 'south', easy: true,  hint: '隆河唯一只產粉紅酒的 cru，只允許靜態粉紅酒' },
   { name: 'Laudun',              zone: 'south', easy: false, hint: '2024 年 9 月升格為第 18 個 cru，Gard 省三個村莊' }

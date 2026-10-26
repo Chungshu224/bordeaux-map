@@ -151,7 +151,7 @@ const routes = [
     path: '/rhone',
     name: 'Rhone',
     component: () => import('../components/rhone/RhonePage.vue'),
-    meta: { requiresAuth: true, minimumTier: 'free', title: '🇫🇷 隆河 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🇫🇷 隆河 · 侍酒師的筆記本' } // 公開時移除 requiresAdmin
   },
   {
     path: '/rhone/course',

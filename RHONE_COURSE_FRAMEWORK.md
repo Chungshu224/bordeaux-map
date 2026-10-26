@@ -13,7 +13,7 @@
 | C | Level 2 內容（8 課） | `feat/rhone-l2`（從 B 切出） | ✅ 完成（2026-10-25，未合併；見第 11 節） |
 | D | Level 3 內容（7 課） | `feat/rhone-l3`（從 C 切出） | ✅ 完成（2026-10-25，未合併；見第 12 節） |
 | E | 互動地圖、遊戲、品飲筆記、成就、詞彙 | `feat/rhone-interactive`（從 D 切出） | ✅ 完成（2026-10-25，未合併；氣候資料檔尚未產生；見第 13 節） |
-| F | 全面英日文、migration、價格、公開 | — | ⏳ |
+| F | 全面檢查、事實複查、migration 整理、公開檢查表 | `feat/rhone-final`（從 E 切出，含 A–E 全部） | ✅ 完成（2026-10-26，未合併；見第 14 節與 `docs/RHONE_LAUNCH_CHECKLIST.md`） |
 
 **階段 A 備註**：地圖／遊戲／筆記入口在首頁顯示「製作中」（停用）；成就系統與詞彙辭典尚未建立，首頁不顯示成就數；`courses` migration 只準備檔案、**尚未套用**（`supabase/migrations/20261025000000_add_rhone_course.sql`，active=false、show_on_home=false）。
 
@@ -308,3 +308,32 @@
 ### 驗證結果
 - en/ja 字典缺漏檢查 0 筆；`@vue/compiler-sfc` 編譯檢查（rhone/*.vue、WineGlossary、AdminGlossary）無錯；`vite build` 通過。
 - **未做即時畫面檢查**（沒有 `VITE_MAPBOX_TOKEN`，地圖與互動僅經建置驗證）。
+
+## 14. 階段 F：全面檢查與收尾（分支 `feat/rhone-final`）
+
+### 完整性
+- 21 課皆為完整內容，無「內容製作中」空殼；`node scripts/check-rhone-final.mjs`：需翻譯字串 1,162 條，en／ja 皆逐鍵 100% 覆蓋、無多餘鍵，en 無中文殘留；rhoneUi 字典對 229 個靜態 `gt()` 字串缺漏 0、佔位符一致。
+- `node scripts/check-rhone-runtime.mjs`：以 en／ja 各產生 3,150 題遊戲題（產區速答、品種配對、分級辨識、課程閃問），en 無中文殘留；遊戲題庫、品飲選項、成就、PGI／示意點的 365 條中文字面量皆有 en／ja 字典。
+- ja 無假名的警告 54 筆皆為日文漢字詞（結論、推論、區域、選項中的數字等），屬正常。
+
+### 事實複查（2026-10-26，對照 INAO 規格、Inter Rhône《Chiffres clés 2025》EN、WineWithSeth、Decanter；共 45 項，全部與課內一致）
+CDR Grenache ≥30%／Syrah＋Mourvèdre ≥20%／主要品種 ≥70%／Montélimar 例外；Villages Grenache ≥40%／S+M ≥25%／主要品種 ≥80%、95 個村莊；VIFA 四品種與 5%／10% 上限；18 cru、21 個 Villages 地名（INAO 2022 文件列 22 個 DGC，含當時尚未升格的 Laudun，扣除後為 21，無矛盾）；2025 年葡萄園 60,223 公頃、2,012,313 百升、紅 73%／粉紅 14%／白 13%；CDR 26,777 公頃、Villages 8,019 公頃；Crozes-Hermitage 2,139、Saint-Joseph 1,504、Hermitage 137、Côte-Rôtie 342、Condrieu 216、Cornas 162、Château-Grillet 4、Saint-Péray 128、Costières de Nîmes 2,145 公頃；Grenache noir 32,379、Syrah 22,189 公頃；出口前三比利時 18%／英國 17%／美國 13%；經營者 1,418／87／366；有機 24% 產量／26% 面積；教皇新堡 1936／18 個條目（13 為合併計法）／35 hl/ha／12.5%／5 個村莊／強制手工；Côte-Rôtie 1940-10-18／Syrah ≥80%／Viognier ≤20%／40 hl/ha／6,000 株；Hermitage 1937／Syrah ≥85%／稻草酒 ≥45 天、>350 g/L；Cornas 1938／100% Syrah；Gigondas 1971-01-06／Grenache ≥50%／Cinsault＋Mourvèdre＋Syrah ≥15%／白酒 2023 年份（INAO 2022-09-08）；Laudun 2024-09-11、第 18 個 cru。
+本次無法取得：vins-rhone.com 站內頁面（fetch 被阻擋）、Kit pédagogique 2025（既定不用）、WineWithSeth 的 Condrieu／Tavel／Clairette de Die 頁（抓取失敗）→ 這幾項沿用階段 C 對照 INAO 的結論，本次未重查。
+
+### 第 7 節「已知出入」最終結論
+1. CDR 的 Syrah＋Mourvèdre 比例：**定案 20%**（INAO 2018 規格；已投產葡萄樹 2022 年採收起），15% 是過渡版本；可進測驗。
+2. cru 總數／年份：**18 個定案**；Cairanne 2016 為單一來源報導（INAO 規格不載年份），**階段 F 發現遊戲線索曾引用此年份與酒款顏色，已改為不含年份與顏色的線索**；其餘年份對照 INAO 一致。
+3. 各 AOC 面積：一律使用 Inter Rhône 2025 並標年份；新舊版本（2024／2025）差異來自年度，不是矛盾；教皇新堡面積各來源不一，只寫「約 3,000 公頃級」。
+4. Costières de Nîmes：維持「行政上屬 Rhône、地理與風格介於兩者」，僅簡介、不計入 cru。
+- 仍有出入或未核對（**皆未進測驗**，課內已標明）：Cairanne 升格年份與草案比例／酒款顏色；Laudun、Cairanne 是否仍產粉紅；Côtes du Rhône 村莊數與省數（170 餘個／6–7 省）；CDR 與 Villages 單產與最低酒精（草案）；le râpé 百分比；VDN 殘糖與陳年年限；Seyssuel／IGP Collines Rhodaniennes；教皇徽章瓶；Mistral 天數、日照時數、氣候研究數字（二手轉述）；總面積與產量的封面／內文口徑；有機比例；各通路占比；價格與市場資料（媒體轉述）；Guigal／Chapoutier／Delas 的企業沿革。
+- INAO 草案轉為正式版後（Cairanne、Vinsobres、Beaumes-de-Venise 白酒等）建議再核對一輪。
+
+### 功能檢查
+- `vite build` 通過；`@vue/compiler-sfc`／建置涵蓋所有 `rhone/*.vue`。
+- Playwright（dev server，無 Supabase 環境變數）：未登入造訪首頁無隆河卡片、`/rhone` 導向登入；`/greece`、首頁其他課程行為不變，無 pageerror。
+- 對 master 的共用檔改動皆為新增隆河項目（PlatformHome、router、useAchievements、WineGlossary／AdminGlossary、locale common／home）；希臘檔案未動。
+- **階段 F 新增**：`/rhone` 路由加 `requiresAdmin: true`（原本只擋首頁卡片，非管理員仍可直接輸入網址進入）；公開時需一併移除。
+- **限制**：沒有 `VITE_MAPBOX_TOKEN` 與管理員登入環境，地圖畫面與管理員視角下的互動（品飲筆記儲存、成就解鎖）只經建置、元件編譯與資料層煙霧測試，**未做真實畫面點擊測試**。
+
+### 公開所需檔案
+見 `docs/RHONE_LAUNCH_CHECKLIST.md`（migration 套用順序、移除 `ADMIN_ONLY_COURSES`／`requiresAdmin`、DB `active`／`show_on_home`）。
