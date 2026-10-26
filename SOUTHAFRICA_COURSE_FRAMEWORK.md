@@ -103,3 +103,13 @@
 2. 結構是否沿用 3 階段 21 課？
 3. 地圖層級：Ward（有資料時）否則 District／Region。
 4. 課程先只給管理員？
+
+## 9. 已完成的框架項目（階段 A，2026-10-27）
+
+- 頁面與元件：`src/components/southafrica/`（`SouthAfricaPage`、`SouthAfricaLevelSelector`、`SouthAfricaLearningSystem`、`SouthAfricaCourseLayout`），UI 字典 `src/locales/southafricaUi/`（en/ja，117 條，已用腳本檢查 gt() 全覆蓋、en 無殘留中文）
+- 學習 store：`src/stores/southafricaLearningStore.js`（3 階段 21 課大綱，課程代號 `southafrica`，課程 ID 前綴 `za-l`）
+- 21 個課程空殼 `src/data/southafrica/za-l*.js`，en/ja overlay 已含標題與簡介
+- 共用檔案改動（皆為純新增條目）：`router/index.js`、`PlatformHome.vue`（New World 區卡片、導覽項、狀態表、`ADMIN_ONLY_COURSES`、CSS）、`lessonContentLoader.js`、`courseProgressSync.js`、`regionThemes.js`、`PresentationLesson.vue`、`locales/{zh-TW,en,ja}/{common,home}.js`
+- 本分支從 `feat/austria-course-framework` 切出（共用檔案已含奧地利條目），**請先合併奧地利再合併南非**
+- migration 已準備未套用：`20261027000100_add_southafrica_course.sql`（`active=false`）
+- 驗證：SFC 編譯、字典覆蓋、`vite build` 通過

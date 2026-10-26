@@ -85,6 +85,7 @@ export default {
     greece:     'ギリシャ',
     rhone:      'ローヌ渓谷',
     champagne:     'シャンパーニュ',
+    southafrica:    '南アフリカ',
     austria:        'オーストリア',
     loire:      'ロワール渓谷',
     california: 'カリフォルニア',
