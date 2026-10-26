@@ -125,5 +125,5 @@
 
 - `za-l2-1…8` 與 en/ja overlay；來源：Wine With Seth（WO、各產區頁）、Fairview（Old Vine Project）。
 - 已用且已查證的日期：WO 基礎規章 1972／正式實施 1973；Geographical Units 1993-04-02；Liquor Products Act 1989；WCA 2023-08-01；Stellenbosch 1679；Franschhoek 升 District 2010；Wellington 2012-09-21；Cape Town District 與 Constantia／Durbanville 併入 2017；Walker Bay District 2004-05；Elgin Ward 1990／District 2011；Elim 首支 WO 酒 1999；Tulbagh 1971／地震 1969-09-29；Swartland Revolution 2010–2015；OVP 2002 起、2016 正式成立、門檻 35 年。
-- 有出入、不進測驗：Stellenbosch 面積（約 11,500–17,500 公頃）；District／Ward 總數（約 32／102，範圍不明）；Geographical Unit 數量（來源說 6，初稿說 5）；Cape South Coast District 數（文字 7／資訊框 6）；SIP 細則（酵母營養、酵素）。
+- 有出入、不進測驗：Stellenbosch 面積（約 11,500–17,500 公頃）；District／Ward 總數（約 32／102，範圍不明）；Geographical Unit 數量（來源說 6，初稿說 5）；Cape South Coast 的 District 數與 Swellendam 歸屬（Wine With Seth 兩頁、bkwine 說法不一，課程不列定論）；SIP 細則（酵母營養、酵素）。
 - Orange River 與北開普產區：來源未涵蓋，**本課未收**，待查證後補入。
