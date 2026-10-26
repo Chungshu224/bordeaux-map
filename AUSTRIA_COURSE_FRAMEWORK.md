@@ -125,4 +125,14 @@
   - KMW 門檻：Qualitätswein 15、Kabinett 17、Spätlese 19、Auslese 21、BA／Eiswein／Strohwein 25、TBA 30（Wikipedia 彙整）；**Ausbruch 下限各來源不同，不放進課內**（階段 C 以酒法為準）；Kabinett 屬 Qualitätswein 而非 Prädikat，且不可加糖
   - 1985 事件的日期與數字（6 月 27 日分析、7 月 9 日警告、8 月 29 日新酒法、出口 4,500 萬公升 → 440 萬公升、2001 年恢復）取自 Wikipedia 彙整，課內標明為彙整數字、不進測驗
 - **仍需官方來源確認（階段 C／D）**：Ausbruch 與 Ruster Ausbruch DAC 規格、Wachau DAC 與 Vinea Wachau 三級並存關係、Sekt Austria 各級陳年月數、官方封條與檢驗編號細節（課內為一般性描述）
-- 既有程式中的奧地利內容：德國課程曾提及 Prädikat，Kabinett 的定義在奧地利與德國不同，課內已明確標示
+- 既有程式中的奧地利內容（階段 C 實際 grep 後更正）：奧地利／Kabinett 於 `src/data/lessons/l3-4.js`、匈牙利 `hu-l*`、`ca-l3-2`、`lo-l3-2` 及 `src/components/germany/data/regions.js` 皆有提及（德國資料以 Kabinett 作為 Prädikat 風格）；Level 1 課內已標明奧地利 Kabinett 屬 Qualitätswein、為糖度下限且不可加糖。原先「德國課程曾提及 Prädikat」一句未經查證即寫入，現已改為上述實際清單
+
+## 11. Level 2 內容說明與查證註記（階段 C，2026-10-27）
+
+- 分支 `feat/austria-l2`（從 `feat/austria-l1` 切出）；8 課（`at-l2-1`…`at-l2-8`），L2-8 為 10 題綜合評量（及格 60）；en/ja overlay 逐鍵檢查與 vite build 通過
+- **來源**：Wikipedia（Districtus Austriae Controllatus）、WineWithSeth（DAC 與 Wachau DAC）、wein.plus 與 Winewisdom（ÖTW 報導）
+- **DAC 年份（課內採用）**：Weinviertel 2002（2003 核准）、Mittelburgenland 2005、Traisental 2006、Kamptal 2008、Leithaberg 紅 2008／白 2009、Neusiedlersee Reserve 2010／Klassik 2011／甜型 2020、Wiener Gemischter Satz 2013、Rosalia 2017、Steiermark 三 DAC 2018、Carnuntum 2019、Wachau 2020（強制，2021 年 8 月核准）、Ruster Ausbruch 2020、Wagram 2021、Thermenregion 2023
+- **出入／未解決（不進測驗）**：Kremstal DAC 年份（Wikipedia 2006；設計稿原寫 2007）、Ruster Ausbruch 最低 KMW（來源不一，課內不列門檻）、Eisenberg 年份未查到
+- **ÖTW**：1992 年由多瑙河酒莊成立；Erste Lage 針對乾型 Grüner Veltliner 與 Riesling（Kamptal、Kremstal、Traisental、Wagram，後加入 Wien 與 Carnuntum）；Große Lage 的數量與細節未查到，課內不論述；ÖTW 屬民間協會、非法定分級
+- **未逐項查證的描述性內容**：Kamptal／Kremstal 著名 Ried（Heiligenstein、Gaisberg、Steiner Hund、Pfaffenberg）、Roter Veltliner 為 Wagram 特色、Südsteiermark／Vulkanland 品種描述；課內已標註、不進測驗，階段 F 前建議以 ÖWM 或 ÖTW 官方網站補查
+- **Wachau**：Vinea Wachau（1983 成立，商標自 1984）Steinfeder ≤11.5%、Federspiel 11.5–12.5% 且殘糖 ≤4 g/L、Smaragd ≥12.5% 且 ≥18.5 °KMW、不早於次年 5 月 1 日上市；DAC 三層（Gebietswein 17 品種、Ortswein 9 白品種、Riedenwein 僅 GV／Riesling、157 個 Ried）
