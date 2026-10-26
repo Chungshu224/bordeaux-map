@@ -38,6 +38,10 @@ const REMINDER_RULES = [
 
 type ReminderType = typeof REMINDER_RULES[number]['type']
 
+function esc(v: unknown): string {
+  return String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')
+}
+
 // ── Email 範本 ───────────────────────────────────────────────────────────────
 function buildEmailHtml(
   userName: string,
@@ -58,19 +62,19 @@ function buildEmailHtml(
       <p style="color:rgba(255,255,255,.8);margin:0;font-size:.9rem">The Sommelier's Notebook</p>
     </div>
     <div style="padding:36px 40px">
-      <p style="color:#333;margin:0 0 16px">親愛的 <strong>${userName}</strong>，您好：</p>
+      <p style="color:#333;margin:0 0 16px">親愛的 <strong>${esc(userName)}</strong>，您好：</p>
       <div style="background:#fff8f0;border-left:4px solid #e67e22;padding:16px 20px;border-radius:6px;margin-bottom:24px">
         <p style="margin:0;color:#7f4f1a;font-weight:600;font-size:1.05rem">
-          您的「${courseNameZh}」訂閱即將在 <span style="color:#c0392b">${daysLeft} 天後</span>到期
+          您的「${esc(courseNameZh)}」訂閱即將在 <span style="color:#c0392b">${daysLeft} 天後</span>到期
         </p>
-        <p style="margin:8px 0 0;color:#999;font-size:.85rem">到期日：${expiresAt}</p>
+        <p style="margin:8px 0 0;color:#999;font-size:.85rem">到期日：${esc(expiresAt)}</p>
       </div>
       <p style="color:#555;line-height:1.7;margin:0 0 24px">
         為了避免學習中斷，建議您儘早續訂。<br>
         續訂後學習進度與成就紀錄將完整保留。
       </p>
       <div style="text-align:center;margin:32px 0">
-        <a href="${renewUrl}" style="display:inline-block;background:#8b1a2b;color:#fff;padding:14px 40px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.5px">
+        <a href="${esc(renewUrl)}" style="display:inline-block;background:#8b1a2b;color:#fff;padding:14px 40px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.5px">
           立即續訂課程
         </a>
       </div>

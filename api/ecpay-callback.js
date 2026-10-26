@@ -62,7 +62,9 @@ function verifyCheckMacValue(params, hashKey, hashIV) {
     .replace(/%27/g, "'")
 
   const computed = crypto.createHash('sha256').update(encoded).digest('hex').toUpperCase()
-  return computed === CheckMacValue
+  const a = Buffer.from(computed)
+  const b = Buffer.from(String(CheckMacValue || '').toUpperCase())
+  return a.length === b.length && crypto.timingSafeEqual(a, b)
 }
 
 // ─── Tier 權重：取最高等級 ──────────────────────────────────────────────────────
@@ -135,6 +137,13 @@ export default async function handler(req, res) {
   // 驗證簽章
   if (!verifyCheckMacValue(body, hashKey, hashIV)) {
     console.warn('[ecpay-callback] CheckMacValue 驗證失敗')
+    return res.status(400).send('0|ERR')
+  }
+
+  // 核對廠商編號（已設定環境變數時），避免他店簽章的通知被接受
+  const expectedMerchant = String(process.env.ECPAY_MERCHANT_ID || '').trim()
+  if (expectedMerchant && body.MerchantID && String(body.MerchantID) !== expectedMerchant) {
+    console.warn('[ecpay-callback] MerchantID 不符')
     return res.status(400).send('0|ERR')
   }
 

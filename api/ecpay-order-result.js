@@ -40,7 +40,9 @@ function verifyCheckMacValue(params, hashKey, hashIV) {
     .replace(/%29/g, ')').replace(/%2a/g, '*').replace(/%7e/g, '~').replace(/%27/g, "'")
 
   const computed = crypto.createHash('sha256').update(encoded).digest('hex').toUpperCase()
-  return computed === CheckMacValue
+  const a = Buffer.from(computed)
+  const b = Buffer.from(String(CheckMacValue || '').toUpperCase())
+  return a.length === b.length && crypto.timingSafeEqual(a, b)
 }
 
 // ─── 超商代碼 → 名稱 ──────────────────────────────────────────────────────────
@@ -68,8 +70,8 @@ export default async function handler(req, res) {
     return res.redirect(302, '/payment/result?ecpay=1&type=failed&msg=parse_error')
   }
 
-  // 驗證簽章（若環境變數已設定則驗證；stage 測試環境可能未設定）
-  if (hashKey && hashIV && body.CheckMacValue && !verifyCheckMacValue(body, hashKey, hashIV)) {
+  // 驗證簽章：金鑰已設定時一律必驗（缺少 CheckMacValue 也視為失敗）
+  if (hashKey && hashIV && !verifyCheckMacValue(body, hashKey, hashIV)) {
     console.warn('[ecpay-order-result] CheckMacValue 驗證失敗')
     return res.redirect(302, '/payment/result?ecpay=1&type=failed&msg=sig_mismatch')
   }
