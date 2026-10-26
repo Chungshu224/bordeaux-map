@@ -15,7 +15,7 @@ export const lessonContent = [
     title: "Region 與氣候",
     highlights: [
       { id: 1, icon: "🌐", title: "兩股洋流", content: "西側是冷的 Benguela 寒流，南與東側受較暖的 Agulhas 洋流影響；持續的海風降低午後氣溫、保留酸度" },
-      { id: 2, icon: "📋", title: "District", content: "文字列出七個：Walker Bay、Elgin、Cape Agulhas、Overberg、Plettenberg Bay、Swellendam、Lower Duivenhoks（資料中的資訊框只列六個）" },
+      { id: 2, icon: "📋", title: "District", content: "Walker Bay、Elgin、Cape Agulhas、Overberg、Plettenberg Bay 等；Swellendam 與 Lower Duivenhoks 的 Region 歸屬各來源說法不一（有來源把 Swellendam 列在 Breede River Valley），District 數量不進測驗" },
       { id: 3, icon: "🍇", title: "代表品種", content: "Pinot Noir、Chardonnay、Sauvignon Blanc、冷涼氣候 Syrah，以及 Cap Classique" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Cape South Coast 的關鍵字：涼、海風、Pinot Noir 與 Chardonnay。</p></div>"
