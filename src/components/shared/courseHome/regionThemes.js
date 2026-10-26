@@ -14,6 +14,7 @@ export const REGION_THEMES = {
   greece:     { primary: '#0D5EAF', accent: '#B8902A', icon: '🇬🇷', surface: '#f2f7fc' },
   rhone:      { primary: '#7A2E5C', accent: '#D08C2F', icon: '🇫🇷', surface: '#fbf5f8' },
   champagne:  { primary: '#A8801C', accent: '#E8D48B', icon: '🥂', surface: '#fdf9ee' },
+  austria:  { primary: '#B3202E', accent: '#F0B8BE', icon: '🏔️', surface: '#fdf3f4' },
   newzealand: { primary: '#0a3d2e', accent: '#5cb85c', icon: '🥝', surface: '#f4f9f5' },
   australia:  { primary: '#012169', accent: '#E4002B', icon: '🦘', surface: '#f4f6fb' },
   california: { primary: '#b45309', accent: '#fbbf24', icon: '🌟', surface: '#fef9f0' },

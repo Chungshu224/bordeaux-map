@@ -103,3 +103,14 @@
 2. 結構是否沿用 3 階段 21 課？
 3. 地圖層級：DAC＋Wachau 村莊（建議），取不到資料時退回簡易版。
 4. 課程先只給管理員？
+
+## 9. 已完成的框架項目（階段 A，2026-10-27）
+
+- 頁面與元件：`src/components/austria/`（Page、LevelSelector、LearningSystem、CourseLayout），UI 字典 `src/locales/austriaUi/`（en/ja，117 條，已用腳本檢查 gt() 全覆蓋、en 無殘留中文）
+- 學習 store：`src/stores/austriaLearningStore.js`（3 階段 21 課大綱，進度存 localStorage 並同步，課程代號 `austria`）
+- 21 個課程空殼 `src/data/austria/at-l*.js`（「內容製作中」），en/ja overlay 已含標題與簡介
+- 共用檔案改動（皆為純新增條目，解衝突用）：`router/index.js`（`/austria` 路由＋ `COURSE_ACCESS_RULES`）、`PlatformHome.vue`（Old World 區卡片、導覽項、`courseStatuses`／`courseShowHome`、`ADMIN_ONLY_COURSES`、CSS）、`lessonContentLoader.js`、`courseProgressSync.js`、`regionThemes.js`、`PresentationLesson.vue`（封面漸層與圖示）、`locales/{zh-TW,en,ja}/{common,home}.js`
+- 路由 `/austria` 設 `requiresAdmin`，首頁卡片僅管理員可見
+- migration 已準備未套用：`20261027000000_add_austria_course.sql`（`active=false`、`show_on_home=false`）
+- 地圖／遊戲／筆記入口顯示「製作中」（階段 E 製作）
+- 驗證：SFC 編譯、字典覆蓋、`vite build` 通過

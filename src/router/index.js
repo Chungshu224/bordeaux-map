@@ -171,6 +171,19 @@ const routes = [
     redirect: '/champagne'
   },
 
+  // ─── 奧地利課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/austria',
+    name: 'Austria',
+    component: () => import('../components/austria/AustriaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'austria'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏔️ 奧地利 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/austria/course',
+    redirect: '/austria'
+  },
+
   // ─── 加州 AVA 探索地圖 ───────────────────────────────────────────────────────
   {
     path: '/california',
@@ -329,6 +342,7 @@ const COURSE_ACCESS_RULES = {
   Greece: { courseId: 'greece', minimumTier: 'free' },
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
+  Austria: { courseId: 'austria', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
   CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
   Learning: { courseId: 'bordeaux', minimumTier: 'free' },

@@ -85,6 +85,7 @@ export default {
     greece:     'Greece',
     rhone:      'Rhône Valley',
     champagne:     'Champagne',
+    austria:        'Austria',
     loire:      'Loire Valley',
     california: 'California',
     australia:  'Australia',
