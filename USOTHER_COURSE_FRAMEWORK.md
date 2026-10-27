@@ -113,3 +113,11 @@
 - 已用且已查證：AVA 85%、州／郡 75%、品種 75%、年份（有 AVA 85%／無 75%）；Oregon 品種 90%（約 18 品種例外）、Oregon 產地 100%／AVA 95%；Augusta 1980-06-20；ATF→TTB 2003 年 1 月；Oregon 2024：47,343 英畝、1,076 家酒廠、Pinot Noir 約 60%；Washington 2024 壓榨約 150,000 噸、Cabernet Sauvignon 27%、Riesling 15%、紅 55%／白 45%；Yakima Valley 1983、Walla Walla 與 Columbia Valley 1984（12 月 13 日）；Frank 1951／1953／1958／1962；Farm Winery Act 1976。
 - 來源有出入、不進測驗：Eyrie 種植年（1965／1966）、Willamette Valley AVA 核准年（1983／1984）、Columbia Valley 面積（約 1,100 萬／1,152 萬英畝）、Columbia Valley 內子 AVA 數（18／20）、New York 酒廠數（約 400／470）、Washington AVA 總數與種植面積、Washington 年降雨（6–12／15 英寸以下）。
 - Pinot Gris 約 14%、Chardonnay 約 7% 為由 Oregon 2024 Census 表格面積換算的概數（課內標明）。
+
+## 11. 階段 C（Level 2，8 堂課）筆記
+
+- 已建立 `us-l2-1…8`（Willamette I／土壤與風格／南部・Gorge・跨州 AVA／Washington I／Washington II／Finger Lakes／Long Island・Hudson・Erie・Niagara／綜合評量 12 題）。
+- 跨州 AVA（Walla Walla、Columbia Gorge、Columbia Valley）在課文中註明跨州；地圖階段將於兩州各顯示一次。
+- 測驗採用的核准年份：Columbia Gorge 2004、Walla Walla 1984、Rocks District 2015、Yakima 1983、Red Mountain 2001、Horse Heaven Hills 2005、Puget Sound 1995、Hudson River 1982、Hamptons 1985、North Fork 1986、Long Island 2001、Cayuga 1988、Seneca 2003。
+- 來源有出入、僅在課內標註不進測驗：Willamette 母 AVA（1983/1984）、Van Duzer（2018/2019）、Wahluke Slope（2005/2006）、Ancient Lakes（2012/2013）、Eola-Amity Hills 年份。
+- 風格描述（Jory 等）屬一般說法，課內已註明非法定規範。
