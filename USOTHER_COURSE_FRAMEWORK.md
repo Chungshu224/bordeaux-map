@@ -121,3 +121,10 @@
 - 測驗採用的核准年份：Columbia Gorge 2004、Walla Walla 1984、Rocks District 2015、Yakima 1983、Red Mountain 2001、Horse Heaven Hills 2005、Puget Sound 1995、Hudson River 1982、Hamptons 1985、North Fork 1986、Long Island 2001、Cayuga 1988、Seneca 2003。
 - 來源有出入、僅在課內標註不進測驗：Willamette 母 AVA（1983/1984）、Van Duzer（2018/2019）、Wahluke Slope（2005/2006）、Ancient Lakes（2012/2013）、Eola-Amity Hills 年份。
 - 風格描述（Jory 等）屬一般說法，課內已註明非法定規範。
+
+## 12. 階段 D（Level 3，7 堂課）筆記
+
+- 已建立 `us-l3-1…7`（栽培與氣候風險／酒款風格與標示規則／風土比較／Idaho・Virginia・Texas 簡介／產業與市場／Diploma 品飲與論述／綜合評量 12 題）。
+- 測驗採用：Snake River Valley 2007、Monticello 1984、Texas High Plains 1993、Granholm v. Heald 2005-05-16、Sustainable WA 2022（Salmon-Safe 雙認證 2024-04-11；標誌門檻 75%／95%）、Oregon 90%／75% 標示規則、1996／2003 凍害損傷 Merlot。
+- 排除：Washington 全美排名（來源寫第二或第三）、Texas 排名（2021 第四／2024 第五）、New York 酒廠數（400 vs 470）、各產區度日數僅作相對比較。
+- 課內為一般說法、未逐項查證：冰酒做法、Oregon／New York 傳統法氣泡酒、Diploma 品飲線索（教學性質，不進測驗數字）。
