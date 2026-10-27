@@ -12,7 +12,9 @@
         v-if="mapReady"
         :info="unifiedInfo"
         :theme-color="activeColor"
-        :audio-available="false"
+        :audio-available="!!audioName"
+        :is-playing-audio="isPlayingAudio"
+        @play-audio="playPronunciation"
         :collapsed="infoBarCollapsed"
         @toggle-collapse="infoBarCollapsed = !infoBarCollapsed"
         @reset="resetMap"
@@ -323,6 +325,20 @@ function applyTierVisibility() {
   for (const id of ['za-pt-circle', 'za-pt-label']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', pv)
 }
 
+// ── 播放發音（檔名＝產區名稱，見 /southafrica/sounds）──────────────
+const audioName = computed(() => activePoint.value?.name || '')
+const isPlayingAudio = ref(false)
+let currentAudio = null
+function playPronunciation() {
+  if (!audioName.value) return
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
+  currentAudio = new Audio(`/southafrica/sounds/${encodeURIComponent(audioName.value)}.mp3`)
+  isPlayingAudio.value = true
+  currentAudio.play().catch(() => { isPlayingAudio.value = false })
+  currentAudio.onended = () => { isPlayingAudio.value = false; currentAudio = null }
+  currentAudio.onerror = () => { isPlayingAudio.value = false; currentAudio = null }
+}
+
 function resetMap() {
   activePoint.value = null
   infoBarCollapsed.value = true
@@ -454,6 +470,7 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
+  if (currentAudio) { currentAudio.pause(); currentAudio = null }
   if (map) { map.remove(); map = null }
 })
 </script>
