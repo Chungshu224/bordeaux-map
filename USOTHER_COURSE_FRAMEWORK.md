@@ -139,3 +139,10 @@
 - **成就**：33 個徽章（三州巡禮、跨州旅人、小州見聞、Willamette 子 AVA 全覽、紐約產區全覽、西北雙雄等）。
 - **詞彙**：migration `20261030000200`（region CHECK 含 `southafrica` 與 `usother`，24 條詞條，未套用）。
 - **翻譯**：`usotherUi` 字典 en／ja 各 675 條，missing = 0。
+
+## 14. 階段 F（最終檢查）
+
+- 殘留檢查：`src/components/usother` 等已無南非字串／ID；筆記預設類型修正為 `us_pinot`。
+- Migration 版本無重複：`20261030000000`（課程，active=false／show_on_home=false）、`…0100`（品飲類型，含 `at_*`、`za_*`、`us_*`）、`…0200`（詞彙，region 含 `southafrica`、`usother`）；皆未套用。
+- 管理員限定：路由 `requiresAdmin`、`ADMIN_ONLY_COURSES` 含 `usother`、courses 預設不啟用。
+- 待辦：氣候資料檔 `public/data/usother-climate.json` 待 Open-Meteo 額度重置後以 `--merge` 產生；實機（含手機）地圖與 Mapbox 渲染尚未驗證。

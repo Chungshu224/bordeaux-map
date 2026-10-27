@@ -25,14 +25,14 @@
         <section class="us-sec">
           <h3>{{ gt('📍 基本資訊') }}</h3>
           <label class="us-label">{{ gt('生產者') }}</label>
-          <input v-model="form.producer" class="us-input" placeholder="e.g. Kanonkop, Sadie Family …" />
+          <input v-model="form.producer" class="us-input" placeholder="e.g. Domaine Drouhin Oregon, Chateau Ste. Michelle …" />
           <label class="us-label">{{ gt('主要品種') }}</label>
-          <input v-model="form.grape_variety" class="us-input" list="us-grape-list" placeholder="e.g. Chenin Blanc, Pinotage…" />
+          <input v-model="form.grape_variety" class="us-input" list="us-grape-list" placeholder="e.g. Pinot Noir, Riesling…" />
           <datalist id="us-grape-list">
             <option v-for="g in GRAPES_BY_TYPE[form.wine_type] || []" :key="g" :value="g" />
           </datalist>
           <label class="us-label">{{ gt('產區（AVA）') }}</label>
-          <input v-model="form.appellation" class="us-input" list="us-app-list" placeholder="e.g. Stellenbosch、Swartland、Walker Bay…" />
+          <input v-model="form.appellation" class="us-input" list="us-app-list" placeholder="e.g. Willamette Valley、Red Mountain、Finger Lakes…" />
           <datalist id="us-app-list">
             <option v-for="a in APPELLATIONS" :key="a" :value="a" />
           </datalist>
@@ -140,7 +140,7 @@ const props = defineProps({ note: { type: Object, default: null } })
 const emit = defineEmits(['save', 'delete', 'close'])
 
 const form = ref({
-  wine_type: 'us_chenin', producer: '', grape_variety: '', appellation: '',
+  wine_type: 'us_pinot', producer: '', grape_variety: '', appellation: '',
   status: 'tried', vintage: null, rating: null, color_desc: null,
   aroma_tags: [], taste_tags: [], tannin: null, acidity: null, body: null, finish: null, notes: ''
 })
@@ -174,7 +174,7 @@ onMounted(() => {
     ...props.note,
     producer: props.note.chateau_name || '',
     appellation: props.note.aoc_id || '',
-    wine_type: props.note.wine_type || 'us_chenin',
+    wine_type: props.note.wine_type || 'us_pinot',
     grape_variety: props.note.grape_variety || '',
     aroma_tags: [...(props.note.aroma_tags || [])],
     taste_tags: [...(props.note.taste_tags || [])],
