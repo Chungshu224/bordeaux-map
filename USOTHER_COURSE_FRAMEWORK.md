@@ -128,3 +128,14 @@
 - 測驗採用：Snake River Valley 2007、Monticello 1984、Texas High Plains 1993、Granholm v. Heald 2005-05-16、Sustainable WA 2022（Salmon-Safe 雙認證 2024-04-11；標誌門檻 75%／95%）、Oregon 90%／75% 標示規則、1996／2003 凍害損傷 Merlot。
 - 排除：Washington 全美排名（來源寫第二或第三）、Texas 排名（2021 第四／2024 第五）、New York 酒廠數（400 vs 470）、各產區度日數僅作相對比較。
 - 課內為一般說法、未逐項查證：冰酒做法、Oregon／New York 傳統法氣泡酒、Diploma 品飲線索（教學性質，不進測驗數字）。
+
+## 13. 階段 E（互動功能）筆記
+
+- **地圖**：以 UC Davis AVA Project（CC0）的真實邊界生成 `public/data/usother-ava.geojson`（66 個 AVA，簡化後約 320 KB）；`src/data/usother/pointRef.js` 為對應的 AVA 清單與說明（只用 L1–L3 已查證內容；來源有出入的年份不列為年份欄位）。
+- **跨州 AVA**（Columbia Gorge、Walla Walla Valley、Columbia Valley、Snake River Valley、Lewis-Clark Valley 等）：地圖以虛線外框標示，抽屜清單在每個所屬州分組都列出，資訊面板註明「跨州 AVA」；探索成就在各州分組都計入。
+- **氣候圖層**：`scripts/build-usother-climate.mjs`（北半球生長季 4–10 月的均溫／日照／降雨，1980–2025）。Open-Meteo 當日額度用完，資料檔 `public/data/usother-climate.json` 尚未產生，已排程隔日接續（`--merge`）；未產生前氣候圖層會顯示載入失敗提示。
+- **遊戲**：產區速答（25 個單一州 AVA → 州／線索 → 產地）、品種配對（12 品種＋代表產地＋標示比例）、制度辨識（AVA 制度、州與跨州、年份、產業）、知識閃問（取自 L1–L3 測驗）；game_type 前綴 `us_`。
+- **品飲筆記**：10 種酒款類型 `us_*`，migration `20261030000100`（包含既有所有 wine_type 值與 `za_*`、`at_*`，未套用）。
+- **成就**：33 個徽章（三州巡禮、跨州旅人、小州見聞、Willamette 子 AVA 全覽、紐約產區全覽、西北雙雄等）。
+- **詞彙**：migration `20261030000200`（region CHECK 含 `southafrica` 與 `usother`，24 條詞條，未套用）。
+- **翻譯**：`usotherUi` 字典 en／ja 各 675 條，missing = 0。

@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="usother" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveUsOtherLesson, loadAndMergeUsOtherProgress } from '../../lib/courseProgressSync.js'
 import UsOtherCourseLayout from './UsOtherCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalUsOtherAchievementManager } from '../../stores/usotherAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalUsOtherAchievementManager.init()
 
 const currentLevel = computed(() => usotherLearningState.currentLevel)
 const currentLesson = computed(() => usotherLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = usotherLearningState.completedLessons.includes(lessonId)
     usotherLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveUsOtherLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => usotherLearningState.completedLessons.includes(l.id))
+      globalUsOtherAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: usotherLearningProgress.value
+      })
+    }
   }
   usotherLearningActions.exitLesson()
 }
