@@ -171,6 +171,19 @@ const routes = [
     redirect: '/champagne'
   },
 
+  // ─── 美國其他產區課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/usother',
+    name: 'UsOther',
+    component: () => import('../components/usother/UsOtherPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'usother'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🇺🇸 美國其他產區 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/usother/course',
+    redirect: '/usother'
+  },
+
   // ─── 南非課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/southafrica',
@@ -355,6 +368,7 @@ const COURSE_ACCESS_RULES = {
   Greece: { courseId: 'greece', minimumTier: 'free' },
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
+  UsOther: { courseId: 'usother', minimumTier: 'free' },
   SouthAfrica: { courseId: 'southafrica', minimumTier: 'free' },
   Austria: { courseId: 'austria', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },

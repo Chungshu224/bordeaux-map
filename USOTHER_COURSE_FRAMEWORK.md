@@ -1,6 +1,6 @@
 # 🇺🇸 美國其他產區（奧勒岡・華盛頓・紐約）葡萄酒課程設計（Diploma D3／MW 備考導向）
 
-> 狀態：設計稿（2026-10-27），分支 `feat/usother-design`（未合併，從 master 切出）
+> 狀態：框架已製作（階段 A，2026-10-27）；決定已確認（見 §8）。課程為管理員專用，migration 只準備不套用。
 > 課程代號：`usother`；課程 ID 前綴 `us-l{階段}-{序號}`（如 `us-l1-1`），沿用 Greece／Rhône／Champagne／Austria／South Africa 骨架
 > 所有 ⚠ 標記的數字與規定，製作時必須查證（優先 TTB 官方 AVA 規章與聯邦公報、各州酒業委員會、USDA NASS 與 Washington／Oregon／New York 官方統計），來源有出入者課內標明、不進測驗。
 
@@ -24,23 +24,25 @@
 - `us-l1-6` Level 1 綜合評量（25 分）
 
 ### Level 2 - 產區與法規（8 課）
-- `us-l2-1` Oregon I：Willamette Valley 概覽與子 AVA（Dundee Hills、Eola-Amity Hills、Ribbon Ridge、Yamhill-Carlton、McMinnville、Chehalem Mountains 等）（22 分）
-- `us-l2-2` Oregon II：Willamette 的土壤（Jory、Willakenzie、Laurelwood 黃土）與風格差異（22 分）
-- `us-l2-3` Oregon III：Southern Oregon（Rogue、Umpqua）、Columbia Gorge 與跨州 AVA（Walla Walla、Columbia Valley）（20 分）
-- `us-l2-4` Washington I：Columbia Valley 與 Yakima Valley、Red Mountain（22 分）
+- `us-l2-1` Oregon I：Willamette Valley 概覽與子 AVA（22 分）
+- `us-l2-2` Oregon II：Willamette 的土壤（Jory、Willakenzie、Laurelwood）與風格差異（22 分）
+- `us-l2-3` Oregon III：Southern Oregon、Columbia Gorge 與跨州 AVA（Walla Walla、Columbia Valley）（20 分）
+- `us-l2-4` Washington I：Columbia Valley、Yakima Valley、Red Mountain（22 分）
 - `us-l2-5` Washington II：Walla Walla、Horse Heaven Hills、Wahluke Slope、Ancient Lakes、Puget Sound 等（22 分）
-- `us-l2-6` New York I：Finger Lakes（Seneca、Cayuga、Keuka）（22 分）
-- `us-l2-7` New York II：Long Island（North Fork、The Hamptons）、Hudson River Region、Lake Erie 與 Niagara Escarpment（20 分）
+- `us-l2-6` New York I：Finger Lakes（22 分）
+- `us-l2-7` New York II：Long Island、Hudson River Region、Lake Erie 與 Niagara Escarpment（20 分）
 - `us-l2-8` Level 2 綜合評量（25 分）
 
 ### Level 3 - Diploma／MW 精修（7 課）
-- `us-l3-1` 栽培與氣候：冬季凍害、霜害、乾旱、野火煙害、自根苗與病蟲害、永續認證（LIVE、Salmon-Safe 等）（22 分）
-- `us-l3-2` 釀造風格深度：Oregon Pinot Noir 與 Chardonnay（含 Dijon 無性系）、氣泡酒；Washington Bordeaux 型與 Syrah；Finger Lakes 乾型到甜型 Riesling（22 分）
-- `us-l3-3` 風土深度：Willamette 子 AVA 比較；Columbia Valley 子 AVA 比較（含 The Rocks District of Milton-Freewater）；Long Island 與 Finger Lakes 的湖海效應（22 分）
-- `us-l3-4` 甜酒與特殊風格：冰酒、晚收 Riesling、hybrid 品種酒款（18 分）
-- `us-l3-5` 產業與市場：大型集團與小型家族酒莊、三級銷售制度與直銷、出口、價格帶、農場酒廠法（22 分）
-- `us-l3-6` Diploma 品飲與論述：Oregon Pinot／Washington Cabernet／Finger Lakes Riesling 盲品線索、MW 論述範本（25 分）
+- `us-l3-1` 栽培與氣候：凍害、野火煙害、自根苗、永續認證（22 分）
+- `us-l3-2` 釀造風格深度：Oregon Pinot Noir 與 Chardonnay、Washington 紅酒、Finger Lakes Riesling、甜酒與冰酒（22 分）
+- `us-l3-3` 風土深度：Willamette 與 Columbia Valley 子 AVA 比較、湖與海的效應（22 分）
+- `us-l3-4` 其他新興產區簡述：Idaho、Virginia、Texas（18 分）
+- `us-l3-5` 產業與市場：生產者結構、三級銷售制度、直銷、價格帶（22 分）
+- `us-l3-6` Diploma 品飲與論述（25 分）
 - `us-l3-7` Level 3 綜合評量（12 題，及格 60）（25 分）
+
+> 與初稿的差異：依「彈性調整」把 Idaho、Virginia、Texas 放進 `us-l3-4`；甜酒與冰酒併入 `us-l3-2`。
 
 ## 3. 各課重點與 ⚠ 查證清單
 
@@ -92,10 +94,15 @@
 - 使用者 Google Drive 中的美國筆記（若有）
 - ⚠ 已知需交叉確認：各州標示最低比例、子 AVA 數量與核准年份、面積與酒廠數、Washington Columbia Valley 的紅白比例、野火與凍害年份影響
 
-## 8. 待使用者確認的決定
+## 8. 已確認的決定（2026-10-27）
 
-1. 課程名稱與代號：`usother`（美國其他產區），或拆成 `oregon`／`washington`／`newyork` 三門？
-2. 範圍：只含 Oregon、Washington、New York，或加入 Idaho（Snake River Valley）、Virginia、Texas 等簡述？
-3. 結構是否沿用 3 階段 21 課？
-4. 地圖：優先使用 AVA 邊界資料（需先確認授權）；跨州 AVA（Walla Walla、Columbia Gorge、Columbia Valley）歸屬方式？
-5. 課程先只給管理員？
+1. 合成一門 `usother`。
+2. 範圍：Oregon、Washington、New York，另簡述 Idaho、Virginia、Texas（`us-l3-4`）。
+3. 結構沿用 3 階段 21 課（6／8／7），可彈性調整。
+4. 跨州 AVA（Walla Walla、Columbia Gorge、Columbia Valley）：地圖上兩州都顯示並註明。
+5. 課程只給管理員（路由 `requiresAdmin`、`ADMIN_ONLY_COURSES`、`courses.active=false`）。
+
+## 9. 已完成的框架項目（階段 A，2026-10-27）
+
+- `src/components/usother/`、`usotherLearningStore.js`、`usotherUi`（en／ja）、21 課空殼與 en／ja overlay、路由 `/usother`、進度同步、首頁卡片（僅管理員）、主題色。
+- migration `20261030000000_add_usother_course.sql`（未套用，`active=false`）；後續 tasting `…0100`、glossary `…0200`。
