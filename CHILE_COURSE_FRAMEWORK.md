@@ -84,3 +84,30 @@
 1. 結構 3 階段 14 課，可嗎？
 2. 地圖若找不到官方邊界，可接受示意點嗎？
 3. 課程先只給管理員（沿用現行規則）？
+
+## 9. 完成狀態（階段 F）
+
+| 項目 | 狀態 |
+|---|---|
+| 14 堂課（L1 5、L2 5、L3 4）含 en／ja | 完成；L1、L2 評量 12 題、L3 評量 12 題 |
+| 互動地圖 | 完成：21 個示意點（北部 3、Aconcagua 區 4、中央谷地 11、南部 3），**非官方邊界**；DO 邊界資料未取得授權，採示意點 |
+| 氣候圖層 | 腳本 `scripts/build-chile-climate.mjs`（10–4 月生長季、基準 1981–2010）已備；資料檔 `public/data/chile-climate.json` 見最新提交（若不存在，表示 Open-Meteo 免費額度當日用盡，需另行執行） |
+| 遊戲 | 產區速答、品種配對、制度辨識快答、知識閃問（取自課程題庫），`game_type` 前綴 `cl_` |
+| 品飲筆記 | 12 種酒款類型（`cl_*`），`source='chile'` |
+| 成就、詞彙 | 31 個成就；詞彙 31 條（region `chile`） |
+| 翻譯 | 介面字典 en／ja 662 條，缺漏為 0 |
+| 發音 | 尚無 `/chile/sounds` 音檔，地圖不顯示播放鈕 |
+
+### 尚未套用的 migration（需手動套用，且依序）
+1. `20261101000000_add_chile_course.sql`（課程列，維持僅管理員）
+2. `20261101000100_add_chile_tasting_types.sql`（wine_type CHECK 含先前全部值，另含 `us_*`、`ar_*`）
+3. `20261101000200_add_chile_glossary.sql`（glossary region CHECK 含 `usother`、`argentina`）
+
+⚠ 第 2、3 支重寫 CHECK，已包含美國其他產區與阿根廷的值；若尚未套用那些 migration，多出的值無害。
+
+### 合併前注意
+- `PlatformHome.vue` 的 `ADMIN_ONLY_COURSES` 在 usother／argentina／chile 三條分支各改同一行，合併時需手動併成 `[..., 'southafrica', 'usother', 'argentina', 'chile']`。
+- `useAchievements.js`、`WineGlossary.vue`、`AdminGlossary.vue`、`regionThemes.js`、`router/index.js`、`lessonContentLoader.js`、`courseProgressSync.js` 亦與其他新課程分支有鄰近行衝突。
+
+### 已查證但來源不一而未列入測驗的項目
+亞區劃分（Aconcagua Costa 是否獨立）、橫向分區海拔、VIGNO 的 Carignan 最低比例（65／70／85%）、Casablanca 開發年份（1980 年代初／中，Morandé 1982）、Limarí 與 Santiago 的距離（約 300 或 470 公里）、Maule 面積表（總數與合計不合）、1938／1939 年地震日期、Apalta／Los Lingues DO 年份、最早種植的人物與年份、根瘤蚜年份（1870 或 1870 年代）、2023 野火面積（450,000 公頃與 Slow Food 說法）、Carmenère 面積（SAG 2022 與 Wine With Seth 不同口徑）。
