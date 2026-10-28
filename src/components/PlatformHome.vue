@@ -942,6 +942,91 @@
             </div>
           </div>
 
+          <!-- ── Chile（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card chile">
+            <div :class="['card-status', courseStatuses.chile ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇨🇱</div>
+              <div class="card-region">Chile · Maipo · Colchagua · Casablanca</div>
+              <h3 class="card-title">{{ $t('home.courses.chile.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.chile.desc') }}</p>
+            </div>
+            <div class="course-preview-strip chile-strip">
+              <div class="cp-stat">
+                <span class="cp-num">Carmenère</span>
+                <span class="cp-label" v-html="$t('home.courses.chile.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">DO</span>
+                <span class="cp-label" v-html="$t('home.courses.chile.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.chile.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Sauvignon</span>
+                <span class="cp-label" v-html="$t('home.courses.chile.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features chile-features">
+              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f1') }}</span>
+              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f2') }}</span>
+              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/chile')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
+
+          <!-- ── Austria（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card austria">
+            <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🏔️</div>
+              <div class="card-region">Austria · Österreich</div>
+              <h3 class="card-title">{{ $t('home.courses.austria.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.austria.desc') }}</p>
+            </div>
+            <div class="course-preview-strip austria-strip">
+              <div class="cp-stat">
+                <span class="cp-num">undefined</span>
+                <span class="cp-label" v-html="$t('home.courses.austria.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">undefined</span>
+                <span class="cp-label" v-html="$t('home.courses.austria.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">undefined</span>
+                <span class="cp-label" v-html="$t('home.courses.austria.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">undefined</span>
+                <span class="cp-label" v-html="$t('home.courses.austria.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features austria-features">
+              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
+              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
+              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
           <!-- ── UsOther（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card usother">
             <div :class="['card-status', courseStatuses.usother ? 'active' : 'planning']">
@@ -1390,6 +1475,7 @@
               <div class="cc-col basic-col popular-col" v-html="$t('home.modal.italy.compareBasic', { price: COURSE_PRICING.italy.basic.monthly })"></div>
               <div class="cc-col premium-col" v-html="$t('home.modal.italy.comparePremium', { price: GLOBAL_PASS_PRICE })"></div>
             </div>
+  { id: 'chile', label: t('home.courses.labels.chile'), route: '/chile', group: 'newworld' },
             <div v-for="row in $tm('home.modal.italy.compareRows')" :key="row.feature" class="cm-compare-row">
               <div class="cc-col feature-col">{{ row.feature }}</div>
               <div class="cc-col basic-col"><span :class="row.basic ? 'cc-yes' : 'cc-no'">{{ row.basic ? '✓' : '✗' }}</span></div>
@@ -1533,12 +1619,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile']
 
 
 async function loadCourseData() {
@@ -2111,6 +2197,7 @@ onMounted(async () => {
   font-size: 1rem;
   cursor: pointer;
   transition: all .2s;
+.course-card.chile { border-color: rgba(164,52,58,0.4); background: rgba(164,52,58,0.05); }
 }
 .cta-secondary:hover { background: rgba(212,175,55,0.08); }
 .cta-tertiary {
@@ -2217,6 +2304,12 @@ onMounted(async () => {
 .rg-en   { font-size: 0.85rem; color: #9a8878; font-style: italic; }
 
 .courses-grid {
+/* Chile card */
+.chile-strip { background: rgba(164,52,58,0.07); border-color: rgba(164,52,58,0.22); }
+.chile-strip .cp-num { color: #A4343A; font-size: 0.9rem; }
+.chile-strip .cp-label { color: #5E1B20; }
+.chile-strip .cp-divider { background: rgba(164,52,58,0.25); }
+.chile-features .chile-tag { color: #A4343A; background: rgba(164,52,58,0.06); border-color: rgba(164,52,58,0.18); }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
