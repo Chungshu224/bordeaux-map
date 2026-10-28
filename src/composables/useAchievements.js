@@ -6,6 +6,7 @@ import { gt as rhoneGt } from '../locales/rhoneUi/index.js'
 import { gt as gtChampagne } from '../locales/champagneUi/index.js'
 import { gt as gtAustria } from '../locales/austriaUi/index.js'
 import { gt as gtSouthAfrica } from '../locales/southafricaUi/index.js'
+import { gt as gtArgentina } from '../locales/argentinaUi/index.js'
 import {
   achievementState,
   achievementDefinitions,
@@ -86,6 +87,11 @@ import {
   southafricaAchievementDefinitions,
   globalSouthAfricaAchievementManager
 } from '../stores/southafricaAchievementSystem.js'
+import {
+  argentinaAchievementState,
+  argentinaAchievementDefinitions,
+  globalArgentinaAchievementManager
+} from '../stores/argentinaAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {
@@ -101,7 +107,8 @@ const COURSE_LABELS = {
   rhone:       '侍酒師的筆記本',
   champagne:   '侍酒師的筆記本',
   austria:     '侍酒師的筆記本',
-  southafrica: '侍酒師的筆記本'
+  southafrica: '侍酒師的筆記本',
+  argentina: '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -226,6 +233,14 @@ const COURSE_CATEGORIES = {
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
   ],
+  argentina: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
   southafrica: [
     { id: 'all',         name: '全部',     icon: '🌟' },
     { id: 'progress',   name: '學習進度', icon: '📚' },
@@ -262,8 +277,8 @@ function calcProgress(achievement, stats) {
 export function useAchievements(courseKey) {
   const gt = courseKey === 'rhone' ? rhoneGt : greeceGt
   // 香檳與奧地利共用「字典函式」判斷
-  const isLocal = courseKey === 'champagne' || courseKey === 'austria' || courseKey === 'southafrica'
-  const gtX = courseKey === 'southafrica' ? gtSouthAfrica : courseKey === 'austria' ? gtAustria : gtChampagne
+  const isLocal = courseKey === 'champagne' || courseKey === 'austria' || courseKey === 'southafrica' || courseKey === 'argentina'
+  const gtX = courseKey === 'argentina' ? gtArgentina : courseKey === 'southafrica' ? gtSouthAfrica : courseKey === 'austria' ? gtAustria : gtChampagne
   let state, definitions, manager
 
   if (courseKey === 'bourgogne') {
@@ -322,6 +337,10 @@ export function useAchievements(courseKey) {
     state       = southafricaAchievementState
     definitions = southafricaAchievementDefinitions
     manager     = globalSouthAfricaAchievementManager
+  } else if (courseKey === 'argentina') {
+    state       = argentinaAchievementState
+    definitions = argentinaAchievementDefinitions
+    manager     = globalArgentinaAchievementManager
   } else if (courseKey === 'alsace') {
     state       = alsaceAchievementState
     definitions = alsaceAchievementDefinitions
