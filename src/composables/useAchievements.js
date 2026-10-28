@@ -87,11 +87,6 @@ import {
 import {
   southafricaAchievementState,
   southafricaAchievementDefinitions,
-import {
-  chileAchievementState,
-  chileAchievementDefinitions,
-  globalChileAchievementManager
-} from '../stores/chileAchievementSystem.js'
   globalSouthAfricaAchievementManager
 } from '../stores/southafricaAchievementSystem.js'
 import {
@@ -104,6 +99,11 @@ import {
   argentinaAchievementDefinitions,
   globalArgentinaAchievementManager
 } from '../stores/argentinaAchievementSystem.js'
+import {
+  chileAchievementState,
+  chileAchievementDefinitions,
+  globalChileAchievementManager
+} from '../stores/chileAchievementSystem.js'
 
 // ── 課程標籤 ──────────────────────────────────────────────────
 const COURSE_LABELS = {

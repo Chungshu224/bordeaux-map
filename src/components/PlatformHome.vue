@@ -985,48 +985,6 @@
           </div>
 
 
-          <!-- ── Austria（僅管理員可見，上線前預覽）── -->
-          <div v-if="isAdmin" class="course-card austria">
-            <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
-              {{ $t('home.courses.common.statusAdmin') }}
-            </div>
-            <div class="card-hero">
-              <div class="card-icon">🏔️</div>
-              <div class="card-region">Austria · Österreich</div>
-              <h3 class="card-title">{{ $t('home.courses.austria.title') }}</h3>
-              <p class="card-desc">{{ $t('home.courses.austria.desc') }}</p>
-            </div>
-            <div class="course-preview-strip austria-strip">
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s1label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s2label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s3label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s4label')"></span>
-              </div>
-            </div>
-            <div class="course-preview-features austria-features">
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
-            </div>
-            <div class="card-enter-cta">
-              <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
-            </div>
-          </div>
-
           <!-- ── UsOther（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card usother">
             <div :class="['card-status', courseStatuses.usother ? 'active' : 'planning']">
@@ -1112,47 +1070,6 @@
           </div>
 
 
-          <!-- ── Austria（僅管理員可見，上線前預覽）── -->
-          <div v-if="isAdmin" class="course-card austria">
-            <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
-              {{ $t('home.courses.common.statusAdmin') }}
-            </div>
-            <div class="card-hero">
-              <div class="card-icon">🏔️</div>
-              <div class="card-region">Austria · Österreich</div>
-              <h3 class="card-title">{{ $t('home.courses.austria.title') }}</h3>
-              <p class="card-desc">{{ $t('home.courses.austria.desc') }}</p>
-            </div>
-            <div class="course-preview-strip austria-strip">
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s1label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s2label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s3label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s4label')"></span>
-              </div>
-            </div>
-            <div class="course-preview-features austria-features">
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
-            </div>
-            <div class="card-enter-cta">
-              <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
-            </div>
-          </div>
         </div><!-- /courses-grid 新世界 -->
       </div><!-- /region-group 新世界 -->
 
