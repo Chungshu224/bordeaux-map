@@ -84,3 +84,30 @@
 1. 結構 3 階段 14 課，可嗎？
 2. 地圖若找不到官方邊界，可接受示意點嗎？
 3. 課程先只給管理員（沿用現行規則）？
+
+## 9. 完成狀態（階段 F）
+
+| 項目 | 狀態 |
+|---|---|
+| 14 堂課（L1 5、L2 5、L3 4）含 en／ja | 完成；L1 評量 12 題、L3 評量 12 題 |
+| 互動地圖 | 完成：23 個示意點（Mendoza 9、San Juan＋San Rafael 4、北部 7、Patagonia 3），**非官方邊界**；邊界資料未取得授權，採示意點 |
+| 氣候圖層 | 腳本 `scripts/build-argentina-climate.mjs`（10–4 月生長季、基準 1981–2010）已備；**資料檔 `public/data/argentina-climate.json` 尚未產生**（Open-Meteo 免費額度每日限制，需另行執行） |
+| 遊戲 | 產區速答、品種配對、制度辨識快答、知識閃問（取自課程題庫），`game_type` 前綴 `ar_` |
+| 品飲筆記 | 11 種酒款類型（`ar_*`），`source='argentina'` |
+| 成就、詞彙 | 31 個成就；詞彙 24 條（region `argentina`） |
+| 翻譯 | 介面字典 en／ja 663 條，缺漏為 0 |
+| 發音 | 尚無 `/argentina/sounds` 音檔，地圖不顯示播放鈕 |
+
+### 尚未套用的 migration（需手動套用，且依序）
+1. `20261031000000_add_argentina_course.sql`（課程列，`active=false`、`show_on_home=false`，維持僅管理員）
+2. `20261031000100_add_argentina_tasting_types.sql`（wine_type CHECK 含先前全部值，另含 `us_*`）
+3. `20261031000200_add_argentina_glossary.sql`（glossary region CHECK 含 `usother`）
+
+⚠ 第 2、3 支重寫 CHECK，已包含美國其他產區（`us_*`、`usother`）的值；若尚未套用美國其他產區的 migration，多出的值無害。Chile 課程的同類 migration 必須再加入 `ar_*`／`argentina`。
+
+### 合併前注意
+- `PlatformHome.vue` 的 `ADMIN_ONLY_COURSES` 在 usother／argentina／chile 三條分支各改同一行，合併時會衝突，需手動併成 `[..., 'southafrica', 'usother', 'argentina', 'chile']`。
+- `useAchievements.js`、`WineGlossary.vue`、`AdminGlossary.vue`、`regionThemes.js`、`router/index.js`、`lessonContentLoader.js`、`courseProgressSync.js` 亦與其他新課程分支有鄰近行衝突。
+
+### 已查證但來源不一而未列入測驗的項目
+Cedrón 首批葡萄地點、Pouget 年份（僅單一來源 1853）、Catena Adrianna 1992／1994、Luján de Cuyo DOC 起始年（1989／1991／1993）、San Rafael DOC（2007 或 1990 年代）、Catamarca 面積 708／747 公頃、Patagonia 緯度 38／39、海拔降溫率 0.6／0.8°C／100 公尺、標示比例（85% 對舊資料 100%／80%）、IG 總數、各項面積與出口數字（年度會變動）。
