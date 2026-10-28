@@ -171,6 +171,19 @@ const routes = [
     redirect: '/champagne'
   },
 
+  // ─── 阿根廷課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/argentina',
+    name: 'Argentina',
+    component: () => import('../components/argentina/ArgentinaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'argentina'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🇦🇷 阿根廷 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/argentina/course',
+    redirect: '/argentina'
+  },
+
   // ─── 南非課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/southafrica',
@@ -355,6 +368,7 @@ const COURSE_ACCESS_RULES = {
   Greece: { courseId: 'greece', minimumTier: 'free' },
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
+  Argentina: { courseId: 'argentina', minimumTier: 'free' },
   SouthAfrica: { courseId: 'southafrica', minimumTier: 'free' },
   Austria: { courseId: 'austria', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
