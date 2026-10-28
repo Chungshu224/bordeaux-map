@@ -104,6 +104,7 @@ export default {
     rhone:      '隆河谷',
     champagne:     '香檳',
     usother:        '美國其他產區',
+    argentina:      '阿根廷',
     southafrica:    '南非',
     austria:        '奧地利',
     loire:      '羅亞爾河谷',

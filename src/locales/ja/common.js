@@ -86,6 +86,7 @@ export default {
     rhone:      'ローヌ渓谷',
     champagne:     'シャンパーニュ',
     usother:        'アメリカのその他の産地',
+    argentina:      'アルゼンチン',
     southafrica:    '南アフリカ',
     austria:        'オーストリア',
     loire:      'ロワール渓谷',

@@ -984,6 +984,48 @@
             </div>
           </div>
 
+          <!-- ── Argentina（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card argentina">
+            <div :class="['card-status', courseStatuses.argentina ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🇦🇷</div>
+              <div class="card-region">Argentina · Mendoza · Salta · Patagonia</div>
+              <h3 class="card-title">{{ $t('home.courses.argentina.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.argentina.desc') }}</p>
+            </div>
+            <div class="course-preview-strip argentina-strip">
+              <div class="cp-stat">
+                <span class="cp-num">Malbec</span>
+                <span class="cp-label" v-html="$t('home.courses.argentina.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Altitude</span>
+                <span class="cp-label" v-html="$t('home.courses.argentina.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.argentina.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Torrontés</span>
+                <span class="cp-label" v-html="$t('home.courses.argentina.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features argentina-features">
+              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f1') }}</span>
+              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f2') }}</span>
+              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/argentina')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
 
           <!-- ── Austria（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card austria">
@@ -1476,6 +1518,7 @@ const courseConfig = computed(() => [
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
+  { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
   { id: 'southafrica', label: t('home.courses.labels.southafrica'), route: '/southafrica', group: 'newworld' },
   { id: 'austria', label: t('home.courses.labels.austria'), route: '/austria', group: 'europe' },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
@@ -1490,12 +1533,13 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, usother: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, usother: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, usother: false, argentina: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina']
+
 
 async function loadCourseData() {
   try {
@@ -2198,6 +2242,7 @@ onMounted(async () => {
 .course-card.rhone { border-color: rgba(122,46,92,0.4); background: rgba(122,46,92,0.05); }
 .course-card.champagne { border-color: rgba(168,128,28,0.4); background: rgba(168,128,28,0.05); }
 .course-card.usother { border-color: rgba(31,78,121,0.4); background: rgba(31,78,121,0.05); }
+.course-card.argentina { border-color: rgba(106,44,94,0.4); background: rgba(106,44,94,0.05); }
 .course-card.southafrica { border-color: rgba(194,87,26,0.4); background: rgba(194,87,26,0.05); }
 .course-card.austria { border-color: rgba(179,32,46,0.4); background: rgba(179,32,46,0.05); }
 /* 課程深度預覽 strip */
@@ -2310,6 +2355,12 @@ onMounted(async () => {
 .usother-strip .cp-label { color: #12304D; }
 .usother-strip .cp-divider { background: rgba(31,78,121,0.25); }
 .usother-features .usother-tag { color: #1F4E79; background: rgba(31,78,121,0.06); border-color: rgba(31,78,121,0.18); }
+/* Argentina card */
+.argentina-strip { background: rgba(106,44,94,0.07); border-color: rgba(106,44,94,0.22); }
+.argentina-strip .cp-num { color: #6A2C5E; font-size: 0.9rem; }
+.argentina-strip .cp-label { color: #3F1738; }
+.argentina-strip .cp-divider { background: rgba(106,44,94,0.25); }
+.argentina-features .argentina-tag { color: #6A2C5E; background: rgba(106,44,94,0.06); border-color: rgba(106,44,94,0.18); }
 /* SouthAfrica card */
 .southafrica-strip { background: rgba(194,87,26,0.07); border-color: rgba(194,87,26,0.22); }
 .southafrica-strip .cp-num { color: #C2571A; font-size: 0.9rem; }

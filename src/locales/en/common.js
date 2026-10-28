@@ -86,6 +86,7 @@ export default {
     rhone:      'Rhône Valley',
     champagne:     'Champagne',
     usother:        'US Other Regions',
+    argentina:      'Argentina',
     southafrica:    'South Africa',
     austria:        'Austria',
     loire:      'Loire Valley',
