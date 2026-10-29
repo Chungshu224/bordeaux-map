@@ -14,3 +14,11 @@
 
 ## 3. 互動功能（階段 E 計畫）
 示意點地圖（無授權邊界時）、4 款遊戲、品飲筆記（`lg_*`）、成就、詞彙（region `languedoc`）、氣候腳本（北半球 4–10 月）。
+
+## 4. 完成狀態
+
+- 課程內容：16 課（L1 5／L2 6／L3 5），en／ja 完成；有來源衝突的數字僅於課文標註，不入測驗。
+- 互動功能：22 個示意點地圖、遊戲（產區速答、制度比例、分類）、品飲筆記（12 種酒型）、31 項成就、術語表 31 筆、UI 字典 683 條（en／ja）。
+- 課程維持僅管理員可見。
+- 未套用的遷移檔：`20261102000000_add_languedoc_course.sql`、`20261102000100_add_languedoc_tasting_types.sql`、`20261102000200_add_languedoc_glossary.sql`。
+- 待辦：氣候資料 `public/data/languedoc-climate.json`（Open-Meteo 額度恢復後執行 `node scripts/build-languedoc-climate.mjs --delay=1200 --merge`）。
