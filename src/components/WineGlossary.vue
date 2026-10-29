@@ -97,7 +97,7 @@ const { t } = useI18n()
 
 const SUPPORTED_REGIONS = [
   'bordeaux', 'bourgogne', 'italy',
-  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'austria', 'champagne', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest',
+  'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'austria', 'champagne', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy',
   'loire', 'california', 'australia', 'newzealand'
 ]
 
@@ -105,7 +105,7 @@ const props = defineProps({
   region: {
     type: String,
     default: 'bordeaux',
-    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'loire', 'california', 'australia', 'newzealand'].includes(v)
+    validator: v => ['bordeaux', 'bourgogne', 'italy', 'spain', 'portugal', 'germany', 'hungary', 'greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'loire', 'california', 'australia', 'newzealand'].includes(v)
   }
 })
 
@@ -124,6 +124,7 @@ const REGION_META = {
   southafrica:{ icon: '🇿🇦', lang3Key: '',   lang3Label: '' },
   languedoc:  { icon: '🇫🇷', lang3Key: '',   lang3Label: '' },
   southwest:  { icon: '🇫🇷', lang3Key: '',   lang3Label: '' },
+  brandy:     { icon: '🥃', lang3Key: '',   lang3Label: '' },
   chile:  { icon: '🇨🇱', lang3Key: '',   lang3Label: '' },
   usother:    { icon: '🇺🇸', lang3Key: '',   lang3Label: '' },
   argentina:  { icon: '🇦🇷', lang3Key: '',   lang3Label: '' },

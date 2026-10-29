@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="brandy" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveBrandyLesson, loadAndMergeBrandyProgress } from '../../lib/courseProgressSync.js'
 import BrandyCourseLayout from './BrandyCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalBrandyAchievementManager } from '../../stores/brandyAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalBrandyAchievementManager.init()
 
 const currentLevel = computed(() => brandyLearningState.currentLevel)
 const currentLesson = computed(() => brandyLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = brandyLearningState.completedLessons.includes(lessonId)
     brandyLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveBrandyLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => brandyLearningState.completedLessons.includes(l.id))
+      globalBrandyAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: brandyLearningProgress.value
+      })
+    }
   }
   brandyLearningActions.exitLesson()
 }
