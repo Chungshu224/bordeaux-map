@@ -41,3 +41,14 @@
 - Level 3（5 課）：課文與測驗完成（en／ja 齊全）。市場數字僅用 CIVP 2025 已核對者；科西嘉面積與 IGP 占比因來源衝突不入測驗。
 - 互動階段：地圖 24 個示意點（西部 6、東部 9、科西嘉 9，非官方邊界）、四款遊戲（產區速答／品種配對／制度辨識／知識閃問，後者取自課程測驗）、品飲筆記（pv_* 七種類型）、成就 31 項、詞彙表（region `provence`，25 詞條）、UI 字典 en/ja（672 條）。Migration 已備妥未套用：`20261105000100_add_provence_tasting_types.sql`、`20261105000200_add_provence_glossary.sql`。氣候圖層資料（`/data/provence-climate.json`）尚未產生，地圖的氣候開關會顯示載入失敗。
 - 待辦：Level 2–3 課文、互動功能、品飲與詞庫遷移檔、氣候資料。
+
+## 完成狀態（總結）
+
+- 課程內容：18 課（L1 5／L2 8／L3 5），en／ja 完成；有來源衝突的數字僅於課文標註、不入測驗（見上方各階段備註）。
+- 互動功能：24 個示意點地圖、4 款遊戲、品飲筆記（`pv_*` 七種類型）、成就 31 項、詞彙表 25 條（region `provence`）、UI 字典 en／ja 各 672 條，0 缺漏。
+- 課程維持僅管理員可見（`active=false`、`show_on_home=false`，首頁只有管理員卡片）。
+- 未套用的遷移檔：`20261105000000_add_provence_course.sql`、`20261105000100_add_provence_tasting_types.sql`（CHECK 清單保留所有既有值並加入 `pv_*`）、`20261105000200_add_provence_glossary.sql`（region CHECK 保留所有既有值並加入 `provence`）。
+- 待辦：氣候資料 `public/data/provence-climate.json` 尚未產生（可複製其他課程的 climate 腳本並以本課程示意點座標執行；地圖氣候開關目前會顯示載入失敗）；發音檔未提供。
+- 查證建議：Level 2 的 Bandol／Cassis／Palette／Bellet／Pierrevert 與科西嘉各課部分內容，以及 Level 3 釀造一課的手法說明，合併前建議再核對來源。
+- 時效提醒：CIVP 2025 的產量與玫瑰紅占比會逐年更新；更新課程時請重新查證。
+- 分支鏈：feat/provence-design → -l1 → -l2 → -l3 → -interactive → -final；已用 `git merge-tree` 試合併，與 master 及 feat/home-relayout 皆無衝突；尚未合併，等待「合併」指示。
