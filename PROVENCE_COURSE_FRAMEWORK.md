@@ -39,4 +39,5 @@
 - Level 1（5 課）：課文與測驗完成（en／ja 齊全）。
 - Level 2（8 課）：課文與測驗完成（en／ja 齊全）。衝突數字已標註並排除於測驗：Côtes de Provence 品種比例（INAO 70% vs 80%）、Coteaux Varois 玫瑰紅占比、Les Baux 村數與有機說法、Bandol 色彩比例、Patrimonio Nielluccio 比例、Ajaccio 細節、Vin de Corse 成立年、IGP Île de Beauté 占比。
 - Level 3（5 課）：課文與測驗完成（en／ja 齊全）。市場數字僅用 CIVP 2025 已核對者；科西嘉面積與 IGP 占比因來源衝突不入測驗。
+- 互動階段：地圖 24 個示意點（西部 6、東部 9、科西嘉 9，非官方邊界）、四款遊戲（產區速答／品種配對／制度辨識／知識閃問，後者取自課程測驗）、品飲筆記（pv_* 七種類型）、成就 31 項、詞彙表（region `provence`，25 詞條）、UI 字典 en/ja（672 條）。Migration 已備妥未套用：`20261105000100_add_provence_tasting_types.sql`、`20261105000200_add_provence_glossary.sql`。氣候圖層資料（`/data/provence-climate.json`）尚未產生，地圖的氣候開關會顯示載入失敗。
 - 待辦：Level 2–3 課文、互動功能、品飲與詞庫遷移檔、氣候資料。

@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="provence" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveProvenceLesson, loadAndMergeProvenceProgress } from '../../lib/courseProgressSync.js'
 import ProvenceCourseLayout from './ProvenceCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalProvenceAchievementManager } from '../../stores/provenceAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalProvenceAchievementManager.init()
 
 const currentLevel = computed(() => provenceLearningState.currentLevel)
 const currentLesson = computed(() => provenceLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = provenceLearningState.completedLessons.includes(lessonId)
     provenceLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveProvenceLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => provenceLearningState.completedLessons.includes(l.id))
+      globalProvenceAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: provenceLearningProgress.value
+      })
+    }
   }
   provenceLearningActions.exitLesson()
 }
@@ -149,13 +164,13 @@ watch(() => props.selectedLevel, (n) => {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #fbf4ea;
+  background: #F6F3FC;
   font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
 }
 
 /* 學習標題欄 */
 .learning-header {
-  background: linear-gradient(135deg, #8A4B14 0%, #4A2408 100%);
+  background: linear-gradient(135deg, #6F5AA8 0%, #3E3166 100%);
   padding: 8px 20px;
   display: flex;
   flex-direction: column;
@@ -163,7 +178,7 @@ watch(() => props.selectedLevel, (n) => {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 16px rgba(138,75,20, 0.3);
+  box-shadow: 0 4px 16px rgba(111,90,168, 0.3);
   flex-shrink: 0;
 }
 

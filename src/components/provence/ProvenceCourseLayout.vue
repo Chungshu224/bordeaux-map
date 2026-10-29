@@ -220,16 +220,16 @@ function scrollToModuleAndClose (moduleId) {
    CSS Variables (Provence Red + Green)
    =========================== */
 .provence-course-layout {
-  --primary: #8A4B14;
-  --primary-dark: #4A2408;
-  --primary-gradient: linear-gradient(135deg, #8A4B14 0%, #4A2408 100%);
+  --primary: #6F5AA8;
+  --primary-dark: #3E3166;
+  --primary-gradient: linear-gradient(135deg, #6F5AA8 0%, #3E3166 100%);
   --primary-light: #e3effb;
   --secondary: #CF8A55;
   --text-primary: #1a1a2e;
   --text-secondary: #6c757d;
-  --bg-page: #fbf4ea;
-  --shadow-sm: 0 2px 8px rgba(138,75,20, 0.08);
-  --shadow-md: 0 6px 24px rgba(138,75,20, 0.14);
+  --bg-page: #F6F3FC;
+  --shadow-sm: 0 2px 8px rgba(111,90,168, 0.08);
+  --shadow-md: 0 6px 24px rgba(111,90,168, 0.14);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -251,7 +251,7 @@ function scrollToModuleAndClose (moduleId) {
   align-items: center;
   justify-content: space-between;
   color: white;
-  box-shadow: 0 4px 16px rgba(138,75,20, 0.35);
+  box-shadow: 0 4px 16px rgba(111,90,168, 0.35);
   position: sticky;
   top: 0;
   z-index: 100;
