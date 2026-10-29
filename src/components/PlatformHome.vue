@@ -157,7 +157,7 @@
         </div>
 
       <!-- ── 法國 France ── -->
-      <div class="region-group">
+      <div v-if="showFrance" class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🇫🇷</span>
           <span class="rg-name">{{ $t('home.courses.groups.france') }}</span>
@@ -199,9 +199,9 @@
               </div>
             </div>
             <div class="course-preview-features">
-              <span class="cpf-item">{{ $t('home.courses.bordeaux.f1') }}</span>
-              <span class="cpf-item">{{ $t('home.courses.bordeaux.f2') }}</span>
-              <span class="cpf-item">{{ $t('home.courses.bordeaux.f3') }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bordeaux.f1')) }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bordeaux.f2')) }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bordeaux.f3')) }}</span>
             </div>
 
             <div class="card-pricing-cta">
@@ -247,9 +247,9 @@
               </div>
             </div>
             <div class="course-preview-features">
-              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f1') }}</span>
-              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f2') }}</span>
-              <span class="cpf-item">✔ {{ $t('home.courses.bourgogne.f3') }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bourgogne.f1')) }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bourgogne.f2')) }}</span>
+              <span class="cpf-item">{{ ck($t('home.courses.bourgogne.f3')) }}</span>
             </div>
             <div class="card-pricing-cta">
               <div class="cpc-hint">NT$390 起 / 月・完整課程全開放</div>
@@ -295,9 +295,9 @@
               </div>
             </div>
             <div class="course-preview-features loire-features">
-              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f1') }}</span>
-              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f2') }}</span>
-              <span class="cpf-item loire-tag">✔ {{ $t('home.courses.loire.f3') }}</span>
+              <span class="cpf-item loire-tag">{{ ck($t('home.courses.loire.f1')) }}</span>
+              <span class="cpf-item loire-tag">{{ ck($t('home.courses.loire.f2')) }}</span>
+              <span class="cpf-item loire-tag">{{ ck($t('home.courses.loire.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.loire" class="btn-enter-course" @click="router.push('/loire')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
@@ -309,7 +309,7 @@
       </div><!-- /region-group 法國 -->
 
       <!-- ── 舊世界 Old World ── -->
-      <div class="region-group">
+      <div v-if="showOldWorld" class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🏛️</span>
           <span class="rg-name">{{ $t('home.courses.groups.oldWorld') }}</span>
@@ -351,9 +351,9 @@
               </div>
             </div>
             <div class="course-preview-features italy-features">
-              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f1') }}</span>
-              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f2') }}</span>
-              <span class="cpf-item italy-tag">✔ {{ $t('home.courses.italy.f3') }}</span>
+              <span class="cpf-item italy-tag">{{ ck($t('home.courses.italy.f1')) }}</span>
+              <span class="cpf-item italy-tag">{{ ck($t('home.courses.italy.f2')) }}</span>
+              <span class="cpf-item italy-tag">{{ ck($t('home.courses.italy.f3')) }}</span>
             </div>
             <div class="card-pricing-cta">
               <div class="cpc-hint">NT$290 起 / 月・完整課程全開放</div>
@@ -400,9 +400,9 @@
               </div>
             </div>
             <div class="course-preview-features spain-features">
-              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f1') }}</span>
-              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f2') }}</span>
-              <span class="cpf-item spain-tag">✔ {{ $t('home.courses.spain.f3') }}</span>
+              <span class="cpf-item spain-tag">{{ ck($t('home.courses.spain.f1')) }}</span>
+              <span class="cpf-item spain-tag">{{ ck($t('home.courses.spain.f2')) }}</span>
+              <span class="cpf-item spain-tag">{{ ck($t('home.courses.spain.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.spain" class="btn-enter-course" @click="router.push('/spain')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -444,9 +444,9 @@
               </div>
             </div>
             <div class="course-preview-features germany-features">
-              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f1') }}</span>
-              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f2') }}</span>
-              <span class="cpf-item germany-tag">✔ {{ $t('home.courses.germany.f3') }}</span>
+              <span class="cpf-item germany-tag">{{ ck($t('home.courses.germany.f1')) }}</span>
+              <span class="cpf-item germany-tag">{{ ck($t('home.courses.germany.f2')) }}</span>
+              <span class="cpf-item germany-tag">{{ ck($t('home.courses.germany.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.germany" class="btn-enter-course" @click="router.push('/germany')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -488,9 +488,9 @@
               </div>
             </div>
             <div class="course-preview-features portugal-features">
-              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f1') }}</span>
-              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f2') }}</span>
-              <span class="cpf-item portugal-tag">✔ {{ $t('home.courses.portugal.f3') }}</span>
+              <span class="cpf-item portugal-tag">{{ ck($t('home.courses.portugal.f1')) }}</span>
+              <span class="cpf-item portugal-tag">{{ ck($t('home.courses.portugal.f2')) }}</span>
+              <span class="cpf-item portugal-tag">{{ ck($t('home.courses.portugal.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.portugal" class="btn-enter-course" @click="router.push('/portugal')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -532,9 +532,9 @@
               </div>
             </div>
             <div class="course-preview-features hungary-features">
-              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f1') }}</span>
-              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f2') }}</span>
-              <span class="cpf-item hungary-tag">✔ {{ $t('home.courses.hungary.f3') }}</span>
+              <span class="cpf-item hungary-tag">{{ ck($t('home.courses.hungary.f1')) }}</span>
+              <span class="cpf-item hungary-tag">{{ ck($t('home.courses.hungary.f2')) }}</span>
+              <span class="cpf-item hungary-tag">{{ ck($t('home.courses.hungary.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.hungary" class="btn-enter-course" @click="router.push('/hungary')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -576,9 +576,9 @@
               </div>
             </div>
             <div class="course-preview-features greece-features">
-              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f1') }}</span>
-              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f2') }}</span>
-              <span class="cpf-item greece-tag">{{ $t('home.courses.greece.f3') }}</span>
+              <span class="cpf-item greece-tag">{{ ck($t('home.courses.greece.f1')) }}</span>
+              <span class="cpf-item greece-tag">{{ ck($t('home.courses.greece.f2')) }}</span>
+              <span class="cpf-item greece-tag">{{ ck($t('home.courses.greece.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/greece')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -619,9 +619,9 @@
               </div>
             </div>
             <div class="course-preview-features rhone-features">
-              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f1') }}</span>
-              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f2') }}</span>
-              <span class="cpf-item rhone-tag">{{ $t('home.courses.rhone.f3') }}</span>
+              <span class="cpf-item rhone-tag">{{ ck($t('home.courses.rhone.f1')) }}</span>
+              <span class="cpf-item rhone-tag">{{ ck($t('home.courses.rhone.f2')) }}</span>
+              <span class="cpf-item rhone-tag">{{ ck($t('home.courses.rhone.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/rhone')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -661,9 +661,9 @@
               </div>
             </div>
             <div class="course-preview-features champagne-features">
-              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f1') }}</span>
-              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f2') }}</span>
-              <span class="cpf-item champagne-tag">{{ $t('home.courses.champagne.f3') }}</span>
+              <span class="cpf-item champagne-tag">{{ ck($t('home.courses.champagne.f1')) }}</span>
+              <span class="cpf-item champagne-tag">{{ ck($t('home.courses.champagne.f2')) }}</span>
+              <span class="cpf-item champagne-tag">{{ ck($t('home.courses.champagne.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/champagne')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -704,9 +704,9 @@
               </div>
             </div>
             <div class="course-preview-features brandy-features">
-              <span class="cpf-item brandy-tag">{{ $t('home.courses.brandy.f1') }}</span>
-              <span class="cpf-item brandy-tag">{{ $t('home.courses.brandy.f2') }}</span>
-              <span class="cpf-item brandy-tag">{{ $t('home.courses.brandy.f3') }}</span>
+              <span class="cpf-item brandy-tag">{{ ck($t('home.courses.brandy.f1')) }}</span>
+              <span class="cpf-item brandy-tag">{{ ck($t('home.courses.brandy.f2')) }}</span>
+              <span class="cpf-item brandy-tag">{{ ck($t('home.courses.brandy.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/brandy')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -747,9 +747,9 @@
               </div>
             </div>
             <div class="course-preview-features austria-features">
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
+              <span class="cpf-item austria-tag">{{ ck($t('home.courses.austria.f1')) }}</span>
+              <span class="cpf-item austria-tag">{{ ck($t('home.courses.austria.f2')) }}</span>
+              <span class="cpf-item austria-tag">{{ ck($t('home.courses.austria.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -789,9 +789,9 @@
               </div>
             </div>
             <div class="course-preview-features languedoc-features">
-              <span class="cpf-item languedoc-tag">{{ $t('home.courses.languedoc.f1') }}</span>
-              <span class="cpf-item languedoc-tag">{{ $t('home.courses.languedoc.f2') }}</span>
-              <span class="cpf-item languedoc-tag">{{ $t('home.courses.languedoc.f3') }}</span>
+              <span class="cpf-item languedoc-tag">{{ ck($t('home.courses.languedoc.f1')) }}</span>
+              <span class="cpf-item languedoc-tag">{{ ck($t('home.courses.languedoc.f2')) }}</span>
+              <span class="cpf-item languedoc-tag">{{ ck($t('home.courses.languedoc.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/languedoc')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -831,9 +831,9 @@
               </div>
             </div>
             <div class="course-preview-features southwest-features">
-              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f1') }}</span>
-              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f2') }}</span>
-              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f3') }}</span>
+              <span class="cpf-item southwest-tag">{{ ck($t('home.courses.southwest.f1')) }}</span>
+              <span class="cpf-item southwest-tag">{{ ck($t('home.courses.southwest.f2')) }}</span>
+              <span class="cpf-item southwest-tag">{{ ck($t('home.courses.southwest.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/southwest')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -841,52 +841,11 @@
           </div>
 
 
-          <!-- ── Austria（僅管理員可見，上線前預覽）── -->
-          <div v-if="isAdmin" class="course-card austria">
-            <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
-              {{ $t('home.courses.common.statusAdmin') }}
-            </div>
-            <div class="card-hero">
-              <div class="card-icon">🏔️</div>
-              <div class="card-region">Austria · Österreich</div>
-              <h3 class="card-title">{{ $t('home.courses.austria.title') }}</h3>
-              <p class="card-desc">{{ $t('home.courses.austria.desc') }}</p>
-            </div>
-            <div class="course-preview-strip austria-strip">
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s1label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s2label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s3label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s4label')"></span>
-              </div>
-            </div>
-            <div class="course-preview-features austria-features">
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
-            </div>
-            <div class="card-enter-cta">
-              <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
-            </div>
-          </div>
         </div><!-- /courses-grid 舊世界 -->
       </div><!-- /region-group 舊世界 -->
 
       <!-- ── 新世界 New World ── -->
-      <div class="region-group">
+      <div v-if="showNewWorld" class="region-group">
         <div class="region-group-header">
           <span class="rg-icon">🌏</span>
           <span class="rg-name">{{ $t('home.courses.groups.newWorld') }}</span>
@@ -927,9 +886,9 @@
               </div>
             </div>
             <div class="course-preview-features australia-features">
-              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f1') }}</span>
-              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f2') }}</span>
-              <span class="cpf-item australia-tag">✔ {{ $t('home.courses.australia.f3') }}</span>
+              <span class="cpf-item australia-tag">{{ ck($t('home.courses.australia.f1')) }}</span>
+              <span class="cpf-item australia-tag">{{ ck($t('home.courses.australia.f2')) }}</span>
+              <span class="cpf-item australia-tag">{{ ck($t('home.courses.australia.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.australia" class="btn-enter-course" @click="router.push('/australia')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -971,9 +930,9 @@
               </div>
             </div>
             <div class="course-preview-features newzealand-features">
-              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f1') }}</span>
-              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f2') }}</span>
-              <span class="cpf-item newzealand-tag">✔ {{ $t('home.courses.newzealand.f3') }}</span>
+              <span class="cpf-item newzealand-tag">{{ ck($t('home.courses.newzealand.f1')) }}</span>
+              <span class="cpf-item newzealand-tag">{{ ck($t('home.courses.newzealand.f2')) }}</span>
+              <span class="cpf-item newzealand-tag">{{ ck($t('home.courses.newzealand.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.newzealand" class="btn-enter-course" @click="router.push('/newzealand')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
@@ -1015,9 +974,9 @@
               </div>
             </div>
             <div class="course-preview-features california-features">
-              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f1') }}</span>
-              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f2') }}</span>
-              <span class="cpf-item california-tag">✔ {{ $t('home.courses.california.f3') }}</span>
+              <span class="cpf-item california-tag">{{ ck($t('home.courses.california.f1')) }}</span>
+              <span class="cpf-item california-tag">{{ ck($t('home.courses.california.f2')) }}</span>
+              <span class="cpf-item california-tag">{{ ck($t('home.courses.california.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="courseStatuses.california" class="btn-enter-course" @click="router.push('/california/course')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.enter') }} →</button>
@@ -1060,9 +1019,9 @@
               </div>
             </div>
             <div class="course-preview-features southafrica-features">
-              <span class="cpf-item southafrica-tag">{{ $t('home.courses.southafrica.f1') }}</span>
-              <span class="cpf-item southafrica-tag">{{ $t('home.courses.southafrica.f2') }}</span>
-              <span class="cpf-item southafrica-tag">{{ $t('home.courses.southafrica.f3') }}</span>
+              <span class="cpf-item southafrica-tag">{{ ck($t('home.courses.southafrica.f1')) }}</span>
+              <span class="cpf-item southafrica-tag">{{ ck($t('home.courses.southafrica.f2')) }}</span>
+              <span class="cpf-item southafrica-tag">{{ ck($t('home.courses.southafrica.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/southafrica')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -1070,47 +1029,6 @@
           </div>
 
 
-          <!-- ── Austria（僅管理員可見，上線前預覽）── -->
-          <div v-if="isAdmin" class="course-card austria">
-            <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
-              {{ $t('home.courses.common.statusAdmin') }}
-            </div>
-            <div class="card-hero">
-              <div class="card-icon">🏔️</div>
-              <div class="card-region">Austria · Österreich</div>
-              <h3 class="card-title">{{ $t('home.courses.austria.title') }}</h3>
-              <p class="card-desc">{{ $t('home.courses.austria.desc') }}</p>
-            </div>
-            <div class="course-preview-strip austria-strip">
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s1label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s2label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s3label')"></span>
-              </div>
-              <div class="cp-divider"></div>
-              <div class="cp-stat">
-                <span class="cp-num">undefined</span>
-                <span class="cp-label" v-html="$t('home.courses.austria.s4label')"></span>
-              </div>
-            </div>
-            <div class="course-preview-features austria-features">
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f1') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f2') }}</span>
-              <span class="cpf-item austria-tag">{{ $t('home.courses.austria.f3') }}</span>
-            </div>
-            <div class="card-enter-cta">
-              <button class="btn-enter-course" @click="router.push('/austria')">{{ $t('home.courses.common.enterAdmin') }} →</button>
-            </div>
-          </div>
 
           <!-- ── Chile（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card chile">
@@ -1145,9 +1063,9 @@
               </div>
             </div>
             <div class="course-preview-features chile-features">
-              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f1') }}</span>
-              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f2') }}</span>
-              <span class="cpf-item chile-tag">{{ $t('home.courses.chile.f3') }}</span>
+              <span class="cpf-item chile-tag">{{ ck($t('home.courses.chile.f1')) }}</span>
+              <span class="cpf-item chile-tag">{{ ck($t('home.courses.chile.f2')) }}</span>
+              <span class="cpf-item chile-tag">{{ ck($t('home.courses.chile.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/chile')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -1188,9 +1106,9 @@
               </div>
             </div>
             <div class="course-preview-features usother-features">
-              <span class="cpf-item usother-tag">{{ $t('home.courses.usother.f1') }}</span>
-              <span class="cpf-item usother-tag">{{ $t('home.courses.usother.f2') }}</span>
-              <span class="cpf-item usother-tag">{{ $t('home.courses.usother.f3') }}</span>
+              <span class="cpf-item usother-tag">{{ ck($t('home.courses.usother.f1')) }}</span>
+              <span class="cpf-item usother-tag">{{ ck($t('home.courses.usother.f2')) }}</span>
+              <span class="cpf-item usother-tag">{{ ck($t('home.courses.usother.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/usother')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -1230,9 +1148,9 @@
               </div>
             </div>
             <div class="course-preview-features argentina-features">
-              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f1') }}</span>
-              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f2') }}</span>
-              <span class="cpf-item argentina-tag">{{ $t('home.courses.argentina.f3') }}</span>
+              <span class="cpf-item argentina-tag">{{ ck($t('home.courses.argentina.f1')) }}</span>
+              <span class="cpf-item argentina-tag">{{ ck($t('home.courses.argentina.f2')) }}</span>
+              <span class="cpf-item argentina-tag">{{ ck($t('home.courses.argentina.f3')) }}</span>
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/argentina')">{{ $t('home.courses.common.enterAdmin') }} →</button>
@@ -1743,6 +1661,13 @@ const visibleCourses = computed(() =>
   courseConfig.value.filter(c => courseShowHome.value[c.id] || isAdmin.value)
 )
 // 實際上架數量（不含管理員 override，用於顯示數字）
+const groupHasCourse = (ids) => isAdmin.value || ids.some(id => courseShowHome.value[id])
+const showFrance   = computed(() => groupHasCourse(['bordeaux', 'bourgogne', 'loire']))
+const showOldWorld = computed(() => groupHasCourse(['italy', 'spain', 'germany', 'portugal', 'hungary']))
+const showNewWorld = computed(() => groupHasCourse(['australia', 'newzealand', 'california']))
+// 特色標籤：統一移除字串開頭的勾號，由 CSS 加上單一勾號
+const ck = (str) => String(str).replace(/^[\s✔✓]+/, '')
+
 const visibleCourseCount = computed(() =>
   courseConfig.value.filter(c => courseShowHome.value[c.id]).length
 )
@@ -1933,7 +1858,7 @@ onMounted(async () => {
 
 <style scoped>
 /* ─── 論壇預覽 ──────────────────────────────────────────────────────────── */
-.forum-preview-section { background: #0a0306; padding: 80px 20px; }
+.forum-preview-section { background: #0a0306; padding: 80px 20px; text-align: center; }
 .fp-loading { text-align: center; color: #7a6a5a; padding: 20px; font-size: 0.9rem; }
 .fp-list { display: flex; flex-direction: column; gap: 10px; max-width: 720px; margin: 0 auto 28px; }
 .fp-card {
@@ -2085,6 +2010,7 @@ onMounted(async () => {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 641px) { .nav-inner { padding-right: 150px; } }
 .nav-logo {
   display: flex;
   align-items: center;
@@ -2107,6 +2033,7 @@ onMounted(async () => {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
   transition: all .2s;
 }
 .btn-nav:hover { border-color: #d4af37; color: #d4af37; }
@@ -2148,8 +2075,8 @@ onMounted(async () => {
 .nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-hamburger:hover { border-color: #d4af37; }
 
-.btn-mobile-cta { padding: 7px 14px; font-size: 0.82rem; }
-.btn-mobile-login { padding: 7px 12px; font-size: 0.82rem; }
+.btn-mobile-cta { padding: 6px 12px; font-size: 0.78rem; }
+.btn-mobile-login { padding: 6px 10px; font-size: 0.78rem; }
 
 /* 手機下拉選單 — fixed 定位于手機 nav 正下方 */
 .nav-mobile-dropdown {
@@ -2214,7 +2141,7 @@ onMounted(async () => {
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 88vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2237,7 +2164,7 @@ onMounted(async () => {
   position: relative;
   z-index: 2;
   max-width: 720px;
-  padding: 0 24px;
+  padding: 36px 24px;
 }
 .hero-tag {
   display: inline-block;
@@ -2394,20 +2321,14 @@ onMounted(async () => {
 .rg-en   { font-size: 0.85rem; color: #9a8878; font-style: italic; }
 
 .courses-grid {
-/* Chile card */
-.chile-strip { background: rgba(164,52,58,0.07); border-color: rgba(164,52,58,0.22); }
-.chile-strip .cp-num { color: #A4343A; font-size: 0.9rem; }
-.chile-strip .cp-label { color: #5E1B20; }
-.chile-strip .cp-divider { background: rgba(164,52,58,0.25); }
-.chile-features .chile-tag { color: #A4343A; background: rgba(164,52,58,0.06); border-color: rgba(164,52,58,0.18); }
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+  justify-content: center;
+  gap: 24px;
+  align-items: stretch;
 }
-@media (max-width: 1280px) { .courses-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 960px)  { .courses-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .courses-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+@media (max-width: 600px) { .courses-grid { grid-template-columns: minmax(0, 1fr); max-width: 460px; margin: 0 auto; } }
+
 
 /* ─── 課程卡片 ────────────────────────────────────────────────────────────── */
 .course-card {
@@ -2417,7 +2338,14 @@ onMounted(async () => {
   padding: 22px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+.course-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.35); }
+.course-card > .card-hero { flex: 1; }
+.course-card > .card-status { align-self: flex-start; }
+.course-card > .card-pricing-cta, .course-card > .card-enter-cta { margin-top: auto; }
 .course-card.bordeaux { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.04); }
 .course-card.bourgogne { border-color: rgba(107,45,139,0.4); background: rgba(107,45,139,0.05); }
 .course-card.spain { border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.05); }
@@ -2450,6 +2378,7 @@ onMounted(async () => {
   display: flex; flex-wrap: wrap; gap: 6px;
   margin-bottom: 4px;
 }
+.cpf-item::before { content: "✓ "; font-weight: 700; }
 .cpf-item {
   font-size: 0.68rem; color: #9a7ab0;
   background: rgba(107,45,139,0.08);
@@ -2457,6 +2386,12 @@ onMounted(async () => {
   border-radius: 20px;
   padding: 3px 10px;
 }
+/* Chile card */
+.chile-strip { background: rgba(164,52,58,0.07); border-color: rgba(164,52,58,0.22); }
+.chile-strip .cp-num { color: #A4343A; font-size: 0.9rem; }
+.chile-strip .cp-label { color: #5E1B20; }
+.chile-strip .cp-divider { background: rgba(164,52,58,0.25); }
+.chile-features .chile-tag { color: #A4343A; background: rgba(164,52,58,0.06); border-color: rgba(164,52,58,0.18); }
 /* Italy strip */
 .italy-strip { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.2); }
 .italy-strip .cp-num { color: #e07060; }
