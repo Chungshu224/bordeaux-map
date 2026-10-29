@@ -70,6 +70,7 @@ export default {
       statusActive: '✅ Now Open',
       statusPlanning: '📅 Coming Soon',
       enterAdmin: 'Admin Enter',
+      viewPlansBtn: 'View Plans',
       enter: 'Enter Course',
       explore: 'Explore',
       comingSoon: '📅 Coming Soon',
@@ -124,6 +125,7 @@ export default {
     },
     bourgogne: {
       title: 'Burgundy Wine',
+      priceHint: 'From NT$390/mo · Full course access',
       desc: 'From Grand Cru to Village level, explore Côte de Nuits, Côte de Beaune, and the world of Pinot Noir and Chardonnay',
       s1label: 'Course Stages<br>L1 – L4',
       s2label: 'Grand Cru<br>Appellations',
@@ -147,6 +149,7 @@ export default {
     },
     italy: {
       title: 'Italian Wine',
+      priceHint: 'From NT$290/mo · Full course access',
       desc: "Explore Barolo, Brunello, Amarone and Italy's finest wines — complete analysis of 20 DOC/DOCG appellations",
       s1label: 'Course Stages<br>L1 – L3',
       s2label: 'Lessons<br>Full Course',
