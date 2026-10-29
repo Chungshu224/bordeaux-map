@@ -254,6 +254,24 @@ export async function loadAndMergeChampagneProgress(userId) {
   return true
 }
 
+// ─── Languedoc ───────────────────────────────────────────────────
+// Languedoc 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
+export const saveLanguedocLesson = (userId, lessonId) => upsertLesson(userId, 'languedoc', lessonId)
+
+export async function loadAndMergeLanguedocProgress(userId) {
+  const rows = await fetchRows(userId, 'languedoc')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `languedoc-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[languedocSync] ✅ synced')
+  return true
+}
+
 // ─── UsOther ───────────────────────────────────────────────────
 // UsOther 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
 export const saveUsOtherLesson = (userId, lessonId) => upsertLesson(userId, 'usother', lessonId)
