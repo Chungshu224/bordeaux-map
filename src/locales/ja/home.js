@@ -70,6 +70,7 @@ export default {
       statusActive: '✅ 公開中',
       statusPlanning: '📅 近日公開',
       enterAdmin: '管理者として入る',
+      viewPlansBtn: 'プランを見る',
       enter: 'コースへ進む',
       explore: '探索する',
       comingSoon: '📅 近日公開',
@@ -123,6 +124,7 @@ export default {
     },
     bourgogne: {
       title: 'ブルゴーニュワイン',
+      priceHint: 'NT$390/月〜・全コース開放',
       desc: 'Grand Cruから村名レベルまで、Côte de Nuits、Côte de Beauneを探索。Pinot NoirとChardonnayの世界',
       s1label: 'コース段階<br>L1 – L4',
       s2label: 'Grand Cru<br>アペラシオン',
@@ -146,6 +148,7 @@ export default {
     },
     italy: {
       title: 'イタリアワイン',
+      priceHint: 'NT$290/月〜・全コース開放',
       desc: 'Barolo、Brunello、Amaroneなどイタリアの最高峰ワインを探索 — 20のDOC/DOCG産地を完全解析',
       s1label: 'コース段階<br>L1 – L3',
       s2label: 'レッスン数<br>完全コース',

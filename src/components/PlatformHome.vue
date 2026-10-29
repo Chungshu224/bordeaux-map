@@ -252,11 +252,11 @@
               <span class="cpf-item">{{ ck($t('home.courses.bourgogne.f3')) }}</span>
             </div>
             <div class="card-pricing-cta">
-              <div class="cpc-hint">NT$390 起 / 月・完整課程全開放</div>
+              <div class="cpc-hint">{{ $t('home.courses.bourgogne.priceHint') }}</div>
               <div class="cpc-actions">
                 <button class="cpc-btn-free" @click="openCourseDetail('bourgogne')">{{ $t('home.courses.bourgogne.courseDetailBtn') }}</button>
-                <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
-                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/bourgogne')">管理員進入</button>
+                <button class="cpc-btn-plan" @click="goToPricing">{{ $t('home.courses.common.viewPlansBtn') }} →</button>
+                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/bourgogne')">{{ $t('home.courses.common.enterAdmin') }}</button>
               </div>
             </div>
 
@@ -356,11 +356,11 @@
               <span class="cpf-item italy-tag">{{ ck($t('home.courses.italy.f3')) }}</span>
             </div>
             <div class="card-pricing-cta">
-              <div class="cpc-hint">NT$290 起 / 月・完整課程全開放</div>
+              <div class="cpc-hint">{{ $t('home.courses.italy.priceHint') }}</div>
               <div class="cpc-actions">
                 <button class="cpc-btn-free" @click="openCourseDetail('italy')">{{ $t('home.courses.italy.courseDetailBtn') }}</button>
-                <button class="cpc-btn-plan" @click="goToPricing">查看方案 →</button>
-                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/italy')">管理員進入</button>
+                <button class="cpc-btn-plan" @click="goToPricing">{{ $t('home.courses.common.viewPlansBtn') }} →</button>
+                <button v-if="isAdmin" class="cpc-btn-free" @click="router.push('/italy')">{{ $t('home.courses.common.enterAdmin') }}</button>
               </div>
             </div>
 
@@ -2295,6 +2295,13 @@ onMounted(async () => {
 .stat-num { display: block; font-size: 2rem; font-weight: 800; color: #d4af37; line-height: 1; }
 .stat-label { font-size: 0.75rem; color: #9a8878; margin-top: 4px; }
 .stat-div { width: 1px; height: 36px; background: rgba(255,255,255,0.15); }
+@media (max-width: 640px) {
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 0; max-width: 340px; margin: 0 auto; }
+  .stat-div { display: none; }
+  .stat-item { padding: 0 8px; }
+  .stat-item:nth-child(4n+1) { border-right: 1px solid rgba(255,255,255,0.15); }
+  .stat-num { font-size: 1.7rem; }
+}
 
 /* ─── Sections ────────────────────────────────────────────────────────────── */
 .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
