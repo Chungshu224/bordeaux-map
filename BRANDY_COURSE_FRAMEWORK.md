@@ -15,3 +15,13 @@
 
 ## 3. 互動功能（階段 E 計畫）
 示意點地圖（無授權邊界時；Cognac 六大 Crus、Armagnac 三區、其他產地）、遊戲、品飲筆記（`bd_*`）、成就、詞彙（region `brandy`）、氣候腳本（北半球 4–10 月，僅適用主要產區）。
+
+## 4. 完成狀態
+
+- 課程內容：16 課（L1 5／L2 6／L3 5），en／ja 完成；有來源衝突的數字（各 cru 公頃數、Ugni Blanc 占比、Armagnac XO 年數、哪些酒廠帶酒泥蒸餾、獲豁免的酒廠名單、喬治亞等高加索細節）僅於課文標註或不收錄，不入測驗。
+- 互動功能：20 個示意點地圖（Cognac 7、Armagnac 3、歐洲其他 5、新世界 5）、4 款遊戲（產區速答、品種配對、制度辨識、知識閃問）、品飲筆記（7 種酒型 bd_*）、成就系統、術語表 28 條（region `brandy`）、UI 字典 en／ja 各 620 條，0 缺漏。
+- 課程維持僅管理員可見。
+- 未套用的遷移檔：`20261104000000_add_brandy_course.sql`、`20261104000100_add_brandy_tasting_types.sql`（CHECK 清單同時保留 sw_* 與 bd_*）、`20261104000200_add_brandy_glossary.sql`（region CHECK 同時保留 southwest 與 brandy）。
+- 待辦：氣候資料 `public/data/brandy-climate.json`（`node scripts/build-brandy-climate.mjs --delay=1200 --merge`；腳本只處理北半球的點，Ica、Pisco Elqui、Paarl、Klein Karoo 在南半球生長季不同，不納入）。
+- 時效提醒：Level 3 的 2024 年出口與 2025 年中國終裁數字會過時，更新課程時請重新查證。
+- 分支鏈：feat/brandy-design → -l1 → -l2 → -l3 → -interactive → -final；尚未合併，等待「合併」指示。
