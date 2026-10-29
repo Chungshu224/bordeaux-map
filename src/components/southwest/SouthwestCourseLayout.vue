@@ -224,7 +224,7 @@ function scrollToModuleAndClose (moduleId) {
   --primary-dark: #2B1533;
   --primary-gradient: linear-gradient(135deg, #4B2E55 0%, #2B1533 100%);
   --primary-light: #e3effb;
-  --secondary: #CF8A55;
+  --secondary: #8A6A96;
   --text-primary: #1a1a2e;
   --text-secondary: #6c757d;
   --bg-page: #f8f3f9;

@@ -302,6 +302,7 @@ const regionOptions = [
   { key: 'austria',    label: '奧地利',   icon: '🇦🇹', lang3: 'de', lang3Label: 'Deutsch' },
   { key: 'southafrica',label: '南非',       icon: '🇿🇦', lang3: '',   lang3Label: '' },
   { key: 'languedoc',  label: '朗格多克—魯西永',     icon: '🇫🇷', lang3: '',   lang3Label: '' },
+  { key: 'southwest',  label: '西南產區',     icon: '🇫🇷', lang3: '',   lang3Label: '' },
   { key: 'chile',  label: '智利',     icon: '🇨🇱', lang3: '',   lang3Label: '' },
   { key: 'usother',    label: '美國其他產區', icon: '🇺🇸', lang3: '',   lang3Label: '' },
   { key: 'argentina',  label: '阿根廷',     icon: '🇦🇷', lang3: '',   lang3Label: '' },
@@ -819,6 +820,7 @@ async function runBatchTranslate() {
 .region-hungary    { background: #fffde7; color: #ef6c00; }
 .region-greece     { background: #e3f2fd; color: #0d5eaf; }
 .region-languedoc { background: #f7e8dc; color: #9C4A1A; }
+.region-southwest { background: #f0e6f3; color: #4B2E55; }
 .region-rhone      { background: #f6e8f0; color: #7a2e5c; }
 .region-chile { background: #f9e6e7; color: #A4343A; }
 .region-austria    { background: #fdecee; color: #b3202e; }

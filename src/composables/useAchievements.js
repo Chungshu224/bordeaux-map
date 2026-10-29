@@ -7,6 +7,7 @@ import { gt as gtChampagne } from '../locales/champagneUi/index.js'
 import { gt as gtAustria } from '../locales/austriaUi/index.js'
 import { gt as gtSouthAfrica } from '../locales/southafricaUi/index.js'
 import { gt as gtLanguedoc } from '../locales/languedocUi/index.js'
+import { gt as gtSouthwest } from '../locales/southwestUi/index.js'
 import { gt as gtChile } from '../locales/chileUi/index.js'
 import { gt as gtUsOther } from '../locales/usotherUi/index.js'
 import { gt as gtArgentina } from '../locales/argentinaUi/index.js'
@@ -96,6 +97,11 @@ import {
   globalLanguedocAchievementManager
 } from '../stores/languedocAchievementSystem.js'
 import {
+  southwestAchievementState,
+  southwestAchievementDefinitions,
+  globalSouthwestAchievementManager
+} from '../stores/southwestAchievementSystem.js'
+import {
   usotherAchievementState,
   usotherAchievementDefinitions,
   globalUsOtherAchievementManager
@@ -129,7 +135,8 @@ const COURSE_LABELS = {
   usother:     '侍酒師的筆記本',
   argentina: '侍酒師的筆記本',
   chile: '侍酒師的筆記本',
-  languedoc: '侍酒師的筆記本'
+  languedoc: '侍酒師的筆記本',
+  southwest: '侍酒師的筆記本'
 }
 
 // ── 各課程分類定義 ────────────────────────────────────────────
@@ -270,6 +277,14 @@ const COURSE_CATEGORIES = {
     { id: 'time',       name: '時間特殊', icon: '⏰' },
     { id: 'special',    name: '特殊成就', icon: '⭐' }
   ],
+  southwest: [
+    { id: 'all',         name: '全部',     icon: '🌟' },
+    { id: 'progress',   name: '學習進度', icon: '📚' },
+    { id: 'exploration',name: '地圖探索', icon: '🗺️' },
+    { id: 'quiz',       name: '測驗與遊戲', icon: '🎯' },
+    { id: 'time',       name: '時間特殊', icon: '⏰' },
+    { id: 'special',    name: '特殊成就', icon: '⭐' }
+  ],
   languedoc: [
     { id: 'all',         name: '全部',     icon: '🌟' },
     { id: 'progress',   name: '學習進度', icon: '📚' },
@@ -322,8 +337,8 @@ function calcProgress(achievement, stats) {
 export function useAchievements(courseKey) {
   const gt = courseKey === 'rhone' ? rhoneGt : greeceGt
   // 香檳與奧地利共用「字典函式」判斷
-  const isLocal = courseKey === 'champagne' || courseKey === 'austria' || courseKey === 'southafrica' || courseKey === 'usother' || courseKey === 'argentina' || courseKey === 'chile' || courseKey === 'languedoc'
-  const gtX = courseKey === 'languedoc' ? gtLanguedoc : courseKey === 'chile' ? gtChile : courseKey === 'argentina' ? gtArgentina : courseKey === 'usother' ? gtUsOther : courseKey === 'southafrica' ? gtSouthAfrica : courseKey === 'austria' ? gtAustria : gtChampagne
+  const isLocal = courseKey === 'champagne' || courseKey === 'austria' || courseKey === 'southafrica' || courseKey === 'usother' || courseKey === 'argentina' || courseKey === 'chile' || courseKey === 'languedoc' || courseKey === 'southwest'
+  const gtX = courseKey === 'southwest' ? gtSouthwest : courseKey === 'languedoc' ? gtLanguedoc : courseKey === 'chile' ? gtChile : courseKey === 'argentina' ? gtArgentina : courseKey === 'usother' ? gtUsOther : courseKey === 'southafrica' ? gtSouthAfrica : courseKey === 'austria' ? gtAustria : gtChampagne
   let state, definitions, manager
 
   if (courseKey === 'bourgogne') {
@@ -374,6 +389,10 @@ export function useAchievements(courseKey) {
     state       = champagneAchievementState
     definitions = champagneAchievementDefinitions
     manager     = globalChampagneAchievementManager
+  } else if (courseKey === 'southwest') {
+    state       = southwestAchievementState
+    definitions = southwestAchievementDefinitions
+    manager     = globalSouthwestAchievementManager
   } else if (courseKey === 'languedoc') {
     state       = languedocAchievementState
     definitions = languedocAchievementDefinitions
