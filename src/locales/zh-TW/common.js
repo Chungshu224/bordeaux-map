@@ -105,6 +105,7 @@ export default {
     champagne:     '香檳',
     southwest:      '西南產區',
     brandy:         '白蘭地',
+    provence:         '普羅旺斯與科西嘉',
     languedoc:      '朗格多克—魯西永',
     chile:          '智利',
     usother:        '美國其他產區',

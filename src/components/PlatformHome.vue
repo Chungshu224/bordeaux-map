@@ -714,6 +714,49 @@
           </div>
 
 
+          <!-- ── Provence（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card provence">
+            <div :class="['card-status', courseStatuses.provence ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🌿</div>
+              <div class="card-region">Provence · Bandol · Corsica · Patrimonio</div>
+              <h3 class="card-title">{{ $t('home.courses.provence.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.provence.desc') }}</p>
+            </div>
+            <div class="course-preview-strip provence-strip">
+              <div class="cp-stat">
+                <span class="cp-num">Rosé</span>
+                <span class="cp-label" v-html="$t('home.courses.provence.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Corse</span>
+                <span class="cp-label" v-html="$t('home.courses.provence.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.provence.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">D3</span>
+                <span class="cp-label" v-html="$t('home.courses.provence.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features provence-features">
+              <span class="cpf-item provence-tag">{{ $t('home.courses.provence.f1') }}</span>
+              <span class="cpf-item provence-tag">{{ $t('home.courses.provence.f2') }}</span>
+              <span class="cpf-item provence-tag">{{ $t('home.courses.provence.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/provence')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
+
           <!-- ── Austria（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card austria">
             <div :class="['card-status', courseStatuses.austria ? 'active' : 'planning']">
@@ -1693,6 +1736,7 @@ const courseConfig = computed(() => [
   { id: 'languedoc', label: t('home.courses.labels.languedoc'), route: '/languedoc', group: 'france' },
   { id: 'southwest', label: t('home.courses.labels.southwest'), route: '/southwest', group: 'france' },
   { id: 'brandy', label: t('home.courses.labels.brandy'), route: '/brandy', group: 'europe' },
+  { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'europe' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
   { id: 'southafrica', label: t('home.courses.labels.southafrica'), route: '/southafrica', group: 'newworld' },
@@ -1709,12 +1753,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, provence: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, provence: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence']
 
 
 async function loadCourseData() {
@@ -2427,6 +2471,7 @@ onMounted(async () => {
 .course-card.languedoc { border-color: rgba(156,74,26,0.4); background: rgba(156,74,26,0.05); }
 .course-card.southwest { border-color: rgba(75,46,85,0.4); background: rgba(75,46,85,0.05); }
 .course-card.brandy { border-color: rgba(138,75,20,0.4); background: rgba(138,75,20,0.05); }
+.course-card.provence { border-color: rgba(111,90,168,0.4); background: rgba(111,90,168,0.05); }
 .course-card.usother { border-color: rgba(31,78,121,0.4); background: rgba(31,78,121,0.05); }
 .course-card.argentina { border-color: rgba(106,44,94,0.4); background: rgba(106,44,94,0.05); }
 .course-card.southafrica { border-color: rgba(194,87,26,0.4); background: rgba(194,87,26,0.05); }
@@ -2547,6 +2592,12 @@ onMounted(async () => {
 .brandy-strip .cp-label { color: #4A2408; }
 .brandy-strip .cp-divider { background: rgba(138,75,20,0.25); }
 .brandy-features .brandy-tag { color: #8A4B14; background: rgba(138,75,20,0.06); border-color: rgba(138,75,20,0.18); }
+/* Provence card */
+.provence-strip { background: rgba(111,90,168,0.07); border-color: rgba(111,90,168,0.22); }
+.provence-strip .cp-num { color: #6F5AA8; font-size: 0.9rem; }
+.provence-strip .cp-label { color: #3E3166; }
+.provence-strip .cp-divider { background: rgba(111,90,168,0.25); }
+.provence-features .provence-tag { color: #6F5AA8; background: rgba(111,90,168,0.06); border-color: rgba(111,90,168,0.18); }
 /* Southwest card */
 .southwest-strip { background: rgba(75,46,85,0.07); border-color: rgba(75,46,85,0.22); }
 .southwest-strip .cp-num { color: #4B2E55; font-size: 0.9rem; }

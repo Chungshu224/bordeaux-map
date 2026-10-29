@@ -87,6 +87,7 @@ export default {
     champagne:     'シャンパーニュ',
     southwest:      'フランス南西地方',
     brandy:         'ブランデー',
+    provence:         'プロヴァンスとコルシカ',
     languedoc:      'ラングドック＝ルーション',
     chile:          'チリ',
     usother:        'アメリカのその他の産地',
