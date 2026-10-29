@@ -38,4 +38,5 @@
 - 未套用的遷移檔：`20261105000000_add_provence_course.sql`。
 - Level 1（5 課）：課文與測驗完成（en／ja 齊全）。
 - Level 2（8 課）：課文與測驗完成（en／ja 齊全）。衝突數字已標註並排除於測驗：Côtes de Provence 品種比例（INAO 70% vs 80%）、Coteaux Varois 玫瑰紅占比、Les Baux 村數與有機說法、Bandol 色彩比例、Patrimonio Nielluccio 比例、Ajaccio 細節、Vin de Corse 成立年、IGP Île de Beauté 占比。
+- Level 3（5 課）：課文與測驗完成（en／ja 齊全）。市場數字僅用 CIVP 2025 已核對者；科西嘉面積與 IGP 占比因來源衝突不入測驗。
 - 待辦：Level 2–3 課文、互動功能、品飲與詞庫遷移檔、氣候資料。
