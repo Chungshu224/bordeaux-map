@@ -86,6 +86,7 @@ export default {
     rhone:      'Rhône Valley',
     champagne:     'Champagne',
     southwest:      'South-West France',
+    brandy:         'Brandy',
     languedoc:      'Languedoc-Roussillon',
     chile:          'Chile',
     usother:        'US Other Regions',

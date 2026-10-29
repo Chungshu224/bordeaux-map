@@ -86,6 +86,7 @@ export default {
     rhone:      'ローヌ渓谷',
     champagne:     'シャンパーニュ',
     southwest:      'フランス南西地方',
+    brandy:         'ブランデー',
     languedoc:      'ラングドック＝ルーション',
     chile:          'チリ',
     usother:        'アメリカのその他の産地',

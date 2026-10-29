@@ -197,6 +197,19 @@ const routes = [
     redirect: '/southwest'
   },
 
+  // ─── 白蘭地課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/brandy',
+    name: 'Brandy',
+    component: () => import('../components/brandy/BrandyPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'brandy'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥃 白蘭地 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/brandy/course',
+    redirect: '/brandy'
+  },
+
   // ─── 美國其他產區課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/usother',
@@ -421,6 +434,7 @@ const COURSE_ACCESS_RULES = {
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
   Southwest: { courseId: 'southwest', minimumTier: 'free' },
+  Brandy: { courseId: 'brandy', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },
   Chile: { courseId: 'chile', minimumTier: 'free' },
   UsOther: { courseId: 'usother', minimumTier: 'free' },
