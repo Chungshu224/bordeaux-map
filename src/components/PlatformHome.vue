@@ -755,6 +755,48 @@
             </div>
           </div>
 
+          <!-- ── Southwest（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card southwest">
+            <div :class="['card-status', courseStatuses.southwest ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🍇</div>
+              <div class="card-region">France · Sud-Ouest · Bergerac · Cahors · Madiran · Jurançon</div>
+              <h3 class="card-title">{{ $t('home.courses.southwest.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.southwest.desc') }}</p>
+            </div>
+            <div class="course-preview-strip southwest-strip">
+              <div class="cp-stat">
+                <span class="cp-num">Malbec</span>
+                <span class="cp-label" v-html="$t('home.courses.southwest.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">AOC</span>
+                <span class="cp-label" v-html="$t('home.courses.southwest.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.southwest.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">Tannat</span>
+                <span class="cp-label" v-html="$t('home.courses.southwest.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features southwest-features">
+              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f1') }}</span>
+              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f2') }}</span>
+              <span class="cpf-item southwest-tag">{{ $t('home.courses.southwest.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/southwest')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
 
           <!-- ── Austria（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card austria">
@@ -1606,6 +1648,7 @@ const courseConfig = computed(() => [
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },
   { id: 'languedoc', label: t('home.courses.labels.languedoc'), route: '/languedoc', group: 'france' },
+  { id: 'southwest', label: t('home.courses.labels.southwest'), route: '/southwest', group: 'france' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
   { id: 'southafrica', label: t('home.courses.labels.southafrica'), route: '/southafrica', group: 'newworld' },
@@ -1622,12 +1665,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest']
 
 
 async function loadCourseData() {
@@ -2338,6 +2381,7 @@ onMounted(async () => {
 .course-card.rhone { border-color: rgba(122,46,92,0.4); background: rgba(122,46,92,0.05); }
 .course-card.champagne { border-color: rgba(168,128,28,0.4); background: rgba(168,128,28,0.05); }
 .course-card.languedoc { border-color: rgba(156,74,26,0.4); background: rgba(156,74,26,0.05); }
+.course-card.southwest { border-color: rgba(75,46,85,0.4); background: rgba(75,46,85,0.05); }
 .course-card.usother { border-color: rgba(31,78,121,0.4); background: rgba(31,78,121,0.05); }
 .course-card.argentina { border-color: rgba(106,44,94,0.4); background: rgba(106,44,94,0.05); }
 .course-card.southafrica { border-color: rgba(194,87,26,0.4); background: rgba(194,87,26,0.05); }
@@ -2452,6 +2496,12 @@ onMounted(async () => {
 .languedoc-strip .cp-label { color: #5C2A0E; }
 .languedoc-strip .cp-divider { background: rgba(156,74,26,0.25); }
 .languedoc-features .languedoc-tag { color: #9C4A1A; background: rgba(156,74,26,0.06); border-color: rgba(156,74,26,0.18); }
+/* Southwest card */
+.southwest-strip { background: rgba(75,46,85,0.07); border-color: rgba(75,46,85,0.22); }
+.southwest-strip .cp-num { color: #4B2E55; font-size: 0.9rem; }
+.southwest-strip .cp-label { color: #2B1533; }
+.southwest-strip .cp-divider { background: rgba(75,46,85,0.25); }
+.southwest-features .southwest-tag { color: #4B2E55; background: rgba(75,46,85,0.06); border-color: rgba(75,46,85,0.18); }
 /* UsOther card */
 .usother-strip { background: rgba(31,78,121,0.07); border-color: rgba(31,78,121,0.22); }
 .usother-strip .cp-num { color: #1F4E79; font-size: 0.9rem; }

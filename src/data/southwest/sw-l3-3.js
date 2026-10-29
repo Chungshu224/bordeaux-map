@@ -1,0 +1,20 @@
+/**
+ * SW L3-3 產業與市場
+ * 框架版：封面＋「內容製作中」介紹頁。正式內容於後續階段補齊（事實類資料須先查證官方來源，來源有出入者標明年份、不進測驗）。
+ */
+
+export const lessonContent = [
+  {
+    type: 'cover',
+    title: "產業與市場",
+    subtitle: "South-West France · Level 3",
+    icon: "🍇",
+    background: 'linear-gradient(135deg, #4B2E55 0%, #2B1533 100%)'
+  },
+  {
+    title: "本課介紹",
+    highlights: [
+      { id: 1, icon: "🚧", title: "內容製作中", content: "合作社、Côtes de Gascogne IGP、出口與市場定位（內容製作中，敬請期待）" }
+    ]
+  }
+]

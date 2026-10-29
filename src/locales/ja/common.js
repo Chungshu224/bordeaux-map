@@ -85,6 +85,7 @@ export default {
     greece:     'ギリシャ',
     rhone:      'ローヌ渓谷',
     champagne:     'シャンパーニュ',
+    southwest:      'フランス南西地方',
     languedoc:      'ラングドック＝ルーション',
     chile:          'チリ',
     usother:        'アメリカのその他の産地',

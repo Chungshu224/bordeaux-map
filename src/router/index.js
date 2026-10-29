@@ -184,6 +184,19 @@ const routes = [
     redirect: '/languedoc'
   },
 
+  // ─── 西南產區課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/southwest',
+    name: 'Southwest',
+    component: () => import('../components/southwest/SouthwestPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'southwest'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🍇 西南產區 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/southwest/course',
+    redirect: '/southwest'
+  },
+
   // ─── 美國其他產區課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/usother',
@@ -407,6 +420,7 @@ const COURSE_ACCESS_RULES = {
   Greece: { courseId: 'greece', minimumTier: 'free' },
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
+  Southwest: { courseId: 'southwest', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },
   Chile: { courseId: 'chile', minimumTier: 'free' },
   UsOther: { courseId: 'usother', minimumTier: 'free' },
