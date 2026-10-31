@@ -7,7 +7,7 @@ export const lessonContent = [
   {
     type: 'cover',
     title: "VQA 與標示制度",
-    subtitle: "省級 VQA、百分比規定、冰酒規範與 Cellared in Canada",
+    subtitle: "省級 VQA、百分比規定、冰酒規範與混調酒的標示",
     icon: "🏷️",
     background: 'linear-gradient(135deg, #C8102E 0%, #7A0A1C 100%)'
   },
@@ -30,13 +30,13 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">兩省的年份與品種門檻都是 85%；產區方面，Ontario 的次產區要 100%，BC 的 GI 是 85%。</p></div>"
   },
   {
-    title: "冰酒與 Cellared in Canada",
+    title: "冰酒與混調酒的標示",
     highlights: [
       { id: 1, icon: "🧊", title: "Ontario 冰酒", content: "葡萄須在樹上自然結冰，在低於 -8°C 時採收，果汁至少 35°Brix；Late Harvest 至少 22、Select Late Harvest 至少 26、Special Select Late Harvest 至少 30°Brix。冰酒須 100% 為冰酒，產區標在正標（VQA Ontario）" },
       { id: 2, icon: "🌲", title: "BC 冰酒", content: "品種限 Vitis vinifera 或 Vidal Blanc；在 -8°C 以下於樹上自然結冰，並在結冰狀態下榨汁；每次榨汁後的果汁至少 32°Brix，發酵槽中平均至少 35°Brix；裝瓶時殘糖至少 100 g/L。冰酒與 Meritage 一詞僅限 BC VQA 計畫使用（Wine With Seth）" },
-      { id: 3, icon: "🏭", title: "Cellared in Canada", content: "以進口散裝酒與加拿大酒混調的類別。BC 允許 100% 外國成分；Ontario 外國成分不得超過 60%，且不得加水稀釋；2014 年 4 月 1 日起，1993 年以前就存在的 Ontario 酒廠可做外國成分最多 75% 的「International - Canadian」混調。VQA 酒則是 100% 加拿大葡萄（Wikipedia）" }
+      { id: 3, icon: "🏭", title: "「Cellared in Canada」的終結", content: "「Cellared in Canada」曾是以進口散裝酒與加拿大酒混調的類別（過去 BC 允許 100% 外國成分，Ontario 不得超過 60%，見 Wikipedia）；加拿大食品檢驗局（CFIA）自 2018 年 3 月 12 日起取消這個用語，改為「International blend from imported and domestic wines」（以進口酒為主）或「International blend from domestic and imported wines」（以本國酒為主），標籤上也不得再出現「Canada」一詞（地址或「加拿大公司」等說法除外）。VQA 酒則是 100% 本省葡萄（USDA FAS、BIV、Wikipedia）" }
     ],
-    content: "<div class=\"content-overview\"><p class=\"lead-text\">看到 VQA 才是 100% 加拿大葡萄；Cellared in Canada 不是。</p></div>"
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">VQA 代表 100% 本省葡萄；混調酒現在必須標示為「International blend」。</p></div>"
   },
   {
     component: 'QuizSlide',
@@ -90,10 +90,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Ontario 的 Cellared in Canada 酒，外國成分不得超過多少（一般情況）？",
-            options: ["A. 10%","B. 30%","C. 60%","D. 100%"],
-            correct: 2,
-            explanation: "60%；BC 則允許 100% 外國成分。"
+            question: "加拿大食品檢驗局（CFIA）自 2018 年 3 月 12 日起，對混調酒的標示做了什麼改變？",
+            options: ["A. 取消「Cellared in Canada」，改為「International blend」用語","B. 要求所有酒標示 VQA","C. 禁止加拿大酒出口","D. 取消冰酒的標示規定"],
+            correct: 0,
+            explanation: "以進口酒為主標「International blend from imported and domestic wines」，以本國酒為主標「International blend from domestic and imported wines」。"
           }
         ]
       }

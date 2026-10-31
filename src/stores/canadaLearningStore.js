@@ -69,7 +69,7 @@ export const canadaLearningLevels = {
       {
         "id": "can-l1-4",
         "title": "VQA 與標示制度",
-        "description": "省級 VQA、Product of Canada 與 Cellared in Canada、冰酒規範",
+        "description": "省級 VQA、百分比規定、冰酒規範，以及混調酒的標示",
         "duration": 18
       },
       {

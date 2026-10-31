@@ -16,7 +16,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "📖", title: "歷史與地理", content: "1811 年 Schiller；1866 年 Pelee Island 的 Catawba；禁酒期間釀酒仍合法；1975 年 Inniskillin；VQA 1988 年由 Ontario 酒廠設立，1990 年引入 BC；Ontario 的湖泊效應與 Niagara Escarpment；Okanagan 位於雨影，南北約 175 公里；寒害是主要限制" },
       { id: 2, icon: "🍇", title: "品種", content: "Ontario 以 Chardonnay、Riesling、Cabernet Franc、Merlot 等為主；Vidal Blanc 是冰酒主力；Baco Noir 是法國雜交種；BC 最多的紅品種是 Pinot Noir；Okanagan 南段種 Bordeaux 品種與 Syrah" },
-      { id: 3, icon: "📋", title: "制度", content: "Ontario：VQA Ontario 100%、區域產區超過 85%、次產區 100%、年份 85%；冰酒須在低於 -8°C 採收且至少 35°Brix；BC：100% BC、GI 85%、年份與品種 85%；Ontario 的 Cellared in Canada 外國成分不得超過 60%" }
+      { id: 3, icon: "📋", title: "制度", content: "Ontario：VQA Ontario 100%、區域產區超過 85%、次產區 100%、年份 85%；冰酒須在低於 -8°C 採收且至少 35°Brix；BC：100% BC、GI 85%、年份與品種 85%；混調酒自 2018 年 3 月起不得再用「Cellared in Canada」，改標「International blend」" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">來源不一致的數字不列入測驗。</p></div>"
   },
@@ -100,10 +100,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Ontario 的 Cellared in Canada 酒，外國成分一般不得超過？",
-            options: ["A. 10%","B. 60%","C. 85%","D. 100%"],
-            correct: 1,
-            explanation: "60%。"
+            question: "2018 年 3 月 12 日起，CFIA 取消了混調酒的哪個標示用語？",
+            options: ["A. VQA","B. Icewine","C. Cellared in Canada","D. Meritage"],
+            correct: 2,
+            explanation: "Cellared in Canada，改為 International blend 用語。"
           },
           {
             type: 'single',

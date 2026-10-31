@@ -91,7 +91,7 @@ export default {
   "產業與論述": "Industry and Essays",
   "產量與規模、省際貿易、出口、酒莊與品牌": "Volume and scale, interprovincial trade, exports, wineries and brands",
   "當前階段：Level {n}": "Current stage: Level {n}",
-  "省級 VQA、Product of Canada 與 Cellared in Canada、冰酒規範": "Provincial VQA, Product of Canada versus Cellared in Canada, and icewine rules",
+  "省級 VQA、百分比規定、冰酒規範，以及混調酒的標示": "Provincial VQA, percentage rules, icewine rules and the labelling of blended wines",
   "章節導航": "Chapter navigation",
   "章節總覽": "Chapter overview",
   "系統課程": "Core lessons",

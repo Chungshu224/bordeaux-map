@@ -27,7 +27,7 @@
 - 歷史：1811 Schiller（Credit River）；1866 Pelee Island 30 英畝 Catawba；1890 年 41 家商業酒廠（35 家在 Ontario）；禁酒 1916–1927 期間釀酒仍合法；1975 Inniskillin；VQA 1988 年由 Ontario 酒廠設立、1990 年引入 BC；Vintners Quality Alliance Act, 1999 於 2000-06-29 公布，首款 VQA 酒 2000-07-10；BC 1988–1990 拔樹約 65%；BC Wines of Marked Quality Regulation 2005-08 生效。
 - 氣候：Vineland 43°11'N、PEC 44°N、LENS 約 42°N、BC 約 49–50°N；Okanagan 約 175 公里、雨量北約 400 mm→Osoyoos 約 250–300 mm；寒害與春霜為主要限制。
 - 品種：Ontario VQA 2025-26 年度體積比例（Chardonnay 13%、Riesling 12%、Cabernet Franc 12%、Merlot 11%…）；Vidal 冰酒 388,970／468,752 L；BC 最多紅品種 Pinot Noir。
-- 制度：Ontario 100%／區域 >85%／次產區 100%／年份 85%；BC 100%／區域 95%／年份 85%／品種 85%；Ontario 冰酒 ≤ -8°C、≥35°Brix；BC 冰酒殘糖 ≥100 g/L；Cellared in Canada（BC 100% 外國成分、Ontario ≤60%、2014-04-01 起 pre-1993 酒廠 ≤75%）。
+- 制度：Ontario 100%／區域 >85%／次產區 100%／年份 85%；BC 100%／GI（含次 GI）85%（現行 B.C. Reg. 168/2018 第 57 條；舊資料與 2019 學習指南寫 95%）／年份 85%／品種 85%；Ontario 冰酒 ≤ -8°C、≥35°Brix；BC 冰酒殘糖 ≥100 g/L；「Cellared in Canada」曾允許 BC 100% 外國成分、Ontario ≤60%（Wikipedia，舊制），CFIA 自 2018-03-12 取消該用語，改標 International blend（USDA FAS、BIV）。
 
 **來源有出入（課內標明、不進測驗）**
 - Inniskillin 執照：Winealign 寫「自 1929 年以來第一張」，常見說法為「自禁酒時期以來」。
@@ -54,3 +54,5 @@
 - Golden Mile Slopes 的指定年份各來源未說明。
 - 單一來源的數字（GuildSomm 各 GI 的酒廠數、面積與品種比例；MyWinePal 的 Naramata Bench 品種比例）只作背景、不出題。
 - 尚未涵蓋：New Brunswick 等其他省分（本課標題的「其他省分」目前只含 Quebec 與各省規模比較）。
+
+**更正紀錄（Level 3 研究時）**：(1) BC 法規：Wines of Marked Quality Regulation 為 B.C. Reg. 79/2005（2005-08-01 生效），2018-07-27 由 B.C. Reg. 168/2018 取代；先前誤寫 168/2018 於 2005 年生效。(2) BC GI 比例：現行法規第 57 條為 85%，非 95%（95% 見於 Wine With Seth、2019 年學習指南與 2020 年報導，可能為修正前的規定，未能查到修正紀錄，課內以現行法規為準並標明來源不一致）。(3) Cellared in Canada：Wikipedia 的描述屬舊制，已被 CFIA 在 2018-03-12 取消。
