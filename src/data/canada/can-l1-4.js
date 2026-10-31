@@ -16,7 +16,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "🏛️", title: "省級管理", content: "VQA 是「Vintners Quality Alliance」；Ontario 與 BC 的規定比國家層級更嚴格，包括要求 100% 本地葡萄。酒必須通過實驗室與評審團檢驗，才能使用 VQA 標誌（The Canadian Encyclopedia）" },
       { id: 2, icon: "🍁", title: "Ontario", content: "VQA Ontario 於 1998 年登記成立，現稱 Ontario Wine Appellation Authority；法源為 2000 年 6 月 29 日公布的 Vintners Quality Alliance Act, 1999（Wine With Seth）" },
-      { id: 3, icon: "🌲", title: "British Columbia", content: "BC 的 Wines of Marked Quality Regulation（B.C. Reg. 168/2018）於 2005 年 8 月生效，建立 BC VQA；由 BC Wine Authority 管理（Wine With Seth）" }
+      { id: 3, icon: "🌲", title: "British Columbia", content: "BC 省政府於 2005 年 8 月以 Wines of Marked Quality Regulation（B.C. Reg. 79/2005）接手管理，建立 BC VQA 原產地名稱，執行交由 BC Wine Authority；該法規於 2018 年 7 月 27 日由 B.C. Reg. 168/2018 取代（BC VQA 官網、BC Laws）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">加拿大沒有單一的全國 VQA 法規，是各省自己管。</p></div>"
   },
@@ -25,9 +25,9 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "📐", title: "Ontario 三個層級", content: "VQA Ontario：100% Ontario 葡萄；區域產區（如 Niagara Peninsula）：超過 85% 來自該區，其餘最多 15% 可來自 Ontario 其他地方；次產區：100% 來自該次產區。產區須標在正標上（VQA Ontario）" },
       { id: 2, icon: "📅", title: "年份與品種", content: "Ontario：有 85% 以上來自單一年份才可標年份；冰酒、貴腐酒、晚摘酒等類別必須標年份。「宣告須有至少 85% 的含量支持」是通則（VQA Ontario）" },
-      { id: 3, icon: "🌲", title: "BC 的百分比", content: "BC VQA 要求 100% BC 葡萄；所標產區至少 95% 來自該區、年份至少 85%、品種至少 85%。單一品種名稱需有至少 85% 的該品種（Wine With Seth）" }
+      { id: 3, icon: "🌲", title: "BC 的百分比", content: "BC VQA 要求 100% BC 葡萄；現行法規（B.C. Reg. 168/2018）規定標示 BC 以外的 GI 時，至少 85% 的葡萄來自該 GI 範圍（其餘來自 BC 其他地方）；年份至少 85%、單一品種名稱至少 85%（BC Laws）。較早的資料（Wine With Seth）曾寫 95%，以現行法規為準" }
     ],
-    content: "<div class=\"content-overview\"><p class=\"lead-text\">Ontario 與 BC 都以 85% 作為年份與品種的門檻，但產區門檻不同。</p></div>"
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">兩省的年份與品種門檻都是 85%；產區方面，Ontario 的次產區要 100%，BC 的 GI 是 85%。</p></div>"
   },
   {
     title: "冰酒與 Cellared in Canada",

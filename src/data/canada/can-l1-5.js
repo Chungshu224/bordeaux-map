@@ -16,7 +16,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "📖", title: "歷史與地理", content: "1811 年 Schiller；1866 年 Pelee Island 的 Catawba；禁酒期間釀酒仍合法；1975 年 Inniskillin；VQA 1988 年由 Ontario 酒廠設立，1990 年引入 BC；Ontario 的湖泊效應與 Niagara Escarpment；Okanagan 位於雨影，南北約 175 公里；寒害是主要限制" },
       { id: 2, icon: "🍇", title: "品種", content: "Ontario 以 Chardonnay、Riesling、Cabernet Franc、Merlot 等為主；Vidal Blanc 是冰酒主力；Baco Noir 是法國雜交種；BC 最多的紅品種是 Pinot Noir；Okanagan 南段種 Bordeaux 品種與 Syrah" },
-      { id: 3, icon: "📋", title: "制度", content: "Ontario：VQA Ontario 100%、區域產區超過 85%、次產區 100%、年份 85%；冰酒須在低於 -8°C 採收且至少 35°Brix；BC：100% BC、區域 95%、年份與品種 85%；Ontario 的 Cellared in Canada 外國成分不得超過 60%" }
+      { id: 3, icon: "📋", title: "制度", content: "Ontario：VQA Ontario 100%、區域產區超過 85%、次產區 100%、年份 85%；冰酒須在低於 -8°C 採收且至少 35°Brix；BC：100% BC、GI 85%、年份與品種 85%；Ontario 的 Cellared in Canada 外國成分不得超過 60%" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">來源不一致的數字不列入測驗。</p></div>"
   },
@@ -93,10 +93,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "BC VQA 要求所標產區至少多少比例來自該區？",
-            options: ["A. 51%","B. 75%","C. 95%","D. 100%"],
+            question: "現行的 BC VQA 法規，標示 Okanagan Valley 等 GI 時，至少多少比例的葡萄須來自該 GI？",
+            options: ["A. 51%","B. 75%","C. 85%","D. 100%"],
             correct: 2,
-            explanation: "95%。"
+            explanation: "85%，其餘來自 BC 其他地方（B.C. Reg. 168/2018）。"
           },
           {
             type: 'single',

@@ -33,7 +33,7 @@ export const lessonContent = [
     title: "轉型：VQA 與冰酒",
     highlights: [
       { id: 1, icon: "📜", title: "VQA 的誕生", content: "VQA 由 Ontario 的酒廠在 1988 年設立，起初是自願性的產業計畫，Ziraldo 是創始主席；1990 年引入 BC。Vintners Quality Alliance Act, 1999 於 2000 年 6 月 29 日公布，第一款 VQA 酒於 2000 年 7 月 10 日獲准（Wine With Seth、Winealign）" },
-      { id: 2, icon: "🌳", title: "BC 的拔樹計畫", content: "1988 至 1990 年的拔樹計畫，拔除了 BC 約 65% 的既有葡萄園並改種 vinifera（Wine With Seth）；BC 現行的 VQA 法規 Wines of Marked Quality Regulation 於 2005 年 8 月生效" },
+      { id: 2, icon: "🌳", title: "BC 的拔樹計畫", content: "1988 至 1990 年的拔樹計畫，拔除了 BC 約 65% 的既有葡萄園並改種 vinifera（Wine With Seth）；BC 的 Wines of Marked Quality Regulation 於 2005 年 8 月 1 日生效，2018 年由新版取代" },
       { id: 3, icon: "🧊", title: "冰酒打響名號", content: "Inniskillin 的 Karl Kaiser 在 1984 年採收了第一批 Vidal 冰酒（Winealign）；1991 年，Inniskillin 以 1989 年 Vidal 冰酒在法國的酒展 Vinexpo 獲得 Grand Prix d'Honneur；The Canadian Encyclopedia 稱 Ontario 是世界最大的冰酒產地" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">1988 年前後的制度化與冰酒的成功，奠定了現代加拿大葡萄酒的形象。</p></div>"

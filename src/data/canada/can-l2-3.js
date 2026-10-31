@@ -34,7 +34,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "🔥", title: "南段：紅酒", content: "較暖的南段適合 Cabernet Sauvignon 與 Syrah 等紅品種；台地上多種 Bordeaux 品種（MyWinePal、Wine With Seth）" },
       { id: 2, icon: "🍃", title: "中北段：白酒與 Pinot Noir", content: "Kelowna 一帶較適合 Riesling、Pinot Gris 等芳香白酒與 Pinot Noir 等較涼氣候的紅酒（MyWinePal）；Naramata Bench 的主要品種為 Merlot（23%）、Pinot Gris（17%）、Chardonnay（13%）（同一來源，單一來源的數字）" },
-      { id: 3, icon: "🔬", title: "為什麼要分次 GI", content: "谷地南北長約 175 公里，海拔、湖泊影響與土壤差異大，次 GI 讓標籤能反映更具體的產地。次 GI 的酒須有至少 95% 來自該次 GI（BC 政府新聞稿、Wine Industry Advisor）" }
+      { id: 3, icon: "🔬", title: "為什麼要分次 GI", content: "谷地南北長約 175 公里，海拔、湖泊影響與土壤差異大，次 GI 讓標籤能反映更具體的產地。依現行法規（B.C. Reg. 168/2018）第 57 條，標示 GI（含次 GI）時至少 85% 的葡萄須來自該範圍；2020 年的報導（Wine Industry Advisor）曾寫 95%，兩者不一致，以法規為準，次 GI 標籤另須同時標出其所屬的 GI（BC Laws）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">南邊偏紅酒、北邊偏白酒，次 GI 把這個差異寫在標籤上。</p></div>"
   },
@@ -76,10 +76,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "次 GI 的酒，至少要有多少比例來自該次 GI？",
+            question: "依現行 BC 法規，次 GI 標籤（如 Naramata Bench）的酒，至少多少比例的葡萄須來自該範圍？",
             options: ["A. 51%","B. 75%","C. 85%","D. 95%"],
-            correct: 3,
-            explanation: "95%。"
+            correct: 2,
+            explanation: "85%（B.C. Reg. 168/2018 第 57 條）。"
           },
           {
             type: 'single',
