@@ -35,3 +35,22 @@
 - BC 最多種植的白品種：BC 頁寫 Pinot Gris，Okanagan 頁列 Chardonnay。
 - BC 的 GI 與次 GI 數目（9 或 10 個 GI；11 或 12 個次 GI）——留待 Level 2 查證。
 - 面積與產量數字（2025 年全加拿大 13,290 公頃、Ontario 約 17,000 英畝、BC 約 4,500 公頃等）各年度、各來源不同，只作背景。
+
+## 5. Level 2 查證資料與來源衝突
+**來源**：VQA Ontario（Niagara Peninsula／Escarpment／West Niagara 頁面）、Wine With Seth（Ontario、Okanagan、Similkameen、Nova Scotia）、Wikipedia（Ontario wine、Nova Scotia wine、Quebec wine）、GuildSomm（BC Geographical Indications）、BC 政府新聞稿（2022-06-28）、Wine Industry Advisor（Cowichan 2020-07-10）、Wine Growers Nova Scotia（Tidal Bay）、Vins du Québec 2023 報告、Luxe Magazine Ottawa、MyWinePal。
+
+**已採用的事實**
+- Ontario：三個認定產區（Niagara Peninsula、Lake Erie North Shore、Prince Edward County 2007）；Niagara 3 個區域產區＋10 個次產區（Escarpment 3＋Niagara-on-the-Lake 4＋West Niagara 3）；Lake Erie North Shore 的 South Islands；PEC 奧陶紀石灰岩、冬季可低於 -24°C 並培土埋藤。
+- BC：9 個 GI、12 個次 GI（Okanagan 11＋Cowichan）；Okanagan GI 1990；Golden Mile Bench 2015 為首個次 GI；2022-06-28 新增六個 Okanagan 次 GI；Cowichan 2020-07-10；次 GI 須 ≥95% 來自該地。
+- Nova Scotia：Tidal Bay 2012-06、100% NS 葡萄、≤11% 酒精、每年盲飲審核；1979 Grand Pré 起算商業生產。
+- Quebec：Champlain 1608；1919 禁酒但葡萄酒除外；SAQ 壟斷；Vin du Québec PGI 2018 起保證 100% Quebec 葡萄；vinifera <10%。
+- 風格：Late Harvest／Select／Special Select／Icewine ≥22／26／30／35°Brix；Sparkling ≥300 kPa；Skin Fermented White ≥10 天；Appassimento ≥85% 風乾葡萄。
+
+**來源有出入（課內標明、不進測驗）**
+- West Niagara：VQA 頁面列出六個（含 Escarpment 的三個），與總數 10 不合；課內採 3＋4＋3，由 Wine With Seth 的 Escarpment 與 Niagara-on-the-Lake 列法推得，West Niagara 的三個（Lincoln Lakeshore、Creek Shores、Vinemount Ridge）為推論。
+- Niagara Escarpment 高度（60–100 m 或最高約 177 m）；Okanagan 的酒廠數與面積（226／10,920 英畝 vs 186／9,617 英畝）；Similkameen 面積與主要品種；Nova Scotia 面積（404／256／400／530 公頃）；Quebec 的產區數（6／7／9）、面積與酒廠數。
+- 首批冰酒：1983（Wikipedia）或 1984（Winealign）；Ontario 冰酒殘糖 180–320 g/L 為單一來源。
+- Tidal Bay 品種細則：Wikipedia 稱 L'Acadie Blanc 等四品種合計 ≥51%、另可用 16 個品種；官方頁面的清單為圖片，無法核對。
+- Golden Mile Slopes 的指定年份各來源未說明。
+- 單一來源的數字（GuildSomm 各 GI 的酒廠數、面積與品種比例；MyWinePal 的 Naramata Bench 品種比例）只作背景、不出題。
+- 尚未涵蓋：New Brunswick 等其他省分（本課標題的「其他省分」目前只含 Quebec 與各省規模比較）。
