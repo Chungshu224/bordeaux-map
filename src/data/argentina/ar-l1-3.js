@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Torrontés 是阿根廷最具特色的白葡萄，乾型、香氣濃郁、帶 Muscat 的特性。</p></div>"
   },
   {
+    title: "Diploma 深度：Malbec 為何在阿根廷成功、Bonarda 的真身",
+    highlights: [
+      { id: 1, icon: "🥶", title: "Malbec 在法國的弱點", content: "Malbec（Cahors 稱 Côt）對霜敏感、容易落花（coulure）而減產，在潮濕的 Bordeaux 也易染病；1956 年 2 月的嚴重冬霜重創 Bordeaux 的 Malbec，許多酒農改種其他品種，Cahors 則重新種回 Malbec" },
+      { id: 2, icon: "☀️", title: "阿根廷解決了什麼", content: "乾燥、少雨、日照強 → 病害壓力低、果實健康；高海拔的日夜溫差與強紫外線 → 果皮厚、色深、單寧柔滑又保酸。法國的弱點在這裡大多不成問題，Malbec 因此成為阿根廷的代表" },
+      { id: 3, icon: "🧬", title: "Bonarda 其實是 Douce Noir", content: "DNA 研究顯示阿根廷的「Bonarda」與義大利的 Bonarda 無關，而是源自法國 Savoie 的 Douce Noir（又名 Corbeau，加州稱 Charbono）；研究者建議稱為「Bonarda from Argentina」以示區別" },
+      { id: 4, icon: "🍷", title: "Bonarda 的角色", content: "Bonarda 產量高、晚熟，多在 Mendoza 東部較暖的低地，過去主要供應大宗酒與調配；近年有生產者以低產老藤釀出多汁、柔和單寧的單一品種酒，作為 Malbec 之外的第二張名片" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">品種成功的論述公式：原產地的弱點 + 新產地如何解決它。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

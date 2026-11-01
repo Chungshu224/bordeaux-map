@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">適應氣候變遷的方向，是往更高的海拔與更好的水管理。</p></div>"
   },
   {
+    title: "Diploma 深度：棚架、自根苗與灌溉方式",
+    highlights: [
+      { id: 1, icon: "⛺", title: "Parral 棚架與 VSP", content: "傳統的 parral 高棚架產量高、葉幕遮蔭果實，適合過去以量為主的大宗酒與 Criolla 品種；1990 年代後的品質轉型多改為 VSP 直立籬架以控產、增加果實曝光。也有生產者主張在炎熱地點用 parral 保護果實免於曬傷" },
+      { id: 2, icon: "🌱", title: "多數仍為自根苗", content: "根瘤蚜在阿根廷存在，但影響有限；Decanter 引述 INV 估計約 89% 葡萄園為未嫁接、以混合選種（massal selection）繁殖。傳統的冬季漫灌常被認為抑制了根瘤蚜，但這是業界說法，控制實驗並未完全證實" },
+      { id: 3, icon: "💧", title: "漫灌轉滴灌的連鎖效應", content: "滴灌省水、能精準控制水分逆境以提升品質，也讓沒有河渠水權的坡地得以開發；但若漫灌真能抑制根瘤蚜，新的滴灌園就需要嫁接在抗性砧木上，成本較高（Decanter）" },
+      { id: 4, icon: "🕸️", title: "防雹網的取捨", content: "防雹網能避免毀滅性損失，但投資成本高，也會稍微減少光照、改變葉幕微氣候；是否架網是「風險 vs 成本 vs 果實成熟」的權衡，適合作為論述的但書" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">阿根廷的栽培題：每一個選擇（架式、灌溉、砧木、網）都同時牽動產量、品質與成本。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
