@@ -87,6 +87,7 @@ export default {
     champagne:     'Champagne',
     southwest:      'South-West France',
     brandy:         'Brandy',
+    diploma:        'Diploma Foundations',
     provence:         'Provence and Corsica',
     languedoc:      'Languedoc-Roussillon',
     chile:          'Chile',

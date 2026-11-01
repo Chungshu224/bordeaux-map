@@ -326,6 +326,24 @@ export async function loadAndMergeProvenceProgress(userId) {
   return true
 }
 
+// ─── Diploma 通論 ───────────────────────────────────────────────────
+// Diploma 使用 store state + localStorage，加 Supabase 同步（與 Brandy 同模式）
+export const saveDiplomaLesson = (userId, lessonId) => upsertLesson(userId, 'diploma', lessonId)
+
+export async function loadAndMergeDiplomaProgress(userId) {
+  const rows = await fetchRows(userId, 'diploma')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `diploma-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[diplomaSync] ✅ synced')
+  return true
+}
+
 // ─── UsOther ───────────────────────────────────────────────────
 // UsOther 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
 export const saveUsOtherLesson = (userId, lessonId) => upsertLesson(userId, 'usother', lessonId)
