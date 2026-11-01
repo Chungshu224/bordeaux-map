@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">這三個詞是由西向東的橫向分區，與由北向南的河谷並行使用。</p></div>"
   },
   {
+    title: "Diploma 深度：DO 制度的設計邏輯",
+    highlights: [
+      { id: 1, icon: "🧩", title: "75% 規則與大品牌", content: "標示產地、品種、年份只需 75% 符合，讓大型酒廠能跨河谷、跨年份調配，穩定量大價低的品牌風格。代價是標籤資訊較寬鬆，與歐盟多數 85% 的門檻相比，對消費者的保證較弱" },
+      { id: 2, icon: "🗺️", title: "南北河谷的盲點", content: "DO 以由北到南的河谷劃分，但智利最大的氣候差異其實是由西向東：靠海受 Humboldt 寒流降溫，安地斯側有高度與日夜溫差，中間的谷地最熱。同一個河谷內，海邊與山邊的酒可能差異比相鄰河谷更大" },
+      { id: 3, icon: "➕", title: "Costa、Entre Cordilleras、Andes 的用意", content: "這三個橫向用語是疊加在原有 DO 上的選擇性標示（須 85% 來自該區），用來補足南北制度看不到的東西向差異；它們與河谷名稱可同時出現在標籤上" },
+      { id: 4, icon: "🔗", title: "論述角度：制度反映產業結構", content: "寬鬆的 75% 規則服務出口導向的大集團；橫向用語則服務追求風土表達的精品生產者。兩者並存，正好說明智利產業「量販」與「精品」兩條路線" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">讀智利酒標：先看河谷（南北），再看 Costa／Andes（東西），兩者合起來才是風土。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
