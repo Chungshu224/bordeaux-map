@@ -88,6 +88,7 @@ export default {
     southwest:      'South-West France',
     brandy:         'Brandy',
     diploma:        'Diploma Foundations',
+    sommelier:      'Sommelier Practice',
     provence:         'Provence and Corsica',
     languedoc:      'Languedoc-Roussillon',
     chile:          'Chile',

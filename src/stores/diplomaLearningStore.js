@@ -18,7 +18,7 @@ export const diplomaLearningState = reactive({
   achievements: []
 })
 
-// Diploma 通論學習等級配置（大綱以 DIPLOMA_COURSE_FRAMEWORK.md 為準）
+// Diploma 通論學習等級配置（大綱以 DIPLOMA_FOUNDATIONS_FRAMEWORK.md 為準）
 export const diplomaLearningLevels = {
   "level1": {
     "title": "Level 1 - 葡萄栽培與釀造",

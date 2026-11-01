@@ -88,6 +88,7 @@ export default {
     southwest:      'フランス南西地方',
     brandy:         'ブランデー',
     diploma:        'Diploma総論',
+    sommelier:      'ソムリエ実務',
     provence:         'プロヴァンスとコルシカ',
     languedoc:      'ラングドック＝ルーション',
     chile:          'チリ',

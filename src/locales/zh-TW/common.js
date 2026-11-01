@@ -106,6 +106,7 @@ export default {
     southwest:      '西南產區',
     brandy:         '白蘭地',
     diploma:        'Diploma 通論',
+    sommelier:      '侍酒師實務',
     provence:         '普羅旺斯與科西嘉',
     languedoc:      '朗格多克—魯西永',
     chile:          '智利',
