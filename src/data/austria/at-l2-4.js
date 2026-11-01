@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">此課數字較新，建議對照 ÖWM 官方規章再確認。</p></div>"
   },
   {
+    title: "Diploma 深度：Weinviertel DAC 的風格條款",
+    highlights: [
+      { id: 1, icon: "🚫", title: "不得有橡木與貴腐味", content: "Weinviertel DAC 官方說明：必須是 100% 來自 Weinviertel 的 Grüner Veltliner，酒中不得呈現橡木或貴腐的影響；風格是乾型、果味、辛香帶胡椒（weinvierteldac.at）" },
+      { id: 2, icon: "🎯", title: "為什麼要把風格寫進法規", content: "Weinviertel 面積大、過去以散裝與低價酒為主。把「胡椒、清爽、無橡木」寫進 DAC，等於替消費者定義一個可預期的產區風格，方便出口市場辨識與定價——這是 DAC 制度的原型" },
+      { id: 3, icon: "🍾", title: "Reserve 的差異與官能審查", content: "Reserve 自 2009 年份起，最低 13%，容許些微的橡木與貴腐；Reserve 須經較嚴格的官能審查（六位評審中四位同意符合 Reserve 形象，weinvierteldac.at）" },
+      { id: 4, icon: "⚖️", title: "Klassik 酒精度的來源出入", content: "官方網站寫 Klassik 為 12–13%；部分教材寫最低 12%、標示上限 12.5%。課內以「最低 12%」為準，上限數字不進測驗" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">DAC 的本質是「用法規保證風格」，Weinviertel 是第一個、也是最清楚的例子。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

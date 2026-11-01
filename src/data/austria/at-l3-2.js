@@ -30,6 +30,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">論述時先講氣候（大陸性／Pannonian），再講土壤與品種。</p></div>"
   },
   {
+    title: "Diploma 深度：三種風土的因果鏈與氣候變遷",
+    highlights: [
+      { id: 1, icon: "🏞️", title: "Danube：冷夜暖日 → 緊緻白酒", content: "河谷的冷暖氣流交會 → 日夜溫差大 → 成熟時保酸 → Grüner、Riesling 兼具成熟度與張力；原生岩偏緊緻礦物、黃土偏圓潤胡椒" },
+      { id: 2, icon: "☀️", title: "Pannonian：熱與湖 → 紅酒與甜酒", content: "炎熱乾燥的夏季 → 晚熟紅品種能完全成熟 → Blaufränkisch、Zweigelt；湖泊秋霧 → 貴腐 → BA、TBA、Ausbruch" },
+      { id: 3, icon: "🌧️", title: "Steiermark：涼濕 → 香氣型白酒", content: "較涼、雨多 → 生長季長、保酸 → Sauvignon Blanc、Gelber Muskateller 的鮮明香氣；代價是黴病與冰雹風險，栽培成本高" },
+      { id: 4, icon: "🌡️", title: "氣候變遷的影響（趨勢）", content: "採收提早、糖度與酒精上升、酸度下降是普遍趨勢；乾旱讓 Weinviertel 等少雨區的水分壓力增加，Smaragd 酒精偏高；另一面，Blaufränkisch 等晚熟品種成熟更穩定。論述時要同時寫風險與機會" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">三條因果鏈＝奧地利論述的骨架：氣候 → 栽培 → 品種 → 風格 → 市場。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

@@ -31,6 +31,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">生產者類型與價格帶本課不給數字：未取得可靠的官方統計，避免誤導。</p></div>"
   },
   {
+    title: "Diploma 深度：生產者結構與通路",
+    highlights: [
+      { id: 1, icon: "🏡", title: "小酒莊與直接銷售", content: "奧地利以家族小酒莊為主，Heuriger（Wien、Niederösterreich）與 Buschenschank（Steiermark）讓酒莊可在自家直接賣酒與餐點，利潤高、也綁住在地客群。傳統上門口掛松枝（Buschen）表示營業" },
+      { id: 2, icon: "🤝", title: "合作社與大型業者", content: "合作社在部分產區份量重，例如 Wachau 的 Domäne Wachau、Kremstal 的 Winzer Krems；Lenz Moser 等大型業者與 Schlumberger 等 Sekt 廠則負責量販與出口通路（代表性例子，非完整名單）" },
+      { id: 3, icon: "📉", title: "「量穩、值降」的解讀", content: "2024 年出口德國量占六成、值只占約四成，加上桶裝酒量增值減，表示低價散裝比重上升。對策方向：提高瓶裝與 DAC、Ried 酒款比例，擴大美國等高單價市場（本課為判斷，非官方結論）" },
+      { id: 4, icon: "🧭", title: "論述時的定位語言", content: "奧地利的出口敘事集中在「乾型白酒（Grüner）＋產區風格（DAC）＋永續」三點；弱點是產量小、成本高、對單一市場依賴。寫論述時先承認規模限制，再談溢價策略" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">小規模、高成本的產區，只能走「品質與辨識度」的路。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

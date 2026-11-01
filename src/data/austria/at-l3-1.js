@@ -24,12 +24,22 @@ export const lessonContent = [
   {
     title: "Sekt Austria 三級金字塔",
     highlights: [
-      { id: 1, icon: "🥂", title: "Klassik", content: "酒渣陳年至少 9 個月；葡萄須來自奧地利的某個邦" },
+      { id: 1, icon: "🥂", title: "Sekt Austria", content: "基礎級（2022 年前稱 Klassik）：酒渣陳年至少 9 個月；葡萄須來自奧地利" },
       { id: 2, icon: "🍾", title: "Reserve", content: "傳統法、酒渣陳年至少 18 個月；葡萄與基酒須在同一個邦生產" },
-      { id: 3, icon: "👑", title: "Grosse Reserve", content: "瓶中發酵與酒渣陳年至少 30 個月，採收三年後才可上市；來自單一酒村（如 Poysdorf、Langenlois、Gols、Gamlitz）" },
-      { id: 4, icon: "📜", title: "制度沿革", content: "2015 年里程碑、2016 年由農業部長以條例訂為法規，奧地利 Sekt 委員會成立於 2013 年" }
+      { id: 3, icon: "👑", title: "Grosse Reserve", content: "瓶中發酵、酒渣陳年至少 36 個月（2022 年修法前為 30 個月），採收三年後才可上市；來自單一酒村（如 Poysdorf、Langenlois、Gols、Gamlitz）" },
+      { id: 4, icon: "📜", title: "制度沿革", content: "2015 年里程碑、2016 年由農業部長以條例訂為法規，奧地利 Sekt 委員會成立於 2013 年；2022 年 2 月修訂為 Sekt Austria／Reserve／Grosse Reserve 三個名稱，Grosse Reserve 延長為 36 個月" }
     ],
-    content: "<div class=\"content-overview\"><p class=\"lead-text\">記法：9 → 18 → 30 個月；產地由「奧地利」→「單一邦」→「單一酒村」逐級收窄。</p></div>"
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">記法：9 → 18 → 36 個月；產地由「奧地利」→「單一邦」→「單一酒村」逐級收窄。</p></div>"
+  },
+  {
+    title: "Diploma 深度：Sekt 規格與 Lenz Moser 高籬架",
+    highlights: [
+      { id: 1, icon: "✋", title: "Reserve 以上：手採、整串壓榨", content: "Reserve 與 Grosse Reserve 只能用手採、整串壓榨的葡萄，出汁率上限分別為 60% 與 50%，並須以傳統法瓶中二次發酵（2022 年修訂規定）" },
+      { id: 2, icon: "🍬", title: "甜度只限 Brut 以下", content: "Reserve 與 Grosse Reserve 只能是 Brut Nature、Extra Brut 或 Brut（殘糖 ≤ 12 g/L）；Grosse Reserve 的粉紅不得用紅白酒調配。基礎級 Sekt Austria 則未限定傳統法" },
+      { id: 3, icon: "🌿", title: "Lenz Moser 高籬架（Hochkultur）", content: "Lenz Moser III 於 1920 至 30 年代在 Kremstal 的 Rohrendorf 發展：行距約 3 公尺、主幹約 1–1.3 公尺高，大幅減少人工、降低成本；1956 年嚴重冬霜後因較能抗寒而普及。缺點是過去研究認為果實區遮蔭會影響品質，今日已不如以往普遍" },
+      { id: 4, icon: "🔗", title: "因果鏈：架式 → 成本 → 風格", content: "高籬架讓奧地利在戰後以低成本大量生產，配合當時偏甜、高產的市場；1985 年後轉向品質，頂級生產者在陡坡改用較密植、較低的籬架以提高濃縮度。這是「栽培決策反映市場」的典型例子" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Sekt 記法更新：9 → 18 → 36 個月；Reserve 以上手採、Brut 以下。</p></div>"
   },
   {
     component: 'QuizSlide',
@@ -44,7 +54,7 @@ export const lessonContent = [
             question: "Sekt Austria Reserve 的酒渣陳年至少多久？",
             options: ["A. 9 個月","B. 18 個月","C. 30 個月","D. 36 個月"],
             correct: 1,
-            explanation: "Klassik 9、Reserve 18、Grosse Reserve 30 個月。"
+            explanation: "Sekt Austria 9、Reserve 18、Grosse Reserve 36 個月（2022 年起）。"
           },
           {
             type: 'single',

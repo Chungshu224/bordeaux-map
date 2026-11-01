@@ -30,6 +30,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Schilcher 是粉紅酒，不是紅酒；酸度高是它的標記。</p></div>"
   },
   {
+    title: "Diploma 深度：Steiermark 的陡坡、Opok 與冰雹",
+    highlights: [
+      { id: 1, icon: "⛰️", title: "陡坡與人工", content: "Südsteiermark 以極陡的丘陵葡萄園聞名，大多只能人工作業；成本高，因此以高香氣、高酸的白酒和單一園酒款走中高價位" },
+      { id: 2, icon: "🪨", title: "Opok 土壤", content: "Opok 是 Südsteiermark 對當地鈣質泥灰岩、砂岩的稱呼，排水與保水兼具，常被連結到 Sauvignon Blanc 的張力與鹹鮮感（一般性描述）" },
+      { id: 3, icon: "🌩️", title: "濕潤與冰雹風險", content: "Steiermark 是奧地利最濕潤的主要產區（年雨量最高約 800 毫米），黴病壓力高，夏季雷雨帶來冰雹風險，部分生產者使用防雹網。論述時可以拿來和乾燥的 Weinviertel、Burgenland 對照" },
+      { id: 4, icon: "🌹", title: "Klöch 的 Traminer", content: "Vulkanland Steiermark 的 Klöch 以火山土壤上的 Traminer 聞名，玫瑰與香料香氣濃郁，是該 DAC 的招牌之一（一般性描述）" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Steiermark 的公式：涼濕 + 陡坡 → 高酸香氣白酒 → 人工成本高 → 中高價位。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
