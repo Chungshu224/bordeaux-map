@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">甜度（dosage 多約 6–8 g/L）是常見範圍而非法定上限；陳年門檻有舊／新規之分，引用時要註明年份。</p></div>"
   },
   {
+    title: "Diploma 深度：Chenin Blanc 的釀造決策",
+    highlights: [
+      { id: 1, icon: "🧊", title: "清爽型：保留果香", content: "機械採收或大批量、低溫不鏽鋼發酵、不做 MLF、早裝瓶 → 蘋果、番石榴、熱帶水果與清脆酸度，價格親民，是出口量的主力" },
+      { id: 2, icon: "🛢️", title: "濃厚型：質地與陳年", content: "老藤低產、手採、整串壓榨、野生酵母、舊橡木桶發酵與酒渣攪拌 → 蠟質、蜂蜜、堅果與更寬的口感；Chenin 的高酸讓這種風格仍保有張力並能陳年" },
+      { id: 3, icon: "🍯", title: "殘糖與甜酒", content: "同一品種可留少量殘糖平衡酸度，也可釀成風乾（straw wine）或貴腐（Noble Late Harvest）甜酒；Chenin 的酸是甜酒不膩的關鍵，和羅亞爾的 Vouvray、Coteaux du Layon 道理相同" },
+      { id: 4, icon: "📈", title: "風格與價格的對應", content: "清爽型多走量販與散裝，濃厚老藤型走高價瓶裝；南非同一個品種跨越整個價格帶，是論述「品種多樣性如何支撐產業」的好例子" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Chenin 題的得分點：每個釀造決策都要接到一個風格結果。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

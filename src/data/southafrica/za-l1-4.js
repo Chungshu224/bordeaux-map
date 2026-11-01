@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">南非紅酒從大型 Bordeaux 風格到輕盈 Cinsault，風格分布很廣。</p></div>"
   },
   {
+    title: "Diploma 深度：Pinotage 的風格爭議",
+    highlights: [
+      { id: 1, icon: "⚖️", title: "評價兩極的品種", content: "Pinotage 長期被批評帶有焦橡膠、過熟香蕉等香氣；感官研究也記錄到 banana、burnt rubber、smoky 等描述詞（SAJEV）。支持者則認為問題多出在栽培與釀造，而非品種本身" },
+      { id: 2, icon: "☕", title: "「咖啡 Pinotage」", content: "Wellington 的 Diemersfontein 由釀酒師 Bertus Fourie 以 2001 年份做出帶咖啡、巧克力香的 Pinotage，成為商業上成功的子類型。研究指出咖啡感是多種化合物的協同效果，不是單一成分；標示「咖啡風格」的酒也不一定有明顯咖啡香" },
+      { id: 3, icon: "🍇", title: "現代的做法（趨勢）", content: "許多生產者改為較早採收、較溫和萃取、減少新橡木，或用老藤灌木藤，釀出以紅色水果與新鮮度為主的 Pinotage；風格光譜從輕盈多汁到濃厚陳年型都有" },
+      { id: 4, icon: "🧭", title: "論述角度：國家品種的兩面", content: "Pinotage 是南非獨有的身分象徵，有助差異化；但評價分歧，也讓它難以撐起整個國家的高端形象。答題時可用「辨識度 vs 市場接受度」來平衡論點" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Pinotage 的問題多半是「怎麼種、怎麼釀」，論述時要把品種與做法分開談。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
