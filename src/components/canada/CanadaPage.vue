@@ -5,6 +5,27 @@
       v-if="view === 'selector'"
       style="min-height: 100vh;"
       @enterLevel="goToLevel"
+      @openMap="view = 'map'"
+      @openGames="view = 'game'"
+      @openNotebook="view = 'notebook'"
+    />
+
+    <!-- 地圖模式 -->
+    <CanadaMapPage
+      v-else-if="view === 'map'"
+      @back-to-course="view = 'selector'"
+    />
+
+    <!-- 品飲筆記 -->
+    <CanadaTastingNotebookPage
+      v-else-if="view === 'notebook'"
+      @back="view = 'selector'"
+    />
+
+    <!-- 互動練習 -->
+    <CanadaGameHubPage
+      v-else-if="view === 'game'"
+      @back="view = 'selector'"
     />
 
     <!-- 課程模式 -->
@@ -13,7 +34,6 @@
       :selectedLevel="selectedLevel"
       @exitLearning="view = 'selector'"
     />
-    <!-- 互動地圖／遊戲／品飲筆記：階段 E 製作，目前於課程首頁以「製作中」顯示 -->
   </div>
 </template>
 
@@ -22,8 +42,11 @@ import { ref } from 'vue'
 import { i18n } from '../../locales/index.js'
 import CanadaLevelSelector from './CanadaLevelSelector.vue'
 import CanadaLearningSystem from './CanadaLearningSystem.vue'
+import CanadaMapPage from './CanadaMapPage.vue'
+import CanadaGameHubPage from './CanadaGameHubPage.vue'
+import CanadaTastingNotebookPage from './notebook/CanadaTastingNotebookPage.vue'
 
-const view = ref('selector') // 'selector' | 'course'
+const view = ref('selector') // 'selector' | 'map' | 'game' | 'notebook' | 'course'
 const selectedLevel = ref(1)
 
 function goToLevel(n) {

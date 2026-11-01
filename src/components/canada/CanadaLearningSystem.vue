@@ -40,6 +40,7 @@
         </div>
       </main>
     </template>
+    <WineGlossary region="canada" />
   </div>
 </template>
 
@@ -57,6 +58,8 @@ import { authActions, authState, authInitPromise } from '../../stores/authStore.
 import { saveCanadaLesson, loadAndMergeCanadaProgress } from '../../lib/courseProgressSync.js'
 import CanadaCourseLayout from './CanadaCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import WineGlossary from '../WineGlossary.vue'
+import { globalCanadaAchievementManager } from '../../stores/canadaAchievementSystem.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -65,6 +68,8 @@ const props = defineProps({
 })
 
 const presentationLessonRef = ref(null)
+
+globalCanadaAchievementManager.init()
 
 const currentLevel = computed(() => canadaLearningState.currentLevel)
 const currentLesson = computed(() => canadaLearningState.currentLesson)
@@ -129,10 +134,20 @@ onMounted(async () => {
 function completeCurrentLesson() {
   const lessonId = currentLesson.value?.id
   if (lessonId) {
+    const alreadyDone = canadaLearningState.completedLessons.includes(lessonId)
     canadaLearningActions.completeLesson(lessonId)
     const userId = authState.user?.id
     if (userId) saveCanadaLesson(userId, lessonId)
-    // 成就系統於階段 E 接上
+    // 成就記錄（重複完成同一課不重複計算）
+    if (!alreadyDone) {
+      const lessons = currentLevelData.value?.lessons || []
+      const isLevelDone = lessons.length > 0 &&
+        lessons.every(l => canadaLearningState.completedLessons.includes(l.id))
+      globalCanadaAchievementManager.recordLessonCompleted({
+        levelId: isLevelDone ? currentLevel.value : null,
+        totalProgress: canadaLearningProgress.value
+      })
+    }
   }
   canadaLearningActions.exitLesson()
 }

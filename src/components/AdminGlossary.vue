@@ -304,7 +304,9 @@ const regionOptions = [
   { key: 'languedoc',  label: '朗格多克—魯西永',     icon: '🇫🇷', lang3: '',   lang3Label: '' },
   { key: 'southwest',  label: '西南產區',     icon: '🇫🇷', lang3: '',   lang3Label: '' },
   { key: 'brandy',  label: '白蘭地',     icon: '🥃', lang3: '',   lang3Label: '' },
+  { key: 'canada',  label: '加拿大',     icon: '🍁', lang3: '',   lang3Label: '' },
   { key: 'provence',  label: '普羅旺斯與科西嘉',     icon: '🌿', lang3: '',   lang3Label: '' },
+  { key: 'canada',  label: '加拿大',     icon: '🍁', lang3: '',   lang3Label: '' },
   { key: 'chile',  label: '智利',     icon: '🇨🇱', lang3: '',   lang3Label: '' },
   { key: 'usother',    label: '美國其他產區', icon: '🇺🇸', lang3: '',   lang3Label: '' },
   { key: 'argentina',  label: '阿根廷',     icon: '🇦🇷', lang3: '',   lang3Label: '' },
@@ -825,6 +827,7 @@ async function runBatchTranslate() {
 .region-southwest { background: #f0e6f3; color: #4B2E55; }
 .region-brandy { background: #f5e6d3; color: #8A4B14; }
 .region-provence { background: #ece8f6; color: #3E3166; }
+.region-canada { background: #fdecee; color: #7A0A1C; }
 .region-rhone      { background: #f6e8f0; color: #7a2e5c; }
 .region-chile { background: #f9e6e7; color: #A4343A; }
 .region-austria    { background: #fdecee; color: #b3202e; }

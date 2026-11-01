@@ -65,3 +65,13 @@
 - can-l3-4 法規演變與 Diploma 論述：Ontario VQA Act 2000-06-29；BC Reg 79/2005 → 168/2018；2018 四個新 GI；論述架構
 - can-l3-5 Level 3 綜合評量（12 題）
 - 來源衝突（已於課內標明、不進測驗）：冰酒出汁率（15% vs 5–10%）、冰酒酒精（9–11% vs 10–12%）、經濟衝擊數字、冰酒年產量、氣候推估。
+
+## 7. 互動階段
+
+- 地圖：`CanadaMapPage.vue`，28 個示意點（Ontario 9、BC 13、東部 6），全為示意點、非官方邊界；沒有氣候資料，已隱藏氣候圖層。
+- 遊戲：產區速答、品種配對、制度辨識快答、知識閃問（取自 Level 1–3 測驗）；來源有出入的數字不入題庫。
+- 品飲筆記：8 種類型 `can_ice / can_on_white / can_on_red / can_bc_white / can_bc_red / can_sparkling / can_east / can_other`。
+- 成就：`canadaAchievementSystem.js`；詞彙表 region = `canada`（WineGlossary、AdminGlossary）。
+- 字典：`canadaUi` en／ja 共 735 條。
+- Migration（未套用）：`20261106000100_add_canada_tasting_types.sql`（CHECK 含所有先前類型，含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence、canada）。
+- 套用順序：先 20261106000000（課程列），再 000100、000200；課程仍為 admin-only，active=false。
