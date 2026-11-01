@@ -12,7 +12,8 @@ export const diplomaLearningState = reactive({
     level1: { completed: 0, total: 6 },
     level2: { completed: 0, total: 5 },
     level3: { completed: 0, total: 5 },
-    level4: { completed: 0, total: 5 }
+    level4: { completed: 0, total: 5 },
+    level5: { completed: 0, total: 6 }
   },
   achievements: []
 })
@@ -271,6 +272,75 @@ export const diplomaLearningLevels = {
         "title": "Level 4 綜合評量",
         "description": "回顧加烈原理與全球加烈酒，完成綜合測驗",
         "duration": 25
+      }
+    ]
+  },
+  "level5": {
+    "title": "Level 5 - 應考訓練",
+    "description": "簡答與論述寫法、WSET SAT 與 CMS 盲品格式、白酒與紅酒盲品論述練習、綜合模擬考",
+    "color": "#6D8798",
+    "modules": [
+      {
+        "id": "DP5M1",
+        "title": "寫作與品飲方法",
+        "lessonIds": [
+          "dp-l5-1",
+          "dp-l5-2",
+          "dp-l5-3"
+        ]
+      },
+      {
+        "id": "DP5M2",
+        "title": "盲品論述練習",
+        "lessonIds": [
+          "dp-l5-4",
+          "dp-l5-5"
+        ]
+      },
+      {
+        "id": "DP5M3",
+        "title": "模擬考",
+        "lessonIds": [
+          "dp-l5-6"
+        ]
+      }
+    ],
+    "lessons": [
+      {
+        "id": "dp-l5-1",
+        "title": "理論考試：簡答與論述的寫法",
+        "description": "指令詞的意思、答案結構、時間分配，以及兩題簡答練習",
+        "duration": 25
+      },
+      {
+        "id": "dp-l5-2",
+        "title": "WSET 系統性品飲（SAT）框架",
+        "description": "外觀、香氣、口感與結論的描述順序，品質判斷（BLIC）與適飲性，以及如何為辨識結論提出理由",
+        "duration": 22
+      },
+      {
+        "id": "dp-l5-3",
+        "title": "CMS 演繹式盲品格式",
+        "description": "外觀、香氣、口感、初步結論與最終結論的流程，關鍵判斷點，以及各級考試形式",
+        "duration": 22
+      },
+      {
+        "id": "dp-l5-4",
+        "title": "白酒盲品論述練習",
+        "description": "從文字品飲描述推論品種與產區，並寫出理由；三題練習附評分要點",
+        "duration": 25
+      },
+      {
+        "id": "dp-l5-5",
+        "title": "紅酒盲品論述練習",
+        "description": "從文字品飲描述推論紅酒的品種與產區，並寫出理由；三題練習附評分要點",
+        "duration": 25
+      },
+      {
+        "id": "dp-l5-6",
+        "title": "綜合模擬考",
+        "description": "結合選擇題與簡答題，橫跨栽培、商業、氣泡酒、加烈酒與盲品",
+        "duration": 30
       }
     ]
   }

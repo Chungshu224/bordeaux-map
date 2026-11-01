@@ -74,7 +74,7 @@ const currentLevelData = computed(() => diplomaLearningLevels[`level${currentLev
 const totalProgress = computed(() => diplomaLearningProgress.value)
 
 const unlockedLevels = computed(() =>
-  [1, 2, 3, 4].filter(n => isLevelUnlocked(n))
+  [1, 2, 3, 4, 5].filter(n => isLevelUnlocked(n))
 )
 
 const canGoPrevious = computed(() => {
@@ -98,9 +98,9 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
-// 通論的四個階段各自獨立（D1／D2／D4／D5），不需依序解鎖
+// 通論的各階段各自獨立（D1／D2／D4／D5 與應考訓練），不需依序解鎖
 function isLevelUnlocked(level) {
-  return level >= 1 && level <= 4
+  return level >= 1 && level <= 5
 }
 
 function handleBackButton() {

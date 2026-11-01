@@ -267,8 +267,8 @@ export default {
       s2label: "Business<br>of Wine",
       s3label: "Sparkling<br>Wines",
       s4label: "Fortified<br>Wines",
-      f1: "21 lessons · four independent levels",
-      f2: "Causal chains and essay frameworks",
+      f1: "27 lessons · five independent levels",
+      f2: "Short-answer and blind-tasting practice",
       f3: "Final assessment for each level",
     },
     brandy: {

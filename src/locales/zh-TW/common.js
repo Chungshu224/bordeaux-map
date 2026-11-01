@@ -306,6 +306,13 @@ export default {
     quizGoodJob: '太棒了！掌握得很好 🌟',
     quizKeepGoing: '不错！可以繼續加油 👍',
     quizNeedReview: '📖 建議復習本課重點',
+    shortAnswer: '簡答題',
+    shortPlaceholder: '先寫下你的答案（條列重點即可），再對照評分要點。',
+    showPoints: '顯示評分要點',
+    selfCheckHint: '勾選你的答案有涵蓋的要點：',
+    confirmSelfCheck: '確認自評',
+    modelAnswer: '參考答案',
+    shortScore: '涵蓋 {got} / {total} 個要點（需 {need} 個才算通過）',
   },
 
   // ── Block labels ────────────────────

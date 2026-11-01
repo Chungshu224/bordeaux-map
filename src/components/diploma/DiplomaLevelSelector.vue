@@ -34,7 +34,7 @@
     <!-- 4. Level Track -->
     <LevelTrack
       :title="gt('選擇課程階段')"
-      :subtitle="gt('四個階段各自獨立，可依需要選讀：栽培與釀造、葡萄酒商業、全球氣泡酒、全球加烈酒。')"
+      :subtitle="gt('五個階段各自獨立，可依需要選讀：栽培與釀造、葡萄酒商業、全球氣泡酒、全球加烈酒，以及簡答與盲品的應考訓練。')"
       :levels="levelData"
       :max-columns="2"
       @enter="(n) => emit('enterLevel', n)"
@@ -78,7 +78,7 @@ const emit = defineEmits(['enterLevel'])
 const theme = getTheme('diploma')
 const showProgressModal = ref(false)
 
-const LEVELS = [1, 2, 3, 4]
+const LEVELS = [1, 2, 3, 4, 5]
 const completedLessons = computed(() => diplomaLearningState.completedLessons)
 const LEVEL_LESSON_IDS = Object.fromEntries(
   LEVELS.map(n => [n, (diplomaLearningLevels[`level${n}`]?.lessons || []).map(l => l.id)])
@@ -101,7 +101,7 @@ const progressLevels = computed(() =>
   LEVELS.map(n => ({ label: `Level ${n}`, pct: levelProgress(n) }))
 )
 
-// 目前應該繼續的階段：第一個尚未完成的階段（四個階段互不相依）
+// 目前應該繼續的階段：第一個尚未完成的階段（各階段互不相依）
 const nextLevel = computed(() => {
   for (const n of LEVELS) {
     if (levelProgress(n) < 100) return n
@@ -132,7 +132,7 @@ function startJourney() {
 }
 
 const heroStats = [
-  { value: '4', label: gt('學習階段') },
+  { value: '5', label: gt('學習階段') },
   { value: String(totalLessonCount), label: gt('系統課程') },
   { value: 'D1–D5', label: gt('對應單元') }
 ]
@@ -149,7 +149,8 @@ const LEVEL_META = [
   { number: 1, title: '葡萄栽培與釀造', subtitle: 'D1 通論', icon: '🌱', description: '葡萄藤的生長週期、氣候與土壤、栽培管理與病蟲害，以及白酒、紅酒、粉紅酒的釀造決策與熟成、澄清、裝瓶。', tags: ['生長週期', '葉幕管理', '病蟲害', '發酵', '熟成'] },
   { number: 2, title: '葡萄酒商業', subtitle: 'D2 通論', icon: '📊', description: '成本與定價、通路與市場結構、品牌與行銷，以及全球市場趨勢與論述寫法。', tags: ['成本', '定價', '通路', '品牌', '市場'] },
   { number: 3, title: '全球氣泡酒', subtitle: 'D4 通論', icon: '🥂', description: '氣泡酒的原料與氣候、四種製法、全球傳統法產區，以及槽式法與芳香型氣泡酒。', tags: ['傳統法', '槽式法', 'Cava', 'Franciacorta', '英格蘭'] },
-  { number: 4, title: '全球加烈酒', subtitle: 'D5 通論', icon: '🍷', description: '加烈的原理與時機、Sherry、Port、Madeira，以及 VDN、Rutherglen Muscat、Marsala 等其他加烈酒。', tags: ['Sherry', 'Port', 'Madeira', 'VDN', 'Rutherglen'] }
+  { number: 4, title: '全球加烈酒', subtitle: 'D5 通論', icon: '🍷', description: '加烈的原理與時機、Sherry、Port、Madeira，以及 VDN、Rutherglen Muscat、Marsala 等其他加烈酒。', tags: ['Sherry', 'Port', 'Madeira', 'VDN', 'Rutherglen'] },
+  { number: 5, title: '應考訓練', subtitle: '簡答與盲品', icon: '✍️', description: '簡答與論述的寫法、WSET SAT 與 CMS 演繹式盲品格式、白酒與紅酒盲品論述練習，以及綜合模擬考。', tags: ['簡答', '論述', 'SAT', 'CMS', '模擬考'] }
 ]
 
 const levelData = computed(() => LEVEL_META.map(m => ({

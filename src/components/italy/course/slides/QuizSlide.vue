@@ -20,12 +20,45 @@
       <!-- 題目 -->
       <div class="question-card">
         <div class="question-type-tag" :class="currentQ.type">
-          {{ currentQ.type === 'single' ? t('common.quiz.singleChoice') : t('common.quiz.multiChoice') }}
+          {{ currentQ.type === 'single' ? t('common.quiz.singleChoice') : currentQ.type === 'short' ? t('common.quiz.shortAnswer') : t('common.quiz.multiChoice') }}
         </div>
         <p class="question-text">{{ currentQ.question }}</p>
 
+        <!-- 簡答：先作答，再顯示評分要點並自我核對 -->
+        <div v-if="currentQ.type === 'short'" class="short-answer">
+          <textarea
+            v-model="shortText"
+            class="short-textarea"
+            rows="6"
+            :placeholder="t('common.quiz.shortPlaceholder')"
+            :disabled="shortRevealed"
+          ></textarea>
+          <button v-if="!shortRevealed" class="submit-multi-btn" @click="shortRevealed = true">
+            {{ t('common.quiz.showPoints') }}
+          </button>
+          <div v-else class="short-points">
+            <p class="short-hint">{{ t('common.quiz.selfCheckHint') }}</p>
+            <label
+              v-for="(p, i) in currentQ.points || []"
+              :key="i"
+              class="short-point"
+              :class="{ checked: shortChecked.includes(i) }"
+            >
+              <input type="checkbox" :value="i" v-model="shortChecked" :disabled="answered" />
+              <span>{{ p }}</span>
+            </label>
+            <details v-if="currentQ.model" class="short-model">
+              <summary>{{ t('common.quiz.modelAnswer') }}</summary>
+              <p>{{ currentQ.model }}</p>
+            </details>
+            <button v-if="!answered" class="submit-multi-btn" @click="submitShort">
+              {{ t('common.quiz.confirmSelfCheck') }}
+            </button>
+          </div>
+        </div>
+
         <!-- 單選 -->
-        <div v-if="currentQ.type === 'single'" class="options-list">
+        <div v-else-if="currentQ.type === 'single'" class="options-list">
           <button
             v-for="(opt, i) in currentQ.options"
             :key="i"
@@ -62,7 +95,10 @@
         <!-- 即時回饋 -->
         <div v-if="answered" class="feedback-box" :class="lastCorrect ? 'correct' : 'wrong'">
           <div class="feedback-icon">{{ lastCorrect ? t('common.quiz.correct') : t('common.quiz.wrongFeedback') }}</div>
-          <p class="feedback-explanation">{{ currentQ.explanation }}</p>
+          <p v-if="currentQ.type === 'short'" class="feedback-explanation">
+            {{ t('common.quiz.shortScore', { got: shortChecked.length, total: (currentQ.points || []).length, need: shortNeed }) }}
+          </p>
+          <p v-if="currentQ.explanation" class="feedback-explanation">{{ currentQ.explanation }}</p>
           <button class="next-btn" @click="nextQuestion">
             {{ currentIdx < questions.length - 1 ? t('common.quiz.nextQ') : t('common.quiz.viewResult') }}
           </button>
@@ -123,8 +159,18 @@ const selectedMulti = ref([])
 const answers       = ref([])  // boolean array
 const showResult    = ref(false)
 const score         = ref(0)
+// 簡答題狀態
+const shortText     = ref('')
+const shortRevealed = ref(false)
+const shortChecked  = ref([])
 
 const currentQ = computed(() => questions.value[currentIdx.value] || {})
+
+// 簡答題的通過門檻：題目可指定 minPoints，否則為要點數的六成（無條件進位）
+const shortNeed = computed(() => {
+  const n = (currentQ.value.points || []).length
+  return currentQ.value.minPoints ?? Math.ceil(n * 0.6)
+})
 
 const scorePct = computed(() =>
   questions.value.length ? Math.round(score.value / questions.value.length * 100) : 0
@@ -171,6 +217,22 @@ function submitMulti () {
   answered.value = true
 }
 
+// ── 簡答（自我核對）──
+function submitShort () {
+  if (answered.value) return
+  const ok = shortChecked.value.length >= shortNeed.value
+  lastCorrect.value = ok
+  answers.value.push(ok)
+  if (ok) score.value++
+  answered.value = true
+}
+
+function resetShort () {
+  shortText.value = ''
+  shortRevealed.value = false
+  shortChecked.value = []
+}
+
 function getOptionClass (i) {
   if (!answered.value) return selectedSingleIdx.value === i ? 'selected' : ''
   if (isCorrectSingle(i))               return 'correct-opt'
@@ -194,6 +256,7 @@ function nextQuestion () {
     answered.value = false
     selectedSingleIdx.value = -1
     selectedMulti.value = []
+    resetShort()
   } else {
     showResult.value = true
     if (props.slide.isFinalExam) {
@@ -216,6 +279,7 @@ function retryQuiz () {
   answers.value = []
   score.value = 0
   showResult.value = false
+  resetShort()
 }
 
 // 切換到不同課時時重置
@@ -452,4 +516,38 @@ watch(() => props.slide, () => retryQuiz())
   transition: opacity 0.2s;
 }
 .retry-btn:hover { opacity: 0.88; }
+
+/* ── 簡答題 ── */
+.short-answer { display: flex; flex-direction: column; gap: 10px; }
+.short-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1.5px solid #d6d3d1;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  resize: vertical;
+  background: #fff;
+}
+.short-textarea:disabled { background: #f8f7f6; color: #57534e; }
+.short-points { display: flex; flex-direction: column; gap: 6px; }
+.short-hint { margin: 4px 0 2px; font-size: 0.85rem; color: #57534e; font-weight: 600; }
+.short-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.short-point.checked { border-color: #16a34a; background: #f0fdf4; }
+.short-point input { margin-top: 3px; flex-shrink: 0; }
+.short-model { font-size: 0.86rem; color: #44403c; }
+.short-model summary { cursor: pointer; font-weight: 600; }
+.short-model p { margin: 6px 0 0; line-height: 1.6; white-space: pre-line; }
 </style>
