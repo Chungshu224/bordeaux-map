@@ -48,6 +48,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">每個論點都要有一個帶年份或數字的具體例子。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「說明 Languedoc AOC 的品種比例規則如何塑造酒款風格，並舉 Pic Saint-Loup 與 Fitou 為例。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① Languedoc AOC 紅酒：主要品種至少 50%、Mourvèdre 加 Syrah 至少 20%、Carignan 與 Cinsaut 各上限 40%；② Pic Saint-Loup：Syrah 至少 50%，涼而濕（年雨約 900–1,000 公釐）→ 較清新、香料感；③ Fitou：Carignan 至少 40%、平均約 40 hL/ha → 老樹、濃縮、粗獷；④ 釀造：Carignan 常用二氧化碳浸皮柔化單寧；⑤ 結論：比例規則、產量與風格三者互鎖" },
+      { id: 3, icon: "❓", title: "題目二", content: "「AOC 與 IGP 並存，對 Languedoc 是優勢還是負擔？請評估。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① IGP Pays d’Oc：約 12 萬公頃、58 個品種、85% 品種標示 → 出口與品種酒的主力；② AOC：新 AOC 與 DGC（Terrasses du Larzac 2014、La Clape 2015、Pic Saint-Loup 2017）建立村莊級辨識度；③ 負擔：名稱太多、消費者混淆，危機時（拔樹方案、出口下滑）價格壓力透過合作社傳導；④ 結論：兩者分工互補，但溝通成本高" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">評估題的關鍵字是「分工」：說清楚誰為誰服務，再談代價。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
