@@ -75,3 +75,14 @@
 - 字典：`canadaUi` en／ja 共 735 條。
 - Migration（未套用）：`20261106000100_add_canada_tasting_types.sql`（CHECK 含所有先前類型，含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence、canada）。
 - 套用順序：先 20261106000000（課程列），再 000100、000200；課程仍為 admin-only，active=false。
+
+## 完成狀態（總結）
+
+- 課程內容：18 課（L1 5／L2 8／L3 5），en／ja 完成；有來源衝突的數字僅於課文標註、不入測驗（冰酒出汁率與酒精、經濟衝擊、各面積與酒廠數、Niagara Escarpment 高度、氣候推估等）。
+- 互動功能：28 個示意點地圖、4 款遊戲、品飲筆記（`can_*` 八種類型）、成就、詞彙表 24 條（region `canada`）；字典 735 條 en／ja。
+- 課程維持僅管理員可見（`active=false`、`show_on_home=false`，首頁只有管理員卡片）。
+- 未套用的遷移檔（依序）：`20261106000000_add_canada_course.sql`、`20261106000100_add_canada_tasting_types.sql`（CHECK 保留所有先前類型含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence）。
+- 待辦：氣候資料 `public/data/canada-climate.json`（目前地圖已隱藏氣候圖層）；New Brunswick 資料；發音音檔；經濟衝擊等倡議數字需於更新時重新查證。
+- 已更正的早期錯誤：BC 法規編號與年份（Reg 79/2005 → 168/2018）、GI 標示比例（現行 85%）、Cellared in Canada 已於 2018-03-12 廢止。
+- 時效提醒：關稅與美國酒禁售（2025–26）、CUSMA 檢討、BC 寒害後的援助與品種政策都在變動，更新前請重新查證。
+- 分支鏈：feat/canada-design → -l1 → -l2 → -l3 → -interactive → -final；已試合併 master，無衝突（master = d970b79）。
