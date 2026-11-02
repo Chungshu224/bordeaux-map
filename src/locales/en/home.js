@@ -67,6 +67,7 @@ export default {
     map: {
       views: { world: '🌐 World', france: '🇫🇷 France', europe: '🌍 Europe', newworld: '🌏 New World' },
       hint: 'Tap a marker on the map to explore each region\'s course',
+      freeTrial: 'Level 1 is a free preview — no card required',
       detail: '📋 Course details',
       close: 'Close',
       fallback: 'The map could not be loaded. Please use "Browse as list" below.',

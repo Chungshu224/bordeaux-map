@@ -64,6 +64,7 @@ import {
 import { globalAlsaceAchievementManager } from '../../../stores/alsaceAchievementSystem.js'
 import { getTotalLessonCount } from '../data/courseLevels.js'
 import LearningProgressDashboard from '../../LearningProgressDashboard.vue'
+import { useCoursePaid } from '../../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['startLevel', 'openMap', 'openNotebook', 'openGames'])
 
@@ -99,7 +100,7 @@ function onQuickNav(key) {
   }
 }
 
-const levelData = [
+const levelDataRaw = [
   {
     number: 1, title: '阿爾薩斯葡萄酒入門', subtitle: '基礎認識', icon: '🌱',
     description: '地理與行政區劃、氣候與土壤基礎、核心品種光譜、AOC 三層分級架構。',
@@ -125,6 +126,13 @@ const levelData = [
     modules: 4, lessons: 7, progress: 0, unlocked: true
   }
 ]
+
+const { hasCoursePaid, planHint } = useCoursePaid('alsace')
+const levelData = computed(() => levelDataRaw.map((l) => ({
+  ...l,
+  unlocked: l.number === 1 || hasCoursePaid.value,
+  unlockHint: l.number === 1 ? '' : planHint('')
+})))
 
 const overviewItems = [
   { icon: '🏷️', title: '法國主要產區中唯一以品種命名', desc: '阿爾薩斯傳統上以葡萄品種命名酒款，與法國多數以產地命名的 AOC 邏輯截然不同。' },

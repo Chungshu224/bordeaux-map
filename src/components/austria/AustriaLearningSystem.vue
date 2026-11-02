@@ -8,7 +8,7 @@
       :completedLessons="austriaLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && austriaLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (austriaLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => austriaLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import AustriaCourseLayout from './AustriaCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalAustriaAchievementManager } from '../../stores/austriaAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('austria')
 function isLevelUnlocked(level) {
   if (austriaLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = austriaLearningActions.getFinalLessonId(level - 1)
   return finalId != null && austriaLearningState.completedLessons.includes(finalId)
 }

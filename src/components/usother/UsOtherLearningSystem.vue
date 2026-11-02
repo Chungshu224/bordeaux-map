@@ -8,7 +8,7 @@
       :completedLessons="usotherLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && usotherLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (usotherLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => usotherLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import UsOtherCourseLayout from './UsOtherCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalUsOtherAchievementManager } from '../../stores/usotherAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('usother')
 function isLevelUnlocked(level) {
   if (usotherLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = usotherLearningActions.getFinalLessonId(level - 1)
   return finalId != null && usotherLearningState.completedLessons.includes(finalId)
 }

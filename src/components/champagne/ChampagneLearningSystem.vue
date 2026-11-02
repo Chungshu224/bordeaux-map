@@ -8,7 +8,7 @@
       :completedLessons="champagneLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && champagneLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (champagneLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => champagneLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import { globalChampagneAchievementManager } from '../../stores/champagneAchieve
 import WineGlossary from '../WineGlossary.vue'
 import ChampagneCourseLayout from './ChampagneCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('champagne')
 function isLevelUnlocked(level) {
   if (champagneLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = champagneLearningActions.getFinalLessonId(level - 1)
   return finalId != null && champagneLearningState.completedLessons.includes(finalId)
 }

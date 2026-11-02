@@ -8,7 +8,7 @@
       :completedLessons="languedocLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && languedocLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (languedocLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => languedocLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import LanguedocCourseLayout from './LanguedocCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalLanguedocAchievementManager } from '../../stores/languedocAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('languedoc')
 function isLevelUnlocked(level) {
   if (languedocLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = languedocLearningActions.getFinalLessonId(level - 1)
   return finalId != null && languedocLearningState.completedLessons.includes(finalId)
 }

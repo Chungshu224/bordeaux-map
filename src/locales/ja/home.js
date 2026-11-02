@@ -67,6 +67,7 @@ export default {
     map: {
       views: { world: '🌐 世界', france: '🇫🇷 フランス', europe: '🌍 ヨーロッパ', newworld: '🌏 新世界' },
       hint: '地図上のマーカーをタップして各産地のコースを探索',
+      freeTrial: 'Level 1は無料体験（カード不要）',
       detail: '📋 コース詳細',
       close: '閉じる',
       fallback: '地図を読み込めません。下の「リストで見る」をご利用ください。',

@@ -8,7 +8,7 @@
       :completedLessons="greeceLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && greeceLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (greeceLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => greeceLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import { saveGreeceLesson, loadAndMergeGreeceProgress } from '../../lib/coursePr
 import GreeceCourseLayout from './GreeceCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('greece')
 function isLevelUnlocked(level) {
   if (greeceLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = greeceLearningActions.getFinalLessonId(level - 1)
   return finalId != null && greeceLearningState.completedLessons.includes(finalId)
 }

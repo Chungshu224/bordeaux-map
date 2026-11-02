@@ -23,7 +23,7 @@
       :completedLessons="loireLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="showLevelSelector = true"
-      @changeLevel="(n) => isLevelUnlocked(n) && loireLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (loireLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => loireLearningActions.startLesson(lesson.id)"
     />
 
@@ -105,6 +105,7 @@ import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import { globalLoireAchievementManager, loireAchievementState } from '../../stores/loireAchievementSystem.js'
 import WineGlossary from '../WineGlossary.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openGames'])
 
@@ -157,10 +158,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || '投影片導航'
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('loire')
 function isLevelUnlocked(level) {
   if (loireLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = loireLearningActions.getFinalLessonId(level - 1)
   return finalId != null && loireLearningState.completedLessons.includes(finalId)
 }
