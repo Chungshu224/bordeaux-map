@@ -41,6 +41,8 @@
           :brgm-available="true"
           :brgm-enabled="brgmEnabled"
           :hide-soil="true"
+          :climate-enabled="climateEnabled"
+          @toggle-climate="toggleClimate"
           @toggle-3d="toggle3D"
           @toggle-brgm="toggleBRGM(map)"
           @close="mobileLayersOpen = false"
@@ -59,6 +61,45 @@
           </div>
         </div>
       </div>
+
+
+      <transition name="lr-climate-slide">
+        <div v-if="climateEnabled && climateData" class="ch-climate">
+          <div class="grc-tabs">
+            <button v-for="ind in CLIMATE_INDICATORS" :key="ind.id"
+              :class="['grc-tab', { active: climateIndicator === ind.id }]"
+              @click="setClimateIndicator(ind.id)">{{ ind.icon }} {{ ind.label }}</button>
+          </div>
+          <div class="grc-head">
+            <span class="grc-year">{{ climateYear }}</span>
+            <div class="grc-stats">
+              <div class="grc-name">{{ climateActiveLabel }}</div>
+              <span v-if="currentValue !== null" class="grc-val">{{ currentValue }}{{ cfg.unit }}</span>
+              <span v-if="currentDelta !== null" :class="['grc-delta', currentDelta >= 0 ? 'warm' : 'cool']">
+                {{ currentDelta >= 0 ? '+' : '' }}{{ currentDelta }}{{ cfg.unit }} vs 基準
+              </span>
+            </div>
+            <button class="grc-close" @click="toggleClimate" title="關閉氣候圖層">✕</button>
+          </div>
+          <input class="grc-slider" type="range" v-model.number="climateYear"
+            :min="climateYears[0]" :max="climateYears[climateYears.length - 1]" step="1"
+            @input="applyClimateColor" />
+          <div class="grc-axis">
+            <span>{{ climateYears[0] }}</span>
+            <span>{{ climateYears[Math.floor(climateYears.length / 2)] }}</span>
+            <span>{{ climateYears[climateYears.length - 1] }}</span>
+          </div>
+          <div class="grc-legend">
+            <div :class="['grc-grad', `grc-grad-${climateIndicator}`]"></div>
+            <div class="grc-labels">
+              <span>{{ currentStats ? currentStats.min.toFixed(0) : '' }}{{ cfg.unit }} {{ cfg.lowLabel }}</span>
+              <span>{{ cfg.highLabel }} {{ currentStats ? currentStats.max.toFixed(0) : '' }}{{ cfg.unit }}</span>
+            </div>
+          </div>
+          <div class="grc-foot">📊 {{ cfg.footnote }}</div>
+          <div class="grc-foot">氣候以「產區群」為單位（南特／安茹-索繆爾／都漢／中央-羅亞爾／中央高原），群內各 AOC 共用同一顏色。</div>
+        </div>
+      </transition>
 
       <!-- 底部工具列 -->
       <RegionMapMobileToolbar
@@ -137,6 +178,119 @@ watch(brgmEnabled, (enabled) => {
   if (geojson) updateBRGMClip(map, geojson)
 })
 
+
+// ── 氣候圖層（產區群層級）──────────────────────────────────
+const climateEnabled = ref(false)
+const climateData = ref(null)
+const climateYears = ref([])
+const climateYear = ref(2024)
+const climateIndicator = ref('temp')
+const climateStats = ref({})
+const CLIMATE_INDICATORS = [
+  { id: 'temp', icon: '🌡', label: '生長季均溫', unit: '°C', lowLabel: '涼', highLabel: '暖', dataKey: 'temps', baselineKey: 'baseline', statsKey: 'global', digits: 1,
+    footnote: '4–10 月日均溫平均｜基準 1981–2010｜Open-Meteo ERA5-Land（以各產區群代表點取值，約 9 公里網格，僅供區域比較）' },
+  { id: 'sun', icon: '☀️', label: '日照時數', unit: 'h', lowLabel: '少', highLabel: '多', dataKey: 'sun', baselineKey: 'baselineSun', statsKey: 'globalSun', digits: 0,
+    footnote: '4–10 月日照時數總和｜基準 1981–2010｜Open-Meteo ERA5（約 25 公里網格，僅供區域比較）' },
+  { id: 'rain', icon: '🌧', label: '降雨量', unit: 'mm', lowLabel: '乾', highLabel: '濕', dataKey: 'rain', baselineKey: 'baselineRain', statsKey: 'globalRain', digits: 0,
+    footnote: '4–10 月降雨量總和｜基準 1981–2010｜Open-Meteo ERA5（約 25 公里網格，僅供區域比較）' }
+]
+const cfg = computed(() => CLIMATE_INDICATORS.find(i => i.id === climateIndicator.value))
+const currentStats = computed(() => climateStats.value[cfg.value.statsKey] || null)
+const yearIdx = computed(() => climateYears.value.indexOf(climateYear.value))
+function climateOf(group) {
+  const arr = climateData.value?.[group]?.[cfg.value.dataKey]
+  const v = Array.isArray(arr) && yearIdx.value >= 0 ? arr[yearIdx.value] : null
+  return v == null ? null : Number(v)
+}
+// 目前焦點的產區群：選了 AOC 用其群組；否則用群組檢視
+const focusGroup = ref(null)
+const activeClimateGroup = computed(() => {
+  const g = activeAOC.value?.group || focusGroup.value
+  return g && climateData.value?.[g] ? g : null
+})
+const currentValue = computed(() => {
+  const g = activeClimateGroup.value
+  if (g) { const v = climateOf(g); return v == null ? null : Number(v.toFixed(cfg.value.digits)) }
+  const vals = Object.keys(climateData.value || {}).map(climateOf).filter(v => v != null)
+  return vals.length ? Number((vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(cfg.value.digits)) : null
+})
+const currentDelta = computed(() => {
+  const g = activeClimateGroup.value
+  if (!g) return null
+  const v = climateOf(g)
+  const base = climateData.value?.[g]?.[cfg.value.baselineKey]
+  if (v == null || base == null) return null
+  return Number((v - base).toFixed(cfg.value.id === 'temp' ? 2 : 0))
+})
+const climateActiveLabel = computed(() => activeClimateGroup.value ? (climateData.value[activeClimateGroup.value].name || groupLabels[activeClimateGroup.value]) : '產區群平均')
+
+function valueToColor(v) {
+  const st = currentStats.value
+  if (!st) return '#ffffbf'
+  const { min, max, mean } = st
+  const id = climateIndicator.value
+  const stops = id === 'sun'
+    ? [[min, [120, 81, 169]], [mean, [171, 217, 233]], [mean + 20, [254, 224, 72]], [max, [253, 141, 60]]]
+    : id === 'rain'
+      ? [[min, [253, 141, 60]], [mean, [255, 255, 191]], [mean + 15, [74, 144, 226]], [max, [44, 62, 160]]]
+      : [[min, [69, 117, 180]], [mean - 1, [171, 217, 233]], [mean, [255, 255, 191]], [mean + 1.5, [252, 141, 89]], [max, [215, 48, 39]]]
+  const t = Math.max(min, Math.min(max, v))
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i], [t1, c1] = stops[i + 1]
+    if (t <= t1) {
+      const f = (t - t0) / Math.max(t1 - t0, 0.0001)
+      return `rgb(${[0, 1, 2].map(k => Math.round(c0[k] + f * (c1[k] - c0[k]))).join(',')})`
+    }
+  }
+  return `rgb(${stops[stops.length - 1][1].join(',')})`
+}
+// 某群組目前的填色／透明度（氣候關閉時回到群組原色）
+function fillColorFor(group) {
+  if (climateEnabled.value && climateData.value) {
+    const v = climateOf(group)
+    return v == null ? '#cccccc' : valueToColor(v)
+  }
+  return groupColor(group)
+}
+function fillOpacityFor(base) { return climateEnabled.value ? Math.max(base, 0.65) : base }
+
+async function loadClimateData() {
+  if (climateData.value) return
+  try {
+    const res = await fetch('/data/loire-climate.json')
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const p = await res.json()
+    climateData.value = p.aocs || {}
+    climateYears.value = p.meta?.years || []
+    climateStats.value = { global: p.global, globalSun: p.globalSun, globalRain: p.globalRain }
+    if (climateYears.value.length && !climateYears.value.includes(climateYear.value)) climateYear.value = climateYears.value[climateYears.value.length - 1]
+  } catch (err) {
+    mapError.value = `氣候資料載入失敗：${err.message}`
+    climateEnabled.value = false
+  }
+}
+function applyClimateColor() {
+  if (!map) return
+  const g = activeAOC.value?.group || focusGroup.value
+  if (!g) return
+  if (map.getLayer('loire-group-fill')) {
+    map.setPaintProperty('loire-group-fill', 'fill-color', fillColorFor(g))
+    map.setPaintProperty('loire-group-fill', 'fill-opacity', fillOpacityFor(0.22))
+  }
+  if (map.getLayer('loire-fill')) {
+    map.setPaintProperty('loire-fill', 'fill-color', fillColorFor(g))
+    map.setPaintProperty('loire-fill', 'fill-opacity', fillOpacityFor(0.3))
+  }
+}
+async function toggleClimate() {
+  climateEnabled.value = !climateEnabled.value
+  if (climateEnabled.value) await loadClimateData()
+  applyClimateColor()
+}
+function setClimateIndicator(id) {
+  climateIndicator.value = id
+  applyClimateColor()
+}
 
 // ── 地圖樣式 ──────────────────────────────────────────────────
 const mapStyles = [
@@ -392,6 +546,7 @@ async function highlightGroupOnMap(groupKey) {
   if (map.getLayer('loire-group-outline')) map.removeLayer('loire-group-outline')
   if (map.getSource('loire-group')) map.removeSource('loire-group')
   activeAOC.value = null
+  focusGroup.value = groupKey
   try {
     const maxFiles = Math.min(files.length, 10)
     const features = []
@@ -418,7 +573,7 @@ async function highlightGroupOnMap(groupKey) {
       id: 'loire-group-fill',
       type: 'fill',
       source: 'loire-group',
-      paint: { 'fill-color': groupColor(groupKey), 'fill-opacity': 0.22 }
+      paint: { 'fill-color': fillColorFor(groupKey), 'fill-opacity': fillOpacityFor(0.22) }
     })
     map.addLayer({
       id: 'loire-group-outline',
@@ -476,7 +631,7 @@ async function showAOCGeojson(group, aocFile) {
       id: 'loire-fill',
       type: 'fill',
       source: 'loire-aoc',
-      paint: { 'fill-color': groupColor(group), 'fill-opacity': 0.3 }
+      paint: { 'fill-color': fillColorFor(group), 'fill-opacity': fillOpacityFor(0.3) }
     })
     map.addLayer({
       id: 'loire-outline',
@@ -1266,4 +1421,32 @@ html, body {
   font-size: 10px; color: #aaa;
   border-top: 1px solid #f0f0f0; padding-top: 6px;
 }
+
+.ch-climate {
+  position: absolute; left: 12px; right: 12px; bottom: 72px; z-index: 6; margin: 0 auto;
+  max-width: 460px; background: rgba(255, 255, 255, 0.95); border-radius: 14px; padding: 10px 12px 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28); color: #2a1f08;
+}
+.grc-tabs { display: flex; gap: 6px; margin-bottom: 8px; }
+.grc-tab { flex: 1; border: 1px solid #d8c796; background: #fbf5e3; border-radius: 8px; padding: 5px 4px; font-size: 0.78rem; cursor: pointer; color: #2a1f08; }
+.grc-tab.active { background: #A8801C; border-color: #A8801C; color: #fff; }
+.grc-head { display: flex; align-items: center; gap: 10px; }
+.grc-year { font-size: 1.5rem; font-weight: 800; color: #A8801C; }
+.grc-stats { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.grc-name { width: 100%; font-size: 0.78rem; font-weight: 700; }
+.grc-val { font-size: 1.05rem; font-weight: 700; }
+.grc-delta { font-size: 0.75rem; font-weight: 600; }
+.grc-delta.warm { color: #c0392b; }
+.grc-delta.cool { color: #2a6fb0; }
+.grc-close { border: 0; background: none; font-size: 1rem; cursor: pointer; color: #667; }
+.grc-slider { width: 100%; margin: 6px 0 0; accent-color: #A8801C; }
+.grc-axis { display: flex; justify-content: space-between; font-size: 0.68rem; color: #667; }
+.grc-grad { height: 8px; border-radius: 4px; margin-top: 6px; }
+.grc-grad-temp { background: linear-gradient(90deg, #4575b4, #abd9e9, #ffffbf, #fc8d59, #d73027); }
+.grc-grad-sun { background: linear-gradient(90deg, #7851a9, #abd9e9, #fee048, #fd8d3c); }
+.grc-grad-rain { background: linear-gradient(90deg, #fd8d3c, #ffffbf, #4a90e2, #2c3ea0); }
+.grc-labels { display: flex; justify-content: space-between; font-size: 0.68rem; color: #445; margin-top: 2px; }
+.grc-foot { margin-top: 5px; font-size: 0.64rem; color: #667; line-height: 1.35; }
+.lr-climate-slide-enter-active, .lr-climate-slide-leave-active { transition: all 0.25s ease; }
+.lr-climate-slide-enter-from, .lr-climate-slide-leave-to { opacity: 0; transform: translateY(12px); }
 </style>
