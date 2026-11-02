@@ -51,6 +51,7 @@ import {
 } from '../../shared/courseHome/index.js'
 import { courseLevels, getLevelProgressPct, isItalyLevelUnlocked } from '../data/courseLevels.js'
 import { authActions } from '../../../stores/authStore.js'
+import { useCoursePaid } from '../../../composables/useCoursePaid.js'
 
 const { t } = useI18n()
 const emit = defineEmits(['startLevel', 'openMap', 'openAchievements', 'openNotebook', 'openGames'])
@@ -76,8 +77,11 @@ const totalProgressPct = computed(() =>
 
 function levelPct(key) { return getLevelProgressPct(key) }
 
+const { hasCoursePaid, planHint } = useCoursePaid('italy')
+
 function isLevelUnlocked(key) {
   if (authActions.isAdmin && authActions.isAdmin()) return true
+  if (key !== 'level1' && !hasCoursePaid.value) return false
   return isItalyLevelUnlocked(key)
 }
 
@@ -148,7 +152,7 @@ const levelData = computed(() => [
     modules: 6, lessons: 23,
     progress: levelPct('level2'),
     unlocked: isLevelUnlocked('level2'),
-    unlockHint: t('italy.selector.unlockHint.level2')
+    unlockHint: planHint(t('italy.selector.unlockHint.level2'))
   },
   {
     number: 3,
@@ -160,7 +164,7 @@ const levelData = computed(() => [
     modules: 7, lessons: 26,
     progress: levelPct('level3'),
     unlocked: isLevelUnlocked('level3'),
-    unlockHint: t('italy.selector.unlockHint.level3')
+    unlockHint: planHint(t('italy.selector.unlockHint.level3'))
   }
 ])
 

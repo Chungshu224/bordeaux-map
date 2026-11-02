@@ -8,7 +8,7 @@
       :completedLessons="hungaryLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && hungaryLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (hungaryLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => hungaryLearningActions.startLesson(lesson.id)"
     />
 
@@ -89,6 +89,7 @@ import PresentationLesson from '../PresentationLesson.vue'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
 import { globalHungaryAchievementManager, hungaryAchievementState } from '../../stores/hungaryAchievementSystem.js'
 import WineGlossary from '../WineGlossary.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -134,10 +135,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || '投影片導航'
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('hungary')
 function isLevelUnlocked(level) {
   if (hungaryLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = hungaryLearningActions.getFinalLessonId(level - 1)
   return finalId != null && hungaryLearningState.completedLessons.includes(finalId)
 }

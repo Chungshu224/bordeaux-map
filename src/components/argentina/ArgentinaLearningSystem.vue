@@ -8,7 +8,7 @@
       :completedLessons="argentinaLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && argentinaLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (argentinaLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => argentinaLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import ArgentinaCourseLayout from './ArgentinaCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalArgentinaAchievementManager } from '../../stores/argentinaAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('argentina')
 function isLevelUnlocked(level) {
   if (argentinaLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = argentinaLearningActions.getFinalLessonId(level - 1)
   return finalId != null && argentinaLearningState.completedLessons.includes(finalId)
 }

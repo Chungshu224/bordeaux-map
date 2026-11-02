@@ -67,6 +67,7 @@ export default {
     map: {
       views: { world: '🌐 全球', france: '🇫🇷 法國', europe: '🌍 歐洲', newworld: '🌏 新世界' },
       hint: '點選地圖上的標記，探索各產區課程',
+      freeTrial: '第 1 關免費試讀，免信用卡',
       detail: '📋 課程說明',
       close: '關閉',
       fallback: '地圖暫時無法載入，請使用下方「以列表檢視」瀏覽課程。',

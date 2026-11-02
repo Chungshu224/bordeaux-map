@@ -50,6 +50,7 @@ import {
 } from '../shared/courseHome/index.js'
 import { californiaLearningState, californiaLearningLevels, getLocalizedCaliforniaLevels } from '../../stores/californiaLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['startLevel', 'openMap', 'openQuiz', 'openNotes', 'openGames', 'backToPage'])
 
@@ -84,10 +85,12 @@ const totalProgressPct = computed(() =>
     ? Math.round((completedLessons.value.length / totalLessonCount.value) * 100)
     : 0
 )
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('california')
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (authActions.isAdmin && authActions.isAdmin()) return true
   if (californiaLearningState.testMode) return true
+  if (!hasCoursePaid.value) return false
   const finalId = (LEVEL_LESSON_IDS[n - 1] || []).at(-1)
   return finalId != null && completedLessons.value.includes(finalId)
 }
@@ -185,7 +188,7 @@ const levelData = computed(() => {
       lessons: LEVEL_LESSON_IDS[2].length,
       progress: levelProgress(2),
       unlocked: isLevelUnlocked(2),
-      unlockHint: t('california.selector.unlockHint.level2')
+      unlockHint: planHint(t('california.selector.unlockHint.level2'))
     },
     {
       number: 3,
@@ -198,7 +201,7 @@ const levelData = computed(() => {
       lessons: LEVEL_LESSON_IDS[3].length,
       progress: levelProgress(3),
       unlocked: isLevelUnlocked(3),
-      unlockHint: t('california.selector.unlockHint.level3')
+      unlockHint: planHint(t('california.selector.unlockHint.level3'))
     }
   ]
 })

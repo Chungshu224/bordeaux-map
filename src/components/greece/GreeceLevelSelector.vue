@@ -78,6 +78,7 @@ import {
 import { greeceLearningState, greeceLearningLevels } from '../../stores/greeceLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
 import { globalGreeceAchievementManager, greeceAchievementState } from '../../stores/greeceAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
@@ -111,10 +112,12 @@ const progressLevels = computed(() =>
   LEVELS.map(n => ({ label: `Level ${n}`, pct: levelProgress(n) }))
 )
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('greece')
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (authActions.isAdmin()) return true
   if (greeceLearningState.testMode) return true
+  if (!hasCoursePaid.value) return false
   const finalId = (LEVEL_LESSON_IDS[n - 1] || []).at(-1)
   return finalId != null && completedLessons.value.includes(finalId)
 }
@@ -194,7 +197,7 @@ const levelData = computed(() => [
     lessons: LEVEL_LESSON_IDS[2].length,
     progress: levelProgress(2),
     unlocked: isLevelUnlocked(2),
-    unlockHint: gt('完成 Level 1 後解鎖')
+    unlockHint: planHint(gt('完成 Level 1 後解鎖'))
   },
   {
     number: 3,
@@ -207,7 +210,7 @@ const levelData = computed(() => [
     lessons: LEVEL_LESSON_IDS[3].length,
     progress: levelProgress(3),
     unlocked: isLevelUnlocked(3),
-    unlockHint: gt('完成 Level 2 後解鎖')
+    unlockHint: planHint(gt('完成 Level 2 後解鎖'))
   }
 ])
 

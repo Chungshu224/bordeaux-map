@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid,
@@ -52,6 +52,7 @@ import {
 } from '../../shared/courseHome/index.js'
 import { useProgress } from '../composables/useProgress.js'
 import { authActions } from '../../../stores/authStore.js'
+import { useCoursePaid } from '../../../composables/useCoursePaid.js'
 
 const { t, tm } = useI18n()
 
@@ -84,6 +85,9 @@ onMounted(async () => {
   }
 })
 
+const { hasCoursePaid, planHint } = useCoursePaid('bourgogne')
+watch(hasCoursePaid, () => updateLevelLocks())
+
 function updateLevelLocks() {
   if (!levels.value.length) return
   if (authActions.isAdmin && authActions.isAdmin()) {
@@ -91,9 +95,10 @@ function updateLevelLocks() {
     return
   }
   levels.value[0].unlocked = true
-  if (levels.value[1]) levels.value[1].unlocked = progressStore.isExamPassed(1, 'beginner-m9')
-  if (levels.value[2]) levels.value[2].unlocked = progressStore.isExamPassed(2, 'intermediate-m9')
-  if (levels.value[3]) levels.value[3].unlocked = progressStore.isExamPassed(3, 'advanced-m16')
+  const paid = hasCoursePaid.value
+  if (levels.value[1]) levels.value[1].unlocked = paid && progressStore.isExamPassed(1, 'beginner-m9')
+  if (levels.value[2]) levels.value[2].unlocked = paid && progressStore.isExamPassed(2, 'intermediate-m9')
+  if (levels.value[3]) levels.value[3].unlocked = paid && progressStore.isExamPassed(3, 'advanced-m16')
 }
 
 const completedLevels = computed(() =>
@@ -164,7 +169,7 @@ const levelData = computed(() => levels.value.map(l => ({
   lessons: l.hours ? `${l.hours}h` : 0,
   progress: getProgress(l.id),
   unlocked: !!l.unlocked,
-  unlockHint: l.id === 1 ? '' : t(`bourgogne.selector.unlockHint.level${l.id}`)
+  unlockHint: l.id === 1 ? '' : planHint(t(`bourgogne.selector.unlockHint.level${l.id}`))
 })))
 
 const modalLevels = computed(() =>

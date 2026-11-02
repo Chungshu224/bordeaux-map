@@ -23,6 +23,7 @@
           <div class="cwm-card-status" :class="{ on: selected.active }">
             {{ selected.active ? t('home.courses.common.statusActive') : t('home.courses.common.statusPlanning') }}
           </div>
+          <div class="cwm-card-trial">🎁 {{ t('home.courses.map.freeTrial') }}</div>
           <div class="cwm-card-actions">
             <router-link v-if="canEnter" :to="selected.route" class="cwm-btn primary">{{ t('home.courses.common.enter') }} →</router-link>
             <button v-if="HAS_DETAIL.includes(selected.id)" class="cwm-btn" @click="$emit('detail', selected.id)">{{ t('home.courses.map.detail') }}</button>
@@ -204,6 +205,7 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 .cwm-card-desc { margin: 0; padding: 12px 18px 4px; font-size: .86rem; line-height: 1.55; color: #e4dabd; max-height: 7.5em; overflow: auto; }
 .cwm-card-status { padding: 4px 18px 0; font-size: .78rem; color: #e0b44a; }
 .cwm-card-status.on { color: #7fd69a; }
+.cwm-card-trial { padding: 4px 18px 0; font-size: .78rem; color: #f0d98a; }
 .cwm-card-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 18px 16px; }
 .cwm-btn { border: 1px solid rgba(255,255,255,.3); background: transparent; color: #f3ead2; padding: 7px 12px; border-radius: 9px; font-size: .84rem; cursor: pointer; text-decoration: none; }
 .cwm-btn.primary { background: #c9a227; border-color: #c9a227; color: #1a1205; font-weight: 700; }
@@ -227,6 +229,7 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
   .cwm-card-hero > h3 { flex: 1 1 auto; min-width: 0; }
   .cwm-card-desc { padding: 8px 14px 2px; max-height: 4.6em; font-size: .82rem; }
   .cwm-card-status { padding: 2px 14px 0; }
+  .cwm-card-trial { padding: 2px 14px 0; }
   .cwm-card-actions { padding: 8px 14px 12px; }
   .cwm-btn { flex: 1 1 auto; text-align: center; }
   .cwm-hint { display: none; }

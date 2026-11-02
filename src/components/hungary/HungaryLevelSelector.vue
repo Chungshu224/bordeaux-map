@@ -122,6 +122,7 @@ import { hungaryLearningState, hungaryLearningLevels } from '../../stores/hungar
 import { hungaryAchievementState } from '../../stores/hungaryAchievementSystem.js'
 import { authActions } from '../../stores/authStore.js'
 import AchievementsDashboard from '../AchievementsDashboard.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 
@@ -155,10 +156,12 @@ const totalProgressPct = computed(() => {
   return Math.round((completedLessons.value.length / totalLessonCount.value) * 100)
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('hungary')
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (authActions.isAdmin()) return true
   if (hungaryLearningState.testMode) return true
+  if (!hasCoursePaid.value) return false
   const finalId = (LEVEL_LESSON_IDS[n - 1] || []).at(-1)
   return finalId != null && completedLessons.value.includes(finalId)
 }
@@ -241,7 +244,7 @@ const levelData = computed(() => [
     lessons: 6,
     progress: levelProgress(2),
     unlocked: isLevelUnlocked(2) && !hungaryLearningLevels.level2?.comingSoon,
-    unlockHint: hungaryLearningLevels.level2?.comingSoon ? '🚧 課程開發中，敬請期待' : '完成 Level 1 後解鎖'
+    unlockHint: planHint(hungaryLearningLevels.level2?.comingSoon ? '🚧 課程開發中，敬請期待' : '完成 Level 1 後解鎖')
   }
 ])
 

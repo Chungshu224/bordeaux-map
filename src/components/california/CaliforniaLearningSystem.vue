@@ -29,7 +29,7 @@
       :completedLessons="californiaLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="showLevelSelector = true"
-      @changeLevel="(n) => isLevelUnlocked(n) && californiaLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (californiaLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => californiaLearningActions.startLesson(lesson.id)"
     />
 
@@ -84,6 +84,7 @@ import CaliforniaTastingNotebookPage from './notebook/CaliforniaTastingNotebookP
 import CaliforniaGamesPage from './games/CaliforniaGamesPage.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning'])
 const router = useRouter()
@@ -136,10 +137,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || '投影片導航'
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('california')
 function isLevelUnlocked(level) {
   if (californiaLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = californiaLearningActions.getFinalLessonId(level - 1)
   return finalId != null && californiaLearningState.completedLessons.includes(finalId)
 }

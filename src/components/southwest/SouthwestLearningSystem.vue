@@ -8,7 +8,7 @@
       :completedLessons="southwestLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && southwestLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (southwestLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => southwestLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import SouthwestCourseLayout from './SouthwestCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalSouthwestAchievementManager } from '../../stores/southwestAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('southwest')
 function isLevelUnlocked(level) {
   if (southwestLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = southwestLearningActions.getFinalLessonId(level - 1)
   return finalId != null && southwestLearningState.completedLessons.includes(finalId)
 }
