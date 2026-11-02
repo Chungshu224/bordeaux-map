@@ -10,9 +10,23 @@
       <div class="checkout-grid">
         <section class="panel basket-panel">
           <h2>1. 選擇課程或通行證</h2>
-          <p class="panel-note">可複選課程；若一次選多門，建議改用全球通行證。</p>
+          <p class="panel-note">{{ specialItem ? '此商品一次付清，無需另選時長。' : '可複選課程；若一次選多門，建議改用全球通行證或區域包。' }}</p>
 
-          <div class="course-list">
+          <div v-if="specialItem" class="course-list">
+            <div class="course-item global active">
+              <div class="ci-main">
+                <span class="ci-icon">{{ specialItem.icon }}</span>
+                <div>
+                  <div class="ci-name">{{ specialItem.name }}　NT$ {{ formatInt(specialItem.price) }}</div>
+                  <div class="ci-meta">{{ specialItem.note }}</div>
+                </div>
+              </div>
+              <span class="ci-check">✓</span>
+            </div>
+            <button class="inline-btn" @click="router.push('/pricing')">← 改選其他方案</button>
+          </div>
+
+          <div v-else class="course-list">
             <button
               v-for="course in INDIVIDUAL_COURSES"
               :key="course.id"
@@ -59,7 +73,7 @@
         <section class="panel config-panel">
           <h2>2. 設定方案與優惠</h2>
 
-          <div class="field">
+          <div v-if="!specialItem" class="field">
             <label>購買時長</label>
             <div class="segmented">
               <button :class="['seg-btn', billingPeriod === 'monthly' ? 'active' : '']" @click="billingPeriod = 'monthly'">月繳</button>
@@ -119,7 +133,7 @@
 
           <div class="summary-row">
             <span>方案時長</span>
-            <strong>{{ billingPeriod === 'monthly' ? '月繳' : '年繳' }}</strong>
+            <strong>{{ billingPeriod === 'monthly' ? '月繳' : billingPeriod === 'quarterly' ? '90 天（一次付清）' : '年繳' }}</strong>
           </div>
 
           <div class="summary-row">
@@ -163,23 +177,24 @@
 import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { authState } from '../stores/authStore.js'
+import {
+  LIVE_COURSES, BUNDLES, BUNDLE_META, COURSE_CLASS, PRICE_CLASSES, SPRINT, COURSE_EMOJI, COURSE_NAME_ZH, globalPrice
+} from '../lib/pricingCatalog.js'
 import { initiateCheckout, submitEcpayForm, validateAndApplyCoupon } from '../lib/purchaseService.js'
 
 const route = useRoute()
 const router = useRouter()
 
-const PRICES = {
-  bordeaux: { basic: { monthly: 290, yearly: 1800 } },
-  bourgogne: { basic: { monthly: 390, yearly: 2400 } },
-  italy: { basic: { monthly: 290, yearly: 1800 } },
-  global: { basic: { monthly: 690, yearly: 4990 } }
-}
+const PRICES = { global: { basic: globalPrice() } }
+for (const id of Object.keys(COURSE_CLASS)) PRICES[id] = { basic: PRICE_CLASSES[COURSE_CLASS[id]].basic }
 
-const INDIVIDUAL_COURSES = [
-  { id: 'bordeaux', icon: '🏰', name: '波爾多課程', prices: PRICES.bordeaux.basic },
-  { id: 'bourgogne', icon: '🍇', name: '布根地課程', prices: PRICES.bourgogne.basic },
-  { id: 'italy', icon: '🇮🇹', name: '義大利課程', prices: PRICES.italy.basic }
-]
+// 單課選項：目前上線的課程
+const INDIVIDUAL_COURSES = LIVE_COURSES.map((id) => ({
+  id,
+  icon: COURSE_EMOJI[id] || '🍷',
+  name: `${COURSE_NAME_ZH[id] || id}課程`,
+  prices: PRICES[id].basic
+}))
 
 const PAYMENT_METHODS = [
   { value: 'Credit', label: '信用卡' },
@@ -187,7 +202,14 @@ const PAYMENT_METHODS = [
   { value: 'CVS', label: '超商繳費' }
 ]
 
-const billingPeriod = ref(route.query.billingPeriod === 'yearly' ? 'yearly' : 'monthly')
+const presetBundleId = BUNDLES[String(route.query.courseId || '')] ? String(route.query.courseId) : null
+const isSprint = String(route.query.courseId || '') === 'global' && route.query.billingPeriod === 'quarterly'
+const specialItem = presetBundleId
+  ? { id: presetBundleId, icon: BUNDLE_META[presetBundleId]?.emoji || '🌍', name: { bundle_france: '法國產區包', bundle_europe: '歐洲產區包', bundle_newworld: '新世界產區包' }[presetBundleId], period: 'yearly', price: BUNDLES[presetBundleId].price.yearly, note: `含 ${BUNDLES[presetBundleId].courses.length} 門課（目前上線 ${BUNDLES[presetBundleId].courses.filter((c) => LIVE_COURSES.includes(c)).length} 門），有效期內該區新課程公開時自動解鎖。僅年繳。` }
+  : isSprint
+    ? { id: 'global', icon: '🎯', name: '3 個月衝刺包', period: 'quarterly', price: SPRINT.price, note: `目前上線全部課程 ${SPRINT.days} 天完整存取，一次付清、不自動續約。` }
+    : null
+const billingPeriod = ref(specialItem ? specialItem.period : (route.query.billingPeriod === 'yearly' ? 'yearly' : 'monthly'))
 const paymentMethod = ref(
   PAYMENT_METHODS.some((p) => p.value === route.query.paymentMethod)
     ? route.query.paymentMethod
@@ -198,7 +220,9 @@ const selectedCourseIds = ref([])
 const isGlobalSelected = ref(false)
 
 const presetCourseId = String(route.query.courseId || '').toLowerCase()
-if (presetCourseId === 'global') {
+if (specialItem) {
+  // 特殊商品（區域包／衝刺包）：不使用課程複選
+} else if (presetCourseId === 'global') {
   isGlobalSelected.value = true
 } else if (INDIVIDUAL_COURSES.some((c) => c.id === presetCourseId)) {
   selectedCourseIds.value = [presetCourseId]
@@ -223,6 +247,7 @@ const paymentMethodLabel = computed(
 )
 
 const selectedDisplayNames = computed(() => {
+  if (specialItem) return [specialItem.name]
   if (isGlobalSelected.value) return ['全球產區通行證']
   return INDIVIDUAL_COURSES
     .filter((c) => selectedCourseIds.value.includes(c.id))
@@ -240,6 +265,7 @@ const firstSelectedCourseName = computed(() => {
 })
 
 const checkoutCourseId = computed(() => {
+  if (specialItem) return specialItem.id
   if (isGlobalSelected.value) return 'global'
   if (isThreeCourseSelection.value) return null
   if (isTwoCourseSplitPayment.value) return firstSelectedCourseId.value
@@ -248,6 +274,7 @@ const checkoutCourseId = computed(() => {
 })
 
 const subtotalAmount = computed(() => {
+  if (specialItem) return specialItem.price
   if (isGlobalSelected.value) {
     return PRICES.global.basic[billingPeriod.value]
   }

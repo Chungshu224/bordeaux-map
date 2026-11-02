@@ -4,6 +4,7 @@
  * 寫入由後端 webhook（api/ecpay-callback.js）負責
  */
 import { supabase } from './supabaseClient.js'
+import { buildCoursePricing } from './pricingCatalog.js'
 
 // ─── 定義常數 ─────────────────────────────────────────────────────────────────
 
@@ -60,15 +61,7 @@ export const COURSES = {
 
 // 各課程的訂閱定價（月費 / 年費）
 // 此為前端預設值；正式定價以 Supabase courses 表為準，可由後台管理介面修改
-export const COURSE_PRICING = {
-  bordeaux:  { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  bourgogne: { basic: { monthly: 390, yearly: 2400 }, premium: { monthly: 690, yearly: 4200 } },
-  italy:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  spain:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  loire:      { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  california: { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-  alsace:     { basic: { monthly: 290, yearly: 1800 }, premium: { monthly: 590, yearly: 3600 } },
-}
+export const COURSE_PRICING = buildCoursePricing()
 
 export const TIERS = {
   free: {

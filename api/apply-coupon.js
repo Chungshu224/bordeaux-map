@@ -10,6 +10,7 @@
  *   SUPABASE_SERVICE_ROLE_KEY
  */
 
+import { getGrantCourses } from './_lib/catalog.js'
 import { verifyAuth } from './_lib/auth.js'
 import { getAdminClient } from './_lib/auth.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
@@ -245,8 +246,8 @@ export default async function handler(req, res) {
     console.error('[apply-coupon] update app_metadata failed for user', maskId(userId), ':', metaErr)
   }
 
-  if (courseId === 'global') {
-    const subCourses = ['bordeaux', 'bourgogne', 'italy']
+  const subCourses = getGrantCourses(courseId)
+  if (subCourses.length) {
     const rows = subCourses.map((cid) => ({
       user_id: userId,
       course_id: cid,

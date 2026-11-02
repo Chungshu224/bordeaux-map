@@ -20,6 +20,7 @@ import { verifyAuth } from './_lib/auth.js'
 import { getUserClient } from './_lib/supabase.js'
 import { getAdminClient } from './_lib/auth.js'
 import { getServerPrice } from './_lib/pricing.js'
+import { isKnownCourse, getItemName } from './_lib/catalog.js'
 import { escapeHtml, maskId } from './_lib/security.js'
 import { checkUserCheckoutRate } from './_lib/ratelimit.js'
 import {
@@ -117,13 +118,13 @@ export default async function handler(req, res) {
   if (!courseId || !tier) {
     return res.status(400).json({ message: '缺少必要參數' })
   }
-  if (!['bordeaux', 'bourgogne', 'italy', 'spain', 'loire', 'california', 'global'].includes(courseId)) {
+  if (!isKnownCourse(courseId)) {
     return res.status(400).json({ message: '無效課程 ID' })
   }
   if (!['basic', 'premium'].includes(tier)) {
     return res.status(400).json({ message: '無效方案' })
   }
-  if (!['monthly', 'yearly'].includes(billingPeriod)) {
+  if (!['monthly', 'yearly', 'quarterly'].includes(billingPeriod)) {
     return res.status(400).json({ message: '無效計費週期' })
   }
   const ALLOWED_PAYMENT_METHODS = ['ALL', 'Credit', 'ATM', 'CVS', 'BARCODE', 'WebATM']
@@ -237,8 +238,8 @@ export default async function handler(req, res) {
     return `${n.getFullYear()}/${String(n.getMonth()+1).padStart(2,'0')}/${String(n.getDate()).padStart(2,'0')} ${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}:${String(n.getSeconds()).padStart(2,'0')}`
   })()
 
-  const billingLabel = billingPeriod === 'yearly' ? '年繳365日' : '月繳30日'
-  const itemName = `${ITEM_NAMES[`${courseId}-${tier}`] || `${courseId} ${tier}`}（${billingLabel}）`
+  const billingLabel = billingPeriod === 'yearly' ? '年繳365日' : billingPeriod === 'quarterly' ? '衝刺90日' : '月繳30日'
+  const itemName = `${ITEM_NAMES[`${courseId}-${tier}`] || getItemName(courseId, tier)}（${billingLabel}）`
 
   const params = {
     MerchantID:          merchantId,

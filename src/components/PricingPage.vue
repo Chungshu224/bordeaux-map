@@ -77,12 +77,12 @@
             <div class="tier-label">{{ $t('pricing.tiers.global.label') }}</div>
             <div class="tier-price-wrap">
               <span class="tier-price">
-                NT$ {{ period === 'monthly' ? '690' : '4,990' }}
+                NT$ {{ fmt(globalTier[period]) }}
               </span>
               <span class="tier-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
             </div>
             <div class="tier-saving" v-if="period === 'yearly'">{{ $t('pricing.tiers.global.yearlySaving') }}</div>
-            <div class="tier-desc" v-html="$t('pricing.tiers.global.desc')"></div>
+            <div class="tier-desc" v-html="$t('pricing.tiers.global.desc', { n: LIVE_COURSES.length })"></div>
           </div>
           <ul class="tier-features">
             <li v-for="feat in $tm('pricing.tiers.global.features')" :key="feat" class="ok">{{ feat }}</li>
@@ -173,6 +173,63 @@
     </div>
   </div>
 
+
+  <!-- ── 區域包 + 衝刺包 ────────────────────────────────────────────────── -->
+  <div class="bundle-section">
+    <div class="other-inner">
+      <div class="other-head">
+        <h2>{{ $t('pricing.bundles.title') }}</h2>
+        <p>{{ $t('pricing.bundles.subtitle') }}</p>
+      </div>
+      <div class="bundle-grid">
+        <div v-for="b in bundleCards" :key="b.id" class="bundle-card" :class="{ 'subscribed-card': b.subscribed }">
+          <div v-if="b.subscribed" class="subscribed-badge">{{ $t('pricing.tiers.subscribed') }}</div>
+          <div class="bd-emoji">{{ b.emoji }}</div>
+          <h3 class="oc-title">{{ b.name }}</h3>
+          <div class="oc-price-row">
+            <span class="oc-price">NT$ {{ fmt(b.price) }}</span>
+            <span class="oc-period">{{ $t('pricing.bundles.perYear') }}</span>
+          </div>
+          <div class="oc-saving">{{ $t('pricing.bundles.saving', { pct: b.pct }) }}</div>
+          <div class="bd-includes">{{ $t('pricing.bundles.includes', { n: b.total, live: b.live }) }}</div>
+          <div class="bd-chips">
+            <span v-for="c in b.courses" :key="c.id" :class="['bd-chip', { soon: !c.live }]">{{ c.label }}</span>
+          </div>
+          <div class="bd-note">{{ $t('pricing.bundles.yearlyOnly') }}</div>
+          <button class="tier-cta oc-cta" :disabled="checkoutLoading || b.subscribed" @click="handleCoursePurchase(b.id, 'yearly')">
+            {{ b.subscribed ? $t('pricing.tiers.subscribed') : $t('pricing.bundles.cta', { name: b.name }) }}
+          </button>
+        </div>
+
+        <div class="bundle-card sprint-card">
+          <div class="oc-badge">{{ $t('pricing.sprint.badge') }}</div>
+          <h3 class="oc-title">{{ $t('pricing.sprint.title') }}</h3>
+          <div class="oc-price-row">
+            <span class="oc-price">NT$ {{ fmt(SPRINT.price) }}</span>
+            <span class="oc-period">{{ $t('pricing.sprint.unit') }}</span>
+          </div>
+          <p class="bd-desc">{{ $t('pricing.sprint.desc') }}</p>
+          <ul class="oc-features">
+            <li v-for="pt in $tm('pricing.sprint.points')" :key="pt">{{ pt }}</li>
+          </ul>
+          <button class="tier-cta oc-cta" :disabled="checkoutLoading" @click="handleCoursePurchase('global', 'quarterly')">
+            {{ $t('pricing.sprint.cta') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="more-prices">
+        <h3>{{ $t('pricing.more.title') }}</h3>
+        <p>{{ $t('pricing.more.subtitle') }}</p>
+        <div class="bd-chips center">
+          <span v-for="c in priceChips" :key="c.id" :class="['bd-chip', 'price-chip', { soon: !c.live }]">
+            {{ c.label }} · {{ $t('pricing.more.from', { price: c.price }) }}<em v-if="!c.live"> · {{ $t('pricing.more.soon') }}</em>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 功能對比 (表格式) -->
   <div class="compare-section">
     <div class="cs-inner">
@@ -191,7 +248,7 @@
               </th>
               <th class="ct-th-tier">
                 <div class="ct-th-name">{{ $t('pricing.compare.tierGlobal') }}</div>
-                <div class="ct-th-price">NT$ 690<span class="ct-th-unit">/月起</span></div>
+                <div class="ct-th-price">NT$ {{ fmt(globalTier.monthly) }}<span class="ct-th-unit">/月起</span></div>
               </th>
             </tr>
           </thead>
@@ -246,9 +303,14 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { authState } from '../stores/authStore.js'
 import { getCourseAccess } from '../lib/purchaseService.js'
+import {
+  LIVE_COURSES, BUNDLES, BUNDLE_META, COURSE_CLASS, PRICE_CLASSES, SPRINT, globalPrice
+} from '../lib/pricingCatalog.js'
 
 const router = useRouter()
 const { t, tm } = useI18n()
+const fmt = (n) => Number(n || 0).toLocaleString('zh-TW')
+const globalTier = computed(() => globalPrice())
 const authUser = computed(() => authState.user)
 
 // 訂閱狀態
@@ -276,10 +338,38 @@ onMounted(async () => {
       italy: italyTier,
       global: bordeauxTier === 'basic' && bourgogneTier === 'basic' && italyTier === 'basic'
     }
+    // 區域包：該包目前上線的課程全部已有權限即視為已持有
+    const owned = {}
+    for (const [bid, b] of Object.entries(BUNDLES)) {
+      const live = b.courses.filter((c) => LIVE_COURSES.includes(c))
+      const tiers = await Promise.all(live.map((c) => getCourseAccess(authUser.value.id, c)))
+      owned[bid] = live.length > 0 && tiers.every((x) => x === 'basic' || x === 'premium')
+    }
+    bundleAccess.value = owned
   } catch (err) {
     console.error('[Pricing] 無法取得訂閱狀態:', err)
   }
 })
+
+// 區域包／單課價格卡（資料來自 pricingCatalog）
+const bundleAccess = ref({})
+const courseLabel = (id) => t(`home.courses.labels.${id}`)
+const bundleCards = computed(() => Object.entries(BUNDLES).map(([id, b]) => {
+  const sum = b.courses.filter((c) => LIVE_COURSES.includes(c)).reduce((acc, c) => acc + PRICE_CLASSES[COURSE_CLASS[c]].basic.yearly, 0)
+  return {
+    id, price: b.price.yearly, emoji: BUNDLE_META[id]?.emoji || '🌍',
+    name: t(`pricing.bundles.names.${id}`),
+    pct: sum > 0 ? Math.max(0, Math.round((1 - b.price.yearly / sum) * 100)) : 0,
+    total: b.courses.length,
+    live: b.courses.filter((c) => LIVE_COURSES.includes(c)).length,
+    courses: b.courses.map((c) => ({ id: c, label: courseLabel(c), live: LIVE_COURSES.includes(c) })),
+    subscribed: !!bundleAccess.value[id]
+  }
+}))
+const priceChips = computed(() => Object.keys(COURSE_CLASS).map((id) => ({
+  id, label: courseLabel(id), live: LIVE_COURSES.includes(id),
+  price: PRICE_CLASSES[COURSE_CLASS[id]].basic.monthly
+})))
 
 const paymentMethod = ref('Credit')
 const paymentMethodOptions = computed(() => [
@@ -393,10 +483,10 @@ function handleWaitlist() {
   window.open('mailto:chungshu224@gmail.com?subject=全球產區通行證早鳥等待名單&body=您好，我想加入早鳥等待名單，課程上線時請優先通知我。%0a%0a總計，', '_blank')
 }
 
-async function handleCoursePurchase(courseId) {
+async function handleCoursePurchase(courseId, forcedPeriod) {
   const query = {
     courseId,
-    billingPeriod: period.value,
+    billingPeriod: forcedPeriod || period.value,
     paymentMethod: paymentMethod.value
   }
 
@@ -910,4 +1000,25 @@ thead .ct-col-highlight { border-top: 2px solid rgba(212,175,55,0.45); }
 .oc-cta { margin-top: 8px; }
 .bourg-cta { background: linear-gradient(135deg, #4a2060, #6b2d8a) !important; }
 .italy-cta  { background: linear-gradient(135deg, #7a2820, #a83828) !important; }
+
+/* ── 區域包 / 衝刺包 ───────────────────────────────────────────────────── */
+.bundle-section { padding: 10px 20px 50px; }
+.bundle-section .other-inner { max-width: 1080px; }
+.bundle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; max-width: 1080px; margin: 0 auto; }
+.bundle-card { position: relative; background: rgba(255,255,255,.04); border: 1px solid rgba(212,175,55,.28); border-radius: 18px; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 8px; }
+.bundle-card.sprint-card { border-color: rgba(231,111,81,.6); background: linear-gradient(160deg, rgba(231,111,81,.12), rgba(255,255,255,.03)); }
+.bd-emoji { font-size: 2rem; }
+.bd-includes { font-size: .85rem; opacity: .85; }
+.bd-note { font-size: .75rem; opacity: .65; }
+.bd-desc { margin: 0; font-size: .86rem; line-height: 1.55; opacity: .9; }
+.bd-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.bd-chips.center { justify-content: center; max-width: 960px; margin: 0 auto; }
+.bd-chip { font-size: .75rem; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); }
+.bd-chip.soon { opacity: .55; border-style: dashed; }
+.bd-chip em { font-style: normal; opacity: .8; }
+.price-chip { font-size: .8rem; }
+.more-prices { text-align: center; margin-top: 34px; }
+.more-prices h3 { margin: 0 0 4px; }
+.more-prices p { margin: 0 0 14px; opacity: .75; font-size: .9rem; }
+.bundle-card .tier-cta { margin-top: auto; }
 </style>

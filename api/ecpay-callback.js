@@ -10,6 +10,7 @@
  * 環境變數同 ecpay-checkout.js
  */
 
+import { getGrantCourses, periodDays } from './_lib/catalog.js'
 import crypto from 'crypto'
 import { createClient } from '@supabase/supabase-js'
 import { maskId } from './_lib/security.js'
@@ -77,7 +78,10 @@ function higherTier(a, b) {
 
 function addBillingPeriod(baseDate, billingPeriod = 'monthly') {
   const next = new Date(baseDate)
-  if (billingPeriod === 'yearly') {
+  const fixedDays = periodDays(billingPeriod)
+  if (fixedDays) {
+    next.setDate(next.getDate() + fixedDays)
+  } else if (billingPeriod === 'yearly') {
     next.setFullYear(next.getFullYear() + 1)
   } else {
     next.setMonth(next.getMonth() + 1)
@@ -341,9 +345,9 @@ export default async function handler(req, res) {
     // 不阻斷流程，訂單已標記 paid，管理員可手動更新 tier
   }
 
-  // 5. 全球產區通行證：為各個課程插入個別 paid 記錄，使現有存取控制正常運作
-  if (purchase.course_id === 'global') {
-    const subCourses = ['bordeaux', 'bourgogne', 'italy']
+  // 5. 全球產區通行證／區域包／衝刺包：為各個課程插入個別 paid 記錄，使現有存取控制正常運作
+  const subCourses = getGrantCourses(purchase.course_id)
+  if (subCourses.length) {
     const subInserts = subCourses.map((cid, i) => ({
       user_id:          purchase.user_id,
       course_id:        cid,
@@ -353,8 +357,8 @@ export default async function handler(req, res) {
       status:           'paid',
       payment_provider: 'ecpay',
       billing_period:   billingPeriod,
-      merchant_trade_no: `${MerchantTradeNo}_${cid.slice(0, 3)}`,
-      payment_ref:      `global:${TradeNo}`,
+      merchant_trade_no: `${MerchantTradeNo}_${cid}`,
+      payment_ref:      `${purchase.course_id}:${TradeNo}:${cid}`,
       paid_at:          now,
       expires_at:       expiresAt,
     }))

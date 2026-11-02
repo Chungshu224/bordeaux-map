@@ -26,8 +26,8 @@ export function parseCouponPolicy(coupon) {
 export function validateCouponPolicy({ coupon, courseId, billingPeriod }) {
   const policy = parseCouponPolicy(coupon)
 
-  if (policy.scope === 'single' && courseId === 'global') {
-    return { ok: false, message: '此優惠碼僅適用於單一課程，不適用全球通行證。' }
+  if (policy.scope === 'single' && (courseId === 'global' || String(courseId).startsWith('bundle_'))) {
+    return { ok: false, message: '此優惠碼僅適用於單一課程，不適用通行證或區域包。' }
   }
   if (policy.scope === 'global' && courseId !== 'global') {
     return { ok: false, message: '此優惠碼僅適用於全球通行證。' }
