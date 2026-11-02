@@ -1712,6 +1712,7 @@ const courseConfig = computed(() => [
   { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'france' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
+  { id: 'chile', label: t('home.courses.labels.chile'), route: '/chile', group: 'newworld' },
   { id: 'southafrica', label: t('home.courses.labels.southafrica'), route: '/southafrica', group: 'newworld' },
   { id: 'austria', label: t('home.courses.labels.austria'), route: '/austria', group: 'europe' },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
