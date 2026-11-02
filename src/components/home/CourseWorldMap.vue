@@ -141,7 +141,7 @@ function select(id, fly) {
   selectedId.value = id
   paintSelection()
   const p = pins.value.find(x => x.id === id)
-  if (fly && map && p) map.flyTo({ center: p.ll, zoom: Math.max(map.getZoom(), 5.4), pitch: 35, duration: 1400, essential: true })
+  if (fly && map && p) map.flyTo({ center: p.ll, zoom: Math.max(map.getZoom(), 5.4), pitch: 35, padding: { top: 0, bottom: 0, left: window.innerWidth > 640 ? 340 : 0, right: 0 }, duration: 1400, essential: true })
 }
 function closeCard() { selectedId.value = null; paintSelection() }
 function goView(id) {
@@ -214,9 +214,17 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 .cwm-mini.active { background: var(--c); color: #fff; }
 
 @media (max-width: 640px) {
-  .cwm-map { height: 56vh; min-height: 360px; }
-  .cwm-card { top: auto; bottom: 0; left: 0; width: 100%; border-radius: 16px 16px 0 0; }
-  .cwm-card-desc { max-height: 5em; }
+  .cwm-map { height: 52vh; min-height: 340px; }
+  /* 手機：預覽卡放在地圖下方，不遮住地圖 */
+  .cwm-card { position: static; width: 100%; border-radius: 0 0 16px 16px; border-width: 1px 0 0; }
+  .cwm-card-hero { padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
+  .cwm-card-emoji { font-size: 1.7rem; }
+  .cwm-card-region { margin: 0; }
+  .cwm-card h3 { font-size: 1.1rem; margin: 0; }
+  .cwm-card-hero > div, .cwm-card-hero > h3 { margin-left: 0; }
+  .cwm-card-desc { padding: 8px 14px 2px; max-height: 4.6em; font-size: .82rem; }
+  .cwm-card-status { padding: 2px 14px 0; }
+  .cwm-card-actions { padding: 8px 14px 12px; }
   .cwm-hint { display: none; }
 }
 </style>
