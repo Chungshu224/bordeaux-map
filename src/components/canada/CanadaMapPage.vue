@@ -40,7 +40,6 @@
           :is3D="is3D"
           :show-contours="contoursEnabled"
           :climate-enabled="climateEnabled"
-          :hide-climate="true"
           :hide-soil="true"
           @toggle-3d="toggle3D"
           @toggle-contours="toggleContours"

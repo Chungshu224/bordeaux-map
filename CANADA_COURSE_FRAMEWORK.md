@@ -82,7 +82,7 @@
 - 互動功能：28 個示意點地圖、4 款遊戲、品飲筆記（`can_*` 八種類型）、成就、詞彙表 24 條（region `canada`）；字典 735 條 en／ja。
 - 課程維持僅管理員可見（`active=false`、`show_on_home=false`，首頁只有管理員卡片）。
 - 未套用的遷移檔（依序）：`20261106000000_add_canada_course.sql`、`20261106000100_add_canada_tasting_types.sql`（CHECK 保留所有先前類型含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence）。
-- 待辦：氣候資料 `public/data/canada-climate.json`（目前地圖已隱藏氣候圖層）；New Brunswick 資料；發音音檔；經濟衝擊等倡議數字需於更新時重新查證。
+- 氣候資料 `public/data/canada-climate.json` 已產生（28 點、1980–2025，Open-Meteo era5_land＋era5），地圖氣候圖層已開放。待辦：New Brunswick 資料；發音音檔；經濟衝擊等倡議數字需於更新時重新查證。
 - 已更正的早期錯誤：BC 法規編號與年份（Reg 79/2005 → 168/2018）、GI 標示比例（現行 85%）、Cellared in Canada 已於 2018-03-12 廢止。
 - 時效提醒：關稅與美國酒禁售（2025–26）、CUSMA 檢討、BC 寒害後的援助與品種政策都在變動，更新前請重新查證。
 - 分支鏈：feat/canada-design → -l1 → -l2 → -l3 → -interactive → -final；已試合併 master，無衝突（master = d970b79）。
