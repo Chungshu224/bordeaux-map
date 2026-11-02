@@ -88,6 +88,7 @@ export default {
     southwest:      'South-West France',
     brandy:         'Brandy',
     provence:         'Provence and Corsica',
+    canada:         'Canada',
     languedoc:      'Languedoc-Roussillon',
     chile:          'Chile',
     usother:        'US Other Regions',

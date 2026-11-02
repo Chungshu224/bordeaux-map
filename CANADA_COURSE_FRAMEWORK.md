@@ -1,0 +1,88 @@
+# 加拿大葡萄酒課程框架
+
+> 課程代碼 `canada`、課程前綴 `can-`（避開 `ca-`＝California、`cl-`＝Chile）、分支鏈 `feat/canada-*`。僅管理員可見；migration 只準備不套用。對應 WSET Diploma D3（Wines of the World）。
+
+## 1. 結構（3 階段 18 課）
+- **Level 1（5）**：can-l1-1 認識加拿大葡萄酒（歷史）、can-l1-2 地理、氣候與土壤、can-l1-3 品種、can-l1-4 VQA 與標示制度、can-l1-5 評量
+- **Level 2（8）**：can-l2-1 Ontario 總覽、can-l2-2 Niagara Peninsula 次產區、can-l2-3 Okanagan Valley、can-l2-4 BC 的其他產區、can-l2-5 Nova Scotia、can-l2-6 Quebec 與其他省分、can-l2-7 冰酒、氣泡酒與風格、can-l2-8 評量
+- **Level 3（5）**：can-l3-1 栽培與氣候變遷、can-l3-2 冰酒與釀造工藝、can-l3-3 產業與市場、can-l3-4 法規演變與 Diploma 論述、can-l3-5 評量
+
+## 2. 目前狀態與查證原則
+- 本階段（設計）只建立框架：頁面、路由、18 課空殼、首頁卡片（僅管理員）、en／ja 介面字典。**尚未做資料查證，課程空殼內不含任何事實性數字。**
+- 事實與數字於各階段製作課程時，以 WebSearch／WebFetch 查官方來源（VQA Ontario、BC Wine Authority、Wine Growers Canada、Statistics Canada 等）後才寫入，並標註來源；來源有出入者於課內標明、不進測驗。
+- 英文與日文以 overlay 提供；新增字串須有 en／ja。
+- 範圍界線：美國 Washington／Oregon 等屬美國課程；本課只談加拿大。
+
+## 3. 技術備註
+- 資料：`src/data/canada/`、`src/locales/{en,ja}/lessons/canada/`；store：`src/stores/canadaLearningStore.js`；UI 字典：`src/locales/canadaUi/`。
+- 進度同步：`courseProgressSync.js` 的 `saveCanadaLesson`／`loadAndMergeCanadaProgress`（course id `canada`）。
+- Migration：`supabase/migrations/20261106000000_add_canada_course.sql`（active=false、show_on_home=false；**由使用者自行套用**）。
+- 公開時：移除路由 `requiresAdmin`、PlatformHome 的 `ADMIN_ONLY_COURSES` 移除 `canada`、執行 migration 末尾註解的 UPDATE。
+- 後續階段：Level 1 → Level 2 → Level 3 → 互動（地圖、遊戲、品飲、成就、詞彙）→ 總結。
+
+## 4. Level 1 查證資料與來源衝突
+**來源**：The Canadian Encyclopedia（Wine Industry）、Wine With Seth（Canada、British Columbia、Okanagan Valley）、VQA Ontario（Wine Categories and Labelling）、AWRI Niagara、Winealign（Inniskillin）、Wikipedia（Cellared in Canada）、Grape Growers of Ontario Fact Sheet 2024。
+
+**已採用的事實**
+- 歷史：1811 Schiller（Credit River）；1866 Pelee Island 30 英畝 Catawba；1890 年 41 家商業酒廠（35 家在 Ontario）；禁酒 1916–1927 期間釀酒仍合法；1975 Inniskillin；VQA 1988 年由 Ontario 酒廠設立、1990 年引入 BC；Vintners Quality Alliance Act, 1999 於 2000-06-29 公布，首款 VQA 酒 2000-07-10；BC 1988–1990 拔樹約 65%；BC Wines of Marked Quality Regulation 2005-08 生效。
+- 氣候：Vineland 43°11'N、PEC 44°N、LENS 約 42°N、BC 約 49–50°N；Okanagan 約 175 公里、雨量北約 400 mm→Osoyoos 約 250–300 mm；寒害與春霜為主要限制。
+- 品種：Ontario VQA 2025-26 年度體積比例（Chardonnay 13%、Riesling 12%、Cabernet Franc 12%、Merlot 11%…）；Vidal 冰酒 388,970／468,752 L；BC 最多紅品種 Pinot Noir。
+- 制度：Ontario 100%／區域 >85%／次產區 100%／年份 85%；BC 100%／GI（含次 GI）85%（現行 B.C. Reg. 168/2018 第 57 條；舊資料與 2019 學習指南寫 95%）／年份 85%／品種 85%；Ontario 冰酒 ≤ -8°C、≥35°Brix；BC 冰酒殘糖 ≥100 g/L；「Cellared in Canada」曾允許 BC 100% 外國成分、Ontario ≤60%（Wikipedia，舊制），CFIA 自 2018-03-12 取消該用語，改標 International blend（USDA FAS、BIV）。
+
+**來源有出入（課內標明、不進測驗）**
+- Inniskillin 執照：Winealign 寫「自 1929 年以來第一張」，常見說法為「自禁酒時期以來」。
+- Niagara Escarpment 高度：AWRI 60–100 m 山脊；Wine With Seth 最高約 177 m。
+- BC 最多種植的白品種：BC 頁寫 Pinot Gris，Okanagan 頁列 Chardonnay。
+- BC 的 GI 與次 GI 數目（9 或 10 個 GI；11 或 12 個次 GI）——留待 Level 2 查證。
+- 面積與產量數字（2025 年全加拿大 13,290 公頃、Ontario 約 17,000 英畝、BC 約 4,500 公頃等）各年度、各來源不同，只作背景。
+
+## 5. Level 2 查證資料與來源衝突
+**來源**：VQA Ontario（Niagara Peninsula／Escarpment／West Niagara 頁面）、Wine With Seth（Ontario、Okanagan、Similkameen、Nova Scotia）、Wikipedia（Ontario wine、Nova Scotia wine、Quebec wine）、GuildSomm（BC Geographical Indications）、BC 政府新聞稿（2022-06-28）、Wine Industry Advisor（Cowichan 2020-07-10）、Wine Growers Nova Scotia（Tidal Bay）、Vins du Québec 2023 報告、Luxe Magazine Ottawa、MyWinePal。
+
+**已採用的事實**
+- Ontario：三個認定產區（Niagara Peninsula、Lake Erie North Shore、Prince Edward County 2007）；Niagara 3 個區域產區＋10 個次產區（Escarpment 3＋Niagara-on-the-Lake 4＋West Niagara 3）；Lake Erie North Shore 的 South Islands；PEC 奧陶紀石灰岩、冬季可低於 -24°C 並培土埋藤。
+- BC：9 個 GI、12 個次 GI（Okanagan 11＋Cowichan）；Okanagan GI 1990；Golden Mile Bench 2015 為首個次 GI；2022-06-28 新增六個 Okanagan 次 GI；Cowichan 2020-07-10；次 GI 須 ≥95% 來自該地。
+- Nova Scotia：Tidal Bay 2012-06、100% NS 葡萄、≤11% 酒精、每年盲飲審核；1979 Grand Pré 起算商業生產。
+- Quebec：Champlain 1608；1919 禁酒但葡萄酒除外；SAQ 壟斷；Vin du Québec PGI 2018 起保證 100% Quebec 葡萄；vinifera <10%。
+- 風格：Late Harvest／Select／Special Select／Icewine ≥22／26／30／35°Brix；Sparkling ≥300 kPa；Skin Fermented White ≥10 天；Appassimento ≥85% 風乾葡萄。
+
+**來源有出入（課內標明、不進測驗）**
+- West Niagara：VQA 頁面列出六個（含 Escarpment 的三個），與總數 10 不合；課內採 3＋4＋3，由 Wine With Seth 的 Escarpment 與 Niagara-on-the-Lake 列法推得，West Niagara 的三個（Lincoln Lakeshore、Creek Shores、Vinemount Ridge）為推論。
+- Niagara Escarpment 高度（60–100 m 或最高約 177 m）；Okanagan 的酒廠數與面積（226／10,920 英畝 vs 186／9,617 英畝）；Similkameen 面積與主要品種；Nova Scotia 面積（404／256／400／530 公頃）；Quebec 的產區數（6／7／9）、面積與酒廠數。
+- 首批冰酒：1983（Wikipedia）或 1984（Winealign）；Ontario 冰酒殘糖 180–320 g/L 為單一來源。
+- Tidal Bay 品種細則：Wikipedia 稱 L'Acadie Blanc 等四品種合計 ≥51%、另可用 16 個品種；官方頁面的清單為圖片，無法核對。
+- Golden Mile Slopes 的指定年份各來源未說明。
+- 單一來源的數字（GuildSomm 各 GI 的酒廠數、面積與品種比例；MyWinePal 的 Naramata Bench 品種比例）只作背景、不出題。
+- 尚未涵蓋：New Brunswick 等其他省分（本課標題的「其他省分」目前只含 Quebec 與各省規模比較）。
+
+**更正紀錄（Level 3 研究時）**：(1) BC 法規：Wines of Marked Quality Regulation 為 B.C. Reg. 79/2005（2005-08-01 生效），2018-07-27 由 B.C. Reg. 168/2018 取代；先前誤寫 168/2018 於 2005 年生效。(2) BC GI 比例：現行法規第 57 條為 85%，非 95%（95% 見於 Wine With Seth、2019 年學習指南與 2020 年報導，可能為修正前的規定，未能查到修正紀錄，課內以現行法規為準並標明來源不一致）。(3) Cellared in Canada：Wikipedia 的描述屬舊制，已被 CFIA 在 2018-03-12 取消。
+
+## 6. Level 3（進階主題）
+
+- can-l3-1 栽培與氣候變遷：BC 2022–2024 寒害（-25°C、2023 減產約 58%、2024 預估 97–99%）、Ontario 2014–15 芽存活、風機條件、2018 野火煙害（guaiacol／4-methylguaiacol）、氣候推估（單一來源）
+- can-l3-2 冰酒與釀造工藝：採收（≤ -8°C、夜間）、凍榨、發酵、BC s.41（RS ≥100 g/L、VA ≤2.1 g/L）、氣泡酒、Appassimento、浸皮白酒
+- can-l3-3 產業與市場：WGC、國內市占約 30%、出口、省際運送、超市、2025–26 美國酒禁售、Cellared in Canada 終結
+- can-l3-4 法規演變與 Diploma 論述：Ontario VQA Act 2000-06-29；BC Reg 79/2005 → 168/2018；2018 四個新 GI；論述架構
+- can-l3-5 Level 3 綜合評量（12 題）
+- 來源衝突（已於課內標明、不進測驗）：冰酒出汁率（15% vs 5–10%）、冰酒酒精（9–11% vs 10–12%）、經濟衝擊數字、冰酒年產量、氣候推估。
+
+## 7. 互動階段
+
+- 地圖：`CanadaMapPage.vue`，28 個示意點（Ontario 9、BC 13、東部 6），全為示意點、非官方邊界；沒有氣候資料，已隱藏氣候圖層。
+- 遊戲：產區速答、品種配對、制度辨識快答、知識閃問（取自 Level 1–3 測驗）；來源有出入的數字不入題庫。
+- 品飲筆記：8 種類型 `can_ice / can_on_white / can_on_red / can_bc_white / can_bc_red / can_sparkling / can_east / can_other`。
+- 成就：`canadaAchievementSystem.js`；詞彙表 region = `canada`（WineGlossary、AdminGlossary）。
+- 字典：`canadaUi` en／ja 共 735 條。
+- Migration（未套用）：`20261106000100_add_canada_tasting_types.sql`（CHECK 含所有先前類型，含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence、canada）。
+- 套用順序：先 20261106000000（課程列），再 000100、000200；課程仍為 admin-only，active=false。
+
+## 完成狀態（總結）
+
+- 課程內容：18 課（L1 5／L2 8／L3 5），en／ja 完成；有來源衝突的數字僅於課文標註、不入測驗（冰酒出汁率與酒精、經濟衝擊、各面積與酒廠數、Niagara Escarpment 高度、氣候推估等）。
+- 互動功能：28 個示意點地圖、4 款遊戲、品飲筆記（`can_*` 八種類型）、成就、詞彙表 24 條（region `canada`）；字典 735 條 en／ja。
+- 課程維持僅管理員可見（`active=false`、`show_on_home=false`，首頁只有管理員卡片）。
+- 未套用的遷移檔（依序）：`20261106000000_add_canada_course.sql`、`20261106000100_add_canada_tasting_types.sql`（CHECK 保留所有先前類型含 pv_*）、`20261106000200_add_canada_glossary.sql`（region CHECK 含 provence）。
+- 氣候資料 `public/data/canada-climate.json` 已產生（28 點、1980–2025，Open-Meteo era5_land＋era5），地圖氣候圖層已開放。待辦：New Brunswick 資料；發音音檔；經濟衝擊等倡議數字需於更新時重新查證。
+- 已更正的早期錯誤：BC 法規編號與年份（Reg 79/2005 → 168/2018）、GI 標示比例（現行 85%）、Cellared in Canada 已於 2018-03-12 廢止。
+- 時效提醒：關稅與美國酒禁售（2025–26）、CUSMA 檢討、BC 寒害後的援助與品種政策都在變動，更新前請重新查證。
+- 分支鏈：feat/canada-design → -l1 → -l2 → -l3 → -interactive → -final；已試合併 master，無衝突（master = d970b79）。

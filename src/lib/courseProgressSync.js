@@ -326,6 +326,24 @@ export async function loadAndMergeProvenceProgress(userId) {
   return true
 }
 
+// ─── Canada ───────────────────────────────────────────────────
+// Canada 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
+export const saveCanadaLesson = (userId, lessonId) => upsertLesson(userId, 'canada', lessonId)
+
+export async function loadAndMergeCanadaProgress(userId) {
+  const rows = await fetchRows(userId, 'canada')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `canada-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[canadaSync] ✅ synced')
+  return true
+}
+
 // ─── UsOther ───────────────────────────────────────────────────
 // UsOther 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
 export const saveUsOtherLesson = (userId, lessonId) => upsertLesson(userId, 'usother', lessonId)

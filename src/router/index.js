@@ -203,7 +203,7 @@ const routes = [
     name: 'Brandy',
     component: () => import('../components/brandy/BrandyPage.vue'),
     // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'brandy'）
-    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🌿 普羅旺斯與科西嘉 · 侍酒師的筆記本' }
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥃 白蘭地 · 侍酒師的筆記本' }
   },
   {
     path: '/brandy/course',
@@ -221,6 +221,19 @@ const routes = [
   {
     path: '/provence/course',
     redirect: '/provence'
+  },
+
+  // ─── 加拿大課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/canada',
+    name: 'Canada',
+    component: () => import('../components/canada/CanadaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'canada'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🍁 加拿大 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/canada/course',
+    redirect: '/canada'
   },
 
   // ─── 美國其他產區課程（框架版，僅管理員可見）──────────────────────────────────────────
@@ -449,6 +462,7 @@ const COURSE_ACCESS_RULES = {
   Southwest: { courseId: 'southwest', minimumTier: 'free' },
   Brandy: { courseId: 'brandy', minimumTier: 'free' },
   Provence: { courseId: 'provence', minimumTier: 'free' },
+  Canada: { courseId: 'canada', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },
   Chile: { courseId: 'chile', minimumTier: 'free' },
   UsOther: { courseId: 'usother', minimumTier: 'free' },
