@@ -177,11 +177,11 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 </script>
 
 <style scoped>
-.cwm { margin: 8px 0 24px; }
+.cwm { margin: 8px 0 24px; width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; white-space: normal; overflow-wrap: anywhere; }
 .cwm-filters { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 12px; }
 .cwm-chip { border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); color: inherit; border-radius: 999px; padding: 6px 16px; font-size: .9rem; cursor: pointer; }
 .cwm-chip.active { background: #c9a227; border-color: #c9a227; color: #1a1205; font-weight: 700; }
-.cwm-stage { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #0b0d18; }
+.cwm-stage { position: relative; width: 100%; min-width: 0; box-sizing: border-box; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #0b0d18; }
 .cwm-map { width: 100%; height: min(68vh, 620px); min-height: 420px; }
 .cwm-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); background: rgba(0,0,0,.6); color: #fff; padding: 6px 14px; border-radius: 999px; font-size: .82rem; pointer-events: none; white-space: nowrap; }
 .cwm-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: #ddd; background: #0b0d18; text-align: center; padding: 20px; }
@@ -193,7 +193,7 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 :global(.cwm-pin.active .cwm-pin-emoji) { box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 45%, transparent), 0 2px 12px rgba(0,0,0,.6); }
 :global(.cwm-pin-name) { margin-top: 3px; font-size: 11px; font-weight: 700; color: #fff; text-shadow: 0 1px 3px #000, 0 0 6px #000; white-space: nowrap; }
 
-.cwm-card { position: absolute; z-index: 8; top: 14px; left: 14px; width: min(330px, calc(100% - 28px)); background: rgba(18,16,12,.94); color: #f3ead2; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 34px rgba(0,0,0,.6); border: 1px solid color-mix(in srgb, var(--c) 60%, #000); }
+.cwm-card { box-sizing: border-box; white-space: normal; position: absolute; z-index: 8; top: 14px; left: 14px; width: min(330px, calc(100% - 28px)); background: rgba(18,16,12,.94); color: #f3ead2; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 34px rgba(0,0,0,.6); border: 1px solid color-mix(in srgb, var(--c) 60%, #000); }
 .cwm-card-hero { padding: 18px 18px 12px; background: linear-gradient(150deg, var(--c), #1a1205 120%); position: relative; }
 .cwm-card-emoji { font-size: 2.2rem; line-height: 1; }
 .cwm-card-region { font-size: .72rem; letter-spacing: .08em; opacity: .85; margin-top: 6px; }
@@ -221,10 +221,12 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
   .cwm-card-emoji { font-size: 1.7rem; }
   .cwm-card-region { margin: 0; }
   .cwm-card h3 { font-size: 1.1rem; margin: 0; }
-  .cwm-card-hero > div, .cwm-card-hero > h3 { margin-left: 0; }
+  .cwm-card-hero { flex-wrap: wrap; }
+  .cwm-card-hero > h3 { flex: 1 1 auto; min-width: 0; }
   .cwm-card-desc { padding: 8px 14px 2px; max-height: 4.6em; font-size: .82rem; }
   .cwm-card-status { padding: 2px 14px 0; }
   .cwm-card-actions { padding: 8px 14px 12px; }
+  .cwm-btn { flex: 1 1 auto; text-align: center; }
   .cwm-hint { display: none; }
 }
 </style>

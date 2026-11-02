@@ -3036,5 +3036,5 @@ onMounted(async () => {
 .cwm-list > summary { cursor: pointer; text-align: center; padding: 10px; font-size: .95rem; opacity: .85; list-style: none; }
 .cwm-list > summary::-webkit-details-marker { display: none; }
 .cwm-list[open] > summary { margin-bottom: 18px; }
-.hero-map { width: 100%; max-width: 980px; margin: 8px auto 0; text-align: left; }
+.hero-map { overflow-x: hidden; width: 100%; max-width: 980px; min-width: 0; margin: 8px auto 0; text-align: left; white-space: normal; box-sizing: border-box; }
 </style>
