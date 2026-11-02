@@ -106,16 +106,15 @@
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
           <div class="course-entry-title">{{ $t('home.hero.welcomeBack', { name: displayName }) }}</div>
-          <div class="course-entry-groups">
-            <div v-for="group in visibleCoursesByGroup" :key="group.label" class="ceg-row">
-              <span class="ceg-label">{{ group.label }}</span>
-              <button
-                v-for="course in group.courses"
-                :key="course.id"
-                :class="['cta-course', course.id + '-btn']"
-                @click="router.push(course.route)"
-              >{{ course.label }}</button>
-            </div>
+          <div class="hero-map">
+            <CourseWorldMap
+              :courses="visibleCourses"
+              :statuses="courseStatuses"
+              :is-admin="isAdmin"
+              :authed="true"
+              @detail="openCourseDetail"
+              @plans="goToPricing"
+            />
           </div>
         </div>
         <!-- 未登入：增強版 CTA -->
@@ -157,6 +156,7 @@
         </div>
 
       <CourseWorldMap
+        v-if="!authUser"
         :courses="visibleCourses"
         :statuses="courseStatuses"
         :is-admin="isAdmin"
@@ -3035,4 +3035,5 @@ onMounted(async () => {
 .cwm-list > summary { cursor: pointer; text-align: center; padding: 10px; font-size: .95rem; opacity: .85; list-style: none; }
 .cwm-list > summary::-webkit-details-marker { display: none; }
 .cwm-list[open] > summary { margin-bottom: 18px; }
+.hero-map { width: 100%; max-width: 980px; margin: 8px auto 0; text-align: left; }
 </style>
