@@ -2265,6 +2265,9 @@ onMounted(async () => {
   position: relative;
   z-index: 2;
   max-width: 720px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 36px 24px;
 }
 .hero-tag {
@@ -3036,5 +3039,5 @@ onMounted(async () => {
 .cwm-list > summary { cursor: pointer; text-align: center; padding: 10px; font-size: .95rem; opacity: .85; list-style: none; }
 .cwm-list > summary::-webkit-details-marker { display: none; }
 .cwm-list[open] > summary { margin-bottom: 18px; }
-.hero-map { overflow-x: hidden; width: 100%; max-width: 980px; min-width: 0; margin: 8px auto 0; text-align: left; white-space: normal; box-sizing: border-box; }
+.hero-map { contain: inline-size; overflow-x: hidden; width: 100%; max-width: 980px; min-width: 0; margin: 8px auto 0; text-align: left; white-space: normal; box-sizing: border-box; }
 </style>
