@@ -25,7 +25,7 @@
           </div>
           <div class="cwm-card-actions">
             <router-link v-if="canEnter" :to="selected.route" class="cwm-btn primary">{{ t('home.courses.common.enter') }} →</router-link>
-            <button class="cwm-btn" @click="$emit('detail', selected.id)">{{ t('home.courses.map.detail') }}</button>
+            <button v-if="HAS_DETAIL.includes(selected.id)" class="cwm-btn" @click="$emit('detail', selected.id)">{{ t('home.courses.map.detail') }}</button>
             <button class="cwm-btn ghost" @click="$emit('plans')">{{ t('home.courses.common.viewPlansBtn') }}</button>
           </div>
         </aside>
@@ -56,6 +56,8 @@ const props = defineProps({
 })
 defineEmits(['detail', 'plans'])
 
+// 首頁有「課程說明」彈窗的課程（其餘課程直接進入）
+const HAS_DETAIL = ['bordeaux', 'bourgogne', 'italy']
 const { t, te } = useI18n()
 
 // 課程標記位置（代表性產區）、主題色
