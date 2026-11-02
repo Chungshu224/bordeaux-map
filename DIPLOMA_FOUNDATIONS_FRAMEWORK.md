@@ -1,6 +1,6 @@
 # 🎓 Diploma 通論課程設計（D1／D2／D4／D5 跨產區通論）
 
-> 狀態：**內容與框架完成**（分支 `feat/diploma-depth`）。課程代號 `diploma`，課號前綴 `dp-l{階段}-{序號}`。僅管理員可見；`courses` 資料表的遷移檔 `20261110000100_add_diploma_course.sql` 尚未套用。
+> 狀態：**內容與框架完成**（分支 `feat/diploma-depth`）。課程代號 `diploma`，課號前綴 `dp-l{階段}-{序號}`。僅管理員可見；`courses` 資料表的課程列已存在於正式資料庫（`20261110000100_add_diploma_course.sql`，2026-11-10 確認）。
 
 ## 1. 定位
 
