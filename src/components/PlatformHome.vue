@@ -156,6 +156,17 @@
           <p>{{ $t('home.courses.sectionDesc') }}</p>
         </div>
 
+      <CourseWorldMap
+        :courses="visibleCourses"
+        :statuses="courseStatuses"
+        :is-admin="isAdmin"
+        :authed="!!authUser"
+        @detail="openCourseDetail"
+        @plans="goToPricing"
+      />
+
+      <details class="cwm-list">
+        <summary>{{ $t('home.courses.map.listToggle') }}</summary>
       <!-- ── 法國 France ── -->
       <div v-if="showFrance" class="region-group">
         <div class="region-group-header">
@@ -1245,6 +1256,7 @@
 
         </div><!-- /courses-grid 新世界 -->
       </div><!-- /region-group 新世界 -->
+      </details>
 
       </div><!-- /section-inner -->
     </section>
@@ -1587,6 +1599,7 @@
 </template>
 
 <script setup>
+import CourseWorldMap from './home/CourseWorldMap.vue'
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -3017,4 +3030,9 @@ onMounted(async () => {
   .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr; }
   .cc-col { font-size: 0.72rem; padding: 8px 6px; }
 }
+
+.cwm-list { margin-top: 18px; }
+.cwm-list > summary { cursor: pointer; text-align: center; padding: 10px; font-size: .95rem; opacity: .85; list-style: none; }
+.cwm-list > summary::-webkit-details-marker { display: none; }
+.cwm-list[open] > summary { margin-bottom: 18px; }
 </style>

@@ -64,6 +64,14 @@ export default {
     adminEnter: '管理者として入る',
     comingSoon: '📅 近日公開',
 
+    map: {
+      views: { world: '🌐 世界', france: '🇫🇷 フランス', europe: '🌍 ヨーロッパ', newworld: '🌏 新世界' },
+      hint: '地図上のマーカーをタップして各産地のコースを探索',
+      detail: '📋 コース詳細',
+      close: '閉じる',
+      fallback: '地図を読み込めません。下の「リストで見る」をご利用ください。',
+      listToggle: '📃 リストで全コースを見る'
+    },
     common: {
       satellite: '衛星',
       statusAdmin: '🔓 管理者アクセス',
