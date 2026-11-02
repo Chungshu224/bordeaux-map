@@ -64,6 +64,14 @@ export default {
     adminEnter: '管理員進入',
     comingSoon: '📅 即將開放',
 
+    map: {
+      views: { world: '🌐 全球', france: '🇫🇷 法國', europe: '🌍 歐洲', newworld: '🌏 新世界' },
+      hint: '點選地圖上的標記，探索各產區課程',
+      detail: '📋 課程說明',
+      close: '關閉',
+      fallback: '地圖暫時無法載入，請使用下方「以列表檢視」瀏覽課程。',
+      listToggle: '📃 以列表檢視全部課程'
+    },
     common: {
       satellite: '衛星',
       statusAdmin: '🔓 管理員開放',

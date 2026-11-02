@@ -64,6 +64,14 @@ export default {
     adminEnter: 'Admin Enter',
     comingSoon: '📅 Coming Soon',
 
+    map: {
+      views: { world: '🌐 World', france: '🇫🇷 France', europe: '🌍 Europe', newworld: '🌏 New World' },
+      hint: 'Tap a marker on the map to explore each region\'s course',
+      detail: '📋 Course details',
+      close: 'Close',
+      fallback: 'The map could not be loaded. Please use "Browse as list" below.',
+      listToggle: '📃 Browse all courses as a list'
+    },
     common: {
       satellite: 'Sat.',
       statusAdmin: '🔓 Admin Access',
