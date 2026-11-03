@@ -80,7 +80,7 @@ export const REGIONS = [
   { id: 'lambrusco', country: '義大利', name: 'Lambrusco（Emilia）', continent: 'europe', ll: [10.9, 44.65],
     methods: ['tank'], tags: ['red'],
     grapes: 'Lambrusco 家族',
-    note: '常見的起泡紅酒；風格從乾型到半甜，多以槽式法釀造。' },
+    note: '常見的起泡紅酒；風格從乾型到甜型，多以槽式法釀造。' },
 
   // ── 德語區、英國與其他歐洲 ──
   { id: 'germany', country: '德國', name: 'Sekt（德國）', continent: 'europe', ll: [8.2, 50.0],

@@ -164,6 +164,7 @@
 ## 9. 狀態區塊
 
 - 階段 A：**完成**（分支 `feat/sparkling-course-home`）。課程首頁 `/sparkling`（管理員專屬）、三階段課程列表、21 課空殼（顯示課名、說明、考點，可標記完成）、本機進度（`sparkling_progress_<帳號>`）、地圖入口；首頁導覽列與手機選單的「🥂 氣泡酒專論」連到課程首頁。遊戲、品飲筆記入口顯示「即將推出」。
+- 階段 B：**完成**（分支 `feat/sparkling-level1`）。Level 1 六課課文（區塊、詞彙、每課 2 題小測驗）、第 6 課 8 題綜合評量（60 分及格才可標記完成）。內容依 `SPARKLING_FACT_CHECK.md`：已證實者直接寫、二手者標註、未證實者標 ⚠ 且不進測驗（歷史年代、壓力、Brut 系列邊界、EU 最低陳年）。Lambrusco 備註改為「乾型到甜型」。
 - **已決定**：
   1. **專屬地圖頁**：不改共用的 `CourseWorldMap`，另做 `SparklingMapPage`（多國標記、依釀法著色）。
   2. **起泡紅酒（Lambrusco、起泡 Shiraz 等）與甜型起泡（Asti、Clairette de Die 等）都算 D4 考點**：Level 2 的產區課與 Level 3 的品飲（SAT）、論述題都要涵蓋；地圖以「起泡紅酒」「甜型起泡」兩個風格標籤篩選。
