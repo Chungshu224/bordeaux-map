@@ -1,4 +1,4 @@
-# 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D5／MW 備考導向）
+# 🥂 法國香檳產區（Champagne）課程設計（Diploma D3／D4／MW 備考導向）
 
 > 狀態：**階段 A–F 全部完成**，最新分支 `feat/champagne-final`（見文末〈狀態區塊〉）。本文件定義課程定位、三階段 21 課大綱、各課重點與查證清單、互動功能與實作階段。
 > 分支：`feat/champagne-course-design`（未合併，從 master 切出）
@@ -6,7 +6,7 @@
 
 ## 1. 定位與設計原則
 
-- **對象**：準備 WSET Diploma 並延伸至 MW 的學習者。香檳在 Diploma 中出現兩次：**D3（Wines of the World，法國香檳產區）**與 **D5（Sparkling Wines，氣泡酒釀造與全球氣泡酒）**，所以本課同時涵蓋「產區」與「傳統法釀造」，並在 Level 3 與其他氣泡酒做比較。
+- **對象**：準備 WSET Diploma 並延伸至 MW 的學習者。香檳在 Diploma 中出現兩次：**D3（Wines of the World，法國香檳產區）**與 **D4（Sparkling Wines，氣泡酒釀造與全球氣泡酒）**，所以本課同時涵蓋「產區」與「傳統法釀造」，並在 Level 3 與其他氣泡酒做比較。
 - **與既有課程的關係**：沿用 3 階段 × 21 課的骨架與共用元件（`courseHome`、`regionMap`、遊戲引擎、品飲筆記、成就、詞彙、`gt()` 字典）。既有程式中已有零星香檳內容（`src/data/lessons/l3-5.js`、`l4-6.js`、`l4-11.js`、各國 Cava／Crémant 對照投影片），開工前要先盤點，避免重複或互相矛盾；可連結但不複製。
 - **香檳的教學主軸**（與希臘、隆河不同之處）：
   1. **釀造即風土之外的第二主角**：同一個產區，風格差異大半來自調配（assemblage）、儲備酒、二次發酵後的陳年與 dosage——必須把「產區」與「釀造」並重。
@@ -88,7 +88,7 @@
 | ch-l3-3 | 風土比較：漢斯山 vs 馬恩河谷 vs 白丘 vs 巴爾丘；Aÿ vs Cramant vs Bouzy；Blanc de Blancs vs Blanc de Noirs 的風格；對照 Cava、Franciacorta／Trentodoc、英國氣泡酒、Crémant、Tasmania；連結 Chablis（同為白堊／石灰質）與勃艮地課程 | 建立盲品／論述用比較表 |
 | ch-l3-4 | 標籤判讀：NM／RM／CM／RC／SR／ND／MA；dosage 用語；Vintage／Millésimé 與 Prestige 用語；產區保護範圍（「Champagne」名稱在全球的保護、與「méthode champenoise」用語的禁用）；Comité Champagne 的角色 | ⚠ 標籤代碼全表須對照官方 |
 | ch-l3-5 | 年度出貨量（2023：約 2.99 億瓶；2025：約 2.66 億瓶，營收約 57 億歐元，2025 資料，標註來源與年份）；庫存約相當於四年出貨；出口占比；各大集團（LVMH、Vranken-Pommery、Lanson-BCC、Pernod Ricard 等）；葡萄價格與供需；關稅、通膨與市場下滑；MW 題：產量上限政策與品牌 | ⚠ 最新年度數字須重查（2026 年第一季是否已有 2025 全年更新）；公司結構事實逐項核對 |
-| ch-l3-6 | Diploma D5 風格的氣泡酒品飲筆記（SAT）示範；NV 比較盲品線索；MW 風格論述範例：「氣候變遷下香檳是否仍需 dosage？」「儲備酒制度對 NV 風格的影響」「種植者酒莊 vs Grandes Marques 的品質與價值」 | 考試形式提醒「以 WSET／IMW 官方最新規格為準」 |
+| ch-l3-6 | Diploma D4 風格的氣泡酒品飲筆記（SAT）示範；NV 比較盲品線索；MW 風格論述範例：「氣候變遷下香檳是否仍需 dosage？」「儲備酒制度對 NV 風格的影響」「種植者酒莊 vs Grandes Marques 的品質與價值」 | 考試形式提醒「以 WSET／IMW 官方最新規格為準」 |
 | ch-l3-7 | 12 題綜合評量（及格 60） | 避開有出入的數字 |
 
 ## 4. 互動功能設計
@@ -263,7 +263,7 @@
 - `ch-l3-3` 風土與比較：四大產區、白堊（白堊紀）vs Kimmeridgian（侏羅紀）並連到勃艮地課程（不複製段落）、BdB／BdN／調配／Rosé、Cava／Franciacorta／英國／Tasmania／Crémant／Prosecco、盲品第一刀與比較表寫法。
 - `ch-l3-4` 法規與標籤：DGCCRF 必要標示、NM／RM／CM／RC／SR／ND／MA 全表、Millésime 與單一品種的 100%（一般規定 85%）及與 80% 年度配額的區別、Grand／Premier Cru 與村名規則、Prestige 無定義、名稱保護與「méthode champenoise」、Comité Champagne 角色、虛構標籤解讀練習。
 - `ch-l3-5` 產業：出貨 2023 約 2.99 億瓶（由 −9.2% 反推）、2024 年 2.714 億（法國 1.182 億、出口 1.532 億、出口 56.4%）、2025 年約 2.66 億（法國約 1.14 億、出口約 1.52 億，出口約 57% 為本課計算）；營收 2022 約 63 億、2023 約 62 億、2024 約 58 億、2025 暫定約 57 億歐元（Vinetur 引述）；庫存、儲備、商業產量（2023 11,400／2024 10,000／2025 9,000）；集團與併購（LVMH、Pernod Ricard、EPI、Lanson-BCC）；市占結構；MW 論述素材。
-- `ch-l3-6` 品飲與論述：D5 風格 SAT 通用示範（非特定酒款）、NV 比較盲品線索、MW 論述 1（氣候變遷下 dosage）、論述 2（儲備酒制度與 NV 風格）、論述 3（種植者 vs Grandes Marques）、結構與自我檢查清單；全程提醒「以 WSET／IMW 官方最新規格為準」，未引用任何考試形式、字數或時限。
+- `ch-l3-6` 品飲與論述：D4 風格 SAT 通用示範（非特定酒款）、NV 比較盲品線索、MW 論述 1（氣候變遷下 dosage）、論述 2（儲備酒制度與 NV 風格）、論述 3（種植者 vs Grandes Marques）、結構與自我檢查清單；全程提醒「以 WSET／IMW 官方最新規格為準」，未引用任何考試形式、字數或時限。
 - `ch-l3-7` 綜合評量：3 張回顧（並列「不在評量範圍」）＋12 題。
 
 **主要來源（本階段實查）**：Comité Champagne 新聞稿（2024 年出貨 2.714 億瓶；2025 年出貨回顧 2026-01-17：約 2.66 億瓶、法國約 1.14 億、出口約 1.52 億，未載營收與庫存）、Vinetur（2026-02，2025 全年量值）、The Real Review（2025-08，庫存、儲備、結構）、Journal du Luxe（商業產量）、IWC Insight（2019 氣候數據）、Polytechnique Insights（LVMH 研究人員）、Decanter（Curtis MW 永續文章、EPI 交易）、Wine Spectator（Voltis、Chardonnay Rosé）、The Drinks Business（Heidsieck & Co. Monopole 2025-10）、DGCCRF 標籤指南、Glass of Bubbly（Cava 分級、標籤代碼 SR）、WineWithSeth（Franciacorta、英國 PDO、Tasmania、Crémant）、Cellars（「méthode champenoise」）。
@@ -279,7 +279,7 @@
 8. **永續認證**：「六成以上葡萄園有認證」出自 2023 年 Decanter 文章（未標日期）；CIVC 曾提 2025 年零除草劑目標，據 Curtis MW 於 2022 年秋撤下——皆為單一來源說法，不進測驗。
 9. **其他氣泡酒數字**：Cava 9／18／30／36 個月（Glass of Bubbly）、Franciacorta 18／24／24／30／60 個月自裝瓶起（WineWithSeth）、英國 PDO 9 個月與 Sussex 15 個月、2023 英國 2,160 萬瓶、Tasmania 一月均溫 15.6°C、Crémant 最短陳年（來源說 9 或 12 個月）皆為單一來源比較素材，不進測驗；陳年月數各 DO／DOCG 規則會修訂，考前以官方規格為準。
 10. **Pernod Ricard 評估出售 Mumm**（2025 年 2 月起媒體報導）與 Heidsieck & Co. Monopole 交易細節（5,000 萬歐元、2026-01-01 生效；賣方該來源未指名，故不寫）：報導與交易屬時效資訊，不進測驗。
-11. **無法查證而未寫**：每公斤葡萄價格（本次未取得可靠最新數字）、各集團持股比例與人事、Lanson-BCC 持股結構、Laurent-Perrier 近況、各酒莊的個別釀造做法、WSET D5／IMW 的實際題型與評分細節。
+11. **無法查證而未寫**：每公斤葡萄價格（本次未取得可靠最新數字）、各集團持股比例與人事、Lanson-BCC 持股結構、Laurent-Perrier 近況、各酒莊的個別釀造做法、WSET D4／IMW 的實際題型與評分細節。
 
 **後續建議**：階段 E（地圖、遊戲、筆記、成就、詞彙）可直接引用 Level 3 的比較表與標籤代碼作為遊戲題庫（排序題：傳統法步驟；配對題：NM／RM／CM…；甜度級別順序）。階段 F 請再檢查本課所有「單一來源」數字是否有更新（尤其出貨、營收、庫存與集團交易，每年都會變動）。
 

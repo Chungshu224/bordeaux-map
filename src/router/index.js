@@ -146,6 +146,14 @@ const routes = [
     redirect: '/greece'
   },
 
+  // ─── 全球氣泡酒專論（僅管理員、不販售）──────────────────────────────────────────
+  {
+    path: '/sparkling/map',
+    name: 'SparklingMap',
+    component: () => import('../components/sparkling/SparklingMapPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒地圖 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
   // ─── 法國隆河葡萄酒課程（框架版，僅管理員可見）──────────────────────────────────
   {
     path: '/rhone',
