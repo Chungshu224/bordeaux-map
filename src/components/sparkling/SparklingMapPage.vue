@@ -36,6 +36,7 @@
           </div>
           <p class="spk-line"><b>品種：</b>{{ selected.grapes }}</p>
           <p class="spk-line">{{ selected.note }}</p>
+          <p class="spk-boundary">{{ boundaryText(selected.id) }}</p>
         </div>
       </aside>
     </div>
@@ -64,12 +65,66 @@ const mapError = ref(false)
 const methodFilter = ref('all')
 const styleFilter = ref('all')
 const selectedId = ref(null)
+const boundaryMap = ref({}) // id -> 'existing' | 'approx'
 let map = null
 let markers = []
+let bboxes = {}
 
 const methodOf = (id) => METHODS.find(m => m.id === id) || METHODS[METHODS.length - 1]
 const tagLabel = (id) => STYLE_TAGS.find(t => t.id === id)?.label || id
 const primaryColor = (r) => methodOf(r.methods[0]).color
+const boundaryText = (id) => {
+  const b = boundaryMap.value[id]
+  if (b === 'existing') return '邊界：取自站內既有課程的邊界資料（已簡化）'
+  if (b === 'approx') return '邊界：近似範圍，非該產區的專屬官方邊界'
+  return '邊界：尚無資料，地圖上僅標示代表點'
+}
+
+function bboxOf(geom) {
+  let minX = 180, minY = 90, maxX = -180, maxY = -90
+  const walk = (c) => { if (typeof c[0] === 'number') { minX = Math.min(minX, c[0]); maxX = Math.max(maxX, c[0]); minY = Math.min(minY, c[1]); maxY = Math.max(maxY, c[1]) } else c.forEach(walk) }
+  walk(geom.coordinates)
+  return [[minX, minY], [maxX, maxY]]
+}
+
+async function addBoundaries() {
+  try {
+    const res = await fetch('/sparkling/sparkling_regions.geojson')
+    if (!res.ok) return
+    const gj = await res.json()
+    const bm = {}
+    for (const f of gj.features) {
+      const r = REGIONS.find(x => x.id === f.properties.id)
+      f.properties.color = r ? primaryColor(r) : '#ffffff'
+      bm[f.properties.id] = f.properties.boundary
+      bboxes[f.properties.id] = bboxOf(f.geometry)
+    }
+    boundaryMap.value = bm
+    if (!map) return
+    map.addSource('spk-regions', { type: 'geojson', data: gj, promoteId: 'id' })
+    map.addLayer({
+      id: 'spk-fill', type: 'fill', source: 'spk-regions',
+      paint: { 'fill-color': ['get', 'color'], 'fill-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 0.55, 0.28] }
+    })
+    map.addLayer({
+      id: 'spk-line', type: 'line', source: 'spk-regions',
+      paint: { 'line-color': ['get', 'color'], 'line-width': 1.6, 'line-opacity': 0.95 }
+    })
+    map.addLayer({
+      id: 'spk-line-approx', type: 'line', source: 'spk-regions', filter: ['==', ['get', 'boundary'], 'approx'],
+      paint: { 'line-color': '#ffffff', 'line-width': 1, 'line-dasharray': [2, 2], 'line-opacity': 0.8 }
+    })
+    applyFilter()
+    paint()
+  } catch (e) { console.warn('[Sparkling] 邊界載入失敗', e) }
+}
+
+function applyFilter() {
+  if (!map || !map.getLayer('spk-fill')) return
+  const f = ['in', ['get', 'id'], ['literal', filtered.value.map(r => r.id)]]
+  for (const l of ['spk-fill', 'spk-line']) map.setFilter(l, f)
+  map.setFilter('spk-line-approx', ['all', ['==', ['get', 'boundary'], 'approx'], f])
+}
 
 const filtered = computed(() => REGIONS.filter(r =>
   (methodFilter.value === 'all' || r.methods.includes(methodFilter.value)) &&
@@ -92,12 +147,24 @@ function buildMarkers() {
   }
   paint()
 }
-function paint() { markers.forEach(m => m.node.classList.toggle('active', m.id === selectedId.value)) }
+let lastSel = null
+function paint() {
+  markers.forEach(m => m.node.classList.toggle('active', m.id === selectedId.value))
+  if (map && map.getSource('spk-regions')) {
+    if (lastSel) map.setFeatureState({ source: 'spk-regions', id: lastSel }, { selected: false })
+    if (selectedId.value) map.setFeatureState({ source: 'spk-regions', id: selectedId.value }, { selected: true })
+    lastSel = selectedId.value
+  }
+}
 function select(id, fly) {
   selectedId.value = id
   paint()
   const r = REGIONS.find(x => x.id === id)
-  if (fly && map && r) map.flyTo({ center: r.ll, zoom: Math.max(map.getZoom(), 5), pitch: 25, duration: 1200, essential: true })
+  if (fly && map && r) {
+    const bb = bboxes[id]
+    if (bb) map.fitBounds(bb, { padding: 50, maxZoom: 8, duration: 1200, essential: true })
+    else map.flyTo({ center: r.ll, zoom: Math.max(map.getZoom(), 5), pitch: 25, duration: 1200, essential: true })
+  }
 }
 function closeCard() { selectedId.value = null; paint() }
 function goView(id) {
@@ -109,6 +176,7 @@ function goView(id) {
 watch(filtered, () => {
   if (selectedId.value && !filtered.value.some(r => r.id === selectedId.value)) selectedId.value = null
   buildMarkers()
+  applyFilter()
 })
 
 onMounted(() => {
@@ -127,8 +195,12 @@ onMounted(() => {
     map.on('style.load', () => {
       map.setFog({ color: 'rgb(20,22,36)', 'high-color': 'rgb(40,50,90)', 'space-color': 'rgb(8,8,18)', 'star-intensity': 0.35 })
     })
-    map.on('load', buildMarkers)
-    map.on('click', closeCard)
+    map.on('load', () => { buildMarkers(); addBoundaries() })
+    map.on('click', (e) => {
+      const hit = map.getLayer('spk-fill') ? map.queryRenderedFeatures(e.point, { layers: ['spk-fill'] }) : []
+      if (hit.length) select(hit[0].properties.id, false)
+      else closeCard()
+    })
     map.on('error', () => { if (!map.loaded() && !markers.length) mapError.value = true })
   } catch { mapError.value = true }
 })
@@ -163,6 +235,7 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 .spk-x { position: absolute; top: 8px; right: 10px; border: 0; background: rgba(0,0,0,.35); color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; }
 .spk-card-body { padding: 10px 16px 14px; font-size: .84rem; line-height: 1.55; }
 .spk-line { margin: 6px 0 0; overflow-wrap: anywhere; }
+.spk-boundary { margin: 8px 0 0; font-size: .74rem; color: #9a8878; }
 .spk-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .spk-tag { font-size: .74rem; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--c) 30%, transparent); border: 1px solid var(--c); }
 .spk-tag.exam { --c: #7fd69a; }

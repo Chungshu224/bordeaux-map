@@ -172,5 +172,7 @@
   - `src/data/sparkling/regions.js`：24 個產區（法國 6、西班牙 1、義大利 6、德奧英葡 4、新世界 7）、5 種釀法、2 個風格標籤。座標為代表點，內容為教學重點；法規與數字待依 ⚠ 清單查證。
   - `src/components/sparkling/SparklingMapPage.vue`：釀法與風格篩選、全球／歐洲／新世界視角、產區卡片、清單；手機版卡片在地圖下方。
   - 路由 `/sparkling/map`（`requiresAuth` ＋ `requiresAdmin`，非管理員導回首頁）。
-- 尚未做：入口連結（待階段 A 的課程首頁）、氣候圖層、官方邊界、遊戲、品飲筆記、en/ja 翻譯。
-- 待確認：入口要放在哪裡（目前只能直接輸入 `/sparkling/map`）。
+  - **邊界**：`scripts/build-sparkling-geojson.mjs` 讀取站內既有課程的邊界檔（香檳、阿爾薩斯、勃艮地、羅亞爾、隆河、義大利各 DOC／DOCG、Cava、葡萄牙、澳洲、紐西蘭、加州），簡化後合成 `public/sparkling/sparkling_regions.geojson`（17 個產區，約 1.8 MB）。Crémant de Bourgogne 以勃艮地區域 AOC 範圍近似、Bairrada 為既有資料的近似邊界，兩者在地圖上以虛線外框標示；德國、奧地利、英國、Limoux、南非、阿根廷、巴西沒有既有邊界，只標代表點。
+  - **首頁入口**：管理員登入後，首頁導覽列（桌面）與手機選單都有「🥂 氣泡酒地圖」。
+- 尚未做：氣候圖層、遊戲、品飲筆記、en/ja 翻譯、缺邊界產區的邊界資料。
+- 法規細節查證：已排程由獨立工作階段逐項查證 ⚠ 清單，結果寫入 `SPARKLING_FACT_CHECK.md`（獨立分支，不自動合併）。
