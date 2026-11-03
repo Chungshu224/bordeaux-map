@@ -148,6 +148,12 @@ const routes = [
 
   // ─── 全球氣泡酒專論（僅管理員、不販售）──────────────────────────────────────────
   {
+    path: '/sparkling',
+    name: 'Sparkling',
+    component: () => import('../components/sparkling/SparklingPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+  {
     path: '/sparkling/map',
     name: 'SparklingMap',
     component: () => import('../components/sparkling/SparklingMapPage.vue'),

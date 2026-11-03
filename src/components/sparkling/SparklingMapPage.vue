@@ -1,7 +1,7 @@
 <template>
   <div class="spk-page">
     <header class="spk-head">
-      <button class="spk-back" @click="router.push('/')">← 返回首頁</button>
+      <button class="spk-back" @click="goBack">{{ embedded ? '← 返回課程首頁' : '← 返回' }}</button>
       <h1>🥂 全球氣泡酒產區地圖</h1>
       <p class="spk-sub">依釀法著色・{{ filtered.length }} / {{ REGIONS.length }} 個產區（管理員專屬）</p>
     </header>
@@ -59,7 +59,10 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { METHODS, STYLE_TAGS, GROUPS, REGIONS } from '../../data/sparkling/regions.js'
 
+const props = defineProps({ embedded: { type: Boolean, default: false } })
+const emit = defineEmits(['back'])
 const router = useRouter()
+function goBack() { if (props.embedded) emit('back'); else router.push('/sparkling') }
 const el = ref(null)
 const mapError = ref(false)
 const methodFilter = ref('all')

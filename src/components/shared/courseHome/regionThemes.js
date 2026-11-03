@@ -27,7 +27,8 @@ export const REGION_THEMES = {
   newzealand: { primary: '#0a3d2e', accent: '#5cb85c', icon: '🥝', surface: '#f4f9f5' },
   australia:  { primary: '#012169', accent: '#E4002B', icon: '🦘', surface: '#f4f6fb' },
   california: { primary: '#b45309', accent: '#fbbf24', icon: '🌟', surface: '#fef9f0' },
-  alsace:     { primary: '#2d6a4f', accent: '#c9a227', icon: '🍇', surface: '#f3f9f4' }
+  alsace:     { primary: '#2d6a4f', accent: '#c9a227', icon: '🍇', surface: '#f3f9f4' },
+  sparkling:  { primary: '#B8860B', accent: '#F3E3A5', icon: '🥂', surface: '#fdf9ee' }
 }
 
 export function getTheme(key) {
