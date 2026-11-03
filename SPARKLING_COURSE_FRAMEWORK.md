@@ -7,7 +7,7 @@
 
 ## 1. 定位與設計原則
 
-- **對象**：準備 WSET Diploma 的學習者。<cite index="1-1">WSET Diploma 的三個品飲考試為 D3（Wines of the World）、D4（Sparkling Wines）與 D5（Fortified Wines）</cite>，所以氣泡酒對應的是 **D4**。⚠ 既有 `CHAMPAGNE_COURSE_FRAMEWORK.md` 把氣泡酒寫成 D5，應以官方單元編號為準，之後另行更正。
+- **對象**：準備 WSET Diploma 的學習者。WSET Diploma 的三個品飲考試為 D3（Wines of the World）、D4（Sparkling Wines）與 D5（Fortified Wines），所以氣泡酒對應的是 **D4**。⚠ 既有 `CHAMPAGNE_COURSE_FRAMEWORK.md` 把氣泡酒寫成 D5，應以官方單元編號為準，之後另行更正。
 - **以 D4 考試為主**：每課附「考點」與「題型」，Level 3 專門訓練 D4 品飲（SAT）與論述答題；測驗題偏重「為什麼」（原因→風格→價格），而非單純記名稱。
 - **獨立專論，不連結其他產區課程**：內容全部重新撰寫，包含香檳；不引用、不導向既有的香檳、Cava、Crémant 等零星內容，也不依賴其他課程的進度。課內不出現「請見某某課程」的連結。⚠ 開工前仍要盤點既有程式中的香檳／氣泡酒內容（如 `l3-5.js`、`l4-6.js`、`l4-11.js`），只用於避免互相矛盾，不複製。
 - **全球巡禮**：涵蓋傳統法、槽式法、轉移法、祖傳法及其他釀法的主要產區，從法國、義大利、西班牙到德奧瑞、英國，再到新世界。
