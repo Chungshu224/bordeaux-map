@@ -8,9 +8,9 @@
 
 | 狀態 | 項數 | 說明 |
 |---|---|---|
-| ✅已確認 | 約 22 | 含官方或可信二手來源互相吻合者 |
+| ✅已確認 | 約 28（含第八節補查 6 項） | 含官方或可信二手來源互相吻合者 |
 | ⚠需修正 | 4 | 其中 1 項已寫入 `regions.js`；其餘 3 項因來源為二手或屬「補充」而非「錯誤」，只在此標示 |
-| ❓未能查證 | 約 30 | 多為壓力、EU 甜度邊界、歷史年代、各 Crémant 細節、德國層級細則等 |
+| ❓未能查證 | 約 27（第八節補查後） | 多為壓力、EU 甜度邊界、歷史年代、各 Crémant 細節、德國層級細則等 |
 
 **已寫入程式的修正（僅 1 處）**：`regions.js` Lambrusco 備註由「乾型到半甜」改為「乾型到甜型」。
 **框架文件 `SPARKLING_COURSE_FRAMEWORK.md`**：沒有查到明確錯誤，未修改（⚠ 標記保留）。
@@ -115,6 +115,22 @@
 | 評量形式 | 官方頁面：D4 為閉卷筆試（1.5 小時）＋盲品 3 款氣泡酒。配分、題型、通過率未能查證，**不寫** | ✅／❓ | wsetglobal.com（2025 Issue 1.4） |
 | SAT 氣泡酒版本 | 未取得 Level 4 專屬 SAT；Level 3 SAT（May 2022 Issue 2）含 mousse（delicate／creamy／aggressive）、甜度六級（dry 至 luscious）。Level 4 是否相同未能查證 | ❓ | wsetglobal.com/media/11766/wset_l3wines_sat_en_may2022_issue2.pdf |
 | WSET 官方甜度 g/L | WSET 文件無 g/L 數值 | ❓ | — |
+
+## 八、第二輪補查（2026-11-03，同日再次執行）
+
+本輪針對先前標「❓」的重點項目補查，優先官方或原始規格。未動程式與框架文件（沒有查到明確錯誤）。
+
+| 項目 | 查證結果 | 狀態 | 來源 |
+|---|---|---|---|
+| 香檳最低陳年 | Comité 官方說明頁：NV 至少 15 個月、Vintage 至少 36 個月。該頁**沒有**分列「酒渣 12 個月」數字；壓榨量（4,000 kg）、壓力、甜度級別該頁均未提及，仍屬未能查證 | ✅（15／36）／❓（酒渣 12、壓榨量） | champagne.education「The Champagne Appellation (AOC)」（無頁面日期，摘要 1936 年敕令之現行規定） |
+| EU 氣泡酒甜度邊界 | 英國保留版 2019/33 附件 III A 頁面僅列 Extra dry 12–17、Dry 17–32、Medium dry 32–50、Sweet >50 g/L；Brut Nature／Extra Brut／Brut 與 3 g/L 容許誤差在該頁**不存在**，須查 EU 理事會規章 1308/2013 附件 VII 或 EUR-Lex 版本；端點是否含等號該頁未說明 | ✅（四級）／❓（Brut 系列、容許誤差） | legislation.gov.uk/eur/2019/33/annex/III/part/A（英國保留版，2020-01-31 修訂版） |
+| Cava 陳年等級 | Glass of Bubbly 整理：Cava 9、Reserva 18、Gran Reserva 30、Paraje Calificado 36 個月（無日期、未註明法源）。與先前第三節一致；Reserva 18 vs 15 的官方出入仍未由 Consejo Regulador 原文釐清 | ✅（二手）／❓（官方出入） | glassofbubbly.com/cava-classifications；Cava 官方 PDF 搜尋結果列出但本輪未讀成 |
+| Crémant de Bourgogne 規格 | INAO 規格（檔名 cn210211，2021 修訂稿，**含刪改痕跡**）：品種為 Gamay、Pinot Gris、Pinot Noir、Aligoté、Chardonnay、Melon、Pinot Blanc、Sacy；Chardonnay＋Pinot Blanc＋Pinot Gris＋Pinot Noir 合計至少 30%；Gamay 上限在該稿由 20% 改為 30%（兩數字並存，須確認生效版本）；酒渣至少 9 個月；上市前自 tirage 起至少 12 個月；瓶內壓力至少 4 bar（20°C）；產量 78／74 hl/ha 等；**未規定 dosage 上限**，僅限 SO₂ ≤150 mg/L。注意：先前表格寫「Pinot Noir＋Chardonnay 合計至少 30%」「Gamay 上限 20%」，與此稿比對需更正為「四個品種合計」並標示 Gamay 上限待確認 | ⚠需修正（報告內先前說法；課程程式與框架未列此細節，故未改） | extranet.inao.gouv.fr/fichier/CDC-CrémantdeBourgogne-PNOcn210211.pdf（2021 稿） |
+| Franciacorta 酒渣 | 二手整理與先前結果一致：Spumante 18、Rosé 24、Satèn 24、Millesimato 30、Riserva 60 個月（皆為酒渣）；dosage：Satèn 僅 Brut，Millesimato 至 Extra Dry，Riserva 至 Brut，Spumante／Rosé 可至 Demi-sec。「總月數」該頁未列 | ✅（二手） | italianwinecentral.com/denomination/franciacorta-docg |
+| Corpinnat 脫離與成員 | Wine Business International：2019 年初退出 DO Cava（報導內同時出現一月與二月）；協會創始成員 9 家（Gramona、Recaredo、Torelló、Llopart、Nadal、Sabaté i Coca、Mas Candí、Huguet Can Feixes、Júlia Bernet），協會成立於 2015，報導未提後續成員變動。與先前「2024 年報稱 13 家」並列：9 家為創始成員，13 家為 2024 年報數字，兩者**不矛盾**，但「21 家」說法仍未獲佐證 | ✅（創始 9 家、2019 年初）／❓（歷年增減） | wine-business-international.com「Cava's trial separation」（年份未標）；corpinnat.com 2024 年報 |
+| Crémant de Bourgogne rosé 頁面 | INAO 該頁僅有歷史年代（1975 年承認 Crémant de Bourgogne），無規格數字 | ❓ | inao.gouv.fr/node/5927 |
+
+教學提醒：Crémant de Bourgogne 規格仍有修訂中的版本，進測驗前務必取得現行生效 cahier des charges。
 
 ## 建議後續
 
