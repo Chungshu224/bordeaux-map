@@ -83,6 +83,7 @@ const GEO = {
   usother:    { ll: [-122.9, 45.2], color: '#3B6EA5' },
   california: { ll: [-122.4, 38.5], color: '#E08A1E' },
   canada:     { ll: [-119.6, 49.5], color: '#C0272D' },
+  morocco:    { ll: [-5.5, 33.9],   color: '#C1272D' },
   argentina:  { ll: [-68.8, -33.3], color: '#4C9BD5' },
   chile:      { ll: [-71.2, -34.5], color: '#B8322F' },
   southafrica:{ ll: [18.8, -33.9],  color: '#3E8E41' },

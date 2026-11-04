@@ -111,6 +111,7 @@ export default {
     brandy:         '白蘭地',
     diploma:        'Diploma 通論',
     sommelier:      '侍酒師實務',
+    morocco:        "摩洛哥",
     provence:         '普羅旺斯與科西嘉',
     canada:         '加拿大',
     languedoc:      '朗格多克—魯西永',

@@ -93,6 +93,7 @@ export default {
     brandy:         'ブランデー',
     diploma:        'Diploma総論',
     sommelier:      'ソムリエ実務',
+    morocco:        "モロッコ",
     provence:         'プロヴァンスとコルシカ',
     canada:         'カナダ',
     languedoc:      'ラングドック＝ルーション',

@@ -237,6 +237,18 @@ const routes = [
     redirect: '/diploma'
   },
 
+  // ─── 摩洛哥課程（僅管理員可見）─────────────────────────────
+  {
+    path: '/morocco',
+    name: 'Morocco',
+    component: () => import('../components/morocco/MoroccoPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'morocco'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏜️ 摩洛哥 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/morocco/course',
+    redirect: '/morocco'
+  },
   // ─── 侍酒師實務課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/sommelier',
@@ -503,6 +515,7 @@ const COURSE_ACCESS_RULES = {
   Brandy: { courseId: 'brandy', minimumTier: 'free' },
   Diploma: { courseId: 'diploma', minimumTier: 'free' },
   Sommelier: { courseId: 'sommelier', minimumTier: 'free' },
+  Morocco: { courseId: 'morocco', minimumTier: 'free' },
   Provence: { courseId: 'provence', minimumTier: 'free' },
   Canada: { courseId: 'canada', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },
