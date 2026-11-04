@@ -50,7 +50,7 @@
         </section>
         <SparklingQuiz v-if="content.quiz" :key="lesson.id" :questions="content.quiz" :pass-score="content.passScore || 0" @result="quizResult = $event" />
       </template>
-      <p v-else class="spl-note">課程內容將在階段 C–D 依框架文件（SPARKLING_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
+      <p v-else class="spl-note">課程內容將在階段 D 依框架文件（SPARKLING_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
 
       <div class="spl-actions">
         <button v-if="!done.includes(lesson.id)" class="spl-primary" :disabled="!canComplete" @click="complete">{{ canComplete ? '標記為已完成' : `需達 ${content.passScore} 分才能完成` }}</button>
@@ -65,7 +65,7 @@
 import { computed, ref, watch } from 'vue'
 import SlideBlocks from '../SlideBlocks.vue'
 import SparklingQuiz from './SparklingQuiz.vue'
-import { LEVEL1_CONTENT } from '../../data/sparkling/level1Content.js'
+import { SPARKLING_CONTENT } from '../../data/sparkling/content.js'
 import { sparklingLearningState, sparklingLevels, sparklingLearningActions, sparklingLearningProgress } from '../../stores/sparklingLearningStore.js'
 
 const emit = defineEmits(['back'])
@@ -75,7 +75,7 @@ const done = computed(() => sparklingLearningState.completedLessons)
 const lessonById = (id) => levelData.value.lessons.find(l => l.id === id)
 const lesson = computed(() => sparklingLearningState.currentLessonId ? lessonById(sparklingLearningState.currentLessonId) || null : null)
 
-const content = computed(() => (lesson.value ? LEVEL1_CONTENT[lesson.value.id] || null : null))
+const content = computed(() => (lesson.value ? SPARKLING_CONTENT[lesson.value.id] || null : null))
 const quizResult = ref(null)
 watch(() => lesson.value?.id, () => { quizResult.value = null })
 // 有及格門檻的評量課要通過才能標記完成
@@ -116,6 +116,9 @@ function complete() {
 .spl-box ul { margin: 0; padding-left: 20px; line-height: 1.7; font-size: .9rem; }
 .spl-note { color: #8a7a6a; font-size: .82rem; line-height: 1.6; }
 .spl-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.spl :deep(.compare-table) { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.spl :deep(.compare-table table:has(th:nth-child(3))) { min-width: 540px; }
+.spl :deep(.compare-table td:first-child) { min-width: 7em; font-weight: 600; }
 .spl-terms { margin: 0; font-size: .88rem; line-height: 1.6; }
 .spl-terms dt { font-weight: 700; color: #6B3A1E; margin-top: 8px; overflow-wrap: anywhere; }
 .spl-terms dd { margin: 0; color: #5a4a35; overflow-wrap: anywhere; }
