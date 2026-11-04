@@ -85,7 +85,7 @@
 |---|---|---|---|
 | Sekt 最低壓力 3.5 bar；Winzersekt | Sekt 3.5 bar、Schaumwein 3 bar；Winzersekt 為酒莊自產、瓶內發酵、酒渣至少 9 個月，但該頁稱 Winzersekt 無獨立法定定義 | ✅（單一來源） | Wines of Germany／DWI（年份未標） |
 | Deutscher Sekt／Sekt b.A.／VDP.Sekt 細則、槽式 6 個月、市場規模 | 未能查證 | ❓ | — |
-| Sekt Austria 三級 | 2015 提出、2016 立法：Klassik 酒渣至少 9 個月，釀法未規定；Reserve 18 個月、傳統法；Grosse Reserve 30 個月、傳統法、單一村鎮、採收後 3 年才可上市 | ✅（二手） | starwinelist.com（二手） |
+| Sekt Austria 三級 | 2015 提出、2016 立法：Klassik 酒渣至少 9 個月，釀法未規定；Reserve 18 個月、傳統法；Grosse Reserve 36 個月（早期資料為 30 個月）、傳統法、單一村鎮、採收後 3 年才可上市；基礎級現稱 Sekt Austria | ✅（二手） | starwinelist.com、Meininger、酒廠 2026 資料（皆二手；2026-11-04 查證時 RIS 法條無法開啟，修訂年份未由官方確認） |
 | Sekt Austria 產區限制與近年修改 | 未能查證 | ❓ | — |
 | 英國 PDO | 氣泡 PDO 僅准六品種（Chardonnay、Pinot Noir、Meunier、Pinot Noir Précoce、Pinot Blanc、Pinot Gris）；海拔上限 220 m；Sussex 氣泡 PDO 於 2022-07-05 註冊、瓶中至少 15 個月；Darnibole 為 Bacchus PDO（非氣泡） | ✅（二手） | winewithseth（二手） |
 | 英國面積與氣泡占比 | 2023：4,209 ha；氣泡 76%；Chardonnay 32%、Pinot Noir 27%、Meunier 9% | ✅ | WineGB 2024-07 資料圖（temp.winegb.co.uk） |

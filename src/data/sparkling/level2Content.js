@@ -228,11 +228,11 @@ export const LEVEL2_CONTENT = {
     blocks: [
       info('德國 Sekt', 'Sekt 的最低瓶內壓力為 <b>3.5 bar</b>，一般 Schaumwein 為 3 bar（Wines of Germany／DWI）。Winzersekt 指酒莊自產、瓶內發酵、酒渣至少 9 個月，但資料也指出它沒有獨立法定定義（單一來源）。Deutscher Sekt、Sekt b.A.、VDP.Sekt 的細則與槽式法 6 個月之說 ⚠ 未能查證，不進測驗。'),
       compare(
-        ['奧地利 Sekt Austria（2015 提出、2016 立法，二手）', '最低陳年與釀法'],
+        ['奧地利 Sekt Austria（2015 提出、2016 立法，後經修訂，二手）', '最低陳年與釀法'],
         [
-          ['Klassik', '酒渣至少 9 個月，釀法未規定'],
+          ['Sekt Austria（原稱 Klassik）', '酒渣至少 9 個月，釀法未規定'],
           ['Reserve', '18 個月，傳統法'],
-          ['Grosse Reserve', '30 個月，傳統法，單一村鎮，採收後 3 年才可上市']
+          ['Grosse Reserve', '36 個月（舊規定為 30 個月），傳統法，單一村鎮，採收後 3 年才可上市']
         ]
       ),
       info('英國（England 與 Wales）', '英國被稱為「第二個香檳」，是因為氣候涼爽、南部有白堊地層（Downs），並大量使用香檳的品種與傳統法。<br>• 氣泡 PDO 只准六個品種：Chardonnay、Pinot Noir、Meunier、Pinot Noir Précoce、Pinot Blanc、Pinot Gris；海拔上限 220 m（二手）<br>• Sussex 氣泡 PDO 於 2022-07-05 註冊，瓶中至少 15 個月（二手）<br>• 2023 年（WineGB）：4,209 公頃，氣泡酒占 76%；Chardonnay 32%、Pinot Noir 27%、Meunier 9%<br>• Kimmeridgian 土壤與「PDO English 酒渣 9 個月」⚠ 未能查證'),
@@ -244,11 +244,11 @@ export const LEVEL2_CONTENT = {
     terms: [
       { term: 'Sekt', def: '德國的氣泡酒總稱，最低瓶內壓力 3.5 bar。' },
       { term: 'Winzersekt', def: '酒莊自產、瓶內發酵、酒渣至少 9 個月的 Sekt（無獨立法定定義）。' },
-      { term: 'Sekt Austria', def: '奧地利 2016 年立法的三級氣泡酒制度：Klassik、Reserve、Grosse Reserve。' }
+      { term: 'Sekt Austria', def: '奧地利 2016 年立法的三級氣泡酒制度：Sekt Austria（原稱 Klassik）、Reserve、Grosse Reserve。' }
     ],
     practice: {
       prompt: '說明奧地利 Sekt Austria 三級的差異，並說明英國為何被稱為「第二個香檳」。',
-      points: ['Klassik：酒渣至少 9 個月，釀法未規定', 'Reserve：18 個月，傳統法', 'Grosse Reserve：30 個月，傳統法，單一村鎮，採收後 3 年才可上市（二手）', '英國：涼爽氣候、白堊地層、使用香檳品種與傳統法', '2023 年英國氣泡酒占 76%']
+      points: ['Sekt Austria（原稱 Klassik）：酒渣至少 9 個月，釀法未規定', 'Reserve：18 個月，傳統法', 'Grosse Reserve：36 個月（舊規定為 30 個月），傳統法，單一村鎮，採收後 3 年才可上市（二手）', '英國：涼爽氣候、白堊地層、使用香檳品種與傳統法', '2023 年英國氣泡酒占 76%']
     },
     quiz: [
       { q: '德國 Sekt 的最低瓶內壓力是？', options: ['2 bar', '3 bar', '3.5 bar', '6 bar'], answer: 2, explain: 'Sekt 為 3.5 bar，一般 Schaumwein 為 3 bar。' },
