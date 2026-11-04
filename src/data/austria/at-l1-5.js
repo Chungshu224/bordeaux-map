@@ -44,7 +44,7 @@ export const lessonContent = [
     title: "DAC 與 Sekt Austria 概覽",
     highlights: [
       { id: 1, icon: "🗺️", title: "DAC：以產區風格定義", content: "DAC 酒款需符合該產區的品種、風格與品質規格，標籤只標產區名即可" },
-      { id: 2, icon: "🥂", title: "Sekt Austria", content: "奧地利的氣泡酒品質金字塔，分為 Klassik、Reserve、Große Reserve 三級（2015 年起）；細節在 Level 3" }
+      { id: 2, icon: "🥂", title: "Sekt Austria", content: "奧地利的氣泡酒品質金字塔，分為 Sekt Austria、Reserve、Grosse Reserve 三級（2015 年建立，2022 年修訂名稱）；細節在 Level 3" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Level 1 只需要知道：DAC = 產區風格；Sekt Austria = 氣泡酒三級。</p></div>"
   },

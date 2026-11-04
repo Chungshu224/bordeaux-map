@@ -109,6 +109,8 @@ export default {
     champagne:     '香檳',
     southwest:      '西南產區',
     brandy:         '白蘭地',
+    diploma:        'Diploma 通論',
+    sommelier:      '侍酒師實務',
     provence:         '普羅旺斯與科西嘉',
     canada:         '加拿大',
     languedoc:      '朗格多克—魯西永',
@@ -310,6 +312,13 @@ export default {
     quizGoodJob: '太棒了！掌握得很好 🌟',
     quizKeepGoing: '不错！可以繼續加油 👍',
     quizNeedReview: '📖 建議復習本課重點',
+    shortAnswer: '簡答題',
+    shortPlaceholder: '先寫下你的答案（條列重點即可），再對照評分要點。',
+    showPoints: '顯示評分要點',
+    selfCheckHint: '勾選你的答案有涵蓋的要點：',
+    confirmSelfCheck: '確認自評',
+    modelAnswer: '參考答案',
+    shortScore: '涵蓋 {got} / {total} 個要點（需 {need} 個才算通過）',
   },
 
   // ── Block labels ────────────────────

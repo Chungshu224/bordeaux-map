@@ -50,6 +50,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">更多 DAC 細節會在 Level 2 展開。</p></div>"
   },
   {
+    title: "Diploma 深度：紅品種的爭議與風格轉向",
+    highlights: [
+      { id: 1, icon: "🏷️", title: "Zweigelt 原名 Rotburger", content: "品種育成時名為 Rotburger，1975 年才改以育種者 Friedrich Zweigelt 命名。由於他在納粹時期的角色，近年有改回 Rotburger 的倡議；考試只需知道「原名 Rotburger」與父母組合" },
+      { id: 2, icon: "🌍", title: "Blaufränkisch 的異名", content: "德國稱 Lemberger、匈牙利稱 Kékfrankos。晚熟、酸度高，需要溫暖的地塊才能完全成熟，所以集中在 Burgenland；在較涼的年份容易顯得酸而青" },
+      { id: 3, icon: "🛢️", title: "從新橡木到大桶：風格轉向（趨勢）", content: "1990 年代許多 Blaufränkisch 走高萃取、新小橡木桶的國際風格；近年頂尖生產者多改用較大、較舊的木桶、減少萃取、提早採收，強調酸度、香料與土壤（如 Eisenberg 的片岩、Leithaberg 的石灰岩）。這是常見的業界描述，屬趨勢" },
+      { id: 4, icon: "🍒", title: "St. Laurent 為何難種", content: "St. Laurent 發芽早、易受春霜，果皮薄、易染病，產量不穩，因此面積小；但成功時有接近 Pinot Noir 的細緻。論述時可作為「品質潛力 vs 栽培風險」的例子" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">紅酒題常問「為何集中在 Burgenland」：晚熟品種需要 Pannonian 的熱量。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

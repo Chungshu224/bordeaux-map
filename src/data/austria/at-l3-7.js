@@ -14,7 +14,7 @@ export const lessonContent = [
   {
     title: "重點回顧",
     highlights: [
-      { id: 1, icon: "🔢", title: "必背數字", content: "KMW：19／21／25／30；Sekt：9／18／30 個月；Wachau：Smaragd ≥12.5%、Federspiel ≤4 g/L 殘糖" },
+      { id: 1, icon: "🔢", title: "必背數字", content: "KMW：19／21／25／30；Sekt：9／18／36 個月；Wachau：Smaragd ≥12.5%、Federspiel ≤4 g/L 殘糖" },
       { id: 2, icon: "📚", title: "論述要點", content: "數字要附年份；來源有出入時要明說；先氣候後土壤與品種" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">完成本評量後，Level 3 即告結束。</p></div>"
@@ -60,7 +60,7 @@ export const lessonContent = [
             question: "Sekt Austria Grosse Reserve 最早何時上市？",
             options: ["A. 採收後 9 個月","B. 採收後 18 個月","C. 採收後三年","D. 採收後十年"],
             correct: 2,
-            explanation: "至少 30 個月且採收三年後。"
+            explanation: "至少 36 個月（2022 年起）且採收三年後。"
           },
           {
             type: 'single',
@@ -106,10 +106,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Sekt Austria Klassik 的陳年下限？",
+            question: "Sekt Austria 基礎級的陳年下限？",
             options: ["A. 9 個月","B. 18 個月","C. 30 個月","D. 無規定"],
             correct: 0,
-            explanation: "Klassik 酒渣陳年至少 9 個月。"
+            explanation: "基礎級（舊稱 Klassik）酒渣陳年至少 9 個月。"
           }
         ]
       }

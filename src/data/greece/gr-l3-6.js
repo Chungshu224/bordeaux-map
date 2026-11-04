@@ -53,6 +53,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">最後一課會用模擬題把這些整合起來。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「說明 Santorini 的環境如何塑造 Assyrtiko 的栽培方式與風格。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① 強風 → kouloura 籃式低矮整枝；② 少雨 → 旱作、晨霧補水；③ 火山砂質、缺鉀土壤 → 低產、pH 低至 2.7–2.8、高酸與鹹礦感；④ 根瘤蚜無法存活 → 自根老藤；⑤ 風格：乾白、Nykteri、Vinsanto；⑥ 限制：2023–2025 乾旱使產量由約 2,500 噸跌至約 500 噸" },
+      { id: 3, icon: "❓", title: "題目二", content: "「PDO 與 PGI 在希臘產量中占比偏低，對希臘葡萄酒產業有何影響？請評估。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 事實：PDO＋PGI 約三成，其他歐盟產國多在八成以上；散裝約占國內市場一半；② 影響：國際辨識度低、價格帶偏低、品牌溝通困難；③ 反面：PGI 給精品酒莊品種與調配自由（如 Epanomi、Aegean Sea），未必是劣勢；④ 出口 86.6% 在歐盟；⑤ 結論：問題不在制度本身，而在散裝比重與品牌化不足" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Santorini 題的骨架就是 gr-l3-1 的因果鏈：風 → 整枝；乾旱與沙地 → 低產濃縮；無根瘤蚜 → 老藤。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

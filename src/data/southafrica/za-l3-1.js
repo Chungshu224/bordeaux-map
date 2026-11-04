@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">IPW 是業界全面性的方案；BWI 專注生物多樣性與保育，兩者可獨立參加。</p></div>"
   },
   {
+    title: "Diploma 深度：捲葉病毒與葡萄園更新",
+    highlights: [
+      { id: 1, icon: "🦠", title: "南非最重要的葡萄病毒", content: "捲葉病（grapevine leafroll）被視為南非釀酒葡萄最重要的病毒病害；業界估計至少七成葡萄園有不同程度感染，但沒有正式統計（Wineland，估計值不進測驗）" },
+      { id: 2, icon: "🍂", title: "對果實的影響", content: "感染植株成熟不均、糖度較低、紅品種上色差、可滴定酸偏高，產量也下降；因此葡萄園常在 20 至 25 年就提早更新，這也是南非老藤稀少的原因之一" },
+      { id: 3, icon: "🐛", title: "傳播與防治", content: "主要由葡萄粉介殼蟲（Planococcus ficus）傳播。防治靠三件事：種植經病毒檢測的認證苗、控制粉介殼蟲、及早移除感染株；Vergelegen 的案例顯示持續執行可大幅壓制甚至根除" },
+      { id: 4, icon: "🔗", title: "因果鏈：病毒 → 成本 → 風格", content: "病毒 → 成熟困難、產量下降 → 提早更新葡萄園（成本）→ 樹齡偏年輕 → 少有老藤風格。這讓「健康的老藤」更加稀有，也解釋了 Old Vine Project 的價值" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">寫南非栽培題，除了水，第二個關鍵字就是捲葉病毒。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

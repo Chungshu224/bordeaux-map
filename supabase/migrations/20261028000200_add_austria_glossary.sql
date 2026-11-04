@@ -59,7 +59,7 @@ INSERT INTO public.wine_glossary (region, zh, en, de, definition, category) VALU
 ('austria','酒館','Heuriger','Heuriger',
  '奧地利的酒館傳統，源自約瑟夫二世 1784 年 8 月 17 日的詔令；Wien 周邊尤其著名。','general'),
 ('austria','奧地利氣泡酒','Sekt Austria','Sekt Austria',
- '三級金字塔：Klassik（酒渣 9 個月）、Reserve（18 個月，傳統法，單一邦）、Grosse Reserve（30 個月，單一酒村，採收三年後上市）。','general')
+ '三級金字塔（2022 年修訂名稱）：Sekt Austria（酒渣 9 個月）、Reserve（18 個月，傳統法、手採，單一邦）、Grosse Reserve（36 個月，單一酒村，採收三年後上市）；Reserve 以上限 Brut 以下。','general')
 ON CONFLICT (region, zh) DO NOTHING;
 
 SELECT pg_notify('pgrst', 'reload schema');

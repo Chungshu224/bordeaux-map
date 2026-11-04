@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Uco Valley 的特色是高海拔加石灰質：清新、礦物感、結構緊。</p></div>"
   },
   {
+    title: "Diploma 深度：Uco Valley 的精品化",
+    highlights: [
+      { id: 1, icon: "🌍", title: "外資與國際顧問", content: "1990 年代後，Uco Valley 吸引大量外資與國際釀酒顧問，例如 Michel Rolland 主導、多家 Bordeaux 家族參與的 Vista Flores 計畫 Clos de los Siete；資金帶來滴灌、密植與現代酒窖" },
+      { id: 2, icon: "🗺️", title: "從海拔到土壤", content: "第一波以「高海拔」為賣點；近年頂尖生產者改用土壤剖面與地塊研究，依石礫、砂與石灰質 caliche 分區採收與釀造，Paraje Altamira 等以風土界定的 GI 正是這種思路的產物" },
+      { id: 3, icon: "🥚", title: "釀造風格的轉向（趨勢）", content: "早期高端 Malbec 常見晚採、高萃取與大量新橡木；近年 Uco 的生產者多提早採收、使用水泥槽或大木桶、減少新橡木，強調花香、酸度與粉質單寧" },
+      { id: 4, icon: "🔗", title: "因果鏈：海拔 + 土壤 → 風格 → 價格", content: "高海拔 → 涼、保酸；石灰質 → 單寧質地與張力；精細分區 → 可標示的地名 → 單一地塊酒款的溢價。這是阿根廷從「品種」走向「產地」的路徑" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Uco 的故事是「資本 + 研究 → 地名 → 溢價」。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

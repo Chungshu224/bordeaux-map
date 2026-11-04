@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">科西嘉靠在地品種與稀少性出圈。</p></div>"
   },
   {
+    title: "Diploma 深度：淺色玫瑰紅的溢價經濟學",
+    highlights: [
+      { id: 1, icon: "💎", title: "奢侈品集團入主", content: "2019 年 LVMH 旗下 Moët Hennessy 取得 Château d’Esclans（Whispering Angel）55% 股權，2023 年再投資 Château Minuty。奢侈品集團的進場說明普羅旺斯玫瑰紅已從度假酒變成可經營的高價品牌" },
+      { id: 2, icon: "🎨", title: "淺色如何變成品牌", content: "直接壓榨、低溫、惰性氣體保護 → 淺粉色、清新、低酒精；淺色在貨架上一眼可辨，被其他產地大量模仿，讓「Provence 風格」本身成為一個國際品類語言" },
+      { id: 3, icon: "🇺🇸", title: "需求與定價", content: "Whispering Angel 等品牌在美國需求很高，帶動高單價玫瑰紅的市場；玫瑰紅不需長期陳年，酒廠可在採收隔年春季就上市回收現金，品牌溢價直接轉成利潤" },
+      { id: 4, icon: "⚠️", title: "風險：風格與氣候", content: "品牌依賴「淺色、清新」的一致性，但暖化讓糖度上升快、酸度流失，維持這個風格越來越難（見 pv-l3-1）；同時其他產地低價模仿，使普羅旺斯必須用產地與品牌守住溢價" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">普羅旺斯玫瑰紅的論述公式：釀造技術 → 一致的淺色風格 → 品牌與溢價 → 氣候與模仿的威脅。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

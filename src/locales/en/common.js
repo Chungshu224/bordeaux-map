@@ -91,6 +91,8 @@ export default {
     champagne:     'Champagne',
     southwest:      'South-West France',
     brandy:         'Brandy',
+    diploma:        'Diploma Foundations',
+    sommelier:      'Sommelier Practice',
     provence:         'Provence and Corsica',
     canada:         'Canada',
     languedoc:      'Languedoc-Roussillon',
@@ -293,6 +295,13 @@ export default {
     quizGoodJob: 'Excellent! Great understanding 🌟',
     quizKeepGoing: 'Good work! Keep it up 👍',
     quizNeedReview: '📖 Review key points and try again',
+    shortAnswer: 'Short answer',
+    shortPlaceholder: 'Write your answer first (bullet points are fine), then compare it with the marking points.',
+    showPoints: 'Show marking points',
+    selfCheckHint: 'Tick the points your answer covered:',
+    confirmSelfCheck: 'Confirm self-assessment',
+    modelAnswer: 'Model answer',
+    shortScore: 'Covered {got} / {total} points ({need} needed to pass)',
   },
 
   // ── Block labels ────────────────────

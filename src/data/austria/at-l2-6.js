@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Rust 與 Neusiedler See 的貴腐是 Ausbruch 的基礎（見 Level 1 氣候）。</p></div>"
   },
   {
+    title: "Diploma 深度：湖的東、北、西三岸",
+    highlights: [
+      { id: 1, icon: "🦢", title: "東岸 Seewinkel：貴腐甜酒", content: "湖東的 Seewinkel（如 Illmitz、Apetlon）地勢平坦、砂質土壤，散布許多淺鹽水小湖；秋季霧氣與濕度讓貴腐幾乎年年發生，是 Beerenauslese、TBA 的核心產地" },
+      { id: 2, icon: "🍷", title: "北岸：紅酒", content: "湖北岸的 Gols 一帶溫暖、受湖泊調節，以 Zweigelt、Blaufränkisch 與混釀紅酒聞名，也是 Neusiedlersee DAC 紅酒的主力（常見描述）" },
+      { id: 3, icon: "🏰", title: "西岸 Rust：Ausbruch 的歷史", content: "Rust 位於湖西岸、靠近 Leithagebirge 的坡地。17 世紀 Rust 以金錢與葡萄酒換得自由市地位，Ausbruch 甜酒是其財富來源；今日 Ruster Ausbruch 須符合 TBA 條件（見 Level 3）" },
+      { id: 4, icon: "🪨", title: "南部：Eisenberg 的片岩", content: "南 Burgenland 的 Eisenberg 以富含鐵質的片岩土壤著稱，Blaufränkisch 偏緊緻、帶礦物與香料；與 Mittelburgenland 較厚的黏土帶來的豐滿形成對比（一般性描述）" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">同一座湖，三個岸三種酒：東岸甜、北岸紅、西岸 Ausbruch 與 Leithaberg。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

@@ -48,6 +48,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">越往南越濕涼，老藤與冷涼品種並存。</p></div>"
   },
   {
+    title: "Diploma 深度：Pipeño 與南方的傳統釀法",
+    highlights: [
+      { id: 1, icon: "🛢️", title: "Pipeño 是什麼", content: "南部（Itata、Maule、Bío-Bío）數百年來的傳統酒，多以 País 釀成，名稱來自當地以 raulí（南方山毛櫸）製成的大木桶 pipa；過去被菁英視為次等酒，是農村日常飲用的輕盈紅酒" },
+      { id: 2, icon: "🏺", title: "容器：raulí 與 tinaja", content: "傳統做法是野生酵母、無控溫發酵，使用老 raulí 大桶或百年陶甕 tinaja；De Martino 等生產者在 Itata 修復老 raulí 大桶並重新使用 tinaja，把傳統容器變成風格與故事" },
+      { id: 3, icon: "🍷", title: "風格與市場", content: "輕盈、紅色水果、低單寧、可冰涼飲用；以前幾乎只在國內以低價販售，近年以「天然酒、老藤、傳統」為賣點進入出口市場的精品酒單" },
+      { id: 4, icon: "🔁", title: "因果鏈：從被忽視到被重視", content: "中部國際品種崛起 → 南部老藤 País 價格低、被忽視 → 乾耕老藤得以保留 → 2010 年代精品生產者重新發現 → 價格與聲譽上升。但老藤也面臨野火（見 Level 3）與拔除的壓力" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">被忽視反而保住了老藤：這是 Itata 與南非 Swartland 共同的故事。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
