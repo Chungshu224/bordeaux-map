@@ -13,7 +13,7 @@
 - 英文與日文以 overlay 提供；新增字串須有 en／ja。
 
 ## 3. 互動功能（階段 E 計畫）
-示意點地圖（無授權邊界時）、4 款遊戲、品飲筆記（`lg_*`）、成就、詞彙（region `languedoc`）、氣候腳本（北半球 4–10 月）。
+AOC 範圍地圖（31 個 AOC：21 個用管理員提供的 INAO 地塊 KML，2018 年版；Corbières、Languedoc、Grand Roussillon 的 KML 缺村莊，與 KML 沒有的 Fitou、Collioure、Banyuls、Banyuls Grand Cru、Maury、Rivesaltes、Muscat de Rivesaltes 用歐盟資料集的村莊層級範圍，CC0；Pézenas 仍是示意點；由 `scripts/build-languedoc-aoc-geojson.py` 產生。公開前要確認 INAO 資料的授權並註明出處）、4 款遊戲、品飲筆記（`lg_*`）、成就、詞彙（region `languedoc`）、氣候腳本（北半球 4–10 月）。
 
 ## 4. 完成狀態
 

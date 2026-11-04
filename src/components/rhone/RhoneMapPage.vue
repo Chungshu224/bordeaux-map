@@ -38,7 +38,7 @@
           <input type="checkbox" v-model="showPoints" @change="applyTierVisibility" />
           <span class="rh-pt-dot"></span> {{ gt('示意點（{n}）', { n: POINT_REF.length }) }}
         </label>
-        <div class="rh-legend-hint">{{ gt('點擊產區查看資訊。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Côtes du Rhône、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Joseph、Rasteau 的地塊資料不完整，Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Venise 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。') }}</div>
+        <div class="rh-legend-hint">{{ gt('點擊產區查看資訊。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Côtes du Rhône、Côtes du Rhône Villages、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Joseph 的地塊資料不完整，Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Venise 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。') }}</div>
         <div class="rh-legend-hint">{{ gt('範圍面積是法定劃界範圍，不是葡萄園種植面積。') }}</div>
       </div>
 

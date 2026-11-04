@@ -3,7 +3,7 @@
     <section class="map-section">
       <RegionMapHeader
         :regionName="gt('朗格多克—魯西永')"
-        :title="gt('🇫🇷 朗格多克—魯西永葡萄酒產區地圖（{n} 個示意點）', { n: POINT_REF.length })"
+        :title="gt('🇫🇷 朗格多克—魯西永葡萄酒產區地圖（{n} 個 AOC）', { n: 31 })"
         icon="🇫🇷"
         @back="emits('back-to-course')"
       />
@@ -29,10 +29,14 @@
           {{ gt(z.label) }}
         </div>
         <label class="lg-tier-row">
-          <input type="checkbox" v-model="showPoints" @change="applyTierVisibility" />
-          <span class="lg-pt-dot"></span> {{ gt('示意點（{n}）', { n: POINT_REF.length }) }}
+          <input type="checkbox" v-model="showAoc" @change="applyAocVisibility" />
+          <span class="lg-aoc-swatch"></span> {{ gt('AOC 範圍（{n}）', { n: 31 }) }}
         </label>
-        <div class="lg-legend-hint">{{ gt('點擊示意點查看資訊。目前沒有可公開使用的 AOC 邊界資料，圓點位置為主要城鎮或村莊的概略座標，不是官方邊界。') }}</div>
+        <label class="lg-tier-row">
+          <input type="checkbox" v-model="showPoints" @change="applyTierVisibility" />
+          <span class="lg-pt-dot"></span> {{ gt('地點標籤（{n}）', { n: POINT_REF.length }) }}
+        </label>
+        <div class="lg-legend-hint">{{ gt('點擊色塊或圓點查看資訊；重疊時點選最小的 AOC。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Corbières、Languedoc、Grand Roussillon 的地塊資料不完整，Fitou、Collioure、Banyuls、Banyuls Grand Cru、Maury、Rivesaltes、Muscat de Rivesaltes 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。Pézenas 仍是示意點。') }}</div>
       </div>
 
       <div v-if="showLayerPanel" class="layer-panel-wrapper">
@@ -134,7 +138,11 @@ const ZONES = [
 ]
 const KIND_LABEL = { aoc: 'AOC／AOP', sub: '子區／村莊級／DGC' }
 const ZONE_BY_KEY = Object.fromEntries(ZONES.map(z => [z.key, z]))
-const HOME_BOUNDS = [[1.9, 42.35], [4.3, 43.95]]
+const HOME_BOUNDS = [[1.6, 42.3], [4.4, 44.05]]
+const SRC_INAO = '範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。'
+const SRC_EU = '範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。'
+// 大範圍的 AOC（如 Languedoc）幾乎蓋住整區，要淡一點才看得到裡面的 AOC
+const AOC_FILL = ['case', ['>', ['get', 'areaKm2'], 500], 0.1, ['==', ['get', 'source'], 'eu'], 0.2, 0.34]
 
 const mapContainer = ref(null)
 const mapReady = ref(false)
@@ -153,6 +161,8 @@ const climateYear = ref(2025)
 const climateIndicator = ref('temp')
 const climateStats = ref({})
 const showPoints = ref(true)
+const showAoc = ref(true)
+const aocProps = ref({}) // id → AOC 範圍的屬性（面積、村莊數、外框、來源）
 let map = null
 let contoursInitialized = false
 
@@ -252,6 +262,7 @@ async function toggleClimate() {
   climateEnabled.value = !climateEnabled.value
   if (climateEnabled.value) await loadClimateData()
   applyClimateColor()
+  applyAocVisibility()
 }
 
 function setClimateIndicator(id) {
@@ -264,18 +275,21 @@ const activeColor = computed(() => ZONE_BY_KEY[activePoint.value?.zone]?.color |
 const unifiedInfo = computed(() => {
   const g = activePoint.value
   if (!g) return null
+  const aoc = aocProps.value[g.id]
   return {
     name: g.name,
     originalName: g.parent ? gt('屬於 {p}', { p: gt(g.parent) }) : '',
-    badges: [{ label: gt('示意點') }, ...(g.styles || []).map(s => ({ label: gt(s) }))],
+    badges: [{ label: gt(aoc ? 'AOC 範圍' : '示意點') }, ...(g.styles || []).map(s => ({ label: gt(s) }))],
     meta: [
       { label: gt('產區群'), value: gt(ZONE_BY_KEY[g.zone]?.label || '') },
       { label: gt('產地層級'), value: gt(KIND_LABEL[g.kind] || '') },
       ...(g.year ? [{ label: gt('年份'), value: g.year }] : []),
-      { label: gt('位置'), value: gt('示意點，非官方邊界') }
+      aoc
+        ? { label: gt('範圍'), value: gt('{c} 個村莊，約 {a} 平方公里', { c: aoc.communes, a: aoc.areaKm2 }) }
+        : { label: gt('位置'), value: gt('示意點，非官方邊界') }
     ],
     grapes: (g.grapes || []).map(x => gt(x)),
-    description: `${gt(g.notes)} ${gt(POINT_NOTES)}`
+    description: [gt(g.notes), g.sameAs ? gt('範圍與 {p} 相同。', { p: g.sameAs }) : '', gt(!aoc ? POINT_NOTES : aoc.source === 'inao' ? SRC_INAO : SRC_EU)].filter(Boolean).join(' ')
   }
 })
 
@@ -300,7 +314,10 @@ function selectPoint(id, fly = true) {
   globalLanguedocAchievementManager.recordRegionExplored(g.id, g.zone, g.tier)
   if (!map) return
   applyHighlight()
-  if (fly) map.flyTo({ center: g.lngLat, zoom: Math.max(map.getZoom(), 10), duration: 900 })
+  if (!fly) return
+  const bbox = aocProps.value[g.id]?.bbox
+  if (bbox) map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 90, maxZoom: 12, duration: 900 })
+  else map.flyTo({ center: g.lngLat, zoom: Math.max(map.getZoom(), 10), duration: 900 })
 }
 
 function selectById(id, fly = true) {
@@ -317,6 +334,16 @@ function applyHighlight() {
   if (!map || !map.getLayer('lg-pt-circle')) return
   const pid = activePoint.value?.id
   map.setPaintProperty('lg-pt-circle', 'circle-radius', pid ? ['case', ['==', ['get', 'id'], pid], 12, 7] : 8)
+  if (map.getLayer('lg-aoc-fill')) {
+    map.setPaintProperty('lg-aoc-fill', 'fill-opacity', pid ? ['case', ['==', ['get', 'id'], pid], 0.6, 0.06] : AOC_FILL)
+    map.setPaintProperty('lg-aoc-line', 'line-width', pid ? ['case', ['==', ['get', 'id'], pid], 1.6, 0.3] : 0.5)
+  }
+}
+
+function applyAocVisibility() {
+  if (!map) return
+  const v = showAoc.value && !climateEnabled.value ? 'visible' : 'none'
+  for (const id of ['lg-aoc-fill', 'lg-aoc-line']) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', v)
 }
 
 function applyTierVisibility() {
@@ -400,6 +427,28 @@ function handleMobileAction(action) {
   else if (action === 'info') infoBarCollapsed.value = !infoBarCollapsed.value
 }
 
+// AOC 範圍在圓點之下；載入失敗時地圖仍可用圓點瀏覽
+async function addAocLayers() {
+  try {
+    const res = await fetch('/languedoc/languedoc_aoc.geojson')
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const fc = await res.json()
+    if (!map) return
+    aocProps.value = Object.fromEntries(fc.features.map(f => [f.properties.id, f.properties]))
+    map.addSource('lg-aoc', { type: 'geojson', data: fc })
+    map.addLayer({ id: 'lg-aoc-fill', type: 'fill', source: 'lg-aoc',
+      paint: { 'fill-color': zoneColorExpr(), 'fill-opacity': AOC_FILL } }, 'lg-pt-circle')
+    map.addLayer({ id: 'lg-aoc-line', type: 'line', source: 'lg-aoc',
+      paint: { 'line-color': zoneColorExpr(), 'line-width': 0.5 } }, 'lg-pt-circle')
+    map.on('mouseenter', 'lg-aoc-fill', () => { map.getCanvas().style.cursor = 'pointer' })
+    map.on('mouseleave', 'lg-aoc-fill', () => { map.getCanvas().style.cursor = '' })
+    applyAocVisibility()
+    applyHighlight()
+  } catch (err) {
+    mapError.value = gt('AOC 範圍載入失敗: {m}', { m: err.message })
+  }
+}
+
 function addPointLayers() {
   map.addSource('lg-pt', {
     type: 'geojson',
@@ -425,9 +474,13 @@ function addPointLayers() {
   map.on('mouseenter', 'lg-pt-circle', () => { map.getCanvas().style.cursor = 'pointer' })
   map.on('mouseleave', 'lg-pt-circle', () => { map.getCanvas().style.cursor = '' })
   map.on('click', e => {
-    if (!showPoints.value) return
-    const pts = map.queryRenderedFeatures(e.point, { layers: ['lg-pt-circle'] })
-    if (pts.length) selectPoint(pts[0].properties.id, false)
+    const pts = showPoints.value ? map.queryRenderedFeatures(e.point, { layers: ['lg-pt-circle'] }) : []
+    if (pts.length) { selectPoint(pts[0].properties.id, false); return }
+    if (!map.getLayer('lg-aoc-fill') || !showAoc.value || climateEnabled.value) return
+    // AOC 會互相重疊（例如 Pic Saint-Loup 在 Languedoc 內），選面積最小的；範圍相同時依名稱
+    const hits = map.queryRenderedFeatures(e.point, { layers: ['lg-aoc-fill'] })
+    const pick = (x, y) => x.areaKm2 - y.areaKm2 || x.name.localeCompare(y.name)
+    if (hits.length) selectPoint(hits.map(h => h.properties).sort(pick)[0].id, false)
   })
 }
 
@@ -455,6 +508,7 @@ async function initMap(retry = 0) {
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       map.fitBounds(HOME_BOUNDS, { padding: 30, duration: 0 })
       addPointLayers()
+      addAocLayers()
       mapReady.value = true
       if (props.initialRegion?.id) selectById(props.initialRegion.id)
     })
@@ -491,7 +545,7 @@ onUnmounted(() => {
   .main-layout, .map-section { height: 100dvh; min-height: 100svh; overscroll-behavior: none; }
 }
 .lg-legend {
-  position: absolute; left: 12px; bottom: 72px; z-index: 5;
+  position: absolute; right: 12px; bottom: 72px; z-index: 5;
   background: rgba(255, 255, 255, 0.92); border-radius: 12px; padding: 10px 12px;
   font-size: 0.78rem; color: #1b2b3a; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   max-width: min(260px, calc(100vw - 24px));
@@ -499,6 +553,7 @@ onUnmounted(() => {
 .lg-legend-item { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
 .lg-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .lg-legend-toggle { display: flex; align-items: center; gap: 6px; margin-top: 6px; cursor: pointer; }
+.lg-aoc-swatch { width: 12px; height: 10px; border-radius: 2px; background: rgba(176, 58, 58, 0.45); border: 1px solid #B03A3A; flex-shrink: 0; }
 .lg-pt-dot { width: 10px; height: 10px; border-radius: 50%; background: #FFB020; border: 2px solid #fff; box-shadow: 0 0 0 1px #c98100; flex-shrink: 0; }
 .lg-legend-hint { margin-top: 6px; font-size: 0.7rem; color: #5b6b7a; line-height: 1.35; }
 .layer-panel-wrapper { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); z-index: 46; }

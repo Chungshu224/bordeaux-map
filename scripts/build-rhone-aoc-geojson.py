@@ -41,8 +41,8 @@ EXISTING = {
     '313': 'PDO-FR-A0720', '284': 'PDO-FR-A0200', '285': 'PDO-FR-A0398', '287': 'PDO-FR-A0328',
     '288': 'PDO-FR-A0151', '1130': 'PDO-FR-A0690',
 }
-# id_app → 應有的村莊數（課程內容與 INAO 規格）；KML 少於這個數字，代表地塊資料不完整
-PARTIAL = {'267': 5, '288': 2, '1097': 4, '270': 7, '266': 2, '284': 26, '313': 3, '275': 172}
+# id_app → 應有的村莊數（課程內容與歐盟資料集的村莊清單）；KML 少於這個數字，代表地塊資料不完整
+PARTIAL = {'267': 5, '288': 2, '1097': 4, '270': 7, '266': 2, '284': 26, '275': 172, '276': 95}
 NOT_COVERED = '本課程未另外介紹這個 AOC。'
 # id_app → KML 才有的 AOC
 NEW_AOC = {
@@ -130,8 +130,8 @@ def main(kml):
     old = {f['properties']['id']: f for f in json.loads((ROOT / 'rhone_pdo.geojson').read_text(encoding='utf-8'))['features']}
     by_app = defaultdict(list)
     by_denom = defaultdict(list)
-    communes_app = defaultdict(int)
-    communes_denom = defaultdict(int)
+    communes_app = defaultdict(set)  # 同一村莊可能有多列（不同地名），要算不重複的村莊
+    communes_denom = defaultdict(set)
     for _, el in ET.iterparse(kml, events=('end',)):
         if el.tag != NS + 'Placemark':
             continue
@@ -142,12 +142,12 @@ def main(kml):
             raise SystemExit(f'未知的 id_app：{app} {data["appellatio"]!r}')
         polys = read_placemark(el)
         by_app[app].extend(polys)
-        communes_app[app] += 1
+        communes_app[app].add(data['new_nomcom'])
         if app == '276' and denom != '1345':
             if denom != LAUDUN_DENOM and denom not in NAMED:
                 raise SystemExit(f'未知的 id_denom：{denom} {data["denominati"]!r}')
             by_denom[denom].extend(polys)
-            communes_denom[denom] += 1
+            communes_denom[denom].add(data['new_nomcom'])
         el.clear()
 
     features = []
@@ -169,18 +169,18 @@ def main(kml):
 
     for app, fid in EXISTING.items():
         expected = PARTIAL.get(app)
-        if expected and communes_app[app] >= expected:
-            raise SystemExit(f'{fid} 已有 {communes_app[app]} 個村莊，請從 PARTIAL 移除')
-        add(old[fid]['properties'], by_app[app], communes_app[app], 'aoc', expected, on_map=not expected)
+        if expected and len(communes_app[app]) >= expected:
+            raise SystemExit(f'{fid} 已有 {len(communes_app[app])} 個村莊，請從 PARTIAL 移除')
+        add(old[fid]['properties'], by_app[app], len(communes_app[app]), 'aoc', expected, on_map=not expected)
     for app, (fid, name) in NEW_AOC.items():
         props = {'id': fid, 'name': name, 'official': name, 'tier': 'other', 'zone': 'outer', 'year': None,
                  'styles': [], 'grapes': [], 'notes': NOT_COVERED}
-        add(props, by_app[app], communes_app[app], 'aoc')
-    add(LAUDUN, by_denom[LAUDUN_DENOM], communes_denom[LAUDUN_DENOM], 'aoc')
+        add(props, by_app[app], len(communes_app[app]), 'aoc')
+    add(LAUDUN, by_denom[LAUDUN_DENOM], len(communes_denom[LAUDUN_DENOM]), 'aoc')
     for denom, name in NAMED.items():
         props = {'id': f'RH-VIL-{slug(name).upper()}', 'name': name, 'official': f'Côtes du Rhône Villages {name}',
                  'tier': 'named', 'zone': 'south', 'year': None, 'styles': [], 'grapes': [], 'notes': NAMED_NOTE}
-        add(props, by_denom[denom], communes_denom[denom], 'villages', on_map=False)
+        add(props, by_denom[denom], len(communes_denom[denom]), 'villages', on_map=False)
 
     # KML 沒有的 AOC 沿用歐盟資料集的範圍
     done = {f['properties']['id'] for f in features}
