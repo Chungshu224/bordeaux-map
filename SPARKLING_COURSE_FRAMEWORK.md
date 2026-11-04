@@ -167,6 +167,7 @@
 - 階段 B：**完成**（分支 `feat/sparkling-level1`）。Level 1 六課課文（區塊、詞彙、每課 2 題小測驗）、第 6 課 8 題綜合評量（60 分及格才可標記完成）。內容依 `SPARKLING_FACT_CHECK.md`：已證實者直接寫、二手者標註、未證實者標 ⚠ 且不進測驗（歷史年代、壓力、Brut 系列邊界、EU 最低陳年）。Lambrusco 備註改為「乾型到甜型」。
 - 階段 C：**完成**（分支 `feat/sparkling-level2`，建立在 `feat/sparkling-level1` 之上，須先合併階段 B）。Level 2 八課：香檳 I／II、法國其他（Crémant 等）、西班牙、義大利、德奧英與其他歐洲、新世界，皆以「基酒、釀法與陳年、法規、風格與價位」四問比較；第 8 課 10 題綜合評量（60 分及格）。未證實的數字標 ⚠ 且不進測驗；Crémant de Bourgogne 規格為修訂稿、Gamay 上限待確認，需取得現行版本。寬表格在手機上改為容器內橫向捲動。
 - 階段 D：**完成**（分支 `feat/sparkling-level3`，建立在 `feat/sparkling-level2` 之上，須依序合併 B → C → D）。Level 3 七課：風土比較、釀造深度、法規與標籤判讀、產業與價格論述、品飲 SAT 與盲品、論述與簡答框架、12 題綜合評量（60 分及格）；課程頁新增「簡答練習題＋評分重點」區塊（Level 1 第 1–5 課、Level 2 第 1–7 課、Level 3 第 1–6 課皆有；綜合評量課除外）。SAT 以 WSET Level 3 SAT 為基礎，Level 4 專屬版本與題型配分 ⚠ 未取得；排序題待引擎支援（先以選擇題代替）。
+- 階段 E：**程式完成，氣候資料待產生**（分支 `feat/sparkling-interactive`）。遊戲 5 種（釀法配對、甜度級別、標籤判讀、盲品線索、知識閃問；題目取自已查證內容，每場記錄最高分）、品飲筆記（SAT 欄位；存於本機 localStorage，尚未接 `tasting_notes` 資料表）、成就 10 項（由進度、遊戲、筆記、走訪產區即時計算，不寫入共用成就系統）、地圖走訪追蹤。氣候圖層：`scripts/build-sparkling-climate.mjs`（24 個代表點；南半球以前一年 10 月至當年 4 月計）已就緒，卡片在 `public/data/sparkling-climate.json` 存在時才顯示氣候數字；Open-Meteo 當日額度已用完，改以排程補產。排序題引擎仍未支援。
 - **已決定**：
   1. **專屬地圖頁**：不改共用的 `CourseWorldMap`，另做 `SparklingMapPage`（多國標記、依釀法著色）。
   2. **起泡紅酒（Lambrusco、起泡 Shiraz 等）與甜型起泡（Asti、Clairette de Die 等）都算 D4 考點**：Level 2 的產區課與 Level 3 的品飲（SAT）、論述題都要涵蓋；地圖以「起泡紅酒」「甜型起泡」兩個風格標籤篩選。

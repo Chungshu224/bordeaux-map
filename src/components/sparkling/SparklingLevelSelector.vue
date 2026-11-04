@@ -34,7 +34,9 @@
 
     <RegionStoryGrid title="為什麼要專門學氣泡酒？" :items="overviewItems" />
 
-    <p class="spk-admin-note">本課程僅供管理員閱讀，不對外販售。內容製作中。</p>
+    <SparklingAchievements />
+
+    <p class="spk-admin-note">本課程僅供管理員閱讀，不對外販售。</p>
 
     <ProgressModal
       :open="showProgressModal"
@@ -56,8 +58,9 @@ import {
 import { sparklingLearningState, sparklingLevels, sparklingLevelIds, sparklingLearningProgress } from '../../stores/sparklingLearningStore.js'
 import { SPARKLING_TOTAL_LESSONS } from '../../data/sparkling/lessons.js'
 import { REGIONS } from '../../data/sparkling/regions.js'
+import SparklingAchievements from './SparklingAchievements.vue'
 
-const emit = defineEmits(['enterLevel', 'openMap'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 const theme = getTheme('sparkling')
 const showProgressModal = ref(false)
 
@@ -86,12 +89,14 @@ const heroStats = [
 
 const quickNavItems = computed(() => [
   { key: 'map', desc: `${REGIONS.length} 個產區互動地圖` },
-  { key: 'games', desc: '釀法配對・標籤判讀', enabled: false },
-  { key: 'notebook', desc: '氣泡酒品飲筆記', enabled: false },
+  { key: 'games', desc: '釀法配對・標籤判讀' },
+  { key: 'notebook', desc: '氣泡酒品飲筆記' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
   if (key === 'map') emit('openMap')
+  else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
   else if (key === 'progress') showProgressModal.value = true
 }
 
