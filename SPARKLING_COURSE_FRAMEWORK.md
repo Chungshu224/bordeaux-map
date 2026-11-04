@@ -166,6 +166,7 @@
 - 階段 A：**完成**（分支 `feat/sparkling-course-home`）。課程首頁 `/sparkling`（管理員專屬）、三階段課程列表、21 課空殼（顯示課名、說明、考點，可標記完成）、本機進度（`sparkling_progress_<帳號>`）、地圖入口；首頁導覽列與手機選單的「🥂 氣泡酒專論」連到課程首頁。遊戲、品飲筆記入口顯示「即將推出」。
 - 階段 B：**完成**（分支 `feat/sparkling-level1`）。Level 1 六課課文（區塊、詞彙、每課 2 題小測驗）、第 6 課 8 題綜合評量（60 分及格才可標記完成）。內容依 `SPARKLING_FACT_CHECK.md`：已證實者直接寫、二手者標註、未證實者標 ⚠ 且不進測驗（歷史年代、壓力、Brut 系列邊界、EU 最低陳年）。Lambrusco 備註改為「乾型到甜型」。
 - 階段 C：**完成**（分支 `feat/sparkling-level2`，建立在 `feat/sparkling-level1` 之上，須先合併階段 B）。Level 2 八課：香檳 I／II、法國其他（Crémant 等）、西班牙、義大利、德奧英與其他歐洲、新世界，皆以「基酒、釀法與陳年、法規、風格與價位」四問比較；第 8 課 10 題綜合評量（60 分及格）。未證實的數字標 ⚠ 且不進測驗；Crémant de Bourgogne 規格為修訂稿、Gamay 上限待確認，需取得現行版本。寬表格在手機上改為容器內橫向捲動。
+- 階段 D：**完成**（分支 `feat/sparkling-level3`，建立在 `feat/sparkling-level2` 之上，須依序合併 B → C → D）。Level 3 七課：風土比較、釀造深度、法規與標籤判讀、產業與價格論述、品飲 SAT 與盲品、論述與簡答框架、12 題綜合評量（60 分及格）；課程頁新增「簡答練習題＋評分重點」區塊（Level 1 第 1–5 課、Level 2 第 1–7 課、Level 3 第 1–6 課皆有；綜合評量課除外）。SAT 以 WSET Level 3 SAT 為基礎，Level 4 專屬版本與題型配分 ⚠ 未取得；排序題待引擎支援（先以選擇題代替）。
 - **已決定**：
   1. **專屬地圖頁**：不改共用的 `CourseWorldMap`，另做 `SparklingMapPage`（多國標記、依釀法著色）。
   2. **起泡紅酒（Lambrusco、起泡 Shiraz 等）與甜型起泡（Asti、Clairette de Die 等）都算 D4 考點**：Level 2 的產區課與 Level 3 的品飲（SAT）、論述題都要涵蓋；地圖以「起泡紅酒」「甜型起泡」兩個風格標籤篩選。

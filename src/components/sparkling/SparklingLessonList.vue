@@ -48,6 +48,14 @@
             </template>
           </dl>
         </section>
+        <section v-if="content.practice" class="spl-box">
+          <h3>練習題（簡答）</h3>
+          <p class="spl-practice">{{ content.practice.prompt }}</p>
+          <details class="spl-points">
+            <summary>看評分重點</summary>
+            <ul><li v-for="pt in content.practice.points" :key="pt">{{ pt }}</li></ul>
+          </details>
+        </section>
         <SparklingQuiz v-if="content.quiz" :key="lesson.id" :questions="content.quiz" :pass-score="content.passScore || 0" @result="quizResult = $event" />
       </template>
       <p v-else class="spl-note">課程內容將在階段 D 依框架文件（SPARKLING_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
@@ -119,6 +127,9 @@ function complete() {
 .spl :deep(.compare-table) { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .spl :deep(.compare-table table:has(th:nth-child(3))) { min-width: 540px; }
 .spl :deep(.compare-table td:first-child) { min-width: 7em; font-weight: 600; }
+.spl-practice { margin: 0 0 8px; line-height: 1.7; font-weight: 600; overflow-wrap: anywhere; }
+.spl-points summary { cursor: pointer; color: #B8860B; font-size: .88rem; }
+.spl-points ul { margin: 8px 0 0; padding-left: 20px; line-height: 1.7; font-size: .88rem; }
 .spl-terms { margin: 0; font-size: .88rem; line-height: 1.6; }
 .spl-terms dt { font-weight: 700; color: #6B3A1E; margin-top: 8px; overflow-wrap: anywhere; }
 .spl-terms dd { margin: 0; color: #5a4a35; overflow-wrap: anywhere; }

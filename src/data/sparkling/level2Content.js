@@ -45,6 +45,10 @@ export const LEVEL2_CONTENT = {
       { term: 'NV / Vintage', def: '無年份混調 / 單一年份。NV 最低陳年 15 個月、Vintage 36 個月。' },
       { term: 'Comité Champagne (CIVC)', def: '香檳的產業組織，每年公布產量與統計。' }
     ],
+    practice: {
+      prompt: '用四問（品種與氣候、釀法與陳年、法規、風格與價位）簡述香檳。',
+      points: ['氣候：北方邊緣、白堊；三大品種 Pinot Noir、Chardonnay、Meunier', '釀法：傳統法；NV 至少 15 個月、Vintage 至少 36 個月', '法規：產量每年由 Comité 訂定（如 2025 年 9,000 kg/ha），要標年份', '風格與價位：全球標竿，成本與品牌使價位偏高', '不要背品種面積比例（來源有出入）']
+    },
     quiz: [
       { q: '香檳 NV 與 Vintage 的最低陳年分別是？', options: ['NV 9 個月、Vintage 18 個月', 'NV 15 個月、Vintage 36 個月', 'NV 12 個月、Vintage 24 個月', 'NV 24 個月、Vintage 60 個月'], answer: 1, explain: 'Comité Champagne 官方說明：NV 至少 15 個月，Vintage 至少 36 個月。' },
       { q: '下列哪一個是香檳的子產區？', options: ['Côte des Bar', 'Côte de Nuits', 'Côte Rôtie', 'Côtes du Rhône'], answer: 0, explain: 'Côte des Bar 位於香檳南部；其他三者分屬勃根地與隆河。' }
@@ -89,6 +93,10 @@ export const LEVEL2_CONTENT = {
       { term: '調配 (assemblage)', def: '混合不同品種、地塊與年份的基酒。' },
       { term: 'NM / RM / CM', def: '標籤上的生產者類別代碼。' }
     ],
+    practice: {
+      prompt: '說明香檳 NV 如何維持一致的酒廠風格，並解釋 NM 與 RM 的差別。',
+      points: ['調配：混合不同品種、地塊與年份', '儲備酒：補足不同年份的酸度與風味', '風格取向：氧化式或還原式處理', 'NM：購買葡萄或基酒的酒廠；RM：種植者用自有葡萄釀製並銷售', '補一句：Vintage 通常只在好年份宣告']
+    },
     quiz: [
       { q: '香檳 NV 能年年維持相近風格，最主要靠什麼？', options: ['每年用同一個地塊', '調配多個年份並使用儲備酒', '只用一種品種', '拉長除渣後的靜置時間'], answer: 1, explain: '調配（assemblage）與儲備酒讓酒廠風格年年一致。' },
       { q: '標籤上標示 RM，代表？', options: ['合作社', '買葡萄的酒廠', '種植者用自有葡萄釀製並銷售', '買家品牌'], answer: 2, explain: 'RM (Récoltant Manipulant) 是種植者自己釀自己的酒。' }
@@ -126,6 +134,10 @@ export const LEVEL2_CONTENT = {
       { term: 'Méthode Dioise Ancestrale', def: 'Die 的祖傳法，以 Muscat à petits grains 為主。' },
       { term: 'Mauzac', def: 'Limoux 的特色白品種，用於 Blanquette 與 Crémant。' }
     ],
+    practice: {
+      prompt: '比較 Crémant d\'Alsace 與 Crémant de Loire，並說明為何不能把所有 Crémant 當成一套規則。',
+      points: ['Alsace：六個品種，Rosé 僅 Pinot Noir；酒渣至少 9 個月（2025 草案）', 'Loire：Chenin、Chardonnay、Orbois 等；自 tirage 起至少 12 個月', '各 Crémant 的品種、陳年與產量各自成冊', '與香檳比：陳年較短、品種更多元、價位較低', '誠實標示：Bourgogne 規格尚有修訂稿，需取得現行版本']
+    },
     quiz: [
       { q: 'Crémant de Loire 的最低陳年規定（自 tirage 起算）是？', options: ['6 個月', '12 個月', '24 個月', '36 個月'], answer: 1, explain: 'eAmbrosia 規格列出：自 tirage 起至少 12 個月。' },
       { q: 'Clairette de Die 的 Méthode Dioise Ancestrale 主要使用哪個品種？', options: ['Chenin Blanc', 'Muscat à petits grains', 'Mauzac', 'Gamay'], answer: 1, explain: 'Méthode Dioise Ancestrale：Muscat à petits grains 至少 75%（二手），為祖傳法。' }
@@ -163,6 +175,10 @@ export const LEVEL2_CONTENT = {
       { term: 'Corpinnat', def: 'Penedès 酒廠另立的高標準氣泡酒品牌，要求有機、手採、長陳年。' },
       { term: 'Xarel·lo', def: 'Cava 的核心白品種之一，酸度與結構較強。' }
     ],
+    practice: {
+      prompt: '說明 Cava 的陳年等級，以及 Corpinnat 為何脫離 Cava、標準為何。',
+      points: ['Cava 等級：Guarda 9、Reserva 18（有 15 之說）、Gran Reserva 30、Paraje Calificado 36 個月', 'Corpinnat：創始 9 家，約 2019 年初退出 Cava DO', '標準：至少 18 個月、有機、100% 手採、至少 1 公頃自有園', '可補充：Cava 四大產區，Comtats de Barcelona 逾 95% 產量']
+    },
     quiz: [
       { q: 'Cava Gran Reserva 的最低陳年是？', options: ['9 個月', '18 個月', '30 個月', '60 個月'], answer: 2, explain: 'Gran Reserva 最低 30 個月；Reserva 的 18 或 15 個月之說有出入，不作為題目。' },
       { q: '下列何者是 Corpinnat 的要求？', options: ['允許槽式法', '有機、100% 手採', '只用 Macabeo', '不需陳年'], answer: 1, explain: 'Corpinnat 要求有機、100% 手採、至少 18 個月陳年，並有自有葡萄園面積要求。' }
@@ -197,6 +213,10 @@ export const LEVEL2_CONTENT = {
       { term: 'Rive', def: 'Conegliano Valdobbiadene 中標示特定小區的葡萄園名稱，共 43 個。' },
       { term: 'Satèn', def: 'Franciacorta 的細緻風格，僅限 Brut，不可用 Erbamat。' }
     ],
+    practice: {
+      prompt: '比較 Prosecco 與 Franciacorta 的釀法、陳年與風格，並說明 Asti 與 Lambrusco 為何是考點。',
+      points: ['Prosecco：Glera 至少 85%、槽式法、新鮮果香', 'Franciacorta：傳統法；Spumante 酒渣 18、Satèn 24、Millesimato 30、Riserva 60 個月', 'Asti：Moscato Bianco 至少 97%，Asti 法，甜型起泡', 'Lambrusco：起泡紅酒，多為槽式法', '結論：甜型起泡與起泡紅酒不能只靠香檳知識回答']
+    },
     quiz: [
       { q: 'Moscato d\'Asti 與 Asti 的主要差別是？', options: ['Moscato d\'Asti 酒精較低、壓力較低', 'Moscato d\'Asti 用傳統法', 'Moscato d\'Asti 用紅葡萄', 'Moscato d\'Asti 比 Asti 更乾'], answer: 0, explain: 'Moscato d\'Asti 實際酒精約 4.5–6.5%、壓力不高於 2.5 bar；Asti 實際酒精至少 6%。' },
       { q: 'Trentodoc 屬於哪一類釀法與陳年規定？', options: ['槽式法，無需陳年', '傳統法，酒渣 NV 至少 15 個月', 'Asti 法', '氣體注入'], answer: 1, explain: 'Trentodoc 為傳統法：NV 15、Millesimato 24、Riserva 36 個月。' }
@@ -226,6 +246,10 @@ export const LEVEL2_CONTENT = {
       { term: 'Winzersekt', def: '酒莊自產、瓶內發酵、酒渣至少 9 個月的 Sekt（無獨立法定定義）。' },
       { term: 'Sekt Austria', def: '奧地利 2016 年立法的三級氣泡酒制度：Klassik、Reserve、Grosse Reserve。' }
     ],
+    practice: {
+      prompt: '說明奧地利 Sekt Austria 三級的差異，並說明英國為何被稱為「第二個香檳」。',
+      points: ['Klassik：酒渣至少 9 個月，釀法未規定', 'Reserve：18 個月，傳統法', 'Grosse Reserve：30 個月，傳統法，單一村鎮，採收後 3 年才可上市（二手）', '英國：涼爽氣候、白堊地層、使用香檳品種與傳統法', '2023 年英國氣泡酒占 76%']
+    },
     quiz: [
       { q: '德國 Sekt 的最低瓶內壓力是？', options: ['2 bar', '3 bar', '3.5 bar', '6 bar'], answer: 2, explain: 'Sekt 為 3.5 bar，一般 Schaumwein 為 3 bar。' },
       { q: '英國氣泡酒被稱為「第二個香檳」的主要理由是？', options: ['全部使用槽式法', '涼爽氣候、白堊地層，並使用香檳的品種與傳統法', '法規與香檳完全相同', '只種植 Riesling'], answer: 1, explain: '涼爽氣候、南部白堊地層與 Chardonnay、Pinot Noir、Meunier 加傳統法是核心原因。' }
@@ -256,6 +280,10 @@ export const LEVEL2_CONTENT = {
       { term: '起泡 Shiraz (Sparkling Shiraz)', def: '澳洲的起泡紅酒，常帶殘糖。' },
       { term: 'Méthode Marlborough', def: '紐西蘭 Marlborough 的傳統法協會標準，酒渣至少 18 個月。' }
     ],
+    practice: {
+      prompt: '比較南非 Cap Classique 與紐西蘭 Méthode Marlborough 的規定，並說明起泡 Shiraz 在課程中的角色。',
+      points: ['Cap Classique：法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律 12 個月', 'Méthode Marlborough：100% 當地、傳統法、酒渣至少 18 個月', '起泡 Shiraz：澳洲起泡紅酒代表；釀法證據有限，不要過度斷言', '補一句：新世界不等於便宜仿製品']
+    },
     quiz: [
       { q: '南非 Cap Classique 的法定最低酒渣陳年是？', options: ['3 個月', '9 個月', '24 個月', '36 個月'], answer: 1, explain: 'Cap Classique 法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律為 12 個月。' },
       { q: '下列哪一項最能代表新世界的起泡紅酒？', options: ['Cap Classique', 'Méthode Marlborough', '起泡 Shiraz', 'Sekt Klassik'], answer: 2, explain: '起泡 Shiraz 是澳洲具代表性的起泡紅酒。' }
