@@ -293,6 +293,8 @@ const isAdmin = computed(() => !authState.loading && authActions.isAdmin())
 
 // 管理員預覽：讀取 courses 表中「尚未在方案頁販售」的新產區
 const SOLD_COURSE_IDS = ['bordeaux', 'bourgogne', 'italy', 'global']
+// 永遠不販售、僅供管理員閱讀的課程（不得出現在方案預覽或全球通行證）
+const NOT_FOR_SALE_IDS = ['sparkling']
 const previewCourses = ref([])
 const previewLoading = ref(false)
 const formatPrice = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'))
@@ -306,7 +308,7 @@ async function loadPreviewCourses() {
       .select('id, name_zh, description, price_basic_monthly, price_basic_yearly, active')
       .order('id')
     if (error) throw error
-    previewCourses.value = (data || []).filter(c => !SOLD_COURSE_IDS.includes(c.id))
+    previewCourses.value = (data || []).filter(c => !SOLD_COURSE_IDS.includes(c.id) && !NOT_FOR_SALE_IDS.includes(c.id))
   } catch (err) {
     console.error('[Pricing] 無法載入新產區課程:', err)
   } finally {
