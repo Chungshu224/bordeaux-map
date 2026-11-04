@@ -97,7 +97,7 @@
 
 | 原文說法 | 查證結果 | 狀態 | 來源 |
 |---|---|---|---|
-| 南非 Cap Classique | 法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律 12 個月、手採；無法定品種限制，建議 Chardonnay、Pinot Noir、Meunier；1971 年 Simonsig 首支以 Chenin 為基酒 | ✅ | Decanter（約 2021）；capclassique.co.za |
+| 南非 Cap Classique | 法定瓶內發酵、酒渣至少 12 個月（多數來源寫 2023 年份起，亦有寫 2021 者；舊規定 9 個月）；CCPA 會員另要求手採；無法定品種限制，建議 Chardonnay、Pinot Noir、Meunier；1971 年 Simonsig 首支以 Chenin 為基酒 | ✅（二手；法條原文未取得） | Decanter（約 2021）；capclassique.co.za；the-buyer.net |
 | 塔斯馬尼亞 | 氣泡酒占產量逾 40%；Pinot Noir 43%、Chardonnay 28%（Wine Australia 2024 年份報告）。「澳洲最涼爽之一」該來源未直接支持 | ✅（氣泡基地）／❓（最涼爽之一） | Wine Australia InfoSheet（2024） |
 | 起泡 Shiraz 釀法 | Best's Great Western 以傳統法並以老 Muscat liqueur 調整；其他酒廠有槽式／轉移法，僅單一酒莊為證 | ❓（'varies' 合理但證據不足） | bestswines.com（單一酒莊） |
 | 紐西蘭 Marlborough | 紐西蘭領先氣泡產區；Méthode Marlborough 協會標準：100% 當地、傳統法、酒渣至少 18 個月；Chardonnay、Pinot Noir、Meunier | ✅（二手） | winewithseth（二手） |

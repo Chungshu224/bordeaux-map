@@ -262,7 +262,7 @@ export const LEVEL2_CONTENT = {
       compare(
         ['產區', '釀法與規定', '風格、價位與備註'],
         [
-          ['南非 Cap Classique', '法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律 12 個月、手採；無法定品種限制', '建議 Chardonnay、Pinot Noir、Meunier；1971 年 Simonsig 首支以 Chenin 為基酒'],
+          ['南非 Cap Classique', '法定瓶內發酵、酒渣至少 12 個月（2023 年份起，舊規定 9 個月，二手）；CCPA 會員另要求手採；無法定品種限制', '建議 Chardonnay、Pinot Noir、Meunier；1971 年 Simonsig 首支以 Chenin 為基酒'],
           ['塔斯馬尼亞', '氣泡酒占產量逾 40%（Wine Australia 2024）；Pinot Noir 43%、Chardonnay 28%', '涼爽氣候的氣泡基地；「澳洲最涼爽之一」之說 ⚠ 來源未直接支持'],
           ['起泡 Shiraz（澳洲）', 'Best\'s Great Western 以傳統法並用老 Muscat liqueur 調整；其他酒廠有槽式法或轉移法，證據僅單一酒莊', '起泡紅酒的代表；釀法「varies」合理但證據不足 ⚠'],
           ['紐西蘭 Marlborough', 'Méthode Marlborough 協會標準：100% 當地、傳統法、酒渣至少 18 個月；Chardonnay、Pinot Noir、Meunier', '紐西蘭氣泡酒的領先產區（二手）'],
@@ -271,7 +271,7 @@ export const LEVEL2_CONTENT = {
         ]
       ),
       info('起泡紅酒（考點）', '起泡 Shiraz 是新世界最具代表性的起泡紅酒，風格常帶殘糖與成熟黑色水果，與義大利 Lambrusco 並列為 D4 可能考到的類別。'),
-      mis('「新世界氣泡酒只是便宜的仿製品。」新世界有傳統法的高端產區，如 Méthode Marlborough 要求酒渣至少 18 個月，Cap Classique 也有法定瓶內發酵與 9 個月酒渣。'),
+      mis('「新世界氣泡酒只是便宜的仿製品。」新世界有傳統法的高端產區，如 Méthode Marlborough 要求酒渣至少 18 個月，Cap Classique 也有法定瓶內發酵與 12 個月酒渣。'),
       expand('⚠ 未能查證', '• 加州的投資年份（Chandon 1973、Roederer 1982、Mumm Napa 1979、Domaine Carneros 1987）⚠<br>• 加拿大、智利、美國 Oregon 的氣泡酒細節 ⚠（其中智利、阿根廷、加州、Oregon、Washington 在 2019 版 D4 範圍清單上）<br>• 澳洲 Victoria、Adelaide Hills 的氣泡酒細節 ⚠'),
       info('風格與價位的決定因素', '新世界的價位主要由「釀法（傳統法 vs 槽式）、陳年時間、地理與氣候、品牌」決定，不是由國家決定。同一國家內可有平價槽式與高端傳統法並存。')
     ],
@@ -282,10 +282,10 @@ export const LEVEL2_CONTENT = {
     ],
     practice: {
       prompt: '比較南非 Cap Classique 與紐西蘭 Méthode Marlborough 的規定，並說明起泡 Shiraz 在課程中的角色。',
-      points: ['Cap Classique：法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律 12 個月', 'Méthode Marlborough：100% 當地、傳統法、酒渣至少 18 個月', '起泡 Shiraz：澳洲起泡紅酒代表；釀法證據有限，不要過度斷言', '補一句：新世界不等於便宜仿製品']
+      points: ['Cap Classique：法定瓶內發酵、酒渣至少 12 個月（2023 年份起，舊規定 9 個月）', 'Méthode Marlborough：100% 當地、傳統法、酒渣至少 18 個月', '起泡 Shiraz：澳洲起泡紅酒代表；釀法證據有限，不要過度斷言', '補一句：新世界不等於便宜仿製品']
     },
     quiz: [
-      { q: '南非 Cap Classique 的法定最低酒渣陳年是？', options: ['3 個月', '9 個月', '24 個月', '36 個月'], answer: 1, explain: 'Cap Classique 法定瓶內發酵、酒渣至少 9 個月；CCPA 會員自律為 12 個月。' },
+      { q: '南非 Cap Classique 現行的法定最低酒渣陳年是？', options: ['3 個月', '12 個月', '24 個月', '36 個月'], answer: 1, explain: 'Cap Classique 法定瓶內發酵、酒渣至少 12 個月（2023 年份起，舊規定 9 個月）。' },
       { q: '下列哪一項最能代表新世界的起泡紅酒？', options: ['Cap Classique', 'Méthode Marlborough', '起泡 Shiraz', 'Sekt Klassik'], answer: 2, explain: '起泡 Shiraz 是澳洲具代表性的起泡紅酒。' }
     ]
   },
@@ -302,7 +302,7 @@ export const LEVEL2_CONTENT = {
           ['Cava / Corpinnat', 'Cava 有四種陳年等級；Corpinnat 要求有機、手採'],
           ['義大利', 'Prosecco 槽式法；Asti 為甜型；Franciacorta、Trentodoc 傳統法；Lambrusco 起泡紅酒'],
           ['德奧英', 'Sekt 3.5 bar；Sekt Austria 三級；英國以傳統法與白堊著名'],
-          ['新世界', 'Cap Classique 法定酒渣至少 9 個月；起泡 Shiraz 為起泡紅酒']
+          ['新世界', 'Cap Classique 法定酒渣至少 12 個月；起泡 Shiraz 為起泡紅酒']
         ]
       ),
       info('D4 範圍提醒', 'WSET D4 2019 版範圍清單沒有列出 Cap Classique、Corpinnat、Sekt Austria 的名稱；2025 版未取得。準備考試時請以 WSET 最新規格為準。')
@@ -316,7 +316,7 @@ export const LEVEL2_CONTENT = {
       { q: 'Cava 產量最大的子產區是？', options: ['Valle del Ebro', 'Almendralejo', 'Requena', 'Comtats de Barcelona'], answer: 3, explain: 'Comtats de Barcelona 占逾 95% 的 Cava 產量。' },
       { q: '下列何者是 Corpinnat 的要求？', options: ['允許槽式法', '有機、手採、長陳年', '只用 Parellada', '無最低陳年'], answer: 1, explain: 'Corpinnat 要求有機、100% 手採、至少 18 個月陳年。' },
       { q: '2023 年英國葡萄園中，氣泡酒約占？', options: ['26%', '46%', '76%', '96%'], answer: 2, explain: 'WineGB 2023 年資料：氣泡酒占 76%。' },
-      { q: '南非 Cap Classique 的法定最低酒渣陳年是？', options: ['3 個月', '9 個月', '18 個月', '36 個月'], answer: 1, explain: 'Cap Classique 法定至少 9 個月。' },
+      { q: '南非 Cap Classique 現行的法定最低酒渣陳年是？', options: ['3 個月', '12 個月', '18 個月', '36 個月'], answer: 1, explain: 'Cap Classique 法定至少 12 個月（2023 年份起，舊規定 9 個月）。' },
       { q: '下列何者屬於起泡紅酒？', options: ['Asti', 'Prosecco', 'Lambrusco', 'Crémant d\'Alsace Blanc'], answer: 2, explain: 'Lambrusco 是義大利常見的起泡紅酒。' },
       { q: '德國 Sekt 的最低瓶內壓力是？', options: ['2 bar', '3 bar', '3.5 bar', '6 bar'], answer: 2, explain: 'Sekt 最低 3.5 bar，一般 Schaumwein 為 3 bar。' }
     ],
