@@ -35,6 +35,10 @@ export const LEVEL1_CONTENT = {
       { term: '傳統法 (traditional method)', def: '瓶內二次發酵並經酒渣陳年；標籤用語因產區而異，如 Méthode Traditionnelle、Metodo Classico、Método Tradicional、Cap Classique。' },
       { term: '槽式法 (tank / Charmat / Martinotti)', def: '在密閉耐壓槽內做二次發酵。' }
     ],
+    practice: {
+      prompt: '用一句話區分傳統法與槽式法，並說明為什麼兩者的價位傾向不同。',
+      points: ['傳統法：瓶內二次發酵並經酒渣陳年；槽式法：在密閉槽內二次發酵', '成本因素：時間、人工、設備與資金佔用', '傳統法傾向價位較高、槽式法傾向較低', '補一句：價位是傾向而非規則（如 Cartizze 可以很貴）']
+    },
     quiz: [
       { q: '決定氣泡酒「釀法」分類的最關鍵問題是什麼？', options: ['使用什麼葡萄品種', '氣泡在哪裡、用什麼方式產生', '酒標上有沒有年份', '產區的緯度'], answer: 1, explain: '釀法的分類看氣泡的來源：瓶內二次發酵、槽內二次發酵、單次發酵、或直接打氣。' },
       { q: '下列哪一種做法的成本通常最低？', options: ['傳統法', '轉移法', '氣體注入', '祖傳法'], answer: 2, explain: '氣體注入是把 CO₂ 直接灌進靜態酒，不需要二次發酵與陳年，成本最低；氣泡也通常較粗、消散較快。' }
@@ -82,6 +86,10 @@ export const LEVEL1_CONTENT = {
       { term: 'mousse', def: '氣泡的質感與持久度。' },
       { term: 'Brut Nature / Pas dosé / Dosage zéro', def: '不加 dosage 或幾乎不加糖的最乾風格。' }
     ],
+    practice: {
+      prompt: '說明二次發酵如何產生氣泡，並解釋糖量、壓力與甜度用語的關係（含 Extra Dry 與 Dry 的易錯點）。',
+      points: ['糖＋酵母在密閉容器發酵 → 酒精＋CO₂，CO₂ 溶入酒中', '糖越多、CO₂ 越多、壓力越高', 'mousse 用語：delicate、creamy、aggressive', 'Extra Dry（12–17 g/L）比 Dry/Sec（17–32 g/L）更乾', '不要寫未證實的數字（如各產區壓力）']
+    },
     quiz: [
       { q: '在其他條件相同下，二次發酵時加入的糖越多，會發生什麼事？', options: ['瓶內壓力越高', '壓力越低', '酒精度下降', '完全沒有影響'], answer: 0, explain: '糖被酵母轉成酒精與 CO₂，CO₂ 在密閉容器中溶入酒內，糖越多壓力越高。' },
       { q: '依 EU 用語，下列哪一項說法正確？', options: ['Extra Dry 比 Dry（Sec）更甜', 'Extra Dry（12–17 g/L）比 Dry（17–32 g/L）更乾', 'Extra Dry 與 Brut Nature 同義', 'Dry 的殘糖高於 Sweet'], answer: 1, explain: 'Extra Dry 的殘糖範圍低於 Dry/Sec，所以更乾；這是氣泡酒甜度用語最常見的陷阱。' }
@@ -120,6 +128,10 @@ export const LEVEL1_CONTENT = {
       { term: '黑中白 (blanc de noirs)', def: '用紅皮品種釀成的白色氣泡酒。' },
       { term: '白中白 (blanc de blancs)', def: '只用白葡萄品種（如 Chardonnay）釀成。' }
     ],
+    practice: {
+      prompt: '說明氣泡酒的基酒為什麼要高酸、低酒精，以及涼爽氣候如何幫助。',
+      points: ['基酒單喝很酸很瘦是刻意的', '高酸讓成品在二次發酵與 dosage 後仍清爽', '二次發酵會再增加酒精，所以基酒酒精要偏低', '涼爽氣候讓成熟慢、酸度保留、酒精較低', '舉例：Champagne 或 Prosecco 的主要品種']
+    },
     quiz: [
       { q: '氣泡酒為什麼偏好冷涼氣候的葡萄？', options: ['因為涼爽氣候葡萄糖度最高', '涼爽氣候保留較高酸度與較低酒精', '因為涼爽氣候不需要二次發酵', '因為只有涼爽氣候才能種白葡萄'], answer: 1, explain: '涼爽氣候讓葡萄慢熟，酸度保留、糖度與酒精較低，符合基酒的需求。' },
       { q: 'Prosecco DOC 的主要品種及比例規定是？', options: ['Chardonnay 至少 85%', 'Glera 至少 85%', 'Moscato Bianco 至少 97%', 'Macabeo 至少 85%'], answer: 1, explain: 'Prosecco DOC 的主要品種是 Glera，至少 85%。' }
@@ -163,6 +175,10 @@ export const LEVEL1_CONTENT = {
       { term: '除渣 (dégorgement)', def: '移除瓶頸酒渣。' },
       { term: 'dosage', def: '除渣後補入的酒與糖液，決定甜度。' }
     ],
+    practice: {
+      prompt: '依序寫出傳統法從壓榨到封瓶的主要步驟，並說明自溶如何影響風味。',
+      points: ['壓榨 → 一次發酵 → 調配 → 裝瓶（tirage）→ 二次發酵 → 酒渣陳年 → 轉瓶 → 除渣 → dosage → 封瓶', '自溶：死亡酵母分解，帶來麵包、餅乾、烤吐司風味並讓氣泡更綿密', '舉例：香檳 NV 至少 15 個月、Vintage 至少 36 個月', '補一句：陳年越久不等於品質越高']
+    },
     quiz: [
       { q: '傳統法中，最終甜度主要由哪一步決定？', options: ['壓榨', '裝瓶 (tirage)', '除渣後的 dosage', '轉瓶'], answer: 2, explain: 'dosage 在除渣後補入 liqueur d\'expédition，決定最終的殘糖與甜度。' },
       { q: '酒渣陳年時，死亡酵母分解帶來的風味最像下列何者？', options: ['青草與柑橘皮', '麵包、餅乾、烤吐司', '黑醋栗與雪松', '蜂蜜與杏桃乾'], answer: 1, explain: '自溶 (autolysis) 帶來麵包、餅乾、烤吐司、奶油等風味。' }
@@ -219,6 +235,10 @@ export const LEVEL1_CONTENT = {
       { term: '祖傳法 (méthode ancestrale)', def: '單次發酵在瓶中完成。' },
       { term: 'Pét-Nat (pétillant naturel)', def: '祖傳法做出的、常不除渣的自然氣泡酒。' }
     ],
+    practice: {
+      prompt: '比較槽式法、轉移法與 Asti 法的流程與風格差異。',
+      points: ['槽式法：槽內二次發酵，壓力下過濾裝瓶；果香新鮮、成本低', '轉移法：瓶內發酵後倒入槽內過濾再裝瓶，省去轉瓶與逐瓶除渣', 'Asti 法：槽內單次發酵，降溫中止，保留殘糖；甜、低酒精', '指出三者都不是「品質差」的同義詞']
+    },
     quiz: [
       { q: '轉移法與傳統法最大的差別在哪？', options: ['轉移法不做二次發酵', '轉移法在酒渣陳年後把酒倒入槽內過濾，再裝新瓶', '轉移法只能用紅葡萄', '轉移法一定比傳統法貴'], answer: 1, explain: '轉移法省去轉瓶與逐瓶除渣，改為倒入槽內過濾後再裝瓶。' },
       { q: '單次發酵在瓶中完成、常不除渣的氣泡酒，通常屬於哪種做法？', options: ['槽式法', '祖傳法 / Pét-Nat', '氣體注入', '傳統法'], answer: 1, explain: '祖傳法（Pét-Nat）是基酒在發酵尚未完成時裝瓶，由瓶內單次發酵完成。' }
