@@ -13,7 +13,7 @@
 - 英文與日文以 overlay 提供；新增字串須有 en／ja。
 
 ## 3. 互動功能（階段 E 計畫）
-示意點地圖（無授權邊界時）、遊戲、品飲筆記（`sw_*`）、成就、詞彙（region `southwest`）、氣候腳本（北半球 4–10 月）。
+AOC 範圍地圖（30 個 AOC，來自管理員提供的 INAO 地塊劃界 KML，2018 年版；Armagnac 子區與 IGP 仍是示意點；由 `scripts/build-southwest-aoc-geojson.py` 產生。公開前要確認 INAO 資料的授權並註明出處；地圖資料僅供參考，不具法律效力）、遊戲、品飲筆記（`sw_*`）、成就、詞彙（region `southwest`）、氣候腳本（北半球 4–10 月）。
 
 ## 4. 完成狀態
 
