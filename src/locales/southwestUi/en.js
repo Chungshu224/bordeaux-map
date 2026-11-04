@@ -670,4 +670,6 @@ export default {
   "本課程未另外介紹這個 AOC。": "This course does not cover this AOC separately.",
   "Bergerac AOC 1936 年、Côtes de Bergerac 1995 年；後者規定較嚴，酒體較有結構（Dordogne 旅遊局）。": "Bergerac AOC dates from 1936 and Côtes de Bergerac from 1995; the latter has stricter rules and more structured wines (Dordogne tourist board).",
   "Haut-Montravel、Montravel 乾白、Côtes de Montravel 於 1937 年認定（Dordogne 旅遊局）。": "Haut-Montravel, dry white Montravel and Côtes de Montravel were recognised in 1937 (Dordogne tourist board).",
+  "點擊色塊或圓點查看資訊；重疊時點選最小的 AOC。多數色塊是 AOC 的地塊範圍（INAO 2018 年版，僅供參考）。Béarn、Gaillac、Gaillac premières côtes、Côtes de Montravel 的地塊資料不完整，改用歐盟資料集的村莊層級範圍（CC0，2021 年前）。Armagnac 子區與 IGP 仍是示意點。": "Tap a shaded area or marker for details; where areas overlap, the smallest AOC is selected. Most shaded areas are AOC parcel delimitations (INAO, 2018 edition, for reference only). The parcel data is incomplete for Béarn, Gaillac, Gaillac premières côtes and Côtes de Montravel, which use commune-level areas from the EU dataset (CC0, pre-2021). Armagnac sub-zones and the IGP remain indicative points.",
+  "範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。": "The area comes from the EU PDO dataset (CC0, pre-2021) and is at commune level, not parcel level.",
 }

@@ -38,10 +38,10 @@ export const POINT_REF = [
     notes: 'AOC 1937 年；約 1,250 公頃；位於 Lot-et-Garonne，在波爾多與 Bergerac 交界；可用 Chenin 與 Mauzac 做甜白（Dordogne 旅遊局）。' }),
   P('COTESBERGERAC', 'Côtes de Bergerac', 'aoc', 'dordogne', [0.3985, 44.796], {
     notes: 'Bergerac AOC 1936 年、Côtes de Bergerac 1995 年；後者規定較嚴，酒體較有結構（Dordogne 旅遊局）。', sameAs: 'Bergerac' }),
-  P('COTESMONTRAVEL', 'Côtes de Montravel', 'aoc', 'dordogne', [0.1918, 44.8772], {
-    notes: 'Haut-Montravel、Montravel 乾白、Côtes de Montravel 於 1937 年認定（Dordogne 旅遊局）。', sameAs: 'Haut-Montravel' }),
+  P('COTESMONTRAVEL', 'Côtes de Montravel', 'aoc', 'dordogne', [0.154, 44.8821], {
+    notes: 'Haut-Montravel、Montravel 乾白、Côtes de Montravel 於 1937 年認定（Dordogne 旅遊局）。' }),
   P('HAUTMONTRAVEL', 'Haut-Montravel', 'aoc', 'dordogne', [0.1918, 44.8772], {
-    notes: 'Haut-Montravel、Montravel 乾白、Côtes de Montravel 於 1937 年認定（Dordogne 旅遊局）。', sameAs: 'Côtes de Montravel' }),
+    notes: 'Haut-Montravel、Montravel 乾白、Côtes de Montravel 於 1937 年認定（Dordogne 旅遊局）。' }),
   // ── Lot・Garonne・Tarn 河谷 ──
   P('CAHORS', 'Cahors', 'aoc', 'valleys', [1.3636, 44.4579], {
     parent: 'Lot', styles: ['紅酒'], grapes: ['Malbec', 'Merlot', 'Tannat'],
@@ -55,13 +55,13 @@ export const POINT_REF = [
   P('MARMANDAIS', 'Côtes du Marmandais', 'aoc', 'valleys', [0.023, 44.469], {
     parent: 'Lot-et-Garonne', styles: ['紅酒', '白酒'], grapes: ['Abouriou', 'Fer Servadou'],
     notes: '1990 年自 VDQS 升為 AOC；位於 Entre-Deux-Mers 東南、Garonne 沿岸；品種多達 12 種，含 Abouriou 與 Fer（Wikipedia）。' }),
-  P('GAILLAC', 'Gaillac', 'aoc', 'valleys', [2.0367, 43.99], {
+  P('GAILLAC', 'Gaillac', 'aoc', 'valleys', [1.8575, 43.93], {
     parent: 'Tarn', styles: ['白酒', '紅酒', '氣泡酒', '甜酒'], grapes: ['Mauzac', 'Len de l\'El', 'Duras', 'Fer Servadou', 'Syrah'],
     notes: '白酒 1938 年 3 月 21 日、紅酒 1970 年 10 月 23 日取得 AOC；Méthode Gaillacoise 僅用 Mauzac，單次發酵在瓶中完成；Gaillac Doux 殘糖至少 70 g/L；Primeur 為純 Gamay（Wine With Seth）。' }),
   P('FRONTON', 'Fronton', 'aoc', 'valleys', [1.4308, 43.7932], {
     parent: 'Haute-Garonne／Tarn-et-Garonne', styles: ['紅酒', '粉紅酒'], grapes: ['Négrette'],
     notes: '位於 Toulouse 以北約 35 公里；紅酒約占 85%、粉紅約 15%；Négrette 酸度與單寧低但色深，帶紫羅蘭、覆盆子與甘草香（Wikipedia）。Négrette 比例各來源不一，不列入。' }),
-  P('GAILLACPC', 'Gaillac premières côtes', 'aoc', 'valleys', [1.8986, 43.9597], {
+  P('GAILLACPC', 'Gaillac premières côtes', 'aoc', 'valleys', [1.9378, 43.9333], {
     notes: '本課程未另外介紹這個 AOC。' }),
   P('BRULHOIS', 'Brulhois', 'aoc', 'valleys', [0.8391, 44.0914], {
     notes: '本課程未另外介紹這個 AOC。' }),
@@ -104,7 +104,7 @@ export const POINT_REF = [
   P('JURANCON', 'Jurançon', 'aoc', 'pyrenees', [-0.5728, 43.2715], {
     parent: 'Pyrénées-Atlantiques', styles: ['甜酒', '白酒'], grapes: ['Petit Manseng', 'Gros Manseng'],
     notes: '甜酒 1936 年取得 AOC，Jurançon Sec 1975 年；Gros 與 Petit Manseng 合計至少 50%；甜酒靠葡萄在藤上風乾（passerillage）、不靠貴腐；Sec 殘糖最多 4 g/L、甜酒至少 40 g/L、Vendanges Tardives 至少 55 g/L（Wine With Seth）。' }),
-  P('BEARN', 'Béarn', 'aoc', 'pyrenees', [-0.0924, 43.4757], {
+  P('BEARN', 'Béarn', 'aoc', 'pyrenees', [-0.5133, 43.2808], {
     parent: 'Pyrénées-Atlantiques', styles: ['紅酒', '粉紅酒', '白酒'], grapes: ['Tannat', 'Cabernet Franc', 'Fer'],
     notes: '1951 年為 VDQS，1975 年成為 AOC；Béarn-Bellocq 於 1991 年成立；約 259 公頃；紅葡萄有 Cabernet Franc、Cabernet Sauvignon、Tannat、Fer、Manseng Noir、Courbu Noir（Wikipedia）。' }),
   P('IROULEGUY', 'Irouléguy', 'aoc', 'pyrenees', [-1.2181, 43.181], {

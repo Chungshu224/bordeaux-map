@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """把西南產區 KML（INAO 地塊劃界，每列一個「村莊 × AOC」）依 AOC 合併，輸出探索地圖用的 GeoJSON。
 
-用法：python scripts/build-southwest-aoc-geojson.py "<Sudouest region.kml>"
-需要 shapely。輸出：
+用法：python scripts/build-southwest-aoc-geojson.py "<Sudouest region.kml>" <EU_PDO.gpkg> <PDO_EU_id.csv>
+需要 shapely、pyproj。歐盟資料集（Bianchi et al. 2022，CC0）的下載位置見 scripts/build-rhone-geojson.py。
+
+KML 是 2018 年的地塊資料。依歐盟資料集的村莊清單比對，PARTIAL 列出的 AOC 缺村莊：它們的地塊仍輸出成
+獨立檔（partial: true），地圖改用歐盟資料集的完整範圍（村莊層級）。
+
+輸出：
   public/southwest/geojson/<slug>.geojson   每個 AOC 一個檔
   public/southwest/southwest_aoc.geojson    全部合併，地圖載入這個檔
 
@@ -10,19 +15,29 @@
 所以名稱一律用下面的對照表，不讀檔內文字。
 """
 import json
+import csv
 import math
+import re
+import sqlite3
 import sys
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 
+from pyproj import Transformer
+from shapely import wkb
 from shapely.geometry import MultiPolygon, Polygon, mapping
-from shapely.ops import unary_union
+from shapely.ops import transform, unary_union
 
 NS = '{http://www.opengis.net/kml/2.2}'
 SIMPLIFY_DEGREES = 0.0003  # 約 30 公尺
 MIN_PART_KM2 = 0.005  # 0.5 公頃；這組參數保留約 98.5% 面積，合併檔約 4.4 MB
+EU_TOLERANCE_M = 40
 OUT = Path(__file__).resolve().parent.parent / 'public' / 'southwest'
+
+# id_app → KML 缺村莊的 AOC 的歐盟 PDOid（KML 村莊數／歐盟清單：Béarn 64／82、Gaillac 68／71、
+# Gaillac premières côtes 10／11、Côtes de Montravel 13／15）
+PARTIAL = {'9': 'PDO-FR-A0597', '34': 'PDO-FR-A0502', '36': 'PDO-FR-A0326', '28': 'PDO-FR-A0188'}
 
 # id_app → (地圖 id, 正確名稱, 產區群)
 AOCS = {
@@ -105,7 +120,7 @@ def rounded(geom):
     return {'type': m['type'], 'coordinates': coords(m['coordinates'])}
 
 
-def main(kml):
+def main(kml, gpkg, idcsv):
     groups = defaultdict(list)
     communes = defaultdict(int)
     for _, el in ET.iterparse(kml, events=('end',)):
@@ -121,6 +136,32 @@ def main(kml):
     if set(groups) != set(AOCS):
         raise SystemExit(f'KML 缺少：{set(AOCS) - set(groups)}')
 
+    csv.field_size_limit(10 ** 8)
+    munis = {}
+    for r in csv.DictReader(open(idcsv, encoding='utf-8-sig')):
+        munis[r['PDOid']] = len({m.strip() for m in re.split(r'[/;]', r['Municip_nam']) if m.strip()})
+    con = sqlite3.connect(gpkg)
+    to_ll = Transformer.from_crs('EPSG:3035', 'EPSG:4326', always_xy=True).transform
+
+    def eu_feature(pid, key, name, zone):
+        blob = con.execute('select Shape from EU_PDO where PDOid=?', (pid,)).fetchone()[0]
+        env = (blob[3] >> 1) & 7
+        off = 8 + {0: 0, 1: 32, 2: 48, 3: 48, 4: 64}[env]
+        g = wkb.loads(bytes(blob[off:]))
+        area = g.area / 1e6
+        g = transform(to_ll, g.simplify(EU_TOLERANCE_M, preserve_topology=True))
+        rep = g.representative_point()
+        w, s, e, n = g.bounds
+        return {
+            'type': 'Feature',
+            'properties': {
+                'id': f'SW-PT-{key}', 'name': name, 'zone': zone, 'communes': munis[pid], 'source': 'eu',
+                'areaKm2': round(area, 1), 'center': [round(rep.x, 4), round(rep.y, 4)],
+                'bbox': [round(w, 4), round(s, 4), round(e, 4), round(n, 4)],
+            },
+            'geometry': rounded(g),
+        }
+
     (OUT / 'geojson').mkdir(parents=True, exist_ok=True)
     features = []
     for app, (key, name, zone) in AOCS.items():
@@ -132,14 +173,18 @@ def main(kml):
         feature = {
             'type': 'Feature',
             'properties': {
-                'id': f'SW-PT-{key}', 'name': name, 'zone': zone, 'communes': communes[app],
+                'id': f'SW-PT-{key}', 'name': name, 'zone': zone, 'communes': communes[app], 'source': 'inao',
                 'areaKm2': round(km2(merged, lat), 1),
                 'center': [round(rep.x, 4), round(rep.y, 4)],
                 'bbox': [round(w, 4), round(s, 4), round(e, 4), round(n, 4)],
             },
             'geometry': rounded(geom),
         }
-        features.append(feature)
+        if app in PARTIAL:
+            feature['properties'].update(partial=True, expectedCommunes=munis[PARTIAL[app]])
+            features.append(eu_feature(PARTIAL[app], key, name, zone))
+        else:
+            features.append(feature)
         path = OUT / 'geojson' / f'{key.lower()}.geojson'
         path.write_text(json.dumps({'type': 'FeatureCollection', 'features': [feature]}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 
@@ -154,4 +199,4 @@ def main(kml):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2], sys.argv[3])

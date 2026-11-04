@@ -36,7 +36,7 @@
           <input type="checkbox" v-model="showPoints" @change="applyTierVisibility" />
           <span class="sw-pt-dot"></span> {{ gt('地點標籤（{n}）', { n: POINT_REF.length }) }}
         </label>
-        <div class="sw-legend-hint">{{ gt('點擊色塊或圓點查看資訊。色塊是 AOC 的地塊範圍（INAO 2018 年版，僅供參考）；重疊時點選最小的 AOC。Armagnac 子區與 IGP 仍是示意點。') }}</div>
+        <div class="sw-legend-hint">{{ gt('點擊色塊或圓點查看資訊；重疊時點選最小的 AOC。多數色塊是 AOC 的地塊範圍（INAO 2018 年版，僅供參考）。Béarn、Gaillac、Gaillac premières côtes、Côtes de Montravel 的地塊資料不完整，改用歐盟資料集的村莊層級範圍（CC0，2021 年前）。Armagnac 子區與 IGP 仍是示意點。') }}</div>
       </div>
 
       <div v-if="showLayerPanel" class="layer-panel-wrapper">
@@ -140,6 +140,9 @@ const KIND_LABEL = { aoc: 'AOC／AOP', sub: '子區／IGP／烈酒產區' }
 const ZONE_BY_KEY = Object.fromEntries(ZONES.map(z => [z.key, z]))
 const HOME_BOUNDS = [[-1.6, 42.95], [3.4, 45.1]]
 const AOC_NOTE = 'AOC 範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。'
+// 歐盟資料是整個村莊的範圍，要淡一點才看得到裡面的 AOC
+const AOC_FILL = ['case', ['==', ['get', 'source'], 'eu'], 0.14, 0.28]
+const SRC_EU = '範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。'
 
 const mapContainer = ref(null)
 const mapReady = ref(false)
@@ -286,7 +289,7 @@ const unifiedInfo = computed(() => {
         : { label: gt('位置'), value: gt('示意點，非官方邊界') }
     ],
     grapes: (g.grapes || []).map(x => gt(x)),
-    description: [gt(g.notes), g.sameAs ? gt('劃界範圍與 {p} 相同。', { p: g.sameAs }) : '', gt(aoc ? AOC_NOTE : POINT_NOTES)].filter(Boolean).join(' ')
+    description: [gt(g.notes), g.sameAs ? gt('劃界範圍與 {p} 相同。', { p: g.sameAs }) : '', gt(!aoc ? POINT_NOTES : aoc.source === 'eu' ? SRC_EU : AOC_NOTE)].filter(Boolean).join(' ')
   }
 })
 
@@ -332,7 +335,7 @@ function applyHighlight() {
   const pid = activePoint.value?.id
   map.setPaintProperty('sw-pt-circle', 'circle-radius', pid ? ['case', ['==', ['get', 'id'], pid], 12, 7] : 8)
   if (map.getLayer('sw-aoc-fill')) {
-    map.setPaintProperty('sw-aoc-fill', 'fill-opacity', pid ? ['case', ['==', ['get', 'id'], pid], 0.65, 0.08] : 0.28)
+    map.setPaintProperty('sw-aoc-fill', 'fill-opacity', pid ? ['case', ['==', ['get', 'id'], pid], 0.65, 0.08] : AOC_FILL)
     map.setPaintProperty('sw-aoc-line', 'line-width', pid ? ['case', ['==', ['get', 'id'], pid], 1.6, 0.3] : 0.5)
   }
 }
@@ -434,7 +437,7 @@ async function addAocLayers() {
     aocProps.value = Object.fromEntries(fc.features.map(f => [f.properties.id, f.properties]))
     map.addSource('sw-aoc', { type: 'geojson', data: fc })
     map.addLayer({ id: 'sw-aoc-fill', type: 'fill', source: 'sw-aoc',
-      paint: { 'fill-color': zoneColorExpr(), 'fill-opacity': 0.28 } }, 'sw-pt-circle')
+      paint: { 'fill-color': zoneColorExpr(), 'fill-opacity': AOC_FILL } }, 'sw-pt-circle')
     map.addLayer({ id: 'sw-aoc-line', type: 'line', source: 'sw-aoc',
       paint: { 'line-color': zoneColorExpr(), 'line-width': 0.5 } }, 'sw-pt-circle')
     map.on('mouseenter', 'sw-aoc-fill', () => { map.getCanvas().style.cursor = 'pointer' })
