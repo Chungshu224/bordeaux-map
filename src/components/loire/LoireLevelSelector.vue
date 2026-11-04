@@ -50,6 +50,7 @@ import {
 } from '../shared/courseHome/index.js'
 import { loireLearningState, loireLearningLevels } from '../../stores/loireLearningStore.js'
 import { authActions } from '../../stores/authStore.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['startLevel', 'openMap', 'openQuiz', 'openNotes', 'openGames', 'backToPage'])
 
@@ -79,10 +80,12 @@ const totalProgressPct = computed(() =>
     ? Math.round((completedLessons.value.length / totalLessonCount.value) * 100)
     : 0
 )
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('loire')
 function isLevelUnlocked(n) {
   if (n === 1) return true
   if (authActions.isAdmin && authActions.isAdmin()) return true
   if (loireLearningState.testMode) return true
+  if (!hasCoursePaid.value) return false
   const finalId = (LEVEL_LESSON_IDS[n - 1] || []).at(-1)
   return finalId != null && completedLessons.value.includes(finalId)
 }
@@ -149,7 +152,7 @@ const levelData = computed(() => LEVEL_KEYS.map(n => {
     lessons: (def.lessons || []).length,
     progress: levelProgress(n),
     unlocked: isLevelUnlocked(n),
-    unlockHint: t('loire.selector.unlockHint', { prev: n - 1 })
+    unlockHint: planHint(t('loire.selector.unlockHint', { prev: n - 1 }))
   }
 }))
 

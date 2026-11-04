@@ -1,4 +1,8 @@
 export default {
+  trial: {
+    lockedByPlan: '🔒 Subscribe to unlock (Level 1 is a free preview)',
+    upgradePrompt: 'Level 1 is a free preview. Subscribe to unlock Level 2 and beyond — view the plans?',
+  },
   actions: {
     next: 'Next',
     prev: 'Previous',
@@ -90,6 +94,7 @@ export default {
     diploma:        'Diploma Foundations',
     sommelier:      'Sommelier Practice',
     provence:         'Provence and Corsica',
+    canada:         'Canada',
     languedoc:      'Languedoc-Roussillon',
     chile:          'Chile',
     usother:        'US Other Regions',

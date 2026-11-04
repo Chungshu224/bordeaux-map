@@ -8,7 +8,7 @@
       :completedLessons="brandyLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && brandyLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (brandyLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => brandyLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import BrandyCourseLayout from './BrandyCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalBrandyAchievementManager } from '../../stores/brandyAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('brandy')
 function isLevelUnlocked(level) {
   if (brandyLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = brandyLearningActions.getFinalLessonId(level - 1)
   return finalId != null && brandyLearningState.completedLessons.includes(finalId)
 }

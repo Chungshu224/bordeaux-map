@@ -92,6 +92,7 @@ import {
 } from '../../../stores/italyAchievementSystem.js'
 import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
 import { authActions, authState, authInitPromise } from '../../../stores/authStore.js'
+import { useCoursePaid } from '../../../composables/useCoursePaid.js'
 import { saveItalyLessonToSupabase, loadAndMergeItalyProgress } from '../../../lib/italyProgressSync.js'
 
 const ITALY_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/italy/*.json')
@@ -118,13 +119,14 @@ const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
 )
 
+const { hasCoursePaid, promptUpgrade } = useCoursePaid('italy')
 const unlockedLevels = computed(() => {
   progressVersion.value // reactive dependency — sync 後觸發重算
   const isAdmin = authActions.isAdmin && authActions.isAdmin()
   return {
     level1: true,
-    level2: isAdmin || isItalyLevelUnlocked('level2'),
-    level3: isAdmin || isItalyLevelUnlocked('level3')
+    level2: isAdmin || (hasCoursePaid.value && isItalyLevelUnlocked('level2')),
+    level3: isAdmin || (hasCoursePaid.value && isItalyLevelUnlocked('level3'))
   }
 })
 
@@ -152,6 +154,7 @@ const currentLevelDef = computed(() => {
 
 function handleSelectLevel (levelKey) {
   if (!unlockedLevels.value[levelKey]) {
+    if (promptUpgrade(levelKey === 'level2' ? 2 : 3)) return
     const hint = levelKey === 'level2'
       ? t('italy.selector.unlockHint.level2')
       : t('italy.selector.unlockHint.level3')

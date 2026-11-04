@@ -326,6 +326,24 @@ export async function loadAndMergeProvenceProgress(userId) {
   return true
 }
 
+// ─── Canada ───────────────────────────────────────────────────
+// Canada 使用 store state + localStorage，加 Supabase 同步（與 Greece 同模式）
+export const saveCanadaLesson = (userId, lessonId) => upsertLesson(userId, 'canada', lessonId)
+
+export async function loadAndMergeCanadaProgress(userId) {
+  const rows = await fetchRows(userId, 'canada')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `canada-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[canadaSync] ✅ synced')
+  return true
+}
+
 // ─── Diploma 通論 ───────────────────────────────────────────────────
 // Diploma 使用 store state + localStorage，加 Supabase 同步（與 Brandy 同模式）
 export const saveDiplomaLesson = (userId, lessonId) => upsertLesson(userId, 'diploma', lessonId)
@@ -344,8 +362,8 @@ export async function loadAndMergeDiplomaProgress(userId) {
   return true
 }
 
-// ─── Sommelier 侍酒師實務 ───────────────────────────────────────────
-// Sommelier 使用 store state + localStorage，加 Supabase 同步（與 Diploma 同模式）
+// ─── Sommelier 侍酒師實務 ───────────────────────────────────────────────────
+// Sommelier 使用 store state + localStorage，加 Supabase 同步（與 Brandy 同模式）
 export const saveSommelierLesson = (userId, lessonId) => upsertLesson(userId, 'sommelier', lessonId)
 
 export async function loadAndMergeSommelierProgress(userId) {

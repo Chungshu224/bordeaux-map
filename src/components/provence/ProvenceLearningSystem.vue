@@ -8,7 +8,7 @@
       :completedLessons="provenceLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && provenceLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (provenceLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => provenceLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import ProvenceCourseLayout from './ProvenceCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
 import { globalProvenceAchievementManager } from '../../stores/provenceAchievementSystem.js'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('provence')
 function isLevelUnlocked(level) {
   if (provenceLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = provenceLearningActions.getFinalLessonId(level - 1)
   return finalId != null && provenceLearningState.completedLessons.includes(finalId)
 }

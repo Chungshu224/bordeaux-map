@@ -8,7 +8,7 @@
       :completedLessons="rhoneLearningState.completedLessons"
       :unlockedLevels="unlockedLevels"
       @backToLevelSelector="emit('exitLearning')"
-      @changeLevel="(n) => isLevelUnlocked(n) && rhoneLearningActions.setLevel(n)"
+      @changeLevel="(n) => isLevelUnlocked(n) ? (rhoneLearningActions.setLevel(n)) : promptUpgrade(n)"
       @startLesson="(lesson) => rhoneLearningActions.startLesson(lesson.id)"
     />
 
@@ -60,6 +60,7 @@ import { globalRhoneAchievementManager } from '../../stores/rhoneAchievementSyst
 import RhoneCourseLayout from './RhoneCourseLayout.vue'
 import PresentationLesson from '../PresentationLesson.vue'
 import WineGlossary from '../WineGlossary.vue'
+import { useCoursePaid } from '../../composables/useCoursePaid.js'
 
 const emit = defineEmits(['exitLearning', 'openRegionMap'])
 
@@ -102,10 +103,12 @@ const currentSlideTitle = computed(() => {
   return presentationLessonRef.value.currentSlideTitle || gt('投影片導航')
 })
 
+const { hasCoursePaid, planHint, promptUpgrade } = useCoursePaid('rhone')
 function isLevelUnlocked(level) {
   if (rhoneLearningState.testMode) return true
   if (authActions.isAdmin()) return true
   if (level === 1) return true
+  if (!hasCoursePaid.value) return false
   const finalId = rhoneLearningActions.getFinalLessonId(level - 1)
   return finalId != null && rhoneLearningState.completedLessons.includes(finalId)
 }

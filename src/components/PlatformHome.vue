@@ -17,6 +17,7 @@
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
+            <router-link v-if="isAdmin" to="/sparkling" class="btn-nav admin-nav-btn">🥂 氣泡酒專論</router-link>
             <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
@@ -50,6 +51,7 @@
         <div class="nmd-inner" @click.stop>
           <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
           <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
+          <router-link v-if="isAdmin" to="/sparkling" class="nmd-item" @click="showMobileMenu = false">🥂 氣泡酒專論</router-link>
           <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
@@ -106,16 +108,15 @@
         <!-- 已登入：顯示課程入口 -->
         <div v-if="authUser" class="hero-cta logged-in-cta">
           <div class="course-entry-title">{{ $t('home.hero.welcomeBack', { name: displayName }) }}</div>
-          <div class="course-entry-groups">
-            <div v-for="group in visibleCoursesByGroup" :key="group.label" class="ceg-row">
-              <span class="ceg-label">{{ group.label }}</span>
-              <button
-                v-for="course in group.courses"
-                :key="course.id"
-                :class="['cta-course', course.id + '-btn']"
-                @click="router.push(course.route)"
-              >{{ course.label }}</button>
-            </div>
+          <div class="hero-map">
+            <CourseWorldMap
+              :courses="visibleCourses"
+              :statuses="courseStatuses"
+              :is-admin="isAdmin"
+              :authed="true"
+              @detail="openCourseDetail"
+              @plans="goToPricing"
+            />
           </div>
         </div>
         <!-- 未登入：增強版 CTA -->
@@ -156,6 +157,18 @@
           <p>{{ $t('home.courses.sectionDesc') }}</p>
         </div>
 
+      <CourseWorldMap
+        v-if="!authUser"
+        :courses="visibleCourses"
+        :statuses="courseStatuses"
+        :is-admin="isAdmin"
+        :authed="!!authUser"
+        @detail="openCourseDetail"
+        @plans="goToPricing"
+      />
+
+      <details class="cwm-list">
+        <summary>{{ $t('home.courses.map.listToggle') }}</summary>
       <!-- ── 法國 France ── -->
       <div v-if="showFrance" class="region-group">
         <div class="region-group-header">
@@ -1287,8 +1300,51 @@
           </div>
 
 
+          <!-- ── Canada（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card canada">
+            <div :class="['card-status', courseStatuses.canada ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🍁</div>
+              <div class="card-region">Ontario · British Columbia · Nova Scotia · Quebec</div>
+              <h3 class="card-title">{{ $t('home.courses.canada.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.canada.desc') }}</p>
+            </div>
+            <div class="course-preview-strip canada-strip">
+              <div class="cp-stat">
+                <span class="cp-num">Ice</span>
+                <span class="cp-label" v-html="$t('home.courses.canada.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">VQA</span>
+                <span class="cp-label" v-html="$t('home.courses.canada.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.canada.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">D3</span>
+                <span class="cp-label" v-html="$t('home.courses.canada.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features canada-features">
+              <span class="cpf-item canada-tag">{{ $t('home.courses.canada.f1') }}</span>
+              <span class="cpf-item canada-tag">{{ $t('home.courses.canada.f2') }}</span>
+              <span class="cpf-item canada-tag">{{ $t('home.courses.canada.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/canada')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
         </div><!-- /courses-grid 新世界 -->
       </div><!-- /region-group 新世界 -->
+      </details>
 
       </div><!-- /section-inner -->
     </section>
@@ -1631,6 +1687,7 @@
 </template>
 
 <script setup>
+import CourseWorldMap from './home/CourseWorldMap.vue'
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -1742,14 +1799,16 @@ const courseConfig = computed(() => [
   { id: 'brandy', label: t('home.courses.labels.brandy'), route: '/brandy', group: 'europe' },
   { id: 'diploma', label: t('home.courses.labels.diploma'), route: '/diploma', group: 'europe' },
   { id: 'sommelier', label: t('home.courses.labels.sommelier'), route: '/sommelier', group: 'europe' },
-  { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'europe' },
+  { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'france' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
+  { id: 'chile', label: t('home.courses.labels.chile'), route: '/chile', group: 'newworld' },
   { id: 'southafrica', label: t('home.courses.labels.southafrica'), route: '/southafrica', group: 'newworld' },
   { id: 'austria', label: t('home.courses.labels.austria'), route: '/austria', group: 'europe' },
   { id: 'australia',  label: t('home.courses.labels.australia'), route: '/australia',         group: 'newworld' },
   { id: 'newzealand', label: t('home.courses.labels.newzealand'), route: '/newzealand',        group: 'newworld' },
   { id: 'california', label: t('home.courses.labels.california'), route: '/california/course', group: 'newworld' },
+  { id: 'canada', label: t('home.courses.labels.canada'), route: '/canada', group: 'newworld' },
   { id: 'alsace',     label: t('home.courses.labels.alsace'), route: '/alsace',           group: 'france'   },
 ])
 
@@ -1759,12 +1818,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'diploma', 'sommelier']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier']
 
 
 async function loadCourseData() {
@@ -2296,6 +2355,9 @@ onMounted(async () => {
   position: relative;
   z-index: 2;
   max-width: 720px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 36px 24px;
 }
 .hero-tag {
@@ -2497,6 +2559,7 @@ onMounted(async () => {
 .course-card.diploma { border-color: rgba(47,72,88,0.4); background: rgba(47,72,88,0.05); }
 .course-card.sommelier { border-color: rgba(107,45,60,0.4); background: rgba(107,45,60,0.05); }
 .course-card.provence { border-color: rgba(111,90,168,0.4); background: rgba(111,90,168,0.05); }
+.course-card.canada { border-color: rgba(200,16,46,0.4); background: rgba(200,16,46,0.05); }
 .course-card.usother { border-color: rgba(31,78,121,0.4); background: rgba(31,78,121,0.05); }
 .course-card.argentina { border-color: rgba(106,44,94,0.4); background: rgba(106,44,94,0.05); }
 .course-card.southafrica { border-color: rgba(194,87,26,0.4); background: rgba(194,87,26,0.05); }
@@ -2642,6 +2705,11 @@ onMounted(async () => {
 .provence-strip .cp-label { color: #3E3166; }
 .provence-strip .cp-divider { background: rgba(111,90,168,0.25); }
 .provence-features .provence-tag { color: #6F5AA8; background: rgba(111,90,168,0.06); border-color: rgba(111,90,168,0.18); }
+.canada-strip { background: rgba(200,16,46,0.07); border-color: rgba(200,16,46,0.22); }
+.canada-strip .cp-num { color: #C8102E; font-size: 0.9rem; }
+.canada-strip .cp-label { color: #7A0A1C; }
+.canada-strip .cp-divider { background: rgba(200,16,46,0.25); }
+.canada-features .canada-tag { color: #C8102E; background: rgba(200,16,46,0.06); border-color: rgba(200,16,46,0.18); }
 /* Southwest card */
 .southwest-strip { background: rgba(75,46,85,0.07); border-color: rgba(75,46,85,0.22); }
 .southwest-strip .cp-num { color: #4B2E55; font-size: 0.9rem; }
@@ -3070,4 +3138,10 @@ onMounted(async () => {
   .cm-compare-header, .cm-compare-row { grid-template-columns: 1.5fr 1fr 1fr; }
   .cc-col { font-size: 0.72rem; padding: 8px 6px; }
 }
+
+.cwm-list { margin-top: 18px; }
+.cwm-list > summary { cursor: pointer; text-align: center; padding: 10px; font-size: .95rem; opacity: .85; list-style: none; }
+.cwm-list > summary::-webkit-details-marker { display: none; }
+.cwm-list[open] > summary { margin-bottom: 18px; }
+.hero-map { contain: inline-size; overflow-x: hidden; width: 100%; max-width: 980px; min-width: 0; margin: 8px auto 0; text-align: left; white-space: normal; box-sizing: border-box; }
 </style>

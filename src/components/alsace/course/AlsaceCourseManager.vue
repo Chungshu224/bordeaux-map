@@ -49,6 +49,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { authState, authInitPromise } from '../../../stores/authStore.js'
+import { useCoursePaid } from '../../../composables/useCoursePaid.js'
 import { saveAlsaceLesson, loadAndMergeAlsaceProgress } from '../../../lib/courseProgressSync.js'
 import AlsaceLevelSelector from './AlsaceLevelSelector.vue'
 import AlsaceCourseLayout from './AlsaceCourseLayout.vue'
@@ -112,7 +113,13 @@ function loadCompleted(levelKey) {
   prog.completedLessons.forEach(id => { completedMap.value[id] = true })
 }
 
+const { hasCoursePaid, promptUpgrade } = useCoursePaid('alsace')
+
 function handleSelectLevel(levelKey) {
+  if (levelKey !== 'level1' && !hasCoursePaid.value) {
+    promptUpgrade(parseInt(String(levelKey).replace('level', '')) || 2)
+    return
+  }
   selectedLevelKey.value = levelKey
   view.value = 'courseContent'
   activeLesson.value = null

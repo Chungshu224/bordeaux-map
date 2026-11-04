@@ -146,6 +146,20 @@ const routes = [
     redirect: '/greece'
   },
 
+  // ─── 全球氣泡酒專論（僅管理員、不販售）──────────────────────────────────────────
+  {
+    path: '/sparkling',
+    name: 'Sparkling',
+    component: () => import('../components/sparkling/SparklingPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+  {
+    path: '/sparkling/map',
+    name: 'SparklingMap',
+    component: () => import('../components/sparkling/SparklingMapPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒地圖 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
   // ─── 法國隆河葡萄酒課程（框架版，僅管理員可見）──────────────────────────────────
   {
     path: '/rhone',
@@ -247,6 +261,19 @@ const routes = [
   {
     path: '/provence/course',
     redirect: '/provence'
+  },
+
+  // ─── 加拿大課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/canada',
+    name: 'Canada',
+    component: () => import('../components/canada/CanadaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'canada'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🍁 加拿大 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/canada/course',
+    redirect: '/canada'
   },
 
   // ─── 美國其他產區課程（框架版，僅管理員可見）──────────────────────────────────────────
@@ -458,16 +485,16 @@ const router = createRouter({
 
 const COURSE_ACCESS_RULES = {
   Home: { courseId: 'bordeaux', minimumTier: 'free' },
-  Bourgogne: { courseId: 'bourgogne', minimumTier: 'basic' },
-  Italy: { courseId: 'italy', minimumTier: 'basic' },
+  Bourgogne: { courseId: 'bourgogne', minimumTier: 'free' },
+  Italy: { courseId: 'italy', minimumTier: 'free' },
   Spain: { courseId: 'spain', minimumTier: 'free' },
   Germany: { courseId: 'germany', minimumTier: 'free' },
   Portugal: { courseId: 'portugal', minimumTier: 'free' },
   Australia: { courseId: 'australia', minimumTier: 'free' },
   NewZealand: { courseId: 'newzealand', minimumTier: 'free' },
-  Alsace: { courseId: 'alsace', minimumTier: 'basic' },
+  Alsace: { courseId: 'alsace', minimumTier: 'free' },
   Loire: { courseId: 'loire', minimumTier: 'free' },
-  LoireCourse: { courseId: 'loire', minimumTier: 'basic' },
+  LoireCourse: { courseId: 'loire', minimumTier: 'free' },
   Hungary: { courseId: 'hungary', minimumTier: 'free' },
   Greece: { courseId: 'greece', minimumTier: 'free' },
   Rhone: { courseId: 'rhone', minimumTier: 'free' },
@@ -477,6 +504,7 @@ const COURSE_ACCESS_RULES = {
   Diploma: { courseId: 'diploma', minimumTier: 'free' },
   Sommelier: { courseId: 'sommelier', minimumTier: 'free' },
   Provence: { courseId: 'provence', minimumTier: 'free' },
+  Canada: { courseId: 'canada', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },
   Chile: { courseId: 'chile', minimumTier: 'free' },
   UsOther: { courseId: 'usother', minimumTier: 'free' },
@@ -484,7 +512,7 @@ const COURSE_ACCESS_RULES = {
   SouthAfrica: { courseId: 'southafrica', minimumTier: 'free' },
   Austria: { courseId: 'austria', minimumTier: 'free' },
   California: { courseId: 'california', minimumTier: 'free' },
-  CaliforniaCourse: { courseId: 'california', minimumTier: 'basic' },
+  CaliforniaCourse: { courseId: 'california', minimumTier: 'free' },
   Learning: { courseId: 'bordeaux', minimumTier: 'free' },
   Explore: { courseId: 'bordeaux', minimumTier: 'free' },
   GameHub: { courseId: 'bordeaux', minimumTier: 'basic' },

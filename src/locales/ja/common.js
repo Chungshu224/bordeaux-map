@@ -1,4 +1,8 @@
 export default {
+  trial: {
+    lockedByPlan: '🔒 購読で解放（Level 1は無料体験）',
+    upgradePrompt: 'Level 1は無料でお試しいただけます。購読するとLevel 2以降が解放されます。プランを見ますか？',
+  },
   actions: {
     next: '次へ',
     prev: '前へ',
@@ -90,6 +94,7 @@ export default {
     diploma:        'Diploma総論',
     sommelier:      'ソムリエ実務',
     provence:         'プロヴァンスとコルシカ',
+    canada:         'カナダ',
     languedoc:      'ラングドック＝ルーション',
     chile:          'チリ',
     usother:        'アメリカのその他の産地',

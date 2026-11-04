@@ -37,10 +37,10 @@ export const lessonContent = [
           },
           {
             type: 'single',
-            question: "Cava Reserva 的最短酒渣陳年是？",
-            options: ["A. 30 個月","B. 36 個月","C. 18 個月","D. 9 個月"],
+            question: "Cava Gran Reserva 的最短酒渣陳年是？",
+            options: ["A. 6 個月","B. 60 個月","C. 30 個月","D. 3 個月"],
             correct: 2,
-            explanation: "Gran Reserva 30、Paraje Calificado 36。"
+            explanation: "Reserva 的最短陳年有 18 與 15 個月兩說，所以不考。"
           },
           {
             type: 'single',

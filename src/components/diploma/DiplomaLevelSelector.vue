@@ -10,7 +10,7 @@
       :tagline="gt('跨產區通論・Diploma／CMS 備考')"
       :title="gt('Diploma 通論')"
       subtitle="Viticulture · Vinification · Business · Sparkling · Fortified"
-      :description="gt('把各產區課程裡分散的知識串成通論：葡萄栽培與釀造、葡萄酒商業、全球氣泡酒與全球加烈酒，對應 WSET Diploma 的 D1、D2、D4、D5 單元，也是 CMS 理論的共同基礎。')"
+      :description="gt('把各產區課程裡分散的知識串成通論：葡萄栽培與釀造、葡萄酒商業、全球加烈酒，以及連到氣泡酒專論的導讀，對應 WSET Diploma 的 D1、D2、D4、D5 單元，也是 CMS 理論的共同基礎。')"
       :stats="heroStats"
     />
 
@@ -34,7 +34,7 @@
     <!-- 4. Level Track -->
     <LevelTrack
       :title="gt('選擇課程階段')"
-      :subtitle="gt('五個階段各自獨立，可依需要選讀：栽培與釀造、葡萄酒商業、全球氣泡酒、全球加烈酒，以及簡答與盲品的應考訓練。')"
+      :subtitle="gt('五個階段各自獨立，可依需要選讀：栽培與釀造、葡萄酒商業、全球氣泡酒導讀、全球加烈酒，以及簡答與盲品的應考訓練。')"
       :levels="levelData"
       :max-columns="2"
       @enter="(n) => emit('enterLevel', n)"
@@ -148,7 +148,7 @@ function onQuickNav(key) {
 const LEVEL_META = [
   { number: 1, title: '葡萄栽培與釀造', subtitle: 'D1 通論', icon: '🌱', description: '葡萄藤的生長週期、氣候與土壤、栽培管理與病蟲害，以及白酒、紅酒、粉紅酒的釀造決策與熟成、澄清、裝瓶。', tags: ['生長週期', '葉幕管理', '病蟲害', '發酵', '熟成'] },
   { number: 2, title: '葡萄酒商業', subtitle: 'D2 通論', icon: '📊', description: '成本與定價、通路與市場結構、品牌與行銷，以及全球市場趨勢與論述寫法。', tags: ['成本', '定價', '通路', '品牌', '市場'] },
-  { number: 3, title: '全球氣泡酒', subtitle: 'D4 通論', icon: '🥂', description: '氣泡酒的原料與氣候、四種製法、全球傳統法產區，以及槽式法與芳香型氣泡酒。', tags: ['傳統法', '槽式法', 'Cava', 'Franciacorta', '英格蘭'] },
+  { number: 3, title: '全球氣泡酒導讀', subtitle: 'D4 導讀', icon: '🥂', description: '基酒與主要製法的核心邏輯，再連到全球氣泡酒專論深入學習。', tags: ['基酒', '傳統法', '槽式法', 'D4'] },
   { number: 4, title: '全球加烈酒', subtitle: 'D5 通論', icon: '🍷', description: '加烈的原理與時機、Sherry、Port、Madeira，以及 VDN、Rutherglen Muscat、Marsala 等其他加烈酒。', tags: ['Sherry', 'Port', 'Madeira', 'VDN', 'Rutherglen'] },
   { number: 5, title: '應考訓練', subtitle: '簡答與盲品', icon: '✍️', description: '簡答與論述的寫法、WSET SAT 與 CMS 演繹式盲品格式、白酒與紅酒盲品論述練習，以及綜合模擬考。', tags: ['簡答', '論述', 'SAT', 'CMS', '模擬考'] }
 ]
@@ -170,6 +170,6 @@ const overviewItems = [
   { icon: '🧩', title: gt('把知識串起來'), desc: gt('各產區課程教「這裡怎麼做」，通論教「為什麼這樣做」，讓你在任何產區都能套用同一套因果邏輯。') },
   { icon: '🌿', title: gt('栽培與釀造'), desc: gt('從氣候、土壤到葉幕與病害，再到發酵與熟成，每個決策都對應一個風格結果。') },
   { icon: '💼', title: gt('商業視角'), desc: gt('成本、通路、品牌與市場，是 Diploma 論述與 MW 思考的必備語言。') },
-  { icon: '🍾', title: gt('氣泡與加烈'), desc: gt('兩大特殊類型的製法與全球比較，一次整理。') }
+  { icon: '🍾', title: gt('氣泡與加烈'), desc: gt('加烈酒的製法與全球比較，以及通往氣泡酒專論的導讀。') }
 ]
 </script>

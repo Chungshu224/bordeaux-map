@@ -18,6 +18,7 @@ export const REGION_THEMES = {
   diploma:    { primary: '#2F4858', accent: '#D6E2EA', icon: '🎓', surface: '#f3f6f8' },
   sommelier:  { primary: '#6B2D3C', accent: '#EBD3D8', icon: '🍷', surface: '#faf3f4' },
     provence:   { primary: '#6F5AA8', accent: '#E4DDF3', icon: '🌿', surface: '#f6f3fb' },
+  canada:     { primary: '#C8102E', accent: '#F6D3D7', icon: '🍁', surface: '#fdf3f4' },
   southwest:  { primary: '#4B2E55', accent: '#E6D8EA', icon: '🍇', surface: '#f8f3f9' },
   languedoc:  { primary: '#9C4A1A', accent: '#F2DCC8', icon: '🌞', surface: '#fbf5ef' },
   chile:  { primary: '#A4343A', accent: '#F0CFCF', icon: '🇨🇱', surface: '#fbf3f3' },
@@ -28,7 +29,8 @@ export const REGION_THEMES = {
   newzealand: { primary: '#0a3d2e', accent: '#5cb85c', icon: '🥝', surface: '#f4f9f5' },
   australia:  { primary: '#012169', accent: '#E4002B', icon: '🦘', surface: '#f4f6fb' },
   california: { primary: '#b45309', accent: '#fbbf24', icon: '🌟', surface: '#fef9f0' },
-  alsace:     { primary: '#2d6a4f', accent: '#c9a227', icon: '🍇', surface: '#f3f9f4' }
+  alsace:     { primary: '#2d6a4f', accent: '#c9a227', icon: '🍇', surface: '#f3f9f4' },
+  sparkling:  { primary: '#B8860B', accent: '#F3E3A5', icon: '🥂', surface: '#fdf9ee' }
 }
 
 export function getTheme(key) {

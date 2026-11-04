@@ -11,7 +11,7 @@ export const diplomaLearningState = reactive({
   userProgress: {
     level1: { completed: 0, total: 6 },
     level2: { completed: 0, total: 5 },
-    level3: { completed: 0, total: 5 },
+    level3: { completed: 0, total: 1 },
     level4: { completed: 0, total: 5 },
     level5: { completed: 0, total: 6 }
   },
@@ -152,64 +152,24 @@ export const diplomaLearningLevels = {
     ]
   },
   "level3": {
-    "title": "Level 3 - 全球氣泡酒",
-    "description": "D4 通論：原料與製法、歐洲傳統法、英格蘭與新世界、槽式法與芳香型氣泡酒",
+    "title": "Level 3 - 全球氣泡酒導讀",
+    "description": "D4 導讀：基酒與主要製法的核心邏輯，以及如何使用全球氣泡酒專論",
     "color": "#4F6B7D",
     "modules": [
       {
         "id": "DP3M1",
-        "title": "製法",
+        "title": "導讀",
         "lessonIds": [
           "dp-l3-1"
-        ]
-      },
-      {
-        "id": "DP3M2",
-        "title": "全球產區",
-        "lessonIds": [
-          "dp-l3-2",
-          "dp-l3-3",
-          "dp-l3-4"
-        ]
-      },
-      {
-        "id": "DP3M3",
-        "title": "評量",
-        "lessonIds": [
-          "dp-l3-5"
         ]
       }
     ],
     "lessons": [
       {
         "id": "dp-l3-1",
-        "title": "氣泡酒的原料與製法",
-        "description": "為何氣泡酒需要高酸基酒、四種主要製法的差異，以及自溶與 dosage 的風格作用",
-        "duration": 22
-      },
-      {
-        "id": "dp-l3-2",
-        "title": "歐洲的傳統法氣泡酒",
-        "description": "Cava、Crémant、Franciacorta 與 Trentodoc 的品種、陳年規定與產業議題",
-        "duration": 24
-      },
-      {
-        "id": "dp-l3-3",
-        "title": "英格蘭與新世界的氣泡酒",
-        "description": "英格蘭的白堊與邊緣氣候、香檳酒廠的海外投資，以及 Tasmania、加州、紐西蘭與南非的傳統法氣泡酒",
-        "duration": 22
-      },
-      {
-        "id": "dp-l3-4",
-        "title": "槽式法與芳香型氣泡酒",
-        "description": "Prosecco 的分級、Asti 與 Moscato d’Asti、德國 Sekt 與 Lambrusco",
-        "duration": 22
-      },
-      {
-        "id": "dp-l3-5",
-        "title": "Level 3 綜合評量",
-        "description": "回顧氣泡酒的製法與全球產區，完成綜合測驗",
-        "duration": 25
+        "title": "全球氣泡酒導讀",
+        "description": "基酒與氣候、主要製法的差異，以及如何使用全球氣泡酒專論",
+        "duration": 15
       }
     ]
   },

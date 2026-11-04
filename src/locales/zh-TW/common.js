@@ -6,6 +6,10 @@
  * - 未來新增 key 時請先加在這裡，再執行 `npm run i18n:translate` 同步其他語言
  */
 export default {
+  trial: {
+    lockedByPlan: '🔒 訂閱後解鎖（第 1 關免費試讀）',
+    upgradePrompt: '第 1 關可免費試讀。訂閱後即可解鎖 Level 2 以上的完整課程，要前往查看方案嗎？',
+  },
   // ── 動作按鈕 ──────────────────────────────────────
   actions: {
     next: '下一頁',
@@ -108,6 +112,7 @@ export default {
     diploma:        'Diploma 通論',
     sommelier:      '侍酒師實務',
     provence:         '普羅旺斯與科西嘉',
+    canada:         '加拿大',
     languedoc:      '朗格多克—魯西永',
     chile:          '智利',
     usother:        '美國其他產區',
