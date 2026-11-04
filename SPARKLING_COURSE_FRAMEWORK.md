@@ -112,6 +112,8 @@
 - 邊界資料：有官方 PDO 邊界就用，否則用示意點並標示「非官方邊界」。⚠ 各國資料授權逐一確認。
 
 ### 5.2 遊戲（沿用 QuizEngine）
+
+> 已完成（2026-11-04）：六款遊戲都在 `src/components/sparkling/SparklingGameHubPage.vue`，題庫在 `src/data/sparkling/gameData.js`。步驟排序由 `games/SparklingQuizEngine.vue` 支援排序題。本課程僅管理員可讀，所以最高分只存 localStorage，不接排行榜與成就。
 - **釀法配對**：酒款 → 釀法 → 國家／產區。
 - **步驟排序**：傳統法、槽式法的流程排序（需引擎支援排序題，否則改多選）。
 - **甜度級別**：級別 ↔ g/L。

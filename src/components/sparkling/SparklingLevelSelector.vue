@@ -57,7 +57,7 @@ import { sparklingLearningState, sparklingLevels, sparklingLevelIds, sparklingLe
 import { SPARKLING_TOTAL_LESSONS } from '../../data/sparkling/lessons.js'
 import { REGIONS } from '../../data/sparkling/regions.js'
 
-const emit = defineEmits(['enterLevel', 'openMap'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames'])
 const theme = getTheme('sparkling')
 const showProgressModal = ref(false)
 
@@ -86,12 +86,13 @@ const heroStats = [
 
 const quickNavItems = computed(() => [
   { key: 'map', desc: `${REGIONS.length} 個產區互動地圖` },
-  { key: 'games', desc: '釀法配對・標籤判讀', enabled: false },
+  { key: 'games', desc: '6 種練習・釀法配對到盲品線索' },
   { key: 'notebook', desc: '氣泡酒品飲筆記', enabled: false },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
   if (key === 'map') emit('openMap')
+  else if (key === 'games') emit('openGames')
   else if (key === 'progress') showProgressModal.value = true
 }
 
