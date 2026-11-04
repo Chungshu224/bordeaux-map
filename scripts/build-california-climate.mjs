@@ -37,6 +37,7 @@ const BASELINE_END = 2010
 
 const args = process.argv.slice(2)
 const DRY_RUN = args.includes('--dry-run')
+const MERGE = args.includes('--merge')
 const LIMIT = Number((args.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0)
 const REQUEST_DELAY_MS = Number((args.find((a) => a.startsWith('--delay=')) || '').split('=')[1] || 3000)
 
@@ -86,6 +87,8 @@ async function fetchSummerClimate(lat, lng, retries = 3) {
     try {
       const res = await fetch(url.toString())
       if (res.status === 429) {
+        const body = await res.text().catch(() => '')
+        if (/daily/i.test(body)) { console.error('\n[stop] Open-Meteo 每日額度已用完，請明天再執行（--merge 會接續）'); process.exit(2) }
         const wait = 2500 * (attempt + 1)
         process.stdout.write(` (429 wait ${wait / 1000}s)`)
         await sleep(wait)
@@ -258,13 +261,17 @@ async function main() {
     return
   }
 
-  const aocs = {}
+  const existing = MERGE && existsSync(outputPath) ? JSON.parse(readFileSync(outputPath, 'utf-8')).aocs || {} : {}
+  const has = (d) => Array.isArray(d?.temps) && d.temps.some((v) => v != null)
+  const aocs = { ...existing }
   let ok = 0
   let fail = 0
+  let kept = 0
 
   for (let i = 0; i < tasks.length; i++) {
     const t = tasks[i]
     const [lng, lat] = t.centroid
+    if (MERGE && has(existing[t.id]) && existing[t.id].sun?.some((v) => v != null) && existing[t.id].rain?.some((v) => v != null)) { kept += 1; continue }
     process.stdout.write(`[${i + 1}/${tasks.length}] ${t.id} ... `)
 
     const climate = await fetchSummerClimate(lat, lng)
@@ -327,7 +334,7 @@ async function main() {
   writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8')
 
   console.log('done')
-  console.log(`success: ${ok}, fail: ${fail}`)
+  console.log(`success: ${ok}, fail: ${fail}${MERGE ? `, kept: ${kept}` : ''}`)
   console.log(`output: public/data/california-climate.json`)
 }
 
