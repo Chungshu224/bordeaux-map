@@ -28,7 +28,7 @@
 
     <main v-else class="spl-main">
       <button class="spl-link" @click="sparklingLearningActions.exitLesson()">← 返回課程列表</button>
-      <p class="spl-badge">施工中・階段 A 空殼</p>
+      <p v-if="!content" class="spl-badge">施工中・內容待填入</p>
       <h1 class="spl-title">{{ lesson.title }}</h1>
       <p class="spl-desc">{{ lesson.description }}（約 {{ lesson.duration }} 分鐘）</p>
 
@@ -36,10 +36,24 @@
         <h3>本課考點</h3>
         <ul><li v-for="k in lesson.keyPoints" :key="k">{{ k }}</li></ul>
       </section>
-      <p class="spl-note">課程內容將在階段 B–D 依框架文件（SPARKLING_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
+
+      <template v-if="content">
+        <SlideBlocks :blocks="content.blocks" />
+        <section v-if="content.terms && content.terms.length" class="spl-box">
+          <h3>本課詞彙</h3>
+          <dl class="spl-terms">
+            <template v-for="t in content.terms" :key="t.term">
+              <dt>{{ t.term }}</dt>
+              <dd>{{ t.def }}</dd>
+            </template>
+          </dl>
+        </section>
+        <SparklingQuiz v-if="content.quiz" :key="lesson.id" :questions="content.quiz" :pass-score="content.passScore || 0" @result="quizResult = $event" />
+      </template>
+      <p v-else class="spl-note">課程內容將在階段 C–D 依框架文件（SPARKLING_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
 
       <div class="spl-actions">
-        <button v-if="!done.includes(lesson.id)" class="spl-primary" @click="complete">標記為已完成</button>
+        <button v-if="!done.includes(lesson.id)" class="spl-primary" :disabled="!canComplete" @click="complete">{{ canComplete ? '標記為已完成' : `需達 ${content.passScore} 分才能完成` }}</button>
         <button v-else class="spl-btn" @click="sparklingLearningActions.uncompleteLesson(lesson.id)">取消完成標記</button>
         <button class="spl-btn" @click="sparklingLearningActions.exitLesson()">返回列表</button>
       </div>
@@ -48,7 +62,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
+import SlideBlocks from '../SlideBlocks.vue'
+import SparklingQuiz from './SparklingQuiz.vue'
+import { LEVEL1_CONTENT } from '../../data/sparkling/level1Content.js'
 import { sparklingLearningState, sparklingLevels, sparklingLearningActions, sparklingLearningProgress } from '../../stores/sparklingLearningStore.js'
 
 const emit = defineEmits(['back'])
@@ -58,7 +75,14 @@ const done = computed(() => sparklingLearningState.completedLessons)
 const lessonById = (id) => levelData.value.lessons.find(l => l.id === id)
 const lesson = computed(() => sparklingLearningState.currentLessonId ? lessonById(sparklingLearningState.currentLessonId) || null : null)
 
+const content = computed(() => (lesson.value ? LEVEL1_CONTENT[lesson.value.id] || null : null))
+const quizResult = ref(null)
+watch(() => lesson.value?.id, () => { quizResult.value = null })
+// 有及格門檻的評量課要通過才能標記完成
+const canComplete = computed(() => !content.value?.passScore || !!quizResult.value?.passed)
+
 function complete() {
+  if (!canComplete.value) return
   sparklingLearningActions.completeLesson(lesson.value.id)
   sparklingLearningActions.exitLesson()
 }
@@ -92,5 +116,9 @@ function complete() {
 .spl-box ul { margin: 0; padding-left: 20px; line-height: 1.7; font-size: .9rem; }
 .spl-note { color: #8a7a6a; font-size: .82rem; line-height: 1.6; }
 .spl-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.spl-terms { margin: 0; font-size: .88rem; line-height: 1.6; }
+.spl-terms dt { font-weight: 700; color: #6B3A1E; margin-top: 8px; overflow-wrap: anywhere; }
+.spl-terms dd { margin: 0; color: #5a4a35; overflow-wrap: anywhere; }
+.spl-primary:disabled { opacity: .5; cursor: not-allowed; }
 .spl-primary { border: 0; background: #B8860B; color: #fff; border-radius: 10px; padding: 9px 18px; font-weight: 700; cursor: pointer; }
 </style>
