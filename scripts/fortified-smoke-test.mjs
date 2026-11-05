@@ -101,6 +101,18 @@ check('Level 2 評量全錯時無法標記完成', await p.locator('.ftl-primary
 await p.locator('.fq-retry').click()
 for (let q = 0; q < q28.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth(q28[q].answer).click()
 check('Level 2 評量全對後可標記完成', !(await p.locator('.ftl-primary').isDisabled()))
+// Level 3 評量（第 7 課）
+const q37 = FORTIFIED_CONTENT['fo-l3-7'].quiz
+await p.goto(`${BASE}/fortified`); await settle(p, 1200)
+await p.locator('.lc-btn').nth(2).click(); await p.waitForTimeout(400)
+await p.locator('.ftl-lesson').nth(6).click(); await p.waitForTimeout(300)
+check('Level 3 評量為 12 題', (await p.locator('.fq-q').count()) === 12)
+for (let q = 0; q < q37.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth((q37[q].answer + 1) % 4).click()
+check('Level 3 評量全錯時無法標記完成', await p.locator('.ftl-primary').isDisabled())
+await p.locator('.fq-retry').click()
+for (let q = 0; q < q37.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth(q37[q].answer).click()
+check('Level 3 評量全對後可標記完成', !(await p.locator('.ftl-primary').isDisabled()))
+check('全部 21 課都有內容', Object.keys(FORTIFIED_CONTENT).length === 21)
 await p.goto(`${BASE}/`); await settle(p)
 await p.locator('.nav-toggle, .hamburger, [class*="mobile-menu-btn"], [class*="menu-toggle"]').first().click({ timeout: 3000 }).catch(() => {})
 check('首頁（管理員）有強化酒入口', (await p.locator('a[href="/fortified"]').count()) > 0)
