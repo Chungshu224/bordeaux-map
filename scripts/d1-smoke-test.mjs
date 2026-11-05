@@ -8,6 +8,7 @@
  * 檢查：存取控制（未登入／非管理員／管理員）、首頁入口、21 課可開啟且無橫向溢出。
  */
 import { createRequire } from 'module'
+import fs from 'fs'
 import { d1Levels, D1_TOTAL_LESSONS } from '../src/data/d1/lessons.js'
 import { D1_CONTENT } from '../src/data/d1/content.js'
 import { D1_GAMES } from '../src/data/d1/gameData.js'
@@ -187,6 +188,22 @@ await p.evaluate((keys) => keys.forEach(k => localStorage.setItem(k, '500')), D1
 await p.goto(`${BASE}/d1`); await settle(p, 1200)
 const unlocked = await p.locator('.d1a-item:not(.locked)').count()
 check('成就依進度解鎖（第一課、走完一年、遊戲全制霸、第一則筆記…）', unlocked >= 4, `unlocked=${unlocked}`)
+
+// ── 階段 F：migrations（僅準備、不套用）與不販售規則 ──
+const mig = (f) => fs.readFileSync(new URL(`../supabase/migrations/${f}`, import.meta.url), 'utf8')
+const courseSql = mig('20261113000000_add_d1_course.sql')
+check('migration：課程列 active=false、show_on_home=false、價格 0', /0, 0,\s*\n\s*0, 0,\s*\n\s*0, 0,/.test(courseSql) && /false,\s*\n\s*false\s*\n\)/.test(courseSql))
+check('migration：課程 id 為 d1', /'d1',/.test(courseSql))
+const gloSql = mig('20261113000100_add_d1_glossary.sql')
+const checkList = gloSql.slice(gloSql.indexOf('CHECK (region IN'), gloSql.indexOf('));'))
+check('glossary CHECK 含既有值 canada／sparkling／fortified 與 d1', ['canada', 'sparkling', 'fortified', 'd1', 'bordeaux', 'newzealand'].every(v => checkList.includes(`'${v}'`)))
+check('glossary seed 無 undefined', !gloSql.includes('undefined'))
+const rowCount = (gloSql.match(/^\('d1',/gm) || []).length
+check('glossary seed 至少 40 筆', rowCount >= 40, String(rowCount))
+const home = fs.readFileSync(new URL('../src/components/PlatformHome.vue', import.meta.url), 'utf8')
+check("ADMIN_ONLY_COURSES 含 'd1'", /ADMIN_ONLY_COURSES = \[[^\]]*'d1'/.test(home))
+const router = fs.readFileSync(new URL('../src/router/index.js', import.meta.url), 'utf8')
+check('/d1 路由為 requiresAdmin', /path: '\/d1',[\s\S]{0,300}requiresAdmin: true/.test(router))
 
 check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
 await browser.close()
