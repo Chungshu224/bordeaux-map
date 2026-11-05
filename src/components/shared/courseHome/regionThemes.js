@@ -32,7 +32,8 @@ export const REGION_THEMES = {
   california: { primary: '#b45309', accent: '#fbbf24', icon: '🌟', surface: '#fef9f0' },
   alsace:     { primary: '#2d6a4f', accent: '#c9a227', icon: '🍇', surface: '#f3f9f4' },
   sparkling:  { primary: '#B8860B', accent: '#F3E3A5', icon: '🥂', surface: '#fdf9ee' },
-  fortified:  { primary: '#8B4513', accent: '#EBD3B5', icon: '🥃', surface: '#fbf5ee' }
+  fortified:  { primary: '#8B4513', accent: '#EBD3B5', icon: '🥃', surface: '#fbf5ee' },
+  d1:         { primary: '#4F6F1F', accent: '#DCE8C4', icon: '🍇', surface: '#f6f9ee' }
 }
 
 export function getTheme(key) {
