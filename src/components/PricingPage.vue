@@ -294,7 +294,7 @@ const isAdmin = computed(() => !authState.loading && authActions.isAdmin())
 // 管理員預覽：讀取 courses 表中「尚未在方案頁販售」的新產區
 const SOLD_COURSE_IDS = ['bordeaux', 'bourgogne', 'italy', 'global']
 // 永遠不販售、僅供管理員閱讀的課程（不得出現在方案預覽或全球通行證）
-const NOT_FOR_SALE_IDS = ['sparkling']
+const NOT_FOR_SALE_IDS = ['sparkling', 'fortified']
 const previewCourses = ref([])
 const previewLoading = ref(false)
 const formatPrice = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'))
