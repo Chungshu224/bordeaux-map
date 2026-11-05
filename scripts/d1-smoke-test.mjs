@@ -117,6 +117,31 @@ for (let i = 0; i < 8; i++) {
 check('Level 2 八課無「施工中」且有測驗', l2Ok === 8, `${l2Ok}/8`)
 check('Level 2 八課無橫向溢出', l2Over === 0, `${l2Over}`)
 
+// Level 3：六課皆有內容與測驗；末課為 12 題評量，需通過才能完成
+check('Level 3 六課皆有內容', filled.filter(id => id.startsWith('d1-l3-')).length === 6)
+check('Level 3 評量為 12 題、及格 60', D1_CONTENT['d1-l3-6'].quiz.length === 12 && D1_CONTENT['d1-l3-6'].passScore === 60)
+await p.goto(`${BASE}/d1`); await settle(p, 800)
+await p.locator('.lc-btn').nth(2).click(); await settle(p, 500)
+let l3Ok = 0, l3Over = 0
+for (let i = 0; i < 6; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l3Ok++
+  if ((await overflow(p)) > 1) l3Over++
+  if (i < 5) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('Level 3 六課無「施工中」且有測驗', l3Ok === 6, `${l3Ok}/6`)
+check('Level 3 六課無橫向溢出', l3Over === 0, `${l3Over}`)
+check('Level 3 評量未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const q3 = D1_CONTENT['d1-l3-6'].quiz
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth((q3[i].answer + 1) % q3[i].options.length).click()
+await p.waitForTimeout(200)
+check('全錯時仍鎖定', await p.locator('.dtl-primary').isDisabled())
+await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
+await p.waitForTimeout(200)
+check('重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
 check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
 await browser.close()
 console.log(failed ? `\n${failed} 項失敗` : '\n全部通過')
