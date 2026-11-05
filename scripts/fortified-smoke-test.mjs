@@ -8,6 +8,7 @@
  * 檢查：存取控制（未登入／非管理員／管理員）、首頁入口、21 課可開啟且無橫向溢出、評量鎖定與通過、遊戲、品飲筆記、成就。
  */
 import { createRequire } from 'module'
+import { FORTIFIED_CONTENT } from '../src/data/fortified/content.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -61,12 +62,34 @@ for (const [idx, n] of [[0, 6], [1, 8], [2, 7]]) {
   await p.locator('.lc-btn').nth(idx).click(); await p.waitForTimeout(500)
   check(`Level ${idx + 1} 列出 ${n} 課`, (await p.locator('.ftl-lesson').count()) === n)
   for (let i = 0; i < n; i++) {
+    const id = `fo-l${idx + 1}-${i + 1}`
+    const has = !!FORTIFIED_CONTENT[id]
     await p.locator('.ftl-lesson').nth(i).click(); await p.waitForTimeout(200)
-    const ok = (await p.locator('.ftl-title').count()) === 1 && (await p.locator('.ftl-badge').count()) === 1 && (await overflow(p)) <= 0
-    check(`L${idx + 1} 第 ${i + 1} 課可開啟、顯示施工中、無溢出`, ok)
+    const ov = await overflow(p)
+    if (has) {
+      const ok = (await p.locator('.slide-blocks > *').count()) > 0 && (await p.locator('.fq-q').count()) >= 2 && (await p.locator('.ftl-badge').count()) === 0 && ov <= 0
+      check(`${id} 內容、小測驗、無溢出`, ok, `overflow=${ov}`)
+      if (i < n - 1) check(`${id} 有練習題`, (await p.locator('.ftl-points').count()) === 1)
+    } else {
+      check(`${id} 顯示施工中、無溢出`, (await p.locator('.ftl-badge').count()) === 1 && ov <= 0)
+    }
     await p.locator('.ftl-link').click(); await p.waitForTimeout(150)
   }
 }
+// 評量鎖定：Level 1 第 6 課
+const q6 = FORTIFIED_CONTENT['fo-l1-6'].quiz
+await p.goto(`${BASE}/fortified`); await settle(p, 1200)
+await p.locator('.lc-btn').first().click(); await p.waitForTimeout(400)
+await p.locator('.ftl-lesson').nth(5).click(); await p.waitForTimeout(300)
+check('評量為 8 題', (await p.locator('.fq-q').count()) === 8)
+check('評量未作答時無法標記完成', await p.locator('.ftl-primary').isDisabled())
+for (let q = 0; q < q6.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth((q6[q].answer + 1) % 4).click()
+check('評量全錯時無法標記完成', await p.locator('.ftl-primary').isDisabled())
+await p.locator('.fq-retry').click()
+for (let q = 0; q < q6.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth(q6[q].answer).click()
+check('評量全對後可標記完成', !(await p.locator('.ftl-primary').isDisabled()))
+await p.locator('.ftl-primary').click(); await p.waitForTimeout(300)
+check('完成後列表出現已完成標記', (await p.locator('.ftl-lesson.done').count()) === 1)
 await p.goto(`${BASE}/`); await settle(p)
 await p.locator('.nav-toggle, .hamburger, [class*="mobile-menu-btn"], [class*="menu-toggle"]').first().click({ timeout: 3000 }).catch(() => {})
 check('首頁（管理員）有強化酒入口', (await p.locator('a[href="/fortified"]').count()) > 0)

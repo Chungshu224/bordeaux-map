@@ -1,5 +1,5 @@
 <template>
-  <section class="spq">
+  <section class="fq">
     <h3 class="fq-title">小測驗（{{ questions.length }} 題）</h3>
     <div v-for="(item, qi) in questions" :key="qi" class="fq-q">
       <p class="fq-text">{{ qi + 1 }}. {{ item.q }}</p>
@@ -51,7 +51,7 @@ watch(finished, (v) => emit('result', v ? { score: score.value, passed: passed.v
 </script>
 
 <style scoped>
-.spq { background: #fff; border: 1px solid rgba(0,0,0,.08); border-radius: 14px; padding: 14px 16px; margin: 16px 0; }
+.fq { background: #fff; border: 1px solid rgba(0,0,0,.08); border-radius: 14px; padding: 14px 16px; margin: 16px 0; }
 .fq-title { margin: 0 0 10px; font-size: .95rem; color: #5C2E12; }
 .fq-q { margin-bottom: 14px; }
 .fq-text { margin: 0 0 8px; font-weight: 600; line-height: 1.6; overflow-wrap: anywhere; }
