@@ -1,5 +1,6 @@
 // 葡萄酒生產（D1）專論：各課課文總表（依課程 id 查）
 import { D1_LEVEL1_CONTENT } from './level1Content.js'
+import { D1_LEVEL2_CONTENT } from './level2Content.js'
 
 // 撰寫時正解多半放在同一位置；這裡依題目序固定輪轉選項，讓正解位置分散（結果固定、非隨機）
 function spread(content) {
@@ -18,4 +19,4 @@ function spread(content) {
   return out
 }
 
-export const D1_CONTENT = spread({ ...D1_LEVEL1_CONTENT })
+export const D1_CONTENT = spread({ ...D1_LEVEL1_CONTENT, ...D1_LEVEL2_CONTENT })
