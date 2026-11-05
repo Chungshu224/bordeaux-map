@@ -56,3 +56,12 @@ export const REGIONS = [
 ]
 
 export const REGION_BY_ID = Object.fromEntries(REGIONS.map(r => [r.id, r]))
+
+// 地圖視角（初始為第一個）
+export const GROUPS = [
+  { id: 'world', label: '全球', center: [10, 36], zoom: 2.3, pitch: 0 },
+  { id: 'iberia', label: '伊比利', center: [-8, 38.5], zoom: 4.6, pitch: 20 },
+  { id: 'france', label: '法國南部', center: [4, 43.5], zoom: 6.2, pitch: 20 },
+  { id: 'med', label: '地中海', center: [14, 36.5], zoom: 4.4, pitch: 15 },
+  { id: 'australia', label: '澳洲', center: [146.4, -36.1], zoom: 6, pitch: 20 }
+]

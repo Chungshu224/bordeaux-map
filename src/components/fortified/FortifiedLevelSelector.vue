@@ -34,7 +34,9 @@
 
     <RegionStoryGrid title="為什麼要專門學強化酒？" :items="overviewItems" />
 
-    <p class="fof-admin-note">本課程僅供管理員閱讀，不對外販售。內容製作中。</p>
+    <FortifiedAchievements />
+
+    <p class="fof-admin-note">本課程僅供管理員閱讀，不對外販售。</p>
 
     <ProgressModal
       :open="showProgressModal"
@@ -55,8 +57,10 @@ import {
 } from '../shared/courseHome/index.js'
 import { fortifiedLearningState, fortifiedLevels, fortifiedLevelIds, fortifiedLearningProgress } from '../../stores/fortifiedLearningStore.js'
 import { FORTIFIED_TOTAL_LESSONS } from '../../data/fortified/lessons.js'
+import { REGIONS } from '../../data/fortified/regions.js'
+import FortifiedAchievements from './FortifiedAchievements.vue'
 
-const emit = defineEmits(['enterLevel', 'openMap', 'openGames'])
+const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook'])
 const theme = getTheme('fortified')
 const showProgressModal = ref(false)
 
@@ -78,20 +82,21 @@ const progressSubline = computed(() => totalProgressPct.value === 0 ? '從 Level
 function startJourney() { emit('enterLevel', totalProgressPct.value >= 100 ? 1 : nextLevel.value) }
 
 const heroStats = [
-  { value: '8+', label: '主要產區' },
+  { value: String(REGIONS.length), label: '全球產區' },
   { value: String(FORTIFIED_TOTAL_LESSONS), label: '系統課程' },
   { value: '3', label: '學習階段' }
 ]
 
 const quickNavItems = computed(() => [
-  { key: 'map', desc: '互動地圖・階段 E', enabled: false },
-  { key: 'games', desc: '練習遊戲・階段 E', enabled: false },
-  { key: 'notebook', desc: '強化酒品飲筆記・階段 E', enabled: false },
+  { key: 'map', desc: `${REGIONS.length} 個產區互動地圖` },
+  { key: 'games', desc: '5 種練習・陳年路線到盲品線索' },
+  { key: 'notebook', desc: '強化酒品飲筆記' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
   if (key === 'map') emit('openMap')
   else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
   else if (key === 'progress') showProgressModal.value = true
 }
 

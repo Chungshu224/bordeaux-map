@@ -9,6 +9,8 @@
  */
 import { createRequire } from 'module'
 import { FORTIFIED_CONTENT } from '../src/data/fortified/content.js'
+import { FORTIFIED_GAMES } from '../src/data/fortified/gameData.js'
+import { REGIONS } from '../src/data/fortified/regions.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -46,6 +48,8 @@ for (const [label, email] of [['未登入', null], ['非管理員', 'someone@exa
   const p = await ctx.newPage()
   await p.goto(`${BASE}/fortified`); await settle(p, 2500)
   check(`${label}進入 /fortified 會被導走`, !new URL(p.url()).pathname.startsWith('/fortified'), p.url())
+  await p.goto(`${BASE}/fortified/map`); await settle(p, 2000)
+  check(`${label}進入 /fortified/map 會被導走`, !new URL(p.url()).pathname.startsWith('/fortified'), p.url())
   check(`${label}畫面沒有強化酒內容`, (await p.locator('.ftl, .fof-admin-note').count()) === 0)
   await ctx.close()
 }
@@ -113,6 +117,49 @@ await p.locator('.fq-retry').click()
 for (let q = 0; q < q37.length; q++) await p.locator('.fq-q').nth(q).locator('.fq-opt').nth(q37[q].answer).click()
 check('Level 3 評量全對後可標記完成', !(await p.locator('.ftl-primary').isDisabled()))
 check('全部 21 課都有內容', Object.keys(FORTIFIED_CONTENT).length === 21)
+// 地圖
+await p.goto(`${BASE}/fortified`); await settle(p, 1200)
+const achTotal = await p.locator('.foa-item').count()
+check('成就面板 9 項', achTotal === 9, `count=${achTotal}`)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(800)
+check(`地圖頁列出 ${REGIONS.length} 個產區`, (await p.locator('.fom-mini').count()) === REGIONS.length)
+check('地圖頁無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.fom-mini').first().click(); await p.waitForTimeout(300)
+check('點選產區出現資訊卡', (await p.locator('.fom-card').count()) === 1)
+await p.locator('.fom-chip').nth(1).click(); await p.waitForTimeout(200)
+check('類型篩選會縮減產區', (await p.locator('.fom-mini').count()) < REGIONS.length)
+await p.locator('.fom-back').click(); await p.waitForTimeout(400)
+// 遊戲
+await p.locator('.qn-card').nth(1).click(); await p.waitForTimeout(400)
+check(`遊戲樞紐列出 ${FORTIFIED_GAMES.length} 種遊戲`, (await p.locator('.sgh-card').count()) === FORTIFIED_GAMES.length)
+for (let g = 0; g < FORTIFIED_GAMES.length; g++) {
+  await p.locator('.sgh-card').nth(g).click(); await p.waitForTimeout(250)
+  await p.locator('.diff-card').first().click(); await p.waitForTimeout(250)
+  let guard = 0
+  while (!(await p.locator('.final-area').count()) && guard++ < 60) {
+    if (await p.locator('.btn-next').count()) { await p.locator('.btn-next').click() }
+    else if (await p.locator('.btn-submit').count()) {
+      for (let k = 0; k < 6 && (await p.locator('.btn-submit').isDisabled()); k++) await p.locator('.opt-btn:not([disabled])').first().click()
+      await p.locator('.btn-submit').click()
+    } else if (await p.locator('.opt-btn').count()) { await p.locator('.opt-btn').first().click() }
+    await p.waitForTimeout(60)
+  }
+  check(`遊戲「${FORTIFIED_GAMES[g].name}」可玩完`, (await p.locator('.final-area').count()) === 1 && (await overflow(p)) <= 0)
+  await p.locator('.back-btn').first().click(); await p.waitForTimeout(250)
+}
+await p.goto(`${BASE}/fortified`); await settle(p, 1200)
+// 筆記
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(300)
+await p.locator('.fon-primary').first().click(); await p.waitForTimeout(150)
+await p.locator('input[type=text]').first().fill('整合測試酒款')
+await p.locator('.fon-primary').click(); await p.waitForTimeout(250)
+check('品飲筆記可新增', (await p.locator('.fon-note').count()) === 1)
+check('筆記頁無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.fon-back').click(); await p.waitForTimeout(400)
+await p.evaluate((keys) => keys.forEach(k => localStorage.setItem(k, '500')), FORTIFIED_GAMES.map(g => g.bestKey))
+await p.goto(`${BASE}/fortified`); await settle(p, 1200)
+const unlocked = await p.locator('.foa-item:not(.locked)').count()
+check('成就依進度解鎖（至少：第一口、遊戲全制霸、第一則筆記、Level 評量課）', unlocked >= 3, `unlocked=${unlocked}`)
 await p.goto(`${BASE}/`); await settle(p)
 await p.locator('.nav-toggle, .hamburger, [class*="mobile-menu-btn"], [class*="menu-toggle"]').first().click({ timeout: 3000 }).catch(() => {})
 check('首頁（管理員）有強化酒入口', (await p.locator('a[href="/fortified"]').count()) > 0)
