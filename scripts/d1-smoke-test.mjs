@@ -10,6 +10,8 @@
 import { createRequire } from 'module'
 import { d1Levels, D1_TOTAL_LESSONS } from '../src/data/d1/lessons.js'
 import { D1_CONTENT } from '../src/data/d1/content.js'
+import { D1_GAMES } from '../src/data/d1/gameData.js'
+import { CYCLE_STAGES } from '../src/data/d1/cycleData.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -141,6 +143,50 @@ await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
 for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
 await p.waitForTimeout(200)
 check('重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
+// ── 階段 E：週期圖、遊戲、筆記、成就 ──
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+const achTotal = await p.locator('.d1a-item').count()
+check('成就面板 8 項', achTotal === 8, `count=${achTotal}`)
+check('快速入口三項皆可點（無 disabled）', (await p.locator('.qn-card:disabled').count()) === 0)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(400)
+check(`週期圖列出 ${CYCLE_STAGES.length} 個階段`, (await p.locator('.d1c-stage').count()) === CYCLE_STAGES.length)
+for (let i = 0; i < CYCLE_STAGES.length; i++) { await p.locator('.d1c-stage').nth(i).click(); await p.waitForTimeout(80) }
+check('點選階段出現資訊卡', (await p.locator('.d1c-card').count()) === 1)
+check('週期圖無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.d1c-back').click(); await p.waitForTimeout(400)
+// 遊戲
+await p.locator('.qn-card').nth(1).click(); await p.waitForTimeout(400)
+check(`遊戲樞紐列出 ${D1_GAMES.length} 種遊戲`, (await p.locator('.sgh-card').count()) === D1_GAMES.length)
+for (let g = 0; g < D1_GAMES.length; g++) {
+  await p.locator('.sgh-card').nth(g).click(); await p.waitForTimeout(250)
+  await p.locator('.diff-card').first().click(); await p.waitForTimeout(250)
+  let guard = 0
+  while (!(await p.locator('.final-area').count()) && guard++ < 60) {
+    if (await p.locator('.btn-next').count()) { await p.locator('.btn-next').click() }
+    else if (await p.locator('.btn-submit').count()) {
+      for (let k = 0; k < 6 && (await p.locator('.btn-submit').isDisabled()); k++) await p.locator('.opt-btn:not([disabled])').first().click()
+      await p.locator('.btn-submit').click()
+    } else if (await p.locator('.opt-btn').count()) { await p.locator('.opt-btn').first().click() }
+    await p.waitForTimeout(60)
+  }
+  check(`遊戲「${D1_GAMES[g].name}」可玩完`, (await p.locator('.final-area').count()) === 1 && (await overflow(p)) <= 0)
+  await p.locator('.back-btn').first().click(); await p.waitForTimeout(250)
+}
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+// 筆記
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(300)
+check('答題要點卡 5 張', (await p.locator('.d1n-card').count()) === 5)
+await p.locator('.d1n-primary').first().click(); await p.waitForTimeout(150)
+await p.locator('input[type=text]').first().fill('整合測試主題')
+await p.locator('.d1n-primary').click(); await p.waitForTimeout(250)
+check('決策鏈筆記可新增', (await p.locator('.d1n-note').count()) === 1)
+check('筆記頁無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.d1n-back').click(); await p.waitForTimeout(400)
+await p.evaluate((keys) => keys.forEach(k => localStorage.setItem(k, '500')), D1_GAMES.map(g => g.bestKey))
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+const unlocked = await p.locator('.d1a-item:not(.locked)').count()
+check('成就依進度解鎖（第一課、走完一年、遊戲全制霸、第一則筆記…）', unlocked >= 4, `unlocked=${unlocked}`)
 
 check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
 await browser.close()

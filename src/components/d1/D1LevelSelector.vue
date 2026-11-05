@@ -34,6 +34,8 @@
 
     <RegionStoryGrid title="D1 怎麼考？" :items="overviewItems" />
 
+    <D1Achievements />
+
     <p class="d1h-admin-note">本課程僅供管理員閱讀，不對外販售。</p>
 
     <ProgressModal
@@ -55,8 +57,9 @@ import {
 } from '../shared/courseHome/index.js'
 import { d1LearningState, d1Levels, d1LevelIds, d1LearningProgress } from '../../stores/d1LearningStore.js'
 import { D1_TOTAL_LESSONS } from '../../data/d1/lessons.js'
+import D1Achievements from './D1Achievements.vue'
 
-const emit = defineEmits(['enterLevel'])
+const emit = defineEmits(['enterLevel', 'openCycle', 'openGames', 'openNotebook'])
 const theme = getTheme('d1')
 const showProgressModal = ref(false)
 
@@ -84,13 +87,16 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
-  { key: 'cycle', icon: '🔄', title: '年度週期圖', desc: '互動生長週期', enabled: false },
-  { key: 'games', desc: '練習遊戲', enabled: false },
-  { key: 'notebook', desc: '答題要點與決策鏈筆記', enabled: false },
+  { key: 'cycle', icon: '🔄', title: '年度週期圖', desc: '六個階段的風險與管理' },
+  { key: 'games', desc: '5 種練習・排序到情境決策' },
+  { key: 'notebook', desc: '答題要點卡與決策鏈筆記' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
-  if (key === 'progress') showProgressModal.value = true
+  if (key === 'cycle') emit('openCycle')
+  else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
+  else if (key === 'progress') showProgressModal.value = true
 }
 
 const levelData = computed(() => [
