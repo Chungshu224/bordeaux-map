@@ -18,6 +18,7 @@
             <span class="nav-greeting">{{ displayName }}</span>
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
             <router-link v-if="isAdmin" to="/sparkling" class="btn-nav admin-nav-btn">🥂 氣泡酒專論</router-link>
+            <router-link v-if="isAdmin" to="/fortified" class="btn-nav admin-nav-btn">🥃 強化酒專論</router-link>
             <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
@@ -52,6 +53,7 @@
           <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
           <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
           <router-link v-if="isAdmin" to="/sparkling" class="nmd-item" @click="showMobileMenu = false">🥂 氣泡酒專論</router-link>
+          <router-link v-if="isAdmin" to="/fortified" class="nmd-item" @click="showMobileMenu = false">🥃 強化酒專論</router-link>
           <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
