@@ -9,6 +9,7 @@
  */
 import { createRequire } from 'module'
 import { d1Levels, D1_TOTAL_LESSONS } from '../src/data/d1/lessons.js'
+import { D1_CONTENT } from '../src/data/d1/content.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -76,6 +77,32 @@ for (const n of [1, 2, 3]) {
 }
 check('21 課都能開啟', opened === 21, `${opened}/21`)
 check('21 課無橫向溢出', overflowed === 0, `${overflowed}`)
+// 已填內容的課：有測驗、無「施工中」；評量課要通過才能完成
+const filled = Object.keys(D1_CONTENT)
+check('Level 1 七課皆有內容', filled.filter(id => id.startsWith('d1-l1-')).length === 7, String(filled.length))
+await p.goto(`${BASE}/d1`); await settle(p, 800)
+await p.locator('.lc-btn').nth(0).click(); await settle(p, 500)
+let noBadge = 0, withQuiz = 0
+for (let i = 0; i < 7; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0) noBadge++
+  if ((await p.locator('.dq').count()) === 1) withQuiz++
+  if (i < 6) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('七課無「施工中」標記', noBadge === 7, `${noBadge}/7`)
+check('七課都有測驗', withQuiz === 7, `${withQuiz}/7`)
+// 目前在 d1-l1-7（評量）：未答題時完成鈕鎖定
+check('評量課未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const qn = D1_CONTENT['d1-l1-7'].quiz
+for (let i = 0; i < qn.length; i++) {
+  await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(qn[i].answer).click()
+}
+await p.waitForTimeout(200)
+check('全對後完成鈕解鎖', await p.locator('.dtl-primary').isEnabled())
+await p.locator('.dtl-primary').click(); await p.waitForTimeout(300)
+check('完成後該課打勾', (await p.locator('.dtl-lesson.done').count()) >= 1)
+
 check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
 await browser.close()
 console.log(failed ? `\n${failed} 項失敗` : '\n全部通過')
