@@ -36,6 +36,7 @@
           </div>
           <p class="spk-line"><b>品種：</b>{{ selected.grapes }}</p>
           <p class="spk-line">{{ selected.note }}</p>
+          <p v-if="climateText" class="spk-line spk-climate">🌡 {{ climateText }}</p>
           <p class="spk-boundary">{{ boundaryText(selected.id) }}</p>
         </div>
       </aside>
@@ -58,6 +59,7 @@ import { useRouter } from 'vue-router'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { METHODS, STYLE_TAGS, GROUPS, REGIONS } from '../../data/sparkling/regions.js'
+import { sparklingExtrasActions } from '../../stores/sparklingExtrasStore.js'
 
 const props = defineProps({ embedded: { type: Boolean, default: false } })
 const emit = defineEmits(['back'])
@@ -69,6 +71,21 @@ const methodFilter = ref('all')
 const styleFilter = ref('all')
 const selectedId = ref(null)
 const boundaryMap = ref({}) // id -> 'existing' | 'approx'
+const climate = ref(null) // /data/sparkling-climate.json（尚未產生時為 null，卡片不顯示氣候）
+// 氣候小檔：比較基準期（1981–2010）與近十年（2015–2024）的生長季均溫、日照、雨量
+const climateText = computed(() => {
+  const c = climate.value?.aocs?.[selectedId.value]
+  const yrs = climate.value?.meta?.years
+  if (!c || !yrs || c.baseline == null) return ''
+  const recent = (arr) => { const v = yrs.map((y, i) => (y >= 2015 && y <= 2024 ? arr[i] : null)).filter(x => x != null); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null }
+  const rt = recent(c.temps), rs = recent(c.sun), rr = recent(c.rain)
+  const sh = c.centroid && c.centroid[1] < 0
+  const parts = [`生長季均溫 ${c.baseline}°C（1981–2010）`]
+  if (rt != null) parts.push(`近十年 ${rt.toFixed(1)}°C（${rt - c.baseline >= 0 ? '+' : ''}${(rt - c.baseline).toFixed(1)}）`)
+  if (rs != null && c.baselineSun != null) parts.push(`日照 ${Math.round(rs)} 小時（基準 ${Math.round(c.baselineSun)}）`)
+  if (rr != null && c.baselineRain != null) parts.push(`雨量 ${Math.round(rr)} mm（基準 ${Math.round(c.baselineRain)}）`)
+  return `${parts.join('・')}${sh ? '。南半球以前一年 10 月至當年 4 月計。' : '。北半球以 4–10 月計。'}代表點資料，僅供比較。`
+})
 let map = null
 let markers = []
 let bboxes = {}
@@ -182,7 +199,9 @@ watch(filtered, () => {
   applyFilter()
 })
 
+watch(selectedId, (id) => { if (id) sparklingExtrasActions.visitRegion(id) })
 onMounted(() => {
+  fetch('/data/sparkling-climate.json').then(r => (r.ok ? r.json() : null)).then(j => { climate.value = j && j.aocs ? j : null }).catch(() => {})
   try {
     const token = import.meta.env.VITE_MAPBOX_TOKEN
     if (!token) throw new Error('no token')
@@ -236,6 +255,7 @@ onBeforeUnmount(() => { markers.forEach(m => m.marker.remove()); markers = []; m
 .spk-card-country { font-size: .72rem; letter-spacing: .08em; opacity: .9; }
 .spk-card h3 { margin: 2px 0 0; font-size: 1.1rem; color: #fff; overflow-wrap: anywhere; }
 .spk-x { position: absolute; top: 8px; right: 10px; border: 0; background: rgba(0,0,0,.35); color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; }
+.spk-climate { font-size: .78rem; opacity: .9; }
 .spk-card-body { padding: 10px 16px 14px; font-size: .84rem; line-height: 1.55; }
 .spk-line { margin: 6px 0 0; overflow-wrap: anywhere; }
 .spk-boundary { margin: 8px 0 0; font-size: .74rem; color: #9a8878; }
