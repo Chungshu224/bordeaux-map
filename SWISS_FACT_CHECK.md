@@ -28,7 +28,7 @@
 | Valais 為最大產區，約占全國面積 32%、4,636 公頃（紅 2,722＋白 1,914）、55 品種、390 生產者 | ✅/⚠ | swisswine.com；其他來源「約 1/3」「約 5,000 公頃」「60+ 品種」「約 55」→ 數字隨年度／來源不同，只作背景 |
 | Vaud 為第二大，面積 3,775／3,779／3,782 公頃（各來源）；Chasselas 2,233 ha（59%）、Pinot Noir 476、Gamay 311、Gamaret 148、Garanoir 126 | ⚠ | 面積三來源略異；品種公頃數單一年度，只作背景 |
 | 全國面積約 14,569 公頃；Pinot Noir 約 30%、Chasselas 約 27% | ⚠ | 單一來源；隨年度變動，不進測驗，僅說「Pinot Noir 與 Chasselas 為最大兩品種」 |
-| Ticino：Merlot 約占 80% | ❓ | 單一來源 |
+| Ticino：Merlot 占絕大多數 | ⚠ | 各來源比例不一：swisswine.ch 全國頁「超過 80%」、區域頁「近 80%」、區域頁圖表 76%（897／1,181 ha）、swissfinewine「近 90%」。→ 課內只說「絕大多數」，不出比例題 |
 | Lavaux 於 2007 列 UNESCO 世界遺產 | ✅ | cavesa、Wine With Seth、Vaud 官方 |
 | Dézaley 54 ha、Calamin 16 ha | ✅ | Decanter、多來源一致 |
 | Lavaux 村鎮：「14 村」vs「六個次產區（Lutry, Villette, Epesses, Saint-Saphorin, Chardonne, Vevey-Montreux）」vs「八個 Cru（含 Calamin、Dézaley）」 | ⚠ | 各來源計法不同，課內標明 |

@@ -53,7 +53,7 @@ export const SWI_LEVEL1_CONTENT = {
           ['Vaud', '日內瓦湖北岸（Lavaux、La Côte 等）與北部；Chasselas 的重鎮'],
           ['Geneva', '西南角，介於 Jura 與阿爾卑斯之間，鄰近日內瓦市'],
           ['Three Lakes', '三湖區：Neuchâtel、Lake Biel 與 Vully'],
-          ['Ticino', '阿爾卑斯南側、面向義大利；超過八成葡萄園種 Merlot'],
+          ['Ticino', '阿爾卑斯南側、面向義大利；Merlot 占絕大多數葡萄園（比例各來源不同）'],
           ['德語區（German-speaking Switzerland）', '跨多個州的德語區，Graubünden、Zürich、Schaffhausen 等']
         ]
       ),
@@ -81,7 +81,7 @@ export const SWI_LEVEL1_CONTENT = {
     },
     quiz: [
       { q: '下列何者不屬於瑞士官方的六大產區？', options: ['Valais', 'Three Lakes', 'Ticino', 'Alsace'], answer: 3, explain: '六大產區是 Valais、Vaud、Geneva、Three Lakes、Ticino 與德語區。Alsace 在法國。' },
-      { q: '超過八成葡萄園種 Merlot 的產區是？', options: ['Ticino', 'Valais', 'Geneva', 'Vaud'], answer: 0, explain: 'Ticino 位於阿爾卑斯南側，以 Merlot 為主。' },
+      { q: '葡萄園以 Merlot 為絕大多數的產區是？', options: ['Ticino', 'Valais', 'Geneva', 'Vaud'], answer: 0, explain: 'Ticino 位於阿爾卑斯南側，以 Merlot 為主。' },
       { q: '焚風（föhn）對葡萄栽培的主要幫助是？', options: ['降低溫度', '溫暖乾燥、幫助成熟並降低灰黴病風險', '增加降雨', '阻止光合作用'], answer: 1, explain: '焚風溫暖而乾燥，有助成熟，也讓葡萄較乾燥。' },
       { q: '三湖區（Three Lakes）包含哪些湖區？', options: ['Neuchâtel、Lake Biel、Vully', 'Zürich、Lugano、Maggiore', 'Geneva、Annecy、Bourget', 'Constance、Thun、Brienz'], answer: 0, explain: '依 Swiss Wine Promotion，Three Lakes 分為 Neuchâtel、Lake Biel 與 Vully。' }
     ]
