@@ -50,6 +50,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">盲品時，「白胡椒 + 柑橘」先想 Grüner Veltliner。</p></div>"
   },
   {
+    title: "Diploma 深度：Grüner Veltliner 的身世與栽培",
+    highlights: [
+      { id: 1, icon: "🧬", title: "親本：Traminer × St. Georgener-Rebe", content: "1990 年代末的 DNA 分析先確認一個親本是 Traminer（Savagnin）；另一個親本直到 2000 年才在 Burgenland 的 St. Georgen 找到一株倖存老藤，命名為 St. Georgener-Rebe（確認年份各來源寫 2007 或 2009，不進測驗）。它與其他「Veltliner」品種沒有已知親緣" },
+      { id: 2, icon: "🌱", title: "樹勢強、產量高：品質取決於控產", content: "Grüner 樹勢旺盛、天然產量高，任其生長會得到稀薄、中性的酒；Smaragd 或 Ried 等級的濃度來自低產與較晚採收。Diploma 論述的因果鏈：產量 → 濃縮度 → 風格等級 → 價格" },
+      { id: 3, icon: "🏞️", title: "偏好深厚黃土、怕乾旱", content: "黃土（loess）保水、根系可深入，是 Grüner 的經典土壤（Wagram、Weinviertel、Wachau 下段）；在淺薄的原生岩上容易缺水。氣候變遷下的乾旱年份，水分壓力是 Grüner 最大的栽培風險之一" },
+      { id: 4, icon: "🌶️", title: "白胡椒從哪裡來", content: "Grüner 的白胡椒香常被連結到倍半萜 rotundone（也是 Syrah 黑胡椒香的來源）；涼爽年份與較涼的地塊通常胡椒感更明顯。這是研究上的連結，強度因年份、地塊而異，屬趨勢而非定律" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">論述時把品種特性接到風格：樹勢 → 控產；黃土 → 保水；涼爽 → 胡椒感。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

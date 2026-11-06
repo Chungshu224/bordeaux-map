@@ -177,9 +177,9 @@ const CLASS_ITEMS = [
   { g: 'Prädikat 規則', easy: false, stem: 'Strohwein 的葡萄一般須風乾至少多久？', ans: '三個月', wrong: ['一週', '一個月', '一年'], explain: '一般至少三個月（兩個月且達 30 KMW 可提早壓榨）。' },
   { g: 'Prädikat 規則', easy: false, stem: 'Eiswein 的葡萄在採收與壓榨時須處於什麼狀態？', ans: '冰凍', wrong: ['貴腐菌感染', '風乾於稻草上', '機械冷卻'], explain: 'Eiswein 只能用採收與壓榨時冰凍的葡萄。' },
   // Sekt Austria
-  { g: 'Sekt Austria', easy: true,  stem: 'Sekt Austria Klassik 的酒渣陳年至少多久？', ans: '9 個月', wrong: ['18 個月', '24 個月', '30 個月'], explain: 'Klassik 9、Reserve 18、Grosse Reserve 30 個月。' },
+  { g: 'Sekt Austria', easy: true,  stem: 'Sekt Austria 基礎級的酒渣陳年至少多久？', ans: '9 個月', wrong: ['18 個月', '24 個月', '30 個月'], explain: '基礎級 9、Reserve 18、Grosse Reserve 36 個月（2022 年起）。' },
   { g: 'Sekt Austria', easy: true,  stem: 'Sekt Austria Reserve 的酒渣陳年至少多久？', ans: '18 個月', wrong: ['9 個月', '24 個月', '36 個月'], explain: 'Reserve 為傳統法、至少 18 個月，葡萄與基酒來自同一個邦。' },
-  { g: 'Sekt Austria', easy: false, stem: 'Sekt Austria Grosse Reserve 的酒渣陳年至少多久？', ans: '30 個月', wrong: ['9 個月', '18 個月', '36 個月'], explain: 'Grosse Reserve 至少 30 個月，採收三年後才可上市。' },
+  { g: 'Sekt Austria', easy: false, stem: 'Sekt Austria Grosse Reserve 的酒渣陳年至少多久？', ans: '36 個月', wrong: ['9 個月', '18 個月', '30 個月'], explain: 'Grosse Reserve 至少 36 個月（2022 年修法前為 30 個月），採收三年後才可上市。' },
   { g: 'Sekt Austria', easy: false, stem: 'Sekt Austria Grosse Reserve 的產地規定？', ans: '單一酒村', wrong: ['奧地利任一處', '單一個邦', '單一 DAC'], explain: 'Grosse Reserve 來自單一酒村（可再標示 Ried）。' },
   // 產地金字塔與制度
   { g: '產地金字塔', easy: true,  stem: 'DAC 的產地金字塔由寬到窄的順序是？', ans: 'Gebietswein → Ortswein → Riedenwein', wrong: ['Riedenwein → Ortswein → Gebietswein', 'Ortswein → Gebietswein → Riedenwein', 'Gebietswein → Riedenwein → Ortswein'], explain: '產區 → 村莊 → 單一葡萄園。' },

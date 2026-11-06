@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Tulbagh 是被群山包圍的熱日涼夜產地，常與 Swartland 並列為 Coastal Region 的內陸代表。</p></div>"
   },
   {
+    title: "Diploma 深度：灌木老藤的經濟學",
+    highlights: [
+      { id: 1, icon: "🌳", title: "因果鏈：旱作灌木藤 → 濃縮度", content: "不灌溉 → 根系深入、樹勢受控 → 天然低產、小果粒 → 濃縮與鮮明的酸；灌木式（bush vine）讓葉幕為果實遮蔭，適合炎熱乾燥的 Swartland" },
+      { id: 2, icon: "💸", title: "為什麼老藤曾被拔除", content: "灌木老藤產量低、難以機械化；過去葡萄多以散裝價格出售，低產就等於低收入，許多老藤被拔掉改種高產品種或其他作物。VinPro 指出 2007 年以來每年拔除面積都多於新植" },
+      { id: 3, icon: "🔁", title: "新浪潮如何改變價格", content: "Sadie、Mullineux 等生產者以單一園、老藤 Chenin 與 Rhône 品種建立高價品牌，讓同一批老藤從散裝原料變成高價酒款；Old Vine Project 再用認證封條把「老藤」轉成消費者看得見的價值" },
+      { id: 4, icon: "📝", title: "論述用語", content: "「老藤的保存取決於酒價能否覆蓋低產的成本」：品質潛力本身不足以保護葡萄園，必須有市場溢價。這句話也適用於智利 Itata、阿根廷的老藤" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">Swartland 的故事是一條經濟因果鏈：低產 → 散裝不划算 → 拔除；精品化 → 溢價 → 保存。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

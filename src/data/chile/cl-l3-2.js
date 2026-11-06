@@ -48,6 +48,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">Diploma 常問：氣候壓力下，原料來源和風格會如何改變？</p></div>"
   },
   {
+    title: "Diploma 深度：從「國際風格」到「新智利」",
+    highlights: [
+      { id: 1, icon: "🍫", title: "1990–2000 年代：成熟與橡木", content: "出口擴張期，許多高端酒款追求晚採、高成熟度、高萃取與大量新橡木，以符合當時國際評論與市場的偏好（業界常見描述）" },
+      { id: 2, icon: "🌿", title: "近年：提早採收與降低萃取（趨勢）", content: "越來越多生產者提早採收、減少新橡木，改用大木桶、水泥槽或陶甕，部分使用整串發酵，強調新鮮度與產地；Carmenère 也改以控制吡嗪的葉幕管理取代單純晚採" },
+      { id: 3, icon: "🧭", title: "產地的擴張", content: "風格轉向伴隨產地往兩端移動：往海岸（Leyda、Limarí）與往南（Itata、Bío-Bío、Malleco）尋找更涼的條件，並重新評價老藤 País、Cinsault、Carignan" },
+      { id: 4, icon: "📝", title: "論述用語", content: "「智利的風格轉向不只是釀造選擇，也是產地地圖的改變」：氣候壓力（乾旱、暖化）、市場偏好與老藤再發現三者共同推動。答題時三者各給一個例子" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">風格會跟著產地走：越涼的產地、越輕的手法，是「新智利」的共同語言。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

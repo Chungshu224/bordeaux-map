@@ -371,4 +371,9 @@ export default {
   "單一莊園（monopole）AOC，被 Condrieu 的範圍環繞；Inter Rhône 2025 年約 4 公頃，是法國最小的 AOC 之一。": "コンドリューに囲まれた単独所有（モノポール）の AOC。Inter Rhône 2025 では約 4 ha で、フランス最小級の AOC のひとつ。",
   "Ardèche 省單一村莊，花崗岩土壤、向陽的圓形劇場式坡地（一般說法）；北隆河以 Syrah 單一品種釀造的 cru。": "アルデーシュ県の単一の村。花崗岩土壌と日当たりの良い円形劇場状の斜面（一般的な説明）。シラー単一品種で造る北ローヌのクリュ。",
   "Syrah（100%）": "シラー（100%）",
+  "🇫🇷 法國隆河葡萄酒產區地圖（{n} 個 AOC＋示意點）": "🇫🇷 ローヌ渓谷ワイン産地地図（{n} のAOCと目安の地点）",
+  "點擊產區查看資訊。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Côtes du Rhône、Côtes du Rhône Villages、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Joseph 的地塊資料不完整，Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Venise 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。": "産地をタップすると詳細を表示します。多くのAOCはINAOの区画範囲（2018年版、参考用）です。Côtes du Rhône、Côtes du Rhône Villages、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Josephは区画データが不完全で、Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Veniseは区画データがないため、EUデータセット（CC0、2021年以前）のコミューン単位の範囲を表示しています。",
+  "範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。": "範囲はINAOの区画データ（2018年版）を簡略化したもので、参考用であり法的効力はありません。",
+  "範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。": "範囲はEUのPDOデータセット（CC0、2021年以前）によるコミューン単位のもので、区画単位ではありません。",
+  "本課程未另外介紹這個 AOC。": "本コースではこのAOCを個別には扱っていません。",
 }

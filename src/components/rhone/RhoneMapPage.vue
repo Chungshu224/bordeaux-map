@@ -3,7 +3,7 @@
     <section class="map-section">
       <RegionMapHeader
         :regionName="gt('隆河')"
-        :title="gt('🇫🇷 法國隆河葡萄酒產區地圖（26 個 AOC＋示意點）')"
+        :title="gt('🇫🇷 法國隆河葡萄酒產區地圖（{n} 個 AOC＋示意點）', { n: features.length || 32 })"
         icon="🇫🇷"
         @back="emits('back-to-course')"
       />
@@ -38,7 +38,7 @@
           <input type="checkbox" v-model="showPoints" @change="applyTierVisibility" />
           <span class="rh-pt-dot"></span> {{ gt('示意點（{n}）', { n: POINT_REF.length }) }}
         </label>
-        <div class="rh-legend-hint">{{ gt('點擊產區查看資訊；AOC 範圍為歐盟官方資料（CC0，2021 年前版本）。示意點僅為概略位置，非官方邊界。') }}</div>
+        <div class="rh-legend-hint">{{ gt('點擊產區查看資訊。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Côtes du Rhône、Côtes du Rhône Villages、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Joseph 的地塊資料不完整，Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Venise 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。') }}</div>
         <div class="rh-legend-hint">{{ gt('範圍面積是法定劃界範圍，不是葡萄園種植面積。') }}</div>
       </div>
 
@@ -150,7 +150,9 @@ const TIERS = [
 ]
 const TIER_BY_KEY = Object.fromEntries(TIERS.map(t => [t.key, t]))
 const TIER_ORDER = ['cdr', 'villages', 'other', 'cru'] // 由底到頂
-const HOME_BOUNDS = [[4.1, 43.55], [5.85, 45.65]]
+const HOME_BOUNDS = [[4.1, 43.55], [5.95, 45.65]]
+const SRC_INAO = '範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。'
+const SRC_EU = '範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。'
 
 const mapContainer = ref(null)
 const mapReady = ref(false)
@@ -327,6 +329,7 @@ const unifiedInfo = computed(() => {
   const others = coLocated(f)
   let description = gt(f.notes || '')
   if (others.length) description += gt(' 同一範圍另有：{list}。', { list: others.map(o => o.name).join(gt('、')) })
+  description += ` ${gt(f.source === 'inao' ? SRC_INAO : SRC_EU)}`
   const official = f.official && f.official !== f.name ? f.official : ''
   return {
     name: f.name,
@@ -387,10 +390,9 @@ function selectPoint(id, fly = true) {
 }
 
 function selectById(id, fly = true) {
-  if (String(id).startsWith('RH-PT-')) return selectPoint(id, fly)
-  activePoint.value = null
   const feat = features.value.find(f => f.properties.id === id)
-  if (!feat) return
+  if (!feat) return selectPoint(id, fly)
+  activePoint.value = null
   activeFeature.value = feat.properties
   infoBarCollapsed.value = false
   globalRhoneAchievementManager.recordRegionExplored(feat.properties.id, feat.properties.zone, feat.properties.tier)
@@ -408,6 +410,10 @@ function onDrawerSelect(item) {
   drawerOpen.value = false
 }
 
+// 地塊範圍很零碎，用白色粗線會蓋掉色塊，改用細的同色線
+const isParcel = ['==', ['get', 'source'], 'inao']
+const lineWidth = t => ['case', isParcel, 0.4, t.line]
+
 function applyHighlight() {
   if (!map || !map.getLayer('rh-fill-cru')) return
   const id = activeFeature.value?.id
@@ -415,8 +421,8 @@ function applyHighlight() {
     if (!map.getLayer(`rh-fill-${t.key}`)) continue
     map.setPaintProperty(`rh-fill-${t.key}`, 'fill-opacity', tierFillOpacity(t.key, id))
     map.setPaintProperty(`rh-line-${t.key}`, 'line-width', id
-      ? ['case', ['==', ['get', 'id'], id], 3.5, t.line * 0.7]
-      : t.line)
+      ? ['case', ['==', ['get', 'id'], id], ['case', isParcel, 1.4, 3.5], lineWidth(t)]
+      : lineWidth(t))
   }
   if (map.getLayer('rh-pt-circle')) {
     const pid = activePoint.value?.id
@@ -542,7 +548,7 @@ function addPdoLayers(geojson) {
     map.addLayer({ id: `rh-fill-${key}`, type: 'fill', source: 'rh-pdo', filter: ['==', ['get', 'tier'], key],
       paint: { 'fill-color': zoneColorExpr(), 'fill-opacity': t.opacity } })
     map.addLayer({ id: `rh-line-${key}`, type: 'line', source: 'rh-pdo', filter: ['==', ['get', 'tier'], key],
-      paint: { 'line-color': '#ffffff', 'line-width': t.line, 'line-opacity': 0.9 } })
+      paint: { 'line-color': ['case', isParcel, zoneColorExpr(), '#ffffff'], 'line-width': lineWidth(t), 'line-opacity': 0.9 } })
   }
   addPointLayers()
 
@@ -556,8 +562,9 @@ function addPdoLayers(geojson) {
     if (!layers.length) return
     const hits = map.queryRenderedFeatures(e.point, { layers })
     if (!hits.length) return
-    const best = hits.reduce((a, b) => (a.properties.area_km2 <= b.properties.area_km2 ? a : b))
-    selectById(best.properties.id, false)
+    // 範圍相同時依名稱，例如 Clairette de Die 優先於 Coteaux de Die
+    const best = hits.map(h => h.properties).sort((a, b) => a.area_km2 - b.area_km2 || a.name.localeCompare(b.name))[0]
+    selectById(best.id, false)
   })
   for (const t of TIERS) {
     map.on('mouseenter', `rh-fill-${t.key}`, () => { map.getCanvas().style.cursor = 'pointer' })
@@ -589,7 +596,7 @@ async function initMap(retry = 0) {
       map.addControl(new mapboxgl.FullscreenControl(), 'top-right')
       map.fitBounds(HOME_BOUNDS, { padding: 30, duration: 0 })
       try {
-        const res = await fetch('/rhone/rhone_pdo.geojson')
+        const res = await fetch('/rhone/rhone_aoc.geojson')
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const geojson = await res.json()
         features.value = geojson.features
@@ -633,7 +640,7 @@ onUnmounted(() => {
   .main-layout, .map-section { height: 100dvh; min-height: 100svh; overscroll-behavior: none; }
 }
 .rh-legend {
-  position: absolute; left: 12px; bottom: 72px; z-index: 5;
+  position: absolute; right: 12px; bottom: 72px; z-index: 5;
   background: rgba(255, 255, 255, 0.92); border-radius: 12px; padding: 10px 12px;
   font-size: 0.78rem; color: #1b2b3a; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   max-width: min(260px, calc(100vw - 24px));

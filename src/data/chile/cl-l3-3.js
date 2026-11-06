@@ -48,6 +48,26 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">MW 風格重視：有觀點、有證據、承認不確定。</p></div>"
   },
   {
+    title: "Diploma 深度：自由貿易協定與價格定位",
+    highlights: [
+      { id: 1, icon: "🇯🇵", title: "日本：EPA 與 2015 年的超越", content: "日智 EPA 於 2007 年生效、逐步降低葡萄酒關稅；依日本財務省統計，智利在 2015 年以約 5,160 萬公升首次超越法國，成為日本進口葡萄酒量第一（法國已領先約 30 年）" },
+      { id: 2, icon: "💲", title: "「物超所值」的雙面刃", content: "關稅優勢與低成本讓智利在量販價位極具競爭力，但「便宜好喝」的國家形象也讓高價酒款難以說服消費者，形成定價天花板" },
+      { id: 3, icon: "🤝", title: "打破天花板的方法", content: "合資旗艦（Almaviva、Seña）借用國際名聲；柏林盲品等事件製造話題；單一園、老藤與 Costa／Andes 標示則用風土建立差異。三種策略可在論述中互相比較" },
+      { id: 4, icon: "⚠️", title: "風險：市場集中", content: "出口依賴少數大市場與少數大集團，任何市場的需求變化（例如 2024 年中國瓶裝酒量下滑）都會直接衝擊；分散市場與提高瓶裝比例是常見的因應方向" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">智利的市場題，核心是「價值形象」與「溢價野心」之間的張力。</p></div>"
+  },
+  {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「說明 Humboldt 寒流與安地斯山如何影響智利葡萄酒的風格，並各舉一個產區為例。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① 寒流 → 晨霧與午後海風 → 沿海涼爽 → Casablanca／Leyda 的 Sauvignon Blanc、Chardonnay、Pinot Noir；② 安地斯 → 融雪灌溉與高度 → 日夜溫差 → Alto Maipo 的 Cabernet 酚類成熟與結構；③ 中間谷地最熱；④ 由此帶出 Costa／Entre Cordilleras／Andes 標示" },
+      { id: 3, icon: "❓", title: "題目二", content: "「智利能否擺脫『物超所值』的形象？請評估。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 現況：出口集中、大集團主導、FTA 帶來價格優勢；② 有利條件：合資旗艦、柏林盲品、風土標示、老藤與南部復興、風格轉向；③ 不利條件：形象慣性、乾旱成本上升、市場集中；④ 結論給出條件式判斷，例如「在高端小眾可以，整體形象短期難變」" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">評估題不要只說「可以」或「不行」：給條件、給時間軸。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

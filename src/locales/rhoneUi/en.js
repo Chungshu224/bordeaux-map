@@ -371,4 +371,9 @@ export default {
   "單一莊園（monopole）AOC，被 Condrieu 的範圍環繞；Inter Rhône 2025 年約 4 公頃，是法國最小的 AOC 之一。": "A single-estate (monopole) AOC surrounded by Condrieu; about 4 ha per Inter Rhône 2025, one of the smallest AOCs in France.",
   "Ardèche 省單一村莊，花崗岩土壤、向陽的圓形劇場式坡地（一般說法）；北隆河以 Syrah 單一品種釀造的 cru。": "A single commune in Ardèche; granite soils and sun-facing amphitheatre slopes (commonly stated); the northern Rhône cru made from 100% Syrah.",
   "Syrah（100%）": "Syrah (100%)",
+  "🇫🇷 法國隆河葡萄酒產區地圖（{n} 個 AOC＋示意點）": "🇫🇷 Rhône Valley wine map ({n} AOCs plus indicative points)",
+  "點擊產區查看資訊。多數 AOC 是 INAO 地塊範圍（2018 年版，僅供參考）。Côtes du Rhône、Côtes du Rhône Villages、Châteauneuf-du-Pape、Vacqueyras、Beaumes-de-Venise、Condrieu、Château-Grillet、Saint-Joseph 的地塊資料不完整，Gigondas、Ventoux、Luberon、Muscat de Beaumes-de-Venise 沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。": "Tap a region for details. Most AOCs show INAO parcel areas (2018 edition, for reference only). The parcel data is incomplete for Côtes du Rhône, Côtes du Rhône Villages, Châteauneuf-du-Pape, Vacqueyras, Beaumes-de-Venise, Condrieu, Château-Grillet and Saint-Joseph, and missing for Gigondas, Ventoux, Luberon and Muscat de Beaumes-de-Venise; these use commune-level areas from the EU dataset (CC0, pre-2021).",
+  "範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。": "The area comes from INAO parcel delimitation data (2018 edition), simplified and for reference only, with no legal force.",
+  "範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。": "The area comes from the EU PDO dataset (CC0, pre-2021) and is at commune level, not parcel level.",
+  "本課程未另外介紹這個 AOC。": "This course does not cover this AOC separately.",
 }

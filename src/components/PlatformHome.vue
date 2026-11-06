@@ -17,6 +17,8 @@
           <template v-if="authUser">
             <span class="nav-greeting">{{ displayName }}</span>
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
+            <router-link v-if="isAdmin" to="/sparkling" class="btn-nav admin-nav-btn">🥂 氣泡酒專論</router-link>
+            <router-link v-if="isAdmin" to="/fortified" class="btn-nav admin-nav-btn">🥃 強化酒專論</router-link>
             <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
@@ -50,6 +52,8 @@
         <div class="nmd-inner" @click.stop>
           <div v-if="authUser" class="nmd-user">👤 {{ displayName }}</div>
           <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
+          <router-link v-if="isAdmin" to="/sparkling" class="nmd-item" @click="showMobileMenu = false">🥂 氣泡酒專論</router-link>
+          <router-link v-if="isAdmin" to="/fortified" class="nmd-item" @click="showMobileMenu = false">🥃 強化酒專論</router-link>
           <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
@@ -764,6 +768,134 @@
             </div>
             <div class="card-enter-cta">
               <button class="btn-enter-course" @click="router.push('/provence')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
+
+          <!-- ── Diploma 通論（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card diploma">
+            <div :class="['card-status', courseStatuses.diploma ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🎓</div>
+              <div class="card-region">Viticulture · Business · Sparkling · Fortified</div>
+              <h3 class="card-title">{{ $t('home.courses.diploma.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.diploma.desc') }}</p>
+            </div>
+            <div class="course-preview-strip diploma-strip">
+              <div class="cp-stat">
+                <span class="cp-num">D1</span>
+                <span class="cp-label" v-html="$t('home.courses.diploma.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">D2</span>
+                <span class="cp-label" v-html="$t('home.courses.diploma.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">D4</span>
+                <span class="cp-label" v-html="$t('home.courses.diploma.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">D5</span>
+                <span class="cp-label" v-html="$t('home.courses.diploma.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features diploma-features">
+              <span class="cpf-item diploma-tag">{{ ck($t('home.courses.diploma.f1')) }}</span>
+              <span class="cpf-item diploma-tag">{{ ck($t('home.courses.diploma.f2')) }}</span>
+              <span class="cpf-item diploma-tag">{{ ck($t('home.courses.diploma.f3')) }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/diploma')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
+
+          <!-- ── 摩洛哥（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card morocco">
+            <div :class="['card-status', courseStatuses.morocco ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🏜️</div>
+              <div class="card-region">Meknès · AOG · AOC · Vin Gris</div>
+              <h3 class="card-title">{{ $t('home.courses.morocco.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.morocco.desc') }}</p>
+            </div>
+            <div class="course-preview-strip morocco-strip">
+              <div class="cp-stat">
+                <span class="cp-num">14</span>
+                <span class="cp-label" v-html="$t('home.courses.morocco.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.morocco.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">🌸</span>
+                <span class="cp-label" v-html="$t('home.courses.morocco.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">📜</span>
+                <span class="cp-label" v-html="$t('home.courses.morocco.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features morocco-features">
+              <span class="cpf-item morocco-tag">{{ ck($t('home.courses.morocco.f1')) }}</span>
+              <span class="cpf-item morocco-tag">{{ ck($t('home.courses.morocco.f2')) }}</span>
+              <span class="cpf-item morocco-tag">{{ ck($t('home.courses.morocco.f3')) }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/morocco')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
+          <!-- ── 侍酒師實務（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card sommelier">
+            <div :class="['card-status', courseStatuses.sommelier ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🍷</div>
+              <div class="card-region">Service · Spirits · Sake · Beer</div>
+              <h3 class="card-title">{{ $t('home.courses.sommelier.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.sommelier.desc') }}</p>
+            </div>
+            <div class="course-preview-strip sommelier-strip">
+              <div class="cp-stat">
+                <span class="cp-num">🍽️</span>
+                <span class="cp-label" v-html="$t('home.courses.sommelier.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">🥃</span>
+                <span class="cp-label" v-html="$t('home.courses.sommelier.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">🍶</span>
+                <span class="cp-label" v-html="$t('home.courses.sommelier.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">🎤</span>
+                <span class="cp-label" v-html="$t('home.courses.sommelier.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features sommelier-features">
+              <span class="cpf-item sommelier-tag">{{ ck($t('home.courses.sommelier.f1')) }}</span>
+              <span class="cpf-item sommelier-tag">{{ ck($t('home.courses.sommelier.f2')) }}</span>
+              <span class="cpf-item sommelier-tag">{{ ck($t('home.courses.sommelier.f3')) }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/sommelier')">{{ $t('home.courses.common.enterAdmin') }} →</button>
             </div>
           </div>
 
@@ -1709,6 +1841,9 @@ const courseConfig = computed(() => [
   { id: 'languedoc', label: t('home.courses.labels.languedoc'), route: '/languedoc', group: 'france' },
   { id: 'southwest', label: t('home.courses.labels.southwest'), route: '/southwest', group: 'france' },
   { id: 'brandy', label: t('home.courses.labels.brandy'), route: '/brandy', group: 'europe' },
+  { id: 'diploma', label: t('home.courses.labels.diploma'), route: '/diploma', group: 'europe' },
+  { id: 'sommelier', label: t('home.courses.labels.sommelier'), route: '/sommelier', group: 'europe' },
+  { id: 'morocco', label: t('home.courses.labels.morocco'), route: '/morocco', group: 'newworld' },
   { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'france' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
@@ -1728,12 +1863,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified']
 
 
 async function loadCourseData() {
@@ -2466,6 +2601,9 @@ onMounted(async () => {
 .course-card.languedoc { border-color: rgba(156,74,26,0.4); background: rgba(156,74,26,0.05); }
 .course-card.southwest { border-color: rgba(75,46,85,0.4); background: rgba(75,46,85,0.05); }
 .course-card.brandy { border-color: rgba(138,75,20,0.4); background: rgba(138,75,20,0.05); }
+.course-card.diploma { border-color: rgba(47,72,88,0.4); background: rgba(47,72,88,0.05); }
+.course-card.morocco { border-color: rgba(193,39,45,0.4); background: rgba(193,39,45,0.05); }
+.course-card.sommelier { border-color: rgba(107,45,60,0.4); background: rgba(107,45,60,0.05); }
 .course-card.provence { border-color: rgba(111,90,168,0.4); background: rgba(111,90,168,0.05); }
 .course-card.canada { border-color: rgba(200,16,46,0.4); background: rgba(200,16,46,0.05); }
 .course-card.usother { border-color: rgba(31,78,121,0.4); background: rgba(31,78,121,0.05); }
@@ -2590,6 +2728,25 @@ onMounted(async () => {
 .languedoc-strip .cp-divider { background: rgba(156,74,26,0.25); }
 .languedoc-features .languedoc-tag { color: #9C4A1A; background: rgba(156,74,26,0.06); border-color: rgba(156,74,26,0.18); }
 /* Brandy card */
+/* Morocco card */
+.morocco-strip { background: rgba(193,39,45,0.07); border-color: rgba(193,39,45,0.22); }
+.morocco-strip .cp-num { color: #C1272D; font-size: 0.9rem; }
+.morocco-strip .cp-label { color: #5A1014; }
+.morocco-strip .cp-divider { background: rgba(193,39,45,0.25); }
+.morocco-features .morocco-tag { color: #C1272D; background: rgba(193,39,45,0.06); border-color: rgba(193,39,45,0.25); }
+
+/* Sommelier card */
+.sommelier-strip { background: rgba(107,45,60,0.07); border-color: rgba(107,45,60,0.22); }
+.sommelier-strip .cp-num { color: #6B2D3C; font-size: 0.9rem; }
+.sommelier-strip .cp-label { color: #3E1520; }
+.sommelier-strip .cp-divider { background: rgba(107,45,60,0.25); }
+.sommelier-features .sommelier-tag { color: #6B2D3C; background: rgba(107,45,60,0.06); border-color: rgba(107,45,60,0.18); }
+/* Diploma card */
+.diploma-strip { background: rgba(47,72,88,0.07); border-color: rgba(47,72,88,0.22); }
+.diploma-strip .cp-num { color: #2F4858; font-size: 0.9rem; }
+.diploma-strip .cp-label { color: #1B2B36; }
+.diploma-strip .cp-divider { background: rgba(47,72,88,0.25); }
+.diploma-features .diploma-tag { color: #2F4858; background: rgba(47,72,88,0.06); border-color: rgba(47,72,88,0.18); }
 .brandy-strip { background: rgba(138,75,20,0.07); border-color: rgba(138,75,20,0.22); }
 .brandy-strip .cp-num { color: #8A4B14; font-size: 0.9rem; }
 .brandy-strip .cp-label { color: #4A2408; }

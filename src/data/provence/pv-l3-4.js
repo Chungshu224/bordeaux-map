@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">用框架練習，而非背答案。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「比較 Bandol 與 Côtes de Provence 的玫瑰紅與紅酒，說明風格與法規的差異。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① Bandol：Mourvèdre 至少 50%、紅酒 18 個月桶陳，晚熟品種需要溫暖的海岸坡地；② Côtes de Provence：範圍大、玫瑰紅約占九成，淺色清新為主，地名（Sainte-Victoire 等）建立分層；③ Bandol 玫瑰紅色較深、結構較強，可經橡木與陳年；④ 結論：Bandol 偏「產地與陳年」，Côtes de Provence 偏「風格一致與品牌」" },
+      { id: 3, icon: "❓", title: "題目二", content: "「評估氣候變遷對普羅旺斯玫瑰紅商業模式的威脅。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 商業模式：淺色、清新、品牌溢價、快速上市（LVMH 投資為例）；② 威脅：糖度快速上升、酸度流失、乾旱與野火、Mistral 的雙面性；③ 因應：提早採收、往高海拔（Coteaux Varois、Pierrevert）、耐旱品種（Mourvèdre、Vermentino）、條件式灌溉；④ 結論：威脅真實但可管理，代價是成本上升與風格調整" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">先寫商業模式，再談威脅：沒有前者，後者就無從評估。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

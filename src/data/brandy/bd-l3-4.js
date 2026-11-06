@@ -39,6 +39,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">這些框架是練習建議，並非官方評分標準。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「比較 Cognac 與 Armagnac 的蒸餾方式，並說明它如何影響風格與陳年。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① Cognac：Charentais 壺式二次蒸餾，到約 70–72%，兩次都切酒頭酒尾 → 較純淨、細緻；② Armagnac：多為連續式一次蒸餾，出蒸餾器約 52–63% → 保留較多風味成分，年輕時就有個性；③ 陳年：Cognac 法國橡木至少 2 年、先新桶後舊桶；Armagnac 用 400–420 公升桶，約 20 年後多出現 rancio；④ 結論：蒸餾越「純」，越依賴橡木與時間建立複雜度" },
+      { id: 3, icon: "❓", title: "題目二", content: "「評估 2024–2025 年中國市場變化對 Cognac 產業鏈的影響。」（口試可用 2 分鐘作答）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 事實：2024 年全球出口價值 −10.6%、中國價值 −23.8%；2025 年 7 月 5 日起中國對歐盟白蘭地課 27.7%–34.9% 反傾銷稅，部分公司以最低價格承諾豁免；② 機制：出口下降 → 庫存累積 → 調降產量與收購價 → 種植者收入受壓；③ 集中的雙面性：四大廠有庫存與行銷優勢，但依賴單一市場放大政策風險；④ 結論：短期衝擊以種植者最重，長期需分散市場與強調高端老酒（標明年份）" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">CMS 口試與 Diploma 筆試的共同要求：事實附年份，機制講因果，結論有判斷。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

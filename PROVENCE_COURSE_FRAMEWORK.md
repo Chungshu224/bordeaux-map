@@ -31,7 +31,7 @@
 - **來源衝突（課內標示、不入測驗）**：Ajaccio 的 Sciaccarellu 最低比例（60% 或 40%）與認證年份（1972 或 1984 的敘述）；Vin de Corse 的認證年份（1972 或 1976）；Patrimonio 紅酒 Nielluccio 比例（INAO 90%，Wine With Seth 引 95%，採 INAO）；Nielluccio 與 Sangiovese 的關係（相近或相同）；科西嘉有機面積。
 
 ## 4. 互動功能（階段 E 計畫）
-示意點地圖（無授權邊界時：普羅旺斯各 AOC 與科西嘉各 AOP 的代表地點）、遊戲、品飲筆記（`pv_*`）、成就、詞彙（region `provence`）、氣候腳本（北半球 4–10 月）。
+地圖（18 個範圍：Bandol、Coteaux d'Aix、Les Baux、Palette、Coteaux Varois、Pierrevert 用管理員提供的 INAO 地塊 KML，2018 年版；Côtes de Provence 的 KML 缺 4 個村莊，與 KML 沒有的 Cassis、Bellet、Patrimonio、Ajaccio、Vin de Corse、Muscat du Cap Corse 用歐盟資料集的村莊層級範圍，CC0；5 個 Côtes de Provence 補充地理名稱是依村莊篩出的 Côtes de Provence 地塊；其餘 6 個地點仍是示意點；由 `scripts/build-provence-aoc-geojson.py` 產生。公開前要確認 INAO 資料的授權並註明出處）、遊戲、品飲筆記（`pv_*`）、成就、詞彙（region `provence`）、氣候腳本（北半球 4–10 月）。
 
 ## 5. 完成狀態
 - 階段 A–B：資料查證、課程框架、頁面骨架、路由、進度同步、首頁卡片（僅管理員）、en／ja 標題與介面字典；18 課為「內容製作中」空殼。

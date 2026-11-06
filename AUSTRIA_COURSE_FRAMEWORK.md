@@ -56,7 +56,7 @@
 | at-l2-5 | Wiener Gemischter Satz DAC（2013）：必須同園混植混釀、至少 3 個品種、單一品種不超過 50% | 規格數字 |
 | at-l2-6 | Neusiedlersee DAC（Zweigelt 紅酒與甜酒）、Leithaberg（石灰岩、Blaufränkisch、Chardonnay 等）、Ruster Ausbruch | Neusiedlersee 甜酒是否為 DAC；Ausbruch 規定 |
 | at-l2-7 | Steiermark 三個 DAC（Südsteiermark、Vulkanland、Weststeiermark）、Schilcher（Blauer Wildbacher 玫瑰酒） | DAC 年份（約 2018） |
-| at-l3-1 | Sekt Austria Klassik／Reserve／Große Reserve（2015 起）規定與陳年時間 | 三級陳年月數、產區限制 |
+| at-l3-1 | Sekt Austria／Reserve／Grosse Reserve（2015 起，2022 年修訂名稱與 Grosse Reserve 36 個月）規定與陳年時間 | 三級陳年月數、產區限制 |
 | at-l3-3 | Prädikat 糖度下限（KMW 制，與德國 Oechsle 不同） | 各級 KMW 門檻 |
 | at-l3-4 | ÖTW Erste Lage／Große Lage 區域與採用情況 | 涵蓋 DAC、Große Lage 名單範圍 |
 | at-l3-5 | 出口市場（德國為最大）、出口值、生產者數量 | 最新 ÖWM 年度數字 |
@@ -142,7 +142,7 @@
 - 分支 `feat/austria-l3`（從 `feat/austria-l2` 切出）；7 課（`at-l3-1`…`at-l3-7`），L3-7 為 12 題綜合評量（及格 60）；en/ja overlay 與 vite build 通過
 - **重大查證結果：Ausbruch**——依 § 11 Weingesetz（jusline.at），Ausbruch 不是獨立類別；符合 Trockenbeerenauslese 條件且產自 Rust 的酒才可標示 Ruster Ausbruch，其他酒不得使用該詞。這解釋了 Level 2 中各來源門檻不一的原因（已在 L3-3 說明）
 - **Prädikat 法條（§ 11）**：Spätlese 19、Auslese 21、BA 25、TBA 30（揮發酸 ≤2.4 g/L）、Eiswein 25、Strohwein／Schilfwein 25（至少 3 個月風乾；2 個月且達 30 KMW 可提早）；不得加糖或增糖；須 Mostwäger 證明；Spätlese／Auslese 次年 1 月 1 日、其他次年 4 月 1 日前不得申請檢驗號碼
-- **Sekt Austria**：Klassik 9 個月、Reserve 18 個月（傳統法、單一邦）、Grosse Reserve 30 個月（單一酒村、採收三年後上市）；2015 里程碑、2016 年以條例立法、Sekt 委員會 2013 年成立（Starwinelist、WineAlign）。**設計稿原先「15 個月」的猜測已捨棄**
+- **Sekt Austria**：基礎級 9 個月（2022 年前稱 Klassik）、Reserve 18 個月（傳統法、手採、單一邦）、Grosse Reserve 36 個月（2022 年前為 30 個月；單一酒村、採收三年後上市）；2015 里程碑、2016 年以條例立法、Sekt 委員會 2013 年成立（Starwinelist、WineAlign）。**設計稿原先「15 個月」的猜測已捨棄**
 - **永續**：Sustainable Austria 2015 年推出，約 11,925 公頃（27%）、655 酒莊（2025 年 1 月報導）；有機約 25%（2024 年 11 月初步數）
 - **出口（2024）**：6,420 萬公升、2.333 億歐元；德國量 60.2%、值 42.3%；美國 8.5%（金額）升為第二（Statistik Austria 暫定數，ÖWM 新聞）。2025 年數字見 Level 1
 - **刻意不寫**：生產者類型、合作社與價格帶（無可靠官方統計）；Wachau Codex 與 DAC 並存的細節；盲品線索與論述範本屬一般性指引，已標明、不進法規測驗

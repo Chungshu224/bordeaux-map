@@ -671,5 +671,18 @@ export default {
   "📅 年份分佈": "📅 Vintage distribution",
   "📝 筆記": "📝 Notes",
   "📊 品味": "📊 Profile",
-  "載入筆記失敗:": "Failed to load notes:"
+  "載入筆記失敗:": "Failed to load notes:",
+  "🌿 普羅旺斯與科西嘉產區地圖（{n} 個範圍）": "🌿 Provence and Corsica wine map ({n} areas)",
+  "產區範圍（{n}）": "Appellation areas ({n})",
+  "地點標籤（{n}）": "Place markers ({n})",
+  "點擊色塊或圓點查看資訊；重疊時點選最小的範圍。多數範圍是 INAO 地塊（2018 年版，僅供參考）。Côtes de Provence 的地塊資料不完整，Cassis、Bellet 與科西嘉沒有地塊資料，這些都以歐盟資料集的村莊層級範圍（CC0，2021 年前）呈現。Sainte-Victoire 等補充地理名稱是依村莊篩出的概略範圍。Marseille、Coteaux du Cap Corse 與科西嘉的補充名稱仍是示意點。": "Tap a shaded area or marker for details; where areas overlap, the smallest is selected. Most areas are INAO parcels (2018 edition, for reference only). The parcel data is incomplete for Côtes de Provence and missing for Cassis, Bellet and Corsica; these use commune-level areas from the EU dataset (CC0, pre-2021). Additional geographical names such as Sainte-Victoire are approximate, filtered by commune. Marseille, Coteaux du Cap Corse and the Corsican additional names remain indicative points.",
+  "範圍來自 INAO 地塊劃界資料（2018 年版），已簡化，僅供參考，不具法律效力。": "The area comes from INAO parcel delimitation data (2018 edition), simplified and for reference only, with no legal force.",
+  "範圍來自歐盟 PDO 資料集（CC0，2021 年前），是村莊層級的範圍，不是地塊。": "The area comes from the EU PDO dataset (CC0, pre-2021) and is at commune level, not parcel level.",
+  "範圍是依村莊從 Côtes de Provence 的 INAO 地塊（2018 年版）篩出，不是這個名稱自己的劃界，僅供參考。": "The area is filtered by commune from the Côtes de Provence INAO parcels (2018 edition). It is not a delimitation of this name itself and is for reference only.",
+  "產區範圍": "Appellation area",
+  "範圍": "Area",
+  "{c} 個村莊，約 {a} 平方公里": "{c} communes, about {a} km²",
+  "範圍載入失敗: {m}": "Could not load areas: {m}",
+  "法定產區": "Appellation",
+  "補充地理名稱／城鎮": "Additional geographical name / town",
 }

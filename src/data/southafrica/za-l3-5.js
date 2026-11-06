@@ -38,6 +38,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">南非出口的結構性特徵：容量大量走散裝、價值靠瓶裝；這個差異是談價格帶的起點。</p></div>"
   },
   {
+    title: "Diploma 深度：獲利困境、禁酒令與勞工史",
+    highlights: [
+      { id: 1, icon: "📉", title: "葡萄價格追不上成本", content: "VinPro 多次指出葡萄價格未隨通膨上漲，生產成本卻持續上升，許多農戶的淨利率低於永續水準；葡萄園因此競爭不過水果等作物，水資源也被移去種更賺錢的作物" },
+      { id: 2, icon: "🪓", title: "葡萄園面積縮減", content: "葡萄園面積由 2014 年約 99,472 公頃降到 2023 年約 87,848 公頃（約 −12%），拔除多於新植；損失集中在 Northern Cape、Olifants River 與 Swartland（業界報導，年份數字不進測驗）" },
+      { id: 3, icon: "🚫", title: "2020–2021 年禁酒令", content: "COVID 期間政府多次禁止酒類銷售，2020 年 4 月起也一度暫停出口；VinPro 與 WOSA 統計到 2021 年初累計約 14 週國內禁售、5 週出口禁令。對以內銷與現金流為生的小酒莊衝擊最大" },
+      { id: 4, icon: "⛓️", title: "勞工史：dop 制度", content: "過去部分農場以葡萄酒充當工人部分薪資（dop／tot system），造成嚴重的酒精濫用與社會傷害；它在法律上被禁止後仍殘存多年。這段歷史是理解 2007 年轉型憲章與賦權政策的背景" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">南非產業題的核心矛盾：品質與聲譽上升，但葡萄農的獲利與葡萄園面積在下降。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

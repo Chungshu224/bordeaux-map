@@ -30,6 +30,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">論述是「因果鏈」，不是產區清單。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「比較 Willamette Valley 與 Columbia Valley 如何以不同方式達成成熟度與酸度的平衡。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① Willamette：海洋性、年雨約 40 英寸、雨養；涼爽 → 酸度自然保留，挑戰是成熟與年份差異 → Pinot Noir；② Columbia Valley：雨影沙漠，Horse Heaven Hills 年雨約 6.2 英寸，須灌溉；高熱量與日夜溫差 → 成熟穩定又保酸 → Cabernet、Merlot、Syrah；③ 風險：Willamette 秋雨，Columbia 冬季凍害（1996、2003）；④ 結論：一邊「爭取成熟」，一邊「保住酸度」" },
+      { id: 3, icon: "❓", title: "題目二", content: "「評估 2005 年 Granholm v. Heald 判決對美國中小型酒莊的影響。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 背景：禁酒令後的三級制度（生產者、批發商、零售商）；② 判決：州法不得只讓本州酒廠直送而歧視外州酒廠，三級制度本身仍合法；③ 影響：小酒莊可直接賣給外州消費者（酒窖俱樂部、線上），減少對批發商的依賴，Oregon、Washington、New York 等小型生產者受益最大；④ 限制：各州仍可設許可、數量與稅務規定，合規成本高；⑤ 結論：打開了通路，但不是全面自由化" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">比較題的每一點都要同時寫兩個產區；評估題要說出「改變了什麼、沒改變什麼」。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

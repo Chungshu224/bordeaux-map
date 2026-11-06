@@ -146,6 +146,35 @@ const routes = [
     redirect: '/greece'
   },
 
+  // ─── 全球氣泡酒專論（僅管理員、不販售）──────────────────────────────────────────
+  {
+    path: '/sparkling',
+    name: 'Sparkling',
+    component: () => import('../components/sparkling/SparklingPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+  {
+    path: '/sparkling/map',
+    name: 'SparklingMap',
+    component: () => import('../components/sparkling/SparklingMapPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥂 全球氣泡酒地圖 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
+  // ─── 全球強化酒專論（僅管理員、不販售）──────────────────────────────────────────
+  {
+    path: '/fortified',
+    name: 'Fortified',
+    component: () => import('../components/fortified/FortifiedPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥃 全球強化酒專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
+  {
+    path: '/fortified/map',
+    name: 'FortifiedMap',
+    component: () => import('../components/fortified/FortifiedMapPage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🥃 全球強化酒地圖 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
   // ─── 法國隆河葡萄酒課程（框架版，僅管理員可見）──────────────────────────────────
   {
     path: '/rhone',
@@ -197,7 +226,7 @@ const routes = [
     redirect: '/southwest'
   },
 
-  // ─── 普羅旺斯與科西嘉課程（框架版，僅管理員可見）──────────────────────────────────────────
+  // ─── 白蘭地課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/brandy',
     name: 'Brandy',
@@ -208,6 +237,44 @@ const routes = [
   {
     path: '/brandy/course',
     redirect: '/brandy'
+  },
+
+  // ─── Diploma 通論課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/diploma',
+    name: 'Diploma',
+    component: () => import('../components/diploma/DiplomaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'diploma'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🎓 Diploma 通論 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/diploma/course',
+    redirect: '/diploma'
+  },
+
+  // ─── 摩洛哥課程（僅管理員可見）─────────────────────────────
+  {
+    path: '/morocco',
+    name: 'Morocco',
+    component: () => import('../components/morocco/MoroccoPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'morocco'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏜️ 摩洛哥 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/morocco/course',
+    redirect: '/morocco'
+  },
+  // ─── 侍酒師實務課程（框架版，僅管理員可見）──────────────────────────────────────────
+  {
+    path: '/sommelier',
+    name: 'Sommelier',
+    component: () => import('../components/sommelier/SommelierPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'sommelier'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🍷 侍酒師實務 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/sommelier/course',
+    redirect: '/sommelier'
   },
 
   // ─── 普羅旺斯與科西嘉課程（框架版，僅管理員可見）──────────────────────────────────────────
@@ -461,6 +528,9 @@ const COURSE_ACCESS_RULES = {
   Champagne: { courseId: 'champagne', minimumTier: 'free' },
   Southwest: { courseId: 'southwest', minimumTier: 'free' },
   Brandy: { courseId: 'brandy', minimumTier: 'free' },
+  Diploma: { courseId: 'diploma', minimumTier: 'free' },
+  Sommelier: { courseId: 'sommelier', minimumTier: 'free' },
+  Morocco: { courseId: 'morocco', minimumTier: 'free' },
   Provence: { courseId: 'provence', minimumTier: 'free' },
   Canada: { courseId: 'canada', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },

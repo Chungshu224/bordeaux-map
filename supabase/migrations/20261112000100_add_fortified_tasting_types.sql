@@ -1,0 +1,57 @@
+-- 品飲筆記支援全球氣泡酒專論
+-- 擴充 wine_type CHECK，加入強化酒類型 fo_*（source = 'fortified'，產區存 aoc_id）。目前前端筆記只存本機，尚未寫入此資料表。
+-- ⚠ 尚未套用：需在正式環境手動套用後，強化酒品飲筆記才能儲存（未套用時儲存會被 CHECK 拒絕）。
+-- 清單 = 希臘版 + 隆河 + 香檳 + 奧地利 + 南非 + 美國其他產區 + 阿根廷 + 智利 + 朗格多克—魯西永（lg_*）+ 西南產區（sw_*，皆已併入 master）+ 白蘭地（bd_*）+ 普羅旺斯與科西嘉（pv_*）+ 加拿大（can_*）+ 氣泡酒專論（sp_*）+ 強化酒專論（fo_*）。正式資料庫另含 canada 等不在遷移檔內的值，套用前請先比對現有 CHECK。
+-- ⚠ 每一支「重寫 CHECK」的 migration 都會覆蓋前一支：後套用者必須包含所有值，否則既有筆記會違反約束。
+
+ALTER TABLE public.tasting_notes
+  DROP CONSTRAINT IF EXISTS tasting_notes_wine_type_check;
+
+ALTER TABLE public.tasting_notes
+  ADD CONSTRAINT tasting_notes_wine_type_check
+    CHECK (wine_type IS NULL OR wine_type IN (
+      -- 義大利
+      'rosso', 'bianco', 'rosato', 'spumante', 'dolce', 'passito', 'altro',
+      -- 西班牙
+      'tinto', 'blanco', 'rosado', 'cava', 'vino_generoso', 'dulce', 'otro',
+      -- 匈牙利
+      'aszu', 'furmint', 'feher', 'voros', 'bikaver', 'rozsa', 'egyeb',
+      -- 阿爾薩斯
+      'blanc', 'cremant', 'vt', 'sgn', 'rouge', 'eaudevie', 'autre',
+      -- 希臘
+      'gr_white', 'gr_red', 'gr_rose', 'gr_sparkling', 'gr_sweet', 'gr_fortified', 'gr_retsina', 'gr_other',
+      -- 隆河
+      'rh_north_red', 'rh_south_red', 'rh_white', 'rh_rose', 'rh_sweet', 'rh_sparkling', 'rh_other',
+      -- 香檳
+      'ch_nv', 'ch_vintage', 'ch_bdb', 'ch_bdn', 'ch_rose', 'ch_prestige', 'ch_sweet', 'ch_still', 'ch_other',
+      -- 奧地利
+      'at_gv', 'at_riesling', 'at_white', 'at_red_light', 'at_red_full', 'at_rose', 'at_sweet', 'at_sparkling', 'at_other',
+      -- 南非
+      'za_chenin', 'za_sauvignon', 'za_white', 'za_pinotage', 'za_bordeaux', 'za_rhone', 'za_pinot', 'za_sparkling', 'za_sweet', 'za_fortified', 'za_other',
+      -- 美國其他產區
+      'us_pinot', 'us_or_white', 'us_bordeaux', 'us_syrah', 'us_riesling', 'us_white', 'us_east_red', 'us_sparkling', 'us_sweet', 'us_other',
+      -- 阿根廷
+      'ar_malbec_mid', 'ar_malbec_high', 'ar_malbec_north', 'ar_red', 'ar_blend', 'ar_pinot', 'ar_torrontes', 'ar_white', 'ar_sparkling', 'ar_rose', 'ar_other',
+      -- 智利
+      'cl_cab_maipo', 'cl_carmenere', 'cl_red', 'cl_blend', 'cl_oldvine', 'cl_pinot', 'cl_sauvblanc', 'cl_chard', 'cl_white', 'cl_sparkling', 'cl_rose', 'cl_other',
+      -- 朗格多克—魯西永
+      'lg_west_red', 'lg_carignan', 'lg_syrah', 'lg_schist', 'lg_roussillon', 'lg_white', 'lg_rose', 'lg_sparkling', 'lg_muscat', 'lg_vdn_red', 'lg_rancio', 'lg_other',
+      -- 西南產區
+      'sw_bergerac_red', 'sw_cahors', 'sw_tannat', 'sw_local_red', 'sw_dry_white', 'sw_rose', 'sw_sparkling', 'sw_botrytis', 'sw_jurancon', 'sw_armagnac', 'sw_other',
+      -- 白蘭地
+      'bd_cognac', 'bd_armagnac', 'bd_jerez', 'bd_pisco', 'bd_grappa', 'bd_other_brandy', 'bd_other',
+      -- 普羅旺斯與科西嘉
+      'pv_rose', 'pv_white', 'pv_red', 'pv_corsica_red', 'pv_corsica_white', 'pv_muscat', 'pv_other',
+      -- 加拿大
+      'can_ice', 'can_on_white', 'can_on_red', 'can_bc_white', 'can_bc_red', 'can_sparkling', 'can_east', 'can_other',
+      -- 氣泡酒專論
+      'sp_traditional', 'sp_tank', 'sp_transfer', 'sp_ancestral', 'sp_red', 'sp_sweet', 'sp_other',
+      -- 強化酒專論
+      'fo_sherry', 'fo_port', 'fo_madeira', 'fo_vdn', 'fo_rutherglen', 'fo_marsala', 'fo_other'
+    ));
+
+COMMENT ON COLUMN public.tasting_notes.wine_type IS
+  '酒款類型 — 義大利: rosso/bianco/rosato/spumante/dolce/passito/altro；西班牙: tinto/blanco/rosado/cava/vino_generoso/dulce/otro；匈牙利: aszu/furmint/feher/voros/bikaver/rozsa/egyeb；阿爾薩斯: blanc/cremant/vt/sgn/rouge/eaudevie/autre；希臘: gr_white/gr_red/gr_rose/gr_sparkling/gr_sweet/gr_fortified/gr_retsina/gr_other；隆河: rh_north_red/rh_south_red/rh_white/rh_rose/rh_sweet/rh_sparkling/rh_other；香檳: ch_nv/ch_vintage/ch_bdb/ch_bdn/ch_rose/ch_prestige/ch_sweet/ch_still/ch_other；奧地利: at_gv/at_riesling/at_white/at_red_light/at_red_full/at_rose/at_sweet/at_sparkling/at_other；南非: za_chenin/za_sauvignon/za_white/za_pinotage/za_bordeaux/za_rhone/za_pinot/za_sparkling/za_sweet/za_fortified/za_other；美國其他產區: us_pinot/us_or_white/us_bordeaux/us_syrah/us_riesling/us_white/us_east_red/us_sparkling/us_sweet/us_other；阿根廷: ar_malbec_mid/ar_malbec_high/ar_malbec_north/ar_red/ar_blend/ar_pinot/ar_torrontes/ar_white/ar_sparkling/ar_rose/ar_other；智利: cl_cab_maipo/cl_carmenere/cl_red/cl_blend/cl_oldvine/cl_pinot/cl_sauvblanc/cl_chard/cl_white/cl_sparkling/cl_rose/cl_other；朗格多克—魯西永: lg_west_red/lg_carignan/lg_syrah/lg_schist/lg_roussillon/lg_white/lg_rose/lg_sparkling/lg_muscat/lg_vdn_red/lg_rancio/lg_other；西南產區: sw_bergerac_red/sw_cahors/sw_tannat/sw_local_red/sw_dry_white/sw_rose/sw_sparkling/sw_botrytis/sw_jurancon/sw_armagnac/sw_other；白蘭地: bd_cognac/bd_armagnac/bd_jerez/bd_pisco/bd_grappa/bd_other_brandy/bd_other；普羅旺斯與科西嘉: pv_rose/pv_white/pv_red/pv_corsica_red/pv_corsica_white/pv_muscat/pv_other；加拿大: can_ice/can_on_white/can_on_red/can_bc_white/can_bc_red/can_sparkling/can_east/can_other；氣泡酒專論: sp_traditional/sp_tank/sp_transfer/sp_ancestral/sp_red/sp_sweet/sp_other；強化酒專論: fo_sherry/fo_port/fo_madeira/fo_vdn/fo_rutherglen/fo_marsala/fo_other';
+COMMENT ON COLUMN public.tasting_notes.source IS '筆記來源: bordeaux / italy / spain / hungary / alsace / greece / rhone / champagne / austria / southafrica / usother / argentina / chile / languedoc / southwest / brandy / canada / sparkling / fortified（可繼續擴充）';
+
+SELECT pg_notify('pgrst', 'reload schema');

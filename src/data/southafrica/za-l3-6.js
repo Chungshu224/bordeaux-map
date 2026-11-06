@@ -30,6 +30,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">用數字時一定標註年份與來源；不確定的數字寧可用「約」與範圍。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「說明 Swartland 的氣候、土壤與栽培方式如何影響其 Chenin Blanc 的風格與價值。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① 炎熱乾燥、少雨（約 200–500 mm），夜間大西洋降溫；② Malmesbury 頁岩與花崗岩；③ 旱作灌木老藤 → 低產、濃縮、保酸；④ 釀造：整串、野生酵母、舊桶 → 質地；⑤ 價值：從散裝原料到高價單一園，OVP 封條；⑥ 限制：低產成本高、老藤持續流失" },
+      { id: 3, icon: "❓", title: "題目二", content: "「評估南非葡萄酒產業在 1990 年代以來的轉型是否成功。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 成功面：配額廢除（1992）、KWV 私有化（1997）、消費用葡萄酒比例由不到 30% 升至超過 70%、Swartland 新浪潮與國際評價；② 不足面：出口容量六成是散裝、葡萄價格過低、葡萄園面積縮減、捲葉病毒、2020–2021 禁酒令；③ 社會面：dop 制度的遺緒與 2007 年轉型憲章；④ 結論：品質轉型成功，經濟與社會轉型未竟" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">評估題要分面向給判斷：品質、經濟、社會分開打分。</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {

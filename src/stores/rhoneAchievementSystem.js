@@ -13,7 +13,7 @@ const TOTAL_LESSONS = 21
 
 // ── 成就定義 ─────────────────────────────────────────────────
 // 探索類以 PDO id（如 PDO-FR-A0199＝Côte-Rôtie）記錄，與地圖 geojson 的 id 一致；
-// Laudun 沒有獨立邊界，以示意點 id（RH-PT-LAUDUN）計入南隆河 cru。
+// Laudun 的 id 沿用 RH-PT-LAUDUN（已有地塊範圍，保留 id 讓舊進度繼續有效）。
 export const NORTH_CRU_IDS = [
   'PDO-FR-A0199', 'PDO-FR-A0685', 'PDO-FR-A0587', 'PDO-FR-A0200',
   'PDO-FR-A1002', 'PDO-FR-A0389', 'PDO-FR-A0697', 'PDO-FR-A0398'

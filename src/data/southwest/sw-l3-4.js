@@ -48,6 +48,16 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">論述時引用「年份＋規格數字＋來源」最有說服力。</p></div>"
   },
   {
+    title: "簡答題示範：題目與評分要點",
+    highlights: [
+      { id: 1, icon: "❓", title: "題目一", content: "「比較 Jurançon 與 Monbazillac 的甜酒，說明甜度來源與風土的差異。」（建議 250 字內）" },
+      { id: 2, icon: "✅", title: "題目一的評分要點", content: "① Monbazillac：Gardonette 支流的晨霧＋午後晴暖 → 貴腐，分批 tries 手採；經典款至少 45 g/L、SGN 至少 85 g/L；② Jurançon：Petit Manseng 厚皮、貴腐難穿透 → 留樹到 11–12 月，由 foehn 風乾脫水；平均約 15 hL/ha；③ 結果：Monbazillac 帶貴腐的蜂蜜與杏乾，Jurançon 保留高酸與熱帶水果；④ 結論：一個是黴、一個是風" },
+      { id: 3, icon: "❓", title: "題目二", content: "「評估微氧化（MOX）對 Madiran 風格與市場的影響。」（建議 350 字內）" },
+      { id: 4, icon: "✅", title: "題目二的評分要點", content: "① 背景：Tannat 單寧強、傳統上需要長時間陳年；② MOX：1991 年 Ducournau 發明、1996 年獲歐盟批准，在酒精與乳酸發酵之間少量供氧 → 單寧較柔、更早可飲；③ 風險：過度會乾澀、揮發酸與 Brett，酚類少的酒不適合；④ 另一路線：Brumont 等不用 MOX，靠成熟果實與萃取；⑤ 結論：MOX 擴大了市場接受度，但不是唯一的品質路徑" }
+    ],
+    content: "<div class=\"content-overview\"><p class=\"lead-text\">比較甜酒時先問一句：甜度來自黴、風乾，還是加烈？</p></div>"
+  },
+  {
     component: 'QuizSlide',
     componentProps: {
       slide: {
