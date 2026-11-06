@@ -10,6 +10,8 @@ import { createRequire } from 'module'
 import fs from 'fs'
 import { swiLevels, SWI_TOTAL_LESSONS } from '../src/data/switzerland/lessons.js'
 import { SWI_CONTENT } from '../src/data/switzerland/content.js'
+import { SWISS_GAMES } from '../src/data/switzerland/gameData.js'
+import { SWISS_POINTS, SWISS_ZONES } from '../src/data/switzerland/mapData.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -155,6 +157,44 @@ await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
 for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
 await p.waitForTimeout(200)
 check('重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
+// ── 階段 D：地圖與遊戲 ──
+check('地圖點皆屬已定義的產區且座標在瑞士範圍', SWISS_POINTS.every(pt => SWISS_ZONES.some(z => z.key === pt.zone) && pt.lng > 5.8 && pt.lng < 10.6 && pt.lat > 45.7 && pt.lat < 47.9))
+check('地圖點 id 不重複', new Set(SWISS_POINTS.map(x => x.id)).size === SWISS_POINTS.length)
+await p.goto(`${BASE}/switzerland`); await settle(p, 1200)
+check('快速入口（地圖、練習）可點', (await p.locator('.qn-card:disabled').count()) === 0)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(500)
+check(`地圖頁列出 ${SWISS_POINTS.length} 個點`, (await p.locator('.swm-item').count()) === SWISS_POINTS.length)
+await p.locator('.swm-item').nth(3).click(); await p.waitForTimeout(200)
+check('點選地點出現資訊卡', (await p.locator('.swm-card').count()) === 1)
+await p.locator('.swm-chip').nth(0).click(); await p.waitForTimeout(150)
+check('切換產區可隱藏該區的點', (await p.locator('.swm-item').count()) < SWISS_POINTS.length)
+check('地圖頁無橫向溢出', (await overflow(p)) <= 1, String(await overflow(p)))
+await p.locator('.swm-back').click(); await p.waitForTimeout(400)
+await p.locator('.qn-card').nth(1).click(); await p.waitForTimeout(400)
+check(`遊戲樞紐列出 ${SWISS_GAMES.length} 種遊戲`, (await p.locator('.sgh-card').count()) === SWISS_GAMES.length)
+for (let g = 0; g < SWISS_GAMES.length; g++) {
+  await p.locator('.sgh-card').nth(g).click(); await p.waitForTimeout(250)
+  await p.locator('.diff-card').first().click(); await p.waitForTimeout(250)
+  let guard = 0
+  while (!(await p.locator('.final-area').count()) && guard++ < 60) {
+    if (await p.locator('.btn-next').count()) { await p.locator('.btn-next').click() }
+    else if (await p.locator('.btn-submit').count()) {
+      for (let k = 0; k < 6 && (await p.locator('.btn-submit').isDisabled()); k++) await p.locator('.opt-btn:not([disabled])').first().click()
+      await p.locator('.btn-submit').click()
+    } else if (await p.locator('.opt-btn').count()) { await p.locator('.opt-btn').first().click() }
+    await p.waitForTimeout(60)
+  }
+  check(`遊戲「${SWISS_GAMES[g].name}」可玩完`, (await p.locator('.final-area').count()) === 1 && (await overflow(p)) <= 0)
+  await p.locator('.back-btn').first().click(); await p.waitForTimeout(250)
+}
+// 題庫自檢：每款遊戲的題目正解索引在範圍內、選項不重複、排序題項目不重複
+let gameOk = true
+for (const g of SWISS_GAMES) for (const diff of ['easy', 'hard']) for (const q of g.build(diff)) {
+  if (q.type === 'order') { if (!(new Set(q.items).size === q.items.length && q.shuffled.length === q.items.length)) gameOk = false }
+  else if (!(q.correct >= 0 && q.correct < q.options.length && new Set(q.options).size === q.options.length)) { gameOk = false; console.log('  題庫異常：', g.id, q.stem) }
+}
+check('遊戲題庫結構正確', gameOk)
 
 // ── 靜態接線檢查 ──
 const home = fs.readFileSync(new URL('../src/components/PlatformHome.vue', import.meta.url), 'utf8')

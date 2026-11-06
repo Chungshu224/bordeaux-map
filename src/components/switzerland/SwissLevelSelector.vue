@@ -84,6 +84,8 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
+  { key: 'map', desc: '六大產區的示意點與特色' },
+  { key: 'games', desc: '4 種練習・產區、別名、排序、因果' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
