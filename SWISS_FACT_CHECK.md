@@ -59,3 +59,24 @@
 - 數字（面積、公頃、比例、酒廠數、出口比例）一律隨年度變動，**不進測驗**；測驗只問結構性事實（制度、品種身分、地理關係）。
 - ❓ 項目在各階段製作前須以官方來源升級為 ✅，否則只用於「背景」且標明單一來源。
 - Valais Grand Cru 數目與 Lavaux 次產區的數目：課內標明來源不一致。
+
+## G. 階段 B／C 追加查證（Level 2、Level 3）
+**來源**：Swiss Wine Promotion 各區頁（Ticino、Three Lakes、German-speaking、Geneva）、MySwitzerland、Oxford Companion（Jancis Robinson）、swissfinewine.ch、Jancis Robinson（Vin des Glaciers）、Les Vins du Valais、swissinfo／FT（進口與出口）、聯邦農業局（FOAG）2025 酒年報導、Vinetur（2026-10-06）、Viret／Agroscope 英雄式栽培簡報（2026-05）。
+
+| 事實 | 狀態 | 備註 |
+|---|---|---|
+| Ticino 為瑞士唯一阿爾卑斯南側產區；1 個 AOC；Monte Ceneri 分 Sopraceneri／Sottoceneri；Bondola 為傳統紅品種；Merlot Bianco＝紅 Merlot 立即壓榨 | ✅ | swisswine.com、Oxford Companion、MySwitzerland |
+| Merlot 約 120 年前傳入 Ticino | ✅ | swisswine.com 新聞稿（「120 年」）；Wine With Seth 寫 1906 ❓ |
+| Three Lakes：4 個 AOC（Cheyres、Lac de Bienne、Neuchâtel、Vully）；Œil-de-Perdrix（Pinot Noir 淡色粉紅酒）與 Non-Filtré（未過濾 Chasselas）；Neuchâtel 與 Bern 僅准 Pinot Noir 為紅品種 | ✅ | swisswine.com、swissfinewine、vinorandum |
+| Vully 約 150 ha、跨 Fribourg 與 Vaud；Freisamer＝Pinot Gris × Silvaner | ✅ | swisswine.com |
+| Œil-de-Perdrix 首次記載年份（165 年前／1861） | ⚠ | 不出題 |
+| German-speaking：州數 16 州、20 個 AOC（swisswine.com）vs 17 州（MySwitzerland、Oxford）；Pinot Noir 與 Müller-Thurgau 最普遍；Müller-Thurgau 在瑞士仍稱 Riesling-Sylvaner；Bündner Herrschaft＝Fläsch、Maienfeld、Jenins、Malans；Completer 為本地品種 | ✅（州數 ⚠） | 州數不出題 |
+| Geneva：1988 率先 AOC；1 個 AOC＋22 個 Premier Cru；三個次產區（Mandement、Entre Arve et Rhône、Entre Arve et Lac）；Chasselas＝Perlan；Gamay 為第一紅品種；約 120 ha 位於法國免稅區 | ✅ | swisswine.com、MySwitzerland |
+| Vaud：7 AOC＋3 Grand Cru；La Côte、Lavaux、Chablais、Bonvillars、Côtes de l’Orbe、Vully | ✅ | swisswine.com |
+| Lavaux 次產區數（14 村／6 次產區／8 cru） | ⚠ | 不出題 |
+| Valais Grand Cru 數目（10 或 12）、Grand Cru 細則（禁加糖、樹齡、評審團） | ⚠／❓ | 不出題；細則單一來源 |
+| Vin des Glaciers：Val d’Anniviers；落葉松桶；solera 式、桶不倒空；原用 Rèze，後來常混 Ermitage（Marsanne）等 | ✅ | Jancis Robinson、Les Vins du Valais、Wikipedia |
+| Ermitage＝Marsanne、Johannisberg＝Sylvaner、Malvoisie＝Pinot Gris、Heida＝Savagnin（Païen） | ✅ | Les Vins du Valais、Falstaff、Hachette、Germanier |
+| 英雄式栽培：坡度 >30% 或梯田；Valais 石牆約 3,000 km；傳統種植每公頃每年約 1,900 工時（約為可機械化葡萄園的兩倍）；bisses 灌溉渠 | ✅ | Swiss Wine Promotion、Viret／Agroscope 簡報（2026） |
+| 市場：出口約 1%；2024 年進口約 1.61 億公升（主要為義大利、法國、西班牙）；2025 年瑞士酒國內市占 37.5%；WTO 關稅配額 170 百萬公升；2001 年廢止進口權與國產酒銷量掛鉤 | ✅（數字隨年度） | swissinfo／FT、FOAG（2026-04）。**僅作背景、不出題** |
+| 2026-10-06：聯邦放棄把進口配額與採購國產葡萄掛鉤，改考慮配額拍賣（2027 年法規包，諮詢預計 2027-01） | ⚠ | 政策動態，隨時變動；課內標明「2026 年 10 月報導」，不出題 |

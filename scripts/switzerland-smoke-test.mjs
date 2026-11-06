@@ -131,6 +131,31 @@ check('Level 2 八課無「施工中」且有測驗', l2Ok === 8, `${l2Ok}/8`)
 check('Level 2 八課無橫向溢出', l2Over === 0, `${l2Over}`)
 check('Level 2 評量未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
 
+// Level 3：五課皆有內容與測驗，評量 12 題、及格 60
+check('Level 3 五課皆有內容', filled.filter(id => id.startsWith('swi-l3-')).length === 5)
+check('Level 3 評量為 12 題、及格 60', SWI_CONTENT['swi-l3-5'].quiz.length === 12 && SWI_CONTENT['swi-l3-5'].passScore === 60)
+await p.goto(`${BASE}/switzerland`); await settle(p, 800)
+await p.locator('.lc-btn').nth(2).click(); await settle(p, 500)
+let l3Ok = 0, l3Over = 0
+for (let i = 0; i < 5; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l3Ok++
+  if ((await overflow(p)) > 1) l3Over++
+  if (i < 4) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('Level 3 五課無「施工中」且有測驗', l3Ok === 5, `${l3Ok}/5`)
+check('Level 3 五課無橫向溢出', l3Over === 0, `${l3Over}`)
+check('Level 3 評量未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const q3 = SWI_CONTENT['swi-l3-5'].quiz
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth((q3[i].answer + 1) % q3[i].options.length).click()
+await p.waitForTimeout(200)
+check('全錯時仍鎖定', await p.locator('.dtl-primary').isDisabled())
+await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
+await p.waitForTimeout(200)
+check('重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
 // ── 靜態接線檢查 ──
 const home = fs.readFileSync(new URL('../src/components/PlatformHome.vue', import.meta.url), 'utf8')
 check("ADMIN_ONLY_COURSES 含 'switzerland'", /ADMIN_ONLY_COURSES = \[[^\]]*'switzerland'/.test(home))
