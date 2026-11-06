@@ -35,6 +35,7 @@ import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { SWISS_POINTS, SWISS_ZONES, SWISS_BOUNDS } from '../../data/switzerland/mapData.js'
+import { swiExtrasActions } from '../../stores/switzerlandExtrasStore.js'
 
 const emit = defineEmits(['back'])
 const mapContainer = ref(null)
@@ -68,6 +69,7 @@ function toggleZone(k) {
 function select(id) {
   activeId.value = id
   const p = SWISS_POINTS.find(x => x.id === id)
+  if (p) swiExtrasActions.visitZone(p.zone)
   if (p && map) map.flyTo({ center: [p.lng, p.lat], zoom: 9.5, duration: 800 })
 }
 

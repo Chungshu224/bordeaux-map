@@ -32,6 +32,8 @@
       @enter="(n) => emit('enterLevel', n)"
     />
 
+    <SwissAchievements />
+
     <RegionStoryGrid title="為什麼學瑞士？" :items="overviewItems" />
 
     <p class="swih-admin-note">本課程僅供管理員閱讀，不對外販售。</p>
@@ -54,6 +56,7 @@ import {
   CourseHomeLayout, RegionHero, ProgressStrip, QuickNavGrid, LevelTrack, RegionStoryGrid, ProgressModal, getTheme
 } from '../shared/courseHome/index.js'
 import { swiLearningState, swiLevels, swiLevelIds, swiLearningProgress } from '../../stores/switzerlandLearningStore.js'
+import SwissAchievements from './SwissAchievements.vue'
 import { SWI_TOTAL_LESSONS } from '../../data/switzerland/lessons.js'
 
 const emit = defineEmits(['enterLevel', 'openMap', 'openGames', 'openNotebook', 'openAchievements'])
@@ -86,6 +89,7 @@ const heroStats = [
 const quickNavItems = computed(() => [
   { key: 'map', desc: '六大產區的示意點與特色' },
   { key: 'games', desc: '4 種練習・產區、別名、排序、因果' },
+  { key: 'notebook', desc: '論述要點卡與品飲筆記' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
