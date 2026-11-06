@@ -173,6 +173,44 @@
     </div>
   </div>
 
+  <!-- ── 管理員預覽：新產區方案（僅管理員可見，不可購買）──────────────────── -->
+  <div v-if="isAdmin" class="other-section admin-preview">
+    <div class="other-inner">
+      <div class="other-head">
+        <h2>🛠 管理員預覽：新產區方案</h2>
+        <p>以下課程尚未對外開放購買，僅管理員可見；價格讀自 courses 資料表。</p>
+      </div>
+
+      <div class="ap-global">
+        <div class="oc-badge">🌍 全球產區通行證（擴充版）</div>
+        <div class="oc-price-row">
+          <span class="oc-price">NT$ {{ period === 'monthly' ? '690' : '4,990' }}</span>
+          <span class="oc-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
+        </div>
+        <div class="ap-note">價格為佔位（沿用現價），涵蓋範圍：波爾多、布根地、義大利＋下列 {{ previewCourses.length }} 個新產區</div>
+        <div class="ap-chips">
+          <span v-for="c in previewCourses" :key="c.id" class="ap-chip">{{ c.name_zh || c.id }}</span>
+        </div>
+      </div>
+
+      <div v-if="previewLoading" class="ap-note">載入中…</div>
+      <div v-else-if="!previewCourses.length" class="ap-note">沒有讀到新產區課程（請確認 courses 資料表）。</div>
+      <div class="other-grid ap-grid">
+        <div v-for="c in previewCourses" :key="c.id" class="other-card ap-card">
+          <div class="oc-badge">{{ c.id }}</div>
+          <h3 class="oc-title">{{ c.name_zh || c.id }}</h3>
+          <div class="oc-price-row">
+            <span class="oc-price">NT$ {{ formatPrice(period === 'monthly' ? c.price_basic_monthly : c.price_basic_yearly) }}</span>
+            <span class="oc-period">{{ period === 'monthly' ? $t('pricing.billing.perMonth') : $t('pricing.billing.perYear') }}</span>
+          </div>
+          <div class="ap-status" :class="{ on: c.active }">{{ c.active ? '已開放' : '管理員專屬（尚未開放）' }}</div>
+          <p v-if="c.description" class="ap-desc">{{ c.description }}</p>
+          <button class="tier-cta oc-cta" disabled>預覽中，尚未開放購買</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- 功能對比 (表格式) -->
   <div class="compare-section">
     <div class="cs-inner">
@@ -241,15 +279,44 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { authState } from '../stores/authStore.js'
+import { authState, authActions } from '../stores/authStore.js'
 import { getCourseAccess } from '../lib/purchaseService.js'
+import { supabase } from '../lib/supabaseClient.js'
 
 const router = useRouter()
 const { t, tm } = useI18n()
 const authUser = computed(() => authState.user)
+const isAdmin = computed(() => !authState.loading && authActions.isAdmin())
+
+// 管理員預覽：讀取 courses 表中「尚未在方案頁販售」的新產區
+const SOLD_COURSE_IDS = ['bordeaux', 'bourgogne', 'italy', 'global']
+// 永遠不販售、僅供管理員閱讀的課程（不得出現在方案預覽或全球通行證）
+const NOT_FOR_SALE_IDS = ['sparkling', 'fortified', 'd1']
+const previewCourses = ref([])
+const previewLoading = ref(false)
+const formatPrice = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'))
+
+async function loadPreviewCourses() {
+  if (!supabase) return
+  previewLoading.value = true
+  try {
+    const { data, error } = await supabase
+      .from('courses')
+      .select('id, name_zh, description, price_basic_monthly, price_basic_yearly, active')
+      .order('id')
+    if (error) throw error
+    previewCourses.value = (data || []).filter(c => !SOLD_COURSE_IDS.includes(c.id) && !NOT_FOR_SALE_IDS.includes(c.id))
+  } catch (err) {
+    console.error('[Pricing] 無法載入新產區課程:', err)
+  } finally {
+    previewLoading.value = false
+  }
+}
+
+watch(isAdmin, (v) => { if (v) loadPreviewCourses() }, { immediate: true })
 
 // 訂閱狀態
 const userCourseAccess = ref({
@@ -910,4 +977,13 @@ thead .ct-col-highlight { border-top: 2px solid rgba(212,175,55,0.45); }
 .oc-cta { margin-top: 8px; }
 .bourg-cta { background: linear-gradient(135deg, #4a2060, #6b2d8a) !important; }
 .italy-cta  { background: linear-gradient(135deg, #7a2820, #a83828) !important; }
+/* 管理員預覽 */
+.ap-global { border: 1px dashed rgba(212,175,55,.5); border-radius: 16px; padding: 20px; margin-bottom: 24px; background: rgba(212,175,55,.05); }
+.ap-note { color: #9a8878; font-size: .85rem; margin: 6px 0 10px; }
+.ap-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ap-chip { font-size: .78rem; padding: 3px 10px; border-radius: 999px; background: rgba(255,255,255,.07); color: #d8c9b4; }
+.ap-card { border-color: rgba(212,175,55,.25); }
+.ap-status { font-size: .8rem; color: #e0b44a; margin-bottom: 10px; }
+.ap-status.on { color: #7fd69a; }
+.ap-desc { font-size: .82rem; color: #9a8878; line-height: 1.55; margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 </style>
