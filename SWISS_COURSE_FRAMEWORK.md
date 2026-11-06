@@ -23,7 +23,9 @@
 
 ## 4. 互動階段（後續）
 - 階段 A：Level 1 課程內容＋框架核對；B：Level 2；C：Level 3；D：互動（Mapbox 地圖：六大產區／Valais Grand Cru／Lavaux；遊戲：產區配對、本土品種辨識、制度排序）；E：品飲筆記本、成就、詞彙；F：整合、smoke test、en／ja。
-- 完成狀態：設計階段完成（框架＋查證表）；其餘階段待指令。
+- 完成狀態：階段 A–F 皆已完成（內容 18 課、地圖、4 款遊戲、筆記本、成就、整合與 smoke test）。
+- 未套用的資料庫檔案：`20261114000000_add_switzerland_course.sql`、`20261114000100_add_switzerland_glossary.sql`（需手動套用；套用前比對正式 CHECK）。筆記僅存本機，故無品飲筆記 wine_type migration。
+- 未做：en／ja 翻譯（課程僅供管理員、中文），與 fortified／sparkling／D1 相同；尚未合併 master，待「合併」指令。
 
 ## 5. 風險與待決
 - Valais Grand Cru 數目（10 或 12）、Lavaux 次產區計法：來源不一致，課內標明。
