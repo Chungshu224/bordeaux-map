@@ -1,0 +1,211 @@
+#!/usr/bin/env node
+/**
+ * 葡萄酒生產 D1 專論整合測試（階段 A）（Playwright，手機寬度 387px）
+ * 前置：以假的 Supabase 環境變數 build 並啟動 preview：
+ *   VITE_SUPABASE_URL=https://ayyrxnaigvzqktkswhnd.supabase.co VITE_SUPABASE_ANON_KEY=fake npx vite build --outDir /tmp/dist-test
+ *   npx vite preview --outDir /tmp/dist-test --port 4173
+ * 用法：node scripts/d1-smoke-test.mjs [--base=http://localhost:4173]
+ * 檢查：存取控制（未登入／非管理員／管理員）、首頁入口、21 課可開啟且無橫向溢出。
+ */
+import { createRequire } from 'module'
+import fs from 'fs'
+import { d1Levels, D1_TOTAL_LESSONS } from '../src/data/d1/lessons.js'
+import { D1_CONTENT } from '../src/data/d1/content.js'
+import { D1_GAMES } from '../src/data/d1/gameData.js'
+import { CYCLE_STAGES } from '../src/data/d1/cycleData.js'
+const require = createRequire(import.meta.url)
+const { chromium } = require('playwright')
+
+const BASE = (process.argv.find(a => a.startsWith('--base=')) || '--base=http://localhost:4173').split('=')[1]
+const ADMIN_EMAIL = 'chungshu224@gmail.com'
+const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url')
+let failed = 0
+const check = (name, ok, extra = '') => { console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? '  ' + extra : ''}`); if (!ok) failed++ }
+
+async function newCtx(browser, email) {
+  const ctx = await browser.newContext({ viewport: { width: 387, height: 860 }, isMobile: true, hasTouch: true })
+  const cors = { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': '*' }
+  let user = null
+  if (email) {
+    const now = Math.floor(Date.now() / 1000)
+    user = { id: '11111111-1111-1111-1111-111111111111', aud: 'authenticated', role: 'authenticated', email, app_metadata: {}, user_metadata: {}, created_at: new Date().toISOString() }
+    const jwt = b64({ alg: 'HS256', typ: 'JWT' }) + '.' + b64({ sub: user.id, exp: now + 3600, role: 'authenticated' }) + '.s'
+    const session = { access_token: jwt, refresh_token: 'r', token_type: 'bearer', expires_in: 3600, expires_at: now + 3600, user }
+    await ctx.addInitScript(([k, s]) => localStorage.setItem(k, JSON.stringify(s)), ['sb-ayyrxnaigvzqktkswhnd-auth-token', session])
+  }
+  await ctx.route('**/*.supabase.co/**', r => {
+    if (r.request().method() === 'OPTIONS') return r.fulfill({ status: 204, headers: cors })
+    if (r.request().url().includes('/auth/v1/user') && user) return r.fulfill({ status: 200, headers: cors, contentType: 'application/json', body: JSON.stringify(user) })
+    return r.fulfill({ status: 200, headers: cors, contentType: 'application/json', body: '[]' })
+  })
+  await ctx.route('**/api/**', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{}' }))
+  return ctx
+}
+const overflow = p => p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
+const settle = async (p, ms = 1500) => { await p.waitForLoadState('networkidle').catch(() => {}); await p.waitForTimeout(ms) }
+
+const browser = await chromium.launch()
+for (const [label, email] of [['未登入', null], ['非管理員', 'someone@example.com']]) {
+  const ctx = await newCtx(browser, email)
+  const p = await ctx.newPage()
+  await p.goto(`${BASE}/d1`); await settle(p, 2500)
+  check(`${label}進入 /d1 會被導走`, !new URL(p.url()).pathname.startsWith('/d1'), p.url())
+  check(`${label}畫面沒有 D1 內容`, (await p.locator('.dtl, .d1h-admin-note').count()) === 0)
+  await ctx.close()
+}
+const ctx = await newCtx(browser, ADMIN_EMAIL)
+const p = await ctx.newPage()
+const errors = []
+p.on('pageerror', e => errors.push(e.message))
+await p.goto(`${BASE}/`); await settle(p, 2500)
+check('首頁（管理員）有 D1 入口', (await p.locator('a[href="/d1"]').count()) > 0)
+await p.goto(`${BASE}/d1`); await settle(p)
+check('管理員可進入 /d1', new URL(p.url()).pathname === '/d1', p.url())
+check('首頁顯示不販售說明', (await p.locator('.d1h-admin-note').count()) === 1)
+check('課程首頁無橫向溢出', (await overflow(p)) <= 1, String(await overflow(p)))
+check('首頁三個階段卡片', (await p.locator('.lc-btn').count()) === 3, String(await p.locator('.lc-btn').count()))
+check('課表共 21 課', D1_TOTAL_LESSONS === 21, String(D1_TOTAL_LESSONS))
+
+let opened = 0, overflowed = 0
+for (const n of [1, 2, 3]) {
+  await p.goto(`${BASE}/d1`); await settle(p, 800)
+  await p.locator('.lc-btn').nth(n - 1).click(); await settle(p, 500)
+  const ids = d1Levels[`level${n}`].lessons
+  for (let i = 0; i < ids.length; i++) {
+    await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+    if ((await p.locator('.dtl-title').first().textContent()).includes(ids[i].title)) opened++
+    if ((await overflow(p)) > 1) overflowed++
+    await p.locator('.dtl-link').click(); await p.waitForTimeout(150)
+  }
+}
+check('21 課都能開啟', opened === 21, `${opened}/21`)
+check('21 課無橫向溢出', overflowed === 0, `${overflowed}`)
+// 已填內容的課：有測驗、無「施工中」；評量課要通過才能完成
+const filled = Object.keys(D1_CONTENT)
+check('Level 1 七課皆有內容', filled.filter(id => id.startsWith('d1-l1-')).length === 7, String(filled.length))
+await p.goto(`${BASE}/d1`); await settle(p, 800)
+await p.locator('.lc-btn').nth(0).click(); await settle(p, 500)
+let noBadge = 0, withQuiz = 0
+for (let i = 0; i < 7; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0) noBadge++
+  if ((await p.locator('.dq').count()) === 1) withQuiz++
+  if (i < 6) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('七課無「施工中」標記', noBadge === 7, `${noBadge}/7`)
+check('七課都有測驗', withQuiz === 7, `${withQuiz}/7`)
+// 目前在 d1-l1-7（評量）：未答題時完成鈕鎖定
+check('評量課未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const qn = D1_CONTENT['d1-l1-7'].quiz
+for (let i = 0; i < qn.length; i++) {
+  await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(qn[i].answer).click()
+}
+await p.waitForTimeout(200)
+check('全對後完成鈕解鎖', await p.locator('.dtl-primary').isEnabled())
+await p.locator('.dtl-primary').click(); await p.waitForTimeout(300)
+check('完成後該課打勾', (await p.locator('.dtl-lesson.done').count()) >= 1)
+
+// Level 2：八課皆有內容與測驗，且無橫向溢出
+check('Level 2 八課皆有內容', filled.filter(id => id.startsWith('d1-l2-')).length === 8)
+await p.goto(`${BASE}/d1`); await settle(p, 800)
+await p.locator('.lc-btn').nth(1).click(); await settle(p, 500)
+let l2Ok = 0, l2Over = 0
+for (let i = 0; i < 8; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l2Ok++
+  if ((await overflow(p)) > 1) l2Over++
+  await p.locator('.dtl-link').click(); await p.waitForTimeout(100)
+}
+check('Level 2 八課無「施工中」且有測驗', l2Ok === 8, `${l2Ok}/8`)
+check('Level 2 八課無橫向溢出', l2Over === 0, `${l2Over}`)
+
+// Level 3：六課皆有內容與測驗；末課為 12 題評量，需通過才能完成
+check('Level 3 六課皆有內容', filled.filter(id => id.startsWith('d1-l3-')).length === 6)
+check('Level 3 評量為 12 題、及格 60', D1_CONTENT['d1-l3-6'].quiz.length === 12 && D1_CONTENT['d1-l3-6'].passScore === 60)
+await p.goto(`${BASE}/d1`); await settle(p, 800)
+await p.locator('.lc-btn').nth(2).click(); await settle(p, 500)
+let l3Ok = 0, l3Over = 0
+for (let i = 0; i < 6; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l3Ok++
+  if ((await overflow(p)) > 1) l3Over++
+  if (i < 5) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('Level 3 六課無「施工中」且有測驗', l3Ok === 6, `${l3Ok}/6`)
+check('Level 3 六課無橫向溢出', l3Over === 0, `${l3Over}`)
+check('Level 3 評量未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const q3 = D1_CONTENT['d1-l3-6'].quiz
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth((q3[i].answer + 1) % q3[i].options.length).click()
+await p.waitForTimeout(200)
+check('全錯時仍鎖定', await p.locator('.dtl-primary').isDisabled())
+await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
+for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
+await p.waitForTimeout(200)
+check('重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
+// ── 階段 E：週期圖、遊戲、筆記、成就 ──
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+const achTotal = await p.locator('.d1a-item').count()
+check('成就面板 8 項', achTotal === 8, `count=${achTotal}`)
+check('快速入口三項皆可點（無 disabled）', (await p.locator('.qn-card:disabled').count()) === 0)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(400)
+check(`週期圖列出 ${CYCLE_STAGES.length} 個階段`, (await p.locator('.d1c-stage').count()) === CYCLE_STAGES.length)
+for (let i = 0; i < CYCLE_STAGES.length; i++) { await p.locator('.d1c-stage').nth(i).click(); await p.waitForTimeout(80) }
+check('點選階段出現資訊卡', (await p.locator('.d1c-card').count()) === 1)
+check('週期圖無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.d1c-back').click(); await p.waitForTimeout(400)
+// 遊戲
+await p.locator('.qn-card').nth(1).click(); await p.waitForTimeout(400)
+check(`遊戲樞紐列出 ${D1_GAMES.length} 種遊戲`, (await p.locator('.sgh-card').count()) === D1_GAMES.length)
+for (let g = 0; g < D1_GAMES.length; g++) {
+  await p.locator('.sgh-card').nth(g).click(); await p.waitForTimeout(250)
+  await p.locator('.diff-card').first().click(); await p.waitForTimeout(250)
+  let guard = 0
+  while (!(await p.locator('.final-area').count()) && guard++ < 60) {
+    if (await p.locator('.btn-next').count()) { await p.locator('.btn-next').click() }
+    else if (await p.locator('.btn-submit').count()) {
+      for (let k = 0; k < 6 && (await p.locator('.btn-submit').isDisabled()); k++) await p.locator('.opt-btn:not([disabled])').first().click()
+      await p.locator('.btn-submit').click()
+    } else if (await p.locator('.opt-btn').count()) { await p.locator('.opt-btn').first().click() }
+    await p.waitForTimeout(60)
+  }
+  check(`遊戲「${D1_GAMES[g].name}」可玩完`, (await p.locator('.final-area').count()) === 1 && (await overflow(p)) <= 0)
+  await p.locator('.back-btn').first().click(); await p.waitForTimeout(250)
+}
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+// 筆記
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(300)
+check('答題要點卡 5 張', (await p.locator('.d1n-card').count()) === 5)
+await p.locator('.d1n-primary').first().click(); await p.waitForTimeout(150)
+await p.locator('input[type=text]').first().fill('整合測試主題')
+await p.locator('.d1n-primary').click(); await p.waitForTimeout(250)
+check('決策鏈筆記可新增', (await p.locator('.d1n-note').count()) === 1)
+check('筆記頁無橫向溢出', (await overflow(p)) <= 0)
+await p.locator('.d1n-back').click(); await p.waitForTimeout(400)
+await p.evaluate((keys) => keys.forEach(k => localStorage.setItem(k, '500')), D1_GAMES.map(g => g.bestKey))
+await p.goto(`${BASE}/d1`); await settle(p, 1200)
+const unlocked = await p.locator('.d1a-item:not(.locked)').count()
+check('成就依進度解鎖（第一課、走完一年、遊戲全制霸、第一則筆記…）', unlocked >= 4, `unlocked=${unlocked}`)
+
+// ── 階段 F：migrations（僅準備、不套用）與不販售規則 ──
+const mig = (f) => fs.readFileSync(new URL(`../supabase/migrations/${f}`, import.meta.url), 'utf8')
+const courseSql = mig('20261113000000_add_d1_course.sql')
+check('migration：課程列 active=false、show_on_home=false、價格 0', /0, 0,\s*\n\s*0, 0,\s*\n\s*0, 0,/.test(courseSql) && /false,\s*\n\s*false\s*\n\)/.test(courseSql))
+check('migration：課程 id 為 d1', /'d1',/.test(courseSql))
+const gloSql = mig('20261113000100_add_d1_glossary.sql')
+const checkList = gloSql.slice(gloSql.indexOf('CHECK (region IN'), gloSql.indexOf('));'))
+check('glossary CHECK 含既有值 canada／sparkling／fortified 與 d1', ['canada', 'sparkling', 'fortified', 'd1', 'bordeaux', 'newzealand'].every(v => checkList.includes(`'${v}'`)))
+check('glossary seed 無 undefined', !gloSql.includes('undefined'))
+const rowCount = (gloSql.match(/^\('d1',/gm) || []).length
+check('glossary seed 至少 40 筆', rowCount >= 40, String(rowCount))
+const home = fs.readFileSync(new URL('../src/components/PlatformHome.vue', import.meta.url), 'utf8')
+check("ADMIN_ONLY_COURSES 含 'd1'", /ADMIN_ONLY_COURSES = \[[^\]]*'d1'/.test(home))
+const router = fs.readFileSync(new URL('../src/router/index.js', import.meta.url), 'utf8')
+check('/d1 路由為 requiresAdmin', /path: '\/d1',[\s\S]{0,300}requiresAdmin: true/.test(router))
+
+check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
+await browser.close()
+console.log(failed ? `\n${failed} 項失敗` : '\n全部通過')
+process.exit(failed ? 1 : 0)

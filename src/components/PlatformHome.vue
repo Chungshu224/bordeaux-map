@@ -19,6 +19,7 @@
             <router-link v-if="isAdmin" to="/admin" class="btn-nav admin-nav-btn">{{ $t('home.nav.adminLink') }}</router-link>
             <router-link v-if="isAdmin" to="/sparkling" class="btn-nav admin-nav-btn">🥂 氣泡酒專論</router-link>
             <router-link v-if="isAdmin" to="/fortified" class="btn-nav admin-nav-btn">🥃 強化酒專論</router-link>
+            <router-link v-if="isAdmin" to="/d1" class="btn-nav admin-nav-btn">🍇 D1 生產專論</router-link>
             <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
@@ -54,6 +55,7 @@
           <router-link v-if="isAdmin" to="/admin" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.adminLink') }}</router-link>
           <router-link v-if="isAdmin" to="/sparkling" class="nmd-item" @click="showMobileMenu = false">🥂 氣泡酒專論</router-link>
           <router-link v-if="isAdmin" to="/fortified" class="nmd-item" @click="showMobileMenu = false">🥃 強化酒專論</router-link>
+          <router-link v-if="isAdmin" to="/d1" class="nmd-item" @click="showMobileMenu = false">🍇 D1 生產專論</router-link>
           <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
@@ -1868,7 +1870,7 @@ const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain
 const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified', 'd1']
 
 
 async function loadCourseData() {
