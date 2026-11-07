@@ -34,6 +34,8 @@
 
     <RegionStoryGrid title="D2 怎麼考？" :items="overviewItems" />
 
+    <D2Achievements />
+
     <p class="d2h-admin-note">本課程僅供管理員閱讀，不對外販售。</p>
 
     <ProgressModal
@@ -55,6 +57,7 @@ import {
 } from '../shared/courseHome/index.js'
 import { d2LearningState, d2Levels, d2LevelIds, d2LearningProgress } from '../../stores/d2LearningStore.js'
 import { D2_TOTAL_LESSONS } from '../../data/d2/lessons.js'
+import D2Achievements from './D2Achievements.vue'
 
 const emit = defineEmits(['enterLevel', 'openGames', 'openNotebook', 'openPrice'])
 const theme = getTheme('d2')
@@ -86,11 +89,13 @@ const heroStats = [
 const quickNavItems = computed(() => [
   { key: 'price', icon: '💹', title: '價格鏈試算', desc: '示意數字，觀察加價如何堆疊' },
   { key: 'games', desc: '4 種練習・供需、企業、排序、情境' },
+  { key: 'notebook', desc: '答題要點卡與企業決策筆記' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
   if (key === 'price') emit('openPrice')
   else if (key === 'games') emit('openGames')
+  else if (key === 'notebook') emit('openNotebook')
   else if (key === 'progress') showProgressModal.value = true
 }
 

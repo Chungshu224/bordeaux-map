@@ -1,0 +1,115 @@
+-- ============================================================
+-- wine_glossary：新增葡萄酒商業（d2）專論並 seed 基礎詞條
+-- 第三語欄位 de 沿用既有欄位；D2 專論以英文術語放入（沒有各國原文）。只需放寬 region CHECK。
+-- ⚠ 尚未套用。region CHECK 清單 = 希臘版 + 'rhone' + 'champagne' + 'austria' + 'southafrica' + 'usother' + 'argentina' + 'chile' + 'languedoc' + 'southwest' + 'brandy' + 'provence' + 'canada' + 'sparkling' + 'fortified' + 'd1' + 'switzerland' + 'd2'；
+--   後套用者須包含所有值，否則會讓其他課程的既有詞條違反約束。套用前請先比對正式資料庫現有 CHECK。
+-- 詞條內容皆取自課程 Level 1–3 已查證項目（不含數字、稅率與市占）。
+-- ============================================================
+
+ALTER TABLE public.wine_glossary
+  DROP CONSTRAINT IF EXISTS wine_glossary_region_check;
+
+ALTER TABLE public.wine_glossary
+  ADD CONSTRAINT wine_glossary_region_check
+  CHECK (region IN (
+    'bordeaux','bourgogne','italy',
+    'spain','portugal','germany','hungary','greece','rhone','champagne','austria','southafrica','usother','argentina','chile','languedoc','southwest','brandy','provence','canada','sparkling','fortified','d1','switzerland','d2',
+    'loire','california','australia','newzealand'
+  ));
+
+INSERT INTO public.wine_glossary (region, zh, en, de, definition, category) VALUES
+('d2','供給','supply','supply',
+ '市場上可供銷售的酒的數量，受生產與法規等因素限制。','general'),
+('d2','需求','demand','demand',
+ '消費者願意並有能力購買的量，受社會、經濟與政治因素影響。','general'),
+('d2','感知價值','perceived value','perceived value',
+ '消費者主觀認為這瓶酒值多少，常由品牌、產區與評價塑造。','general'),
+('d2','供過於求','oversupply','oversupply',
+ '供給大於需求，價格往下。','general'),
+('d2','供不應求','undersupply','undersupply',
+ '供給小於需求，價格往上。','general'),
+('d2','產量上限','yield limit','yield limit',
+ '產區規定的單位面積產量上限，目的是維持品質並限制供給。','general'),
+('d2','種植權','planting rights','planting rights',
+ '部分產區對新增種植面積的許可或限制。','general'),
+('d2','單位成本','unit cost','unit cost',
+ '每瓶（或每公升）酒平均分攤到的成本。','general'),
+('d2','規模經濟','economies of scale','economies of scale',
+ '產量愈大，每單位平均成本愈低的效果。','general'),
+('d2','固定成本','fixed cost','fixed cost',
+ '不隨產量改變的成本，如設備。','general'),
+('d2','變動成本','variable cost','variable cost',
+ '隨產量改變的成本，如瓶與塞。','general'),
+('d2','關稅','tariff','tariff',
+ '進口時對外國商品課徵的稅，使進口品相對變貴。','general'),
+('d2','補貼','subsidy','subsidy',
+ '政府給予生產者的財務支持，降低其成本。','general'),
+('d2','匯率風險','exchange rate risk','exchange rate risk',
+ '匯率波動使以外幣計價的成本或收入不確定。','general'),
+('d2','避險','hedging','hedging',
+ '用金融工具鎖定未來匯率，降低波動帶來的風險。','general'),
+('d2','標示法規','labelling laws','labelling laws',
+ '各國對酒標內容、語言與格式的規定。','general'),
+('d2','酒莊','estate','estate',
+ '擁有葡萄園並自行釀造、裝瓶、銷售的生產者。','general'),
+('d2','種植者','grower','grower',
+ '只種植葡萄、將葡萄出售給其他企業的農戶。','general'),
+('d2','種植兼釀酒者','grower-producer','grower-producer',
+ '自己種葡萄並釀酒銷售，常為家族式經營。','general'),
+('d2','酒商','merchant (négociant)','merchant (négociant)',
+ '買入葡萄或酒，混調後以自有品牌銷售的企業。','general'),
+('d2','合作社','co-operative','co-operative',
+ '由種植者共有，集中釀造與銷售並分享收益的組織。','general'),
+('d2','代工設施','custom crush facility','custom crush facility',
+ '提供設備讓客戶釀造或租用的設施。','general'),
+('d2','虛擬釀酒者','virtual winery','virtual winery',
+ '不擁有葡萄園與酒廠、專注品牌與銷售的釀酒者，多見於北美。','general'),
+('d2','集團','conglomerate','conglomerate',
+ '整合多品牌或多環節的大型企業。','general'),
+('d2','掌控度','degree of control','degree of control',
+ '企業對品質、風格與品牌可控制的程度。','general'),
+('d2','輕資產','asset-light','asset-light',
+ '不持有大量土地與設備、以彈性與品牌為主的模式。','general'),
+('d2','混調','blending','blending',
+ '把不同來源或批次的酒調配成一致風格的過程。','general'),
+('d2','進口商','importer','importer',
+ '負責把外國酒帶進本國市場，處理法規、稅務與物流。','general'),
+('d2','經銷商','distributor','distributor',
+ '把酒分配給零售與餐飲客戶的中間商。','general'),
+('d2','國營專賣','state monopoly','state monopoly',
+ '由政府企業主導酒類零售（或批發）的制度。','general'),
+('d2','三級制度','three-tier system','three-tier system',
+ '生產者、經銷商、零售商分屬不同層級、不可混合的制度。','general'),
+('d2','零售','off-trade','off-trade',
+ '買了帶走、在別處飲用的銷售場所，如超市與酒店。','general'),
+('d2','餐飲','on-trade (HoReCa)','on-trade (HoReCa)',
+ '餐廳、酒吧、旅館等現場飲用的場所。','general'),
+('d2','酒單','wine list','wine list',
+ '餐飲場所提供的酒款清單，是選品與推薦的關鍵。','general'),
+('d2','加成','mark-up','mark-up',
+ '在成本之上加上的比例，用來支付營運成本與利潤。','general'),
+('d2','直接面對消費者','direct-to-consumer (DTC)','direct-to-consumer (DTC)',
+ '生產者不經中間商，直接賣給消費者。','general'),
+('d2','期酒','en primeur','en primeur',
+ '酒仍在桶中時預售，交貨在稍後。','general'),
+('d2','拍賣','auction','auction',
+ '由拍賣行轉售稀有或陳年酒的二手通路。','general'),
+('d2','區隔','segmentation','segmentation',
+ '把市場依共同特徵切成不同群體。','general'),
+('d2','目標消費者','target consumer','target consumer',
+ '最可能購買、最值得投入資源的群體。','general'),
+('d2','定位','positioning','positioning',
+ '產品在消費者心中相對於競爭者的位置。','general'),
+('d2','行銷組合','marketing mix','marketing mix',
+ '用來執行策略的一組要素，如產品、價格、通路、推廣與人。','general'),
+('d2','行銷目標','marketing objective','marketing objective',
+ '具體且可衡量的行銷結果，例如銷量或知名度。','general'),
+('d2','監控','monitoring','monitoring',
+ '追蹤行銷成果並與目標比較。','general'),
+('d2','集體行銷','collective marketing','collective marketing',
+ '多個生產者透過貿易組織或產區協會共同推廣產區或品類。','general'),
+('d2','指令動詞','command word','command word',
+ '題目中指示作答方式的動詞，如 explain、evaluate。','general')
+ON CONFLICT (region, zh) DO NOTHING;
+
+SELECT pg_notify('pgrst', 'reload schema');

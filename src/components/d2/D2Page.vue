@@ -6,9 +6,11 @@
       @enterLevel="goToLevel"
       @openPrice="view = 'price'"
       @openGames="view = 'games'"
+      @openNotebook="view = 'notebook'"
     />
     <D2PriceChainPage v-else-if="view === 'price'" @back="view = 'selector'" />
     <D2GameHubPage v-else-if="view === 'games'" @back="view = 'selector'" />
+    <D2NotebookPage v-else-if="view === 'notebook'" @back="view = 'selector'" />
     <D2LessonList v-else @back="leaveCourse" />
   </div>
 </template>
@@ -19,9 +21,10 @@ import D2LevelSelector from './D2LevelSelector.vue'
 import D2LessonList from './D2LessonList.vue'
 import D2PriceChainPage from './D2PriceChainPage.vue'
 import D2GameHubPage from './D2GameHubPage.vue'
+import D2NotebookPage from './D2NotebookPage.vue'
 import { d2LearningActions } from '../../stores/d2LearningStore.js'
 
-const view = ref('selector') // 'selector' | 'price' | 'games' | 'course'
+const view = ref('selector') // 'selector' | 'price' | 'games' | 'notebook' | 'course'
 
 function goToLevel(n) {
   d2LearningActions.setLevel(n)

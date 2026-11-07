@@ -191,6 +191,39 @@ for (const g of D2_GAMES) for (const diff of ['easy', 'hard']) for (const q of g
 }
 check('遊戲題庫結構正確', gameOk)
 
+// ── 階段 E：筆記本與成就 ──
+await p.goto(`${BASE}/d2`); await settle(p, 1200)
+check('首頁顯示成就區（9 項）', (await p.locator('.d2a-item').count()) === 9)
+const unlockedBefore = await p.locator('.d2a-item:not(.locked)').count()
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(400)
+check('筆記本頁有 8 張答題要點卡', (await p.locator('.d2n-card').count()) === 8)
+await p.locator('.d2n-primary').first().click(); await p.waitForTimeout(200)
+check('主題為空時無法儲存', await p.locator('.d2n-primary').isDisabled())
+await p.locator('.d2n-main input[type=text]').fill('小型酒莊是否採用 DTC')
+await p.locator('.d2n-main textarea').first().fill('提高利潤，客群穩定')
+await p.locator('.d2n-primary').click(); await p.waitForTimeout(250)
+check('儲存後筆記出現在列表', (await p.locator('.d2n-note').count()) === 1 && (await p.locator('.d2n-note').first().innerText()).includes('客群'))
+check('筆記本頁無橫向溢出', (await overflow(p)) <= 1)
+await p.reload(); await settle(p, 1200)
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(300)
+check('重新整理後筆記仍在', (await p.locator('.d2n-note').count()) === 1)
+await p.locator('.d2n-back').click(); await p.waitForTimeout(300)
+check('寫筆記與試算後解鎖成就', (await p.locator('.d2a-item:not(.locked)').count()) > unlockedBefore)
+await p.locator('.qn-card').nth(2).click(); await p.waitForTimeout(300)
+await p.locator('.d2n-del').first().click(); await p.waitForTimeout(200)
+check('刪除筆記後列表為空', (await p.locator('.d2n-note').count()) === 0)
+await p.locator('.d2n-back').click(); await p.waitForTimeout(300)
+const mig = (f) => fs.readFileSync(new URL(`../supabase/migrations/${f}`, import.meta.url), 'utf8')
+const courseSql = mig('20261115000000_add_d2_course.sql')
+check('migration：課程列 active=false、show_on_home=false、價格 0、id 為 d2', /0, 0,\s*\n\s*0, 0,\s*\n\s*0, 0,/.test(courseSql) && /false,\s*\n\s*false\s*\n\)/.test(courseSql) && /'d2',/.test(courseSql))
+const gloSql = mig('20261115000100_add_d2_glossary.sql')
+const checkList = gloSql.slice(gloSql.indexOf('CHECK (region IN'), gloSql.indexOf('));'))
+check('glossary CHECK 含全部既有值與 d2', ['canada', 'sparkling', 'fortified', 'd1', 'switzerland', 'd2', 'bordeaux', 'newzealand', 'brandy', 'provence'].every(v => checkList.includes(`'${v}'`)))
+check('glossary seed 無 undefined', !gloSql.includes('undefined'))
+const rowCount = (gloSql.match(/^\('d2',/gm) || []).length
+check('glossary seed 至少 40 筆', rowCount >= 40, String(rowCount))
+check('glossary 不含稅率或市占數字', !/\d+\s*%/.test(gloSql.split('INSERT INTO')[1]))
+
 // 題庫自檢：選項不重複、答案索引在範圍內、不含數字型市場資料
 let quizOk = true
 for (const [id, c] of Object.entries(D2_CONTENT)) for (const q of c.quiz || []) {
