@@ -183,6 +183,14 @@ const routes = [
     meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🍇 葡萄酒生產 D1 專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
   },
 
+  // ─── 葡萄酒商業 D2 專論（僅管理員、不販售）─────────────────────────────────────
+  {
+    path: '/d2',
+    name: 'D2',
+    component: () => import('../components/d2/D2Page.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '💼 葡萄酒商業 D2 專論 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
   // ─── 瑞士葡萄酒課程（僅管理員、不販售）─────────────────────────────────────────
   {
     path: '/switzerland',
