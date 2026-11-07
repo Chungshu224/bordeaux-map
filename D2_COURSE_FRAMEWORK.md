@@ -84,4 +84,7 @@
 - F：整合、migrations（不套用）、smoke test；en／ja 不做（與 D1 相同）
 
 ## 9. 完成狀態
-設計階段完成（框架＋查證表）；階段 A–F 待指令。
+階段 A–F 皆已完成：18 課內容、價格鏈試算、4 款遊戲、筆記本（8 張答題要點卡）、成就（9 項）、詞彙 seed（46 筆）與整合測試。
+- 未套用的資料庫檔案：`20261115000000_add_d2_course.sql`、`20261115000100_add_d2_glossary.sql`（需手動套用；套用前比對正式 CHECK）。筆記僅存本機，故無品飲筆記 wine_type migration。
+- 待確認（見 `D2_FACT_CHECK.md` §8）：最新 Specification 措辭、5Ps 具體五項、企業類型數量與分類、是否閉卷。
+- 未做：en／ja 翻譯（課程僅供管理員、中文），與 D1、fortified、sparkling 相同；尚未合併 master。
