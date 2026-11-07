@@ -102,6 +102,31 @@ check('全對後完成鈕解鎖', await p.locator('.dtl-primary').isEnabled())
 await p.locator('.dtl-primary').click(); await p.waitForTimeout(300)
 check('完成後該課打勾', (await p.locator('.dtl-lesson.done').count()) >= 1)
 
+// Level 2：七課皆有內容與測驗；末課為 10 題評量，需通過才能完成
+check('Level 2 七課皆有內容', filled.filter(id => id.startsWith('d2-l2-')).length === 7)
+check('Level 2 評量為 10 題、及格 60', D2_CONTENT['d2-l2-7'].quiz.length === 10 && D2_CONTENT['d2-l2-7'].passScore === 60)
+await p.goto(`${BASE}/d2`); await settle(p, 800)
+await p.locator('.lc-btn').nth(1).click(); await settle(p, 500)
+let l2Ok = 0, l2Over = 0
+for (let i = 0; i < 7; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l2Ok++
+  if ((await overflow(p)) > 1) l2Over++
+  if (i < 6) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('Level 2 七課無「施工中」且有測驗', l2Ok === 7, `${l2Ok}/7`)
+check('Level 2 七課無橫向溢出', l2Over === 0, `${l2Over}`)
+check('Level 2 評量未通過時完成鈕鎖定', await p.locator('.dtl-primary').isDisabled())
+const q2 = D2_CONTENT['d2-l2-7'].quiz
+for (let i = 0; i < q2.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth((q2[i].answer + 1) % q2[i].options.length).click()
+await p.waitForTimeout(200)
+check('Level 2 全錯時仍鎖定', await p.locator('.dtl-primary').isDisabled())
+await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
+for (let i = 0; i < q2.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q2[i].answer).click()
+await p.waitForTimeout(200)
+check('Level 2 重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
 // 題庫自檢：選項不重複、答案索引在範圍內、不含數字型市場資料
 let quizOk = true
 for (const [id, c] of Object.entries(D2_CONTENT)) for (const q of c.quiz || []) {
