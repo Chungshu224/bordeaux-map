@@ -2,9 +2,10 @@
   <div class="swi-game-hub">
     <SharedGameHub
       v-if="!game"
-      title="瑞士互動練習"
-      subtitle="產區配對、品種別名、歷史與因果排序、因果配對——選擇遊戲開始！"
-      :games="SWISS_GAMES"
+      :title="gt('瑞士互動練習')"
+      :subtitle="gt('產區配對、品種別名、歷史與因果排序、因果配對——選擇遊戲開始！')"
+      :games="games"
+      :tip="gt('建議先完成課程學習再來練習，效果更好！鍵盤 1–4 可快速選擇選項。')"
       @back="$emit('back')"
       @select="currentGame = $event"
     >
@@ -23,6 +24,7 @@
       v-else
       :key="game.id"
       :best-key="game.bestKey"
+      :t="gt"
       :title="game.name"
       :subtitle="game.subtitle"
       :icon="game.icon"
@@ -39,11 +41,18 @@ import { ref, computed } from 'vue'
 import SharedGameHub from '../shared/GameHub.vue'
 import SparklingQuizEngine from '../sparkling/games/SparklingQuizEngine.vue'
 import { SWISS_GAMES } from '../../data/switzerland/gameData.js'
+import { gt, gtDeep } from '../../locales/swissUi/index.js'
 
 defineEmits(['back'])
 
 const currentGame = ref(null)
-const game = computed(() => SWISS_GAMES.find(g => g.id === currentGame.value) || null)
+// 題庫維持中文原文；選單文字依語言轉換，題目在開局（build）時再轉換，正解索引不受影響
+const games = computed(() => SWISS_GAMES.map(g => gtDeep(g)))
+const game = computed(() => {
+  const g = games.value.find(x => x.id === currentGame.value)
+  const src = SWISS_GAMES.find(x => x.id === currentGame.value)
+  return g && src ? { ...g, build: (diff) => gtDeep(src.build(diff, gt)) } : null
+})
 
 function readBest(key) {
   try { return parseInt(localStorage.getItem(key) || '0') } catch { return 0 }
@@ -54,8 +63,8 @@ const stats = computed(() => {
   if (currentGame.value) return []
   const bests = SWISS_GAMES.map(g => readBest(g.bestKey))
   return [
-    { icon: '🎮', value: `${bests.filter(Boolean).length} / ${SWISS_GAMES.length}`, label: '已挑戰遊戲' },
-    { icon: '🏅', value: Math.max(0, ...bests), label: '單項最高分' }
+    { icon: '🎮', value: `${bests.filter(Boolean).length} / ${SWISS_GAMES.length}`, label: gt('已挑戰遊戲') },
+    { icon: '🏅', value: Math.max(0, ...bests), label: gt('單項最高分') }
   ]
 })
 </script>

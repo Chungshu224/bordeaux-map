@@ -1,7 +1,7 @@
 <template>
   <div class="dtl">
     <header class="dtl-head">
-      <button class="dtl-btn" @click="emit('back')">← 返回課程首頁</button>
+      <button class="dtl-btn" @click="emit('back')">{{ gt('← 返回課程首頁') }}</button>
       <div class="dtl-tabs">
         <button v-for="n in [1, 2, 3]" :key="n" :class="['dtl-tab', { active: level === n }]" @click="swiLearningActions.setLevel(n)">L{{ n }}</button>
       </div>
@@ -9,61 +9,61 @@
     </header>
 
     <main v-if="!lesson" class="dtl-main">
-      <h1 class="dtl-title">{{ levelData.title }}</h1>
-      <p class="dtl-desc">{{ levelData.description }}</p>
+      <h1 class="dtl-title">{{ gt(levelData.title) }}</h1>
+      <p class="dtl-desc">{{ gt(levelData.description) }}</p>
 
       <section v-for="m in levelData.modules" :key="m.id" class="dtl-module">
-        <h2>{{ m.title }}</h2>
+        <h2>{{ gt(m.title) }}</h2>
         <button v-for="id in m.lessonIds" :key="id" class="dtl-lesson"
           :class="{ done: done.includes(id) }" @click="swiLearningActions.startLesson(id)">
           <span class="dtl-mark">{{ done.includes(id) ? '✓' : '○' }}</span>
           <span class="dtl-info">
-            <span class="dtl-name">{{ lessonById(id).title }}</span>
-            <span class="dtl-sub">{{ lessonById(id).description }}</span>
+            <span class="dtl-name">{{ gt(lessonById(id).title) }}</span>
+            <span class="dtl-sub">{{ gt(lessonById(id).description) }}</span>
           </span>
-          <span class="dtl-min">{{ lessonById(id).duration }} 分</span>
+          <span class="dtl-min">{{ gt('{n} 分鐘', { n: lessonById(id).duration }) }}</span>
         </button>
       </section>
     </main>
 
     <main v-else class="dtl-main">
-      <button class="dtl-link" @click="swiLearningActions.exitLesson()">← 返回課程列表</button>
-      <p v-if="!content" class="dtl-badge">施工中・內容待填入</p>
-      <h1 class="dtl-title">{{ lesson.title }}</h1>
-      <p class="dtl-desc">{{ lesson.description }}（約 {{ lesson.duration }} 分鐘）</p>
+      <button class="dtl-link" @click="swiLearningActions.exitLesson()">{{ gt('← 返回課程列表') }}</button>
+      <p v-if="!content" class="dtl-badge">{{ gt('施工中・內容待填入') }}</p>
+      <h1 class="dtl-title">{{ gt(lesson.title) }}</h1>
+      <p class="dtl-desc">{{ gt(lesson.description) }}{{ gt('（約 {n} 分鐘）', { n: lesson.duration }) }}</p>
 
       <section class="dtl-box">
-        <h3>本課考點</h3>
-        <ul><li v-for="k in lesson.keyPoints" :key="k">{{ k }}</li></ul>
+        <h3>{{ gt('本課考點') }}</h3>
+        <ul><li v-for="k in lesson.keyPoints" :key="k">{{ gt(k) }}</li></ul>
       </section>
 
       <template v-if="content">
-        <SlideBlocks :blocks="content.blocks" />
+        <SlideBlocks :blocks="blocks" />
         <section v-if="content.terms && content.terms.length" class="dtl-box">
-          <h3>本課詞彙</h3>
+          <h3>{{ gt('本課詞彙') }}</h3>
           <dl class="dtl-terms">
             <template v-for="t in content.terms" :key="t.term">
-              <dt>{{ t.term }}</dt>
-              <dd>{{ t.def }}</dd>
+              <dt>{{ gt(t.term) }}</dt>
+              <dd>{{ gt(t.def) }}</dd>
             </template>
           </dl>
         </section>
         <section v-if="content.practice" class="dtl-box">
-          <h3>練習題（簡答）</h3>
-          <p class="dtl-practice">{{ content.practice.prompt }}</p>
+          <h3>{{ gt('練習題（簡答）') }}</h3>
+          <p class="dtl-practice">{{ gt(content.practice.prompt) }}</p>
           <details class="dtl-points">
-            <summary>看評分重點</summary>
-            <ul><li v-for="pt in content.practice.points" :key="pt">{{ pt }}</li></ul>
+            <summary>{{ gt('看評分重點') }}</summary>
+            <ul><li v-for="pt in content.practice.points" :key="pt">{{ gt(pt) }}</li></ul>
           </details>
         </section>
-        <SwissQuiz v-if="content.quiz" :key="lesson.id" :questions="content.quiz" :pass-score="content.passScore || 0" @result="quizResult = $event" />
+        <SwissQuiz v-if="content.quiz" :key="lesson.id" :questions="quizQuestions" :pass-score="content.passScore || 0" @result="quizResult = $event" />
       </template>
-      <p v-else class="dtl-note">課程內容將在後續階段 依框架文件（SWISS_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。</p>
+      <p v-else class="dtl-note">{{ gt('課程內容將在後續階段 依框架文件（SWISS_COURSE_FRAMEWORK.md）填入；各項規定與數字須先查證才會寫入。') }}</p>
 
       <div class="dtl-actions">
-        <button v-if="!done.includes(lesson.id)" class="dtl-primary" :disabled="!canComplete" @click="complete">{{ canComplete ? '標記為已完成' : `需達 ${content.passScore} 分才能完成` }}</button>
-        <button v-else class="dtl-btn" @click="swiLearningActions.uncompleteLesson(lesson.id)">取消完成標記</button>
-        <button class="dtl-btn" @click="swiLearningActions.exitLesson()">返回列表</button>
+        <button v-if="!done.includes(lesson.id)" class="dtl-primary" :disabled="!canComplete" @click="complete">{{ canComplete ? gt('標記為已完成') : gt('需達 {n} 分才能完成', { n: content.passScore }) }}</button>
+        <button v-else class="dtl-btn" @click="swiLearningActions.uncompleteLesson(lesson.id)">{{ gt('取消完成標記') }}</button>
+        <button class="dtl-btn" @click="swiLearningActions.exitLesson()">{{ gt('返回列表') }}</button>
       </div>
     </main>
   </div>
@@ -73,6 +73,7 @@
 import { computed, ref, watch } from 'vue'
 import SlideBlocks from '../SlideBlocks.vue'
 import SwissQuiz from './SwissQuiz.vue'
+import { gt, gtDeep } from '../../locales/swissUi/index.js'
 import { SWI_CONTENT } from '../../data/switzerland/content.js'
 import { swiLearningState, swiLevels, swiLearningActions, swiLearningProgress } from '../../stores/switzerlandLearningStore.js'
 
@@ -84,6 +85,9 @@ const lessonById = (id) => levelData.value.lessons.find(l => l.id === id)
 const lesson = computed(() => swiLearningState.currentLessonId ? lessonById(swiLearningState.currentLessonId) || null : null)
 
 const content = computed(() => (lesson.value ? SWI_CONTENT[lesson.value.id] || null : null))
+// 課文與測驗維持中文原文，依目前語言在顯示時轉換（answer 索引不變）
+const blocks = computed(() => gtDeep(content.value?.blocks || []))
+const quizQuestions = computed(() => gtDeep(content.value?.quiz || []))
 const quizResult = ref(null)
 watch(() => lesson.value?.id, () => { quizResult.value = null })
 // 有及格門檻的評量課要通過才能標記完成

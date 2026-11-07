@@ -570,34 +570,34 @@
             <div class="card-hero">
               <div class="card-icon">🏔️</div>
               <div class="card-region">Valais · Vaud · Geneva · Three Lakes · Ticino</div>
-              <h3 class="card-title">瑞士葡萄酒</h3>
-              <p class="card-desc">阿爾卑斯山下的陡坡與湖畔：六大產區、Chasselas 與地方別名、州級 AOC 與 Grand Cru，延伸 WSET D3 以外的視野。</p>
+              <h3 class="card-title">{{ $t('home.courses.switzerland.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.switzerland.desc') }}</p>
             </div>
             <div class="course-preview-strip switzerland-strip">
               <div class="cp-stat">
                 <span class="cp-num">6</span>
-                <span class="cp-label">主要<br>產區</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s1label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">AOC</span>
-                <span class="cp-label">州級<br>制度</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s2label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">18</span>
-                <span class="cp-label">系統<br>課程</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s3label')"></span>
               </div>
               <div class="cp-divider"></div>
               <div class="cp-stat">
                 <span class="cp-num">4</span>
-                <span class="cp-label">互動<br>遊戲</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s4label')"></span>
               </div>
             </div>
             <div class="course-preview-features switzerland-features">
-              <span class="cpf-item switzerland-tag">互動地圖</span>
-              <span class="cpf-item switzerland-tag">品種與別名</span>
-              <span class="cpf-item switzerland-tag">論述筆記本</span>
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f1') }}</span>
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f2') }}</span>
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f3') }}</span>
             </div>
             <div class="card-enter-cta">
               <button v-if="isAdmin || courseStatuses.switzerland" class="btn-enter-course" @click="router.push('/switzerland')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
@@ -1882,7 +1882,7 @@ const courseConfig = computed(() => [
   { id: 'germany',    label: t('home.courses.labels.germany'), route: '/germany',          group: 'europe'   },
   { id: 'portugal',   label: t('home.courses.labels.portugal'), route: '/portugal',         group: 'europe'   },
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
-  { id: 'switzerland', label: '瑞士', route: '/switzerland', group: 'europe' },
+  { id: 'switzerland', label: t('home.courses.labels.switzerland'), route: '/switzerland', group: 'europe' },
   { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },

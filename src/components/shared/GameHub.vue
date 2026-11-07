@@ -39,7 +39,7 @@
     <slot name="footer">
       <div class="sgh-tip">
         <span class="sgh-tip-icon">💡</span>
-        <span>建議先完成課程學習再來練習，效果更好！鍵盤 1–4 可快速選擇選項。</span>
+        <span>{{ tip || '建議先完成課程學習再來練習，效果更好！鍵盤 1–4 可快速選擇選項。' }}</span>
       </div>
     </slot>
 
@@ -50,7 +50,8 @@
 defineProps({
   title:    { type: String, required: true },
   subtitle: { type: String, default: '' },
-  games:    { type: Array,  required: true }
+  games:    { type: Array,  required: true },
+  tip:      { type: String, default: '' } // 頁腳提示；空字串時使用預設中文
 })
 const emit = defineEmits(['back', 'select'])
 </script>
