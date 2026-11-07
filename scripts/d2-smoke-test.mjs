@@ -11,6 +11,7 @@ import { createRequire } from 'module'
 import fs from 'fs'
 import { d2Levels, D2_TOTAL_LESSONS } from '../src/data/d2/lessons.js'
 import { D2_CONTENT } from '../src/data/d2/content.js'
+import { D2_GAMES } from '../src/data/d2/gameData.js'
 const require = createRequire(import.meta.url)
 const { chromium } = require('playwright')
 
@@ -151,6 +152,44 @@ await p.locator('.dq-retry').click(); await p.waitForTimeout(200)
 for (let i = 0; i < q3.length; i++) await p.locator('.dq-q').nth(i).locator('.dq-opt').nth(q3[i].answer).click()
 await p.waitForTimeout(200)
 check('Level 3 重做全對後解鎖', await p.locator('.dtl-primary').isEnabled())
+
+// ── 階段 D：價格鏈試算與遊戲 ──
+await p.goto(`${BASE}/d2`); await settle(p, 1200)
+check('快速入口可點（無 disabled）', (await p.locator('.qn-card:disabled').count()) === 0)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(400)
+const finalText = async () => (await p.locator('.d2p-final').innerText())
+const f1 = await finalText()
+check('價格鏈試算頁顯示終端價與「示意」警語', f1.includes('終端價') && (await p.locator('.d2p-note').innerText()).includes('示意'))
+await p.locator('.d2p-stage input[type=range]').first().fill('40'); await p.waitForTimeout(150)
+check('調高加成後終端價改變', (await finalText()) !== f1)
+const nStagesLong = await p.locator('.d2p-stage').count()
+await p.locator('.d2p-pill').nth(1).click(); await p.waitForTimeout(200)
+check('切換成直銷後階段數減少', (await p.locator('.d2p-stage').count()) < nStagesLong, `${nStagesLong} → ${await p.locator('.d2p-stage').count()}`)
+check('價格鏈頁無橫向溢出', (await overflow(p)) <= 1)
+await p.locator('.d2p-back').click(); await p.waitForTimeout(400)
+await p.locator('.qn-card').nth(1).click(); await p.waitForTimeout(400)
+check(`遊戲樞紐列出 ${D2_GAMES.length} 種遊戲`, (await p.locator('.sgh-card').count()) === D2_GAMES.length)
+for (let g = 0; g < D2_GAMES.length; g++) {
+  await p.locator('.sgh-card').nth(g).click(); await p.waitForTimeout(250)
+  await p.locator('.diff-card').first().click(); await p.waitForTimeout(250)
+  let guard = 0
+  while (!(await p.locator('.final-area').count()) && guard++ < 60) {
+    if (await p.locator('.btn-next').count()) { await p.locator('.btn-next').click() }
+    else if (await p.locator('.btn-submit').count()) {
+      for (let k = 0; k < 6 && (await p.locator('.btn-submit').isDisabled()); k++) await p.locator('.opt-btn:not([disabled])').first().click()
+      await p.locator('.btn-submit').click()
+    } else if (await p.locator('.opt-btn').count()) { await p.locator('.opt-btn').first().click() }
+    await p.waitForTimeout(60)
+  }
+  check(`遊戲「${D2_GAMES[g].name}」可玩完`, (await p.locator('.final-area').count()) === 1 && (await overflow(p)) <= 0)
+  await p.locator('.back-btn').first().click(); await p.waitForTimeout(250)
+}
+let gameOk = true
+for (const g of D2_GAMES) for (const diff of ['easy', 'hard']) for (const q of g.build(diff)) {
+  if (q.type === 'order') { if (!(new Set(q.items).size === q.items.length && q.shuffled.length === q.items.length)) gameOk = false }
+  else if (!(q.correct >= 0 && q.correct < q.options.length && new Set(q.options).size === q.options.length)) { gameOk = false; console.log('  題庫異常：', g.id, q.stem) }
+}
+check('遊戲題庫結構正確', gameOk)
 
 // 題庫自檢：選項不重複、答案索引在範圍內、不含數字型市場資料
 let quizOk = true

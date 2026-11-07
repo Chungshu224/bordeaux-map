@@ -84,10 +84,14 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
+  { key: 'price', icon: '💹', title: '價格鏈試算', desc: '示意數字，觀察加價如何堆疊' },
+  { key: 'games', desc: '4 種練習・供需、企業、排序、情境' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {
-  if (key === 'progress') showProgressModal.value = true
+  if (key === 'price') emit('openPrice')
+  else if (key === 'games') emit('openGames')
+  else if (key === 'progress') showProgressModal.value = true
 }
 
 const levelData = computed(() => [
