@@ -1,11 +1,11 @@
 <template>
   <section class="swia">
-    <h2 class="swia-title">🏅 成就（{{ unlockedCount }} / {{ list.length }}）</h2>
+    <h2 class="swia-title">{{ gt('🏅 成就（{a} / {b}）', { a: unlockedCount, b: list.length }) }}</h2>
     <div class="swia-grid">
       <div v-for="a in list" :key="a.id" class="swia-item" :class="{ locked: !a.unlocked }">
         <span class="swia-icon">{{ a.unlocked ? a.icon : '🔒' }}</span>
-        <span class="swia-name">{{ a.title }}</span>
-        <span class="swia-desc">{{ a.desc }}</span>
+        <span class="swia-name">{{ gt(a.title) }}</span>
+        <span class="swia-desc">{{ gt(a.desc) }}</span>
       </div>
     </div>
   </section>
@@ -14,6 +14,7 @@
 <script setup>
 import { computed } from 'vue'
 import { swiAchievements } from '../../stores/switzerlandAchievementSystem.js'
+import { gt } from '../../locales/swissUi/index.js'
 const list = computed(() => swiAchievements.value)
 const unlockedCount = computed(() => list.value.filter(a => a.unlocked).length)
 </script>

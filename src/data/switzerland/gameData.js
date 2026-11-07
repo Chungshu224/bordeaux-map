@@ -12,6 +12,9 @@ export function shuffle(arr) {
   return a
 }
 
+// 介面翻譯函式由呼叫端傳入（見 SwissGameHubPage）；未傳入時原樣輸出中文，維持本檔不依賴 i18n
+const plain = (s, p) => (p ? s.replace(/\{(\w+)\}/g, (m, k) => (p[k] != null ? p[k] : m)) : s)
+
 const mc = (stem, answer, distractors, extra = {}) => {
   const options = shuffle([answer, ...distractors])
   return { stem, options, correct: options.indexOf(answer), ...extra }
@@ -39,8 +42,8 @@ const REGION_Q = [
   ['La Côte：Lausanne 與 Geneva 之間的緩坡產區', 'Vaud', 'La Côte 屬 Vaud。'],
   ['Chablais：日內瓦湖東端、隆河右岸', 'Vaud', 'Chablais 屬 Vaud。']
 ]
-function buildRegion(diff) {
-  const qs = REGION_Q.map(([f, a, e]) => mc(`「${f}」屬於哪個產區？`, a, others(REGIONS, a), { tag: '產區', hint: '想一下它的地理位置與特色。', explain: e }))
+function buildRegion(diff, t = plain) {
+  const qs = REGION_Q.map(([f, a, e]) => mc(t('「{f}」屬於哪個產區？', { f: t(f) }), a, others(REGIONS, a), { tag: t('產區'), hint: t('想一下它的地理位置與特色。'), explain: e }))
   return take(qs, diff === 'hard' ? 14 : 8)
 }
 
@@ -60,8 +63,8 @@ const ALIAS = [
   ['Gamaret 與 Garanoir 的親緣來源', 'Gamay', '兩者是 Gamay 的雜交品種。'],
   ['Dôle 的主要品種之一（另一為 Gamay）', 'Pinot Noir', 'Dôle 以 Pinot Noir 與 Gamay 為主。']
 ]
-function buildAlias(diff) {
-  const qs = ALIAS.map(([n, a, e]) => mc(`「${n}」指的是哪個品種？`, a, others(VARIETIES, a), { tag: '品種', hint: '還原成品種名稱。', explain: e }))
+function buildAlias(diff, t = plain) {
+  const qs = ALIAS.map(([n, a, e]) => mc(t('「{n}」指的是哪個品種？', { n: t(n) }), a, others(VARIETIES, a), { tag: t('品種'), hint: t('還原成品種名稱。'), explain: e }))
   return take(qs, diff === 'hard' ? 12 : 8)
 }
 
@@ -75,9 +78,9 @@ const ORDERS = [
   { stem: '排出 Diploma 評估題的答題骨架', items: ['描述現況', '說明原因', '評估利弊', '結論與依據'], explain: '先描述，再解釋，最後評估並下結論。' },
   { stem: '排出州級制度的層次（由聯邦到產地）', items: ['聯邦訂基本框架', '各州制定 AOC 細則', '州內再訂 Grand Cru／Premier Cru'], explain: '聯邦框架 → 州 AOC → 州內分級。' }
 ]
-function buildOrder(diff) {
+function buildOrder(diff, t = plain) {
   const pool = diff === 'hard' ? ORDERS : ORDERS.filter(o => o.items.length <= 5)
-  return take(pool, diff === 'hard' ? 7 : 5).map(o => order(o.stem, o.items, o.explain, { tag: '排序' }))
+  return take(pool, diff === 'hard' ? 7 : 5).map(o => order(o.stem, o.items, o.explain, { tag: t('排序') }))
 }
 
 // ─────────────── 因果配對 ───────────────
@@ -95,8 +98,8 @@ const CAUSE = [
   ['Neuchâtel 與 Bern 僅准 Pinot Noir 為紅品種', '紅酒與 Œil-de-Perdrix 都以 Pinot Noir 為主', '州級品種規定。']
 ]
 const EFFECTS = CAUSE.map(c => c[1])
-function buildCause(diff) {
-  const qs = CAUSE.map(([c, a, e]) => mc(`「${c}」最直接的效應是？`, a, others(EFFECTS, a), { tag: '因果', hint: '用「因子 → 影響 → 風格或成本」的順序想。', explain: e }))
+function buildCause(diff, t = plain) {
+  const qs = CAUSE.map(([c, a, e]) => mc(t('「{c}」最直接的效應是？', { c: t(c) }), a, others(EFFECTS, a), { tag: t('因果'), hint: t('用「因子 → 影響 → 風格或成本」的順序想。'), explain: e }))
   return take(qs, diff === 'hard' ? 11 : 8)
 }
 
@@ -138,3 +141,6 @@ export const SWISS_GAMES = [
     }
   }
 ]
+
+// 供翻譯檢查腳本抽取題庫原文用（不影響遊戲邏輯）
+export const SWISS_GAME_SOURCE = { REGIONS, REGION_Q, VARIETIES, ALIAS, ORDERS, CAUSE }

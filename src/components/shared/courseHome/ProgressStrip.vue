@@ -17,13 +17,13 @@
       </div>
       <div class="ps-chips">
         <div v-if="achievementCount != null" class="ps-chip" @click="$emit('openAchievements')">
-          <span>🏆</span><span>{{ achievementCount }} 成就</span>
+          <span>🏆</span><span>{{ achievementCount }} {{ achievementUnit }}</span>
         </div>
         <div v-if="streak != null" class="ps-chip">
-          <span>🔥</span><span>{{ streak }} 天</span>
+          <span>🔥</span><span>{{ streak }} {{ streakUnit }}</span>
         </div>
         <div class="ps-chip ps-chip-stat" @click="$emit('openProgress')">
-          <span>📊</span><span>{{ completedCount }}/{{ totalCount }} 課</span>
+          <span>📊</span><span>{{ completedCount }}/{{ totalCount }} {{ lessonUnit }}</span>
         </div>
       </div>
     </div>
@@ -43,7 +43,11 @@ defineProps({
   totalCount: { type: Number, default: 0 },
   achievementCount: { type: Number, default: null },
   streak: { type: Number, default: null },
-  ctaText: { type: String, default: '' }
+  ctaText: { type: String, default: '' },
+  // 單位文字（預設中文；其他語言的課程可自行傳入翻譯）
+  achievementUnit: { type: String, default: '成就' },
+  streakUnit: { type: String, default: '天' },
+  lessonUnit: { type: String, default: '課' }
 })
 defineEmits(['cta', 'openAchievements', 'openProgress'])
 </script>

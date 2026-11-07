@@ -1,6 +1,6 @@
 <template>
   <section class="dq">
-    <h3 class="dq-title">小測驗（{{ questions.length }} 題）</h3>
+    <h3 class="dq-title">{{ gt('小測驗（{n} 題）', { n: questions.length }) }}</h3>
     <div v-for="(item, qi) in questions" :key="qi" class="dq-q">
       <p class="dq-text">{{ qi + 1 }}. {{ item.q }}</p>
       <button v-for="(opt, oi) in item.options" :key="oi" type="button" class="dq-opt"
@@ -8,19 +8,20 @@
         {{ opt }}
       </button>
       <p v-if="picked[qi] !== undefined" class="dq-explain">
-        <b>{{ picked[qi] === item.answer ? '答對了。' : '再想想。' }}</b>{{ item.explain }}
+        <b>{{ picked[qi] === item.answer ? gt('答對了。') : gt('再想想。') }}</b>{{ item.explain }}
       </p>
     </div>
     <div v-if="finished" class="dq-result" :class="{ pass: passed }">
-      得分 {{ score }} 分（{{ correct }}/{{ questions.length }}）
-      <span v-if="passScore">・{{ passed ? '通過' : `未達 ${passScore} 分` }}</span>
-      <button type="button" class="dq-retry" @click="reset">重做</button>
+      {{ gt('得分 {s} 分（{c}/{t}）', { s: score, c: correct, t: questions.length }) }}
+      <span v-if="passScore">・{{ passed ? gt('通過') : gt('未達 {n} 分', { n: passScore }) }}</span>
+      <button type="button" class="dq-retry" @click="reset">{{ gt('重做') }}</button>
     </div>
   </section>
 </template>
 
 <script setup>
 import { computed, reactive, watch } from 'vue'
+import { gt } from '../../locales/swissUi/index.js'
 
 const props = defineProps({
   questions: { type: Array, required: true },

@@ -14,12 +14,12 @@
             <div class="diff-desc">{{ difficulties[d].desc }}</div>
             <ul class="diff-list">
               <li v-for="(l, i) in difficulties[d].list" :key="i">{{ l }}</li>
-              <li>⏱ 每題 {{ difficulties[d].seconds }} 秒</li>
-              <li>共 {{ difficulties[d].count }} 題</li>
+              <li>{{ t('⏱ 每題 {n} 秒', { n: difficulties[d].seconds }) }}</li>
+              <li>{{ t('共 {n} 題', { n: difficulties[d].count }) }}</li>
             </ul>
           </button>
         </div>
-        <div class="best-line">🏅 最高分 {{ best }}</div>
+        <div class="best-line">{{ t('🏅 最高分 {n}', { n: best }) }}</div>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
       <div class="top-bar">
         <div class="progress-row">
           <span class="q-num">{{ currentIdx + 1 }} / {{ questions.length }}</span>
-          <span class="score-live">{{ score }} 分</span>
+          <span class="score-live">{{ t('{n} 分', { n: score }) }}</span>
         </div>
         <div class="timer-track">
           <div class="timer-fill" :style="{ width: timerPct + '%', background: timerColor }"
@@ -38,7 +38,7 @@
 
       <div class="streak-row">
         <transition name="streak-pop">
-          <div v-if="streak >= 3" class="streak-badge" :key="streak">🔥 {{ streak }} 連勝！× {{ comboMult }}</div>
+          <div v-if="streak >= 3" class="streak-badge" :key="streak">{{ t('🔥 {n} 連勝！× {m}', { n: streak, m: comboMult }) }}</div>
         </transition>
       </div>
 
@@ -49,9 +49,9 @@
             <div class="q-stem">{{ currentQ?.stem }}</div>
             <div v-if="currentQ?.hint" class="q-hint">{{ currentQ.hint }}</div>
             <div v-if="phase === 'feedback'" class="feedback-row">
-              <span v-if="lastCorrect" class="fb-correct">✓ 正確！</span>
-              <span v-else-if="lastTimeout" class="fb-timeout">⏰ 時間到</span>
-              <span v-else class="fb-wrong">✗ 答錯</span>
+              <span v-if="lastCorrect" class="fb-correct">{{ t('✓ 正確！') }}</span>
+              <span v-else-if="lastTimeout" class="fb-timeout">{{ t('⏰ 時間到') }}</span>
+              <span v-else class="fb-wrong">{{ t('✗ 答錯') }}</span>
               <span class="fb-explain">{{ currentQ?.explain }}</span>
             </div>
           </div>
@@ -67,7 +67,7 @@
           </li>
         </ol>
         <template v-else>
-          <ol class="order-slots" :aria-label="`已排 ${picked.length} / ${currentQ.items.length}`">
+          <ol class="order-slots" :aria-label="t('已排 {a} / {b}', { a: picked.length, b: currentQ.items.length })">
             <li v-for="(item, i) in picked" :key="item">
               <button type="button" class="order-chip" @click="unpick(i)">
                 <span class="order-num">{{ i + 1 }}</span>
@@ -75,7 +75,7 @@
                 <span class="order-x" aria-hidden="true">×</span>
               </button>
             </li>
-            <li v-if="!picked.length" class="order-empty">依序點選下方步驟</li>
+            <li v-if="!picked.length" class="order-empty">{{ t('依序點選下方步驟') }}</li>
           </ol>
           <div class="options-grid">
             <button v-for="(item, oi) in currentQ.shuffled" :key="item" type="button" class="opt-btn"
@@ -85,9 +85,9 @@
             </button>
           </div>
           <button type="button" class="btn-submit" :disabled="picked.length < currentQ.items.length" @click="submitOrder">
-            送出順序
+            {{ t('送出順序') }}
           </button>
-          <div class="key-hints">鍵盤 1–{{ currentQ.shuffled.length > 9 ? 9 : currentQ.shuffled.length }} 點選・Backspace 復原・Enter 送出</div>
+          <div class="key-hints">{{ t('鍵盤 1–{n} 點選・Backspace 復原・Enter 送出', { n: currentQ.shuffled.length > 9 ? 9 : currentQ.shuffled.length }) }}</div>
         </template>
       </template>
 
@@ -105,27 +105,27 @@
             <span class="opt-text">{{ opt }}</span>
           </button>
         </div>
-        <div v-if="phase === 'playing'" class="key-hints">鍵盤 1–{{ currentQ?.options?.length || 4 }} 可快速作答</div>
+        <div v-if="phase === 'playing'" class="key-hints">{{ t('鍵盤 1–{n} 可快速作答', { n: currentQ?.options?.length || 4 }) }}</div>
       </template>
 
-      <button v-if="phase === 'feedback'" type="button" class="btn-next" @click="nextQuestion">下一題 →</button>
+      <button v-if="phase === 'feedback'" type="button" class="btn-next" @click="nextQuestion">{{ t('下一題 →') }}</button>
     </div>
 
     <!-- FINAL -->
     <div v-else-if="phase === 'final'" class="final-area">
       <div class="final-card">
         <div class="result-icon">{{ resultEmoji }}</div>
-        <h2>遊戲結束</h2>
+        <h2>{{ t('遊戲結束') }}</h2>
         <div class="final-score">{{ score }}</div>
-        <div class="final-score-label">總分{{ isNewBest ? '・新紀錄！' : '' }}</div>
+        <div class="final-score-label">{{ t('總分') }}{{ isNewBest ? t('・新紀錄！') : '' }}</div>
         <div class="final-stats">
-          <div class="chip">{{ correctCount }}/{{ questions.length }} 答對</div>
-          <div class="chip">正確率 {{ Math.round(correctCount / questions.length * 100) }}%</div>
-          <div class="chip">最高連勝 {{ maxStreak }}</div>
+          <div class="chip">{{ t('{a}/{b} 答對', { a: correctCount, b: questions.length }) }}</div>
+          <div class="chip">{{ t('正確率 {n}%', { n: Math.round(correctCount / questions.length * 100) }) }}</div>
+          <div class="chip">{{ t('最高連勝 {n}', { n: maxStreak }) }}</div>
           <div class="chip">{{ difficulties[difficulty].icon }} {{ difficulties[difficulty].name }}</div>
         </div>
         <div v-if="wrongItems.length" class="review-box">
-          <div class="review-title">📝 錯題回顧</div>
+          <div class="review-title">{{ t('📝 錯題回顧') }}</div>
           <div v-for="(w, i) in wrongItems" :key="i" class="review-row">
             <div class="review-q">{{ w.stem }}</div>
             <div class="review-a">✓ {{ w.type === 'order' ? w.items.join(' → ') : w.options[w.correct] }}</div>
@@ -133,7 +133,7 @@
           </div>
         </div>
         <div class="final-actions">
-          <button class="btn-retry" @click="backToLobby">再玩一次</button>
+          <button class="btn-retry" @click="backToLobby">{{ t('再玩一次') }}</button>
         </div>
       </div>
     </div>
@@ -155,7 +155,9 @@ const props = defineProps({
   icon: { type: String, default: '🎮' },
   accent: { type: String, default: '#B8902A' },
   difficulties: { type: Object, required: true }, // { easy: {name,icon,desc,list[],seconds,count}, hard: {...} }
-  build: { type: Function, required: true }       // (difficulty) => questions[]
+  build: { type: Function, required: true },     // (difficulty) => questions[]
+  // 介面文字翻譯函式（可帶 {name} 變數）；未傳入時原樣顯示中文，其他課程不受影響
+  t: { type: Function, default: (s, p) => (p ? s.replace(/\{(\w+)\}/g, (m, k) => (p[k] != null ? p[k] : m)) : s) }
 })
 const emit = defineEmits(['back'])
 

@@ -21,7 +21,6 @@
             <router-link v-if="isAdmin" to="/fortified" class="btn-nav admin-nav-btn">🥃 強化酒專論</router-link>
             <router-link v-if="isAdmin" to="/d1" class="btn-nav admin-nav-btn">🍇 D1 生產專論</router-link>
             <router-link v-if="isAdmin" to="/d2" class="btn-nav admin-nav-btn">💼 D2 商業專論</router-link>
-            <router-link v-if="isAdmin" to="/switzerland" class="btn-nav admin-nav-btn">🏔️ 瑞士葡萄酒</router-link>
             <router-link :to="entryCoursePath" class="btn-nav primary">{{ $t('home.nav.enterCourse') }}</router-link>
             <router-link to="/dashboard" class="btn-nav">{{ $t('home.nav.myOrders') }}</router-link>
             <button class="btn-nav ghost" @click="handleLogout">{{ $t('home.nav.logout') }}</button>
@@ -59,7 +58,6 @@
           <router-link v-if="isAdmin" to="/fortified" class="nmd-item" @click="showMobileMenu = false">🥃 強化酒專論</router-link>
           <router-link v-if="isAdmin" to="/d1" class="nmd-item" @click="showMobileMenu = false">🍇 D1 生產專論</router-link>
           <router-link v-if="isAdmin" to="/d2" class="nmd-item" @click="showMobileMenu = false">💼 D2 商業專論</router-link>
-          <router-link v-if="isAdmin" to="/switzerland" class="nmd-item" @click="showMobileMenu = false">🏔️ 瑞士葡萄酒</router-link>
           <router-link :to="entryCoursePath" class="nmd-item nmd-primary" @click="showMobileMenu = false">{{ $t('home.nav.enterCourseMobile') }}</router-link>
           <router-link to="/dashboard" class="nmd-item" @click="showMobileMenu = false">{{ $t('home.nav.myOrdersMobile') }}</router-link>
           <button class="nmd-item nmd-logout" @click="showMobileMenu = false; handleLogout()">{{ $t('home.nav.logoutMobile') }}</button>
@@ -563,6 +561,49 @@
             </div>
           </div>
 
+
+          <!-- ── Switzerland（目前僅管理員可見；日後開放時：從 ADMIN_ONLY_COURSES 移除，並在 courses 設 active／show_on_home）── -->
+          <div v-if="courseShowHome['switzerland'] || isAdmin" class="course-card switzerland">
+            <div :class="['card-status', courseStatuses.switzerland ? 'active' : 'planning']">
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.switzerland ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🏔️</div>
+              <div class="card-region">Valais · Vaud · Geneva · Three Lakes · Ticino</div>
+              <h3 class="card-title">{{ $t('home.courses.switzerland.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.switzerland.desc') }}</p>
+            </div>
+            <div class="course-preview-strip switzerland-strip">
+              <div class="cp-stat">
+                <span class="cp-num">6</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">AOC</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">18</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">4</span>
+                <span class="cp-label" v-html="$t('home.courses.switzerland.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features switzerland-features">
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f1') }}</span>
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f2') }}</span>
+              <span class="cpf-item switzerland-tag">{{ $t('home.courses.switzerland.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="isAdmin || courseStatuses.switzerland" class="btn-enter-course" @click="router.push('/switzerland')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+            </div>
+          </div>
 
           <!-- ── Greece（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card greece">
@@ -1841,6 +1882,7 @@ const courseConfig = computed(() => [
   { id: 'germany',    label: t('home.courses.labels.germany'), route: '/germany',          group: 'europe'   },
   { id: 'portugal',   label: t('home.courses.labels.portugal'), route: '/portugal',         group: 'europe'   },
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
+  { id: 'switzerland', label: t('home.courses.labels.switzerland'), route: '/switzerland', group: 'europe' },
   { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },
@@ -1869,9 +1911,9 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, switzerland: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, switzerland: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
 const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified', 'd1', 'd2', 'switzerland']
@@ -1905,7 +1947,7 @@ const visibleCourses = computed(() =>
 // 實際上架數量（不含管理員 override，用於顯示數字）
 const groupHasCourse = (ids) => isAdmin.value || ids.some(id => courseShowHome.value[id])
 const showFrance   = computed(() => groupHasCourse(['bordeaux', 'bourgogne', 'loire']))
-const showOldWorld = computed(() => groupHasCourse(['italy', 'spain', 'germany', 'portugal', 'hungary']))
+const showOldWorld = computed(() => groupHasCourse(['italy', 'spain', 'germany', 'portugal', 'hungary', 'switzerland']))
 const showNewWorld = computed(() => groupHasCourse(['australia', 'newzealand', 'california']))
 // 特色標籤：統一移除字串開頭的勾號，由 CSS 加上單一勾號
 const ck = (str) => String(str).replace(/^[\s✔✓]+/, '')
@@ -2831,6 +2873,11 @@ onMounted(async () => {
   box-shadow: 0 4px 20px rgba(123,26,26,0.45);
 }
 .california-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(231,76,60,0.6); }
+.switzerland-strip { background: rgba(179,32,46,0.07); border-color: rgba(179,32,46,0.22); }
+.switzerland-strip .cp-num { color: #B3202E; font-size: 0.9rem; }
+.switzerland-strip .cp-label { color: #7d1621; }
+.switzerland-strip .cp-divider { background: rgba(179,32,46,0.25); }
+.switzerland-features .switzerland-tag { color: #B3202E; background: rgba(179,32,46,0.06); border-color: rgba(179,32,46,0.18); }
 .hungary-btn {
   background: linear-gradient(135deg, #2e7d32, #1b5e20);
   color: #fff;

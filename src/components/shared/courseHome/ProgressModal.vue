@@ -3,11 +3,11 @@
     <div v-if="open" class="modal-backdrop" @click.self="$emit('close')">
       <div class="progress-modal" :style="cssVars">
         <button class="modal-close" @click="$emit('close')">✕</button>
-        <h2>📊 學習進度</h2>
+        <h2>{{ heading }}</h2>
         <div class="pm-summary-row">
-          <div><span class="pm-num">{{ completedCount }}</span><span class="pm-lbl">已完成</span></div>
-          <div><span class="pm-num">{{ totalCount }}</span><span class="pm-lbl">總課程</span></div>
-          <div><span class="pm-num">{{ overallPct }}%</span><span class="pm-lbl">完成度</span></div>
+          <div><span class="pm-num">{{ completedCount }}</span><span class="pm-lbl">{{ completedLabel }}</span></div>
+          <div><span class="pm-num">{{ totalCount }}</span><span class="pm-lbl">{{ totalLabel }}</span></div>
+          <div><span class="pm-num">{{ overallPct }}%</span><span class="pm-lbl">{{ pctLabel }}</span></div>
         </div>
         <div class="pm-levels">
           <div v-for="lvl in levels" :key="lvl.label" class="pm-level-block">
@@ -45,7 +45,12 @@ const props = defineProps({
   overallPct: { type: Number, default: 0 },
   // levels: [{ label, pct }]
   levels: { type: Array, default: () => [] },
-  themeColor: { type: String, default: '#8B0000' }
+  themeColor: { type: String, default: '#8B0000' },
+  // 文字（預設中文；其他語言的課程可自行傳入翻譯）
+  heading: { type: String, default: '📊 學習進度' },
+  completedLabel: { type: String, default: '已完成' },
+  totalLabel: { type: String, default: '總課程' },
+  pctLabel: { type: String, default: '完成度' }
 })
 defineEmits(['close'])
 

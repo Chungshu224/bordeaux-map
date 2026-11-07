@@ -1,30 +1,30 @@
 <template>
   <div class="swm">
     <header class="swm-head">
-      <button class="swm-back" @click="emit('back')">← 返回課程首頁</button>
-      <h1 class="swm-title">🏔️ 瑞士葡萄酒地圖（{{ SWISS_POINTS.length }} 個示意點）</h1>
+      <button class="swm-back" @click="emit('back')">{{ gt('← 返回課程首頁') }}</button>
+      <h1 class="swm-title">{{ gt('🏔️ 瑞士葡萄酒地圖（{n} 個示意點）', { n: SWISS_POINTS.length }) }}</h1>
     </header>
 
     <div ref="mapContainer" class="swm-map"></div>
-    <p v-if="mapError" class="swm-err">{{ mapError }}（仍可使用下方清單）</p>
-    <p class="swm-note">圓點位置為各地中心或代表城鎮的概略座標，不是官方產區邊界。</p>
+    <p v-if="mapError" class="swm-err">{{ gt('{e}（仍可使用下方清單）', { e: mapError }) }}</p>
+    <p class="swm-note">{{ gt('圓點位置為各地中心或代表城鎮的概略座標，不是官方產區邊界。') }}</p>
 
     <section class="swm-legend">
       <button v-for="z in SWISS_ZONES" :key="z.key" class="swm-chip" :class="{ off: hidden.has(z.key) }" @click="toggleZone(z.key)">
-        <span class="swm-dot" :style="{ background: z.color }"></span>{{ z.label }}
+        <span class="swm-dot" :style="{ background: z.color }"></span>{{ gt(z.label) }}
       </button>
     </section>
 
     <section v-if="active" class="swm-card">
-      <h2>{{ active.name }}</h2>
+      <h2>{{ gt(active.name) }}</h2>
       <p class="swm-zone">{{ zoneLabel(active.zone) }}</p>
-      <p>{{ active.desc }}</p>
+      <p>{{ gt(active.desc) }}</p>
     </section>
 
     <section class="swm-list">
       <button v-for="p in visiblePoints" :key="p.id" class="swm-item" :class="{ on: active?.id === p.id }" @click="select(p.id)">
         <span class="swm-dot" :style="{ background: zoneColor(p.zone) }"></span>
-        <span class="swm-item-name">{{ p.name }}</span>
+        <span class="swm-item-name">{{ gt(p.name) }}</span>
       </button>
     </section>
   </div>
@@ -36,6 +36,7 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { SWISS_POINTS, SWISS_ZONES, SWISS_BOUNDS } from '../../data/switzerland/mapData.js'
 import { swiExtrasActions } from '../../stores/switzerlandExtrasStore.js'
+import { gt } from '../../locales/swissUi/index.js'
 
 const emit = defineEmits(['back'])
 const mapContainer = ref(null)
@@ -75,8 +76,8 @@ function select(id) {
 
 async function initMap() {
   try {
-    if (!import.meta.env.VITE_MAPBOX_TOKEN) { mapError.value = '尚未設定地圖金鑰'; return }
-    if (!mapboxgl.supported()) { mapError.value = '您的瀏覽器不支援 WebGL'; return }
+    if (!import.meta.env.VITE_MAPBOX_TOKEN) { mapError.value = gt('尚未設定地圖金鑰'); return }
+    if (!mapboxgl.supported()) { mapError.value = gt('您的瀏覽器不支援 WebGL'); return }
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN
     map = new mapboxgl.Map({ container: mapContainer.value, style: 'mapbox://styles/mapbox/satellite-streets-v12', center: [8.2, 46.8], zoom: 6 })
     map.on('load', () => {
@@ -89,9 +90,9 @@ async function initMap() {
       map.on('mouseenter', 'swi-pt-circle', () => { map.getCanvas().style.cursor = 'pointer' })
       map.on('mouseleave', 'swi-pt-circle', () => { map.getCanvas().style.cursor = '' })
     })
-    map.on('error', e => { mapError.value = `地圖錯誤：${e.error?.message || ''}` })
+    map.on('error', e => { mapError.value = gt('地圖錯誤：{e}', { e: e.error?.message || '' }) })
   } catch (err) {
-    mapError.value = `初始化失敗：${err.message}`
+    mapError.value = gt('初始化失敗：{e}', { e: err.message })
   }
 }
 

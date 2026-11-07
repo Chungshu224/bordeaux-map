@@ -1,39 +1,39 @@
 <template>
   <div class="swn">
     <header class="swn-head">
-      <button class="swn-back" @click="adding ? (adding = false) : emit('back')">← {{ adding ? '返回筆記列表' : '返回課程首頁' }}</button>
-      <span class="swn-title">📔 論述要點與品飲筆記</span>
+      <button class="swn-back" @click="adding ? (adding = false) : emit('back')">← {{ adding ? gt('返回筆記列表') : gt('← 返回課程首頁').replace(/^← /, '') }}</button>
+      <span class="swn-title">{{ gt('📔 論述要點與品飲筆記') }}</span>
     </header>
 
     <main v-if="!adding" class="swn-main">
-      <h2 class="swn-h2">論述要點卡</h2>
-      <p class="swn-intro">瑞士是延伸課程，常見題型是「說明某個現象為什麼會這樣」。先抓住這幾個主軸。</p>
+      <h2 class="swn-h2">{{ gt('論述要點卡') }}</h2>
+      <p class="swn-intro">{{ gt('瑞士是延伸課程，常見題型是「說明某個現象為什麼會這樣」。先抓住這幾個主軸。') }}</p>
       <article v-for="c in CARDS" :key="c.title" class="swn-card">
-        <b>{{ c.title }}</b>
-        <p>{{ c.what }}</p>
-        <p class="swn-frame">骨架：{{ c.frame }}</p>
+        <b>{{ gt(c.title) }}</b>
+        <p>{{ gt(c.what) }}</p>
+        <p class="swn-frame">{{ gt('骨架：{f}', { f: gt(c.frame) }) }}</p>
       </article>
 
-      <h2 class="swn-h2">我的品飲與論述筆記</h2>
-      <p class="swn-intro">記下一支酒或一個主題，串成「產區 → 品種 → 制度 → 風格 → 市場」。筆記只存在這台裝置、這個帳號。</p>
-      <button class="swn-primary" @click="openForm">＋ 新增筆記</button>
-      <p v-if="!notes.length" class="swn-empty">還沒有筆記。</p>
+      <h2 class="swn-h2">{{ gt('我的品飲與論述筆記') }}</h2>
+      <p class="swn-intro">{{ gt('記下一支酒或一個主題，串成「產區 → 品種 → 制度 → 風格 → 市場」。筆記只存在這台裝置、這個帳號。') }}</p>
+      <button class="swn-primary" @click="openForm">{{ gt('＋ 新增筆記') }}</button>
+      <p v-if="!notes.length" class="swn-empty">{{ gt('還沒有筆記。') }}</p>
       <article v-for="n in notes" :key="n.id" class="swn-note">
-        <div class="swn-note-top"><b>{{ n.topic || '（未命名）' }}</b><span class="swn-date">{{ n.date }}</span></div>
-        <p v-for="row in rows(n)" :key="row.label" class="swn-line"><b>{{ row.label }}：</b>{{ row.value }}</p>
-        <button class="swn-del" @click="remove(n.id)">刪除</button>
+        <div class="swn-note-top"><b>{{ n.topic || gt('（未命名）') }}</b><span class="swn-date">{{ n.date }}</span></div>
+        <p v-for="row in rows(n)" :key="row.label" class="swn-line"><b>{{ gt(row.label) }}{{ gt('：') }}</b>{{ row.value }}</p>
+        <button class="swn-del" @click="remove(n.id)">{{ gt('刪除') }}</button>
       </article>
     </main>
 
     <main v-else class="swn-main">
-      <label>主題或酒款<input v-model="f.topic" type="text" placeholder="例如：Dézaley Grand Cru 的 Chasselas" /></label>
-      <label>日期<input v-model="f.date" type="date" /></label>
-      <label>產區與地形<textarea v-model="f.region" rows="2" placeholder="州、產區、坡向、湖泊或河谷…"></textarea></label>
-      <label>品種與別名<textarea v-model="f.variety" rows="2" placeholder="例如 Fendant＝Chasselas…"></textarea></label>
-      <label>制度層級<textarea v-model="f.system" rows="2" placeholder="州級 AOC、Grand Cru、產區名稱…"></textarea></label>
-      <label>風格與品飲<textarea v-model="f.style" rows="2"></textarea></label>
-      <label>市場與價格<textarea v-model="f.market" rows="2" placeholder="內銷、成本、通路…"></textarea></label>
-      <button class="swn-primary" :disabled="!f.topic.trim()" @click="save">儲存筆記</button>
+      <label>{{ gt('主題或酒款') }}<input v-model="f.topic" type="text" :placeholder="gt('例如：Dézaley Grand Cru 的 Chasselas')" /></label>
+      <label>{{ gt('日期') }}<input v-model="f.date" type="date" /></label>
+      <label>{{ gt('產區與地形') }}<textarea v-model="f.region" rows="2" :placeholder="gt('州、產區、坡向、湖泊或河谷…')"></textarea></label>
+      <label>{{ gt('品種與別名') }}<textarea v-model="f.variety" rows="2" :placeholder="gt('例如 Fendant＝Chasselas…')"></textarea></label>
+      <label>{{ gt('制度層級') }}<textarea v-model="f.system" rows="2" :placeholder="gt('州級 AOC、Grand Cru、產區名稱…')"></textarea></label>
+      <label>{{ gt('風格與品飲') }}<textarea v-model="f.style" rows="2"></textarea></label>
+      <label>{{ gt('市場與價格') }}<textarea v-model="f.market" rows="2" :placeholder="gt('內銷、成本、通路…')"></textarea></label>
+      <button class="swn-primary" :disabled="!f.topic.trim()" @click="save">{{ gt('儲存筆記') }}</button>
     </main>
   </div>
 </template>
@@ -41,6 +41,7 @@
 <script setup>
 import { ref, computed, reactive } from 'vue'
 import { swiExtras, swiExtrasActions } from '../../stores/switzerlandExtrasStore.js'
+import { gt } from '../../locales/swissUi/index.js'
 
 const emit = defineEmits(['back'])
 const CARDS = [

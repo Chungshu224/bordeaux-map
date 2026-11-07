@@ -21,7 +21,7 @@ const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url')
 let failed = 0
 const check = (name, ok, extra = '') => { console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${extra ? '  ' + extra : ''}`); if (!ok) failed++ }
 
-async function newCtx(browser, email) {
+async function newCtx(browser, email, locale = 'zh-TW') {
   const ctx = await browser.newContext({ viewport: { width: 387, height: 860 }, isMobile: true, hasTouch: true })
   const cors = { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': '*' }
   let user = null
@@ -32,6 +32,7 @@ async function newCtx(browser, email) {
     const session = { access_token: jwt, refresh_token: 'r', token_type: 'bearer', expires_in: 3600, expires_at: now + 3600, user }
     await ctx.addInitScript(([k, s]) => localStorage.setItem(k, JSON.stringify(s)), ['sb-ayyrxnaigvzqktkswhnd-auth-token', session])
   }
+  await ctx.addInitScript((l) => localStorage.setItem('app_locale', l), locale)
   await ctx.route('**/*.supabase.co/**', r => {
     if (r.request().method() === 'OPTIONS') return r.fulfill({ status: 204, headers: cors })
     if (r.request().url().includes('/auth/v1/user') && user) return r.fulfill({ status: 200, headers: cors, contentType: 'application/json', body: JSON.stringify(user) })
@@ -70,7 +71,13 @@ const p = await ctx.newPage()
 const errors = []
 p.on('pageerror', e => errors.push(e.message))
 await p.goto(`${BASE}/`); await settle(p, 2500)
-check('首頁（管理員）有瑞士入口', (await p.locator('a[href="/switzerland"]').count()) > 0)
+check('首頁（管理員）有瑞士課程卡片，且與義大利同一個分組', (await p.locator('.course-card.switzerland').count()) === 1 &&
+  await p.evaluate(() => document.querySelector('.course-card.switzerland')?.parentElement === document.querySelector('.course-card.italy')?.parentElement))
+const swBox = await p.evaluate(() => { const r = document.querySelector('.course-card.switzerland .btn-enter-course')?.getBoundingClientRect(); return r ? { width: r.width, height: r.height } : null })
+check('卡片的進入按鈕有實際大小', !!swBox && swBox.width > 50 && swBox.height > 20)
+await p.evaluate(() => document.querySelector('.course-card.switzerland .btn-enter-course').click()); await p.waitForTimeout(800)
+check('點卡片按鈕可進入 /switzerland', new URL(p.url()).pathname === '/switzerland', p.url())
+await p.goto(`${BASE}/`); await settle(p, 1500)
 await p.goto(`${BASE}/switzerland`); await settle(p)
 check('管理員可進入 /switzerland', new URL(p.url()).pathname === '/switzerland', p.url())
 check('首頁顯示不販售說明', (await p.locator('.swih-admin-note').count()) === 1)
@@ -231,6 +238,96 @@ const pricing = fs.readFileSync(new URL('../src/components/PricingPage.vue', imp
 check("NOT_FOR_SALE_IDS 含 'switzerland'", /NOT_FOR_SALE_IDS = \[[^\]]*'switzerland'/.test(pricing))
 const router = fs.readFileSync(new URL('../src/router/index.js', import.meta.url), 'utf8')
 check('/switzerland 路由為 requiresAdmin', /path: '\/switzerland',[\s\S]{0,300}requiresAdmin: true/.test(router))
+
+// ── 英文／日文翻譯 ──
+const HAN = /[一-鿿]/
+for (const [loc, heroTitle, lessonTitle, backText] of [
+  ['en', 'Swiss Wine', 'Getting to know Swiss wine: history', 'Back to course home'],
+  ['ja', 'スイスワイン', 'スイスワインを知る：歴史', 'コースホームへ戻る']
+]) {
+  const lctx = await newCtx(browser, ADMIN_EMAIL, loc)
+  const lp = await lctx.newPage()
+  const lerrors = []
+  lp.on('pageerror', e => lerrors.push(e.message))
+  await lp.goto(`${BASE}/switzerland`); await settle(lp, 2000)
+  const homeText = await lp.evaluate(() => document.body.innerText)
+  check(`[${loc}] 課程首頁標題已翻譯`, homeText.includes(heroTitle))
+  check(`[${loc}] 課程首頁沒有殘留中文介面字`, !homeText.includes('開始學習') && !homeText.includes('選擇課程階段') && !homeText.includes('本課程僅供管理員'))
+  if (loc === 'en') check('[en] 課程首頁完全沒有中文字', !HAN.test(homeText), (homeText.match(/.{0,12}[一-鿿]+.{0,12}/) || [''])[0])
+  await lp.locator('.qn-card').nth(3).click(); await lp.waitForTimeout(300)
+  const modalText = await lp.evaluate(() => document.querySelector('.progress-modal')?.innerText || '')
+  check(`[${loc}] 進度視窗已翻譯`, modalText.length > 0 && (loc !== 'en' || !HAN.test(modalText)), modalText.slice(0, 40).replace(/\n/g, ' '))
+  await lp.locator('.modal-close').click(); await lp.waitForTimeout(200)
+  await lp.locator('.lc-btn').nth(0).click(); await settle(lp, 500)
+  let t = await lp.evaluate(() => document.body.innerText)
+  check(`[${loc}] 課程列表顯示翻譯後的課名`, t.includes(lessonTitle))
+  if (loc === 'en') check('[en] 課程列表沒有中文字', !HAN.test(t), (t.match(/.{0,12}[一-鿿]+.{0,12}/) || [''])[0])
+  // 逐課檢查：英文版每一課都不得殘留中文；日文版不得殘留未翻譯的繁中標記詞
+  let leftover = 0
+  for (const n of [1, 2, 3]) {
+    if (n > 1) { await lp.goto(`${BASE}/switzerland`); await settle(lp, 600); await lp.locator('.lc-btn').nth(n - 1).click(); await settle(lp, 400) }
+    const cnt = swiLevels[`level${n}`].lessons.length
+    for (let i = 0; i < cnt; i++) {
+      await lp.locator('.dtl-lesson').nth(i).click(); await lp.waitForTimeout(150)
+      const txt = await lp.evaluate(() => document.body.innerText)
+      if (loc === 'en' && HAN.test(txt)) { leftover++; console.log('  殘留中文：', n, i, (txt.match(/.{0,15}[一-鿿]+.{0,15}/) || [''])[0]) }
+      if (loc === 'ja' && /[課題階產區]{2}/.test(txt) && /本課考點|本課詞彙|小測驗/.test(txt)) { leftover++; console.log('  殘留繁中介面字：', n, i) }
+      await lp.locator('.dtl-link').click(); await lp.waitForTimeout(100)
+    }
+  }
+  check(`[${loc}] 18 課課文與測驗都已翻譯`, leftover === 0, `${leftover}`)
+  // 測驗：英文／日文版切換後，正解索引不變（用中文版的 answer 點選仍可全對）
+  await lp.goto(`${BASE}/switzerland`); await settle(lp, 600)
+  await lp.locator('.lc-btn').nth(0).click(); await settle(lp, 400)
+  await lp.locator('.dtl-lesson').nth(4).click(); await lp.waitForTimeout(200)
+  const qq = SWI_CONTENT['swi-l1-5'].quiz
+  for (let i = 0; i < qq.length; i++) await lp.locator('.dq-q').nth(i).locator('.dq-opt').nth(qq[i].answer).click()
+  await lp.waitForTimeout(200)
+  check(`[${loc}] 翻譯後評量全對仍可完成`, await lp.locator('.dtl-primary').isEnabled())
+  // 地圖、遊戲、筆記本
+  await lp.goto(`${BASE}/switzerland`); await settle(lp, 800)
+  await lp.locator('.qn-card').nth(0).click(); await lp.waitForTimeout(400)
+  t = await lp.evaluate(() => document.body.innerText)
+  if (loc === 'en') check('[en] 地圖頁沒有中文字', !HAN.test(t), (t.match(/.{0,12}[一-鿿]+.{0,12}/) || [''])[0])
+  await lp.locator('.swm-item').nth(3).click(); await lp.waitForTimeout(150)
+  t = await lp.evaluate(() => document.body.innerText)
+  if (loc === 'en') check('[en] 地圖資訊卡沒有中文字', !HAN.test(t))
+  await lp.locator('.swm-back').click(); await lp.waitForTimeout(300)
+  await lp.locator('.qn-card').nth(1).click(); await lp.waitForTimeout(300)
+  t = await lp.evaluate(() => document.body.innerText)
+  if (loc === 'en') check('[en] 遊戲樞紐沒有中文字', !HAN.test(t), (t.match(/.{0,12}[一-鿿]+.{0,12}/) || [''])[0])
+  let gameLeft = 0
+  for (let g = 0; g < SWISS_GAMES.length; g++) {
+    await lp.locator('.sgh-card').nth(g).click(); await lp.waitForTimeout(200)
+    await lp.locator('.diff-card').first().click(); await lp.waitForTimeout(250)
+    const gt1 = await lp.evaluate(() => document.body.innerText)
+    if (loc === 'en' && HAN.test(gt1)) { gameLeft++; console.log('  遊戲殘留中文：', SWISS_GAMES[g].id, (gt1.match(/.{0,15}[一-鿿]+.{0,15}/) || [''])[0]) }
+    // 答一題看回饋文字
+    if (await lp.locator('.opt-btn').count()) { await lp.locator('.opt-btn').first().click(); await lp.waitForTimeout(150) }
+    const gt2 = await lp.evaluate(() => document.body.innerText)
+    if (loc === 'en' && HAN.test(gt2)) { gameLeft++; console.log('  遊戲回饋殘留中文：', SWISS_GAMES[g].id, (gt2.match(/.{0,15}[一-鿿]+.{0,15}/) || [''])[0]) }
+    await lp.locator('.back-btn').first().click(); await lp.waitForTimeout(200)
+  }
+  check(`[${loc}] 四款遊戲的題目與介面已翻譯`, gameLeft === 0, `${gameLeft}`)
+  await lp.goto(`${BASE}/switzerland`); await settle(lp, 800)
+  await lp.locator('.qn-card').nth(2).click(); await lp.waitForTimeout(300)
+  t = await lp.evaluate(() => document.body.innerText)
+  if (loc === 'en') check('[en] 筆記本頁沒有中文字', !HAN.test(t), (t.match(/.{0,12}[一-鿿]+.{0,12}/) || [''])[0])
+  await lp.goto(`${BASE}/switzerland`); await settle(lp, 800)
+  t = await lp.evaluate(() => document.querySelector('.swia')?.innerText || '')
+  if (loc === 'en') check('[en] 成就區沒有中文字', !HAN.test(t))
+  check(`[${loc}] 頁面無 JS 錯誤`, lerrors.length === 0, lerrors.join(' | '))
+  await lctx.close()
+}
+// 首頁卡片
+for (const [loc, expect] of [['en', 'Swiss Wine'], ['ja', 'スイスワイン']]) {
+  const hctx = await newCtx(browser, ADMIN_EMAIL, loc)
+  const hp = await hctx.newPage()
+  await hp.goto(`${BASE}/`); await settle(hp, 2500)
+  const cardText = await hp.evaluate(() => document.querySelector('.course-card.switzerland')?.textContent || '')
+  check(`[${loc}] 首頁瑞士卡片已翻譯`, cardText.includes(expect) && !/[一-鿿]/.test(loc === 'en' ? cardText : ''), cardText.slice(0, 60).replace(/\n/g, ' '))
+  await hctx.close()
+}
 
 check('無頁面 JS 錯誤', errors.length === 0, errors.join(' | '))
 await browser.close()
