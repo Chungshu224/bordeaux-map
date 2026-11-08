@@ -4,7 +4,7 @@
       :icon="theme.icon"
       tagline="葡萄酒的搖籃・延伸課程（不在 D3 國家清單）"
       title="喬治亞葡萄酒"
-      subtitle="Georgia · Six regions · Cantonal AOC"
+      subtitle="Georgia · Qvevri · Indigenous varieties · PDO"
       description="從八千年前的陶罐釀酒到今日的 PDO 制度：認識 qvevri 與皮渣接觸白酒、本土品種的多樣性，以及東部 Kakheti 與西部各產區的風格差異。"
       :stats="heroStats"
     />
@@ -84,6 +84,7 @@ const heroStats = [
 ]
 
 const quickNavItems = computed(() => [
+  { key: 'map', desc: '東西部產區與 PDO 的近似範圍' },
   { key: 'progress', desc: `${totalProgressPct.value}% 完成・${completedLessons.value.length} 課` }
 ])
 function onQuickNav(key) {

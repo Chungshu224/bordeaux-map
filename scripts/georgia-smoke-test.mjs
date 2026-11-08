@@ -138,6 +138,30 @@ for (let i = 0; i < 8; i++) {
 check('Level 2 八課無「施工中」且有測驗', l2Ok === 8, `${l2Ok}/8`)
 check('Level 2 八課無橫向溢出', l2Over === 0, `${l2Over}`)
 
+// ── 地圖：近似範圍資料與頁面 ──
+const gj = JSON.parse(fs.readFileSync(new URL('../public/georgia/georgia_pdo_areas.geojson', import.meta.url), 'utf-8'))
+const PDO_KEYS = ['kakheti', 'kindzmarauli', 'tsinandali', 'mukuzani', 'atenuri', 'sviri', 'tvishi', 'khvanchkara']
+const allCoords = []
+const walk = (c) => (typeof c[0] === 'number' ? allCoords.push(c) : c.forEach(walk))
+gj.features.forEach(f => walk(f.geometry.coordinates))
+check('範圍資料的 PDO 皆為已定義的八個', gj.features.every(f => PDO_KEYS.includes(f.properties.pdo)))
+check('範圍資料皆標明精度（municipality／village）', gj.features.every(f => ['municipality', 'village'].includes(f.properties.precision)))
+check('範圍資料座標皆在喬治亞境內', allCoords.every(c => c[0] > 40 && c[0] < 47 && c[1] > 41 && c[1] < 43.6))
+check('Kakheti 有八個市鎮多邊形', gj.features.filter(f => f.properties.pdo === 'kakheti' && f.properties.precision === 'municipality').length === 8)
+check('資料含 OSM 授權標示', /OpenStreetMap/.test(gj.properties.attribution))
+await p.goto(`${BASE}/georgia`); await settle(p, 1200)
+check('快速入口可點', (await p.locator('.qn-card:disabled').count()) === 0)
+await p.locator('.qn-card').nth(0).click(); await p.waitForTimeout(1200)
+check(`地圖頁列出 ${PDO_KEYS.length} 個 PDO`, (await p.locator('.gem-item').count()) === PDO_KEYS.length)
+check('地圖頁有「不是法定邊界」說明', (await p.locator('.gem-note').first().textContent()).includes('不是法定邊界'))
+await p.locator('.gem-item').nth(2).click(); await p.waitForTimeout(200)
+check('點選 PDO 出現資訊卡', (await p.locator('.gem-card').count()) === 1)
+await p.locator('.gem-chip').nth(0).click(); await p.waitForTimeout(150)
+check('切換可隱藏該 PDO（晶片變灰）', (await p.locator('.gem-chip.off').count()) === 1)
+check('地圖頁無橫向溢出', (await overflow(p)) <= 1, String(await overflow(p)))
+await p.locator('.gem-back').click(); await p.waitForTimeout(400)
+check('返回課程首頁', (await p.locator('.lc-btn').count()) === 3)
+
 check('頁面無 JS 錯誤', errors.length === 0, errors.slice(0, 2).join(' | '))
 await browser.close()
 console.log(failed ? `\n${failed} 項失敗` : '\n全部通過')

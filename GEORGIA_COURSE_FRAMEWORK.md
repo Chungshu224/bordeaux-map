@@ -1,6 +1,8 @@
-# 🍷 喬治亞葡萄酒專論課程框架（WSET Diploma D3 備考導向）
+# 🍷 喬治亞葡萄酒專論課程框架（延伸課程）
 
-> 狀態：**階段 A 完成**（路由 `/georgia`、管理員專屬、21 課課表、Level 1 六課含測驗、首頁管理員卡片、en/ja 首頁文案、migration 檔已備好未套用）；Level 2–3 內容待查證後填入。查證見 `EASTERNEUROPE_FACT_CHECK.md`（喬治亞段）。分支：`feat/georgia-course`（未合併）。
+> ⚠ **定位更正（2026-11-08）**：一份第三方 D3 課程大綱的歐洲範圍不含喬治亞，故本課改為**延伸課程**（比照瑞士），不再標示為 D3 備考。WSET 規格原文無法讀取，請以你手上的規格確認。
+
+> 狀態：**階段 A–C 完成**（Level 1–2 內容、近似範圍地圖）；Level 3 內容待查證（出口與蘇聯時期數據）後填入。查證見 `EASTERNEUROPE_FACT_CHECK.md`（喬治亞段）。分支：`feat/georgia-course`（未合併）。
 > ⚠ ＝數字或來源有出入，須對官方文件確認後才進題庫。
 
 ## 1. 定位
@@ -63,3 +65,10 @@ A 骨架（✅）→ B Level 1（✅ 已隨階段 A 完成） → C Level 2（�
 - Level 1 課文只寫兩份以上來源一致的事實；PDO 總數、面積、占比、品種數、出口比例一律不入課文與題庫。
 - 驗證：手機寬度（387px）整合測試 25 項全數通過；`vite build` 成功。
 - 進度只存在本機 localStorage，尚未同步 Supabase（與瑞士課相同）。
+
+## 8. 階段 C 實作記錄（Level 2 與地圖）
+- Level 2 八課依官方來源撰寫：UNESCO ICH 00870、OIV-ECO 647-2020、英國政府公布的 9 個喬治亞 PDO 產品規格；只列名稱、未取得規格的 PDO 不寫細節。
+- 地圖：`scripts/build-georgia-geojson.py` → `public/georgia/georgia_pdo_areas.geojson`（52 筆）。Kakheti 八市鎮與 Kindzmarauli（Kvareli）為 OSM 行政區多邊形；Tsinandali、Mukuzani、Atenuri、Sviri、Tvishi、Khvanchkara 為規格列出的村莊位置點（共 43 點）。
+- 同名村莊處理：依規格所述市鎮過濾（Vardisubani、Karajala 在 Lagodekhi 也有同名村）。找不到的 Shalaura、Kalaura 不顯示並在頁面註明。
+- 地圖頁 `GeorgiaMapPage.vue` 明確標示「不是法定邊界」與 OSM 授權；地圖底圖需 `VITE_MAPBOX_TOKEN`，未設定時仍可用清單。
+- 驗證：手機寬度整合測試 41 項通過。

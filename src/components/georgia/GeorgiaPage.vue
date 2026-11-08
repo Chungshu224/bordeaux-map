@@ -4,7 +4,9 @@
       v-if="view === 'selector'"
       style="min-height: 100vh;"
       @enterLevel="goToLevel"
+      @openMap="view = 'map'"
     />
+    <GeorgiaMapPage v-else-if="view === 'map'" @back="view = 'selector'" />
     <GeorgiaLessonList v-else @back="leaveCourse" />
   </div>
 </template>
@@ -13,9 +15,10 @@
 import { ref } from 'vue'
 import GeorgiaLevelSelector from './GeorgiaLevelSelector.vue'
 import GeorgiaLessonList from './GeorgiaLessonList.vue'
+import GeorgiaMapPage from './GeorgiaMapPage.vue'
 import { geLearningActions } from '../../stores/georgiaLearningStore.js'
 
-const view = ref('selector') // 'selector' | 'course'
+const view = ref('selector') // 'selector' | 'map' | 'course'
 
 function goToLevel(n) {
   geLearningActions.setLevel(n)

@@ -71,3 +71,43 @@
 - ⚠ Tsolikouri／Tsitska「較輕、清爽、花香與青蘋果」：單一來源的風格描述，已寫入 Level 1，建議日後對生產者資料確認。
 - ❌ 出口市場結構與蘇聯時期面積、商業品種數：未查證，Level 3 寫入前須查。
 - ❌ WSET D3 現行規格：仍未取得。
+
+## 官方來源核對結果（2026-11-08 晚，喬治亞第三輪）
+**重大發現：D3 國家清單**
+- 一份第三方補習班的 D3 課程大綱（Fine Vintage，2024）列出歐洲範圍為希臘、西班牙、義大利、葡萄牙、法國各區、德國、奧地利與匈牙利，**沒有喬治亞，也沒有羅馬尼亞、保加利亞、斯洛維尼亞、克羅埃西亞**。這不是 WSET 原文（WSET 規格 PDF 被 robots 擋住，無法讀取），所以仍是 ⚠，但方向一致。
+- 因此「東歐與巴爾幹」與「喬治亞專論」暫改定位為**延伸課程**（比照瑞士課），已移除 UI 中的「D3 備考」字樣。請用你手上的 WSET 規格確認。
+
+**已由官方來源確認（✅）**
+| 項目 | 結果 | 來源 |
+|---|---|---|
+| qvevri 登錄 | 2013（8.COM），決議 8.COM 8.13 | UNESCO ICH 00870 |
+| qvevri 內容 | 蛋形陶罐；果汁連同皮、梗、籽入罐，封口埋入地下；約發酵五到六個月後飲用 | UNESCO ICH 00870 |
+| 白酒浸皮 | **OIV-ECO 647-2020**（國際釀酒實務法典定義 4.9）：只能用白品種、與果渣一起發酵、浸皮至少一個月 | OIV |
+| Tsinandali | 白：至少 85% Rkatsiteli、至多 15% Kakhuri Mtsvane；**另有 Saperavi 乾紅**；Telavi 市鎮、Alazani 右岸、15 個村；實際酒精度 ≥11%、總酒精度 ≤15%；10 t/ha（Mtsvane 8）、650 L/t；陳年選擇性，若陳年木桶 ≥6 個月 | 英國政府公布的規格 |
+| Mukuzani | Saperavi 100%、乾紅；10 個村；≥11%；10 t/ha；陳年同上，未指定橡木 | 同上 |
+| Kindzmarauli | Saperavi 與 Saperavi Budeshuri（無比例）；Kvareli 市鎮、海拔 250–550 m；半甜、殘糖 18–45 g/L；≥10.5%；不完全發酵 | 同上 |
+| Khvanchkara | Aleksandrouli 與 Mujuretuli；Racha（Ambrolauri），Rioni 兩岸；半甜紅、殘糖 30–45 g/L；≥11%；7 t/ha；在果皮上不完全發酵；糖度 ≥24%；次年 1 月 1 日後才可交付 | 同上 |
+| Kakheti（Kakhuri） | 八市鎮；許可品種與酒色；最低酒精度 11%（琥珀 12%、其他 10.5%）；產量 Rkatsiteli 12 t/ha | 同上 |
+| Sviri | Tsolikouri／Tsitska／Krakhuna，乾白，殘糖 ≤4 g/L；Outer Imereti，Kvirila 左岸 | 同上 |
+| Teliani | Cabernet Sauvignon 100%，乾紅，殘糖 ≤4 g/L；Tsiv-Gombori 東北坡 | 同上 |
+| Atenuri | Chinuri 及／或 Goruli Mtsvane 及／或 **Aligoté**；乾白＋氣泡／微氣泡；瓶中法二次發酵後 ≥9 個月、槽式法 ≥6 個月 | 同上 |
+| Tvishi | Tsolikouri；Lechkhumi（Tsageri）；半甜白為主，另有乾型琥珀（≥10.5%）與白色強化（≥18%） | 同上 |
+| 受協定保護 | 18 個名稱（Vazisubani、Tibaani、Tvishi、Tsinandali、Manavi、Sviri、Napareuli、Mukuzani、Teliani、Kvareli、Kotekhi、Kindzmarauli、Khvanchkara、Kardenakhi、Atenuri、Kakheti、Gurjaani、Akhasheni） | gov.uk 保護名稱列表 |
+
+**修正先前的錯誤**
+- ❌ 「OIV 皮渣接觸白酒類別 2017」→ 正確為 **2020（OIV-ECO 647-2020）**，且要求浸皮至少一個月。
+- Tsinandali 的 Mtsvane 上限：**15%**（官方規格），先前 15% vs 15–20% 的矛盾解除。
+- Tvishi 歸屬：官方規格為 **Lechkhumi（Tsageri）**，屬 Racha-Lechkhumi。
+- Level 1 曾寫 Tsinandali 只有白酒、Atenuri 只有 Chinuri／Goruli Mtsvane：已改正。
+
+**規格文件本身的不一致（課文與題庫不用）**
+- Khvanchkara 規格註冊年份寫 2007，同文又寫「自 2006 年」；註冊編號與日期的先後在不同規格間不一致。
+- Sviri 規格寫葡萄園在 Imereti，卻要求在 Kakheti 內加工，疑為規格筆誤。
+- 英國登錄頁稱這些名稱為 PGI，喬治亞規格稱原產地名稱（相當 PDO）。
+
+**仍待核對（⚠／❌）**
+- 國家葡萄酒署的現行 PDO 完整名單與總數（各來源 28／29／30／44）。
+- Akhasheni、Gurjaani、Vazisubani、Manavi、Napareuli、Tibaani、Kvareli、Kotekhi、Kardenakhi、Okureshis Usakhelouri、Salkhino Ojaleshi、Bolnisi、Okami 等的官方規格。
+- 出口市場結構、蘇聯時期面積與商業品種數（Level 3 前須查）。
+- Kakhetian／Imeretian／Kartlian 釀法的浸皮差異（仍只有單一來源，課文未收錄）。
+- 羅馬尼亞、保加利亞、斯洛維尼亞、克羅埃西亞、摩爾多瓦（東歐課程）整批未做官方核對。
