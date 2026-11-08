@@ -72,3 +72,11 @@ A 骨架（✅）→ B Level 1（✅ 已隨階段 A 完成） → C Level 2（�
 - 同名村莊處理：依規格所述市鎮過濾（Vardisubani、Karajala 在 Lagodekhi 也有同名村）。找不到的 Shalaura、Kalaura 不顯示並在頁面註明。
 - 地圖頁 `GeorgiaMapPage.vue` 明確標示「不是法定邊界」與 OSM 授權；地圖底圖需 `VITE_MAPBOX_TOKEN`，未設定時仍可用清單。
 - 驗證：手機寬度整合測試 41 項通過。
+
+## 9. 階段 D：Level 3 課文（已完成）
+
+- `src/data/georgia/level3Content.js`：ge-l3-1…7，評量課 12 題、及格 60。
+- 規格數字（產量、糖度、海拔、酒精度）全數取自 Level 2 已核對的官方 PDO 規格；規格未載明者（如 Atenuri 糖度）不寫。
+- 產業與市場（ge-l3-4）僅引用有出處且標註年份的數字：bm.ge 2026-01-21、agenda.ge 2025-01-20（國家葡萄酒署）、Wine Business International、Grape Collective；題庫只問方向與原因，不要求背誦數字。
+- 標示「推論」的句子為由規格推得的因果，非官方說法。
+- 煙霧測試新增 Level 3 檢查，全數通過。
