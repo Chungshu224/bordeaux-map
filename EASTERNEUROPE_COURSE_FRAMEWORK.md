@@ -79,3 +79,6 @@ Level 1 六課課文與測驗已寫入（`src/data/easterneurope/level1Content.j
 
 ## 10. 階段 C 完成紀錄（2026-11-09）
 Level 2 八課課文與測驗已寫入（`level2Content.js`），評量 10 題、及格 60。克羅埃西亞改為官方四大區；保加利亞以 Danubian Plain PGI 規格為例。煙霧測試新增 Level 2 項目，全數通過。
+
+## 11. 階段 D 完成紀錄（2026-11-09）
+Level 3 七課課文與測驗已寫入（`level3Content.js`），評量 12 題、及格 60。21 課全部有內容；煙霧測試新增 Level 3 項目，全數通過。尚未做：階段 E（地圖、遊戲、筆記、成就）與 F（migration 套用）。
