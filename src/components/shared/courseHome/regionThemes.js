@@ -35,7 +35,8 @@ export const REGION_THEMES = {
   fortified:  { primary: '#8B4513', accent: '#EBD3B5', icon: '🥃', surface: '#fbf5ee' },
   d1:         { primary: '#4F6F1F', accent: '#DCE8C4', icon: '🍇', surface: '#f6f9ee' },
   d2:         { primary: '#2F5D8A', accent: '#C9DCEE', icon: '💼', surface: '#f4f8fc' },
-  switzerland: { primary: '#B3202E', accent: '#F2C4C9', icon: '🏔️', surface: '#fdf5f5' }
+  switzerland: { primary: '#B3202E', accent: '#F2C4C9', icon: '🏔️', surface: '#fdf5f5' },
+  georgia:     { primary: '#A64B2A', accent: '#F1D2C2', icon: '🏺', surface: '#fbf4f0' }
 }
 
 export function getTheme(key) {

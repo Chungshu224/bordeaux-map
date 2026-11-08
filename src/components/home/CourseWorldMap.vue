@@ -79,6 +79,7 @@ const GEO = {
   portugal:   { ll: [-7.8, 41.1],   color: '#2F6F4F' },
   hungary:    { ll: [21.4, 48.1],   color: '#C28E0E' },
   greece:     { ll: [23.0, 38.5],   color: '#1F6FB2' },
+  georgia:    { ll: [45.5, 41.9],   color: '#A64B2A' },
   austria:    { ll: [16.5, 48.1],   color: '#C0392B' },
   usother:    { ll: [-122.9, 45.2], color: '#3B6EA5' },
   california: { ll: [-122.4, 38.5], color: '#E08A1E' },

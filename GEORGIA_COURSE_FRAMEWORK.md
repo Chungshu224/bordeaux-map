@@ -1,6 +1,6 @@
 # 🍷 喬治亞葡萄酒專論課程框架（WSET Diploma D3 備考導向）
 
-> 狀態：框架草案；尚未寫程式、未建路由。查證見 `EASTERNEUROPE_FACT_CHECK.md`（喬治亞段）。分支：`feat/easterneurope-framework`（未合併）。
+> 狀態：**階段 A 完成**（路由 `/georgia`、管理員專屬、21 課課表、Level 1 六課含測驗、首頁管理員卡片、en/ja 首頁文案、migration 檔已備好未套用）；Level 2–3 內容待查證後填入。查證見 `EASTERNEUROPE_FACT_CHECK.md`（喬治亞段）。分支：`feat/georgia-course`（未合併）。
 > ⚠ ＝數字或來源有出入，須對官方文件確認後才進題庫。
 
 ## 1. 定位
@@ -21,7 +21,7 @@
 8. 歐式 vs 傳統 vs 現代釀法
 9. Kakheti I：Telavi、Gurjaani 與主要 PDO
 10. Kakheti II：Tsinandali、Mukuzani、Kindzmarauli 等
-11. Kartli 與 Samtskhe-Javakheti
+11. Kartli 與其他產區
 12. Imereti、Racha-Lechkhumi（Khvanchkara）與黑海沿岸
 13. 法規與認證：PDO 制度、National Wine Agency
 14. Level 2 綜合評量
@@ -55,4 +55,11 @@
 `src/data/georgia/ge-l*.js`；`src/components/georgia/*`；`georgiaLearningStore`；en/ja；路由 `/georgia`（admin only）；`CourseWorldMap` 的 `GEO` 加座標（約 [45.5, 41.9]）；migrations 只準備不套用。
 
 ## 6. 實作階段
-A 骨架 → B Level 1 → C Level 2（先解除 ⚠）→ D Level 3 → E 地圖＋遊戲＋筆記＋成就＋氣候 → F migrations、smoke test。
+A 骨架（✅）→ B Level 1（✅ 已隨階段 A 完成） → C Level 2（先解除 ⚠）→ D Level 3 → E 地圖＋遊戲＋筆記＋成就＋氣候 → F migrations、smoke test。
+
+## 7. 階段 A 實作記錄
+- 檔案：`src/components/georgia/*`、`src/stores/georgiaLearningStore.js`、`src/data/georgia/{lessons,content,level1Content,level2Content,level3Content}.js`、`scripts/georgia-smoke-test.mjs`、`supabase/migrations/20261116000000_add_georgia_course.sql`（未套用）。
+- 整合：`router`（`requiresAdmin`）、`PricingPage` 的 `NOT_FOR_SALE_IDS`、`PlatformHome`（Europe 組管理員卡片、`ADMIN_ONLY_COURSES`）、`regionThemes`、`CourseWorldMap`（世界視圖座標）。
+- Level 1 課文只寫兩份以上來源一致的事實；PDO 總數、面積、占比、品種數、出口比例一律不入課文與題庫。
+- 驗證：手機寬度（387px）整合測試 25 項全數通過；`vite build` 成功。
+- 進度只存在本機 localStorage，尚未同步 Supabase（與瑞士課相同）。
