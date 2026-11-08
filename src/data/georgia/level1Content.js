@@ -80,10 +80,10 @@ export const GE_LEVEL1_CONTENT = {
         [
           ['Rkatsiteli', '最廣泛種植的白品種，酸度明亮，Kakheti 為主；也用於皮渣接觸的琥珀酒', 'Tsinandali、Gurjaani、Kakheti'],
           ['Kakhuri Mtsvane', 'Kakheti 的白品種，常與 Rkatsiteli 混調', 'Tsinandali、Manavi、Akhmeta'],
-          ['Kisi', 'Kakheti 白品種，常做皮渣接觸', 'Kisi magrani（Magriaani）'],
+          ['Kisi', 'Kakheti 的白品種，列於 Kakheti PDO 的許可品種', 'Kisi magrani（Magriaani）'],
           ['Khikhvi', '白品種，用於強化酒', 'Kardenakhi'],
-          ['Tsolikouri、Tsitska、Krakhuna', '西部 Imereti 的白品種；Tsolikouri 與 Tsitska 通常較輕、較清爽，帶花香與青蘋果', 'Sviri；Tsolikouri 單一品種 Tvishi'],
-          ['Chinuri、Goruli Mtsvane', 'Kartli 白品種', 'Atenuri（氣泡酒）']
+          ['Tsolikouri、Tsitska、Krakhuna', '西部 Imereti 的白品種；Sviri 規格列出這三個品種（可任選，未規定比例）', 'Sviri；Tsolikouri 單一品種的 Tvishi'],
+          ['Chinuri、Goruli Mtsvane', 'Kartli 白品種；Atenuri 規格另允許 Aligoté', 'Atenuri（乾白與氣泡酒）']
         ]
       ),
       info('拼字提醒', '喬治亞文轉寫有多種拼法（如 Mtsvane／Mtsvani），題目與資料的拼字可能不同，要靠發音與對應的 PDO 辨認。'),
@@ -97,12 +97,12 @@ export const GE_LEVEL1_CONTENT = {
     ],
     practice: {
       prompt: '列出 Tsinandali 與 Sviri 使用的白品種，並說明它們分別在東部或西部。',
-      points: ['Tsinandali：Rkatsiteli 與 Kakhuri Mtsvane，位於東部 Kakheti', 'Sviri：Tsolikouri、Tsitska、Krakhuna，位於西部 Imereti']
+      points: ['Tsinandali：至少 85% Rkatsiteli、至多 15% Kakhuri Mtsvane，位於東部 Kakheti', 'Sviri：Tsolikouri、Tsitska、Krakhuna，位於西部 Imereti']
     },
     quiz: [
       { q: '喬治亞最廣泛種植的白品種是？', options: ['Rkatsiteli', 'Tsitska', 'Chinuri', 'Krakhuna'], answer: 0, explain: '各來源都指出 Rkatsiteli 是最廣泛種植的白品種。' },
-      { q: 'Tsinandali 使用哪些品種？', options: ['Saperavi 與 Teliani', 'Rkatsiteli 與 Kakhuri Mtsvane', 'Tsolikouri 與 Tsitska', 'Chinuri 與 Goruli Mtsvane'], answer: 1, explain: 'Tsinandali 是 Kakheti 的乾白，使用 Rkatsiteli 與 Kakhuri Mtsvane。' },
-      { q: 'Atenuri 使用哪些品種，是什麼類型的酒？', options: ['Chinuri 與 Goruli Mtsvane，氣泡酒', 'Saperavi，乾紅', 'Kisi，琥珀酒', 'Tsolikouri，半甜白酒'], answer: 0, explain: 'Atenuri 位於 Shida Kartli，是 Chinuri 與 Goruli Mtsvane 的氣泡白酒。' }
+      { q: 'Tsinandali 使用哪些品種？', options: ['Saperavi 與 Teliani', 'Rkatsiteli 與 Kakhuri Mtsvane', 'Tsolikouri 與 Tsitska', 'Chinuri 與 Goruli Mtsvane'], answer: 1, explain: 'Tsinandali 白酒規格為至少 85% Rkatsiteli、至多 15% Kakhuri Mtsvane；同一名稱另有以 Saperavi 製成的乾紅。' },
+      { q: 'Atenuri 使用哪些品種，包含什麼類型的酒？', options: ['Chinuri、Goruli Mtsvane（或 Aligoté），乾白與氣泡酒', 'Saperavi，乾紅', 'Kisi，琥珀酒', 'Tsolikouri，半甜白酒'], answer: 0, explain: 'Atenuri 位於 Inner（Shida）Kartli，品種為 Chinuri、Goruli Mtsvane 及／或 Aligoté，有乾白也有氣泡與微氣泡酒。' }
     ]
   },
 
@@ -118,7 +118,7 @@ export const GE_LEVEL1_CONTENT = {
           ['Aleksandrouli、Mujuretuli', 'Racha 的紅品種', 'Khvanchkara（半甜紅）'],
           ['Usakhelouri', 'Lechkhumi 的紅品種', 'Okureshis Usakhelouri'],
           ['Ojaleshi', 'Samegrelo 的紅品種', 'Salkhino Ojaleshi'],
-          ['Tavkveri、Shavkapito、Asuretuli Shavi', 'Kartli 的紅品種', 'Bolnisi 及 Asuretuli（Asuretuli shala）']
+          ['Tavkveri、Shavkapito 等', 'Kartli 的本土紅品種', '（品種與 PDO 的配對待官方核對，Level 2 另述）']
         ]
       ),
       info('甜度是風格關鍵', '同樣是 Saperavi，Mukuzani 是<b>乾紅</b>，Kindzmarauli 與 Akhasheni 是<b>半甜紅</b>；Khvanchkara 也是半甜紅，但用的是 Racha 的 Aleksandrouli 與 Mujuretuli。'),
@@ -134,9 +134,9 @@ export const GE_LEVEL1_CONTENT = {
       points: ['兩者都是 Saperavi', 'Mukuzani 為乾紅，Kindzmarauli 為半甜紅']
     },
     quiz: [
-      { q: 'Mukuzani 的品種與類型是？', options: ['Saperavi，乾紅', 'Saperavi，半甜紅', 'Cabernet Sauvignon，乾紅', 'Ojaleshi，乾紅'], answer: 0, explain: 'Mukuzani 是 Kakheti 的 Saperavi 乾紅（兩份名單皆如此列出）。' },
+      { q: 'Mukuzani 的品種與類型是？', options: ['Saperavi，乾紅', 'Saperavi，半甜紅', 'Cabernet Sauvignon，乾紅', 'Ojaleshi，乾紅'], answer: 0, explain: 'Mukuzani 是 Kakheti 的乾紅，品種限 Saperavi（官方規格：100%）。' },
       { q: 'Khvanchkara 位於哪裡，使用什麼品種？', options: ['Kakheti，Saperavi', 'Racha，Aleksandrouli 與 Mujuretuli', 'Imereti，Tsolikouri', 'Kartli，Chinuri'], answer: 1, explain: 'Khvanchkara 位於 Racha，是 Aleksandrouli 與 Mujuretuli 的半甜紅。' },
-      { q: 'Teliani 為什麼特殊？', options: ['它是氣泡酒', '它用 Cabernet Sauvignon，而非本土品種', '它是甜酒', '它是 Imereti 的白酒'], answer: 1, explain: 'Teliani 位於 Kakheti，使用非本土的 Cabernet Sauvignon。' }
+      { q: 'Teliani 為什麼特殊？', options: ['它是氣泡酒', '它用 Cabernet Sauvignon，而非本土品種', '它是甜酒', '它是 Imereti 的白酒'], answer: 1, explain: 'Teliani 位於 Kakheti，品種限 Cabernet Sauvignon（官方規格：100%），為非本土品種。' }
     ]
   },
 
@@ -150,11 +150,11 @@ export const GE_LEVEL1_CONTENT = {
           ['Kakheti', '東部', 'Tsinandali、Gurjaani、Mukuzani、Kindzmarauli、Akhasheni、Teliani'],
           ['Kartli（Shida、Kvemo）', '中部', 'Atenuri（氣泡）、Bolnisi、Okami'],
           ['Imereti', '西部', 'Sviri'],
-          ['Racha-Lechkhumi', '西北部', 'Khvanchkara、Okureshis Usakhelouri'],
+          ['Racha-Lechkhumi', '西北部', 'Khvanchkara、Tvishi、Okureshis Usakhelouri'],
           ['Samegrelo', '西部', 'Salkhino Ojaleshi']
         ]
       ),
-      info('PDO 數字為什麼不能背', '不同網路來源列出的喬治亞 PDO 數量從 28、29、30 到更高不等（取決於統計日期與是否含新近登記者）。Tvishi 的歸屬也有分歧：有的歸在 Imereti，有的歸在 Racha-Lechkhumi（Tsageri 一帶）。<b>考試與題庫只用結構與代表名稱，確切總數待取得官方清單後才寫入。</b>'),
+      info('PDO 數字為什麼不能背', '不同網路來源列出的喬治亞 PDO 數量從 28、29、30 到更高不等（取決於統計日期與是否含新近登記者），官方清單尚未取得，所以<b>總數不寫進課文與題庫</b>。可以確定的是：喬治亞與歐盟（2011 年協定）及英國（UK-Georgia 協定）互相保護 <b>18 個</b>葡萄酒名稱，Tvishi 屬 Lechkhumi（Tsageri 一帶），位於 Racha-Lechkhumi。'),
       mis('「PDO 總數是固定的，背下來就好。」不對：名單會隨登記而增加，且各來源統計口徑不同。')
     ],
     terms: [
@@ -168,7 +168,7 @@ export const GE_LEVEL1_CONTENT = {
     },
     quiz: [
       { q: '下列哪一個 PDO 位於 Racha？', options: ['Khvanchkara', 'Mukuzani', 'Tsinandali', 'Bolnisi'], answer: 0, explain: 'Khvanchkara 位於 Racha 的 Ambrolauri 一帶。' },
-      { q: '下列哪一個 PDO 位於 Kartli 並且是氣泡酒？', options: ['Atenuri', 'Sviri', 'Kindzmarauli', 'Teliani'], answer: 0, explain: 'Atenuri 位於 Shida Kartli，是氣泡白酒。' }
+      { q: '下列哪一個 PDO 位於 Kartli 並且包含氣泡酒？', options: ['Atenuri', 'Sviri', 'Kindzmarauli', 'Teliani'], answer: 0, explain: 'Atenuri 位於 Inner（Shida）Kartli，除乾白外也生產氣泡與微氣泡酒。' }
     ]
   },
 

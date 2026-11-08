@@ -2,7 +2,7 @@
   <CourseHomeLayout :theme="theme" region-name="Georgia" :breadcrumb-country="'喬治亞'">
     <RegionHero
       :icon="theme.icon"
-      tagline="葡萄酒的搖籃・WSET Diploma D3 備考"
+      tagline="葡萄酒的搖籃・延伸課程（不在 D3 國家清單）"
       title="喬治亞葡萄酒"
       subtitle="Georgia · Six regions · Cantonal AOC"
       description="從八千年前的陶罐釀酒到今日的 PDO 制度：認識 qvevri 與皮渣接觸白酒、本土品種的多樣性，以及東部 Kakheti 與西部各產區的風格差異。"
@@ -26,7 +26,7 @@
 
     <LevelTrack
       title="選擇課程階段"
-      subtitle="Level 1 認識喬治亞 → Level 2 產區與釀法 → Level 3 Diploma 精修。"
+      subtitle="Level 1 認識喬治亞 → Level 2 產區與釀法 → Level 3 進階精修。"
       :levels="levelData"
       :max-columns="3"
       @enter="(n) => emit('enterLevel', n)"
@@ -103,7 +103,7 @@ const levelData = computed(() => [
     description: 'Qvevri 與皮渣接觸、Kakheti、Kartli、Imereti 與 Racha，以及 PDO 制度。',
     tags: ['Qvevri', 'Kakheti', 'Imereti', 'PDO'], modules: geLevels.level2.modules.length,
     lessons: geLevelIds(2).length, progress: levelProgress(2), unlocked: true },
-  { number: 3, title: 'Diploma 精修', subtitle: '備考進階', icon: '🏆',
+  { number: 3, title: '進階精修', subtitle: '深入論述', icon: '🏆',
     description: '栽培釀造深度、風土與品種剖析、橘酒盲品、產業與論述。',
     tags: ['橘酒', '風土', '市場', '論述'], modules: geLevels.level3.modules.length,
     lessons: geLevelIds(3).length, progress: levelProgress(3), unlocked: true }
@@ -111,7 +111,7 @@ const levelData = computed(() => [
 
 const overviewItems = [
   { icon: '🏺', title: '葡萄酒的搖籃', desc: '考古證據指向約八千年前的陶罐釀酒；qvevri 釀法於 2013 年列入 UNESCO 非物質文化遺產。' },
-  { icon: '🍊', title: '皮渣接觸白酒', desc: '白葡萄連皮籽發酵的琥珀色酒，是 Diploma 盲品與論述的重要題材。' },
+  { icon: '🍊', title: '皮渣接觸白酒', desc: '白葡萄連皮籽發酵的琥珀色酒，是盲品與論述的重要題材。' },
   { icon: '🧬', title: '本土品種多樣性', desc: '數百種本土品種，與國際品種為主的產區形成對照。' },
   { icon: '📜', title: '非歐盟的原產地制度', desc: '喬治亞自有 PDO 制度，部分名稱受歐盟協定保護，是對照歐盟 PDO／PGI 的好案例。' }
 ]

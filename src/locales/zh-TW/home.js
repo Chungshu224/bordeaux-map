@@ -220,14 +220,14 @@ export default {
     },
     georgia: {
       title: '喬治亞葡萄酒',
-      desc: '葡萄酒的搖籃：從八千年前的陶罐釀酒、qvevri 與皮渣接觸白酒，到本土品種與 PDO 制度，三階段掌握喬治亞，並以 WSET Diploma D3 為備考目標。',
+      desc: '葡萄酒的搖籃：從八千年前的陶罐釀酒、qvevri 與皮渣接觸白酒，到本土品種與 PDO 制度，三階段掌握喬治亞，作為 WSET 以外的延伸視野。',
       s1label: '年釀酒<br>歷史',
       s2label: 'UNESCO<br>2013',
       s3label: '系統<br>課程',
       s4label: '學習<br>階段',
       f1: '皮渣接觸白酒',
       f2: '本土品種',
-      f3: 'D3 備考',
+      f3: '延伸課程',
     },
     greece: {
       title: '希臘葡萄酒',

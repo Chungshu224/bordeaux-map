@@ -232,14 +232,14 @@ export default {
     },
     georgia: {
       title: 'Georgian Wine',
-      desc: 'The cradle of wine: from 8,000-year-old clay-vessel winemaking, qvevri and skin-contact whites to indigenous varieties and the PDO system, in three stages aimed at WSET Diploma D3.',
+      desc: 'The cradle of wine: from 8,000-year-old clay-vessel winemaking, qvevri and skin-contact whites to indigenous varieties and the PDO system, in three stages as an extension beyond the WSET syllabus.',
       s1label: 'Years of<br>winemaking',
       s2label: 'UNESCO<br>2013',
       s3label: 'Course<br>lessons',
       s4label: 'Learning<br>stages',
       f1: 'Skin-contact whites',
       f2: 'Indigenous varieties',
-      f3: 'D3 preparation',
+      f3: 'Extension course',
     },
     greece: {
       title: 'Greek Wine',

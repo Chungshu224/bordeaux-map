@@ -1,11 +1,11 @@
-// 喬治亞葡萄酒課程：3 階段 21 課（WSET Diploma D3 備考導向）
+// 喬治亞葡萄酒課程：3 階段 21 課（延伸課程：喬治亞不在 WSET D3 的國家清單內，詳見 EASTERNEUROPE_FACT_CHECK.md）
 // 課名、順序以 GEORGIA_COURSE_FRAMEWORK.md 第 2 節為準；事實查證見 EASTERNEUROPE_FACT_CHECK.md（喬治亞段）。
 // 本課程不販售、僅供管理員使用。
 
 export const GE_LEVEL_META = {
   1: { title: 'Level 1 - 認識喬治亞葡萄酒', color: '#A64B2A', description: '歷史與酒文化、地理氣候、白與紅本土品種、產區總覽' },
   2: { title: 'Level 2 - 產區與釀法', color: '#8A3A20', description: 'Qvevri 與皮渣接觸、Kakheti、Kartli、Imereti、Racha-Lechkhumi 與 PDO 制度' },
-  3: { title: 'Level 3 - Diploma 精修', color: '#6E2E18', description: '栽培釀造深度、風土與品種剖析、橘酒盲品、產業與 Diploma 式論述' }
+  3: { title: 'Level 3 - 進階精修', color: '#6E2E18', description: '栽培釀造深度、風土與品種剖析、橘酒盲品、產業與 Diploma 式論述' }
 }
 
 export const geLevels = {
@@ -38,11 +38,11 @@ export const geLevels = {
       { id: 'GEM5', title: '其他產區、法規與評量', lessonIds: ['ge-l2-5', 'ge-l2-6', 'ge-l2-7', 'ge-l2-8'] }
     ],
     lessons: [
-      { id: 'ge-l2-1', title: 'Qvevri 釀造法', description: '構造、埋藏、UNESCO 與皮渣接觸', duration: 22, keyPoints: ['Qvevri 的構造與用途', 'Kakhetian 與 Imeretian 皮渣接觸程度的差異'] },
-      { id: 'ge-l2-2', title: '傳統、歐式與現代釀法', description: '三種風格路線與其酒款特徵', duration: 22, keyPoints: ['各釀法對酒款風格的影響'] },
+      { id: 'ge-l2-1', title: 'Qvevri 釀造法', description: '構造、埋藏、UNESCO 與皮渣接觸', duration: 22, keyPoints: ['Qvevri 的構造與入罐內容（UNESCO 描述）', 'OIV 對「白酒浸皮」的定義與最短浸皮時間'] },
+      { id: 'ge-l2-2', title: '釀法與官方規格', description: '規格怎麼管釀法：陳年、不完全發酵與酒色', duration: 22, keyPoints: ['規格管什麼、不管什麼', '不能只從 PDO 名稱判斷是否用 qvevri'] },
       { id: 'ge-l2-3', title: 'Kakheti I：地理與白酒 PDO', description: 'Alazani 河谷、Tsinandali、Gurjaani、Vazisubani 等', duration: 24, keyPoints: ['Kakheti 的地理區分', '主要白酒 PDO 的品種'] },
       { id: 'ge-l2-4', title: 'Kakheti II：紅酒 PDO', description: 'Mukuzani、Kindzmarauli、Akhasheni、Teliani 等', duration: 24, keyPoints: ['乾紅與半甜紅 PDO 的差異', 'Teliani 為何特殊'] },
-      { id: 'ge-l2-5', title: 'Kartli 與其他產區', description: 'Kartli 的 Atenuri、Bolnisi、Okami 等', duration: 20, keyPoints: ['Kartli 的 PDO 與酒款類型'] },
+      { id: 'ge-l2-5', title: 'Kartli 與其他產區', description: 'Atenuri 的乾白與氣泡酒規格', duration: 20, keyPoints: ['Atenuri 的品種、氣泡做法與最短陳年'] },
       { id: 'ge-l2-6', title: 'Imereti、Racha-Lechkhumi 與西部', description: 'Sviri、Tvishi、Khvanchkara、Salkhino Ojaleshi', duration: 22, keyPoints: ['西部白與紅 PDO', 'Khvanchkara 的品種與風格'] },
       { id: 'ge-l2-7', title: '法規與認證', description: 'PDO 制度、National Wine Agency 與歐盟協定', duration: 20, keyPoints: ['制度由誰管理', '歐盟保護與本國 PDO 的關係'] },
       { id: 'ge-l2-8', title: 'Level 2 評量', description: '整合 Level 2，通過測驗', duration: 28, keyPoints: ['10 題評量（及格 60）'] }
@@ -60,7 +60,7 @@ export const geLevels = {
       { id: 'ge-l3-3', title: '皮渣接觸白酒與盲品辨識', description: '橘酒的視覺、香氣、單寧與結論用語', duration: 24, keyPoints: ['辨識皮渣接觸白酒的線索'] },
       { id: 'ge-l3-4', title: '產業、出口與市場', description: '出口市場結構與品質轉型', duration: 22, keyPoints: ['成本、規模與市場的因果'] },
       { id: 'ge-l3-5', title: '與其他古老產區比較', description: '東歐、地中海與喬治亞的對照', duration: 22, keyPoints: ['找出可比較的軸向'] },
-      { id: 'ge-l3-6', title: 'Diploma 品飲與論述', description: 'D3 題型與答題架構', duration: 25, keyPoints: ['用因果鏈作答'] },
+      { id: 'ge-l3-6', title: '品飲與論述', description: '品飲描述與因果式論述的答題架構', duration: 25, keyPoints: ['用因果鏈作答'] },
       { id: 'ge-l3-7', title: 'Level 3 綜合評量', description: '整合三階段，通過測驗', duration: 30, keyPoints: ['12 題綜合評量（及格 60）'] }
     ]
   }
