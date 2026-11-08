@@ -43,3 +43,8 @@
 4. 保加利亞：PDO 實際數量與出口比例（現行年度）。
 5. 克羅埃西亞：PDO／PGI 現行清單、分區方式。
 6. 摩爾多瓦：GI 制度（Codru、Ștefan Vodă、Valul lui Traian 等）——需查證。
+
+## 邊界資料可行性（2026-11-08）
+- Bianchi et al. (2022) 歐盟 PDO 資料集（Figshare，CC0）已下載檢查：SI 14、HR 18、RO 40、BG 52 筆皆有幾何。HR 無 Postup；RO 有重複名稱。
+- 喬治亞、摩爾多瓦非歐盟，無該資料；改用 OSM 行政區近似（見 `GEORGIA_COURSE_FRAMEWORK.md` §4）。喬治亞 Mukuzani 僅有點位，不能當法定邊界。
+- 決定：喬治亞拆為獨立課程；摩爾多瓦留在「東歐與巴爾幹」。
