@@ -73,3 +73,6 @@ A 骨架 → B Level 1 → C Level 2（先解除 ⚠）→ D Level 3 與模擬�
 
 ## 8. 階段 A 完成紀錄（2026-11-09）
 骨架已建於 `feat/easterneurope-course`：`/easterneurope`（管理員專屬）、21 課課表、首頁卡片（歐洲分組）、zh-TW／en／ja 文字、`NOT_FOR_SALE_IDS`、migration `20261117000000_add_easterneurope_course.sql`（未套用）、煙霧測試 19 項通過。課文未填；地圖頁待階段 E。
+
+## 9. 階段 B 完成紀錄（2026-11-09）
+Level 1 六課課文與測驗已寫入（`src/data/easterneurope/level1Content.js`），評量 8 題、及格 60。只用概念通則與第五輪已核對的官方事實；品種親緣標「依文獻／常見說法」；不寫面積、PDO 總數、糖度 g/L、出口比例。煙霧測試新增 Level 1 項目，全數通過。
