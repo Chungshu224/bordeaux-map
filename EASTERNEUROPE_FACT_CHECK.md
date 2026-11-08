@@ -137,3 +137,9 @@
 1. 可作為課文骨架的已核對事實：斯洛維尼亞三區九分區；摩爾多瓦三個葡萄酒 PGI；羅馬尼亞 CMD／CT／CIB 的定義；克羅埃西亞 PDO 約 18 個（報導）。
 2. 以下不寫成事實，題庫也不出：羅馬尼亞糖度 g/L、羅馬尼亞與保加利亞的 PDO 總數、面積、摩爾多瓦面積、Dingač／Postup 保護年份。
 3. 需要時可請你提供 WSET 教材或 ONVPV／IAVV 官方清單，我再補。
+
+## 第六輪（2026-11-09）：Level 2 新增的官方來源
+- 克羅埃西亞：Pravilnik o zemljopisnim područjima uzgoja vinove loze（NN 76/2019，取代 2012 年版）列**四個**葡萄栽培大區：Slavonija i hrvatsko Podunavlje、Središnja bregovita Hrvatska、Hrvatska Istra i Kvarner、Dalmacija，及其次區與分區 ✅（此前二手來源的「三大區」說法以官方為準；其後是否又有修訂未能確認）。
+- 保加利亞：歐盟 eAmbrosia 的 PGI「Дунавска равнина」產品規格 ✅ — 範圍（北 Danube、南 Stara Planina 山麓、西 Timok、東黑海）、允許品種、傳統用語、至少 85% 原料、釀造地點、管控機構 ИАЛВ。⚠ 文件內有編寫疵（感官段落寫成 Thracian Lowland；產量數字存疑），課文不引用產量。Thracian Lowlands 的規格尚未讀取。
+- 斯洛維尼亞：2003 年規則已歸檔，列 Podravje 七個分區，與 gov.si 現行九分區不同，課文以現行為準。
+- 「其他國家」一課為概況，未逐項對官方出處，題庫只問歐盟／非歐盟與國家—地區對應。

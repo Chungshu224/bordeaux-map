@@ -76,3 +76,6 @@ A 骨架 → B Level 1 → C Level 2（先解除 ⚠）→ D Level 3 與模擬�
 
 ## 9. 階段 B 完成紀錄（2026-11-09）
 Level 1 六課課文與測驗已寫入（`src/data/easterneurope/level1Content.js`），評量 8 題、及格 60。只用概念通則與第五輪已核對的官方事實；品種親緣標「依文獻／常見說法」；不寫面積、PDO 總數、糖度 g/L、出口比例。煙霧測試新增 Level 1 項目，全數通過。
+
+## 10. 階段 C 完成紀錄（2026-11-09）
+Level 2 八課課文與測驗已寫入（`level2Content.js`），評量 10 題、及格 60。克羅埃西亞改為官方四大區；保加利亞以 Danubian Plain PGI 規格為例。煙霧測試新增 Level 2 項目，全數通過。

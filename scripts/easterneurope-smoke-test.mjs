@@ -120,6 +120,22 @@ await p.waitForTimeout(200)
 check('全對後完成鈕解鎖', await p.locator('.dtl-primary').isEnabled())
 await p.locator('.dtl-primary').click(); await p.waitForTimeout(300)
 check('完成後該課打勾', (await p.locator('.dtl-lesson.done').count()) >= 1)
+
+// Level 2：八課皆有內容與測驗，評量 10 題、及格 60
+check('Level 2 八課皆有內容', Object.keys(EE_CONTENT).filter(id => id.startsWith('ee-l2-')).length === 8)
+check('Level 2 評量為 10 題、及格 60', EE_CONTENT['ee-l2-8'].quiz.length === 10 && EE_CONTENT['ee-l2-8'].passScore === 60)
+await p.goto(`${BASE}/easterneurope`); await settle(p, 800)
+await p.locator('.lc-btn').nth(1).click(); await settle(p, 500)
+let l2Ok = 0, l2Over = 0
+for (let i = 0; i < 8; i++) {
+  await p.locator('.dtl-lesson').nth(i).click(); await p.waitForTimeout(200)
+  if ((await p.locator('.dtl-badge').count()) === 0 && (await p.locator('.dq').count()) === 1) l2Ok++
+  if ((await overflow(p)) > 1) l2Over++
+  if (i < 7) await p.locator('.dtl-link').click()
+  await p.waitForTimeout(100)
+}
+check('Level 2 八課無「施工中」且有測驗', l2Ok === 8, `${l2Ok}/8`)
+check('Level 2 八課無橫向溢出', l2Over === 0, `${l2Over}`)
 check('頁面無 JS 錯誤', errors.length === 0, errors.slice(0, 2).join(' | '))
 await browser.close()
 console.log(failed ? `\n${failed} 項失敗` : '\n全部通過')

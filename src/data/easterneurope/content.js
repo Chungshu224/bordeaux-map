@@ -1,5 +1,6 @@
 // 東歐與巴爾幹課程課文總表（依課程 id 查）
 import { EE_LEVEL1_CONTENT } from './level1Content.js'
+import { EE_LEVEL2_CONTENT } from './level2Content.js'
 
 // 正解位置依題目序固定輪轉（結果固定、非隨機），讓正解分散在各選項
 function spread(content) {
@@ -19,4 +20,4 @@ function spread(content) {
   return out
 }
 
-export const EE_CONTENT = spread({ ...EE_LEVEL1_CONTENT })
+export const EE_CONTENT = spread({ ...EE_LEVEL1_CONTENT, ...EE_LEVEL2_CONTENT })
