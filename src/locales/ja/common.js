@@ -95,6 +95,7 @@ export default {
     sommelier:      'ソムリエ実務',
     morocco:        "モロッコ",
     tunisia:        "チュニジア",
+    uruguay:        "ウルグアイ",
     provence:         'プロヴァンスとコルシカ',
     canada:         'カナダ',
     languedoc:      'ラングドック＝ルーション',

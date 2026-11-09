@@ -95,6 +95,7 @@ export default {
     sommelier:      'Sommelier Practice',
     morocco:        "Morocco",
     tunisia:        "Tunisia",
+    uruguay:        "Uruguay",
     provence:         'Provence and Corsica',
     canada:         'Canada',
     languedoc:      'Languedoc-Roussillon',
