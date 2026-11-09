@@ -648,6 +648,49 @@
             </div>
           </div>
 
+          <!-- ── Eastern Europe（目前僅管理員可見；日後開放時：從 ADMIN_ONLY_COURSES 移除，並在 courses 設 active／show_on_home）── -->
+          <div v-if="courseShowHome['easterneurope'] || isAdmin" class="course-card easterneurope">
+            <div :class="['card-status', courseStatuses.easterneurope ? 'active' : 'planning']">
+              {{ isAdmin ? $t('home.courses.common.statusAdmin') : courseStatuses.easterneurope ? $t('home.courses.common.statusActive') : $t('home.courses.common.statusPlanning') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🏔️</div>
+              <div class="card-region">Slovenia · Croatia · Romania · Bulgaria · Moldova</div>
+              <h3 class="card-title">{{ $t('home.courses.easterneurope.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.easterneurope.desc') }}</p>
+            </div>
+            <div class="course-preview-strip easterneurope-strip">
+              <div class="cp-stat">
+                <span class="cp-num">5+1</span>
+                <span class="cp-label" v-html="$t('home.courses.easterneurope.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">PDO</span>
+                <span class="cp-label" v-html="$t('home.courses.easterneurope.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">21</span>
+                <span class="cp-label" v-html="$t('home.courses.easterneurope.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">3</span>
+                <span class="cp-label" v-html="$t('home.courses.easterneurope.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features easterneurope-features">
+              <span class="cpf-item easterneurope-tag">{{ $t('home.courses.easterneurope.f1') }}</span>
+              <span class="cpf-item easterneurope-tag">{{ $t('home.courses.easterneurope.f2') }}</span>
+              <span class="cpf-item easterneurope-tag">{{ $t('home.courses.easterneurope.f3') }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button v-if="isAdmin || courseStatuses.easterneurope" class="btn-enter-course" @click="router.push('/easterneurope')">{{ isAdmin ? $t('home.courses.common.enterAdmin') : $t('home.courses.common.explore') }} →</button>
+              <span v-else class="planning-cta">{{ $t('home.courses.common.comingSoon') }}</span>
+            </div>
+          </div>
+
           <!-- ── Greece（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card greece">
             <div :class="['card-status', courseStatuses.greece ? 'active' : 'planning']">
@@ -1927,6 +1970,7 @@ const courseConfig = computed(() => [
   { id: 'hungary',    label: t('home.courses.labels.hungary'), route: '/hungary',          group: 'europe'   },
   { id: 'switzerland', label: t('home.courses.labels.switzerland'), route: '/switzerland', group: 'europe' },
   { id: 'georgia', label: t('home.courses.labels.georgia'), route: '/georgia', group: 'europe' },
+  { id: 'easterneurope', label: t('home.courses.labels.easterneurope'), route: '/easterneurope', group: 'europe' },
   { id: 'greece',     label: t('home.courses.labels.greece'), route: '/greece',           group: 'europe'   },
   { id: 'rhone',      label: t('home.courses.labels.rhone'), route: '/rhone',            group: 'france'   },
   { id: 'champagne',  label: t('home.courses.labels.champagne'), route: '/champagne',        group: 'france'   },
@@ -1955,12 +1999,12 @@ const pricing = ref({
   premium: { monthly: 590,  yearly: 3600 }
 })
 // 各課程上架狀態（預設 active=true 防止加載前閃爍）
-const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, switzerland: false, georgia: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
+const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain: true, germany: true, portugal: true, australia: true, newzealand: true, loire: true, california: true, hungary: false, switzerland: false, georgia: false, easterneurope: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: true })
 // 各課程首頁顯示狀態（保守預設：只有波爾多，其餘等 DB 載入後決定）
-const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, switzerland: false, georgia: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
+const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, switzerland: false, georgia: false, easterneurope: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified', 'd1', 'd2', 'switzerland', 'georgia']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified', 'd1', 'd2', 'switzerland', 'georgia', 'easterneurope']
 
 
 async function loadCourseData() {
@@ -2927,6 +2971,11 @@ onMounted(async () => {
 .georgia-strip .cp-label { color: #6E2E18; }
 .georgia-strip .cp-divider { background: rgba(166,75,42,0.25); }
 .georgia-features .georgia-tag { color: #A64B2A; background: rgba(166,75,42,0.06); border-color: rgba(166,75,42,0.18); }
+.easterneurope-strip { background: rgba(95,107,74,0.07); border-color: rgba(95,107,74,0.22); }
+.easterneurope-strip .cp-num { color: #5F6B4A; font-size: 0.9rem; }
+.easterneurope-strip .cp-label { color: #38422B; }
+.easterneurope-strip .cp-divider { background: rgba(95,107,74,0.25); }
+.easterneurope-features .easterneurope-tag { color: #5F6B4A; background: rgba(95,107,74,0.06); border-color: rgba(95,107,74,0.18); }
 .hungary-btn {
   background: linear-gradient(135deg, #2e7d32, #1b5e20);
   color: #fff;

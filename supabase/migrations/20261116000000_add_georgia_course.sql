@@ -20,7 +20,7 @@ VALUES (
   0, 0,
   0, 0,
   0, 0,
-  '喬治亞葡萄酒專論（WSET Diploma D3 備考導向）：歷史與酒文化、地理氣候、本土白與紅品種、qvevri 與皮渣接觸、Kakheti／Kartli／Imereti／Racha 產區與 PDO 制度、產業與論述，共 3 階段 21 課。不販售，僅供管理員閱讀。',
+  '喬治亞葡萄酒延伸課程：歷史與酒文化、地理氣候、本土白與紅品種、qvevri 與皮渣接觸、Kakheti／Kartli／Imereti／Racha 產區與 PDO 制度、產業與論述，共 3 階段 21 課。不販售，僅供管理員閱讀。',
   false,
   false
 )

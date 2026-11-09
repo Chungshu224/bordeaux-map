@@ -116,3 +116,36 @@
 - 出口：2024 年約 9,500 萬公升、72 國、約 2.76 億美元（國家葡萄酒署，agenda.ge 2025-01-20）；2025 年約 2.68 億美元（−3%）、數量 −5.1%、俄羅斯占約 63.7%（bm.ge 2026-01-21）。
 - 歷史：2006 年前約 90% 銷俄、2006–2013 俄羅斯禁運（Grape Collective、Wine Business International）。1985 年葡萄園縮減至四分之一為單一受訪者說法，未作為題目。
 - 不同來源的俄羅斯占比年份與口徑不同，課文一律標年份。
+
+## 東歐官方來源核對（第五輪，2026-11-09）
+| 國家 | 項目 | 結果 | 來源 | 狀態 |
+|---|---|---|---|---|
+| 斯洛維尼亞 | 三區（Podravje、Posavje、Primorska） | 法規與 gov.si 一致 | Uradni list RS 69/2003 第 2 條（歸檔版）＋gov.si | ✅ |
+| 斯洛維尼亞 | 分區 | 2003 年規則列：Podravje 七個、Posavje 三個（Bizeljsko-sremiški、Dolenjska、Bela krajina）、Primorska 四個（Goriška Brda、Vipavska dolina、Kras、Koprski）；該文已標歸檔，**與 gov.si 現行九分區（含 Prekmurje、Štajerska Slovenija、Slovenska Istra）不同**，課文用 gov.si 現行版，不引 2003 版 | Uradni list（歸檔）、gov.si | ✅ 現行／⚠ 歷史版不同 |
+| 克羅埃西亞 | PDO 數 | Ponikve 為歐盟登記的第 17 個克國葡萄酒 PDO（2021-02）；Muškat momjanski 報導為第 18 個（登記日未取得）。與 Bianchi 資料集 18 筆相符 | hrturizam.hr（報導，非官方公報） | ⚠ 報導來源；歐盟 eAmbrosia 未能直接讀取 |
+| 克羅埃西亞 | 首批保護 Dingač 1961、Postup 1967 | 未取得官方出處 | — | ❌ 不入題庫 |
+| 羅馬尼亞 | 八大葡萄栽培區 | 法律 164/2015 第 53(5) 條列：Crișana 與 Maramureș、Dealurile Banatului、Podișul Transilvaniei、Colinele Dobrogei、Terasele Dunării、sandy and favorable lands of southern Romania（Plaiurile Olteniei 之外之沙地）、Dealurile Moldovei、Dealurile Munteniei 與 Olteniei。該條原意為議會代表分配，非區域定義，名稱以官方 ONVPV 為準 | legeaz.net（法律全文） | ⚠ 名稱可用、細節待 ONVPV |
+| 羅馬尼亞 | CMD／CT／CIB | 法律第 34 條定義三者為「完全成熟／晚採／貴腐採收」；**g/L 糖度門檻不在法律內文，各 DOC 規格才有** | 法律 164/2015；gov.uk 傳統用語登記 | ✅ 定義／❌ 187／220／240 g/L 未得官方確認，不入課文 |
+| 羅馬尼亞 | DOC 33／IG 12、面積約 187,000 ha | 僅 WineWithSeth | — | ⚠ 不入題庫 |
+| 保加利亞 | 52 PDO、2 PGI（Danubian Plain、Thracian Lowlands） | 兩份二手來源一致，無官方出處；Wine Law 2005 整併為兩大區（單一來源） | winewithseth、winedrinker | ⚠ 不入題庫，課文只述兩大 PGI |
+| 摩爾多瓦 | 葡萄酒 PGI | **三個**：Valul lui Traian、Ștefan-Vodă、Codru；農業部 2016-01-28 第 12 號命令劃定葡萄種植區，依 2006 年第 57-XVI 號葡萄與葡萄酒法 | WIPO Lex（官方法規） | ✅ |
+| 摩爾多瓦 | Divin | 烈酒（葡萄白蘭地）地理標示，非葡萄酒產區 | WineWithSeth | ⚠ |
+| 摩爾多瓦 | 面積 | 148,500 ha（含 40,700 ha 農戶園）出自 2001–2005 年資料，已過時；各區 60,000／43,000／10,000 ha 為二手 | Wikipedia、WineWithSeth | ❌ 不入題庫 |
+| 摩爾多瓦 | 俄羅斯禁運 | 2006 年（約占出口八成）、2013 年 9 月，Wikipedia 引 Euractiv、Decanter | Wikipedia | ⚠ 方向可用，比例不入題庫 |
+
+**結論**
+1. 可作為課文骨架的已核對事實：斯洛維尼亞三區九分區；摩爾多瓦三個葡萄酒 PGI；羅馬尼亞 CMD／CT／CIB 的定義；克羅埃西亞 PDO 約 18 個（報導）。
+2. 以下不寫成事實，題庫也不出：羅馬尼亞糖度 g/L、羅馬尼亞與保加利亞的 PDO 總數、面積、摩爾多瓦面積、Dingač／Postup 保護年份。
+3. 需要時可請你提供 WSET 教材或 ONVPV／IAVV 官方清單，我再補。
+
+## 第六輪（2026-11-09）：Level 2 新增的官方來源
+- 克羅埃西亞：Pravilnik o zemljopisnim područjima uzgoja vinove loze（NN 76/2019，取代 2012 年版）列**四個**葡萄栽培大區：Slavonija i hrvatsko Podunavlje、Središnja bregovita Hrvatska、Hrvatska Istra i Kvarner、Dalmacija，及其次區與分區 ✅（此前二手來源的「三大區」說法以官方為準；其後是否又有修訂未能確認）。
+- 保加利亞：歐盟 eAmbrosia 的 PGI「Дунавска равнина」產品規格 ✅ — 範圍（北 Danube、南 Stara Planina 山麓、西 Timok、東黑海）、允許品種、傳統用語、至少 85% 原料、釀造地點、管控機構 ИАЛВ。⚠ 文件內有編寫疵（感官段落寫成 Thracian Lowland；產量數字存疑），課文不引用產量。Thracian Lowlands 的規格尚未讀取。
+- 斯洛維尼亞：2003 年規則已歸檔，列 Podravje 七個分區，與 gov.si 現行九分區不同，課文以現行為準。
+- 「其他國家」一課為概況，未逐項對官方出處，題庫只問歐盟／非歐盟與國家—地區對應。
+
+## 第七輪（2026-11-09）：Level 3 數據來源
+- 摩爾多瓦 2025：葡萄酒銷往 70 個國家、127 家出口商；歐洲占出口金額 60%、獨立國協 24%；出口量比五年平均高 10%、比十年平均高 23%（國家葡萄與葡萄酒局 ONVV 局長說法，經 moldovalive.md 2026-04-09 報導）。報導未提供絕對金額與個別國家占比，課文不寫。
+- 2006、2013 年俄羅斯禁令：Wikipedia（Moldovan wine）引 Euractiv、Decanter；比例（2006 年前約 80%）各來源不同，不入課文。
+- 喬治亞對照數字取自喬治亞課程（bm.ge 2026-01-21）。
+- Level 3 的因果鏈、盲品推論皆標「推論」，不是官方規格。

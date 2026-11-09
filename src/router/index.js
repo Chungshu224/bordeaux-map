@@ -207,6 +207,14 @@ const routes = [
     meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏺 喬治亞葡萄酒 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
   },
 
+  // ─── 東歐與巴爾幹葡萄酒課程（僅管理員、不販售）──────────────────────────────────
+  {
+    path: '/easterneurope',
+    name: 'EasternEurope',
+    component: () => import('../components/easterneurope/EasterEuropePage.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏔️ 東歐與巴爾幹葡萄酒 · 侍酒師的筆記本' } // 永久管理員專屬，不販售
+  },
+
   // ─── 法國隆河葡萄酒課程（框架版，僅管理員可見）──────────────────────────────────
   {
     path: '/rhone',
