@@ -304,6 +304,18 @@ const routes = [
     path: '/morocco/course',
     redirect: '/morocco'
   },
+  // ─── 突尼西亞課程（僅管理員可見）─────────────────────────────
+  {
+    path: '/tunisia',
+    name: 'Tunisia',
+    component: () => import('../components/tunisia/TunisiaPage.vue'),
+    // 公開時移除 requiresAdmin（並從 PlatformHome 的 ADMIN_ONLY_COURSES 移除 'tunisia'）
+    meta: { requiresAuth: true, requiresAdmin: true, minimumTier: 'free', title: '🏛️ 突尼西亞 · 侍酒師的筆記本' }
+  },
+  {
+    path: '/tunisia/course',
+    redirect: '/tunisia'
+  },
   // ─── 侍酒師實務課程（框架版，僅管理員可見）──────────────────────────────────────────
   {
     path: '/sommelier',
@@ -571,6 +583,7 @@ const COURSE_ACCESS_RULES = {
   Diploma: { courseId: 'diploma', minimumTier: 'free' },
   Sommelier: { courseId: 'sommelier', minimumTier: 'free' },
   Morocco: { courseId: 'morocco', minimumTier: 'free' },
+  Tunisia: { courseId: 'tunisia', minimumTier: 'free' },
   Provence: { courseId: 'provence', minimumTier: 'free' },
   Canada: { courseId: 'canada', minimumTier: 'free' },
   Languedoc: { courseId: 'languedoc', minimumTier: 'free' },

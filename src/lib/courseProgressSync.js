@@ -380,6 +380,24 @@ export async function loadAndMergeMoroccoProgress(userId) {
   return true
 }
 
+// ─── Tunisia 突尼西亞 ───────────────────────────────────────────────────
+// Tunisia 使用 store state + localStorage，加 Supabase 同步（與 Brandy 同模式）
+export const saveTunisiaLesson = (userId, lessonId) => upsertLesson(userId, 'tunisia', lessonId)
+
+export async function loadAndMergeTunisiaProgress(userId) {
+  const rows = await fetchRows(userId, 'tunisia')
+  if (!rows.length) return false
+  const remote = rows.map(r => r.module_id)
+  const STORAGE_KEY = `tunisia-wine-academy-progress:${userId}`
+  const raw = localStorage.getItem(STORAGE_KEY)
+  const local = raw ? JSON.parse(raw) : { completedLessons: [], userProgress: {} }
+  const merged = Array.from(new Set([...(local.completedLessons || []), ...remote]))
+  if (merged.length === (local.completedLessons || []).length) return false
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...local, completedLessons: merged }))
+  console.log('[tunisiaSync] ✅ synced')
+  return true
+}
+
 // ─── Sommelier 侍酒師實務 ───────────────────────────────────────────────────
 // Sommelier 使用 store state + localStorage，加 Supabase 同步（與 Brandy 同模式）
 export const saveSommelierLesson = (userId, lessonId) => upsertLesson(userId, 'sommelier', lessonId)
