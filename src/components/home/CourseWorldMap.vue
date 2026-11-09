@@ -86,6 +86,7 @@ const GEO = {
   california: { ll: [-122.4, 38.5], color: '#E08A1E' },
   canada:     { ll: [-119.6, 49.5], color: '#C0272D' },
   morocco:    { ll: [-5.5, 33.9],   color: '#C1272D' },
+  tunisia:    { ll: [10.2, 36.7],   color: '#B5121B' },
   argentina:  { ll: [-68.8, -33.3], color: '#4C9BD5' },
   chile:      { ll: [-71.2, -34.5], color: '#B8322F' },
   southafrica:{ ll: [18.8, -33.9],  color: '#3E8E41' },

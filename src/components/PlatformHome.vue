@@ -990,6 +990,48 @@
             </div>
           </div>
 
+          <!-- ── 突尼西亞（僅管理員可見，上線前預覽）── -->
+          <div v-if="isAdmin" class="course-card tunisia">
+            <div :class="['card-status', courseStatuses.tunisia ? 'active' : 'planning']">
+              {{ $t('home.courses.common.statusAdmin') }}
+            </div>
+            <div class="card-hero">
+              <div class="card-icon">🏛️</div>
+              <div class="card-region">Cap Bon · Mornag · Muscat de Kélibia</div>
+              <h3 class="card-title">{{ $t('home.courses.tunisia.title') }}</h3>
+              <p class="card-desc">{{ $t('home.courses.tunisia.desc') }}</p>
+            </div>
+            <div class="course-preview-strip tunisia-strip">
+              <div class="cp-stat">
+                <span class="cp-num">7</span>
+                <span class="cp-label" v-html="$t('home.courses.tunisia.s1label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">1958</span>
+                <span class="cp-label" v-html="$t('home.courses.tunisia.s2label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">🌼</span>
+                <span class="cp-label" v-html="$t('home.courses.tunisia.s3label')"></span>
+              </div>
+              <div class="cp-divider"></div>
+              <div class="cp-stat">
+                <span class="cp-num">📜</span>
+                <span class="cp-label" v-html="$t('home.courses.tunisia.s4label')"></span>
+              </div>
+            </div>
+            <div class="course-preview-features tunisia-features">
+              <span class="cpf-item tunisia-tag">{{ ck($t('home.courses.tunisia.f1')) }}</span>
+              <span class="cpf-item tunisia-tag">{{ ck($t('home.courses.tunisia.f2')) }}</span>
+              <span class="cpf-item tunisia-tag">{{ ck($t('home.courses.tunisia.f3')) }}</span>
+            </div>
+            <div class="card-enter-cta">
+              <button class="btn-enter-course" @click="router.push('/tunisia')">{{ $t('home.courses.common.enterAdmin') }} →</button>
+            </div>
+          </div>
+
           <!-- ── 侍酒師實務（僅管理員可見，上線前預覽）── -->
           <div v-if="isAdmin" class="course-card sommelier">
             <div :class="['card-status', courseStatuses.sommelier ? 'active' : 'planning']">
@@ -1980,6 +2022,7 @@ const courseConfig = computed(() => [
   { id: 'diploma', label: t('home.courses.labels.diploma'), route: '/diploma', group: 'europe' },
   { id: 'sommelier', label: t('home.courses.labels.sommelier'), route: '/sommelier', group: 'europe' },
   { id: 'morocco', label: t('home.courses.labels.morocco'), route: '/morocco', group: 'newworld' },
+  { id: 'tunisia', label: t('home.courses.labels.tunisia'), route: '/tunisia', group: 'newworld' },
   { id: 'provence', label: t('home.courses.labels.provence'), route: '/provence', group: 'france' },
   { id: 'usother', label: t('home.courses.labels.usother'), route: '/usother', group: 'newworld' },
   { id: 'argentina', label: t('home.courses.labels.argentina'), route: '/argentina', group: 'newworld' },
@@ -2004,7 +2047,7 @@ const courseStatuses = ref({ bordeaux: true, bourgogne: true, italy: true, spain
 const courseShowHome = ref({ bordeaux: true, bourgogne: true, italy: true, spain: false, germany: false, portugal: false, australia: false, newzealand: false, loire: false, california: false, hungary: false, switzerland: false, georgia: false, easterneurope: false, greece: false, rhone: false, champagne: false, languedoc: false, southwest: false, brandy: false, diploma: false, sommelier: false, provence: false, canada: false, usother: false, argentina: false, chile: false, southafrica: false, austria: false, alsace: false })
 
 // 尚未公開、只有管理員看得到的課程（公開時從此清單移除，並把 show_on_home 設為 true）
-const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'fortified', 'd1', 'd2', 'switzerland', 'georgia', 'easterneurope']
+const ADMIN_ONLY_COURSES = ['greece', 'rhone', 'champagne', 'austria', 'southafrica', 'usother', 'argentina', 'chile', 'languedoc', 'southwest', 'brandy', 'provence', 'canada', 'diploma', 'sommelier', 'morocco', 'tunisia', 'fortified', 'd1', 'd2', 'switzerland', 'georgia', 'easterneurope']
 
 
 async function loadCourseData() {
@@ -2739,6 +2782,7 @@ onMounted(async () => {
 .course-card.brandy { border-color: rgba(138,75,20,0.4); background: rgba(138,75,20,0.05); }
 .course-card.diploma { border-color: rgba(47,72,88,0.4); background: rgba(47,72,88,0.05); }
 .course-card.morocco { border-color: rgba(193,39,45,0.4); background: rgba(193,39,45,0.05); }
+.course-card.tunisia { border-color: rgba(181,18,27,0.4); background: rgba(181,18,27,0.05); }
 .course-card.sommelier { border-color: rgba(107,45,60,0.4); background: rgba(107,45,60,0.05); }
 .course-card.provence { border-color: rgba(111,90,168,0.4); background: rgba(111,90,168,0.05); }
 .course-card.canada { border-color: rgba(200,16,46,0.4); background: rgba(200,16,46,0.05); }
@@ -2870,6 +2914,13 @@ onMounted(async () => {
 .morocco-strip .cp-label { color: #5A1014; }
 .morocco-strip .cp-divider { background: rgba(193,39,45,0.25); }
 .morocco-features .morocco-tag { color: #C1272D; background: rgba(193,39,45,0.06); border-color: rgba(193,39,45,0.25); }
+
+/* Tunisia card */
+.tunisia-strip { background: rgba(181,18,27,0.07); border-color: rgba(181,18,27,0.22); }
+.tunisia-strip .cp-num { color: #B5121B; font-size: 0.9rem; }
+.tunisia-strip .cp-label { color: #4E0A10; }
+.tunisia-strip .cp-divider { background: rgba(181,18,27,0.25); }
+.tunisia-features .tunisia-tag { color: #B5121B; background: rgba(181,18,27,0.06); border-color: rgba(181,18,27,0.25); }
 
 /* Sommelier card */
 .sommelier-strip { background: rgba(107,45,60,0.07); border-color: rgba(107,45,60,0.22); }

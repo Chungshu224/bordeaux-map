@@ -94,6 +94,7 @@ export default {
     diploma:        'Diploma Foundations',
     sommelier:      'Sommelier Practice',
     morocco:        "Morocco",
+    tunisia:        "Tunisia",
     provence:         'Provence and Corsica',
     canada:         'Canada',
     languedoc:      'Languedoc-Roussillon',
