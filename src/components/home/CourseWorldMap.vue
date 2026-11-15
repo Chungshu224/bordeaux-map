@@ -82,6 +82,7 @@ const GEO = {
   georgia:    { ll: [45.5, 41.9],   color: '#A64B2A' },
   easterneurope: { ll: [24, 45],    color: '#5F6B4A' },
   austria:    { ll: [16.5, 48.1],   color: '#C0392B' },
+  switzerland:{ ll: [8.2, 46.8],    color: '#B3202E' },
   usother:    { ll: [-122.9, 45.2], color: '#3B6EA5' },
   california: { ll: [-122.4, 38.5], color: '#E08A1E' },
   canada:     { ll: [-119.6, 49.5], color: '#C0272D' },
