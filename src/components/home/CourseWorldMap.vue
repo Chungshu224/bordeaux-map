@@ -80,6 +80,7 @@ const GEO = {
   hungary:    { ll: [21.4, 48.1],   color: '#C28E0E' },
   greece:     { ll: [23.0, 38.5],   color: '#1F6FB2' },
   austria:    { ll: [16.5, 48.1],   color: '#C0392B' },
+  switzerland:{ ll: [8.2, 46.8],    color: '#B3202E' },
   usother:    { ll: [-122.9, 45.2], color: '#3B6EA5' },
   california: { ll: [-122.4, 38.5], color: '#E08A1E' },
   canada:     { ll: [-119.6, 49.5], color: '#C0272D' },
