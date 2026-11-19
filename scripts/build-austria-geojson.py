@@ -32,8 +32,8 @@ GV_R = ['Grüner Veltliner', 'Riesling']
 AOC = {
   'PDO-AT-A0205': ('Wachau', 'noe', '2020', W, GV_R,
     '多瑙河的狹窄河谷與陡峭梯田；Vinea Wachau 三級（Steinfeder／Federspiel／Smaragd）與 DAC 三層（Gebietswein、Ortswein、Riedenwein；Riedenwein 僅限 Grüner Veltliner 與 Riesling）並行。DAC 自 2020 年份起強制實施。'),
-  'PDO-AT-A0208': ('Kremstal', 'noe', None, W, GV_R,
-    '以 Krems 與 Stein 周邊為中心，僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。DAC 年份各來源有出入（2006 或 2007），本課程不列。'),
+  'PDO-AT-A0208': ('Kremstal', 'noe', '2007', W, GV_R,
+    '以 Krems 與 Stein 周邊為中心，僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。DAC 自 2007 年份起（Decanter 2007 年 12 月報導；部分彙整寫 2006）。'),
   'PDO-AT-A0209': ('Kamptal', 'noe', '2008', W, GV_R,
     '僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。'),
   'PDO-AT-A0210': ('Traisental', 'noe', '2006', W, GV_R,

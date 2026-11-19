@@ -375,7 +375,7 @@ export default {
   "Gemischter Satz（混植混釀）": "Gemischter Satz (co-planted field blend)",
   "多瑙河的狹窄河谷與陡峭梯田；Vinea Wachau 三級（Steinfeder／Federspiel／Smaragd）與 DAC 三層（Gebietswein、Ortswein、Riedenwein；Riedenwein 僅限 Grüner Veltliner 與 Riesling）並行。DAC 自 2020 年份起強制實施。": "A narrow Danube valley with steep terraces; Vinea Wachau's three grades (Steinfeder/Federspiel/Smaragd) run alongside the three DAC tiers (Gebietswein, Ortswein, Riedenwein; Riedenwein only Grüner Veltliner and Riesling). DAC has been compulsory since the 2020 vintage.",
   "僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。": "Grüner Veltliner and Riesling only; Klassik at least 12%, Reserve at least 13%.",
-  "以 Krems 與 Stein 周邊為中心，僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。DAC 年份各來源有出入（2006 或 2007），本課程不列。": "Centred on Krems and Stein, Grüner Veltliner and Riesling only; Klassik at least 12%, Reserve at least 13%. Sources disagree on the DAC year (2006 or 2007), so it is not listed in this course.",
+  "以 Krems 與 Stein 周邊為中心，僅限 Grüner Veltliner 與 Riesling；Klassik 最低 12%、Reserve 最低 13%。DAC 自 2007 年份起（Decanter 2007 年 12 月報導；部分彙整寫 2006）。": "Centred on Krems and Stein, Grüner Veltliner and Riesling only; Klassik at least 12%, Reserve at least 13%. DAC since the 2007 vintage (Decanter, December 2007; some compilations say 2006).",
   "產區速答": "Region Quick-fire",
   "快答": "Quick answer",
   "簡單 / 困難": "Easy / Hard",

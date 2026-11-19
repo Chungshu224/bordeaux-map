@@ -16,7 +16,7 @@ export const lessonContent = [
     highlights: [
       { id: 1, icon: "🍇", title: "品種", content: "三個 DAC 都只限 Grüner Veltliner 與 Riesling（乾型）" },
       { id: 2, icon: "📏", title: "Klassik 與 Reserve", content: "Klassik 最低 12% abv、Reserve 最低 13% abv" },
-      { id: 3, icon: "📅", title: "DAC 年份", content: "Traisental 2006、Kamptal 2008；Kremstal 資料有 2006 與 2007 兩種說法（課內不列入測驗）" }
+      { id: 3, icon: "📅", title: "DAC 年份", content: "Traisental 2006、Kremstal 2007、Kamptal 2008（Kremstal 自 2007 年份起，Decanter 2007 年 12 月報導；部分彙整寫 2006；Kremstal 年份不列入測驗）" }
     ],
     content: "<div class=\"content-overview\"><p class=\"lead-text\">三者同為 Grüner／Riesling 產區，差別在風土與風格。</p></div>"
   },
