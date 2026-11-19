@@ -50,22 +50,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Wachau 中，Grüner Veltliner 多種在哪種土壤？",
-            options: ["A. 片麻岩","B. 黃土","C. 石灰岩","D. 玄武岩"],
-            correct: 1,
+            options: ["A. 黃土","B. 片麻岩","C. 石灰岩","D. 玄武岩"],
+            correct: 0,
             explanation: "Grüner Veltliner 多在下段黃土，Riesling 多在片麻岩。"
           },
           {
             type: 'single',
             question: "Neusiedler See 對甜酒的主要貢獻是？",
-            options: ["A. 冬季結冰","B. 秋季霧氣與濕度促成貴腐","C. 提高土壤pH","D. 提供灌溉"],
+            options: ["A. 冬季湖面結冰保護葡萄樹","B. 秋季霧氣與濕度促成貴腐","C. 提高土壤 pH 值並改變養分吸收","D. 提供周邊葡萄園灌溉用水"],
             correct: 1,
             explanation: "湖的濕度與秋霧使貴腐菌容易發生。"
           },
           {
             type: 'single',
             question: "Leithaberg DAC 紅酒的主要規定是？",
-            options: ["A. 至少 85% Blaufränkisch","B. 至少 85% Zweigelt","C. 僅限 St. Laurent","D. 必須混釀三品種"],
-            correct: 0,
+            options: ["A. 至少 85% Zweigelt","B. 僅限 St. Laurent","C. 至少 85% Blaufränkisch","D. 必須混釀三品種"],
+            correct: 2,
             explanation: "Leithaberg 紅酒至少 85% Blaufränkisch。"
           }
         ]

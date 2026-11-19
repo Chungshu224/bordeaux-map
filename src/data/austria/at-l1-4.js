@@ -70,22 +70,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Zweigelt 的父母品種是？",
-            options: ["A. Pinot Noir × Gamay","B. Cabernet Sauvignon × Merlot","C. Syrah × Grenache","D. St. Laurent × Blaufränkisch"],
-            correct: 3,
+            options: ["A. Pinot Noir × Gamay","B. St. Laurent × Blaufränkisch","C. Cabernet Sauvignon × Merlot","D. Syrah × Grenache"],
+            correct: 1,
             explanation: "1922 年由 Friedrich Zweigelt 在 Klosterneuburg 育成。"
           },
           {
             type: 'single',
             question: "奧地利種植最廣的紅葡萄品種是？",
-            options: ["A. Zweigelt","B. Blaufränkisch","C. St. Laurent","D. Pinot Noir"],
-            correct: 0,
+            options: ["A. Blaufränkisch","B. St. Laurent","C. Zweigelt","D. Pinot Noir"],
+            correct: 2,
             explanation: "Zweigelt 為最廣泛種植的紅品種，其次是 Blaufränkisch。"
           },
           {
             type: 'single',
             question: "Weststeiermark 的玫瑰酒 Schilcher 使用哪個品種？",
-            options: ["A. Blauer Wildbacher","B. Zweigelt","C. Blaufränkisch","D. Merlot"],
-            correct: 0,
+            options: ["A. Zweigelt","B. Blauer Wildbacher","C. Blaufränkisch","D. Merlot"],
+            correct: 1,
             explanation: "Schilcher 專用 Blauer Wildbacher，酸度極高。"
           }
         ]

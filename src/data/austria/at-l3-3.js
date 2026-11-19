@@ -49,22 +49,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Beerenauslese 的最低 KMW 是？",
-            options: ["A. 19","B. 21","C. 25","D. 30"],
-            correct: 2,
+            options: ["A. 19","B. 21","C. 30","D. 25"],
+            correct: 3,
             explanation: "BA 最低 25 KMW，TBA 為 30。"
           },
           {
             type: 'single',
             question: "Ruster Ausbruch 在法條上的地位是？",
-            options: ["A. 獨立的最高 Prädikat","B. 符合 TBA 條件、產自 Rust 的酒可標示","C. 任何貴腐酒皆可使用","D. 只限紅酒"],
-            correct: 1,
+            options: ["A. 獨立的最高 Prädikat 等級","B. 任何貴腐酒皆可使用此名稱","C. 符合 TBA 條件、產自 Rust 的酒可標示","D. 只限 Burgenland 紅酒使用的名稱"],
+            correct: 2,
             explanation: "Ausbruch 依附 TBA 條件，且僅限 Rust。"
           },
           {
             type: 'single',
             question: "Strohwein 的葡萄至少需風乾多久（一般情況）？",
-            options: ["A. 一週","B. 一個月","C. 三個月","D. 十二個月"],
-            correct: 2,
+            options: ["A. 三個月","B. 一週","C. 一個月","D. 十二個月"],
+            correct: 0,
             explanation: "一般至少三個月（兩個月達 30 KMW 可提早）。"
           }
         ]

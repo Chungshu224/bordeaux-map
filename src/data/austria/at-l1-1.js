@@ -60,15 +60,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "1985 年事件中，生產者添加乙二醇的主要目的是？",
-            options: ["A. 防止氧化","B. 讓酒嚐起來更甜、更飽滿","C. 提高酒精度","D. 增加顏色"],
-            correct: 1,
+            options: ["A. 防止酒在發酵時氧化","B. 把酒精度提高到法定下限","C. 讓酒嚐起來更甜、更飽滿","D. 加深酒的色澤"],
+            correct: 2,
             explanation: "乙二醇用來模仿晚收甜酒的甜度與酒體。"
           },
           {
             type: 'single',
             question: "第一個 DAC 是哪個產區？",
-            options: ["A. Wachau","B. Weinviertel","C. Kamptal","D. Neusiedlersee"],
-            correct: 1,
+            options: ["A. Weinviertel","B. Wachau","C. Kamptal","D. Neusiedlersee"],
+            correct: 0,
             explanation: "Weinviertel 自 2002 年份起成為第一個 DAC。"
           },
           {

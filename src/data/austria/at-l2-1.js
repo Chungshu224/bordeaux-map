@@ -49,21 +49,21 @@ export const lessonContent = [
           {
             type: 'single',
             question: "DAC 標籤上通常標示什麼？",
-            options: ["A. 產區名","B. 糖度 KMW","C. 釀酒師名字","D. 酵母品系"],
-            correct: 0,
+            options: ["A. 糖度 KMW","B. 釀酒師名字","C. 產區名","D. 酵母品系"],
+            correct: 2,
             explanation: "DAC 是產區典型的 Qualitätswein，以產區名為標示核心。"
           },
           {
             type: 'single',
             question: "ÖTW 成立於哪一年？",
-            options: ["A. 1985","B. 1992","C. 2002","D. 2020"],
-            correct: 1,
+            options: ["A. 1985","B. 2002","C. 2020","D. 1992"],
+            correct: 3,
             explanation: "ÖTW 於 1992 年由多瑙河沿岸酒莊成立。"
           },
           {
             type: 'single',
             question: "Ried 指的是什麼？",
-            options: ["A. 一種釀酒法","B. 有名稱的單一葡萄園地塊","C. 一種橡木桶","D. 一個產區的總稱"],
+            options: ["A. 一種傳統的釀酒方法","B. 有名稱的單一葡萄園地塊","C. 一種用來陳年的橡木桶","D. 一個產區的總稱與範圍"],
             correct: 1,
             explanation: "Ried 是標籤上寫作 Ried＋名稱的單一園。"
           }

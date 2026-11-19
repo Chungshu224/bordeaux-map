@@ -60,22 +60,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "奧地利哪一個聯邦邦的葡萄園面積最大？",
-            options: ["A. Burgenland","B. Steiermark","C. Niederösterreich","D. Wien"],
-            correct: 2,
+            options: ["A. Burgenland","B. Niederösterreich","C. Steiermark","D. Wien"],
+            correct: 1,
             explanation: "Niederösterreich 約 26,700 公頃，遠高於其他各邦。"
           },
           {
             type: 'single',
             question: "下列何者最能描述奧地利主要產區的氣候？",
-            options: ["A. 地中海氣候，冬暖夏乾","B. 海洋性氣候，全年多雨","C. 熱帶氣候","D. 大陸性—Pannonian 氣候，冬冷夏熱"],
-            correct: 3,
+            options: ["A. 地中海氣候，冬暖夏乾","B. 海洋性氣候，全年多雨","C. 大陸性—Pannonian 氣候，冬冷夏熱","D. 熱帶氣候，全年高溫潮濕"],
+            correct: 2,
             explanation: "冬季寒冷、夏季炎熱乾燥、生長季長是其特徵。"
           },
           {
             type: 'single',
             question: "Neusiedler See 周邊容易出現什麼現象，成為甜酒的基礎？",
-            options: ["A. 貴腐菌（noble rot）","B. 冬季霜凍","C. 冰雹","D. 根瘤芽蟲"],
-            correct: 0,
+            options: ["A. 冬季霜凍","B. 貴腐菌（noble rot）","C. 冰雹","D. 根瘤芽蟲"],
+            correct: 1,
             explanation: "淺湖帶來的霧氣與濕度使貴腐菌容易發生。"
           }
         ]

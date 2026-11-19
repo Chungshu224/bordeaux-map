@@ -52,8 +52,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Sekt Austria Reserve 的酒渣陳年至少多久？",
-            options: ["A. 9 個月","B. 18 個月","C. 30 個月","D. 36 個月"],
-            correct: 1,
+            options: ["A. 18 個月","B. 9 個月","C. 30 個月","D. 36 個月"],
+            correct: 0,
             explanation: "Sekt Austria 9、Reserve 18、Grosse Reserve 36 個月（2022 年起）。"
           },
           {
@@ -66,8 +66,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Sustainable Austria 認證葡萄園禁用什麼？",
-            options: ["A. 銅製劑","B. 嘉磷塞（glyphosate）","C. 有機肥料","D. 覆蓋作物"],
-            correct: 1,
+            options: ["A. 嘉磷塞（glyphosate）","B. 銅製劑","C. 有機肥料","D. 覆蓋作物"],
+            correct: 0,
             explanation: "認證葡萄園禁用嘉磷塞。"
           }
         ]

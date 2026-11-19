@@ -37,64 +37,64 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Trockenbeerenauslese 的揮發酸上限？",
-            options: ["A. 1.2 g/L","B. 2.4 g/L","C. 4 g/L","D. 9 g/L"],
-            correct: 1,
+            options: ["A. 1.2 g/L","B. 4 g/L","C. 9 g/L","D. 2.4 g/L"],
+            correct: 3,
             explanation: "法條規定 TBA 揮發酸上限 2.4 g/L。"
           },
           {
             type: 'single',
             question: "Eiswein 的最低 KMW？",
-            options: ["A. 19","B. 21","C. 25","D. 30"],
-            correct: 2,
+            options: ["A. 19","B. 21","C. 30","D. 25"],
+            correct: 3,
             explanation: "Eiswein 最低 25 KMW。"
           },
           {
             type: 'single',
             question: "Ruster Ausbruch 的法條基礎是？",
-            options: ["A. Spätlese 條件","B. TBA 條件且產自 Rust","C. Eiswein 條件","D. Kabinett 條件"],
-            correct: 1,
+            options: ["A. Spätlese 條件","B. Eiswein 條件","C. TBA 條件且產自 Rust","D. Kabinett 條件"],
+            correct: 2,
             explanation: "Ausbruch 依附 TBA 條件，僅限 Rust。"
           },
           {
             type: 'single',
             question: "Sekt Austria Grosse Reserve 最早何時上市？",
-            options: ["A. 採收後 9 個月","B. 採收後 18 個月","C. 採收後三年","D. 採收後十年"],
-            correct: 2,
+            options: ["A. 採收後三年","B. 採收後 9 個月","C. 採收後 18 個月","D. 採收後十年"],
+            correct: 0,
             explanation: "至少 36 個月（2022 年起）且採收三年後。"
           },
           {
             type: 'single',
             question: "Sustainable Austria 約佔葡萄園多少（2025 年 1 月報導）？",
-            options: ["A. 約 5%","B. 約 27%","C. 約 60%","D. 約 90%"],
-            correct: 1,
+            options: ["A. 約 27%","B. 約 5%","C. 約 60%","D. 約 90%"],
+            correct: 0,
             explanation: "約 11,925 公頃、27%。"
           },
           {
             type: 'single',
             question: "Wachau 中 Riesling 多在何處？",
-            options: ["A. 下段黃土","B. 上段片麻岩梯田","C. 湖畔","D. 火山土"],
-            correct: 1,
+            options: ["A. 下段黃土","B. 湖畔","C. 上段片麻岩梯田","D. 火山土"],
+            correct: 2,
             explanation: "Riesling 多在上段片麻岩。"
           },
           {
             type: 'single',
             question: "Prädikatswein 的一般條件不包括下列何者？",
-            options: ["A. 不得加糖","B. 不得增糖","C. 須有 Mostwäger 證明","D. 必須橡木桶陳年"],
-            correct: 3,
+            options: ["A. 必須橡木桶陳年","B. 不得加糖","C. 不得增糖","D. 須有 Mostwäger 證明"],
+            correct: 0,
             explanation: "法條無橡木桶陳年要求。"
           },
           {
             type: 'single',
             question: "2024 年德國佔奧地利出口金額約？",
-            options: ["A. 約 10%","B. 約 42%","C. 約 70%","D. 約 95%"],
-            correct: 1,
+            options: ["A. 約 10%","B. 約 70%","C. 約 95%","D. 約 42%"],
+            correct: 3,
             explanation: "金額 42.3%。"
           },
           {
             type: 'single',
             question: "Spätlese／Auslese 最早何時可申請檢驗號碼？",
-            options: ["A. 次年 1 月 1 日","B. 次年 4 月 1 日","C. 當年 12 月","D. 次年 9 月"],
-            correct: 0,
+            options: ["A. 次年 4 月 1 日","B. 當年 12 月","C. 次年 1 月 1 日","D. 次年 9 月"],
+            correct: 2,
             explanation: "Spätlese 與 Auslese 為次年 1 月 1 日。"
           },
           {
@@ -107,8 +107,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Sekt Austria 基礎級的陳年下限？",
-            options: ["A. 9 個月","B. 18 個月","C. 30 個月","D. 無規定"],
-            correct: 0,
+            options: ["A. 18 個月","B. 9 個月","C. 30 個月","D. 無規定"],
+            correct: 1,
             explanation: "基礎級（舊稱 Klassik）酒渣陳年至少 9 個月。"
           }
         ]

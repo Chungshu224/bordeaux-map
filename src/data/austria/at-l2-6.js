@@ -66,8 +66,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Neusiedlersee DAC 紅酒以哪個品種為核心？",
-            options: ["A. Blaufränkisch","B. Zweigelt","C. Cabernet Sauvignon","D. Syrah"],
-            correct: 1,
+            options: ["A. Zweigelt","B. Blaufränkisch","C. Cabernet Sauvignon","D. Syrah"],
+            correct: 0,
             explanation: "Neusiedlersee 以 Zweigelt 為核心（Klassik 至少 85%）。"
           },
           {

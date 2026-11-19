@@ -66,15 +66,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Carnuntum DAC 紅酒使用哪兩個品種？",
-            options: ["A. Blaufränkisch 與 Zweigelt","B. Pinot Noir 與 Merlot","C. St. Laurent 與 Cabernet","D. Blauer Wildbacher 與 Syrah"],
-            correct: 0,
+            options: ["A. Pinot Noir 與 Merlot","B. Blaufränkisch 與 Zweigelt","C. St. Laurent 與 Cabernet","D. Blauer Wildbacher 與 Syrah"],
+            correct: 1,
             explanation: "Carnuntum 紅酒為 Blaufränkisch 與 Zweigelt。"
           },
           {
             type: 'single',
             question: "Thermenregion 成為 DAC 是哪一年？",
-            options: ["A. 2003","B. 2013","C. 2019","D. 2023"],
-            correct: 3,
+            options: ["A. 2003","B. 2013","C. 2023","D. 2019"],
+            correct: 2,
             explanation: "Thermenregion DAC 於 2023 年成立。"
           }
         ]

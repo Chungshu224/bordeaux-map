@@ -60,8 +60,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "哪一級是 Wachau 最濃縮、最早於次年 5 月 1 日上市？",
-            options: ["A. Steinfeder","B. Federspiel","C. Smaragd","D. Klassik"],
-            correct: 2,
+            options: ["A. Smaragd","B. Steinfeder","C. Federspiel","D. Klassik"],
+            correct: 0,
             explanation: "Smaragd 最低 12.5% abv，且不早於次年 5 月 1 日上市。"
           },
           {
@@ -74,8 +74,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Wachau DAC 的 Riedenwein 僅限哪兩個品種？",
-            options: ["A. Zweigelt 與 Blaufränkisch","B. Grüner Veltliner 與 Riesling","C. Welschriesling 與 Muskateller","D. Chardonnay 與 Sauvignon Blanc"],
-            correct: 1,
+            options: ["A. Zweigelt 與 Blaufränkisch","B. Welschriesling 與 Muskateller","C. Chardonnay 與 Sauvignon Blanc","D. Grüner Veltliner 與 Riesling"],
+            correct: 3,
             explanation: "Riedenwein 僅限 Grüner Veltliner 與 Riesling。"
           }
         ]

@@ -58,15 +58,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "2024 年哪個市場升為第二大出口市場（以金額）？",
-            options: ["A. 瑞士","B. 美國","C. 日本","D. 中國"],
-            correct: 1,
+            options: ["A. 美國","B. 瑞士","C. 日本","D. 中國"],
+            correct: 0,
             explanation: "美國佔 8.5% 並升至第二。"
           },
           {
             type: 'single',
             question: "德國的出口特徵是？",
-            options: ["A. 量小價高","B. 量大但單價相對低","C. 只有紅酒","D. 只有甜酒"],
-            correct: 1,
+            options: ["A. 量小價高","B. 只有紅酒","C. 量大但單價相對低","D. 只有甜酒"],
+            correct: 2,
             explanation: "量佔 58.8%、值佔 42.6%，代表單價相對較低。"
           }
         ]

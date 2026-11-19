@@ -39,22 +39,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Wiener Gemischter Satz 的最大宗品種上限是？",
-            options: ["A. 30%","B. 50%","C. 85%","D. 100%"],
-            correct: 1,
+            options: ["A. 50%","B. 30%","C. 85%","D. 100%"],
+            correct: 0,
             explanation: "最大宗品種不得超過 50%，第三品種至少 10%。"
           },
           {
             type: 'single',
             question: "Wiener Gemischter Satz DAC 是哪一年？",
-            options: ["A. 2002","B. 2008","C. 2013","D. 2018"],
-            correct: 2,
+            options: ["A. 2002","B. 2008","C. 2018","D. 2013"],
+            correct: 3,
             explanation: "Wiener Gemischter Satz 為 2013 年的 DAC。"
           },
           {
             type: 'single',
             question: "Gemischter Satz 的核心特徵是？",
-            options: ["A. 不同品種分開釀造後調配","B. 同一園混植並一起發酵","C. 只用一個品種","D. 必須使用橡木桶"],
-            correct: 1,
+            options: ["A. 不同品種分開釀造後調配","B. 只用一個品種","C. 必須使用橡木桶","D. 同一園混植並一起發酵"],
+            correct: 3,
             explanation: "Gemischter Satz 是混植、一起採收發酵的 field blend。"
           }
         ]

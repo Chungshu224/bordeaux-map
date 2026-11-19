@@ -40,22 +40,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Kamptal DAC 允許哪些品種？",
-            options: ["A. Grüner Veltliner 與 Riesling","B. 只有 Zweigelt","C. Pinot Blanc 與 Chardonnay","D. Blaufränkisch 與 St. Laurent"],
-            correct: 0,
+            options: ["A. 只有 Zweigelt","B. Grüner Veltliner 與 Riesling","C. Pinot Blanc 與 Chardonnay","D. Blaufränkisch 與 St. Laurent"],
+            correct: 1,
             explanation: "Kamptal、Kremstal、Traisental 都限 Grüner Veltliner 與 Riesling。"
           },
           {
             type: 'single',
             question: "這三個 DAC 的 Reserve 最低酒精度是？",
-            options: ["A. 11%","B. 12%","C. 13%","D. 14.5%"],
-            correct: 2,
+            options: ["A. 11%","B. 13%","C. 12%","D. 14.5%"],
+            correct: 1,
             explanation: "Klassik 最低 12%，Reserve 最低 13%。"
           },
           {
             type: 'single',
             question: "Traisental DAC 是哪一年份起？",
-            options: ["A. 2002","B. 2006","C. 2013","D. 2021"],
-            correct: 1,
+            options: ["A. 2002","B. 2013","C. 2021","D. 2006"],
+            correct: 3,
             explanation: "Traisental DAC 為 2006 年份。"
           }
         ]

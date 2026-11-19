@@ -48,22 +48,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Steinfeder／Federspiel／Smaragd 屬於哪種性質？",
-            options: ["A. 國家法定層級","B. Vinea Wachau 協會商標分級","C. ÖTW 單一園分級","D. EU 的 PGI 類別"],
-            correct: 1,
+            options: ["A. 國家法定層級","B. ÖTW 單一園分級","C. Vinea Wachau 協會商標分級","D. EU 的 PGI 類別"],
+            correct: 2,
             explanation: "這三級是 Vinea Wachau 的商標分級。"
           },
           {
             type: 'single',
             question: "Wien 的 Klassik 與 Ried 酒精度規定的方向是？",
-            options: ["A. Klassik 最低、Ried 最高","B. 兩者皆為上限","C. Klassik 最高 12.5%、Ried 最低 12.5%","D. 兩者皆為下限"],
-            correct: 2,
+            options: ["A. Klassik 最高 12.5%、Ried 最低 12.5%","B. Klassik 最低、Ried 最高","C. 兩者皆為上限","D. 兩者皆為下限"],
+            correct: 0,
             explanation: "Klassik 為上限、Ried 為下限。"
           },
           {
             type: 'single',
             question: "Spätlese 最早可於何時申請國家檢驗號碼？",
-            options: ["A. 採收當年 10 月","B. 採收次年 1 月 1 日","C. 採收次年 4 月 1 日","D. 採收後三年"],
-            correct: 1,
+            options: ["A. 採收當年 10 月","B. 採收次年 4 月 1 日","C. 採收次年 1 月 1 日","D. 採收後三年"],
+            correct: 2,
             explanation: "Spätlese 與 Auslese 為次年 1 月 1 日起，其他 Prädikat 為 4 月 1 日。"
           }
         ]

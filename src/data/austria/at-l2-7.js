@@ -50,15 +50,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Steiermark 三個 DAC 於哪一年成立？",
-            options: ["A. 2008","B. 2013","C. 2018","D. 2023"],
-            correct: 2,
+            options: ["A. 2018","B. 2008","C. 2013","D. 2023"],
+            correct: 0,
             explanation: "三個 Steiermark DAC 皆為 2018 年。"
           },
           {
             type: 'single',
             question: "Schilcher 是用哪個品種釀成的？",
-            options: ["A. Zweigelt","B. Blaufränkisch","C. Blauer Wildbacher","D. Pinot Noir"],
-            correct: 2,
+            options: ["A. Zweigelt","B. Blaufränkisch","C. Pinot Noir","D. Blauer Wildbacher"],
+            correct: 3,
             explanation: "Schilcher 由 Blauer Wildbacher 釀成的粉紅酒。"
           },
           {

@@ -70,22 +70,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Grüner Veltliner 約占奧地利葡萄園面積的多少？",
-            options: ["A. 約 5%","B. 約 15%","C. 約三分之一","D. 超過一半"],
-            correct: 2,
+            options: ["A. 約 5%","B. 約三分之一","C. 約 15%","D. 超過一半"],
+            correct: 1,
             explanation: "2025 年約 32.3%，是最重要的白品種。"
           },
           {
             type: 'single',
             question: "Welschriesling 與 Riesling 的關係是？",
-            options: ["A. 同一品種的別名","B. 沒有親緣關係，是不同品種","C. Welschriesling 是 Riesling 的子代","D. Welschriesling 是紅葡萄"],
-            correct: 1,
+            options: ["A. 同一品種的別名","B. Welschriesling 是 Riesling 的子代","C. Welschriesling 是紅葡萄","D. 沒有親緣關係，是不同品種"],
+            correct: 3,
             explanation: "名稱相似但無親緣關係。"
           },
           {
             type: 'single',
             question: "在 Steiermark 被稱為 Morillon 的品種是？",
-            options: ["A. Sauvignon Blanc","B. Pinot Gris","C. Chardonnay","D. Muscat"],
-            correct: 2,
+            options: ["A. Sauvignon Blanc","B. Chardonnay","C. Pinot Gris","D. Muscat"],
+            correct: 1,
             explanation: "Morillon 是 Steiermark 對 Chardonnay 的稱呼。"
           }
         ]

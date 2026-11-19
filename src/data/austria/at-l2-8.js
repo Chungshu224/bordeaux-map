@@ -30,8 +30,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "奧地利第一個 DAC 是？",
-            options: ["A. Wachau","B. Weinviertel","C. Kamptal","D. Carnuntum"],
-            correct: 1,
+            options: ["A. Weinviertel","B. Wachau","C. Kamptal","D. Carnuntum"],
+            correct: 0,
             explanation: "Weinviertel 自 2002 年份起。"
           },
           {
@@ -44,8 +44,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Wiener Gemischter Satz 的第三品種最低比例是？",
-            options: ["A. 5%","B. 10%","C. 25%","D. 33%"],
-            correct: 1,
+            options: ["A. 5%","B. 25%","C. 33%","D. 10%"],
+            correct: 3,
             explanation: "第三品種至少 10%。"
           },
           {
@@ -58,8 +58,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Weinviertel Reserve 的最低酒精度？",
-            options: ["A. 11%","B. 12%","C. 13%","D. 14%"],
-            correct: 2,
+            options: ["A. 13%","B. 11%","C. 12%","D. 14%"],
+            correct: 0,
             explanation: "Reserve 最低 13%（自 2009 年份起）。"
           },
           {
@@ -72,8 +72,8 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Schilcher 是哪種酒？",
-            options: ["A. 紅酒","B. 粉紅酒","C. 貴腐甜酒","D. 氣泡酒"],
-            correct: 1,
+            options: ["A. 粉紅酒","B. 紅酒","C. 貴腐甜酒","D. 氣泡酒"],
+            correct: 0,
             explanation: "Schilcher 是 Blauer Wildbacher 的粉紅酒。"
           },
           {
@@ -86,15 +86,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "ÖTW 的 Erste Lage 針對哪兩個品種？",
-            options: ["A. Zweigelt 與 Blaufränkisch","B. Grüner Veltliner 與 Riesling","C. Chardonnay 與 Pinot Blanc","D. Muskateller 與 Traminer"],
-            correct: 1,
+            options: ["A. Zweigelt 與 Blaufränkisch","B. Chardonnay 與 Pinot Blanc","C. Muskateller 與 Traminer","D. Grüner Veltliner 與 Riesling"],
+            correct: 3,
             explanation: "Erste Lage 針對乾型 Grüner Veltliner 與 Riesling。"
           },
           {
             type: 'single',
             question: "Austria 共有幾個 DAC（本課程採用）？",
-            options: ["A. 9","B. 14","C. 18","D. 30"],
-            correct: 2,
+            options: ["A. 18","B. 9","C. 14","D. 30"],
+            correct: 0,
             explanation: "本課程以 ÖWM 為準：18 個。"
           }
         ]

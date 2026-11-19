@@ -32,22 +32,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "第一個 DAC 是？",
-            options: ["A. Kamptal","B. Weinviertel","C. Wachau","D. Carnuntum"],
-            correct: 1,
+            options: ["A. Kamptal","B. Wachau","C. Carnuntum","D. Weinviertel"],
+            correct: 3,
             explanation: "Weinviertel 自 2002 年份起。"
           },
           {
             type: 'single',
             question: "Zweigelt 由哪兩個品種雜交而成？",
-            options: ["A. St. Laurent × Blaufränkisch","B. Pinot Noir × Merlot","C. Gamay × Syrah","D. Portugieser × Cabernet"],
-            correct: 0,
+            options: ["A. Pinot Noir × Merlot","B. St. Laurent × Blaufränkisch","C. Gamay × Syrah","D. Portugieser × Cabernet"],
+            correct: 1,
             explanation: "1922 年由 Friedrich Zweigelt 育成。"
           },
           {
             type: 'single',
             question: "1985 年事件中，生產者添加的物質是？",
-            options: ["A. 甲醇","B. 乙二醇（diethylene glycol）","C. 過量二氧化硫","D. 鉛"],
-            correct: 1,
+            options: ["A. 甲醇","B. 過量二氧化硫","C. 鉛","D. 乙二醇（diethylene glycol）"],
+            correct: 3,
             explanation: "用來讓酒嚐起來更甜、更飽滿。"
           },
           {
@@ -67,22 +67,22 @@ export const lessonContent = [
           {
             type: 'single',
             question: "Neusiedler See 周邊適合釀造貴腐甜酒的主因是？",
-            options: ["A. 冬季極寒","B. 淺湖帶來霧氣與濕度，使貴腐菌容易發生","C. 高海拔","D. 火山土壤"],
-            correct: 1,
+            options: ["A. 冬季極寒，葡萄在樹上自然凍結","B. 高海拔帶來強烈日照與乾燥空氣","C. 火山土壤帶來礦物質與高酸度","D. 淺湖帶來霧氣與濕度，使貴腐菌容易發生"],
+            correct: 3,
             explanation: "秋季霧氣與濕度是關鍵。"
           },
           {
             type: 'single',
             question: "Welschriesling 與 Riesling 的關係是？",
-            options: ["A. 同一品種","B. 毫無親緣關係的不同品種","C. Riesling 的紅葡萄變種","D. Welschriesling 是 Sekt 專用名稱"],
-            correct: 1,
+            options: ["A. 同一品種","B. Riesling 的紅葡萄變種","C. 毫無親緣關係的不同品種","D. Welschriesling 是 Sekt 專用名稱"],
+            correct: 2,
             explanation: "名稱相似但並非同一品種。"
           },
           {
             type: 'single',
             question: "KMW 衡量的是？",
-            options: ["A. 葡萄汁的糖度","B. 成酒的酒精度","C. 酒的酸度","D. 酒的陳年時間"],
-            correct: 0,
+            options: ["A. 成酒的酒精度","B. 葡萄汁的糖度","C. 酒的酸度","D. 酒的陳年時間"],
+            correct: 1,
             explanation: "KMW（Klosterneuburger Mostwaage）是葡萄汁糖度單位。"
           }
         ]

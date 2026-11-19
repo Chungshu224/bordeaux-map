@@ -66,15 +66,15 @@ export const lessonContent = [
           {
             type: 'single',
             question: "KMW 是什麼？",
-            options: ["A. 酒精度單位","B. 葡萄汁糖度（must weight）單位","C. 殘糖量單位","D. 酸度單位"],
-            correct: 1,
+            options: ["A. 葡萄汁糖度（must weight）單位","B. 酒精度單位","C. 殘糖量單位","D. 酸度單位"],
+            correct: 0,
             explanation: "KMW 是奧地利的葡萄汁糖度單位，與德國 Oechsle 不同。"
           },
           {
             type: 'single',
             question: "下列何者不可加糖（chaptalisation）？",
-            options: ["A. Landwein","B. 一般 Qualitätswein","C. Prädikatswein","D. 所有 Wein"],
-            correct: 2,
+            options: ["A. Landwein","B. 一般 Qualitätswein","C. 所有 Wein","D. Prädikatswein"],
+            correct: 3,
             explanation: "Prädikatswein 不得加糖；Kabinett 亦不得加糖。"
           }
         ]
