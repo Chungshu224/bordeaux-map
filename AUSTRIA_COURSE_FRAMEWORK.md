@@ -111,7 +111,7 @@
 - 21 個課程空殼 `src/data/austria/at-l*.js`（「內容製作中」），en/ja overlay 已含標題與簡介
 - 共用檔案改動（皆為純新增條目，解衝突用）：`router/index.js`（`/austria` 路由＋ `COURSE_ACCESS_RULES`）、`PlatformHome.vue`（Old World 區卡片、導覽項、`courseStatuses`／`courseShowHome`、`ADMIN_ONLY_COURSES`、CSS）、`lessonContentLoader.js`、`courseProgressSync.js`、`regionThemes.js`、`PresentationLesson.vue`（封面漸層與圖示）、`locales/{zh-TW,en,ja}/{common,home}.js`
 - 路由 `/austria` 設 `requiresAdmin`，首頁卡片僅管理員可見
-- migration 已準備未套用：`20261027000000_add_austria_course.sql`（`active=false`、`show_on_home=false`）
+- migration 已準備未套用：`20261028000000_add_austria_course.sql`（`active=false`、`show_on_home=false`）
 - 地圖／遊戲／筆記入口顯示「製作中」（階段 E 製作）
 - 驗證：SFC 編譯、字典覆蓋、`vite build` 通過
 
