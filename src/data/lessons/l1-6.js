@@ -1473,7 +1473,7 @@ normalizedLessonContent.push(
               "D. Grand Cru Supérieur"
             ],
             "correct": 0,
-            "explanation": "聖愛美濃的分級（Saint-Émilion Classification）最高等級是「Premier Grand Cru Classé A」，目前只有 Château Pétrus 所在的波美侯沒有此制度，聖愛美濃的 PGCCA 包括奧松（Ausone）和白馬（Cheval Blanc）等。"
+            "explanation": "聖愛美濃的分級（Saint-Émilion Classification）最高等級是「Premier Grand Cru Classé A」，波美侯（Pétrus 所在）則沒有此類官方分級。依 2022 年版分級，PGCCA 為 Figeac（2022 年晉升）與 Pavie；Ausone、Cheval Blanc、Angélus 已退出評選。"
           },
           {
             "type": "single",
