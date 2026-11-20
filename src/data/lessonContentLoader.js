@@ -244,6 +244,7 @@ export const lessonModuleLoaders = {
   'ca-l2-2': () => import('./california/ca-l2-2.js'),
   'ca-l2-3': () => import('./california/ca-l2-3.js'),
   'ca-l2-4': () => import('./california/ca-l2-4.js'),
+  'ca-l2-5': () => import('./california/ca-l2-5.js'),
   // California Level 3
   'ca-l3-1': () => import('./california/ca-l3-1.js'),
   'ca-l3-2': () => import('./california/ca-l3-2.js'),

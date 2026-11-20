@@ -92,7 +92,8 @@ export const californiaLearningLevels = {
       { id: 'CA2M1', title: '2.1 土壤與氣候：海洋的影響', lessonIds: ['ca-l2-1'] },
       { id: 'CA2M2', title: '2.2 北海岸：Napa & Sonoma 深度剖析', lessonIds: ['ca-l2-2'] },
       { id: 'CA2M3', title: '2.3 中海岸：Santa Barbara & Paso Robles', lessonIds: ['ca-l2-3'] },
-      { id: 'CA2M4', title: '2.4 釀造工藝與品種融合', lessonIds: ['ca-l2-4'] }
+      { id: 'CA2M4', title: '2.4 釀造工藝與品種融合', lessonIds: ['ca-l2-4'] },
+      { id: 'CA2M5', title: '2.5 內陸谷地與南加州補充', lessonIds: ['ca-l2-5'] }
     ],
     lessons: [
       {
@@ -120,6 +121,13 @@ export const californiaLearningLevels = {
         id: 'ca-l2-4',
         title: '橡木桶藝術、氣泡酒工藝與隆河品種',
         description: '法國桶 vs 美國桶的風味差異，加州傳統法氣泡酒（Méthode Champenoise）工藝，以及 Syrah、Grenache、Sangiovese 在加州的詮釋',
+        duration: 20,
+        locked: true
+      },
+      {
+        id: 'ca-l2-5',
+        title: '內陸谷地與南加州補充',
+        description: 'Lodi 的 7 個子 AVA、Sacramento Valley 與 San Joaquin Valley 的邊緣 AVA，以及南加州 South Coast、Temecula、Ramona 的海風與花崗岩風土',
         duration: 20,
         locked: true
       }
