@@ -7,12 +7,12 @@
       "type": "single",
       "question": "Which grape variety did Duke Philip the Bold's 1395 edict target?",
       "options": [
-        "Chardonnay",
         "Gamay",
+        "Chardonnay",
         "Aligoté",
         "Pinot Gris"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Philip the Bold banned planting Gamay, calling it a \"very bad and disloyal plant,\" and mandated Pinot Noir instead. This decision established Burgundy's Pinot Noir-focused quality path and also created today's divide between Burgundy and Beaujolais."
     },
     {
@@ -34,11 +34,11 @@
       "question": "What fundamental change did the French Revolution bring to Burgundy vineyard ownership structure?",
       "options": [
         "Everything was nationalized",
-        "Large vineyards were subdivided and auctioned off to many small landowners",
         "They were consolidated into large corporate estates",
+        "Large vineyards were subdivided and auctioned off to many small landowners",
         "Everything was returned to the original noble families"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "After the 1789 Revolution, church and noble land was confiscated and auctioned off in fragments. Combined with the Napoleonic Code's requirement of equal inheritance among all heirs, vineyards continued to subdivide, forming today's extremely fragmented smallholder system."
     },
     {
@@ -48,10 +48,10 @@
       "options": [
         "Using chemical pesticides to eliminate the aphid",
         "Breeding disease-resistant grape varieties",
-        "Grafting European vines onto resistant American rootstock",
-        "Abandoning grape growing for other crops"
+        "Abandoning grape growing for other crops",
+        "Grafting European vines onto resistant American rootstock"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "The solution was grafting Vitis vinifera (European wine grapes) onto phylloxera-resistant American rootstock. Burgundy chose to use the most neutral rootstocks (such as SO4, 41B) to minimize their impact on terroir expression."
     },
     {
@@ -99,11 +99,11 @@
       "question": "Which statement about the difference between Burgundy's and Bordeaux's classification systems is correct?",
       "options": [
         "Burgundy classifies by estate, Bordeaux by plot",
-        "Burgundy classifies by plot, Bordeaux by estate",
         "Both classify by estate",
-        "Both classify by plot"
+        "Both classify by plot",
+        "Burgundy classifies by plot, Bordeaux by estate"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Burgundy's classification targets the \"land\" itself (the Climat/plot), while Bordeaux's 1855 classification targets the \"estate\" (Château). This reflects the philosophical difference between Burgundy's \"terroir first\" and Bordeaux's \"brand first.\""
     },
     {
@@ -111,12 +111,12 @@
       "type": "single",
       "question": "In what year was the Hospices de Beaune founded?",
       "options": [
+        "1443",
         "1336",
         "1395",
-        "1443",
         "1789"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "The Hospices de Beaune was founded in 1443 by Nicolas Rolin. This charitable hospital accumulated a large number of excellent plots through vineyard donations, and its November charity auction has become one of Burgundy's most important wine events."
     },
     {
@@ -138,11 +138,11 @@
       "question": "Why is Pinot Noir called \"the winemaker's heartbreak grape\"?",
       "options": [
         "It's too expensive for winemakers to afford",
-        "Extremely sensitive to environment, difficult to grow, prone to rot",
         "Aging takes too long, requiring a long wait",
+        "Extremely sensitive to environment, difficult to grow, prone to rot",
         "It easily spoils in oak barrels"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Pinot Noir is called the \"heartbreak grape\" because it's thin-skinned and rot-prone, buds early and is vulnerable to spring frost, is genetically unstable, and is extremely sensitive to its environment. But it's precisely this fragility that makes it one of the purest expressers of terroir."
     },
     {
@@ -151,11 +151,11 @@
       "question": "What is New Zealand's Central Otago's most distinctive terroir feature?",
       "options": [
         "Limestone soil and oceanic climate",
-        "High altitude, continental climate, extreme diurnal temperature swings, ancient schist soil",
         "Volcanic soil and tropical climate",
-        "Clay and a wet, rainy climate"
+        "Clay and a wet, rainy climate",
+        "High altitude, continental climate, extreme diurnal temperature swings, ancient schist soil"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Central Otago sits at 45° south latitude, the world's southernmost wine region. Its distinctiveness comes from high altitude (200-400m), a continental climate, extreme diurnal swings (up to 20°C), and ancient schist soil — conditions that create a unique style."
     },
     {
@@ -177,11 +177,11 @@
       "question": "What abbreviation do top German Pinot Noirs typically use on the label to indicate Grand Cru level?",
       "options": [
         "GC (Grand Cru)",
-        "PC (Premier Cru)",
         "GG (Grosses Gewächs)",
+        "PC (Premier Cru)",
         "VDP (Verband Deutscher Prädikatsweingüter)"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Top German Pinot Noir (Spätburgunder) is labeled \"GG\" (Grosses Gewächs), representing Grand Cru level — the highest tier in the Burgundy-like classification system established by the VDP (Association of German Prädikat Wine Estates)."
     },
     {
@@ -190,11 +190,11 @@
       "question": "Which statement about the difference between the north and south of the Côte d'Or is correct?",
       "options": [
         "The Côte de Nuits is mainly white-wine Grands Crus, the Côte de Beaune mainly red",
-        "The Côte de Nuits has 24 red-wine Grands Crus with a more powerful style; the Côte de Beaune has only 1 red-wine Grand Cru (Corton) with a more elegant style",
         "The two styles are exactly the same, with no notable difference",
+        "The Côte de Nuits has 24 red-wine Grands Crus with a more powerful style; the Côte de Beaune has only 1 red-wine Grand Cru (Corton) with a more elegant style",
         "The Côte de Nuits is in the south, the Côte de Beaune in the north"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "The Côte de Nuits (north) has 24 red-wine Grands Crus with a more powerful, structured style and longer aging potential (Chambertin, Musigny). The Côte de Beaune (south) has only 1 red-wine Grand Cru (Corton), with a more elegant, softer style (Volnay, Pommard)."
     },
     {
@@ -204,10 +204,10 @@
       "options": [
         "Old World is darker in color, New World is lighter",
         "Old World is exuberantly fruity, New World is restrained",
-        "Old World is lighter in color, more restrained aromatically, higher acid, with earthy notes; New World is deeper in color, more exuberant aromatically, fruit-forward",
-        "It cannot be distinguished by appearance and aroma"
+        "It cannot be distinguished by appearance and aroma",
+        "Old World is lighter in color, more restrained aromatically, higher acid, with earthy notes; New World is deeper in color, more exuberant aromatically, fruit-forward"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "Typical Old World Pinot Noir (Burgundy, Germany) is lighter in color, restrained and layered aromatically, high in acid, with earthy/forest-floor notes; New World (New Zealand, California) is deeper in color, more directly exuberant aromatically, fruit-forward, with rounder tannins. This is the basic decision tree for blind-tasting identification."
     },
     {
@@ -215,12 +215,12 @@
       "type": "single",
       "question": "What direction has California's Sonoma Coast Pinot Noir style evolved in since the 2010s?",
       "options": [
-        "Pursuing higher alcohol (15.5%+) and heavier oak",
         "Toward a more elegant, balanced style — lowering alcohol (13.5-14.5%), reducing new-oak use",
+        "Pursuing higher alcohol (15.5%+) and heavier oak",
         "Completely imitating Burgundy style, abandoning New World characteristics",
         "Shifting toward rosé production"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Since the 2010s, California Pinot Noir winemakers have shifted toward a more elegant, balanced style: lowering alcohol (from 14.5-15.5% to 13.5-14.5%), reducing new-oak use, and harvesting earlier to preserve acidity. This has brought California Pinot Noir closer to a European style while retaining New World fruit concentration."
     },
     {
@@ -229,11 +229,11 @@
       "question": "What soil type is mainly responsible for Central Otago's minerality?",
       "options": [
         "Limestone",
-        "Volcanic soil",
         "Ancient schist",
+        "Volcanic soil",
         "Clay"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Central Otago's minerality comes from ancient schist soil, giving the wines a distinctive smoky, graphite character. This differs clearly from Burgundy's limestone minerality or Oregon's volcanic-soil minerality, an important clue for blind-tasting identification."
     },
     {
@@ -256,10 +256,10 @@
       "options": [
         "New Zealand's Central Otago (1990s)",
         "Oregon, USA (1960s)",
-        "Burgundy, France (Roman era, 1st-5th century)",
-        "Germany (9th century)"
+        "Germany (9th century)",
+        "Burgundy, France (Roman era, 1st-5th century)"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "Burgundy's Pinot Noir cultivation traces back to the Roman era (1st-5th century), the longest history of any global Pinot Noir region. Germany also has a long history (9th century), but still later than Burgundy. Oregon and New Zealand are 20th-century emerging regions."
     },
     {
@@ -267,12 +267,12 @@
       "type": "single",
       "question": "What is the ideal temperature range for a professional wine cellar?",
       "options": [
-        "8-10°C",
         "12-14°C",
+        "8-10°C",
         "16-18°C",
         "18-20°C"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "A professional cellar's ideal temperature is 12-14°C, maintained steadily. Burgundy wine is especially sensitive to temperature fluctuation; a change of more than 5°C accelerates aging."
     },
     {
@@ -281,11 +281,11 @@
       "question": "How long does a young Burgundy red (within 10 years) typically need to decant?",
       "options": [
         "No decanting needed",
-        "15-30 minutes",
         "1-2 hours",
+        "15-30 minutes",
         "3-4 hours"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "A young Burgundy red typically needs 1-2 hours of decanting to release aromas and soften tannins. Old vintages (20+ years) only need brief decanting or can be served directly, avoiding over-oxidation."
     },
     {
@@ -294,11 +294,11 @@
       "question": "What is Chablis's most classic food pairing?",
       "options": [
         "Beef bourguignon",
-        "Oysters and a seafood platter",
         "Roasted duck breast",
+        "Oysters and a seafood platter",
         "Truffle dishes"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Chablis's high acidity, minerality, and crisp style make oysters and a seafood platter its most classic pairing. The marine character imparted by its distinctive oyster-shell fossil soil echoes seafood perfectly."
     },
     {
@@ -307,11 +307,11 @@
       "question": "What is the typical smell of cork taint (TCA)?",
       "options": [
         "Vinegar-like",
-        "Wet cardboard, musty basement",
         "Oxidized apple",
-        "Sulfurous"
+        "Sulfurous",
+        "Wet cardboard, musty basement"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "TCA (trichloroanisole) contamination produces a wet-cardboard, musty-basement, wet-dog smell — the typical signature of cork taint. When encountered, the bottle should be replaced immediately without charging the guest."
     },
     {
@@ -319,12 +319,12 @@
       "type": "single",
       "question": "In an excellent Burgundy wine list, what share should entry-level wines (Régionale, Village) occupy?",
       "options": [
-        "10-20%",
         "30-40%",
+        "10-20%",
         "50-60%",
         "70-80%"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Suggested wine list structure: entry-level (Régionale, Village) 30-40%, mid-tier (Premier Cru, well-known villages) 40-50%, top-tier (Grand Cru, famous names) 10-20%, special vintages 5-10%. This ensures guests at every budget have options."
     },
     {
@@ -346,11 +346,11 @@
       "question": "What does \"vertical tasting\" refer to?",
       "options": [
         "The same vintage from different producers",
-        "The same wine across different vintages",
         "The same variety from different regions",
+        "The same wine across different vintages",
         "Different varieties from the same region"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Vertical tasting refers to tasting different vintages of the same wine (e.g. Chambertin 2015-2020) to understand vintage differences and aging evolution. Horizontal tasting is the same vintage from different producers."
     },
     {
@@ -359,11 +359,11 @@
       "question": "How many wines is it appropriate to taste in an introductory Burgundy course (2-4 hours)?",
       "options": [
         "3-4",
-        "6-8",
         "12-15",
-        "20-25"
+        "20-25",
+        "6-8"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "An introductory course is suggested to taste 6-8 wines, covering different regions and styles. Too few can't show enough diversity, too many will tire and confuse beginners. Intermediate is 12-15, advanced 20-25."
     },
     {
@@ -371,12 +371,12 @@
       "type": "single",
       "question": "What is the single most critical preparation focus for WSET and CMS certification exams?",
       "options": [
-        "Just reading the textbook",
         "Extensive tasting practice and blind-tasting training",
+        "Just reading the textbook",
         "Memorizing every appellation name",
         "Just understanding the theory"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Certification exams require systematic study of theory, but extensive tasting practice and blind-tasting training are the most critical. Building taste memory and identification skills requires actual tasting experience — it can't be achieved through reading alone."
     },
     {
@@ -399,10 +399,10 @@
       "options": [
         "$500-1000/bottle",
         "$2000-3000/bottle",
-        "$5000-8000/bottle",
-        "$10,000+/bottle"
+        "$10,000+/bottle",
+        "$5000-8000/bottle"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "By 2024, DRC's average price exceeded $10,000/bottle, up more than tenfold from $500-1000 in 2000 over 20 years — reflecting the explosive growth of the top-tier Burgundy market."
     },
     {
@@ -412,10 +412,10 @@
       "options": [
         "5-10%",
         "15-25%",
-        "30-50%",
-        "70-80%"
+        "70-80%",
+        "30-50%"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "A retail merchant's (B2C) typical margin is 30-50%, higher than a wholesaler's (B2B) 15-25%. But retail requires storefront costs and staffing, so actual net margin may be similar."
     },
     {
@@ -423,12 +423,12 @@
       "type": "single",
       "question": "What does the \"Veblen effect\" refer to in the wine market?",
       "options": [
-        "The lower the price, the higher the demand",
         "The higher the price, the higher the demand (a luxury-good characteristic)",
+        "The lower the price, the higher the demand",
         "Price doesn't affect demand",
         "Price volatility causes unstable demand"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "The Veblen effect refers to demand rising as price rises for certain luxury goods, because a high price becomes a signal of quality and status. Burgundy's top wines (like DRC) exhibit exactly this characteristic."
     },
     {
@@ -437,11 +437,11 @@
       "question": "What is the most notable characteristic of the Asian wine market?",
       "options": [
         "Drinking only local wine",
-        "Extremely high price sensitivity",
         "Strong brand orientation, gifting culture, investment demand, high digitalization",
+        "Extremely high price sensitivity",
         "Only buying entry-level Régionale wines"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Characteristics of the Asian market: strong brand orientation (pursuing famous names), gifting culture (packaging matters), investment demand (asset allocation), high digitalization (social media, e-commerce). These features have driven up the prices of top Burgundy wines."
     },
     {
@@ -450,11 +450,11 @@
       "question": "What is the most critical competitive advantage for a successful wine merchant?",
       "options": [
         "Only needing large amounts of capital",
-        "Estate relationships, selection skill, customer network, brand reputation",
         "Only needing a good storefront location",
+        "Estate relationships, selection skill, customer network, brand reputation",
         "Only needing an online platform"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "A successful merchant needs: stable estate relationships (supply and allocation), professional selection skills (forecasting trends), a high-value customer network, and brand reputation (authenticity assurance). These are competitive advantages built up over the long term and can't be replicated quickly."
     },
     {
@@ -463,11 +463,11 @@
       "question": "How long does wine shipping from France to Asia typically take by sea?",
       "options": [
         "1-2 weeks",
-        "2-3 months",
         "6 months",
-        "1 year"
+        "1 year",
+        "2-3 months"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Sea shipping typically takes 2-3 months, including loading, transit, customs clearance, and delivery. Air freight takes only 1-2 weeks but costs 3-5 times more."
     },
     {
@@ -475,12 +475,12 @@
       "type": "single",
       "question": "What is roughly mainland China's combined tax rate on imported wine?",
       "options": [
+        "48%",
         "10%",
         "25%",
-        "48%",
         "70%"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Mainland China's combined tax rate is about 48% (14% tariff + 13% VAT + 10% consumption tax, compounded). Hong Kong is 0% (a free port), and Taiwan is about 15%."
     },
     {
@@ -502,11 +502,11 @@
       "question": "What is the main advantage of En Primeur?",
       "options": [
         "Immediate delivery",
-        "The price is typically 20-30% lower than the release price, securing an allocation",
         "There's no risk at all",
+        "The price is typically 20-30% lower than the release price, securing an allocation",
         "No payment required"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "En Primeur's advantages are a lower price (typically 20-30% below release price), securing an allocation for popular wines, and investment opportunity. But there's risk: price could fall, quality could disappoint, and delivery takes 2-3 years."
     },
     {
@@ -515,11 +515,11 @@
       "question": "What is the world's largest professional wine trade fair?",
       "options": [
         "Vinexpo Paris",
-        "ProWein (Düsseldorf, Germany)",
         "Wine Future Hong Kong",
-        "London Wine Fair"
+        "London Wine Fair",
+        "ProWein (Düsseldorf, Germany)"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "ProWein (Düsseldorf, Germany) is the world's largest and most important professional wine trade fair, held every March, attracting merchants, importers, and professional buyers globally."
     },
     {
@@ -527,12 +527,12 @@
       "type": "single",
       "question": "Roughly what is the market price for Burgundy Grand Cru land?",
       "options": [
-        "€100,000-300,000/hectare",
         "€1-3 million/hectare",
+        "€100,000-300,000/hectare",
         "€5-10 million/hectare",
         "Over €10 million/hectare"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Burgundy Grand Cru land costs roughly €1-3 million per hectare, with top plots (like Romanée-Conti) even higher. This is among the most expensive vineyard land in the world, and the high cost is reflected in wine prices."
     },
     {
@@ -567,11 +567,11 @@
       "question": "Among Burgundy critics, who is known as \"Burghound\"?",
       "options": [
         "Robert Parker",
-        "Allen Meadows",
         "Jancis Robinson",
-        "James Suckling"
+        "James Suckling",
+        "Allen Meadows"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Burghound, founded by Allen Meadows, is one of the most authoritative critical platforms for Burgundy. His scores have an enormous influence on Burgundy wine market prices — a 95+ score can double a price."
     },
     {
@@ -579,12 +579,12 @@
       "type": "single",
       "question": "Roughly how much did the 2021 spring frost reduce Burgundy's yield?",
       "options": [
+        "50%",
         "10%",
         "25%",
-        "50%",
         "75%"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "The 2021 spring frost was the most severe recent climate disaster, reducing Burgundy's yield by roughly 50%. This highlighted the threat climate change poses to viticulture, and is one reason estates need to insure against climate risk."
     },
     {
@@ -619,11 +619,11 @@
       "question": "What is the French name of Burgundy's wine-tasting brotherhood?",
       "options": [
         "Les Chevaliers de Bourgogne",
-        "Confrérie des Chevaliers du Tastevin",
         "Académie du Vin",
-        "Ordre des Vignerons"
+        "Ordre des Vignerons",
+        "Confrérie des Chevaliers du Tastevin"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "The Confrérie des Chevaliers du Tastevin (Brotherhood of the Knights of the Tastevin), founded in 1934 and headquartered at the Château du Clos de Vougeot, is Burgundy's most important wine-promotion organization, regularly hosting grand dinners and tasting events."
     },
     {
@@ -631,12 +631,12 @@
       "type": "single",
       "question": "What core elements should professional tasting notes include?",
       "options": [
-        "Just a description of taste",
         "Precise description, structural analysis, evolutionary stage, drinking window, food-pairing suggestions, score",
+        "Just a description of taste",
         "Just a score",
         "Just an identification of the region"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Master-level tasting notes need: precise sensory description, structural analysis (acidity, tannin, body), assessment of evolutionary stage, drinking-window suggestions, food-pairing suggestions, and a score. This is the complete display of professionalism."
     },
     {
@@ -645,11 +645,11 @@
       "question": "In an oral exam, when faced with a question you don't know, what's the best response?",
       "options": [
         "Guess an answer at random",
-        "Stay silent",
         "Admit you don't know, but demonstrate your thought process and related knowledge",
+        "Stay silent",
         "Change the subject"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Honestly admit you don't know, but demonstrate your thought process, related knowledge, and logical reasoning ability. Examiners want to see how you think, not a perfect answer. This shows professionalism and humility."
     },
     {
@@ -671,11 +671,11 @@
       "question": "After earning a master certification, what matters most?",
       "options": [
         "Stop learning and enjoy the honor",
-        "Continued professional development, staying humble, sharing knowledge",
         "Focus solely on making money",
-        "Criticizing others' shortcomings"
+        "Criticizing others' shortcomings",
+        "Continued professional development, staying humble, sharing knowledge"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "A true master always stays humble, keeps learning, respects terroir, and shares knowledge. Earning certification is a new starting point, requiring continued visits to the region, participation in professional events, mentoring the next generation, and contributing to the industry's development."
     },
     {
@@ -683,12 +683,12 @@
       "type": "single",
       "question": "What characteristics should a professional dissertation topic have?",
       "options": [
-        "As broad as possible",
         "Specific and clear, of research value, highly feasible, original",
+        "As broad as possible",
         "Choose only trending topics",
         "Choose the simplest topic"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "A good dissertation topic should be: specific and clear (avoiding excessive breadth), of research value, highly feasible, original, and have accessible data or materials. This ensures the dissertation can be researched in depth and produce valuable results."
     },
     {
@@ -710,11 +710,11 @@
       "question": "What qualification do you earn upon completing the Level 4 course?",
       "options": [
         "Just a certificate",
-        "A Burgundy Master Certificate + instructor qualification",
         "Nothing at all",
+        "A Burgundy Master Certificate + instructor qualification",
         "Only able to teach introductory courses"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Completing the Level 4 \"Expert Certification\" course earns you a \"Burgundy Master Certificate\" and \"instructor qualification\" — qualifying you to teach Burgundy wine courses, work as a consultant, and write professional critiques. This is the highest level of professional recognition."
     }
   ]

@@ -6,12 +6,12 @@
       "type": "single",
       "question": "夜丘（Côte de Nuits）最重要的葡萄品種是？",
       "options": [
+        "Pinot Noir",
         "Chardonnay",
         "Gamay",
-        "Pinot Noir",
         "Cabernet Sauvignon"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "夜丘是全球最偉大 Pinot Noir 的產地，幾乎所有頂級紅酒特級園都集中於此，從 Gevrey-Chambertin 到 Nuits-Saint-Georges，均以 Pinot Noir 著稱。"
     },
     {
@@ -31,11 +31,11 @@
       "question": "伯恩丘（Côte de Beaune）以哪類葡萄酒聞名於全球？",
       "options": [
         "頂級紅酒為主，白酒為次",
-        "頂級白酒（Chardonnay）為主，集中了 Montrachet、Meursault 等",
         "氣泡酒（Crémant）",
+        "頂級白酒（Chardonnay）為主，集中了 Montrachet、Meursault 等",
         "加烈酒"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "伯恩丘最大的榮耀是頂級 Chardonnay 白酒——蒙哈榭、梅索、高登-查理曼等，是全球最偉大白酒的集中地，同時也出產 Pommard、Volnay 等頂級 Pinot Noir。"
     },
     {
@@ -44,22 +44,22 @@
       "options": [
         "1995 年",
         "2005 年",
-        "2015 年",
-        "2020 年"
+        "2020 年",
+        "2015 年"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "布根地的 Climat（地塊文化景觀）於 2015 年正式獲聯合國教科文組織（UNESCO）列入世界人類文化遺產，標誌著法國風土概念在全球文明層面的最高認可。"
     },
     {
       "type": "single",
       "question": "「Montrachet」特級園橫跨哪兩個村莊？",
       "options": [
-        "Meursault 和 Beaune",
         "Puligny-Montrachet 和 Chassagne-Montrachet",
+        "Meursault 和 Beaune",
         "Gevrey 和 Morey",
         "Vosne-Romanée 和 Nuits-Saint-Georges"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Le Montrachet 特級園橫跨 Puligny-Montrachet（北側）和 Chassagne-Montrachet（南側）兩個村莊邊界，兩村都在村名後添加 Montrachet 以彰顯榮耀。"
     },
     {
@@ -67,11 +67,11 @@
       "question": "哲維瑞-香貝丹（Gevrey-Chambertin）共有多少個特級園？",
       "options": [
         "2 個",
-        "5 個",
         "9 個",
+        "5 個",
         "24 個"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "哲維瑞-香貝丹是布根地擁有最多特級園的村莊，共 9 個 Grand Cru，包括 Chambertin、Chambertin-Clos de Bèze、Mazis-Chambertin、Chapelle-Chambertin 等。"
     },
     {
@@ -79,11 +79,11 @@
       "question": "布根地葡萄園土壤最重要的地質基礎來自哪個地質年代？",
       "options": [
         "寒武紀",
-        "侏羅紀",
         "白堊紀",
+        "侏羅紀",
         "第四紀"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "布根地的土壤主要源自侏羅紀（約 1.8-1.4 億年前）的石灰岩和泥灰岩沉積，這些地質層為金丘的葡萄園提供礦物質豐富的生長環境，是形成風土複雜性的地質基礎。"
     },
     {
@@ -91,23 +91,23 @@
       "question": "「DRC（Domaine de la Romanée-Conti）」獨家擁有（Monopole）的兩個特級園是？",
       "options": [
         "Chambertin 和 Musigny",
-        "Romanée-Conti 和 La Tâche",
         "Richebourg 和 Echézeaux",
-        "Corton 和 Corton-Charlemagne"
+        "Corton 和 Corton-Charlemagne",
+        "Romanée-Conti 和 La Tâche"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "DRC 完全獨家擁有 Romanée-Conti（1.8ha）和 La Tâche（6.06ha）兩個特級園，另持有 Richebourg、Romanée-Saint-Vivant 等地塊的部分所有權。"
     },
     {
       "type": "single",
       "question": "布根地 Grand Cru（特級園）酒款在酒標上通常如何標示？",
       "options": [
-        "寫「Bourgogne Grand Cru + 村莊名」",
         "只寫特級園名稱（如「Chambertin」），其名稱本身即為 AOC",
+        "寫「Bourgogne Grand Cru + 村莊名」",
         "必須寫出國家和地區名稱",
         "以羅馬數字表示等級"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "布根地 Grand Cru 酒標的獨特之處：只需標示特級園名稱（如「Chambertin」），不需加上村莊名，因為地塊名稱本身就是一個獨立的 AOC，高於村莊等級。"
     },
     {
@@ -150,12 +150,12 @@
       "type": "single",
       "question": "「Corton-Charlemagne」的釀造法定品種是？",
       "options": [
-        "Pinot Noir",
         "Chardonnay",
+        "Pinot Noir",
         "Aligoté",
         "Pinot Gris"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Corton-Charlemagne 是 Chardonnay 白酒特級園，是伯恩丘最重要的白酒 Grand Cru 之一，也是布根地北端最宏大風格的白酒代表，以豐滿礦物感和極強陳年潛力著稱。"
     },
     {
@@ -175,11 +175,11 @@
       "question": "布根地最常見的農業風險「春霜」通常發生在幾月？",
       "options": [
         "1-2 月（冬季酷寒）",
-        "4-5 月（葡萄藤發芽後）",
         "7-8 月（夏季生長期）",
+        "4-5 月（葡萄藤發芽後）",
         "10-11 月（採收後）"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "布根地春霜最危險的時間是 4-5 月葡萄藤嫩芽萌發後——一旦霜凍，脆弱的嫩芽即被凍死，嚴重時可減產 50% 以上。2016 和 2019 年都因此受到嚴重衝擊。"
     },
     {
@@ -187,23 +187,23 @@
       "question": "「香波-蜜思妮（Chambolle-Musigny）」兩個特級園中，哪一個以「女性化優雅」著稱？",
       "options": [
         "Bonnes-Mares（以豐滿著稱）",
-        "Le Musigny（以花香優雅著稱）",
         "兩者都以強勁著稱",
-        "兩者都以礦物感著稱"
+        "兩者都以礦物感著稱",
+        "Le Musigny（以花香優雅著稱）"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Le Musigny 是布根地最細膩優雅的 Grand Cru 之一，以玫瑰、紫羅蘭的花香和絲般口感著稱；Bonnes-Mares 雖也在同村，風格卻更豐滿強健，兩者形成鮮明對比。"
     },
     {
       "type": "single",
       "question": "「Burgundy Vintages：2015 vs. 2010」哪個年份整體被評為更豐滿？",
       "options": [
-        "2010（以豐滿著稱）",
         "2015（以豐滿著稱）",
+        "2010（以豐滿著稱）",
         "兩者完全相同",
         "兩者都偏瘦"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "2015 布根地以格外豐滿的果感和絲滑質地著稱（許多人類比 1990 年份）；2010 以涼爽優雅、高酸著稱，是更「古典」的布根地風格。兩者各有雄辯支持者，但豐滿度上 2015 更勝一籌。"
     },
     {
@@ -211,11 +211,11 @@
       "question": "評估布根地 Pinot Noir 單寧品質時，最高評價的描述是？",
       "options": [
         "強勁板結如波爾多 Cabernet",
-        "粗糙、明顯澀感",
         "絲滑細膩、入喉不刮舌",
+        "粗糙、明顯澀感",
         "單寧越多越好"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "布根地頂尖 Pinot Noir 的單寧品質標準是：細膩如絲（Silky/Velvety），入口滑順，完全無粗糙或刺激感。過多澀感表示萃取過度或未熟，是明顯的品質缺陷。"
     },
     {
@@ -235,23 +235,23 @@
       "question": "「Whole Cluster Fermentation（整串發酵）」對 Pinot Noir 的影響是？",
       "options": [
         "降低酒精，使酒更清淡",
-        "葡萄梗帶來丹寧和辛香感，增加結構和複雜度",
         "使酒款更快可飲用",
-        "主要用於提高顏色深度"
+        "主要用於提高顏色深度",
+        "葡萄梗帶來丹寧和辛香感，增加結構和複雜度"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "整串發酵是布根地傳統做法，葡萄梗帶來不同類型的丹寧（更粗獷但有結構）、獨特的香料/草本感，以及布根地最有辨識度的「森林地表」香氣之一。是頂尖酒莊的重要風格工具。"
     },
     {
       "type": "single",
       "question": "氣候暖化對布根地最直接可測量的影響是？",
       "options": [
-        "葡萄品種從 Pinot Noir 換成 Syrah",
         "採收日期過去 50 年平均提前約 2 週",
+        "葡萄品種從 Pinot Noir 換成 Syrah",
         "氣候暖化對布根地無顯著影響",
         "年降雨量大幅減少了 50%"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "科學數據記錄顯示：1980 年代布根地採收平均在 10 月初，2010 年代後常在 9 月初至 8 月底開始，提前約 2 週。採收期的系統性提前是氣候暖化最直接的農業指標。"
     },
     {
@@ -271,11 +271,11 @@
       "question": "判斷布根地葡萄酒長期陳年能力的最重要指標是？",
       "options": [
         "顏色越深越能陳年",
-        "充足的天然酸度（是最重要的抗氧化機制）",
         "橡木桶用量越多越能陳年",
+        "充足的天然酸度（是最重要的抗氧化機制）",
         "酒精度越高越能陳年"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "天然酸度是葡萄酒陳年的最關鍵防護：高酸度抑制氧化速率，保護果味不提前衰退，也使酒款能發展出更複雜的陳年香氣。這是為什麼布根地小年份高酸酒有時比大年份低酸酒更值得陳年。"
     },
     {
@@ -283,35 +283,35 @@
       "question": "「Les Amoureuses」是布根地最著名的一級園之一，它屬於哪個村莊？",
       "options": [
         "Gevrey-Chambertin",
-        "Chambolle-Musigny",
         "Vosne-Romanée",
-        "Nuits-Saint-Georges"
+        "Nuits-Saint-Georges",
+        "Chambolle-Musigny"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Les Amoureuses（戀人們）是 Chambolle-Musigny 村最著名的 Premier Cru，緊鄰 Le Musigny 特級園下方，品質接近特級園，拍賣價格有時超過部分 Grand Cru。"
     },
     {
       "type": "single",
       "question": "布根地頂尖 Pinot Noir 陳年 10 年以上後常見的「第三類香氣（陳年香）」典型描述是？",
       "options": [
+        "松露、皮革、森林地表、野菌",
         "草莓、覆盆子等新鮮紅果",
         "奶油、酵母麵包",
-        "松露、皮革、森林地表、野菌",
         "青草、薄荷的清新香"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "布根地頂尖 Pinot Noir 陳年後展現的第三類香氣（陳年香）：松露（最高評價指標）、皮革、森林地表腐葉、野菌（牛肝菌、蘑菇）、紅茶——這些複雜香氣是布根地陳年酒的最高成就象徵。"
     },
     {
       "type": "single",
       "question": "「生物動力農法（Biodynamie）」在布根地最著名的代表酒莊包括哪個？",
       "options": [
-        "Domaine Leroy（Lalou Bize-Leroy 先驅）",
         "Louis Latour（傳統酒商）",
+        "Domaine Leroy（Lalou Bize-Leroy 先驅）",
         "Bouchard Père & Fils（大型酒商）",
         "所有布根地酒莊都採用"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Lalou Bize-Leroy 是布根地生物動力農法最著名的先驅，其 Domaine Leroy 在 1980 年代即全面轉型，DRC 和 Domaine Leflaive 也是知名的生物動力農法酒莊，但 Leroy 是最早和最極端的倡導者。"
     },
     {
@@ -331,23 +331,23 @@
       "question": "「Pommard」在伯恩丘的紅酒風格特徵是？",
       "options": [
         "輕盈優雅，如 Volnay 風格",
-        "強勁豐厚，單寧飽滿，是伯恩丘最「男性化」的 Pinot Noir",
         "以白酒著名",
-        "年輕即可飲用的清爽風格"
+        "年輕即可飲用的清爽風格",
+        "強勁豐厚，單寧飽滿，是伯恩丘最「男性化」的 Pinot Noir"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Pommard 和 Volnay 相鄰但風格截然相反：Pommard 強健豐滿、色深單寧高，是伯恩丘最接近夜丘氣魄的紅酒；Volnay 則輕盈，如同法國 Pinot Noir 中最細膩的「貴婦」。"
     },
     {
       "type": "single",
       "question": "「Caudalie」在品酒中的定義是？",
       "options": [
-        "葡萄酒的顏色單位",
         "回韻時間的計量單位（1 Caudalie = 1 秒）",
+        "葡萄酒的顏色單位",
         "酒精濃度的測量方式",
         "橡木桶使用的比例"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Caudalie 是法文品酒用語，專指回韻持續時間，1 Caudalie = 1 秒。布根地頂尖 Grand Cru 回韻通常超過 30 Caudalie，DRC 等傳奇年份可超過 60 Caudalie，是品質最直接的量化指標之一。"
     },
     {

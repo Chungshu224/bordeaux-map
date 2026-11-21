@@ -7,12 +7,12 @@
       "type": "single",
       "question": "What is the ideal slope aspect for Burgundy's top vineyards?",
       "options": [
-        "Due south, for maximum sunlight",
         "East or southeast, for gentle morning sun",
+        "Due south, for maximum sunlight",
         "West, to enjoy afternoon sun",
         "North, to stay cool"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "East- or southeast-facing slopes provide gentle morning sun while avoiding excessive afternoon exposure, and ensure good drainage — the ideal orientation for Burgundy's top vineyards."
     },
     {
@@ -34,11 +34,11 @@
       "question": "Within the Clos de Vougeot Grand Cru, what is the main difference between the upper- and lower-slope plots?",
       "options": [
         "More clay upslope, more limestone downslope",
-        "More limestone upslope, producing elegance; more clay downslope, producing richer wines",
         "No noticeable difference — quality is consistent",
+        "More limestone upslope, producing elegance; more clay downslope, producing richer wines",
         "The lower slope is always better quality"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Clos de Vougeot's upper slope (near Musigny) has more limestone, producing elegant, refined wines; the lower slope has more clay, producing richer, fuller wines — which is also why prices within this single Grand Cru can differ by more than fivefold."
     },
     {
@@ -57,12 +57,12 @@
       "type": "single",
       "question": "Why is Pinot Noir considered the variety that most faithfully expresses terroir?",
       "options": [
-        "Extremely high-yielding and easy to grow",
         "Extremely sensitive to its environment, precisely expressing terroir differences",
+        "Extremely high-yielding and easy to grow",
         "Adapts to any climate condition",
         "Requires no special care"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Pinot Noir is extremely sensitive to its environment — the same variety, planted in plots only 100 meters apart, can produce dramatically different wines. This extreme sensitivity makes it a \"transparent translator\" of terroir."
     },
     {
@@ -84,11 +84,11 @@
       "question": "Why are Chambolle-Musigny's wines especially elegant and refined?",
       "options": [
         "A special winemaking technique is used",
-        "It sits in a bowl-shaped amphitheater with forest protection and thin, poor soil",
         "Grape yields are especially high",
+        "It sits in a bowl-shaped amphitheater with forest protection and thin, poor soil",
         "A special Pinot Noir clone is used"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Chambolle-Musigny sits in a natural amphitheater shape; a forest barrier on the east shields it from cold winds, and the soil is a thin layer of limestone that forces roots deep — producing extremely elegant wines."
     },
     {
@@ -96,10 +96,10 @@
       "type": "single",
       "question": "Burgundy uses only Pinot Noir and Chardonnay so as to purely express each plot's unique terroir.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Using a single variety eliminates blending as a variable, purely expressing each plot's uniqueness — the biggest difference between Burgundy's philosophy and Bordeaux's blending tradition."
     },
     {
@@ -107,12 +107,12 @@
       "type": "single",
       "question": "For every 100-meter rise in elevation, roughly how much does temperature drop?",
       "options": [
-        "0.3°C",
         "0.6°C",
+        "0.3°C",
         "1°C",
         "1.5°C"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Temperature drops about 0.6°C for every 100 meters of elevation gain — an important factor affecting grape ripeness and acidity."
     },
     {
@@ -121,11 +121,11 @@
       "question": "Which of the following is NOT among Burgundy producers' strategies for coping with climate change?",
       "options": [
         "Harvesting earlier to preserve acidity",
-        "Increasing leaf canopy to shade the grapes",
         "Extensive use of irrigation systems",
+        "Increasing leaf canopy to shade the grapes",
         "Reassessing the potential of high-altitude plots"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Burgundy has traditionally not used irrigation, relying on natural rainfall. Producers mainly cope with climate change by adjusting harvest timing, canopy management, and plot selection."
     },
     {
@@ -134,11 +134,11 @@
       "question": "Which is DRC's only white-wine Grand Cru?",
       "options": [
         "Corton-Charlemagne",
-        "Montrachet",
         "Meursault Perrières",
+        "Montrachet",
         "Musigny Blanc"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "DRC holds 0.67 hectares of Montrachet, the estate's only white-wine Grand Cru — produced in tiny quantities and at very high prices."
     },
     {
@@ -148,10 +148,10 @@
       "options": [
         "30-35 hl/ha",
         "25-30 hl/ha",
-        "15-18 hl/ha",
-        "40-45 hl/ha"
+        "40-45 hl/ha",
+        "15-18 hl/ha"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "Leroy practices extreme biodynamic viticulture with very low yields — only 15-18 hl/ha, far below the legal maximum — the source of its wines' concentration."
     },
     {
@@ -171,11 +171,11 @@
       "question": "Roughly what proportion of new oak does Domaine Coche-Dury use?",
       "options": [
         "80-100%",
-        "50-60%",
         "20-30%",
+        "50-60%",
         "No new oak used"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Coche-Dury uses only 20-30% new oak, avoiding wood flavors masking terroir expression — one reason its whites are so pure and elegant."
     },
     {
@@ -197,11 +197,11 @@
       "question": "Which winemaker, hailed as the greatest Burgundy winemaker of the 20th century, profoundly shaped Méo-Camuzet's style?",
       "options": [
         "Aubert de Villaine",
-        "Henri Jayer",
         "Jacques Seysses",
-        "Lalou Bize-Leroy"
+        "Lalou Bize-Leroy",
+        "Henri Jayer"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Henri Jayer is regarded as one of the 20th century's greatest Burgundy winemakers. He mentored Jean-Nicolas Méo in establishing Méo-Camuzet's winemaking style."
     },
     {
@@ -221,11 +221,11 @@
       "question": "What is Domaine Dujac's typical whole-cluster fermentation proportion?",
       "options": [
         "0% (fully destemmed)",
-        "50%",
         "100%",
+        "50%",
         "Adjusted by vintage"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Dujac is a firm advocate of 100% whole-cluster fermentation; Jacques Seysses believes it brings greater complexity and spice character."
     },
     {
@@ -247,11 +247,11 @@
       "question": "Which estate's Meursault Les Perrières is considered comparable in quality to a Grand Cru?",
       "options": [
         "Domaine Leflaive",
-        "Domaine Coche-Dury",
         "Domaine Roulot",
-        "Domaine Comtes Lafon"
+        "Domaine Comtes Lafon",
+        "Domaine Coche-Dury"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Coche-Dury's Meursault Les Perrières is considered by many experts to rival Le Montrachet in quality — one of the finest Premier Cru whites in Burgundy."
     },
     {
@@ -259,12 +259,12 @@
       "type": "single",
       "question": "Which vintage is considered the 21st century's first perfect vintage?",
       "options": [
-        "2003",
         "2005",
+        "2003",
         "2009",
         "2010"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "2005 is widely recognized as the 21st century's first perfect vintage — ideal climate conditions produced wines that are concentrated, balanced, and have excellent aging potential."
     },
     {
@@ -284,11 +284,11 @@
       "question": "What was the main issue with the 2021 vintage?",
       "options": [
         "Excessive heat",
-        "Severe frost causing very low yields",
         "Continuous rain during harvest",
+        "Severe frost causing very low yields",
         "Severe pest and disease pressure"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "2021 suffered severe frost damage, with yields down 30-50%, though the surviving grapes were of excellent quality."
     },
     {
@@ -297,11 +297,11 @@
       "question": "For a 2019 Grand Cru red wine, what is roughly the ideal drinking window?",
       "options": [
         "2020-2025",
-        "2025-2050",
         "2030-2060",
-        "Ready to drink now"
+        "Ready to drink now",
+        "2025-2050"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "2019 is an excellent vintage with Grand Cru aging potential up to 50 years; the ideal drinking window is 2025-2050."
     },
     {
@@ -309,10 +309,10 @@
       "type": "single",
       "question": "1999 is considered a seriously underrated excellent vintage.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "1999 is often overshadowed by 1990 and 2000, but is actually an excellent vintage with reasonable prices and outstanding value."
     },
     {
@@ -334,11 +334,11 @@
       "question": "What characterizes the 2010 vintage?",
       "options": [
         "Early-maturing, richly fruity, ready to drink early",
-        "Powerful structure, high acidity, needs long aging",
         "Excessive alcohol, insufficient acidity",
+        "Powerful structure, high acidity, needs long aging",
         "Very low yields, high prices"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "2010 has powerful structure and high acidity — a classic vintage for long-term aging."
     },
     {
@@ -357,12 +357,12 @@
       "type": "single",
       "question": "White wine's ideal aging period is typically ___ than red wine's.",
       "options": [
-        "longer",
         "shorter",
+        "longer",
         "the same",
         "dependent entirely on oak use"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Burgundy white wine's aging potential is generally shorter than red — typically peaking at 10-20 years, while top red wine can age 30-50 years."
     },
     {
@@ -384,11 +384,11 @@
       "question": "In which geological era did Burgundy's soils mainly form?",
       "options": [
         "Cretaceous",
-        "Jurassic",
         "Triassic",
+        "Jurassic",
         "Cenozoic"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Burgundy's soils mainly formed during the Jurassic period (200-145 million years ago), when the region was a warm, shallow sea."
     },
     {
@@ -397,11 +397,11 @@
       "question": "What is the most distinctive feature of Kimmeridgian soil?",
       "options": [
         "Rich in volcanic ash",
-        "Rich in small oyster fossils",
         "Pure granite",
-        "High organic matter content"
+        "High organic matter content",
+        "Rich in small oyster fossils"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Kimmeridgian soil is rich in small oyster fossils (Exogyra virgula) — the signature feature of Chablis's Grands Crus."
     },
     {
@@ -409,10 +409,10 @@
       "type": "single",
       "question": "All seven Climats within Chablis Grand Cru sit on Kimmeridgian soil.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "All seven Climats within Chablis Grand Cru (a single AOC) sit on the right bank of the Serein river on Kimmeridgian soil — the foundation of their exceptional quality."
     },
     {
@@ -420,12 +420,12 @@
       "type": "single",
       "question": "What is the main soil difference between the Côte de Nuits and the Côte de Beaune?",
       "options": [
-        "The Côte de Nuits has more clay, the Côte de Beaune more limestone",
         "The Côte de Nuits has more limestone, the Côte de Beaune more clay",
+        "The Côte de Nuits has more clay, the Côte de Beaune more limestone",
         "Their soils are exactly the same",
         "The Côte de Nuits is granite"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "The Côte de Nuits is mainly limestone mixed with red clay (suiting Pinot Noir), while the Côte de Beaune is mainly white marl and limestone (suiting Chardonnay)."
     },
     {
@@ -434,11 +434,11 @@
       "question": "What is the ideal soil pH range in Burgundy?",
       "options": [
         "6-6.5",
-        "7-8",
         "8.5-9",
+        "7-8",
         "5.5-6"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Burgundy's ideal soil pH is between 7 and 8 (slightly alkaline), which helps preserve high grape acidity and nutrient availability."
     },
     {
@@ -470,12 +470,12 @@
       "type": "single",
       "question": "Roughly how great is the age gap between the Kimmeridgian and Portlandian soil layers?",
       "options": [
-        "5 million years",
         "10 million years",
+        "5 million years",
         "50 million years",
         "100 million years"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Kimmeridgian (about 155 million years ago) and Portlandian (about 150 million years ago) differ by about 5 million years, but produce distinctly different soil characteristics."
     },
     {
@@ -483,10 +483,10 @@
       "type": "single",
       "question": "Higher limestone content generally produces more elegant, refined wines.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Soil with high limestone content (50-70%) drains extremely well and typically produces elegant, highly mineral, high-acid wines."
     },
     {
@@ -495,11 +495,11 @@
       "question": "Top vineyard plots are typically located where on a slope?",
       "options": [
         "Upslope (highest point)",
-        "Mid-slope",
         "Downslope (lowest point)",
-        "Flat ground"
+        "Flat ground",
+        "Mid-slope"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Mid-slope is generally ideal — combining good drainage, moderate water stress, and favorable aspect, while avoiding both frost and waterlogging."
     },
     {
@@ -507,12 +507,12 @@
       "type": "single",
       "question": "What proportion of whole-cluster fermentation does DRC use?",
       "options": [
+        "100%",
         "0%",
         "50%",
-        "80%",
-        "100%"
+        "80%"
       ],
-      "correct": 3,
+      "correct": 0,
       "explanation": "DRC uses 100% whole-cluster fermentation, believing it brings the greatest complexity and aging potential."
     },
     {
@@ -532,11 +532,11 @@
       "question": "Roughly what proportion of new oak does Coche-Dury use for its white wines?",
       "options": [
         "0%",
-        "20-30%",
         "50-60%",
+        "20-30%",
         "100%"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Coche-Dury uses only 20-30% new oak, avoiding wood flavors masking the wine's refined minerality."
     },
     {
@@ -545,11 +545,11 @@
       "question": "What is the capacity of a standard Burgundy oak barrel?",
       "options": [
         "225 liters",
-        "228 liters",
         "300 liters",
-        "500 liters"
+        "500 liters",
+        "228 liters"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "The standard Burgundy barrel (a pièce) holds 228 liters, slightly larger than the Bordeaux barrique's 225 liters."
     },
     {
@@ -557,10 +557,10 @@
       "type": "single",
       "question": "Bâtonnage (lees stirring) is used mainly for white wine, and adds roundness and bread-like aromas.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Bâtonnage resuspends the lees, releasing polysaccharides and flavor compounds, adding roundness to the white wine and its bread- and butter-like aromas."
     },
     {
@@ -594,10 +594,10 @@
       "options": [
         "3-7 days",
         "7-14 days",
-        "15-30 days",
-        "40-60 days"
+        "40-60 days",
+        "15-30 days"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "Burgundy red wine typically macerates for 15-30 days — much longer than the New World — to extract a complex tannin structure."
     },
     {
@@ -605,12 +605,12 @@
       "type": "single",
       "question": "What is the main purpose of cold maceration?",
       "options": [
-        "Extract tannin",
         "Extract aroma and color without extracting tannin",
+        "Extract tannin",
         "Speed up fermentation",
         "Lower alcohol"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Cold maceration takes place at 5-10°C for 5-7 days, extracting aroma and color, but not tannin, due to the low temperature."
     },
     {
@@ -618,10 +618,10 @@
       "type": "single",
       "question": "Both DRC and Leroy refuse to filter their wines, believing filtration harms terroir expression.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Both top estates insist on unfiltered bottling to preserve all flavor compounds and texture — though there may be sediment, the flavor is more complete."
     },
     {
@@ -653,12 +653,12 @@
       "type": "single",
       "question": "How many Grands Crus does Gevrey-Chambertin have?",
       "options": [
+        "9",
         "5",
         "7",
-        "9",
         "11"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Gevrey-Chambertin has 9 Grands Crus, including Chambertin, Clos de Bèze, and 7 Grands Crus bearing the Chambertin suffix."
     },
     {
@@ -692,10 +692,10 @@
       "type": "single",
       "question": "Chevalier-Montrachet sits upslope of Le Montrachet and has a more elegant, refined style.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Chevalier-Montrachet sits upslope with thinner soil and more limestone, producing extremely elegant, high-acid, highly mineral white wine."
     },
     {
@@ -703,12 +703,12 @@
       "type": "single",
       "question": "What proportion of the Musigny Grand Cru does Comte de Vogüé own?",
       "options": [
+        "70%",
         "30%",
         "50%",
-        "70%",
         "100%"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Comte de Vogüé owns about 7 of Musigny's 10.8 hectares — about 70% — making it virtually synonymous with Musigny."
     },
     {
@@ -728,11 +728,11 @@
       "question": "From an investment perspective, which Grand Cru offers relatively better value?",
       "options": [
         "Romanée-Conti",
-        "Clos de la Roche",
         "Le Montrachet",
+        "Clos de la Roche",
         "La Tâche"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Clos de la Roche is of excellent quality but relatively underrated, with reasonable pricing and better investment value."
     },
     {
@@ -742,10 +742,10 @@
       "options": [
         "Village level",
         "Premier Cru",
-        "Musigny",
-        "An ordinary Grand Cru"
+        "An ordinary Grand Cru",
+        "Musigny"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "Clos de Vougeot's upper-slope plots (such as those held by Méo-Camuzet) approach Musigny-level quality, far exceeding an ordinary Grand Cru."
     },
     {
@@ -753,12 +753,12 @@
       "type": "single",
       "question": "Over the past 20 years, roughly what has been DRC Romanée-Conti's average annual price appreciation?",
       "options": [
+        "12%",
         "5%",
         "8%",
-        "12%",
         "20%"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "According to auction data, DRC Romanée-Conti's average annual appreciation from 2000-2024 has been about 12% — far exceeding traditional investments."
     },
     {
@@ -766,12 +766,12 @@
       "type": "single",
       "question": "Roughly what share of global wine production does Burgundy account for?",
       "options": [
-        "Less than 1%",
         "About 5%",
+        "Less than 1%",
         "About 10%",
         "About 20%"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Burgundy accounts for less than 1% of global wine production, yet holds 30-40% of the fine wine market."
     },
     {
@@ -779,10 +779,10 @@
       "type": "single",
       "question": "Auction houses' buyer's premium is typically 15-25%.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "International auction houses charge buyers a 15-25% premium — an important cost to factor into the total."
     },
     {
@@ -792,10 +792,10 @@
       "options": [
         "30%",
         "50%",
-        "70%",
-        "90%"
+        "90%",
+        "70%"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "The suggested allocation is: 70% core blue-chip (steady appreciation), 20% growth-oriented, 10% speculative."
     },
     {
@@ -803,12 +803,12 @@
       "type": "single",
       "question": "What is the main advantage of buying En Primeur?",
       "options": [
-        "You can take delivery immediately",
         "The price is usually lower and it secures an allocation",
+        "You can take delivery immediately",
         "You can taste beforehand",
         "There's absolutely no risk"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "The main advantage of En Primeur is that the price is typically 10-30% lower than after bottling, and it secures an allocation, but it requires paying upfront and waiting 2-3 years."
     },
     {
@@ -842,10 +842,10 @@
       "options": [
         "1-2%",
         "5-8%",
-        "10-20%",
-        "30-40%"
+        "30-40%",
+        "10-20%"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "It's estimated that about 10-20% of fine wine on the market has authenticity concerns, especially for top estates like DRC — buyers need careful authentication."
     },
     {
@@ -853,10 +853,10 @@
       "type": "single",
       "question": "In 2022-2023, the Burgundy market saw its first price correction of about 10-15%.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Affected by the global economic slowdown, the Burgundy market experienced its first correction in 2022-2023, before stabilizing from 2024 onward."
     },
     {
@@ -878,11 +878,11 @@
       "question": "What temperature should an ideal wine cellar be kept at?",
       "options": [
         "10-12°C",
-        "12-14°C",
         "14-16°C",
+        "12-14°C",
         "16-18°C"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "A professional cellar should maintain a steady 12-14°C, with fluctuation no greater than ±1°C — the best temperature for long-term wine aging."
     },
     {
@@ -891,11 +891,11 @@
       "question": "What is the ideal humidity range for a wine cellar?",
       "options": [
         "40-50%",
-        "60-75%",
         "80-90%",
-        "90-95%"
+        "90-95%",
+        "60-75%"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Cellar humidity should be kept at 60-75% — enough to prevent corks from drying out, but not so much that labels grow mold."
     },
     {
@@ -940,10 +940,10 @@
       "type": "single",
       "question": "Wines with complete provenance records can command a 30-50% price premium.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Clear provenance greatly reduces the risk of counterfeits, so wines with complete provenance can command a significant premium."
     },
     {
@@ -951,12 +951,12 @@
       "type": "single",
       "question": "Which of the following is NOT a common red flag for counterfeit wine?",
       "options": [
+        "Clear, complete provenance",
         "Overly fine, perfect label printing",
         "Blurry cork imprint",
-        "Clear, complete provenance",
         "Price far below market rate"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Clear, complete provenance is a feature of a genuine wine; the other options are all common red flags for counterfeits."
     },
     {
@@ -965,11 +965,11 @@
       "question": "What fill level is acceptable for a 30-year-old wine?",
       "options": [
         "IN/BN",
-        "BN/TS",
         "TS/HS",
+        "BN/TS",
         "HS/MS"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "For a 30-year-old wine, a fill level between TS (Top Shoulder) and HS (High Shoulder) is acceptable — natural evaporation is normal at this age."
     },
     {
@@ -990,10 +990,10 @@
       "options": [
         "2008",
         "2010",
-        "2012",
-        "2015"
+        "2015",
+        "2012"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "The 2012 Rudy Kurniawan case is the largest counterfeiting scandal in wine history, exposing the fine wine market's counterfeiting problem."
     },
     {
@@ -1001,12 +1001,12 @@
       "type": "single",
       "question": "What is the first thing you observe in systematic blind tasting?",
       "options": [
-        "Aroma intensity",
         "Appearance and color",
+        "Aroma intensity",
         "Palate and acidity",
         "Finish length"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Systematic blind tasting follows the order \"appearance → aroma → palate → conclusion,\" starting with color, clarity, and viscosity."
     },
     {
@@ -1027,10 +1027,10 @@
       "type": "single",
       "question": "Burgundy from a hot vintage is typically deep in color, low in acidity, and high in alcohol.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "In hot vintages (such as 2015 and 2019), grapes ripen fully, leading to deeper color, higher sugar (higher alcohol), and relatively lower acidity."
     },
     {
@@ -1040,10 +1040,10 @@
       "options": [
         "Deep purple-red",
         "Ruby",
-        "Brick red",
-        "Tawny brown"
+        "Tawny brown",
+        "Brick red"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "A 15-year-old Burgundy evolves from ruby to brick red, with the rim starting to show orange-brown tones."
     },
     {
@@ -1051,12 +1051,12 @@
       "type": "single",
       "question": "Which producer is known for a high proportion of new oak and a modern style?",
       "options": [
+        "Méo-Camuzet",
         "Rousseau",
         "Roumier",
-        "Méo-Camuzet",
         "Dujac"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Méo-Camuzet is known for a relatively high proportion of new oak (50-100%) and a polished, immediately appealing modern style."
     },
     {
@@ -1089,11 +1089,11 @@
       "question": "In a 100-point scale, what quality tier does a score of 90-94 typically represent?",
       "options": [
         "Good",
-        "Very Good",
         "Outstanding",
-        "Perfect"
+        "Perfect",
+        "Very Good"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "On the 100-point scale: 85-89 = Good, 90-94 = Very Good, 95-100 = Outstanding/Exceptional."
     },
     {
@@ -1113,11 +1113,11 @@
       "question": "In blind tasting, an overtly obvious vanilla and toasted-bread aroma typically suggests what?",
       "options": [
         "Characteristics of an aged wine",
-        "A cool vintage",
         "A high proportion of new oak",
+        "A cool vintage",
         "Whole-cluster fermentation"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Vanilla, toasted bread, and mocha aromas come from oak; when overtly obvious, it usually indicates a high proportion (50-100%) of new barrels."
     },
     {
@@ -1126,11 +1126,11 @@
       "question": "What principle underlies the classic pairing of Chablis with oysters?",
       "options": [
         "Complementary principle",
-        "Contrast principle (high acid cutting through marine brininess)",
         "Flavor echo",
+        "Contrast principle (high acid cutting through marine brininess)",
         "Regional echo"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Chablis's high acidity and minerality balance oysters' marine brininess and richness — a contrast-based pairing principle."
     },
     {
@@ -1139,11 +1139,11 @@
       "question": "Which of the following pairings is a mistake?",
       "options": [
         "Meursault + lobster in cream sauce",
-        "High-tannin red wine + steamed fish",
         "Gevrey-Chambertin + beef bourguignon",
-        "Chablis + escargot"
+        "Chablis + escargot",
+        "High-tannin red wine + steamed fish"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "High-tannin red wine paired with fish produces a metallic, bitter taste — a cardinal sin of food and wine pairing."
     },
     {
@@ -1163,11 +1163,11 @@
       "question": "What is the best pairing for the classic Burgundy dish Coq au Vin?",
       "options": [
         "Chablis",
-        "Meursault",
         "Gevrey-Chambertin",
+        "Meursault",
         "Sauternes"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Coq au Vin (chicken braised in red wine) is traditionally cooked with Gevrey red wine, which is also the best pairing to serve alongside it."
     },
     {
@@ -1199,12 +1199,12 @@
       "type": "single",
       "question": "What is the typical pairing order for a Michelin-star tasting menu?",
       "options": [
-        "Red → white → sweet",
         "White → red → sweet",
+        "Red → white → sweet",
         "Random order",
         "Only one wine used"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Tasting menus follow the principle of light to heavy, white before red, finishing with a sweet wine."
     },
     {
@@ -1213,11 +1213,11 @@
       "question": "What is the best pairing for Époisses cheese (a washed-rind cheese)?",
       "options": [
         "Chablis",
-        "Young Gevrey",
         "Sweet white wine or Marc",
+        "Young Gevrey",
         "Sake"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Époisses has an intensely pungent flavor that needs the sweetness of a sweet white wine or the alcohol strength of Marc to balance it."
     },
     {
@@ -1237,11 +1237,11 @@
       "question": "What style of Burgundy best suits Wagyu beef's rich marbling?",
       "options": [
         "High-acid, crisp Chablis",
-        "Silky-tannined Chambolle or Vosne",
         "Powerful, rustic aged Pommard",
-        "Sweet white wine"
+        "Sweet white wine",
+        "Silky-tannined Chambolle or Vosne"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Wagyu's marbling needs silky, fine tannin to complement it — Chambolle or Vosne's elegant style suits best."
     },
     {
@@ -1249,12 +1249,12 @@
       "type": "single",
       "question": "Who founded biodynamic viticulture?",
       "options": [
-        "Lalou Bize-Leroy",
         "Rudolf Steiner",
+        "Lalou Bize-Leroy",
         "Aubert de Villaine",
         "Maria Thun"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Biodynamics was proposed in 1924 by the Austrian philosopher Rudolf Steiner, based on his philosophy of anthroposophy."
     },
     {
@@ -1275,10 +1275,10 @@
       "type": "single",
       "question": "Biodynamics requires meeting organic farming standards first, before further certification.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Biodynamic requirements are stricter than organic farming — a vineyard must first meet organic standards, then follow the additional biodynamic requirements."
     },
     {
@@ -1287,11 +1287,11 @@
       "question": "In what year did DRC begin adopting biodynamics?",
       "options": [
         "1975",
-        "1985",
         "1995",
-        "2005"
+        "2005",
+        "1985"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "DRC began experimenting with biodynamics in 1985 under Aubert de Villaine's push, adopting it fully by the 1990s."
     },
     {
@@ -1299,12 +1299,12 @@
       "type": "single",
       "question": "According to biodynamic lunar theory, what is the best day for harvesting?",
       "options": [
+        "Fruit day",
         "Root day",
         "Leaf day",
-        "Flower day",
-        "Fruit day"
+        "Flower day"
       ],
-      "correct": 3,
+      "correct": 0,
       "explanation": "A \"fruit day\" (when the moon passes through a fire sign) is considered the best day to harvest, as fruit energy is believed to be at its peak."
     },
     {
@@ -1338,10 +1338,10 @@
       "options": [
         "Too costly",
         "Yields too low",
-        "Lack of double-blind controlled trials confirming its claims",
-        "Unsuited to Burgundy's climate"
+        "Unsuited to Burgundy's climate",
+        "Lack of double-blind controlled trials confirming its claims"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "The scientific community's main criticism of biodynamics is the lack of rigorous double-blind controlled trials; some practices (such as lunar influence) are viewed as pseudoscience."
     },
     {
@@ -1349,10 +1349,10 @@
       "type": "single",
       "question": "Preparation 501 (horn silica) is mainly sprayed on the leaves to enhance photosynthesis.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Preparation 501 is sprayed on the leaves and is said to enhance photosynthesis and promote fruit ripening, complementing 500 (used on soil)."
     },
     {
@@ -1361,11 +1361,11 @@
       "question": "What do biodynamic practitioners believe is the key to its success?",
       "options": [
         "The effect of a single mystical preparation",
-        "The direct influence of lunar phases",
         "The overall management philosophy and rigorous vineyard management",
+        "The direct influence of lunar phases",
         "Being a substitute for chemical fertilizers"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Even though the scientific community questions some practices, biodynamics' overall management philosophy (strict organic management, low yields, soil care) does deliver high quality."
     },
     {
@@ -1424,11 +1424,11 @@
       "question": "Which region is most likely to be a beneficiary of climate change?",
       "options": [
         "Pommard's south-facing slopes",
-        "Chablis",
         "Corton's low-elevation sites",
+        "Chablis",
         "Volnay's flatlands"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Chablis was historically often under-ripe; with warming it now reaches ideal ripeness while retaining high acidity — a dramatic leap in quality."
     },
     {
@@ -1436,10 +1436,10 @@
       "type": "single",
       "question": "In 2020, French regulations were relaxed to allow top-tier vineyards moderate irrigation during extreme drought.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Facing climate change, 2020 regulations allow moderate irrigation in emergency situations."
     },
     {
@@ -1447,12 +1447,12 @@
       "type": "single",
       "question": "What winemaking adjustments have estates made to cope with high temperatures?",
       "options": [
+        "Increasing the whole-cluster fermentation proportion",
         "Increasing the new-barrel proportion",
         "Extending maceration time",
-        "Increasing the whole-cluster fermentation proportion",
         "Raising fermentation temperature"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Whole-cluster fermentation (retaining stems) brings tannin and acidity, helping balance the high alcohol and low acidity caused by warming."
     },
     {
@@ -1486,10 +1486,10 @@
       "options": [
         "Falling yields",
         "Rising costs",
-        "Preserving Pinot Noir's elegant style and terroir character",
-        "International competition"
+        "International competition",
+        "Preserving Pinot Noir's elegant style and terroir character"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "High alcohol and low acidity threaten Burgundy's traditional elegant style — how to preserve Pinot Noir's character is the core challenge."
     },
     {
@@ -1497,12 +1497,12 @@
       "type": "single",
       "question": "Which auction house has the largest annual global wine trading volume?",
       "options": [
+        "Acker Merrall & Condit",
         "Christie's",
         "Sotheby's",
-        "Acker Merrall & Condit",
         "Bonhams"
       ],
-      "correct": 2,
+      "correct": 0,
       "explanation": "Acker Merrall & Condit is the largest US wine auction house, with annual trading volume of $150-200 million."
     },
     {
@@ -1523,10 +1523,10 @@
       "type": "single",
       "question": "Once you raise your paddle to bid at an auction, it is legally binding and cannot be withdrawn.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Once a bid is placed, it forms a legally binding commitment — the winning bidder must pay and cannot cancel."
     },
     {
@@ -1535,11 +1535,11 @@
       "question": "What does \"reserve price\" mean at an auction?",
       "options": [
         "The buyer's budget ceiling",
-        "The minimum price set by the seller",
         "The auction house's estimate",
-        "The final sale price"
+        "The final sale price",
+        "The minimum price set by the seller"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "The reserve price is the minimum set by the seller; the auction house will not sell the lot below this price."
     },
     {
@@ -1547,12 +1547,12 @@
       "type": "single",
       "question": "Roughly what price premium can perfect bottle condition command over average condition?",
       "options": [
-        "5-10%",
         "20-50%",
+        "5-10%",
         "100%",
         "200%"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Perfect bottle condition (fill level IN/BN, intact label) can command a 20-50% premium over average condition — an important price factor."
     },
     {
@@ -1572,11 +1572,11 @@
       "question": "What is the best tool for checking historical auction prices for wine?",
       "options": [
         "CellarTracker",
-        "Wine-Searcher Pro",
         "Vivino",
+        "Wine-Searcher Pro",
         "Google"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Wine-Searcher Pro provides global retail prices and auction history data — a professional price-lookup tool."
     },
     {
@@ -1585,11 +1585,11 @@
       "question": "What does the \"as-is\" clause at auction mean?",
       "options": [
         "Returns are accepted",
-        "Sold in current condition, no returns after sale",
         "The auction house guarantees quality",
-        "Free shipping"
+        "Free shipping",
+        "Sold in current condition, no returns after sale"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "\"As-is\" means sold in its current condition — the buyer bears the risk of bottle condition, and returns or claims aren't accepted after winning the bid."
     },
     {
@@ -1597,10 +1597,10 @@
       "type": "single",
       "question": "The preview is an important opportunity to personally inspect a lot's condition before bidding.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "The preview lets buyers personally inspect bottle condition, label, and fill level — especially important for high-value lots, and worth attending whenever possible."
     },
     {
@@ -1609,11 +1609,11 @@
       "question": "What is the most common mistake made by novice bidders?",
       "options": [
         "Researching too many lots",
-        "Setting a budget too low",
         "Getting emotional and bidding beyond budget",
+        "Setting a budget too low",
         "Leaving the auction too early"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Novices most often lose their composure in intense bidding and emotionally chase a lot beyond their budget — the mistake to avoid most."
     },
     {
@@ -1622,11 +1622,11 @@
       "question": "What is the top score in the Parker rating system?",
       "options": [
         "20 points",
-        "100 points",
         "5 stars",
+        "100 points",
         "10 points"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "Robert Parker uses a 100-point scale, with the actual range running 50-100, though most wines fall between 85 and 100."
     },
     {
@@ -1635,11 +1635,11 @@
       "question": "When describing Burgundy red wine color, what does \"garnet\" refer to?",
       "options": [
         "Purple",
-        "Garnet red",
         "Tawny",
-        "Orange"
+        "Orange",
+        "Garnet red"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Garnet is the typical color of Burgundy Pinot Noir entering its drinking window, between the young Ruby and the aged Tawny."
     },
     {
@@ -1659,11 +1659,11 @@
       "question": "In Allen Meadows' (Burghound's) scoring system, what does a score above 96 represent?",
       "options": [
         "Good",
+        "Exceptional — extremely rare",
         "Very Good",
-        "Outstanding",
-        "Exceptional — extremely rare"
+        "Outstanding"
       ],
-      "correct": 3,
+      "correct": 1,
       "explanation": "A Burghound score above 96 is extremely rare, given only to the greatest wines of the greatest vintages — fewer than 10 wines a year."
     },
     {
@@ -1672,11 +1672,11 @@
       "question": "In the WSET tasting system, what does SAT stand for?",
       "options": [
         "Sweet, Acidity, Tannin",
-        "Systematic Approach to Tasting",
         "Structure, Aroma, Texture",
+        "Systematic Approach to Tasting",
         "Score And Taste"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "SAT is WSET's abbreviation for \"Systematic Approach to Tasting.\""
     },
     {
@@ -1709,11 +1709,11 @@
       "question": "When describing body, how is a Burgundy Grand Cru typically characterized?",
       "options": [
         "Light",
-        "Medium",
         "Medium+ to Full",
+        "Medium",
         "Heavy"
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "Burgundy Grand Cru is typically Medium+ to Full body — more structured and concentrated than a Village-level Medium body."
     },
     {
@@ -1733,11 +1733,11 @@
       "question": "What is CellarTracker's main function?",
       "options": [
         "Buying wine",
-        "Tasting-note logging and cellar management",
         "Wine auctions",
-        "Winery reservations"
+        "Winery reservations",
+        "Tasting-note logging and cellar management"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "CellarTracker is the world's largest tasting-note and cellar-management platform, offering free logging, tracking, and community ratings."
     },
     {
@@ -1745,12 +1745,12 @@
       "type": "single",
       "question": "How many Grands Crus does Burgundy have in total?",
       "options": [
-        "24",
         "33",
+        "24",
         "42",
         "50"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Burgundy has 33 Grand Cru appellations in total: 24 in the Côte de Nuits (red), 8 in the Côte de Beaune (7 white + 1 red, including the Corton family), and 1 in Chablis (Chablis Grand Cru, a single AOC containing 7 named Climats)."
     },
     {
@@ -1771,10 +1771,10 @@
       "type": "single",
       "question": "When planning a Burgundy estate visit, top estates like DRC and Leroy typically require booking 6 months in advance.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "Booking visits at top estates is extremely difficult, requiring 6 months or more lead time, and usually an introduction through a négociant or industry professional."
     },
     {
@@ -1783,11 +1783,11 @@
       "question": "When building a balanced Burgundy collection, what share of the total budget should investment-grade wines occupy?",
       "options": [
         "10-15%",
-        "20-30%",
         "40-50%",
-        "60-70%"
+        "60-70%",
+        "20-30%"
       ],
-      "correct": 1,
+      "correct": 3,
       "explanation": "Investment-grade wines are recommended to make up 20-30% of the budget, with 50% for everyday and special-occasion wines — maintaining a balanced pyramid structure."
     },
     {
@@ -1820,11 +1820,11 @@
       "question": "Which wine set the world record for a single bottle at auction in 2018?",
       "options": [
         "1990 DRC Romanée-Conti",
-        "1945 DRC Romanée-Conti",
         "1962 Henri Jayer Cros Parantoux",
+        "1945 DRC Romanée-Conti",
         "1937 DRC Romanée-Conti"
       ],
-      "correct": 1,
+      "correct": 2,
       "explanation": "In October 2018, a bottle of 1945 DRC Romanée-Conti sold at Sotheby's for $558,000, setting the world record for a single bottle of wine at auction."
     },
     {
@@ -1834,10 +1834,10 @@
       "options": [
         "2.0-2.5x",
         "2.8-3.0x",
-        "3.0-3.2x",
-        "3.5-4.0x"
+        "3.5-4.0x",
+        "3.0-3.2x"
       ],
-      "correct": 2,
+      "correct": 3,
       "explanation": "A mid-tier wine is suggested to be priced at 3.0-3.2x cost, achieving 67-69% margin — competitive while maintaining reasonable profit."
     },
     {
@@ -1869,12 +1869,12 @@
       "type": "single",
       "question": "How many separate Grand Cru appellations (AOCs) does Chablis have?",
       "options": [
-        "1",
         "7",
         "10",
+        "1",
         "15"
       ],
-      "correct": 0,
+      "correct": 2,
       "explanation": "Strictly speaking, Chablis Grand Cru is legally a single AOC (appellation), containing 7 named Climats: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur, and Vaudésir. This differs from Gevrey-Chambertin, whose 9 Grands Crus are each their own separate AOC."
     },
     {
@@ -1893,12 +1893,12 @@
       "type": "single",
       "question": "What is the best way to build a long-term purchasing relationship in Burgundy?",
       "options": [
-        "Only buy at auction",
         "Become a VIP client of a merchant and buy regularly",
+        "Only buy at auction",
         "Switch merchants every time to compare prices",
         "Wait for discount promotions"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": "Becoming a long-term VIP client gets you priority access to allocated wines, expert advice, and better pricing — the best strategy for building a collection."
     },
     {
@@ -1919,10 +1919,10 @@
       "type": "single",
       "question": "The Level 3 course covers a complete Burgundy knowledge system, from beginner to professional level.",
       "options": [
-        "True",
-        "False"
+        "False",
+        "True"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "The Level 3 course integrates terroir, history, producers, investment, tasting, and business application to build a professional-level Burgundy knowledge system."
     }
   ]
