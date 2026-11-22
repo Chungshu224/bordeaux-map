@@ -620,4 +620,5 @@ export default {
   "白蘭地專家": "Brandy Specialist",
   "法定產區／地理標示": "Appellation / geographical indication",
   "cru／子區／城鎮": "Cru / sub-area / town",
+  "白蘭地酒款品飲筆記": "Brandy tasting notebook",
 }
