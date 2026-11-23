@@ -1731,6 +1731,10 @@ const normalizeSlide = (s) => {
         }
       } else if (typeof s.content === 'string') {
         slide.content = `<p>${esc(s.content)}</p>`
+        // 字串內容搭配 highlights 卡片：卡片才是主要教學內容，必須保留（否則測驗考的內容在課程中看不到）
+        if (Array.isArray(s.highlights) && s.highlights.length) {
+          slide.highlights = s.highlights
+        }
       }
       // 若來源有 blocks（標準化區塊），保留以供元件渲染
       if (Array.isArray(s.blocks) && s.blocks.length) {
