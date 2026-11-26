@@ -30,7 +30,7 @@ export const lessonContent = [
     content: "<div class=\"content-overview\"><p class=\"lead-text\">最古老的產區反而最晚成為大型 AOC。</p></div>"
   },
   {
-    title: "科西嘉：腓尼基人、熱那亞與法國",
+    title: "科西嘉：古希臘人（福西亞人）、熱那亞與法國",
     highlights: [
       { id: 1, icon: "⛵", title: "古希臘人的殖民地", content: "Phocaea 的希臘人在公元前 6 世紀於今日的 Aléria 建立殖民地，帶來葡萄枝條；各來源寫的年份不同（約公元前 565 至 570 年），課內不列入測驗（Wine With Seth、Wikipedia）" },
       { id: 2, icon: "⚓", title: "比薩與熱那亞", content: "比薩、接著熱那亞統治這座島；熱那亞約 500 年間規定採收與釀造，並禁止酒運往熱那亞以外的港口（Wikipedia）" },
