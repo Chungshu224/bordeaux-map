@@ -1,0 +1,23 @@
+{
+  "slides.0.title": "Bairrada DOC Map",
+  "slides.0.description": "A clay belt between the Atlantic and the Serra do Buçaco: the home of the Baga grape and Portugal's red wine region with the greatest ageing potential",
+  "slides.2.title": "Beira Interior: Portugal's Mountain Wines",
+  "slides.2.subtitle": "Level 2 · Central Highland Regions",
+  "slides.2.points.0.label": "Mountain region",
+  "slides.2.points.0.text": "Next to the Serra da Estrela (Portugal's highest peak), at 400–900m, one of Portugal's highest DOCs",
+  "slides.2.points.1.label": "Spanish border",
+  "slides.2.points.1.text": "Bordering Spain and influenced by a continental climate: hot summers, cold winters and very large temperature swings",
+  "slides.2.points.2.label": "Preserved native varieties",
+  "slides.2.points.2.text": "Rare native varieties such as Rufete・Marufo survive here, a living fossil of Portugal's varietal diversity",
+  "slides.3.title": "Beira Interior: The Three Sub-DOCs",
+  "slides.3.html": "\n      <p><strong>Beira Interior DOC</strong> is the main region of Portugal's central highlands, next to the Serra da Estrela (over 2,000m) and the Spanish border.</p>\n      <h4>🗺️ Three sub-region DOCs</h4>\n      <ul>\n        <li><strong>Castelo Rodrigo</strong>: the northernmost, close to Spain's Castilla. The most extreme continental climate, mainly Touriga Nacional and Marufo, with deep colour and intensity</li>\n        <li><strong>Pinhel</strong>: central, granite soils and cooler, with outstanding crisp whites (Fonte Cal, Siria)</li>\n        <li><strong>Cova da Beira</strong>: the southernmost, valley terrain sheltered by the Serra da Estrela; the largest sub-region, producing both red and white</li>\n      </ul>\n      <h4>🌡️ Climate</h4>\n      <ul>\n        <li>Dominated by a continental climate: summer highs of 35–38°C, winter lows down to -5°C</li>\n        <li>Annual rainfall of 500–700mm, drier than the Dão</li>\n        <li>Strong temperature swings help preserve the grapes' natural acidity</li>\n      </ul>\n      <h4>🍇 Main grapes</h4>\n      <ul>\n        <li>Red: <strong>Touriga Nacional・Rufete・Marufo・Tinta Amarela</strong></li>\n        <li>White: <strong>Siria (= Roupeiro)・Fonte Cal・Arinto</strong></li>\n      </ul>\n    ",
+  "slides.4.question": "Which three sub-regions does the Beira Interior DOC include?",
+  "slides.4.explanation": "The Beira Interior DOC includes three sub-regions: Castelo Rodrigo (the northernmost, most extreme continental), Pinhel (central, granite, excellent whites) and Cova da Beira (the southernmost, valley, the largest). All three lie next to the Serra da Estrela and the Spanish border.",
+  "slides.5.question": "In Beira Interior, which is a rare native red grape that is almost never seen in other regions?",
+  "slides.5.explanation": "Rufete is a native red grape specific to Beira Interior (especially Castelo Rodrigo), medium-bodied with red berry fruit and spice, and extremely rare in other Portuguese regions. It is a precious legacy of Portugal's varietal diversity.",
+  "slides.6.message": "Congratulations on completing the Beira Interior course!",
+  "slides.6.keyPoints.0": "Beira Interior lies next to the Serra da Estrela and Spain, one of Portugal's highest-altitude regions",
+  "slides.6.keyPoints.1": "Three sub-DOCs: Castelo Rodrigo (reds)・Pinhel (whites)・Cova da Beira (mixed)",
+  "slides.6.keyPoints.2": "Continental climate with hot summers, cold winters and large temperature swings, helping to preserve acidity",
+  "slides.6.keyPoints.3": "Rare native varieties such as Rufete・Marufo survive here, Portugal's living fossils of varieties"
+}

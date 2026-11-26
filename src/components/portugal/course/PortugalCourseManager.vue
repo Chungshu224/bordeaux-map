@@ -48,7 +48,8 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { authState, authInitPromise } from '../../../stores/authStore.js'
 import { savePortugalLesson, loadAndMergePortugalProgress } from '../../../lib/courseProgressSync.js'
 import PortugalLevelSelector from './PortugalLevelSelector.vue'
@@ -57,6 +58,29 @@ import PortugalTastingNotebookPage from '../notebook/PortugalTastingNotebookPage
 import PortugalCourseLayout from './PortugalCourseLayout.vue'
 import PortugalSlideViewer from './PortugalSlideViewer.vue'
 import { courseLevels, getUserProgress, saveProgress } from '../data/courseLevels.js'
+import { getPortugalLessonSlides } from '../data/lessonSlides.js'
+import { applyItalyTranslations } from '../../../data/lessonI18nUtils.js'
+
+// 多語言 overlay：locales/<lang>/lessons/portugal/<lessonId>.json（扁平 key，與 Germany／Italy 同機制）；_levels.json 為課表標題
+const PORTUGAL_TRANSLATIONS = import.meta.glob('../../../locales/*/lessons/portugal/*.json')
+const { locale } = useI18n()
+
+async function loadOverlay(name) {
+  const loc = locale.value
+  if (!loc || loc === 'zh-TW') return null
+  const key = Object.keys(PORTUGAL_TRANSLATIONS).find(k => k.includes(`/${loc}/`) && k.endsWith(`/${name}.json`))
+  if (!key) return null
+  try {
+    const mod = await PORTUGAL_TRANSLATIONS[key]()
+    return mod?.default || mod
+  } catch (e) {
+    console.warn('[Portugal i18n] overlay 載入失敗:', e?.message || e)
+    return null
+  }
+}
+
+const levelsOverlay = ref(null)
+watch(locale, async () => { levelsOverlay.value = await loadOverlay('_levels') }, { immediate: true })
 
 defineEmits(['openMap'])
 
@@ -75,9 +99,13 @@ onMounted(async () => {
   }
 })
 
-const currentLevelDef = computed(() =>
-  selectedLevelKey.value ? courseLevels[selectedLevelKey.value] : null
-)
+const currentLevelDef = computed(() => {
+  const key = selectedLevelKey.value
+  if (!key) return null
+  const def = courseLevels[key]
+  if (!levelsOverlay.value) return def
+  return applyItalyTranslations({ [key]: def }, levelsOverlay.value)[key]
+})
 
 const completedLessonsArray = computed(() =>
   Object.keys(completedMap.value).filter(k => completedMap.value[k])
@@ -101,8 +129,11 @@ function backToLevelSelector() {
   activeLesson.value = null
 }
 
-function startLesson(lesson) {
-  activeLesson.value = lesson
+async function startLesson(lesson) {
+  let slides = getPortugalLessonSlides(lesson.id)
+  const overlay = await loadOverlay(lesson.id)
+  if (overlay) slides = applyItalyTranslations({ slides }, overlay).slides
+  activeLesson.value = { ...lesson, slides }
 }
 
 function closeLesson() {

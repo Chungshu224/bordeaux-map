@@ -192,7 +192,7 @@ const P1M1L2_slides = [
     question: '在「portugal-regions-overview」探索中，以下哪個葡萄牙產區位於大西洋火山島上、以加烈酒關名于世？',
     options: ['Dão', 'Bairrada', 'Madeira', 'Vinho Verde'],
     answer: 2,
-    explanation: 'Madeira（馬德拉島）位於葡萄牙以西 1,000 公里的大西洋火山島上，以同名加烈酒 Madeira 聞名全球。獨特的 estufagem 加熱工藝讓 Madeira 產生焦糖、堅果、柑橘皮香氣，並擁有詸異的 100+ 年陳年潛力。另一個島嶼產區 Açores 亦位於大西洋。',
+    explanation: 'Madeira（馬德拉島）位於葡萄牙以西 1,000 公里的大西洋火山島上，以同名加烈酒 Madeira 聞名全球。獨特的 estufagem 加熱工藝讓 Madeira 產生焦糖、堅果、柑橘皮香氣，並擁有驚人的 100+ 年陳年潛力。另一個島嶼產區 Açores 亦位於大西洋。',
   },
   {
     type: 'summary',
@@ -777,8 +777,8 @@ const P1M4L1_slides = [
   },
   {
     type: 'port-aging',
-    title: '⏳ Port 陳年補充：Ruby vs Tawny 靣靣與氧化陳年',
-    description: '互動詳解 Ruby Port 「靣靣陳年」（在瓶中 / 大桁中深色與果香保存）vs Tawny Port 「氧化陳年」（在小桁 pipe 中長期接觸氧氣、複雜堆莽 / 核果 / 咖啡香氣）的差異。包含 10/20/30/40年 Tawny 的實際平均年齡說明與內行選酒重點。',
+    title: '⏳ Port 陳年補充：Ruby vs Tawny 還原式陳年與氧化陳年',
+    description: '互動詳解 Ruby Port 「還原式陳年」（在大桶與瓶中保存深色與果香）vs Tawny Port 「氧化陳年」（在小橡木桶 pipe 中長期接觸氧氣，發展出乾果 / 核果 / 咖啡香氣）的差異。包含 10/20/30/40年 Tawny 的實際平均年齡說明與內行選酒重點。',
   },
   {
     type: 'quiz',
@@ -789,17 +789,17 @@ const P1M4L1_slides = [
   },
   {
     type: 'quiz',
-    question: '在「port-styles」金字塔中，以下哪一種 Port 是「瓶中陳年」（reductive，保留深色與鮮果香）而非「橡木桁氧化陳年」？',
+    question: '在「port-styles」金字塔中，以下哪一種 Port 是「瓶中陳年」（reductive，保留深色與鮮果香）而非「橡木桶氧化陳年」？',
     options: ['10 Year Tawny', 'Vintage Port', 'Colheita', '40 Year Tawny'],
     answer: 1,
-    explanation: 'Vintage Port 只在大桁中陳年約 2 年（法規上限約 2.5 年）即裝瓶，其後在瓶中長期陳年（可達 50+ 年），屬「靣靣陳年」風格、保有深染色與鮮果香。而 Tawny（10/20/40 Year、Colheita）都是在小 pipe 桁中長期接觸氧氣的「氧化陳年」，出紅棕色、核果與咖啡香。',
+    explanation: 'Vintage Port 只在大桶中陳年約 2 年（法規上限約 2.5 年）即裝瓶，其後在瓶中長期陳年（可達 50+ 年），屬「還原式陳年」風格、保有深染色與鮮果香。而 Tawny（10/20/40 Year、Colheita）都是在小 pipe 桶中長期接觸氧氣的「氧化陳年」，呈現紅棕色、核果與咖啡香。',
   },
   {
     type: 'quiz',
     question: '在「port-aging」補充詳解中，一瓶標示「20 Years Tawny」的波特酒，其「20 年」代表的是？',
     options: ['混調中最年輕酒液至少 20 年', '混調中所有酒液都是 20 年份', '混調酒液的「平均類型年齡」約 20 年', '最少裝瓶後需陳年 20 年'],
     answer: 2,
-    explanation: '「10/20/30/40 Years Tawny」的年齡並非表示出廠日期，而是該酒口感與風格上類似平均類型年齡的陳年狀態。酒莊這明粗制酒師負責混調多個不同年份的桁陳 Tawny，使成品符合「類型 20 Years」的品質幼位。實際裡頻包含 5–40 年不同酒液。',
+    explanation: '「10/20/30/40 Years Tawny」的年齡並非表示出廠日期，而是該酒口感與風格上類似平均類型年齡的陳年狀態。酒莊的調酒師負責混調多個不同年份的桶陳 Tawny，使成品符合「20 Years」的風格標準，實際上常包含 5–40 年不同年齡的酒液。',
   },
   {
     type: 'map',

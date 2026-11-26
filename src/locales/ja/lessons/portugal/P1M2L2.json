@@ -1,0 +1,23 @@
+{
+  "slides.0.title": "ラベルの読み方：ポルトガルワインのボトルを理解する",
+  "slides.0.subtitle": "Level 1 · 第6課",
+  "slides.0.points.0.label": "産地名",
+  "slides.0.points.0.text": "DOC 産地であることは品質の保証を意味します",
+  "slides.0.points.1.label": "ヴィンテージ（Colheita）",
+  "slides.0.points.1.text": "ぶどうの収穫年。スタイルと熟成ポテンシャルに影響します",
+  "slides.0.points.2.label": "品種（Casta/Castas）",
+  "slides.0.points.2.text": "単一品種または複数品種が表示されることがあります",
+  "slides.1.title": "ラベルの重要な情報",
+  "slides.1.html": "\n      <h4>📋 表示が必須の情報</h4>\n      <ul>\n        <li><strong>ワインの種類</strong>：Vinho Tinto（赤ワイン）/ Vinho Branco（白ワイン）/ Vinho Rosado（ロゼワイン）</li>\n        <li><strong>アルコール度数</strong>：% vol. で表示</li>\n        <li><strong>容量</strong>：通常は 750ml</li>\n        <li><strong>原産国</strong>：Produto de Portugal（ポルトガル産）</li>\n        <li><strong>生産者</strong>：ワイナリー名またはワイン商の名称</li>\n      </ul>\n      <h4>📋 よく見られる表示</h4>\n      <ul>\n        <li><strong>Denominação de Origem Controlada</strong>：DOC 法定産地</li>\n        <li><strong>Quinta（農園）/ Herdade（農園）</strong>：単一ワイナリーのワイン</li>\n        <li><strong>Colheita（ヴィンテージ）</strong>：ぶどうの収穫年</li>\n        <li><strong>Reserva</strong>：特選等級（定義は DOC ごとに異なり、通常はより長い熟成が必要）</li>\n        <li><strong>Grande Reserva</strong>：最上位の特選等級</li>\n        <li><strong>LBV（Late Bottled Vintage）</strong>：ポートワイン特有の用語</li>\n      </ul>\n    ",
+  "slides.2.question": "ポルトガルのラベルにある「Vinho Tinto」は何を指しますか？",
+  "slides.2.options.0": "白ワイン",
+  "slides.2.options.1": "赤ワイン",
+  "slides.2.options.2": "ロゼワイン",
+  "slides.2.options.3": "スパークリングワイン",
+  "slides.2.explanation": "ポルトガル語では、Tinto = 赤（赤ワイン）、Branco = 白（白ワイン）、Rosado = ロゼ（ロゼワイン）、Espumante = 発泡（スパークリングワイン）を意味します。",
+  "slides.3.message": "第6課を修了しました！ポルトガルワインのラベルの基本的な読み方を習得できました。",
+  "slides.3.keyPoints.0": "Vinho Tinto = 赤ワイン、Branco = 白ワイン、Rosado = ロゼワイン",
+  "slides.3.keyPoints.1": "Quinta / Herdade = 農園（ワイナリー）。単一の生産地を示します",
+  "slides.3.keyPoints.2": "Reserva / Grande Reserva = 特選等級で、より高い品質を示します",
+  "slides.3.keyPoints.3": "DOC の名称が最も重要な品質の指標です"
+}

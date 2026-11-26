@@ -1,0 +1,23 @@
+{
+  "slides.0.title": "Reading the Label: How to Understand a Bottle of Portuguese Wine",
+  "slides.0.subtitle": "Level 1 · Lesson 6",
+  "slides.0.points.0.label": "Region name",
+  "slides.0.points.0.text": "A DOC region signals a quality guarantee",
+  "slides.0.points.1.label": "Vintage (Colheita)",
+  "slides.0.points.1.text": "The harvest year, affecting style and ageing potential",
+  "slides.0.points.2.label": "Grape variety (Casta/Castas)",
+  "slides.0.points.2.text": "May list a single variety or several",
+  "slides.1.title": "Key Information on the Label",
+  "slides.1.html": "\n      <h4>📋 Mandatory Information</h4>\n      <ul>\n        <li><strong>Wine category</strong>: Vinho Tinto (red) / Vinho Branco (white) / Vinho Rosado (rosé)</li>\n        <li><strong>Alcohol content</strong>: shown as % vol.</li>\n        <li><strong>Volume</strong>: usually 750ml</li>\n        <li><strong>Origin</strong>: Produto de Portugal (product of Portugal)</li>\n        <li><strong>Producer</strong>: the name of the estate or merchant</li>\n      </ul>\n      <h4>📋 Common Terms</h4>\n      <ul>\n        <li><strong>Denominação de Origem Controlada</strong>: the DOC legally defined appellation</li>\n        <li><strong>Quinta (estate) / Herdade (estate)</strong>: a single-estate wine</li>\n        <li><strong>Colheita (vintage)</strong>: the harvest year</li>\n        <li><strong>Reserva</strong>: a select grade (defined differently by each DOC, usually requiring longer ageing)</li>\n        <li><strong>Grande Reserva</strong>: the highest select grade</li>\n        <li><strong>LBV (Late Bottled Vintage)</strong>: a special Port term</li>\n      </ul>\n    ",
+  "slides.2.question": "What does \"Vinho Tinto\" on a Portuguese label mean?",
+  "slides.2.options.0": "White wine",
+  "slides.2.options.1": "Red wine",
+  "slides.2.options.2": "Rosé wine",
+  "slides.2.options.3": "Sparkling wine",
+  "slides.2.explanation": "In Portuguese: Tinto = red (red wine), Branco = white (white wine), Rosado = rosé (rosé wine), Espumante = sparkling (sparkling wine).",
+  "slides.3.message": "Congratulations on completing Lesson 6! You have mastered the basics of reading a Portuguese wine label.",
+  "slides.3.keyPoints.0": "Vinho Tinto = red, Branco = white, Rosado = rosé",
+  "slides.3.keyPoints.1": "Quinta / Herdade = estate, indicating a single origin",
+  "slides.3.keyPoints.2": "Reserva / Grande Reserva = select grades of higher quality",
+  "slides.3.keyPoints.3": "The DOC name is the most important quality indicator"
+}

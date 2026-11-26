@@ -1,0 +1,21 @@
+{
+  "slides.0.title": "Alentejo — ポルトガル南部の太陽に恵まれた大地",
+  "slides.0.subtitle": "Level 1 · 第12課",
+  "slides.0.points.0.label": "近年最も急速に発展",
+  "slides.0.points.0.text": "1990 年代以降に急成長し、現代ポルトガルワインを代表する産地です",
+  "slides.0.points.1.label": "8 つのサブリージョン",
+  "slides.0.points.1.text": "Portalegre・Borba・Redondo・Reguengos など",
+  "slides.0.points.2.label": "ローマ時代",
+  "slides.0.points.2.text": "ぶどう栽培はローマ時代にさかのぼり、古い石造りの醸造槽の遺跡が残っています",
+  "slides.1.title": "Alentejo 産地の特色",
+  "slides.1.html": "\n      <p>Alentejo はポルトガル南部に広がる平野地帯で、国土面積の約 <strong>1/3</strong> を占め、国内最大級のワイン産地のひとつです。</p>\n      <h4>🌡️ 気候</h4>\n      <ul>\n        <li>地中海性と大陸性の混合</li>\n        <li>夏は長く猛暑で、気温は <strong>40°C</strong> を超えることもある</li>\n        <li>年間日照時間は <strong>3,000 時間</strong>超</li>\n        <li>降水量は少なく（年間 400〜600mm）、乾季がはっきりしている</li>\n      </ul>\n      <h4>🪨 土壌</h4>\n      <ul>\n        <li>主に<strong>花崗岩と片麻岩</strong>（plutonic rocks）</li>\n        <li>一部の地域には頁岩（xistos）と石灰岩（calcário）がある</li>\n        <li>肥沃な土地は主に農業と牧場に使われ、ぶどう樹は痩せた土地に植えられる</li>\n      </ul>\n      <h4>🍇 主要品種</h4>\n      <ul>\n        <li>赤：<strong>Aragonez（= Tempranillo）・Trincadeira・Alicante Bouschet</strong></li>\n        <li>白：<strong>Antão Vaz・Arinto・Roupeiro</strong></li>\n      </ul>\n      <h4>🗺️ 8 つのサブリージョン</h4>\n      <p>Portalegre・Borba・Redondo・<strong>Reguengos</strong>・Vidigueira・<strong>Évora</strong>・Granja-Amareleja・Moura</p>\n    ",
+  "slides.2.question": "Alentejo で最も重要な黒ぶどう品種「Aragonez」は、スペインではどのような名前で呼ばれますか？",
+  "slides.2.explanation": "Aragonez は Alentejo で最も重要な赤品種で、スペインの有名品種 Tempranillo のポルトガルでの名称です。同じ品種は Douro では Tinta Roriz と呼ばれます。",
+  "slides.3.title": "Alentejo DOC 産地マップ",
+  "slides.3.description": "ポルトガル南部の広大な平野で、地中海性気候、年間日照時間は 3,000 時間を超え、近年のポルトガルワインを代表する産地です",
+  "slides.4.message": "第12課を修了しました！ポルトガル南部の Alentejo の基本を理解できました。",
+  "slides.4.keyPoints.0": "Alentejo はポルトガルの国土の 1/3 を占め、地中海性気候で、年間日照時間は 3,000 時間超",
+  "slides.4.keyPoints.1": "8 つのサブリージョンがあり、近年ワインの品質が急速に向上",
+  "slides.4.keyPoints.2": "主要な赤品種：Aragonez（= Tempranillo）・Trincadeira・Alicante Bouschet",
+  "slides.4.keyPoints.3": "主要な白品種：Antão Vaz・Arinto"
+}

@@ -220,7 +220,7 @@ const currentSlide = ref(0)
 const quizAnswered = ref(false)
 const quizSelected = ref(null)
 
-const slides = computed(() => getPortugalLessonSlides(props.lesson.id))
+const slides = computed(() => props.lesson.slides || getPortugalLessonSlides(props.lesson.id))
 const currentSlideData = computed(() => slides.value[currentSlide.value] || {})
 const progressPct = computed(() => slides.value.length > 1
   ? Math.round((currentSlide.value / (slides.value.length - 1)) * 100) : 0

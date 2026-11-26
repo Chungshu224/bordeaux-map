@@ -1,0 +1,23 @@
+{
+  "slides.0.title": "Bairrada DOC 産地マップ",
+  "slides.0.description": "大西洋と Serra do Buçaco 山脈のあいだの粘土質地帯——Baga ブドウの故郷で、ポルトガルで最も熟成ポテンシャルの高い赤ワインの産地です",
+  "slides.2.title": "Beira Interior:ポルトガルの高山ワイン",
+  "slides.2.subtitle": "Level 2 · 中部山岳地帯の産地",
+  "slides.2.points.0.label": "高山の産地",
+  "slides.2.points.0.text": "Serra da Estrela(ポルトガル最高峰)に隣接し、標高 400–900m で、ポルトガルで最も標高の高い DOC の一つです",
+  "slides.2.points.1.label": "スペインとの国境",
+  "slides.2.points.1.text": "スペインに隣接し、大陸性気候の影響で、夏は暑く冬は寒く、寒暖差が非常に大きい",
+  "slides.2.points.2.label": "土着品種の保存",
+  "slides.2.points.2.text": "Rufete・Marufo などの希少な土着品種がここに残り、ポルトガルの品種多様性の生きた化石といえます",
+  "slides.3.title": "Beira Interior:3つのサブ DOC",
+  "slides.3.html": "\n      <p><strong>Beira Interior DOC</strong> はポルトガル中部山岳地帯の主要産地で、Serra da Estrela(2,000m 以上)とスペイン国境に隣接しています。</p>\n      <h4>🗺️ 3つのサブ DOC</h4>\n      <ul>\n        <li><strong>Castelo Rodrigo</strong>:最北端で、スペインの Castilla に近い。大陸性気候が最も極端で、Touriga Nacional と Marufo が中心、色が濃く濃厚なワインになります</li>\n        <li><strong>Pinhel</strong>:中部で、花崗岩土壌、比較的冷涼で、白ワイン(Fonte Cal、Siria)の爽やかさが際立ちます</li>\n        <li><strong>Cova da Beira</strong>:最南端で、谷地の地形、Serra da Estrela に守られ、最大のサブリージョンで、赤・白ともに生産されます</li>\n      </ul>\n      <h4>🌡️ 気候の特徴</h4>\n      <ul>\n        <li>大陸性気候が支配的:夏は 35–38°C の高温、冬は -5°C まで下がることもあります</li>\n        <li>年間降水量は 500–700mm で、Dão より乾燥しています</li>\n        <li>大きな寒暖差がブドウの天然の酸を保つのに有利です</li>\n      </ul>\n      <h4>🍇 主要品種</h4>\n      <ul>\n        <li>赤:<strong>Touriga Nacional・Rufete・Marufo・Tinta Amarela</strong></li>\n        <li>白:<strong>Siria(= Roupeiro)・Fonte Cal・Arinto</strong></li>\n      </ul>\n    ",
+  "slides.4.question": "Beira Interior DOC に含まれる3つのサブリージョンはどれですか?",
+  "slides.4.explanation": "Beira Interior DOC には3つのサブリージョンがあります。Castelo Rodrigo(最北、最も極端な大陸性)、Pinhel(中部、花崗岩、白ワインが優秀)、Cova da Beira(最南、谷地、最大)です。いずれも Serra da Estrela とスペイン国境に隣接しています。",
+  "slides.5.question": "Beira Interior で、他の産地ではほとんど見られない希少な土着の黒ブドウ品種はどれですか?",
+  "slides.5.explanation": "Rufete は Beira Interior(特に Castelo Rodrigo)特有の土着黒ブドウ品種で、ミディアムボディで赤い小果実とスパイスの印象があり、ポルトガルの他の産地ではきわめて稀です。ポルトガルの品種多様性を物語る貴重な遺産です。",
+  "slides.6.message": "Beira Interior 講座の修了、おめでとうございます!",
+  "slides.6.keyPoints.0": "Beira Interior は Serra da Estrela とスペインに隣接し、ポルトガルで最も標高の高い産地の一つです",
+  "slides.6.keyPoints.1": "3つのサブ DOC:Castelo Rodrigo(赤ワイン)・Pinhel(白ワイン)・Cova da Beira(混合)",
+  "slides.6.keyPoints.2": "大陸性気候で、夏は暑く冬は寒く、寒暖差が大きいため、酸を保つのに役立ちます",
+  "slides.6.keyPoints.3": "Rufete・Marufo などの希少な土着品種がここに残り、ポルトガルの品種の生きた化石です"
+}

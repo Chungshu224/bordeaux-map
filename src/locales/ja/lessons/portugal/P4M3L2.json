@@ -1,0 +1,23 @@
+{
+  "slides.0.title": "ポルトガルワインの世界市場と輸出動向",
+  "slides.0.subtitle": "Level 4 · 市場分析",
+  "slides.0.points.0.label": "世界の輸出国トップ10",
+  "slides.0.points.0.text": "年間輸出量は3億リットル超、輸出額は10億ユーロ超",
+  "slides.0.points.1.label": "最大の市場：アメリカ",
+  "slides.0.points.1.text": "アメリカはポルトガルワインにとって最も重要な成長市場で、特に Vinho Verde が好調です",
+  "slides.0.points.2.label": "高級化の傾向",
+  "slides.0.points.2.text": "1本あたりの平均価格は上昇を続け、最高峰の Douro と Madeira は国際的なコレクターに人気です",
+  "slides.1.title": "ポルトガルワインの輸出市場の概観",
+  "slides.1.html": "\n      <h4>🌍 主な輸出先（輸出額順、2022年データ）</h4>\n      <table style=\"width:100%;border-collapse:collapse;font-size:0.9em\">\n        <tr style=\"background:#1a3a6e;color:white\">\n          <th style=\"padding:8px\">順位</th><th style=\"padding:8px\">市場</th><th style=\"padding:8px\">特徴</th>\n        </tr>\n        <tr style=\"background:#eef4ff\"><td style=\"padding:6px;text-align:center\">1</td><td style=\"padding:6px\"><strong>🇫🇷 フランス</strong></td><td style=\"padding:6px\">ポルトガルのバルクワインを大量に輸入（ブレンド用）、歴史的な伝統</td></tr>\n        <tr><td style=\"padding:6px;text-align:center\">2</td><td style=\"padding:6px\"><strong>🇺🇸 アメリカ</strong></td><td style=\"padding:6px\">最も成長が速い市場。Vinho Verde が最も人気で、高級 Douro も増加中</td></tr>\n        <tr style=\"background:#eef4ff\"><td style=\"padding:6px;text-align:center\">3</td><td style=\"padding:6px\"><strong>🇬🇧 イギリス</strong></td><td style=\"padding:6px\">伝統的な Porto の最大市場で、Vintage Port のコレクション文化が深い</td></tr>\n        <tr><td style=\"padding:6px;text-align:center\">4</td><td style=\"padding:6px\"><strong>🇩🇪 ドイツ</strong></td><td style=\"padding:6px\">日常使いの食事向けワイン市場で、コストパフォーマンスへの要求が高い</td></tr>\n        <tr style=\"background:#eef4ff\"><td style=\"padding:6px;text-align:center\">5</td><td style=\"padding:6px\"><strong>🇧🇷 ブラジル</strong></td><td style=\"padding:6px\">ポルトガル語圏の文化的つながりがあり、高級 Douro と Alentejo が人気</td></tr>\n        <tr><td style=\"padding:6px;text-align:center\">6</td><td style=\"padding:6px\"><strong>🇨🇦 カナダ</strong></td><td style=\"padding:6px\">成長中の市場で、Vinho Verde と Alentejo の赤ワインの需要が上昇</td></tr>\n      </table>\n      <h4>📈 近年の傾向</h4>\n      <ul>\n        <li>台湾、日本などアジア市場で、高級 Douro と Vintage Port への関心が高まっています</li>\n        <li>輸出平均価格：2010–2022年に40%上昇し、品質向上とブランド力の向上を反映しています</li>\n      </ul>\n    ",
+  "slides.2.title": "Vinho Verde の世界的ブレイク",
+  "slides.2.html": "\n      <p><strong>Vinho Verde</strong> は現在、ポルトガルの輸出で最も成長が速いカテゴリーの一つで、特にアメリカ市場での伸びは目を見張るものがあります。</p>\n      <h4>🚀 成功要因の分析</h4>\n      <ul>\n        <li><strong>低アルコール（8–11.5%）</strong>：健康意識の高まりで、低アルコールワインの需要が急増</li>\n        <li><strong>爽やかな微発泡感</strong>：夏の飲み物やパーティーの場面で第一の選択肢</li>\n        <li><strong>極めて優れたコストパフォーマンス</strong>：エントリー品は8–15ドルながら、同価格帯の競合品をはるかに上回る品質</li>\n        <li><strong>Alvarinho のブランド化</strong>：高級 Alvarinho（20–60ドル）が上質なイメージを確立</li>\n        <li><strong>レストランの後押し</strong>：アメリカとカナダのレストランが食前酒として大量に採用</li>\n      </ul>\n      <h4>📊 主な数字</h4>\n      <ul>\n        <li>アメリカの Vinho Verde 輸入量は2015–2022年に <strong>180%</strong> 増加</li>\n        <li>アメリカが輸入するポルトガルワインのうち、Vinho Verde の割合は <strong>45%</strong> 超</li>\n        <li>Monção e Melgaço サブリージョンの最高峰の Alvarinho は、コレクター市場を確立しています</li>\n      </ul>\n    ",
+  "slides.3.question": "現在、特にアメリカ市場で、ポルトガルワインの輸出で最も成長が速いカテゴリーはどれですか。",
+  "slides.3.options.1": "Alentejo Reserva の赤ワイン",
+  "slides.3.explanation": "Vinho Verde は現在、ポルトガルで最も成長が速い輸出カテゴリーで、2015–2022年にアメリカでの輸入量が約180%増加しました。低アルコール、爽やかな微発泡感、高いコストパフォーマンスという特徴が、現代の飲酒トレンドに完全に合致しています。",
+  "slides.4.message": "世界市場のコース修了、おめでとうございます！",
+  "slides.4.keyPoints.0": "ポルトガルは世界の輸出国トップ10に入り、年間輸出額は10億ユーロ超",
+  "slides.4.keyPoints.1": "最大の市場：フランス（バルク）、アメリカ（最も成長が速い）、イギリス（Porto の伝統市場）",
+  "slides.4.keyPoints.2": "Vinho Verde は成長の原動力で、アメリカ市場では7年で180%増加",
+  "slides.4.keyPoints.3": "高級化の傾向：輸出平均価格は2010-2022年に40%上昇",
+  "slides.4.keyPoints.4": "台湾、日本などアジア市場で、最高峰の Douro と Vintage Port への関心が高まっています"
+}
