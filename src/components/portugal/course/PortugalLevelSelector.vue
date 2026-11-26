@@ -5,7 +5,7 @@
       tagline="葡萄牙葡萄酒・Porto 與 Madeira 加烈傳奇"
       title="葡萄牙葡萄酒"
       subtitle="Portuguese Wine · Porto · Madeira · Vinho Verde · Douro"
-      description="從 1756 年世界最早法定產區 Douro，到 250+ 原生品種、Porto 與 Madeira 不朽加烈酒——掌握大西洋氣候下的葡萄酒傳奇。"
+      description="從 1756 年最早受政府持續管制的產區 Douro，到 250+ 原生品種、Porto 與 Madeira 不朽加烈酒——掌握大西洋氣候下的葡萄酒傳奇。"
       :stats="heroStats"
     />
 
@@ -87,7 +87,7 @@ const totalLessonCount = 62 // 13 + 22 + 15 + 12
 const heroStats = [
   { value: '14',   label: '法定產區' },
   { value: '250+', label: '原生品種' },
-  { value: '1756', label: 'Douro DOC 元年' }
+  { value: '1756', label: 'Douro 劃界元年' }
 ]
 
 const quickNavItems = [
@@ -135,7 +135,7 @@ const levelData = [
 ]
 
 const overviewItems = [
-  { icon: '🏛️', title: '全球最早法定產區', desc: '1756 年龐巴爾侯爵劃定 Douro，比世界任何國家的法定產區都早。' },
+  { icon: '🏛️', title: '最早受管制的產區', desc: '1756 年龐巴爾侯爵劃定 Douro 並持續管制，是全球最早受政府持續管制的葡萄酒產區。' },
   { icon: '🍇', title: '250+ 原生品種',     desc: '全球最高的原生品種密度，多數只在葡萄牙才能找到。' },
   { icon: '🥃', title: 'Porto 傳奇',        desc: '全球最著名的加烈甜酒，頂級 Vintage Port 可陳年逾 50 年。' },
   { icon: '🏝️', title: 'Madeira 不朽',      desc: '大西洋火山島氧化加烈酒，陳年實力可超過百年。' },

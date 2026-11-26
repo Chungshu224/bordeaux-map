@@ -18,7 +18,7 @@ const P1M1L1_slides = [
     points: [
       { icon: '🌍', label: '歐洲最古老產酒國之一', text: '超過 3,000 年葡萄栽培歷史' },
       { icon: '🍷', label: '250+ 原生葡萄品種', text: '全球最高原生品種密度之一' },
-      { icon: '📜', label: '世界第一個法定產區', text: 'Douro 1756 年由龐巴爾侯爵劃定，全球最早' },
+      { icon: '📜', label: '最早受管制的產區', text: 'Douro 1756 年由龐巴爾侯爵劃定，是全球最早受政府持續管制的劃界產區' },
     ],
   },
   {
@@ -29,7 +29,7 @@ const P1M1L1_slides = [
       <p>葡萄牙是歐洲最古老的葡萄酒生產國之一，擁有超過 <strong>3,000 年的葡萄栽培歷史</strong>。即使國土面積只比台灣大兩倍，葡萄牙卻孕育出令世界驚嘆的多樣性。</p>
       <h4>🏅 葡萄牙葡萄酒的三大驕傲</h4>
       <ul>
-        <li><strong>全球最早法定產區</strong>：1756 年龐巴爾侯爵劃定 Douro，比法國波爾多還早</li>
+        <li><strong>全球最早受持續管制的劃界產區</strong>：1756 年龐巴爾侯爵劃定 Douro，比法國波爾多還早（Chianti 1716、Tokaj 1737 雖更早劃界，但並未受持續的法規管制）</li>
         <li><strong>原生品種最豐富</strong>：超過 250 個本土品種，其他國家幾乎看不到</li>
         <li><strong>Porto 與 Madeira</strong>：世界最著名的兩大加烈酒，百年陳年潛力</li>
       </ul>
@@ -46,7 +46,7 @@ const P1M1L1_slides = [
     icon: '📜',
     title: '3,000 年葡萄酒歷史',
     html: `<div class="history-section">
-  <p class="history-intro">從腓尼基人帶來葡萄藤，到龐巴爾侯爵建立全球第一個法定產區 ——<span class="intro-highlight">3,000 年釀酒史，使葡萄牙成為新世界崛起前歐洲最古老的釀酒民族之一</span></p>
+  <p class="history-intro">從腓尼基人帶來葡萄藤，到龐巴爾侯爵建立全球最早受持續管制的劃界產區 ——<span class="intro-highlight">3,000 年釀酒史，使葡萄牙成為新世界崛起前歐洲最古老的釀酒民族之一</span></p>
 </div>
 <div class="timeline-container">
   <div class="timeline-item">
@@ -63,7 +63,7 @@ const P1M1L1_slides = [
   </div>
   <div class="timeline-item">
     <div class="timeline-badge doc">1756 年</div>
-    <div class="timeline-content"><strong>📋 全球第一個法定產區</strong><p>龐巴爾侯爵（Marquis of Pombal）正式劃定 Douro 產區界線，建立全球最早的法定葡萄酒產區制度——比法國波爾多的 1855 年分級早了 99 年。</p></div>
+    <div class="timeline-content"><strong>📋 全球最早受持續管制的劃界產區</strong><p>龐巴爾侯爵（Marquis of Pombal）正式劃定 Douro 產區界線，建立全球最早受政府持續管制的葡萄酒產區制度——比法國波爾多的 1855 年分級早了 99 年。</p></div>
   </div>
   <div class="timeline-item">
     <div class="timeline-badge modern">1986 年至今</div>
@@ -72,7 +72,7 @@ const P1M1L1_slides = [
 </div>
 <div class="stat-grid">
   <div class="stat-box"><div class="stat-number">3000 年+</div><div class="stat-label">釀酒歷史</div></div>
-  <div class="stat-box"><div class="stat-number">1756 年</div><div class="stat-label">全球最早法定產區</div></div>
+  <div class="stat-box"><div class="stat-number">1756 年</div><div class="stat-label">全球最早受管制產區</div></div>
   <div class="stat-box"><div class="stat-number">250+</div><div class="stat-label">本土原生葡萄品種</div></div>
   <div class="stat-box"><div class="stat-number">30+</div><div class="stat-label">法定 DOC 產區</div></div>
 </div>`,
@@ -91,16 +91,16 @@ const P1M1L1_slides = [
   },
   {
     type: 'quiz',
-    question: '世界上第一個法定劃定的葡萄酒產區在哪個國家？',
+    question: '世界上最早由政府劃界並持續管制的葡萄酒產區（1756 年）在哪個國家？',
     options: ['法國（波爾多）', '義大利（托斯卡尼）', '葡萄牙（杜羅河谷）', '西班牙（里奧哈）'],
     answer: 2,
-    explanation: '1756 年葡萄牙龐巴爾侯爵創立了高杜羅葡萄酒農業公司，正式劃定 Douro 產區界線，是全球最早的法定葡萄酒產區。',
+    explanation: '1756 年葡萄牙龐巴爾侯爵創立了高杜羅葡萄酒農業公司，正式劃定 Douro 產區界線並施以持續管制，是全球最早的受管制葡萄酒產區（托斯卡尼 Chianti 1716 年、Tokaj 1737 年雖更早劃界，但並未受持續的法規管制）。',
   },
   {
     type: 'summary',
     message: '恭喜完成第一課！您已了解葡萄牙葡萄酒的全球地位與核心特色。',
     keyPoints: [
-      '葡萄牙 1756 年劃定 Douro，是全球最早的法定葡萄酒產區',
+      '葡萄牙 1756 年劃定 Douro，是全球最早受政府持續管制的葡萄酒產區',
       '超過 250 個本土葡萄品種，是全球原生品種最豐富的國家之一',
       '六大核心特色：Vinho Verde 白酒・Douro 紅酒・Porto 波特酒・Madeira 馬德拉・原生品種・Alentejo 紅酒',
     ],
@@ -131,7 +131,7 @@ const P1M1L2_slides = [
       <ul>
         <li><strong>Minho</strong>：Vinho Verde 的故鄉，葡萄牙最大 DOC，9 個子產區</li>
         <li><strong>Trás-os-Montes</strong>：葡萄牙東北偏遠山區，大陸型氣候</li>
-        <li><strong>Douro / Porto</strong>：世界遺產梯田，波特酒原產地，1756年最早劃定</li>
+        <li><strong>Douro / Porto</strong>：世界遺產梯田，波特酒原產地，1756 年劃定（最早受持續管制的產區）</li>
       </ul>
       <h4>⛰️ 中北部（Centro Norte）</h4>
       <ul>
@@ -723,7 +723,7 @@ const P1M4L1_slides = [
     title: 'Douro & Porto — 世界遺產梯田葡萄園',
     subtitle: 'Level 1 · 第十課',
     points: [
-      { icon: '🏛️', label: '1756 年劃定', text: '全球最早的法定葡萄酒產區，由龐巴爾侯爵設立' },
+      { icon: '🏛️', label: '1756 年劃定', text: '全球最早受政府持續管制的葡萄酒產區，由龐巴爾侯爵設立' },
       { icon: '🏆', label: 'UNESCO 世界遺產', text: '2001 年高杜羅葡萄酒產區獲列世界遺產' },
       { icon: '🥃', label: '波特酒原產地', text: '全球最著名加烈甜酒的唯一合法產地' },
     ],
@@ -733,7 +733,7 @@ const P1M4L1_slides = [
     icon: '🏛️',
     title: 'Douro — 歷史、地理與子產區',
     html: `
-      <p>Douro 是葡萄牙最具歷史意義的產區，1756 年成為<strong>全球第一個法定葡萄酒產區</strong>。</p>
+      <p>Douro 是葡萄牙最具歷史意義的產區，1756 年成為<strong>全球最早受政府持續管制的葡萄酒產區</strong>。</p>
       <h4>🗺️ 三個子產區</h4>
       <ul>
         <li><strong>Baixo Corgo（低科爾戈）</strong>：最靠近海洋，雨量相對較多，紅酒清爽鮮活，常作波特酒基酒</li>
@@ -811,7 +811,7 @@ const P1M4L1_slides = [
     type: 'summary',
     message: '恭喜完成第十課！您已初步認識 Douro 和 Porto。',
     keyPoints: [
-      'Douro 1756 年劃定，是全球最早的法定葡萄酒產區，2001 年獲 UNESCO 世界遺產',
+      'Douro 1756 年劃定，是全球最早受政府持續管制的葡萄酒產區，2001 年獲 UNESCO 世界遺產',
       '三個子產區：Baixo Corgo（清爽）・Cima Corgo（頂級）・Douro Superior（最大陸型）',
       '約 50% 葡萄用於釀製波特酒，加烈至 19–22% 保留甜分',
     ],
@@ -911,7 +911,7 @@ const P1M4L3_slides = [
       <ul>
         <li>地中海型與大陸型混合</li>
         <li>夏季漫長酷熱，氣溫可超過 <strong>40°C</strong></li>
-        <li>年日照時數超過 <strong>3,000 小時</strong>（葡萄牙最高）</li>
+        <li>年日照時數超過 <strong>3,000 小時</strong></li>
         <li>低雨量（400–600mm/年），旱季鮮明</li>
       </ul>
       <h4>🪨 土壤</h4>
@@ -969,10 +969,10 @@ const P1FinalExam_slides = [
   },
   {
     type: 'quiz',
-    question: '以下哪個葡萄牙產區是全球最早的法定葡萄酒產區？',
+    question: '以下哪個葡萄牙產區是全球最早受政府持續管制的葡萄酒產區（1756 年）？',
     options: ['Vinho Verde', 'Douro / Porto', 'Alentejo', 'Dão'],
     answer: 1,
-    explanation: '1756 年葡萄牙龐巴爾侯爵正式劃定 Douro/Porto 產區，是全球最早的法定葡萄酒產區。',
+    explanation: '1756 年葡萄牙龐巴爾侯爵正式劃定 Douro/Porto 產區並施以持續管制，是全球最早受管制的葡萄酒產區。',
   },
   {
     type: 'quiz',
@@ -2542,7 +2542,7 @@ const P2M4L3_slides = [
     points: [
       { icon: '🏖️', label: '旅遊勝地', text: '全葡萄牙最南端，地中海型氣候，以觀光聞名，葡萄酒產業正在快速提升' },
       { icon: '🗺️', label: '四個 DOC', text: 'Lagos・Portimão・Lagoa・Tavira，沿海岸線由西向東分布' },
-      { icon: '🌞', label: '最長日照', text: '葡萄牙最南端，年日照超過 3,000 小時，出產豐腴圓潤的紅酒' },
+      { icon: '🌞', label: '日照充足', text: '葡萄牙最南端，年日照超過 3,000 小時，出產豐腴圓潤的紅酒' },
     ],
   },
   {
@@ -2598,7 +2598,7 @@ const P2M4L3_slides = [
     type: 'compare',
     title: 'Algarve vs. Alentejo：兩個南方大區的差異',
     items: [
-      { icon: '🏖️', label: 'Algarve（最南）', desc: '海岸線沿線，大西洋和地中海雙重影響，日照最強，旅遊業帶動發展，以清爽紅酒為主', color: '#0288d1' },
+      { icon: '🏖️', label: 'Algarve（最南）', desc: '海岸線沿線，大西洋和地中海雙重影響，日照充足，旅遊業帶動發展，以清爽紅酒為主', color: '#0288d1' },
       { icon: '☀️', label: 'Alentejo（南部大地）', desc: '廣大內陸平原，純地中海型，更乾熱。八大子產區，多元土壤，是葡萄牙出口量最大的 DOC', color: '#e65100' },
       { icon: '🌿', label: '共同點', desc: '都是地中海型氣候，年日照超過 3,000 小時，出產圓潤豐腴的紅酒，主要品種有重疊', color: '#2e7d32' },
       { icon: '⬆️', label: '發展趨勢', desc: 'Algarve 受氣候變遷威脅（夏季更熱），釀酒師開始探索高海拔內陸（Serra de Monchique）', color: '#795548' },
@@ -4901,7 +4901,7 @@ const P3M4L3_slides = [
     subtitle: 'Level 3 · Colares・Douro・Vinho Verde 的老藤傳奇',
     points: [
       { icon: '🌳', label: '老藤的定義', text: '通常指 30 年以上的葡萄藤，各國標準不同，有些「老藤（Vieilles Vignes）」已超過 100 年' },
-      { icon: '🏖️', label: 'Colares 未嫁接老藤', text: '砂丘保護，從未受根瘤蚜侵害，部分藤株超過 200–300 年，是世界葡萄酒界最珍貴的活遺產' },
+      { icon: '🏖️', label: 'Colares 未嫁接老藤', text: '砂丘保護，從未受根瘤蚜侵害，為自根（未嫁接）老藤，部分藤株藤齡逾百年，是世界葡萄酒界最珍貴的活遺產' },
       { icon: '⛰️', label: 'Douro 老藤', text: '片岩梯田上的百年老藤 Touriga Nacional，是 Barca Velha 和頂級 Vintage Port 的靈魂' },
     ],
   },
@@ -4923,7 +4923,7 @@ const P3M4L3_slides = [
         <li><strong>老藤（Vinha Velha）</strong>：30–60 年，自然低產，品質提升</li>
         <li><strong>超老藤</strong>：60–100 年，稀有，果實複雜度大幅提升</li>
         <li><strong>百年老藤（Centenária）</strong>：100+ 年，極稀有，代表頂級釀酒葡萄</li>
-        <li><strong>未嫁接老藤（Ramisco de Colares）</strong>：200–300+ 年，世界最珍稀</li>
+        <li><strong>未嫁接老藤（Ramisco de Colares）</strong>：自根老藤，部分逾百年，世界最珍稀</li>
       </ul>
     `,
   },
@@ -4931,7 +4931,7 @@ const P3M4L3_slides = [
     type: 'compare',
     title: '葡萄牙最重要的老藤產地',
     items: [
-      { icon: '🏖️', label: 'Colares（砂丘老藤）', desc: 'Ramisco 未嫁接老藤 200–300+ 年，砂丘保護，根系直入砂層深處。世界最稀有，每年產量可能不超過幾千瓶', color: '#1565c0' },
+      { icon: '🏖️', label: 'Colares（砂丘老藤）', desc: 'Ramisco 自根（未嫁接）老藤，部分逾百年，砂丘保護，根系直入砂層深處。世界最稀有，每年產量可能不超過幾千瓶', color: '#1565c0' },
       { icon: '⛰️', label: 'Douro 老藤（片岩梯田）', desc: 'Touriga Nacional・Touriga Franca 百年老藤，根深片岩 20 公尺，濃縮礦物感。Barca Velha・Quinta do Crasto 老藤版是最頂級 Douro 紅酒', color: '#8B0000' },
       { icon: '🌿', label: 'Vinho Verde 老藤 Alvarinho', desc: 'Monção/Melgaço 花崗岩上 50–80 年老藤，礦物感更深，酸度更復雜。產量極低但品質極優', color: '#2e7d32' },
       { icon: '🍒', label: 'Bairrada 老藤 Baga', desc: 'Bairrada 黏土石灰岩上 50–100 年 Baga 老藤，高酸單寧的集中版，需陳年 20+ 年，是世界最被低估的老藤紅酒之一', color: '#1b5e20' },
@@ -4939,7 +4939,7 @@ const P3M4L3_slides = [
   },
   {
     type: 'quiz',
-    question: 'Colares 的老藤 Ramisco 為何能保存 200–300 年，成為世界最古老的未嫁接老藤之一？',
+    question: 'Colares 的老藤 Ramisco 為何能保持自根（未嫁接）並存活逾百年，成為世界罕見的未嫁接老藤產區？',
     options: [
       '因為 Colares 氣候特別寒冷，葡萄生長緩慢',
       '因為當地法律規定不得嫁接',
@@ -4966,7 +4966,7 @@ const P3M4L3_slides = [
     message: '恭喜完成老藤葡萄酒課程！',
     keyPoints: [
       '老藤的優勢：深根（15–30m）+ 自然低產 + 礦物質吸收 + 年份穩定性',
-      'Colares 砂丘未嫁接老藤（200–300+ 年）：世界最珍稀，根瘤蚜從未觸及',
+      'Colares 砂丘自根老藤（部分逾百年）：世界最珍稀，根瘤蚜從未觸及',
       'Douro 百年老藤 Touriga Nacional：Barca Velha 和頂級 Vintage Port 的靈魂',
       'Vinho Verde 老藤 Alvarinho・Bairrada 老藤 Baga：被低估的老藤寶藏',
     ],
@@ -5052,7 +5052,7 @@ const P3FinalExam_slides = [
   },
   {
     type: 'quiz',
-    question: '葡萄牙老藤 Ramisco（Colares）為何從未受根瘤蚜侵害，至今仍有 200–300 年未嫁接老藤？',
+    question: '葡萄牙老藤 Ramisco（Colares）為何從未受根瘤蚜侵害，至今仍保有逾百年的自根（未嫁接）老藤？',
     options: [
       '使用了抗根瘤蚜砧木',
       '葡萄牙法律禁止根瘤蚜進入',
@@ -5060,7 +5060,7 @@ const P3FinalExam_slides = [
       '大西洋海風阻止了根瘤蚜擴散'
     ],
     answer: 2,
-    explanation: 'Colares 的 Ramisco 葡萄藤種植在大西洋沿岸砂丘的深層砂土中，根瘤蚜無法在鬆散砂土中生存，因此 19 世紀摧毀歐洲葡萄酒業的根瘤蚜從未影響 Colares。藤株保留原根，部分已超過 200–300 年，是世界最珍貴的葡萄酒活化石。',
+    explanation: 'Colares 的 Ramisco 葡萄藤種植在大西洋沿岸砂丘的深層砂土中，根瘤蚜無法在鬆散砂土中生存，因此 19 世紀摧毀歐洲葡萄酒業的根瘤蚜從未影響 Colares。藤株保留原根，部分藤齡逾百年，是世界最珍貴的葡萄酒活化石。',
   },
   {
     type: 'quiz',
@@ -5119,7 +5119,7 @@ const P3FinalExam_slides = [
       '✅ 葡萄牙氣泡酒：Bairrada 傳統法・Vinho Verde 天然 CO₂・Pét-Nat 自然酒',
       '✅ 風土深度：花崗岩・片岩・石灰岩的土壤影響分析',
       '✅ 橡木桶哲學：Balseiro 大桶傳統（保留風土）vs. 法國 Barrique（添加木香）',
-      '✅ 老藤珍寶：Colares 未嫁接 200–300 年老藤・Douro 百年老藤 Touriga Nacional',
+      '✅ 老藤珍寶：Colares 自根（未嫁接）逾百年老藤・Douro 百年老藤 Touriga Nacional',
     ],
   },
 ]
