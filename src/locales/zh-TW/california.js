@@ -91,6 +91,7 @@ export default {
     CA2M2: '2.2 北海岸：Napa & Sonoma 深度剖析',
     CA2M3: '2.3 中海岸：Santa Barbara & Paso Robles',
     CA2M4: '2.4 釀造工藝與品種融合',
+    CA2M5: '2.5 內陸谷地與南加州補充',
     CA3M1: '3.1 地圖繪製與微氣候大師課',
     CA3M2: '3.2 高階釀造與永續發展',
     CA3M3: '3.3 商業實務與市場策略',
@@ -129,6 +130,10 @@ export default {
     'ca-l2-4': {
       title: '橡木桶藝術、氣泡酒工藝與隆河品種',
       description: '法國桶 vs 美國桶的風味差異,加州傳統法氣泡酒（Méthode Champenoise）工藝,以及 Syrah、Grenache、Sangiovese 在加州的詮釋',
+    },
+    'ca-l2-5': {
+      title: '內陸谷地與南加州補充',
+      description: 'Lodi 的 7 個子 AVA、Sacramento Valley 與 San Joaquin Valley 的邊緣 AVA，以及南加州 South Coast、Temecula、Ramona 的海風與花崗岩風土',
     },
     'ca-l3-1': {
       title: '微氣候大師課：山坡、谷地與 AVA 精細分析',

@@ -86,6 +86,7 @@ export default {
     CA2M2: '2.2 North Coast: Napa & Sonoma In-Depth',
     CA2M3: '2.3 Central Coast: Santa Barbara & Paso Robles',
     CA2M4: '2.4 Winemaking & Variety Integration',
+    CA2M5: '2.5 Inland Valleys & Southern California Supplement',
     CA3M1: '3.1 Mapping & Microclimate Masterclass',
     CA3M2: '3.2 Advanced Winemaking & Sustainability',
     CA3M3: '3.3 Business Practice & Market Strategy',
@@ -140,6 +141,10 @@ export default {
     'ca-l2-4': {
       title: 'Oak Barrel Art, Sparkling Wine Craft & Rhône Varieties',
       description: 'French vs American oak flavor differences, California traditional-method sparkling (Méthode Champenoise) craft, and Syrah, Grenache, Sangiovese interpretations in California.',
+    },
+    'ca-l2-5': {
+      title: 'Inland Valleys & Southern California Supplement',
+      description: "Lodi's 7 sub-AVAs, the fringe AVAs of the Sacramento and San Joaquin Valleys, and the sea-breeze and granite terroir of South Coast, Temecula and Ramona.",
     },
     'ca-l3-1': {
       title: 'Microclimate Masterclass: Hillsides, Valleys & Fine AVA Analysis',
